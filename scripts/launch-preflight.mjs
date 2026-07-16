@@ -32,12 +32,20 @@ if (siteUrl && /localhost|127\.0\.0\.1/i.test(siteUrl)) {
   failures.push("NEXT_PUBLIC_SITE_URL cannot use localhost for a production build.");
 }
 
-if (!checkoutUrl) failures.push("NEXT_PUBLIC_CHECKOUT_URL is not set.");
+if (!checkoutUrl) {
+  warnings.push(
+    "NEXT_PUBLIC_CHECKOUT_URL is not set. The purchase page will show the launch-pending state.",
+  );
+}
 if (checkoutUrl && !/^https:\/\//i.test(checkoutUrl)) {
   failures.push("NEXT_PUBLIC_CHECKOUT_URL must use HTTPS.");
 }
 
-if (!analyticsId) failures.push("NEXT_PUBLIC_GA_MEASUREMENT_ID is not set.");
+if (!analyticsId) {
+  warnings.push(
+    "NEXT_PUBLIC_GA_MEASUREMENT_ID is not set. GA4 will remain disabled until configured.",
+  );
+}
 if (analyticsId && !/^G-[A-Z0-9]+$/i.test(analyticsId)) {
   failures.push("NEXT_PUBLIC_GA_MEASUREMENT_ID must be a GA4 ID beginning with G-.");
 }

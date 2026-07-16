@@ -4,7 +4,7 @@ This project is a static Next.js export designed for Cloudflare Pages' free
 tier. GitHub stores the source. Cloudflare's own Git integration builds and
 deploys it, so GitHub Actions is not involved.
 
-## 1. Complete the four launch settings
+## 1. Complete the launch settings
 
 Create a local `.env.local` from `.env.example` for production-equivalent
 testing. Never commit `.env.local`.
@@ -12,13 +12,13 @@ testing. Never commit `.env.local`.
 | Variable | Required | Value |
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Yes | `https://guildframe.com` |
-| `NEXT_PUBLIC_CHECKOUT_URL` | Yes | Final secure payment or product checkout URL |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Yes | GA4 web stream ID beginning with `G-` |
+| `NEXT_PUBLIC_CHECKOUT_URL` | Later | Final Gumroad payment or product URL |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Later | GA4 web stream ID beginning with `G-` |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional | Google HTML verification token; leave empty when using DNS verification |
 
-The strict build deliberately fails if the domain, checkout URL or GA4 ID is
-missing. This prevents a production deployment with localhost canonicals,
-inactive purchasing or missing conversion tracking.
+The strict build requires the production domain. Checkout and GA4 are optional:
+the purchase page shows a clear launch-pending state without Gumroad, and the
+analytics component stays disabled until a valid GA4 ID is configured.
 
 ## 2. Verify the release locally
 
@@ -63,9 +63,8 @@ In Cloudflare:
 | Root directory | `/` |
 | Node version environment variable | `NODE_VERSION=22.13.0` |
 
-6. Add the required launch variables from section 1 to both **Production** and
-   **Preview** environment settings. Preview may use the production checkout URL
-   only if test purchases are safe; otherwise use a test checkout URL.
+6. Add `NEXT_PUBLIC_SITE_URL` to both **Production** and **Preview**. Add the
+   optional checkout and GA4 variables later when those services are ready.
 7. Save and deploy.
 
 Cloudflare now builds every push to `main`. Other branches can produce preview
@@ -127,8 +126,8 @@ After verification:
 - `/pricing`, `/blog` and other legacy paths redirect correctly.
 - Canonicals, Open Graph URLs, sitemap and robots.txt use the final domain.
 - Social sharing displays the Guildframe tabletop card.
-- The payment URL opens the intended live checkout.
-- GA4 page views and checkout events arrive.
+- If configured, the payment URL opens the intended live checkout.
+- If configured, GA4 page views and checkout events arrive.
 - Mobile, tablet and desktop layouts have no horizontal overflow.
 
 If a bad release reaches production, open **Deployments** in the Pages project

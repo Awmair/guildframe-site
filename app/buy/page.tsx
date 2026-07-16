@@ -79,9 +79,9 @@ export default function BuyPage() {
               </a>
             ) : (
               <div className="buy-checkout-pending" id="checkout-unavailable">
-                <strong>Checkout is ready to connect.</strong>
+                <strong>Online checkout is opening soon.</strong>
                 <span>
-                  The live payment link is added as a protected launch setting.
+                  The secure Gumroad purchase link will be added here.
                 </span>
               </div>
             )}
