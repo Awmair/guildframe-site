@@ -1022,6 +1022,7 @@ export default function Home() {
               <a href="#pricing">Pricing</a>
               <a href="#faq">FAQ</a>
               <a href="/guides">Guides</a>
+              <a href="/resources">Reference library</a>
               <a href="/kickstarter-to-shopify">Kickstarter to Shopify</a>
             </div>
             <div>
@@ -1029,6 +1030,8 @@ export default function Home() {
               <a href="/shopify-theme-for-board-games">Board game stores</a>
               <a href="/shopify-theme-for-ttrpg">TTRPG stores</a>
               <a href="/shopify-theme-for-miniatures">Miniature stores</a>
+              <a href="/about">About Guildframe</a>
+              <a href="/editorial-policy">Editorial policy</a>
               <a href="#top">Back to top ↑</a>
             </div>
           </nav>

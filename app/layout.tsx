@@ -91,6 +91,11 @@ export default function RootLayout({
                 url: absoluteUrl("/"),
                 logo: absoluteUrl("/brand/guildframe-logo.svg"),
                 description: siteConfig.description,
+                foundingDate: "2026",
+                subjectOf: [
+                  { "@id": absoluteUrl("/about") },
+                  { "@id": absoluteUrl("/editorial-policy") },
+                ],
                 knowsAbout: [
                   "Shopify themes",
                   "Tabletop ecommerce",

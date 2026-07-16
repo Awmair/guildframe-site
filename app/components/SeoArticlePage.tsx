@@ -22,6 +22,11 @@ function formatArticleDate(value: string) {
 
 export function SeoArticlePage({
   slug,
+  path,
+  collectionLabel = "Guides",
+  collectionHref = "/guides",
+  schemaType = "Article",
+  sidebarTitle = "In this guide",
   category,
   title,
   description,
@@ -35,6 +40,11 @@ export function SeoArticlePage({
   children,
 }: {
   slug: string;
+  path?: string;
+  collectionLabel?: string;
+  collectionHref?: string;
+  schemaType?: "Article" | "TechArticle";
+  sidebarTitle?: string;
   category: string;
   title: string;
   description: string;
@@ -47,6 +57,8 @@ export function SeoArticlePage({
   sources: ArticleSource[];
   children: ReactNode;
 }) {
+  const canonicalPath = path ?? `/guides/${slug}`;
+
   return (
     <>
       <JsonLd
@@ -54,20 +66,20 @@ export function SeoArticlePage({
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "Article",
+              "@type": schemaType,
               headline: title,
               description,
               datePublished: published,
               dateModified: updated,
               mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": absoluteUrl(`/guides/${slug}`),
+                "@id": absoluteUrl(canonicalPath),
               },
               image: absoluteUrl(siteConfig.socialImage),
               articleSection: category,
               inLanguage: "en",
               isAccessibleForFree: true,
-              author: { "@id": absoluteUrl("/#organization") },
+              author: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
               publisher: { "@id": absoluteUrl("/#organization") },
               citation: sources.map((source) => source.href),
               about: [
@@ -89,14 +101,14 @@ export function SeoArticlePage({
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "Guides",
-                  item: absoluteUrl("/guides"),
+                  name: collectionLabel,
+                  item: absoluteUrl(collectionHref),
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: title,
-                  item: absoluteUrl(`/guides/${slug}`),
+                  item: absoluteUrl(canonicalPath),
                 },
               ],
             },
@@ -115,12 +127,12 @@ export function SeoArticlePage({
         Skip to article
       </a>
       <SeoHeader />
-      <main className="article-main">
+      <main className={`article-main${schemaType === "TechArticle" ? " reference-main" : ""}`}>
         <header className="article-hero">
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
-              { label: "Guides", href: "/guides" },
+              { label: collectionLabel, href: collectionHref },
               { label: category },
             ]}
           />
@@ -130,14 +142,14 @@ export function SeoArticlePage({
             <div className="article-meta">
               <span>Updated <time dateTime={updated}>{formatArticleDate(updated)}</time></span>
               <span>{readTime}</span>
-              <span>Guildframe editorial</span>
+              <Link href="/authors/guildframe">Guildframe Editorial Team</Link>
             </div>
           </div>
         </header>
 
         <div className="article-layout">
           <aside className="article-toc">
-            <strong>In this guide</strong>
+            <strong>{sidebarTitle}</strong>
             <nav aria-label="Table of contents">
               {toc.map((item) => (
                 <a href={`#${item.id}`} key={item.id}>

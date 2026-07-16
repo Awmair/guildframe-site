@@ -109,6 +109,7 @@ export default function GuidesPage() {
             <Link href="/shopify-theme-for-ttrpg">TTRPGs ↗</Link>
             <Link href="/shopify-theme-for-miniatures">Miniatures ↗</Link>
             <Link href="/kickstarter-to-shopify">Kickstarter to Shopify ↗</Link>
+            <Link href="/resources">Checklists and references ↗</Link>
           </nav>
         </section>
       </main>

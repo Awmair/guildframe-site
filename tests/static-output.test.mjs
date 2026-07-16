@@ -16,6 +16,14 @@ const pages = [
   ["/guides/best-shopify-themes-for-board-games", "Best Shopify Themes for Board Games in 2026 | Guildframe", "Best Shopify Themes for Board Games"],
   ["/guides/kickstarter-late-pledges-vs-shopify", "Kickstarter Late Pledges vs Shopify | Guildframe", "Kickstarter Late Pledges vs Shopify"],
   ["/guides/backerkit-vs-shopify-vs-gamefound", "BackerKit vs Shopify vs Gamefound After Crowdfunding | Guildframe", "BackerKit vs Shopify vs Gamefound"],
+  ["/about", "About Guildframe | Guildframe", "Tabletop worlds deserve"],
+  ["/editorial-policy", "Editorial Policy | Guildframe", "Useful first"],
+  ["/authors/guildframe", "Guildframe Editorial Team | Guildframe", "Guildframe Editorial Team"],
+  ["/resources", "Tabletop Ecommerce Checklists and References | Guildframe", "Reference tools"],
+  ["/resources/board-game-shopify-store-checklist", "Board Game Shopify Store Checklist | Guildframe", "Board Game Shopify Store Checklist"],
+  ["/resources/kickstarter-to-shopify-migration-checklist", "Kickstarter to Shopify Migration Checklist | Guildframe", "Kickstarter to Shopify Migration Checklist"],
+  ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "BackerKit vs Shopify vs Gamefound Comparison Matrix | Guildframe", "BackerKit vs Shopify vs Gamefound Comparison Matrix"],
+  ["/resources/board-game-product-page-checklist", "Board Game Shopify Product Page Checklist | Guildframe", "Board Game Shopify Product Page Checklist"],
 ];
 
 const outputFile = (path) =>
@@ -58,7 +66,10 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
 
 test("exports AEO and social metadata", async () => {
   const solutionPaths = pages.slice(2, 6).map(([path]) => path);
-  const articlePaths = pages.slice(7).map(([path]) => path);
+  const articlePaths = [
+    ...pages.slice(7, 11).map(([path]) => path),
+    ...pages.slice(15).map(([path]) => path),
+  ];
 
   for (const path of solutionPaths) {
     const html = await readPage(path);
@@ -71,13 +82,24 @@ test("exports AEO and social metadata", async () => {
   for (const path of articlePaths) {
     const html = await readPage(path);
     assert.match(html, /<meta property="og:type" content="article"/i, path);
-    assert.match(html, /"@type":"Article"/i, path);
+    assert.match(html, /"@type":"(?:Article|TechArticle)"/i, path);
     assert.match(html, /"@type":"FAQPage"/i, path);
     assert.match(html, /"isAccessibleForFree":true/i, path);
     assert.match(html, /"dateModified":"2026-07-17"/i, path);
     assert.match(html, /"citation":\["https:\/\//i, path);
     assert.match(html, /Sources reviewed/i, path);
   }
+
+  for (const path of pages.slice(15).map(([path]) => path)) {
+    const html = await readPage(path);
+    assert.match(html, /"@type":"TechArticle"/i, path);
+    assert.match(html, /Guildframe Editorial Team/i, path);
+  }
+
+  assert.match(await readPage("/about"), /"@type":"AboutPage"/i);
+  assert.match(await readPage("/editorial-policy"), /Guildframe Editorial Policy/i);
+  assert.match(await readPage("/authors/guildframe"), /"@type":"ProfilePage"/i);
+  assert.match(await readPage("/resources"), /"@type":"CollectionPage"/i);
 
   const homepage = await readPage("/");
   assert.match(homepage, /og-guildframe-launch-v2\.jpg/i);

@@ -11,6 +11,7 @@ export function SeoHeader() {
         <Link href="/shopify-theme-for-board-games">Board games</Link>
         <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
         <Link href="/guides">Guides</Link>
+        <Link href="/resources">Resources</Link>
       </nav>
       <Link
         className="seo-header-cta"
@@ -66,6 +67,9 @@ export function SeoFooter() {
           <Link href="/guides/best-shopify-themes-for-board-games">
             Theme comparison
           </Link>
+          <Link href="/resources">Checklists and references</Link>
+          <Link href="/about">About Guildframe</Link>
+          <Link href="/editorial-policy">Editorial policy</Link>
           <Link href="/#pricing">Pricing</Link>
         </nav>
       </div>

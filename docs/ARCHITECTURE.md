@@ -10,6 +10,8 @@ runtime binding.
 - `app/buy/page.tsx`: stable purchase route and checkout handoff
 - `app/components/SeoLandingPage.tsx`: shared solution-page structure
 - `app/components/SeoArticlePage.tsx`: shared article and AEO structure
+- `app/components/TrustPage.tsx`: shared About, editorial and author layout
+- `app/resources/`: source-backed checklists and comparison references
 - `app/landing-content.ts`: structured solution-page content
 - `app/site-config.ts`: domain, checkout, analytics and shared metadata settings
 - `app/sitemap.ts`, `app/robots.ts`, `app/manifest.ts`: search and browser files

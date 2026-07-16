@@ -17,6 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/guides/best-shopify-themes-for-board-games", modified: contentDates.bestBoardGameThemes },
     { path: "/guides/kickstarter-late-pledges-vs-shopify", modified: contentDates.latePledgesVsShopify },
     { path: "/guides/backerkit-vs-shopify-vs-gamefound", modified: contentDates.backerkitVsShopifyVsGamefound },
+    { path: "/about", modified: contentDates.about },
+    { path: "/editorial-policy", modified: contentDates.editorialPolicy },
+    { path: "/authors/guildframe", modified: contentDates.authorGuildframe },
+    { path: "/resources", modified: contentDates.resources },
+    { path: "/resources/board-game-shopify-store-checklist", modified: contentDates.storeChecklist },
+    { path: "/resources/kickstarter-to-shopify-migration-checklist", modified: contentDates.migrationChecklist },
+    { path: "/resources/backerkit-vs-shopify-vs-gamefound-comparison", modified: contentDates.platformMatrix },
+    { path: "/resources/board-game-product-page-checklist", modified: contentDates.productPageChecklist },
   ];
 
   return routes.map((route) => ({

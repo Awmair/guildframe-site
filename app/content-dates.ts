@@ -10,4 +10,12 @@ export const contentDates = {
   bestBoardGameThemes: "2026-07-17",
   latePledgesVsShopify: "2026-07-17",
   backerkitVsShopifyVsGamefound: "2026-07-17",
+  about: "2026-07-17",
+  editorialPolicy: "2026-07-17",
+  authorGuildframe: "2026-07-17",
+  resources: "2026-07-17",
+  storeChecklist: "2026-07-17",
+  migrationChecklist: "2026-07-17",
+  platformMatrix: "2026-07-17",
+  productPageChecklist: "2026-07-17",
 } as const;

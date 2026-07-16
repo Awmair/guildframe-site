@@ -1,7 +1,7 @@
 # Guildframe website
 
 Launch website for Guildframe, including the homepage, solution pages, purchase
-route and four tabletop ecommerce guides.
+route, four tabletop ecommerce guides, trust pages and a citable reference library.
 
 ## Local review
 
@@ -40,6 +40,7 @@ dashboard settings and launch sequence.
 
 - [Crawler and AI policy](./docs/CRAWLER_AND_AI_POLICY.md)
 - [Search intent map](./docs/SEARCH_INTENT_MAP.md)
+- [Keyword research](./docs/KEYWORD_RESEARCH_2026-07-17.md)
 - [AI search baseline](./docs/AI_SEARCH_BASELINE.md)
 - [Latest release audit](./docs/RELEASE_AUDIT_2026-07-17.md)
 
