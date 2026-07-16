@@ -15,6 +15,27 @@ Baseline date: 2026-07-17
 - GA4: enabled in production
 - AI referral event: `ai_referral_visit`
 
+## Webmaster dashboard checkpoint
+
+Checked on 2026-07-17 after the AEO/GEO release:
+
+- Google accepted the refreshed sitemap successfully: 11 discovered pages, no
+  sitemap error, and both submitted and last-read dates updated to 2026-07-17.
+- Google's live homepage test reports that the URL is available to Google and
+  can be indexed.
+- Google detected one valid Product snippets item and one valid Merchant
+  listings item. Both have non-critical notices only.
+- Google's stored index record still reflects its old 2026-05-21 crawl, when
+  robots.txt blocked the site. A fresh manual request hit the daily quota, so
+  discovery now relies on the accepted sitemap until the quota resets.
+- Google Search Console performance and indexing reports are still processing;
+  there is no meaningful search or generative-AI trend data yet.
+- Bing's live inspection reports that the homepage can be indexed, with no
+  SEO/GEO issues and both JSON-LD and OpenGraph markup detected.
+- Bing reports one known sitemap, zero sitemap errors, zero warnings, and 11
+  discovered URLs. Its dashboard session expired before AI Performance metrics
+  could be captured, so the first citation baseline remains pending.
+
 ## Measurement
 
 Review monthly:
