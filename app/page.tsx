@@ -338,7 +338,7 @@ export default function Home() {
           <div className="hero-scene" aria-hidden="true">
             <img
               src="/images/guildframe-tabletop-world-hero-v1.jpg"
-              alt=""
+              alt="A tabletop fantasy world built from board game terrain and miniatures"
               width="1719"
               height="915"
               fetchPriority="high"
@@ -440,7 +440,7 @@ export default function Home() {
                 </div>
                 <img
                   src="/images/guildframe-launch-kit.jpg"
-                  alt=""
+                  alt="A funded Kickstarter campaign ready to become a Shopify store"
                   loading="lazy"
                   decoding="async"
                 />
@@ -475,7 +475,7 @@ export default function Home() {
                     >
                       <img
                         src={style.image}
-                        alt=""
+                        alt={`${style.name} Guildframe storefront preset`}
                         loading="lazy"
                         decoding="async"
                       />
@@ -492,7 +492,7 @@ export default function Home() {
                 <div className="publish-preview">
                   <img
                     src="/images/guildframe-ready-to-publish-v1.jpg"
-                    alt=""
+                    alt="A completed Shopify storefront ready to publish"
                     loading="lazy"
                     decoding="async"
                   />
@@ -589,14 +589,14 @@ export default function Home() {
                   <img
                     className="preset-card-image preset-card-image--wide"
                     src={style.cover}
-                    alt=""
+                    alt={`${style.name} tabletop storefront preview`}
                     loading="lazy"
                     decoding="async"
                   />
                   <img
                     className="preset-card-image preset-card-image--portrait"
                     src={style.portrait}
-                    alt=""
+                    alt={`${style.name} tabletop storefront mobile preview`}
                     loading="lazy"
                     decoding="async"
                   />
@@ -907,7 +907,7 @@ export default function Home() {
               <div className="pricing-trust" aria-label="Guildframe quality commitments">
                 <img
                   src="/images/pricing-trust-icons-v1.jpg"
-                  alt=""
+                  alt="Fully customizable, mobile responsive and speed optimized"
                   aria-hidden="true"
                   loading="lazy"
                   decoding="async"
