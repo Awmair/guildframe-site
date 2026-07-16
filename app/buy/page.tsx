@@ -42,7 +42,9 @@ export default function BuyPage() {
             url: absoluteUrl("/buy"),
             priceCurrency: "USD",
             price: "419",
-            availability: "https://schema.org/InStock",
+            availability: siteConfig.checkoutUrl
+              ? "https://schema.org/InStock"
+              : "https://schema.org/OutOfStock",
           },
         }}
       />

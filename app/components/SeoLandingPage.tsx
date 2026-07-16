@@ -61,7 +61,9 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
       "@type": "Offer",
       price: "419",
       priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
+      availability: siteConfig.checkoutUrl
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
       url: absoluteUrl("/buy"),
     },
   };

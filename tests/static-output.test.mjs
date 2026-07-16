@@ -74,6 +74,8 @@ test("exports AEO and social metadata", async () => {
 
   const homepage = await readPage("/");
   assert.match(homepage, /og-guildframe-launch-v2\.jpg/i);
+  assert.match(homepage, /"image":"http:\/\/localhost:3000\/og-guildframe-launch-v2\.jpg"/i);
+  assert.match(homepage, /"availability":"https:\/\/schema\.org\/InStock"/i);
   assert.match(homepage, /G-TEST123456/i);
 });
 

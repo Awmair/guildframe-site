@@ -277,11 +277,15 @@ export default function Home() {
               description:
                 "A Shopify theme and done-for-you setup service for tabletop game creators.",
               category: "Shopify theme for tabletop game creators",
+              image: absoluteUrl(siteConfig.socialImage),
               brand: { "@type": "Brand", name: "Guildframe" },
               offers: {
                 "@type": "Offer",
                 priceCurrency: "USD",
                 price: "419",
+                availability: siteConfig.checkoutUrl
+                  ? "https://schema.org/InStock"
+                  : "https://schema.org/OutOfStock",
                 url: absoluteUrl("/buy"),
               },
             },
