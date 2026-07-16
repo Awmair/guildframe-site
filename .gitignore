@@ -1,0 +1,77 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/.vinext/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# environment files
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+next-env.d.ts
+*.tsbuildinfo
+/dist/
+/.wrangler/
+/outputs/
+/work/
+
+# local design source and recovery material
+/branding/
+/checkpoints/
+/Guildframe_Forgecore_Brand_Kit.zip
+
+# unused starter surfaces retained locally only
+/.openai/
+/build/
+/db/
+/drizzle/
+/examples/
+/worker/
+/drizzle.config.ts
+/vite.config.ts
+/app/chatgpt-auth.ts
+
+# replaced or unused media source files
+/public/file.svg
+/public/globe.svg
+/public/window.svg
+/public/og.png
+/public/og-guildframe-launch-v2.png
+/public/images/free-setup-journey-v1.jpg
+/public/images/free-setup-journey-v1.png
+/public/images/guildframe-free-customization-service-v1.jpg
+/public/images/guildframe-funded-to-live-v2.png
+/public/images/guildframe-launch-kit.png
+/public/images/guildframe-pricing-launch-system-v1.jpg
+/public/images/guildframe-tabletop-world-hero-v1.png
+/public/images/pricing-trust-icons-v1.png
+/public/images/style-*.png
+/public/images/presets/*.png
