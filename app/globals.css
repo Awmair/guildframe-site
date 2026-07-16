@@ -6283,7 +6283,7 @@ section[id] {
 
   .hero {
     min-height: max(650px, 90svh);
-    padding: 88px 20px 24px;
+    padding: clamp(104px, 13svh, 116px) 20px 24px;
   }
 
   .hero-scene img {
