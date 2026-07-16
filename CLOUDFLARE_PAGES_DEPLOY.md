@@ -11,7 +11,7 @@ testing. Never commit `.env.local`.
 
 | Variable | Required | Value |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Yes | Final HTTPS origin, such as `https://guildframe.com` |
+| `NEXT_PUBLIC_SITE_URL` | Yes | `https://guildframe.com` |
 | `NEXT_PUBLIC_CHECKOUT_URL` | Yes | Final secure payment or product checkout URL |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Yes | GA4 web stream ID beginning with `G-` |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional | Google HTML verification token; leave empty when using DNS verification |
@@ -114,7 +114,7 @@ site build.
 
 After verification:
 
-1. Submit `https://YOUR-DOMAIN/sitemap.xml`.
+1. Submit `https://guildframe.com/sitemap.xml`.
 2. Inspect the homepage, `/buy`, the four solution pages and the four articles.
 3. Request indexing only after the final custom domain is active.
 4. Check Page indexing, Core Web Vitals and Enhancements after Google begins
