@@ -13,6 +13,7 @@ export const metadata = pageMetadata({
   path: "/guides/move-from-kickstarter-to-shopify",
   kind: "article",
   publishedTime: "2026-07-16",
+  modifiedTime: "2026-07-17",
   keywords: ["move from Kickstarter to Shopify", "Kickstarter to Shopify migration", "post Kickstarter store"],
 });
 
@@ -48,9 +49,26 @@ export default function MoveKickstarterToShopifyGuide() {
       description="Your campaign page proved demand. This guide shows how to turn the assets and product structure you already built into a permanent Shopify storefront."
       answer="To move from Kickstarter to Shopify, finalize the products you will sell, separate campaign fulfillment from new store orders, reuse your strongest campaign assets, configure Shopify operations, test every buying path and launch with clear delivery language. The store complements Kickstarter and any pledge manager rather than replacing their campaign-specific jobs."
       published="2026-07-16"
-      updated="July 16, 2026"
+      updated="2026-07-17"
       readTime="9 minute read"
       faqs={faqs}
+      sources={[
+        {
+          label: "How to transition from Kickstarter to Shopify",
+          publisher: "Shopify",
+          href: "https://www.shopify.com/ca/blog/how-to-transition-from-kickstarter-to-shopify",
+        },
+        {
+          label: "Products",
+          publisher: "Shopify Help Center",
+          href: "https://help.shopify.com/en/manual/products",
+        },
+        {
+          label: "Collections",
+          publisher: "Shopify Help Center",
+          href: "https://help.shopify.com/en/manual/products/collections",
+        },
+      ]}
       toc={[
         { id: "roles", label: "Understand each platform's role" },
         { id: "prepare", label: "Prepare products and operations" },
@@ -104,6 +122,11 @@ export default function MoveKickstarterToShopifyGuide() {
         the core game, deluxe edition, expansions, accessories and bundles where
         customers need independent choices. Keep true bundles where the combination
         has a clear value.
+      </p>
+      <p>
+        Shopify products can carry descriptions, media, prices, inventory,
+        variants, tags and metafields. Use those native product facts as the stable
+        catalog layer, then let the theme turn them into a clear buying experience.
       </p>
       <ul>
         <li>Give each product a stable name, price, SKU and inventory rule.</li>

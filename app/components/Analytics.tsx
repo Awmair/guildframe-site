@@ -26,6 +26,42 @@ export function Analytics() {
   }, [measurementId, pathname]);
 
   useEffect(() => {
+    if (!measurementId || !window.gtag) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const campaignSource = params.get("utm_source")?.toLowerCase() ?? "";
+    const referrerHost = document.referrer
+      ? new URL(document.referrer).hostname.toLowerCase()
+      : "";
+    const sources: [string, string[]][] = [
+      ["chatgpt", ["chatgpt.com"]],
+      ["perplexity", ["perplexity.ai"]],
+      ["copilot", ["copilot.microsoft.com"]],
+      ["claude", ["claude.ai"]],
+      ["gemini", ["gemini.google.com"]],
+    ];
+    const match = sources.find(([, domains]) =>
+      domains.some(
+        (domain) => campaignSource.includes(domain) || referrerHost.endsWith(domain),
+      ),
+    );
+    if (!match) return;
+
+    const sessionKey = `guildframe-ai-referral-${match[0]}`;
+    try {
+      if (window.sessionStorage.getItem(sessionKey)) return;
+      window.sessionStorage.setItem(sessionKey, "1");
+    } catch {
+      // Analytics still works when browser privacy settings disable storage.
+    }
+    window.gtag("event", "ai_referral_visit", {
+      ai_source: match[0],
+      landing_page: `${pathname}${window.location.search}`,
+      referrer_host: referrerHost || undefined,
+    });
+  }, [measurementId, pathname]);
+
+  useEffect(() => {
     const trackClick = (event: MouseEvent) => {
       if (!measurementId || !window.gtag) return;
       const target = (event.target as Element | null)?.closest<HTMLElement>(

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { JsonLd } from "./JsonLd";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
 import { absoluteUrl, siteConfig } from "../site-config";
+import { guildframeProductData } from "../product-data";
 
 export type LandingPageContent = {
   slug: string;
@@ -49,24 +50,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
     })),
   };
 
-  const productData = {
-    "@type": "Product",
-    "@id": absoluteUrl("/buy#product"),
-    name: siteConfig.name,
-    category: "Shopify theme for tabletop game creators",
-    description: siteConfig.description,
-    image: absoluteUrl(content.image),
-    brand: { "@type": "Brand", name: siteConfig.name },
-    offers: {
-      "@type": "Offer",
-      price: "419",
-      priceCurrency: "USD",
-      availability: siteConfig.checkoutUrl
-        ? "https://schema.org/InStock"
-        : "https://schema.org/OutOfStock",
-      url: absoluteUrl("/buy"),
-    },
-  };
+  const productData = guildframeProductData(content.image);
 
   return (
     <>

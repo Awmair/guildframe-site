@@ -2,7 +2,8 @@
 
 import { type CSSProperties, useEffect, useState } from "react";
 import { JsonLd } from "./components/JsonLd";
-import { absoluteUrl, siteConfig } from "./site-config";
+import { siteConfig } from "./site-config";
+import { guildframeProductData } from "./product-data";
 
 const styleOptions = [
   {
@@ -271,24 +272,7 @@ export default function Home() {
         data={{
           "@context": "https://schema.org",
           "@graph": [
-            {
-              "@type": "Product",
-              name: "Guildframe",
-              description:
-                "A Shopify theme and done-for-you setup service for tabletop game creators.",
-              category: "Shopify theme for tabletop game creators",
-              image: absoluteUrl(siteConfig.socialImage),
-              brand: { "@type": "Brand", name: "Guildframe" },
-              offers: {
-                "@type": "Offer",
-                priceCurrency: "USD",
-                price: "419",
-                availability: siteConfig.checkoutUrl
-                  ? "https://schema.org/InStock"
-                  : "https://schema.org/OutOfStock",
-                url: absoluteUrl("/buy"),
-              },
-            },
+            guildframeProductData(),
             {
               "@type": "FAQPage",
               mainEntity: faqs.map((faq) => ({
@@ -306,7 +290,7 @@ export default function Home() {
 
       <header className={`site-nav ${navFilled ? "is-filled" : ""}`}>
         <a className="brand-link" href="#top" aria-label="Guildframe home">
-          <img src="/brand/guildframe-logo.svg" alt="Guildframe" />
+          <img src="/brand/guildframe-logo.svg" alt="Guildframe" width="1000" height="220" />
         </a>
         <nav aria-label="Primary navigation">
           <a className={activeSection === "process" ? "is-active" : ""} href="#process">
@@ -686,6 +670,8 @@ export default function Home() {
                 <img
                   src="/images/shopify-theme-editor-customization-v1.jpg"
                   alt="Shopify theme editor showing controls for typography, colors, spacing, width, buttons and image ratios"
+                  width="1579"
+                  height="996"
                   loading="lazy"
                   decoding="async"
                 />
@@ -865,6 +851,8 @@ export default function Home() {
                 className="pricing-buy-logo"
                 src="/brand/guildframe-logo.svg"
                 alt="Guildframe"
+                width="1000"
+                height="220"
                 loading="lazy"
                 decoding="async"
               />
@@ -1009,7 +997,7 @@ export default function Home() {
 
         <div className="footer-directory">
           <div className="footer-brand">
-            <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" />
+            <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="1000" height="220" />
             <p>
               The Kickstarter-to-Shopify system built specifically for
               tabletop creators.

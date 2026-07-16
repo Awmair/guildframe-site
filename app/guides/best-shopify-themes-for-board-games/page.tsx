@@ -13,6 +13,7 @@ export const metadata = pageMetadata({
   path: "/guides/best-shopify-themes-for-board-games",
   kind: "article",
   publishedTime: "2026-07-16",
+  modifiedTime: "2026-07-17",
   keywords: ["best Shopify themes for board games", "board game Shopify theme", "tabletop ecommerce theme"],
 });
 
@@ -48,10 +49,28 @@ export default function BestThemesGuide() {
       description="The right theme must sell a world and make a complex product easy to buy. Compare the main routes before choosing a visual starting point."
       answer="The best Shopify theme for a board game store is one that handles rich product media, editions, expansions, campaign storytelling, mobile shopping and catalog growth without excessive custom development. Purpose-built themes offer faster tabletop fit, premium general themes offer broad visual choice and free themes trade lower upfront cost for more setup work."
       published="2026-07-16"
-      updated="July 16, 2026"
+      updated="2026-07-17"
       readTime="8 minute read"
       faqs={faqs}
+      sources={[
+        {
+          label: "Shopify Theme Store requirements",
+          publisher: "Shopify Developers",
+          href: "https://shopify.dev/docs/storefronts/themes/store/requirements",
+        },
+        {
+          label: "Sections and blocks",
+          publisher: "Shopify Help Center",
+          href: "https://help.shopify.com/en/manual/online-store/themes/theme-structure/sections-and-blocks",
+        },
+        {
+          label: "Adding product variants",
+          publisher: "Shopify Help Center",
+          href: "https://help.shopify.com/en/manual/products/variants/add-variants",
+        },
+      ]}
       toc={[
+        { id: "method", label: "How this guide evaluates themes" },
         { id: "criteria", label: "What a board game theme needs" },
         { id: "routes", label: "Compare the theme routes" },
         { id: "guildframe", label: "Guildframe" },
@@ -66,6 +85,26 @@ export default function BestThemesGuide() {
         Guildframe theme. We include it because it is purpose-built for this exact
         use case, and we make the relationship explicit so you can judge the fit.
       </ArticleCallout>
+
+      <h2 id="method">How this guide evaluates board game Shopify themes</h2>
+      <p>
+        This comparison evaluates theme routes rather than awarding a universal
+        winner. We look at six practical areas: product explanation, edition and
+        expansion handling, campaign-story reuse, mobile buying, merchant editor
+        control and total setup effort. Price matters, but only alongside the work
+        needed to reach a finished storefront.
+      </p>
+      <ArticleTable
+        headers={["Evaluation area", "What to verify in a real demo"]}
+        rows={[
+          ["Product explanation", "Media, specifications, contents, proof and a clear purchase path"],
+          ["Catalog structure", "Editions, expansions, bundles and related products remain understandable"],
+          ["Campaign storytelling", "Long-form art and story sections can be shortened and reordered"],
+          ["Mobile buying", "Navigation, media, selectors and calls to action work on a narrow screen"],
+          ["Editor control", "A merchant can change routine content and layout without code"],
+          ["Total setup effort", "Theme, design, content, development, apps and internal time are counted"],
+        ]}
+      />
 
       <h2 id="criteria">What a board game Shopify theme needs to do</h2>
       <p>
@@ -87,6 +126,12 @@ export default function BestThemesGuide() {
         needs clear comparison and cross-linking. If they are variants, selectors
         must remain readable on mobile. Related expansions and accessories should be
         discoverable without overwhelming a first-time buyer.
+      </p>
+      <p>
+        Shopify supports product variants and organizes products into collections,
+        but the theme determines how clearly those choices and paths appear to the
+        customer. Test your real catalog structure rather than assuming every demo
+        handles it equally well.
       </p>
       <h3>3. Carry campaign-level art without campaign-level length</h3>
       <p>

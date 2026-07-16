@@ -13,6 +13,7 @@ export const metadata = pageMetadata({
   path: "/guides/kickstarter-late-pledges-vs-shopify",
   kind: "article",
   publishedTime: "2026-07-16",
+  modifiedTime: "2026-07-17",
   keywords: ["Kickstarter Late Pledges vs Shopify", "late pledge store", "Shopify after Kickstarter"],
 });
 
@@ -48,9 +49,26 @@ export default function LatePledgesVsShopifyGuide() {
       description="Late pledges and Shopify can both capture demand after a campaign, but they solve different problems. Here is how to choose a clean post-funding path."
       answer="Kickstarter Late Pledges is best for extending access to eligible campaign rewards within the campaign environment. Shopify is best for building a permanent branded store, broader product catalog and ongoing customer operations. Many tabletop creators can use both, with a clear deadline and fulfillment rule for late pledges and Shopify as the long-term destination."
       published="2026-07-16"
-      updated="July 16, 2026"
+      updated="2026-07-17"
       readTime="7 minute read"
       faqs={faqs}
+      sources={[
+        {
+          label: "How to add Late Pledges to a project",
+          publisher: "Kickstarter Support",
+          href: "https://help.kickstarter.com/hc/en-us/articles/24875583879067-How-do-I-add-Late-Pledges-to-my-project",
+        },
+        {
+          label: "How Late Pledge payouts work",
+          publisher: "Kickstarter Support",
+          href: "https://help.kickstarter.com/hc/en-us/articles/25919402123291-How-will-I-be-paid-out-for-Late-Pledges",
+        },
+        {
+          label: "Products and catalog management",
+          publisher: "Shopify Help Center",
+          href: "https://help.shopify.com/en/manual/products",
+        },
+      ]}
       toc={[
         { id: "difference", label: "The core difference" },
         { id: "late-pledges", label: "When late pledges fit" },
@@ -66,8 +84,15 @@ export default function LatePledgesVsShopifyGuide() {
         after the campaign has ended. The buyer remains close to the campaign
         context, reward structure and crowdfunding story. Kickstarter explains the
         current creator and backer rules in its
-        <a href="https://help.kickstarter.com/hc/en-us/articles/24875599658779-Late-Pledges-Common-Questions" target="_blank" rel="noreferrer"> Late Pledges FAQ</a>.
+        <a href="https://help.kickstarter.com/hc/en-us/articles/24875583879067-How-do-I-add-Late-Pledges-to-my-project" target="_blank" rel="noreferrer"> Late Pledges setup guide</a>.
       </p>
+      <ArticleCallout>
+        <strong>Current Kickstarter constraint:</strong> Late Pledges must be
+        enabled while a project is still a draft or live. Kickstarter says they
+        cannot be enabled after the campaign has ended, and an ended Late Pledge
+        reward cannot be reactivated. Confirm the current rule before planning the
+        channel into your launch sequence.
+      </ArticleCallout>
       <p>
         Shopify is an ecommerce operating system. It is designed for an ongoing
         catalog, branded navigation, customer accounts, checkout, payments,
@@ -92,6 +117,12 @@ export default function LatePledgesVsShopifyGuide() {
         production cycle, the reward structure remains valid and the team wants to
         capture missed campaign demand without creating a separate retail
         experience immediately.
+      </p>
+      <p>
+        Kickstarter currently applies its standard platform fee and payment
+        processing fees to Late Pledges, and recommends considering a higher late
+        pledge price. Treat those figures as a live platform cost, not a permanent
+        assumption, and verify them in Kickstarter Support before setting prices.
       </p>
       <ul>
         <li>The available rewards still match production and allocation.</li>

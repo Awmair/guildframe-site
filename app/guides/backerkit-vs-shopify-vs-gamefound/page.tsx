@@ -13,6 +13,7 @@ export const metadata = pageMetadata({
   path: "/guides/backerkit-vs-shopify-vs-gamefound",
   kind: "article",
   publishedTime: "2026-07-16",
+  modifiedTime: "2026-07-17",
   keywords: ["BackerKit vs Shopify vs Gamefound", "pledge manager vs Shopify", "tabletop crowdfunding platforms"],
 });
 
@@ -48,9 +49,26 @@ export default function BackerkitShopifyGamefoundGuide() {
       description="These platforms are often compared as if they do the same job. Separate crowdfunding, pledge management and permanent ecommerce before choosing your stack."
       answer="BackerKit is strongest around crowdfunding and post-campaign backer workflows, Shopify is strongest as a permanent branded ecommerce store, and Gamefound combines tabletop crowdfunding with pledge management capabilities. The right setup depends on whether you are funding a project, managing backer orders or selling products long term."
       published="2026-07-16"
-      updated="July 16, 2026"
+      updated="2026-07-17"
       readTime="8 minute read"
       faqs={faqs}
+      sources={[
+        {
+          label: "How orders are pushed from BackerKit to Shopify",
+          publisher: "BackerKit Help",
+          href: "https://help.backerkit.com/article/659-how-are-orders-pushed-from-backerkit-to-shopify",
+        },
+        {
+          label: "How pledging works in the pledge manager",
+          publisher: "Gamefound Knowledge Base",
+          href: "https://help.gamefound.com/article/97-how-can-i-pledge",
+        },
+        {
+          label: "Products and catalog management",
+          publisher: "Shopify Help Center",
+          href: "https://help.shopify.com/en/manual/products",
+        },
+      ]}
       toc={[
         { id: "jobs", label: "Three different jobs" },
         { id: "backerkit", label: "Where BackerKit fits" },
@@ -134,6 +152,13 @@ export default function BackerkitShopifyGamefoundGuide() {
         management. That category fit can be valuable for creators who want campaign
         discovery, tabletop-aware reward structures and post-campaign pledge
         workflows in a connected environment.
+      </p>
+      <p>
+        Gamefound&apos;s own knowledge base describes a pledge-manager flow in which
+        backers select rewards and add-ons, provide shipping information and submit
+        the pledge or order. Review the current
+        <a href="https://help.gamefound.com/article/97-how-can-i-pledge" target="_blank" rel="noreferrer"> Gamefound pledge-manager instructions</a>
+        before designing an operational handoff.
       </p>
       <p>
         Its role still differs from a permanent branded store. Campaign visitors are

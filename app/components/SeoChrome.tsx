@@ -4,7 +4,7 @@ export function SeoHeader() {
   return (
     <header className="seo-header">
       <Link className="seo-brand" href="/" aria-label="Guildframe home">
-        <img src="/brand/guildframe-logo.svg" alt="Guildframe" />
+        <img src="/brand/guildframe-logo.svg" alt="Guildframe" width="1000" height="220" />
       </Link>
       <nav aria-label="Primary navigation">
         <Link href="/#styles">Styles</Link>
@@ -44,7 +44,7 @@ export function SeoFooter() {
       </div>
       <div className="seo-footer-grid">
         <div className="seo-footer-brand">
-          <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" />
+          <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="1000" height="220" />
           <p>
             A Shopify theme for tabletop game creators, with free done-for-you
             storefront setup during early release.

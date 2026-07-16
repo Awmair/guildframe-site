@@ -5,6 +5,20 @@ import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
 import { absoluteUrl, siteConfig } from "../site-config";
 
 export type ArticleFaq = { question: string; answer: string };
+export type ArticleSource = {
+  label: string;
+  publisher: string;
+  href: string;
+};
+
+function formatArticleDate(value: string) {
+  const [year, month, day] = value.split("-").map(Number);
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+  ];
+  return `${months[month - 1]} ${day}, ${year}`;
+}
 
 export function SeoArticlePage({
   slug,
@@ -17,6 +31,7 @@ export function SeoArticlePage({
   readTime,
   toc,
   faqs,
+  sources,
   children,
 }: {
   slug: string;
@@ -29,6 +44,7 @@ export function SeoArticlePage({
   readTime: string;
   toc: { id: string; label: string }[];
   faqs: ArticleFaq[];
+  sources: ArticleSource[];
   children: ReactNode;
 }) {
   return (
@@ -51,15 +67,9 @@ export function SeoArticlePage({
               articleSection: category,
               inLanguage: "en",
               isAccessibleForFree: true,
-              author: { "@type": "Organization", name: "Guildframe" },
-              publisher: {
-                "@type": "Organization",
-                name: "Guildframe",
-                logo: {
-                  "@type": "ImageObject",
-                  url: absoluteUrl("/brand/guildframe-logo.svg"),
-                },
-              },
+              author: { "@id": absoluteUrl("/#organization") },
+              publisher: { "@id": absoluteUrl("/#organization") },
+              citation: sources.map((source) => source.href),
               about: [
                 "Shopify",
                 "Tabletop games",
@@ -118,7 +128,7 @@ export function SeoArticlePage({
             <h1>{title}</h1>
             <p>{description}</p>
             <div className="article-meta">
-              <span>Updated {updated}</span>
+              <span>Updated <time dateTime={updated}>{formatArticleDate(updated)}</time></span>
               <span>{readTime}</span>
               <span>Guildframe editorial</span>
             </div>
@@ -150,6 +160,23 @@ export function SeoArticlePage({
               <p>{answer}</p>
             </div>
             {children}
+            <section className="article-sources" aria-labelledby="article-sources-title">
+              <h2 id="article-sources-title">Sources reviewed</h2>
+              <p>
+                Platform features and policies can change. These primary sources
+                were reviewed on <time dateTime={updated}>{formatArticleDate(updated)}</time>.
+              </p>
+              <ul>
+                {sources.map((source) => (
+                  <li key={source.href}>
+                    <a href={source.href} target="_blank" rel="noreferrer">
+                      {source.label}
+                    </a>
+                    <span>{source.publisher}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
             <section className="article-faq" id="faq">
               <h2>Quick answers</h2>
               {faqs.map((faq) => (

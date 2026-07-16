@@ -1,27 +1,26 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl } from "./site-config";
+import { contentDates } from "./content-dates";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
-    { path: "/", priority: 1, frequency: "weekly" as const },
-    { path: "/buy", priority: 0.9, frequency: "monthly" as const },
-    { path: "/shopify-theme-for-board-games", priority: 0.9, frequency: "monthly" as const },
-    { path: "/kickstarter-to-shopify", priority: 0.9, frequency: "monthly" as const },
-    { path: "/shopify-theme-for-ttrpg", priority: 0.8, frequency: "monthly" as const },
-    { path: "/shopify-theme-for-miniatures", priority: 0.8, frequency: "monthly" as const },
-    { path: "/guides", priority: 0.8, frequency: "weekly" as const },
-    { path: "/guides/move-from-kickstarter-to-shopify", priority: 0.8, frequency: "monthly" as const },
-    { path: "/guides/best-shopify-themes-for-board-games", priority: 0.8, frequency: "monthly" as const },
-    { path: "/guides/kickstarter-late-pledges-vs-shopify", priority: 0.7, frequency: "monthly" as const },
-    { path: "/guides/backerkit-vs-shopify-vs-gamefound", priority: 0.7, frequency: "monthly" as const },
+    { path: "/", modified: contentDates.home },
+    { path: "/buy", modified: contentDates.buy },
+    { path: "/shopify-theme-for-board-games", modified: contentDates.boardGames },
+    { path: "/kickstarter-to-shopify", modified: contentDates.kickstarter },
+    { path: "/shopify-theme-for-ttrpg", modified: contentDates.ttrpg },
+    { path: "/shopify-theme-for-miniatures", modified: contentDates.miniatures },
+    { path: "/guides", modified: contentDates.guides },
+    { path: "/guides/move-from-kickstarter-to-shopify", modified: contentDates.moveFromKickstarter },
+    { path: "/guides/best-shopify-themes-for-board-games", modified: contentDates.bestBoardGameThemes },
+    { path: "/guides/kickstarter-late-pledges-vs-shopify", modified: contentDates.latePledgesVsShopify },
+    { path: "/guides/backerkit-vs-shopify-vs-gamefound", modified: contentDates.backerkitVsShopifyVsGamefound },
   ];
 
   return routes.map((route) => ({
     url: absoluteUrl(route.path),
-    lastModified: new Date("2026-07-16"),
-    changeFrequency: route.frequency,
-    priority: route.priority,
+    lastModified: new Date(`${route.modified}T00:00:00.000Z`),
   }));
 }

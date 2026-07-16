@@ -49,7 +49,11 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
 
   assert.match(robots, /User-agent: \*/i);
   assert.match(robots, /Allow: \//i);
+  assert.match(robots, /User-agent: OAI-SearchBot/i);
+  assert.match(robots, /User-agent: ChatGPT-User/i);
   assert.match(robots, /Sitemap: http:\/\/localhost:3000\/sitemap\.xml/i);
+  assert.doesNotMatch(sitemap, /<changefreq>|<priority>/i);
+  assert.equal((sitemap.match(/<lastmod>2026-07-17T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
 });
 
 test("exports AEO and social metadata", async () => {
@@ -70,12 +74,17 @@ test("exports AEO and social metadata", async () => {
     assert.match(html, /"@type":"Article"/i, path);
     assert.match(html, /"@type":"FAQPage"/i, path);
     assert.match(html, /"isAccessibleForFree":true/i, path);
+    assert.match(html, /"dateModified":"2026-07-17"/i, path);
+    assert.match(html, /"citation":\["https:\/\//i, path);
+    assert.match(html, /Sources reviewed/i, path);
   }
 
   const homepage = await readPage("/");
   assert.match(homepage, /og-guildframe-launch-v2\.jpg/i);
   assert.match(homepage, /"image":"http:\/\/localhost:3000\/og-guildframe-launch-v2\.jpg"/i);
   assert.match(homepage, /"availability":"https:\/\/schema\.org\/InStock"/i);
+  assert.match(homepage, /"@type":"OnlineStore"/i);
+  assert.doesNotMatch(homepage, /OutOfStock/i);
   assert.match(homepage, /G-TEST123456/i);
 });
 

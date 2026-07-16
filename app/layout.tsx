@@ -85,12 +85,20 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "Organization",
+                "@type": "OnlineStore",
                 "@id": absoluteUrl("/#organization"),
                 name: "Guildframe",
                 url: absoluteUrl("/"),
                 logo: absoluteUrl("/brand/guildframe-logo.svg"),
                 description: siteConfig.description,
+                knowsAbout: [
+                  "Shopify themes",
+                  "Tabletop ecommerce",
+                  "Kickstarter to Shopify migration",
+                  "Board game stores",
+                  "TTRPG stores",
+                  "Miniatures stores",
+                ],
               },
               {
                 "@type": "WebSite",

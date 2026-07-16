@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "../components/JsonLd";
 import { SeoFooter, SeoHeader } from "../components/SeoChrome";
-import { absoluteUrl, pageMetadata, siteConfig } from "../site-config";
+import { pageMetadata, siteConfig } from "../site-config";
+import { guildframeProductData } from "../product-data";
 
 export const metadata: Metadata = pageMetadata({
   title: "Buy Guildframe",
@@ -31,21 +32,7 @@ export default function BuyPage() {
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "Product",
-          "@id": absoluteUrl("/buy#product"),
-          name: "Guildframe",
-          description: siteConfig.description,
-          image: absoluteUrl(siteConfig.socialImage),
-          brand: { "@type": "Brand", name: "Guildframe" },
-          offers: {
-            "@type": "Offer",
-            url: absoluteUrl("/buy"),
-            priceCurrency: "USD",
-            price: "419",
-            availability: siteConfig.checkoutUrl
-              ? "https://schema.org/InStock"
-              : "https://schema.org/OutOfStock",
-          },
+          ...guildframeProductData(),
         }}
       />
       <a className="skip-link" href="#purchase-content">
@@ -95,7 +82,7 @@ export default function BuyPage() {
           </div>
 
           <aside className="buy-inclusions" aria-label="Guildframe purchase summary">
-            <img src="/brand/guildframe-logo.svg" alt="Guildframe" />
+            <img src="/brand/guildframe-logo.svg" alt="Guildframe" width="1000" height="220" />
             <h2>Everything included</h2>
             <ul>
               {inclusions.map((item) => (

@@ -35,3 +35,13 @@ GitHub Actions workflow is used or required.
 
 Follow [CLOUDFLARE_PAGES_DEPLOY.md](./CLOUDFLARE_PAGES_DEPLOY.md) for the exact
 dashboard settings and launch sequence.
+
+## Search and answer-engine operations
+
+- [Crawler and AI policy](./docs/CRAWLER_AND_AI_POLICY.md)
+- [Search intent map](./docs/SEARCH_INTENT_MAP.md)
+- [AI search baseline](./docs/AI_SEARCH_BASELINE.md)
+- [Latest release audit](./docs/RELEASE_AUDIT_2026-07-17.md)
+
+Update the per-page dates in `app/content-dates.ts` only when the corresponding
+public page changes. The sitemap uses these values as truthful `lastmod` signals.
