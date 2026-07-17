@@ -18,11 +18,6 @@ export function guildframeProductData(image = siteConfig.socialImage) {
     category: guildframeOffer.category,
     image: absoluteUrl(image),
     brand: { "@type": "Brand", name: guildframeOffer.name },
-    audience: {
-      "@type": "Audience",
-      audienceType:
-        "Board game, card game, TTRPG, miniatures and tabletop creators",
-    },
     additionalProperty: [
       {
         "@type": "PropertyValue",
