@@ -25,7 +25,7 @@ const pages = [
   ["/resources", "Tabletop Ecommerce Checklists and References | Guildframe", "Reference tools"],
   ["/resources/board-game-shopify-store-checklist", "Board Game Shopify Store Checklist | Guildframe", "Board Game Shopify Store Checklist"],
   ["/resources/kickstarter-to-shopify-migration-checklist", "Kickstarter to Shopify Migration Checklist | Guildframe", "Kickstarter to Shopify Migration Checklist"],
-  ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "BackerKit vs Shopify vs Gamefound Comparison Matrix | Guildframe", "BackerKit vs Shopify vs Gamefound Comparison Matrix"],
+  ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "Tabletop Crowdfunding Platform Role Matrix | Guildframe", "Tabletop Crowdfunding Platform Role Matrix"],
   ["/resources/board-game-product-page-checklist", "Board Game Shopify Product Page Checklist | Guildframe", "Board Game Shopify Product Page Checklist"],
   ["/resources/kickstarter-tabletop-games-benchmark", "2024 Kickstarter Tabletop Games Funding Benchmark | Guildframe", "6,646"],
 ];
@@ -65,7 +65,8 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
   assert.match(robots, /User-agent: ChatGPT-User/i);
   assert.match(robots, /Sitemap: http:\/\/localhost:3000\/sitemap\.xml/i);
   assert.doesNotMatch(sitemap, /<changefreq>|<priority>/i);
-  assert.equal((sitemap.match(/<lastmod>2026-07-17T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
+  assert.equal((sitemap.match(/<lastmod>2026-07-(?:17|18)T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
+  assert.match(sitemap, /<lastmod>2026-07-18T00:00:00.000Z<\/lastmod>/);
 });
 
 test("exports AEO and social metadata", async () => {
@@ -89,6 +90,10 @@ test("exports AEO and social metadata", async () => {
     "/resources/board-game-product-page-checklist",
     "/resources/kickstarter-tabletop-games-benchmark",
   ];
+  const updatedArticlePaths = new Set([
+    "/guides/backerkit-vs-shopify-vs-gamefound",
+    "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
+  ]);
 
   for (const path of solutionPaths) {
     const html = await readPage(path);
@@ -103,7 +108,8 @@ test("exports AEO and social metadata", async () => {
     assert.match(html, /"@type":"(?:Article|TechArticle)"/i, path);
     assert.match(html, /"isAccessibleForFree":true/i, path);
     assert.match(html, /"reviewedBy":\{"@id":"http:\/\/localhost:3000\/authors\/guildframe#editorial-team"\}/i, path);
-    assert.match(html, /"dateModified":"2026-07-17"/i, path);
+    const modifiedDate = updatedArticlePaths.has(path) ? "2026-07-18" : "2026-07-17";
+    assert.match(html, new RegExp(`"dateModified":"${modifiedDate}"`, "i"), path);
     assert.match(html, /"citation":\["https:\/\//i, path);
     assert.match(html, /Sources reviewed/i, path);
   }

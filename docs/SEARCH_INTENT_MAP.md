@@ -1,6 +1,6 @@
 # Guildframe search intent map
 
-Last reviewed: 2026-07-17
+Last reviewed: 2026-07-18
 
 Each query family has one primary page. Supporting pages must link to the primary
 page and serve a different stage of the decision instead of repeating it.
@@ -25,7 +25,7 @@ page and serve a different stage of the decision instead of repeating it.
 | Tabletop ecommerce reference library | `/resources` | Collection hub for reusable tools | Guides provide the deeper explanatory layer |
 | Board game Shopify store checklist | `/resources/board-game-shopify-store-checklist` | Store launch audit tool | Board game solution page serves commercial theme intent |
 | Kickstarter to Shopify migration checklist | `/resources/kickstarter-to-shopify-migration-checklist` | Phase-by-phase execution tool | Migration guide explains the reasoning and tradeoffs |
-| BackerKit vs Shopify vs Gamefound matrix | `/resources/backerkit-vs-shopify-vs-gamefound-comparison` | Scannable role comparison | Platform guide provides narrative context |
+| Tabletop crowdfunding platform role matrix | `/resources/backerkit-vs-shopify-vs-gamefound-comparison` | Operational ownership worksheet | BackerKit vs Shopify vs Gamefound guide owns the comparison query |
 | Board game product page checklist | `/resources/board-game-product-page-checklist` | Product-page anatomy and QA tool | Theme guide evaluates theme-level fit |
 | Kickstarter tabletop games statistics | `/resources/kickstarter-tabletop-games-benchmark` | Source-backed funding benchmark and reusable data | Migration content explains what creators do after funding |
 

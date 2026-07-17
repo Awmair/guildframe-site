@@ -25,8 +25,8 @@ const resources = [
     tag: "Migration",
   },
   {
-    title: "BackerKit vs Shopify vs Gamefound Comparison Matrix",
-    copy: "A role-by-role reference for funding, pledge management, fulfillment data and long-term commerce.",
+    title: "Tabletop Crowdfunding Platform Role Matrix",
+    copy: "Assign funding, pledge management, fulfillment data and long-term commerce to the right system.",
     href: "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
     tag: "Platform matrix",
   },

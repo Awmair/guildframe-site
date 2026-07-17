@@ -3,14 +3,14 @@ import { ArticleCallout, ArticleTable, SeoArticlePage } from "../../components/S
 import { pageMetadata } from "../../site-config";
 
 export const metadata = pageMetadata({
-  title: "BackerKit vs Shopify vs Gamefound Comparison Matrix",
+  title: "Tabletop Crowdfunding Platform Role Matrix",
   description:
-    "Compare BackerKit, Shopify and Gamefound by funding, pledge management, fulfillment data, product catalog and long-term ecommerce role.",
+    "Map crowdfunding, pledge management and permanent ecommerce responsibilities across BackerKit, Shopify and Gamefound.",
   path: "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-17",
-  keywords: ["BackerKit vs Shopify vs Gamefound", "Gamefound vs BackerKit", "pledge manager vs Shopify"],
+  modifiedTime: "2026-07-18",
+  keywords: ["tabletop crowdfunding platform matrix", "crowdfunding platform roles", "pledge manager ecommerce workflow"],
 });
 
 const faqs = [
@@ -36,13 +36,13 @@ export default function PlatformComparisonMatrixPage() {
       collectionLabel="Resources"
       collectionHref="/resources"
       schemaType="TechArticle"
-      sidebarTitle="Comparison matrix"
-      category="Platform comparison"
-      title="BackerKit vs Shopify vs Gamefound Comparison Matrix"
-      description="Use this role-by-role matrix to decide which platform owns funding, pledge management, fulfillment data and permanent tabletop ecommerce."
+      sidebarTitle="Platform role matrix"
+      category="Crowdfunding operations"
+      title="Tabletop Crowdfunding Platform Role Matrix"
+      description="Use this operational matrix to assign funding, pledge management, fulfillment data and permanent ecommerce to the right system."
       answer="BackerKit and Gamefound are built around crowdfunding and backer workflows, while Shopify is built for ongoing ecommerce. Many tabletop creators use a campaign or pledge platform for backer-specific work and Shopify as the permanent product, checkout and customer layer."
       published="2026-07-17"
-      updated="2026-07-17"
+      updated="2026-07-18"
       readTime="6 minute reference"
       faqs={faqs}
       sources={[
@@ -61,6 +61,9 @@ export default function PlatformComparisonMatrixPage() {
         { id: "faq", label: "Quick answers" },
       ]}
     >
+      <p>
+        This is the scannable implementation companion to the full <Link href="/guides/backerkit-vs-shopify-vs-gamefound">BackerKit vs Shopify vs Gamefound guide</Link>. Use the guide to choose a stack, then use this matrix to document which system owns each operational job.
+      </p>
       <h2 id="matrix">Role comparison at a glance</h2>
       <ArticleTable
         headers={["Capability", "BackerKit", "Shopify", "Gamefound"]}

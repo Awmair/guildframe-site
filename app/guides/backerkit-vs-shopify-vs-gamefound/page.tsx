@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/backerkit-vs-shopify-vs-gamefound",
   kind: "article",
   publishedTime: "2026-07-16",
-  modifiedTime: "2026-07-17",
+  modifiedTime: "2026-07-18",
   keywords: ["BackerKit vs Shopify vs Gamefound", "pledge manager vs Shopify", "tabletop crowdfunding platforms"],
 });
 
@@ -50,7 +50,7 @@ export default function BackerkitShopifyGamefoundGuide() {
       description="These platforms are often compared as if they do the same job. Separate crowdfunding, pledge management and permanent ecommerce before choosing your stack."
       answer="BackerKit is strongest around crowdfunding and post-campaign backer workflows, Shopify is strongest as a permanent branded ecommerce store, and Gamefound combines tabletop crowdfunding with pledge management capabilities. The right setup depends on whether you are funding a project, managing backer orders or selling products long term."
       published="2026-07-16"
-      updated="2026-07-17"
+      updated="2026-07-18"
       readTime="8 minute read"
       faqs={faqs}
       sources={[
@@ -191,6 +191,9 @@ export default function BackerkitShopifyGamefoundGuide() {
           ["You have several released games and expansions", "Shopify", "Campaign tools only when launching a new project"],
         ]}
       />
+      <p>
+        Once the platform roles are clear, record the ownership boundaries in the <Link href="/resources/backerkit-vs-shopify-vs-gamefound-comparison">tabletop crowdfunding platform role matrix</Link>.
+      </p>
       <p>
         More platforms create more data boundaries, customer support paths and
         chances for inconsistent inventory. Add a system only when it solves a

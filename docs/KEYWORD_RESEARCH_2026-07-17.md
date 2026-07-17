@@ -40,7 +40,8 @@ a trend. Their result pages still show clear task intent:
 | Migration reference | Kickstarter to Shopify migration checklist | Shopify migration checklist | Execution tool |
 | Product-page reference | board game Shopify product page | Shopify product page checklist, product page design | Page anatomy and QA |
 | Store reference | board game Shopify store checklist | Shopify store checklist, tabletop ecommerce checklist | Store-wide launch QA |
-| Platform matrix | BackerKit vs Shopify vs Gamefound | pledge manager vs Shopify | Role comparison |
+| Platform guide | BackerKit vs Shopify vs Gamefound | pledge manager vs Shopify | Narrative comparison and stack selection |
+| Platform role matrix | tabletop crowdfunding platform matrix | crowdfunding platform roles, pledge manager ecommerce workflow | Operational ownership reference |
 | Launch timeline | Kickstarter to Shopify timeline | when to launch Shopify after Kickstarter, post Kickstarter store launch | Sequencing and readiness |
 | Preorder guide | board game preorders Shopify | Shopify preorders after Kickstarter, sell board game preorders online | Transaction planning |
 | Catalog guide | sell board game expansions Shopify | board game add-ons ecommerce, Shopify bundles for board games | Catalog architecture |
