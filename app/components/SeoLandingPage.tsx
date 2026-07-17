@@ -41,15 +41,6 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
     ],
   };
 
-  const faqData = {
-    "@type": "FAQPage",
-    mainEntity: content.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.answer },
-    })),
-  };
-
   const productData = guildframeProductData(content.image);
 
   return (
@@ -73,7 +64,6 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
             },
             productData,
             breadcrumbData,
-            faqData,
           ],
         }}
       />

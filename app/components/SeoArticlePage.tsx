@@ -80,6 +80,7 @@ export function SeoArticlePage({
               inLanguage: "en",
               isAccessibleForFree: true,
               author: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
+              reviewedBy: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
               publisher: { "@id": absoluteUrl("/#organization") },
               citation: sources.map((source) => source.href),
               about: [
@@ -111,14 +112,6 @@ export function SeoArticlePage({
                   item: absoluteUrl(canonicalPath),
                 },
               ],
-            },
-            {
-              "@type": "FAQPage",
-              mainEntity: faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: { "@type": "Answer", text: faq.answer },
-              })),
             },
           ],
         }}
@@ -168,7 +161,7 @@ export function SeoArticlePage({
           </aside>
 
           <article className="article-body" id="article-content">
-            <div className="article-direct-answer">
+            <div className="article-direct-answer" aria-label="Direct answer">
               <p>{answer}</p>
             </div>
             {children}
@@ -223,19 +216,62 @@ export function SeoArticlePage({
 }
 
 export function ArticleCallout({ children }: { children: ReactNode }) {
-  return <div className="article-callout">{children}</div>;
+  return <aside className="article-callout">{children}</aside>;
+}
+
+export function ArticleDefinition({
+  term,
+  children,
+}: {
+  term: string;
+  children: ReactNode;
+}) {
+  return (
+    <dl className="article-definition">
+      <dt>{term}</dt>
+      <dd>{children}</dd>
+    </dl>
+  );
+}
+
+export function ArticleStatGrid({
+  stats,
+}: {
+  stats: { value: string; label: string; note?: string }[];
+}) {
+  return (
+    <dl className="article-stat-grid" aria-label="Key benchmark figures">
+      {stats.map((stat) => (
+        <div key={`${stat.value}-${stat.label}`}>
+          <dt>{stat.value}</dt>
+          <dd>
+            <strong>{stat.label}</strong>
+            {stat.note ? <span>{stat.note}</span> : null}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  );
 }
 
 export function ArticleTable({
   headers,
   rows,
+  caption,
 }: {
   headers: string[];
   rows: string[][];
+  caption?: string;
 }) {
   return (
-    <div className="article-table-wrap">
+    <div
+      className="article-table-wrap"
+      role="region"
+      aria-label={caption ?? "Comparison table"}
+      tabIndex={0}
+    >
       <table>
+        {caption ? <caption>{caption}</caption> : null}
         <thead>
           <tr>{headers.map((header) => <th key={header}>{header}</th>)}</tr>
         </thead>

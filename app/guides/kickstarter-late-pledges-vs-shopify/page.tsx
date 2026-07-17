@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ArticleCallout,
+  ArticleDefinition,
   ArticleTable,
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
@@ -78,6 +79,11 @@ export default function LatePledgesVsShopifyGuide() {
         { id: "faq", label: "Quick answers" },
       ]}
     >
+      <ArticleDefinition term="Late pledge vs permanent store">
+        A late pledge extends access to a funded campaign and its rewards. A
+        Shopify store creates an ongoing retail catalog, checkout and customer
+        operating system. The buyer context and data ownership are different.
+      </ArticleDefinition>
       <h2 id="difference">The core difference is campaign access vs permanent commerce</h2>
       <p>
         Kickstarter Late Pledges lets eligible projects continue accepting pledges
@@ -101,6 +107,7 @@ export default function LatePledgesVsShopifyGuide() {
         obligations.
       </p>
       <ArticleTable
+        caption="Kickstarter Late Pledges and Shopify compared"
         headers={["Question", "Kickstarter Late Pledges", "Shopify"]}
         rows={[
           ["Primary job", "Extend eligible campaign rewards", "Run a permanent online store"],
@@ -175,7 +182,12 @@ export default function LatePledgesVsShopifyGuide() {
       </ArticleCallout>
 
       <h2 id="decision">A simple decision framework</h2>
+      <p>
+        If Shopify will own the order, use the companion guide to
+        <Link href="/guides/sell-board-game-preorders-on-shopify"> board game preorders on Shopify</Link> before configuring inventory and customer communication.
+      </p>
       <ArticleTable
+        caption="Decision framework for post-campaign sales"
         headers={["If this is your priority", "Use this as the primary path"]}
         rows={[
           ["Extend the original reward window", "Kickstarter Late Pledges"],

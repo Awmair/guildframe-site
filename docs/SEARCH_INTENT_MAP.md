@@ -16,6 +16,9 @@ page and serve a different stage of the decision instead of repeating it.
 | Move from Kickstarter to Shopify | `/guides/move-from-kickstarter-to-shopify` | Step-by-step migration | Kickstarter solution page is the implementation offer |
 | Kickstarter Late Pledges vs Shopify | `/guides/kickstarter-late-pledges-vs-shopify` | Two-channel decision | Platform comparison covers the broader stack |
 | BackerKit vs Shopify vs Gamefound | `/guides/backerkit-vs-shopify-vs-gamefound` | System-of-record and stack decision | Late Pledges guide covers Kickstarter specifically |
+| Kickstarter to Shopify timeline | `/guides/kickstarter-to-shopify-launch-timeline` | Sequencing and launch readiness | Migration guide explains the full operational process |
+| Board game preorders on Shopify | `/guides/sell-board-game-preorders-on-shopify` | Preorder setup and communication | Late Pledges guide chooses the channel |
+| Board game expansions and add-ons | `/guides/sell-board-game-expansions-add-ons-shopify` | Product, variant and bundle architecture | Product-page checklist handles page-level QA |
 | About Guildframe | `/about` | Brand, product and company entity trust | Product pages link here for organization context |
 | Guildframe editorial standards | `/editorial-policy` | Research, sourcing and correction policy | Author page identifies the responsible team |
 | Guildframe Editorial Team | `/authors/guildframe` | Organization author profile and expertise | Guides and references use this stable author entity |
@@ -24,6 +27,7 @@ page and serve a different stage of the decision instead of repeating it.
 | Kickstarter to Shopify migration checklist | `/resources/kickstarter-to-shopify-migration-checklist` | Phase-by-phase execution tool | Migration guide explains the reasoning and tradeoffs |
 | BackerKit vs Shopify vs Gamefound matrix | `/resources/backerkit-vs-shopify-vs-gamefound-comparison` | Scannable role comparison | Platform guide provides narrative context |
 | Board game product page checklist | `/resources/board-game-product-page-checklist` | Product-page anatomy and QA tool | Theme guide evaluates theme-level fit |
+| Kickstarter tabletop games statistics | `/resources/kickstarter-tabletop-games-benchmark` | Source-backed funding benchmark and reusable data | Migration content explains what creators do after funding |
 
 ## Guardrails
 

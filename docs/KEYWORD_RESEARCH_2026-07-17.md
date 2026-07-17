@@ -41,6 +41,10 @@ a trend. Their result pages still show clear task intent:
 | Product-page reference | board game Shopify product page | Shopify product page checklist, product page design | Page anatomy and QA |
 | Store reference | board game Shopify store checklist | Shopify store checklist, tabletop ecommerce checklist | Store-wide launch QA |
 | Platform matrix | BackerKit vs Shopify vs Gamefound | pledge manager vs Shopify | Role comparison |
+| Launch timeline | Kickstarter to Shopify timeline | when to launch Shopify after Kickstarter, post Kickstarter store launch | Sequencing and readiness |
+| Preorder guide | board game preorders Shopify | Shopify preorders after Kickstarter, sell board game preorders online | Transaction planning |
+| Catalog guide | sell board game expansions Shopify | board game add-ons ecommerce, Shopify bundles for board games | Catalog architecture |
+| Funding benchmark | Kickstarter tabletop games statistics | board game Kickstarter benchmark, tabletop crowdfunding data | Data and citation reference |
 
 ## Guardrails
 
@@ -49,3 +53,17 @@ a trend. Their result pages still show clear task intent:
 - Keep trust pages focused on brand, authorship and editorial standards instead
   of forcing commercial keywords into them.
 - Review real Search Console and Bing queries before adding another landing page.
+
+## Supporting intent evidence
+
+Current official result coverage confirms distinct task intent for the new pages:
+
+- Shopify documents preorders as a purchase option and separately documents
+  product, variant, metafield and bundle behavior.
+- Kickstarter documents Late Pledges, pledge-manager sequencing and backer-report
+  roles separately from permanent ecommerce.
+- Kickstarter's 2024 Games retrospective provides an authoritative data source
+  for tabletop funding statistics rather than relying on unsupported market claims.
+
+These pages were added because they answer different operational questions. They
+are not synonym pages for the existing migration or theme landing pages.

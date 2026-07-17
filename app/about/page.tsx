@@ -95,6 +95,11 @@ export default function AboutPage() {
             <Link href="/authors/guildframe"> Guildframe Editorial Team</Link>, or use
             the <Link href="/resources">reference library</Link> for citable checklists and comparisons.
           </p>
+          <p>
+            Guildframe also publishes reproducible research such as the
+            <Link href="/resources/kickstarter-tabletop-games-benchmark"> 2024 Kickstarter tabletop games funding benchmark</Link>,
+            with its calculation method and downloadable data visible on the page.
+          </p>
         </section>
       </TrustPage>
     </>

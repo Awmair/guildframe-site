@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ArticleCallout,
+  ArticleDefinition,
   ArticleTable,
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
@@ -86,6 +87,12 @@ export default function BestThemesGuide() {
         use case, and we make the relationship explicit so you can judge the fit.
       </ArticleCallout>
 
+      <ArticleDefinition term="Board game Shopify theme">
+        A Shopify storefront design and section system capable of explaining
+        tabletop products, editions, expansions and campaign stories while keeping
+        mobile product discovery and checkout straightforward.
+      </ArticleDefinition>
+
       <h2 id="method">How this guide evaluates board game Shopify themes</h2>
       <p>
         This comparison evaluates theme routes rather than awarding a universal
@@ -95,6 +102,7 @@ export default function BestThemesGuide() {
         needed to reach a finished storefront.
       </p>
       <ArticleTable
+        caption="Evaluation criteria for board game Shopify themes"
         headers={["Evaluation area", "What to verify in a real demo"]}
         rows={[
           ["Product explanation", "Media, specifications, contents, proof and a clear purchase path"],
@@ -133,6 +141,10 @@ export default function BestThemesGuide() {
         customer. Test your real catalog structure rather than assuming every demo
         handles it equally well.
       </p>
+      <p>
+        The theme should also support the catalog choices explained in our guide to
+        <Link href="/guides/sell-board-game-expansions-add-ons-shopify"> selling expansions, add-ons and bundles on Shopify</Link>.
+      </p>
       <h3>3. Carry campaign-level art without campaign-level length</h3>
       <p>
         Tabletop brands often have excellent campaign artwork. The theme should use
@@ -149,6 +161,7 @@ export default function BestThemesGuide() {
 
       <h2 id="routes">The three practical theme routes</h2>
       <ArticleTable
+        caption="Purpose-built, premium and free Shopify theme routes"
         headers={["Route", "Best for", "Main advantage", "Main tradeoff"]}
         rows={[
           ["Purpose-built tabletop theme", "Creators who want fast category fit", "Relevant structure and art direction", "Smaller selection of vendors"],

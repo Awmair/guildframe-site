@@ -68,6 +68,9 @@ export function SeoFooter() {
             Theme comparison
           </Link>
           <Link href="/resources">Checklists and references</Link>
+          <Link href="/resources/kickstarter-tabletop-games-benchmark">
+            Kickstarter tabletop benchmark
+          </Link>
           <Link href="/about">About Guildframe</Link>
           <Link href="/editorial-policy">Editorial policy</Link>
           <Link href="/#pricing">Pricing</Link>

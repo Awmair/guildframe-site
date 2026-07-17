@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ArticleCallout,
+  ArticleDefinition,
   ArticleTable,
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
@@ -80,6 +81,11 @@ export default function MoveKickstarterToShopifyGuide() {
         { id: "faq", label: "Quick answers" },
       ]}
     >
+      <ArticleDefinition term="Kickstarter to Shopify migration">
+        The operational move from a time-limited crowdfunding campaign to a
+        permanent Shopify catalog and customer journey. It does not mean copying
+        backer data or campaign reward logic into Shopify without review.
+      </ArticleDefinition>
       <h2 id="roles">1. Understand what Kickstarter and Shopify each do</h2>
       <p>
         Kickstarter is where you present a project, gather pledges and communicate
@@ -96,6 +102,7 @@ export default function MoveKickstarterToShopifyGuide() {
         <a href="https://www.shopify.com/ca/blog/how-to-transition-from-kickstarter-to-shopify" target="_blank" rel="noreferrer"> Kickstarter to Shopify transition</a>.
       </p>
       <ArticleTable
+        caption="Kickstarter, pledge manager and Shopify roles"
         headers={["System", "Best at", "Not primarily designed for"]}
         rows={[
           ["Kickstarter", "Funding a defined creative project", "Running a permanent product catalog"],
@@ -151,6 +158,7 @@ export default function MoveKickstarterToShopifyGuide() {
         do next?
       </p>
       <ArticleTable
+        caption="How to adapt campaign assets for a permanent store"
         headers={["Campaign asset", "Store destination", "Recommended change"]}
         rows={[
           ["Hero art and promise", "Homepage or collection hero", "Shorten it and add a direct shopping path"],
@@ -183,6 +191,9 @@ export default function MoveKickstarterToShopifyGuide() {
       </ol>
       <p>
         A purpose-built option such as <Link href="/kickstarter-to-shopify">Guildframe&apos;s Kickstarter to Shopify system</Link> reduces design setup because the visual and content structure already anticipates tabletop products, editions and campaign storytelling.
+      </p>
+      <p>
+        Use the <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link> when you need to sequence this work around campaign close, asset delivery and store testing.
       </p>
 
       <h2 id="test">5. Test the full buying experience</h2>

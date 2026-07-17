@@ -36,6 +36,24 @@ const guides = [
     href: "/guides/backerkit-vs-shopify-vs-gamefound",
     tag: "Platform comparison",
   },
+  {
+    title: "Kickstarter to Shopify Launch Timeline",
+    copy: "A phase-by-phase plan from campaign close through product setup, testing and public store launch.",
+    href: "/guides/kickstarter-to-shopify-launch-timeline",
+    tag: "Launch timeline",
+  },
+  {
+    title: "How to Sell Board Game Preorders on Shopify After Crowdfunding",
+    copy: "Choose the right order channel and make preorder timing, inventory and customer communication clear.",
+    href: "/guides/sell-board-game-preorders-on-shopify",
+    tag: "Preorder guide",
+  },
+  {
+    title: "How to Sell Board Game Expansions, Add-ons and Bundles on Shopify",
+    copy: "Structure core games, editions and compatible extras without recreating confusing pledge tiers.",
+    href: "/guides/sell-board-game-expansions-add-ons-shopify",
+    tag: "Catalog guide",
+  },
 ];
 
 export default function GuidesPage() {
@@ -77,8 +95,9 @@ export default function GuidesPage() {
           },
         ],
       }} />
+      <a className="skip-link" href="#guides-content">Skip to guides</a>
       <SeoHeader />
-      <main className="guides-main">
+      <main className="guides-main" id="guides-content">
         <section className="guides-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
           <h1>Build what comes <em>after funding.</em></h1>

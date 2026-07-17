@@ -17,6 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/guides/best-shopify-themes-for-board-games", modified: contentDates.bestBoardGameThemes },
     { path: "/guides/kickstarter-late-pledges-vs-shopify", modified: contentDates.latePledgesVsShopify },
     { path: "/guides/backerkit-vs-shopify-vs-gamefound", modified: contentDates.backerkitVsShopifyVsGamefound },
+    { path: "/guides/kickstarter-to-shopify-launch-timeline", modified: contentDates.kickstarterToShopifyTimeline },
+    { path: "/guides/sell-board-game-preorders-on-shopify", modified: contentDates.boardGamePreorders },
+    { path: "/guides/sell-board-game-expansions-add-ons-shopify", modified: contentDates.expansionsAndAddons },
     { path: "/about", modified: contentDates.about },
     { path: "/editorial-policy", modified: contentDates.editorialPolicy },
     { path: "/authors/guildframe", modified: contentDates.authorGuildframe },
@@ -25,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/kickstarter-to-shopify-migration-checklist", modified: contentDates.migrationChecklist },
     { path: "/resources/backerkit-vs-shopify-vs-gamefound-comparison", modified: contentDates.platformMatrix },
     { path: "/resources/board-game-product-page-checklist", modified: contentDates.productPageChecklist },
+    { path: "/resources/kickstarter-tabletop-games-benchmark", modified: contentDates.kickstarterTabletopBenchmark },
   ];
 
   return routes.map((route) => ({

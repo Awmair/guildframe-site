@@ -260,29 +260,10 @@ export default function Home() {
     setActiveProcess(index);
   };
 
-  const chooseAdjacentStyle = (direction: number) => {
-    setActiveStyle((current) =>
-      (current + direction + styleOptions.length) % styleOptions.length,
-    );
-  };
-
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@graph": [
-            guildframeProductData(),
-            {
-              "@type": "FAQPage",
-              mainEntity: faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: { "@type": "Answer", text: faq.answer },
-              })),
-            },
-          ],
-        }}
+        data={{ "@context": "https://schema.org", ...guildframeProductData() }}
       />
       <a className="skip-link" href="#main-content">
         Skip to content
@@ -379,14 +360,13 @@ export default function Home() {
               </p>
               <div
                 className="process-steps"
-                role="tablist"
+                role="group"
                 aria-label="Store launch steps"
               >
                 {processSteps.map((step, index) => (
                   <button
                     type="button"
-                    role="tab"
-                    aria-selected={activeProcess === index}
+                    aria-pressed={activeProcess === index}
                     aria-controls="process-visual"
                     className={`process-step ${activeProcess === index ? "is-active" : ""}`}
                     onClick={() => chooseProcess(index)}
@@ -406,7 +386,8 @@ export default function Home() {
             <div
               className="process-stage"
               id="process-visual"
-              role="tabpanel"
+              role="region"
+              aria-live="polite"
               tabIndex={0}
               aria-label={`${processSteps[activeProcess].title}: ${processSteps[activeProcess].copy}`}
             >
@@ -539,24 +520,13 @@ export default function Home() {
           <div className="preset-explorer" data-reveal>
             <div
               className="preset-gallery"
-              role="tablist"
+              role="group"
               aria-label="Guildframe preset worlds"
-              onKeyDown={(event) => {
-                if (event.key === "ArrowRight" || event.key === "ArrowDown") {
-                  event.preventDefault();
-                  chooseAdjacentStyle(1);
-                }
-                if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
-                  event.preventDefault();
-                  chooseAdjacentStyle(-1);
-                }
-              }}
             >
               {styleOptions.map((style, index) => (
                 <button
                   type="button"
-                  role="tab"
-                  aria-selected={activeStyle === index}
+                  aria-pressed={activeStyle === index}
                   aria-controls="preset-detail"
                   className={`preset-card ${activeStyle === index ? "is-active" : ""}`}
                   onClick={() => setActiveStyle(index)}
@@ -596,7 +566,9 @@ export default function Home() {
             <div
               className="preset-detail"
               id="preset-detail"
-              role="tabpanel"
+              role="region"
+              aria-live="polite"
+              aria-label={`${selectedStyle.name} preset details`}
               style={
                 {
                   "--preset-accent": selectedStyle.color,

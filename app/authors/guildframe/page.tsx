@@ -88,6 +88,9 @@ export default function GuildframeAuthorPage() {
             <li><Link href="/guides/best-shopify-themes-for-board-games">Best Shopify themes for board games</Link></li>
             <li><Link href="/guides/kickstarter-late-pledges-vs-shopify">Kickstarter Late Pledges vs Shopify</Link></li>
             <li><Link href="/guides/backerkit-vs-shopify-vs-gamefound">BackerKit vs Shopify vs Gamefound</Link></li>
+            <li><Link href="/resources/kickstarter-tabletop-games-benchmark">2024 Kickstarter tabletop games benchmark</Link></li>
+            <li><Link href="/guides/sell-board-game-preorders-on-shopify">How to sell board game preorders on Shopify</Link></li>
+            <li><Link href="/guides/sell-board-game-expansions-add-ons-shopify">How to sell expansions and add-ons on Shopify</Link></li>
           </ul>
           <p>
             For the standards behind this work, read the <Link href="/editorial-policy">editorial policy</Link>.

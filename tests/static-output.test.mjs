@@ -16,6 +16,9 @@ const pages = [
   ["/guides/best-shopify-themes-for-board-games", "Best Shopify Themes for Board Games in 2026 | Guildframe", "Best Shopify Themes for Board Games"],
   ["/guides/kickstarter-late-pledges-vs-shopify", "Kickstarter Late Pledges vs Shopify | Guildframe", "Kickstarter Late Pledges vs Shopify"],
   ["/guides/backerkit-vs-shopify-vs-gamefound", "BackerKit vs Shopify vs Gamefound After Crowdfunding | Guildframe", "BackerKit vs Shopify vs Gamefound"],
+  ["/guides/kickstarter-to-shopify-launch-timeline", "Kickstarter to Shopify Launch Timeline | Guildframe", "Kickstarter to Shopify Launch Timeline"],
+  ["/guides/sell-board-game-preorders-on-shopify", "How to Sell Board Game Preorders on Shopify | Guildframe", "How to Sell Board Game Preorders"],
+  ["/guides/sell-board-game-expansions-add-ons-shopify", "Sell Board Game Expansions and Add-ons on Shopify | Guildframe", "How to Sell Board Game Expansions"],
   ["/about", "About Guildframe | Guildframe", "Tabletop worlds deserve"],
   ["/editorial-policy", "Editorial Policy | Guildframe", "Useful first"],
   ["/authors/guildframe", "Guildframe Editorial Team | Guildframe", "Guildframe Editorial Team"],
@@ -24,6 +27,7 @@ const pages = [
   ["/resources/kickstarter-to-shopify-migration-checklist", "Kickstarter to Shopify Migration Checklist | Guildframe", "Kickstarter to Shopify Migration Checklist"],
   ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "BackerKit vs Shopify vs Gamefound Comparison Matrix | Guildframe", "BackerKit vs Shopify vs Gamefound Comparison Matrix"],
   ["/resources/board-game-product-page-checklist", "Board Game Shopify Product Page Checklist | Guildframe", "Board Game Shopify Product Page Checklist"],
+  ["/resources/kickstarter-tabletop-games-benchmark", "2024 Kickstarter Tabletop Games Funding Benchmark | Guildframe", "6,646"],
 ];
 
 const outputFile = (path) =>
@@ -65,15 +69,29 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
 });
 
 test("exports AEO and social metadata", async () => {
-  const solutionPaths = pages.slice(2, 6).map(([path]) => path);
+  const solutionPaths = [
+    "/shopify-theme-for-board-games",
+    "/kickstarter-to-shopify",
+    "/shopify-theme-for-ttrpg",
+    "/shopify-theme-for-miniatures",
+  ];
   const articlePaths = [
-    ...pages.slice(7, 11).map(([path]) => path),
-    ...pages.slice(15).map(([path]) => path),
+    "/guides/move-from-kickstarter-to-shopify",
+    "/guides/best-shopify-themes-for-board-games",
+    "/guides/kickstarter-late-pledges-vs-shopify",
+    "/guides/backerkit-vs-shopify-vs-gamefound",
+    "/guides/kickstarter-to-shopify-launch-timeline",
+    "/guides/sell-board-game-preorders-on-shopify",
+    "/guides/sell-board-game-expansions-add-ons-shopify",
+    "/resources/board-game-shopify-store-checklist",
+    "/resources/kickstarter-to-shopify-migration-checklist",
+    "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
+    "/resources/board-game-product-page-checklist",
+    "/resources/kickstarter-tabletop-games-benchmark",
   ];
 
   for (const path of solutionPaths) {
     const html = await readPage(path);
-    assert.match(html, /"@type":"FAQPage"/i, path);
     assert.match(html, /"@type":"Product"/i, path);
     assert.match(html, /"price":"419"/i, path);
     assert.match(html, /"priceCurrency":"USD"/i, path);
@@ -83,14 +101,21 @@ test("exports AEO and social metadata", async () => {
     const html = await readPage(path);
     assert.match(html, /<meta property="og:type" content="article"/i, path);
     assert.match(html, /"@type":"(?:Article|TechArticle)"/i, path);
-    assert.match(html, /"@type":"FAQPage"/i, path);
     assert.match(html, /"isAccessibleForFree":true/i, path);
+    assert.match(html, /"reviewedBy":\{"@id":"http:\/\/localhost:3000\/authors\/guildframe#editorial-team"\}/i, path);
     assert.match(html, /"dateModified":"2026-07-17"/i, path);
     assert.match(html, /"citation":\["https:\/\//i, path);
     assert.match(html, /Sources reviewed/i, path);
   }
 
-  for (const path of pages.slice(15).map(([path]) => path)) {
+  const referencePaths = [
+    "/resources/board-game-shopify-store-checklist",
+    "/resources/kickstarter-to-shopify-migration-checklist",
+    "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
+    "/resources/board-game-product-page-checklist",
+    "/resources/kickstarter-tabletop-games-benchmark",
+  ];
+  for (const path of referencePaths) {
     const html = await readPage(path);
     assert.match(html, /"@type":"TechArticle"/i, path);
     assert.match(html, /Guildframe Editorial Team/i, path);
@@ -108,6 +133,11 @@ test("exports AEO and social metadata", async () => {
   assert.match(homepage, /"@type":"OnlineStore"/i);
   assert.doesNotMatch(homepage, /OutOfStock/i);
   assert.match(homepage, /G-TEST123456/i);
+
+  const benchmark = await readPage("/resources/kickstarter-tabletop-games-benchmark");
+  assert.match(benchmark, /kickstarter-tabletop-games-benchmark-2024\.csv/i);
+  assert.match(benchmark, /Guildframe calculations from Kickstarter/i);
+  assert.doesNotMatch(benchmark, /"@type":"FAQPage"/i);
 });
 
 test("keeps purchase, recovery and redirects launch-ready", async () => {

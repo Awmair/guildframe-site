@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ArticleCallout,
+  ArticleDefinition,
   ArticleTable,
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
@@ -79,6 +80,11 @@ export default function BackerkitShopifyGamefoundGuide() {
         { id: "faq", label: "Quick answers" },
       ]}
     >
+      <ArticleDefinition term="Post-campaign platform stack">
+        The smallest set of systems that covers crowdfunding, backer choices,
+        fulfillment data and permanent ecommerce while keeping one clear owner for
+        each order type and customer promise.
+      </ArticleDefinition>
       <h2 id="jobs">Start with the job, not the platform name</h2>
       <p>
         A tabletop business may need to fund a project, manage thousands of backer
@@ -87,6 +93,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         decisions because each product has a different center of gravity.
       </p>
       <ArticleTable
+        caption="BackerKit, Shopify and Gamefound primary roles"
         headers={["Platform", "Primary role", "Strongest fit after funding"]}
         rows={[
           ["BackerKit", "Crowdfunding and backer management", "Surveys, add-ons, order data and campaign workflows"],
@@ -174,6 +181,7 @@ export default function BackerkitShopifyGamefoundGuide() {
 
       <h2 id="stack">Choose the smallest stack that covers the real work</h2>
       <ArticleTable
+        caption="Likely platform roles by business situation"
         headers={["Business situation", "Likely primary system", "Possible supporting system"]}
         rows={[
           ["You are raising funds for a new tabletop project", "BackerKit or Gamefound crowdfunding", "Shopify prepared for later retail"],
@@ -191,6 +199,9 @@ export default function BackerkitShopifyGamefoundGuide() {
       </p>
 
       <h2 id="handoff">Plan the handoff between campaign and store</h2>
+      <p>
+        The <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link> turns these ownership decisions into an ordered release plan.
+      </p>
       <ol>
         <li><strong>Name the source of truth.</strong> Decide where backer choices, addresses, inventory and fulfillment status are authoritative.</li>
         <li><strong>Map order movement.</strong> Document which orders move between systems and which remain separate.</li>

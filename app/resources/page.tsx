@@ -36,6 +36,12 @@ const resources = [
     href: "/resources/board-game-product-page-checklist",
     tag: "Product pages",
   },
+  {
+    title: "2024 Kickstarter Tabletop Games Funding Benchmark",
+    copy: "Source-backed launch, success-rate and funding figures with transparent calculations and downloadable data.",
+    href: "/resources/kickstarter-tabletop-games-benchmark",
+    tag: "Original analysis",
+  },
 ];
 
 export default function ResourcesPage() {
@@ -73,8 +79,9 @@ export default function ResourcesPage() {
           },
         ],
       }} />
+      <a className="skip-link" href="#resources-content">Skip to resources</a>
       <SeoHeader />
-      <main className="guides-main">
+      <main className="guides-main" id="resources-content">
         <section className="guides-hero resources-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Resources" }]} />
           <h1>Reference tools for <em>tabletop commerce.</em></h1>

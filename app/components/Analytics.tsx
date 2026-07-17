@@ -12,6 +12,8 @@ declare global {
   }
 }
 
+const aiSourceStorageKey = "guildframe-ai-source";
+
 export function Analytics() {
   const pathname = usePathname();
   const measurementId = siteConfig.analyticsId;
@@ -34,11 +36,13 @@ export function Analytics() {
       ? new URL(document.referrer).hostname.toLowerCase()
       : "";
     const sources: [string, string[]][] = [
-      ["chatgpt", ["chatgpt.com"]],
+      ["chatgpt", ["chatgpt.com", "chat.openai.com"]],
       ["perplexity", ["perplexity.ai"]],
       ["copilot", ["copilot.microsoft.com"]],
       ["claude", ["claude.ai"]],
-      ["gemini", ["gemini.google.com"]],
+      ["gemini", ["gemini.google.com", "bard.google.com"]],
+      ["you", ["you.com"]],
+      ["phind", ["phind.com"]],
     ];
     const match = sources.find(([, domains]) =>
       domains.some(
@@ -49,6 +53,7 @@ export function Analytics() {
 
     const sessionKey = `guildframe-ai-referral-${match[0]}`;
     try {
+      window.sessionStorage.setItem(aiSourceStorageKey, match[0]);
       if (window.sessionStorage.getItem(sessionKey)) return;
       window.sessionStorage.setItem(sessionKey, "1");
     } catch {
@@ -69,11 +74,20 @@ export function Analytics() {
       );
       if (!target) return;
 
+      let aiSource: string | undefined;
+      try {
+        aiSource = window.sessionStorage.getItem(aiSourceStorageKey) ?? undefined;
+      } catch {
+        aiSource = undefined;
+      }
+
       window.gtag("event", target.dataset.analyticsEvent ?? "cta_click", {
         cta_label: target.dataset.analyticsLabel ?? target.textContent?.trim(),
         cta_location: target.dataset.analyticsLocation ?? "unknown",
         link_url:
           target instanceof HTMLAnchorElement ? target.href : undefined,
+        ai_source: aiSource,
+        traffic_type: aiSource ? "ai_referral" : undefined,
       });
     };
 
