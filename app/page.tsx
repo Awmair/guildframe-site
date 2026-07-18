@@ -330,8 +330,8 @@ export default function Home() {
               Build it yourself with our premium tabletop theme, or let us
               design and develop the entire Shopify store for you.
             </p>
-            <a className="primary-button" href="#pricing">
-              Compare both options <span aria-hidden="true">↘</span>
+            <a className="primary-button" href="#process">
+              How it works <span aria-hidden="true">↘</span>
             </a>
           </div>
 

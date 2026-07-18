@@ -181,6 +181,7 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   const headers = await readFile(new URL("_headers", outputRoot), "utf8");
 
   assert.match(home, /href="\/buy"[^>]*class="checkout-button"/i);
+  assert.match(home, /class="primary-button" href="#process">\s*How it works/i);
   assert.doesNotMatch(home, /href="#faq"[^>]*class="checkout-button"/i);
   assert.match(home, /data-analytics-event="begin_checkout"/i);
   assert.match(buy, /https:\/\/checkout\.example\/guildframe/i);
