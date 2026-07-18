@@ -12,13 +12,14 @@ Guildframe permits indexing and answer-engine retrieval of its public pages.
 | Bingbot | Allow | Bing Search, Copilot grounding and Bing AI Performance |
 | OAI-SearchBot | Allow | ChatGPT search discovery, summaries and citations |
 | ChatGPT-User | Allow | User-requested page retrieval |
-| Training crawlers | Controlled in Cloudflare | Search visibility and model training are separate choices |
+| Training crawlers | Blocked in the application robots policy | Search visibility and model training are separate choices |
 
 The application emits explicit allow rules for `OAI-SearchBot` and
-`ChatGPT-User`, plus the sitemap URL. Cloudflare may prepend its managed Content
-Signals and training-crawler rules to the live file. Audit the rendered
-`https://guildframe.com/robots.txt`, not only `app/robots.ts`, after every policy
-change.
+`ChatGPT-User`, explicit blocks for training crawlers, and the sitemap URL.
+Cloudflare managed robots.txt is disabled because its non-standard
+`Content-Signal` directive produces a Bing Webmaster Tools parser error. Audit
+the rendered `https://guildframe.com/robots.txt`, not only `app/robots.ts`,
+after every policy change.
 
 ## Maintenance checks
 

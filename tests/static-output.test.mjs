@@ -63,6 +63,9 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
   assert.match(robots, /Allow: \//i);
   assert.match(robots, /User-agent: OAI-SearchBot/i);
   assert.match(robots, /User-agent: ChatGPT-User/i);
+  assert.match(robots, /User-agent: GPTBot/i);
+  assert.match(robots, /Disallow: \/$/im);
+  assert.doesNotMatch(robots, /Content-Signal:/i);
   assert.match(robots, /Sitemap: http:\/\/localhost:3000\/sitemap\.xml/i);
   assert.doesNotMatch(sitemap, /<changefreq>|<priority>/i);
   assert.equal((sitemap.match(/<lastmod>2026-07-(?:17|18)T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
