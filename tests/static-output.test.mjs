@@ -197,6 +197,7 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   assert.match(missing, /This path ends here/i);
   assert.match(missing, /content="noindex/i);
   assert.match(redirects, /^\/pricing \/#pricing 301/m);
+  assert.doesNotMatch(redirects, /^\/resources\s/m);
   assert.match(headers, /X-Content-Type-Options: nosniff/i);
 });
 
