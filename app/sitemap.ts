@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/shopify-theme-for-ttrpg", modified: contentDates.ttrpg },
     { path: "/shopify-theme-for-miniatures", modified: contentDates.miniatures },
     { path: "/guides", modified: contentDates.guides },
+    { path: "/guides/what-happens-after-kickstarter-is-funded", modified: contentDates.whatHappensAfterKickstarter },
     { path: "/guides/move-from-kickstarter-to-shopify", modified: contentDates.moveFromKickstarter },
     { path: "/guides/best-shopify-themes-for-board-games", modified: contentDates.bestBoardGameThemes },
     { path: "/guides/kickstarter-late-pledges-vs-shopify", modified: contentDates.latePledgesVsShopify },

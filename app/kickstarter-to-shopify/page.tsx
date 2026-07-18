@@ -5,9 +5,13 @@ import { pageMetadata } from "../site-config";
 export const metadata = pageMetadata({
   title: "Kickstarter to Shopify for Tabletop Creators",
   description:
-    "Move from a funded Kickstarter to a permanent Shopify store without rebuilding your campaign. Built for board games, TTRPGs and miniatures.",
+    "Turn a funded Kickstarter into a permanent Shopify store without rebuilding your campaign. Built for board games, TTRPGs and miniatures.",
   path: "/kickstarter-to-shopify",
-  keywords: ["Kickstarter to Shopify", "move Kickstarter to Shopify", "post crowdfunding store"],
+  keywords: [
+    "Kickstarter to Shopify",
+    "Shopify store after Kickstarter",
+    "post campaign Shopify store",
+  ],
 });
 
 export default function KickstarterToShopifyPage() {

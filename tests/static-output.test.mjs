@@ -12,9 +12,10 @@ const pages = [
   ["/shopify-theme-for-ttrpg", "Shopify Theme for TTRPG Publishers | Guildframe", "TTRPG Shopify theme"],
   ["/shopify-theme-for-miniatures", "Shopify Theme for Miniatures and Terrain | Guildframe", "miniatures Shopify theme"],
   ["/guides", "Tabletop Ecommerce and Kickstarter Guides | Guildframe", "Build what comes"],
-  ["/guides/move-from-kickstarter-to-shopify", "How to Move From Kickstarter to Shopify | Guildframe", "How to Move From Kickstarter"],
+  ["/guides/what-happens-after-kickstarter-is-funded", "What Happens After Your Kickstarter Is Funded? | Guildframe", "What Happens After Your Kickstarter Is Funded"],
+  ["/guides/move-from-kickstarter-to-shopify", "Kickstarter to Shopify Migration Guide | Guildframe", "Kickstarter to Shopify Migration Guide"],
   ["/guides/best-shopify-themes-for-board-games", "Best Shopify Themes for Board Games in 2026 | Guildframe", "Best Shopify Themes for Board Games"],
-  ["/guides/kickstarter-late-pledges-vs-shopify", "Kickstarter Late Pledges vs Shopify | Guildframe", "Kickstarter Late Pledges vs Shopify"],
+  ["/guides/kickstarter-late-pledges-vs-shopify", "Selling After Kickstarter: Late Pledges vs Shopify | Guildframe", "Selling After Kickstarter"],
   ["/guides/backerkit-vs-shopify-vs-gamefound", "BackerKit vs Shopify vs Gamefound After Crowdfunding | Guildframe", "BackerKit vs Shopify vs Gamefound"],
   ["/guides/kickstarter-to-shopify-launch-timeline", "Kickstarter to Shopify Launch Timeline | Guildframe", "Kickstarter to Shopify Launch Timeline"],
   ["/guides/sell-board-game-preorders-on-shopify", "How to Sell Board Game Preorders on Shopify | Guildframe", "How to Sell Board Game Preorders"],
@@ -80,6 +81,7 @@ test("exports AEO and social metadata", async () => {
     "/shopify-theme-for-miniatures",
   ];
   const articlePaths = [
+    "/guides/what-happens-after-kickstarter-is-funded",
     "/guides/move-from-kickstarter-to-shopify",
     "/guides/best-shopify-themes-for-board-games",
     "/guides/kickstarter-late-pledges-vs-shopify",
@@ -94,6 +96,9 @@ test("exports AEO and social metadata", async () => {
     "/resources/kickstarter-tabletop-games-benchmark",
   ];
   const updatedArticlePaths = new Set([
+    "/guides/what-happens-after-kickstarter-is-funded",
+    "/guides/move-from-kickstarter-to-shopify",
+    "/guides/kickstarter-late-pledges-vs-shopify",
     "/guides/backerkit-vs-shopify-vs-gamefound",
     "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
   ]);
@@ -135,11 +140,11 @@ test("exports AEO and social metadata", async () => {
   assert.match(await readPage("/authors/guildframe"), /"@type":"ProfilePage"/i);
   assert.match(
     await readPage("/authors/guildframe"),
-    /"dateCreated":"2026-07-17T00:00:00\+05:00"/i,
+    /"dateCreated":"2026-07-16T19:00:00Z"/i,
   );
   assert.match(
     await readPage("/authors/guildframe"),
-    /"dateModified":"2026-07-17T00:00:00\+05:00"/i,
+    /"dateModified":"2026-07-17T19:00:00Z"/i,
   );
   assert.match(await readPage("/resources"), /"@type":"CollectionPage"/i);
 
@@ -174,6 +179,30 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   assert.match(missing, /content="noindex/i);
   assert.match(redirects, /^\/pricing \/#pricing 301/m);
   assert.match(headers, /X-Content-Type-Options: nosniff/i);
+});
+
+test("keeps every indexable page title, description and canonical unique", async () => {
+  const titles = new Map();
+  const descriptions = new Map();
+  const canonicals = new Map();
+
+  for (const [path] of pages) {
+    const html = await readPage(path);
+    const title = html.match(/<title>([^<]+)<\/title>/i)?.[1];
+    const description = html.match(/<meta name="description" content="([^"]+)"/i)?.[1];
+    const canonical = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
+
+    assert.ok(title, `missing title: ${path}`);
+    assert.ok(description, `missing description: ${path}`);
+    assert.ok(canonical, `missing canonical: ${path}`);
+    assert.equal(titles.get(title), undefined, `duplicate title: ${title}`);
+    assert.equal(descriptions.get(description), undefined, `duplicate description: ${description}`);
+    assert.equal(canonicals.get(canonical), undefined, `duplicate canonical: ${canonical}`);
+
+    titles.set(title, path);
+    descriptions.set(description, path);
+    canonicals.set(canonical, path);
+  }
 });
 
 async function collectSourceFiles(directory) {

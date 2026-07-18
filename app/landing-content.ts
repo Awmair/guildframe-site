@@ -190,19 +190,19 @@ export const kickstarterContent: LandingPageContent = {
   ],
   related: [
     {
-      title: "The complete Kickstarter to Shopify guide",
-      copy: "Follow the practical sequence from final campaign assets to a tested permanent store.",
-      href: "/guides/move-from-kickstarter-to-shopify",
+      title: "What happens after your Kickstarter is funded?",
+      copy: "Understand payment collection, backer operations, fulfillment and the path to ongoing sales.",
+      href: "/guides/what-happens-after-kickstarter-is-funded",
     },
     {
-      title: "Late pledges vs Shopify",
-      copy: "Understand what each channel is designed to do after your campaign funds.",
+      title: "Selling after Kickstarter",
+      copy: "Compare late pledges, preorders and Shopify without confusing backers or new customers.",
       href: "/guides/kickstarter-late-pledges-vs-shopify",
     },
     {
-      title: "BackerKit vs Shopify vs Gamefound",
-      copy: "Compare pledge management, crowdfunding and long-term storefront roles.",
-      href: "/guides/backerkit-vs-shopify-vs-gamefound",
+      title: "Kickstarter to Shopify migration guide",
+      copy: "Follow the practical sequence from final campaign assets to a tested permanent store.",
+      href: "/guides/move-from-kickstarter-to-shopify",
     },
   ],
 };

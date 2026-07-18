@@ -8,14 +8,18 @@ import {
 import { pageMetadata } from "../../site-config";
 
 export const metadata = pageMetadata({
-  title: "How to Move From Kickstarter to Shopify",
+  title: "Kickstarter to Shopify Migration Guide",
   description:
-    "A practical Kickstarter to Shopify migration guide for tabletop creators, covering products, campaign content, operations, testing and launch timing.",
+    "A practical Kickstarter to Shopify migration guide covering products, campaign content, operations, testing and storefront launch.",
   path: "/guides/move-from-kickstarter-to-shopify",
   kind: "article",
   publishedTime: "2026-07-16",
-  modifiedTime: "2026-07-17",
-  keywords: ["move from Kickstarter to Shopify", "Kickstarter to Shopify migration", "post Kickstarter store"],
+  modifiedTime: "2026-07-18",
+  keywords: [
+    "Kickstarter to Shopify migration guide",
+    "migrate Kickstarter products to Shopify",
+    "set up Shopify after Kickstarter",
+  ],
 });
 
 const faqs = [
@@ -46,11 +50,11 @@ export default function MoveKickstarterToShopifyGuide() {
     <SeoArticlePage
       slug="move-from-kickstarter-to-shopify"
       category="Kickstarter to Shopify"
-      title="How to Move From Kickstarter to Shopify After Your Campaign Is Funded"
+      title="Kickstarter to Shopify Migration Guide"
       description="Your campaign page proved demand. This guide shows how to turn the assets and product structure you already built into a permanent Shopify storefront."
       answer="To move from Kickstarter to Shopify, finalize the products you will sell, separate campaign fulfillment from new store orders, reuse your strongest campaign assets, configure Shopify operations, test every buying path and launch with clear delivery language. The store complements Kickstarter and any pledge manager rather than replacing their campaign-specific jobs."
       published="2026-07-16"
-      updated="2026-07-17"
+      updated="2026-07-18"
       readTime="9 minute read"
       faqs={faqs}
       sources={[
@@ -86,6 +90,10 @@ export default function MoveKickstarterToShopifyGuide() {
         permanent Shopify catalog and customer journey. It does not mean copying
         backer data or campaign reward logic into Shopify without review.
       </ArticleDefinition>
+      <p>
+        If your campaign has just closed, begin with
+        <Link href="/guides/what-happens-after-kickstarter-is-funded"> what happens after a Kickstarter is funded</Link> before moving into storefront implementation.
+      </p>
       <h2 id="roles">1. Understand what Kickstarter and Shopify each do</h2>
       <p>
         Kickstarter is where you present a project, gather pledges and communicate

@@ -22,8 +22,8 @@ export default function GuildframeAuthorPage() {
             "@id": absoluteUrl("/authors/guildframe"),
             url: absoluteUrl("/authors/guildframe"),
             name: "Guildframe Editorial Team",
-            dateCreated: "2026-07-17T00:00:00+05:00",
-            dateModified: "2026-07-17T00:00:00+05:00",
+            dateCreated: "2026-07-16T19:00:00Z",
+            dateModified: "2026-07-17T19:00:00Z",
             mainEntity: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
             isPartOf: { "@id": absoluteUrl("/#website") },
             inLanguage: "en",
@@ -57,7 +57,7 @@ export default function GuildframeAuthorPage() {
         label="Author"
         title="Guildframe Editorial Team"
         description="We research the practical bridge between crowdfunding, tabletop product storytelling and a permanent Shopify storefront."
-        updated="2026-07-17"
+        updated="2026-07-18"
       >
         <section>
           <h2>Editorial focus</h2>
@@ -84,9 +84,10 @@ export default function GuildframeAuthorPage() {
         <section>
           <h2>Published work</h2>
           <ul className="trust-link-list">
-            <li><Link href="/guides/move-from-kickstarter-to-shopify">How to move from Kickstarter to Shopify</Link></li>
+            <li><Link href="/guides/what-happens-after-kickstarter-is-funded">What happens after your Kickstarter is funded?</Link></li>
+            <li><Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link></li>
             <li><Link href="/guides/best-shopify-themes-for-board-games">Best Shopify themes for board games</Link></li>
-            <li><Link href="/guides/kickstarter-late-pledges-vs-shopify">Kickstarter Late Pledges vs Shopify</Link></li>
+            <li><Link href="/guides/kickstarter-late-pledges-vs-shopify">Selling after Kickstarter</Link></li>
             <li><Link href="/guides/backerkit-vs-shopify-vs-gamefound">BackerKit vs Shopify vs Gamefound</Link></li>
             <li><Link href="/resources/kickstarter-tabletop-games-benchmark">2024 Kickstarter tabletop games benchmark</Link></li>
             <li><Link href="/guides/sell-board-game-preorders-on-shopify">How to sell board game preorders on Shopify</Link></li>

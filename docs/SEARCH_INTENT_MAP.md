@@ -9,12 +9,13 @@ page and serve a different stage of the decision instead of repeating it.
 | --- | --- | --- | --- |
 | Buy Guildframe | `/buy` | Offer, price, requirements and setup scope | Homepage pricing and product sections |
 | Board game Shopify theme | `/shopify-theme-for-board-games` | Commercial category solution | `/guides/best-shopify-themes-for-board-games` provides neutral evaluation criteria |
-| Kickstarter to Shopify service | `/kickstarter-to-shopify` | Commercial migration solution | `/guides/move-from-kickstarter-to-shopify` provides the operational process |
+| Kickstarter to Shopify service | `/kickstarter-to-shopify` | Commercial storefront solution and purchase path | Migration and post-funding guides explain the process without competing for the offer query |
 | TTRPG Shopify theme | `/shopify-theme-for-ttrpg` | Commercial category solution | Migration and platform guides provide broader context |
 | Miniatures Shopify theme | `/shopify-theme-for-miniatures` | Commercial category solution | Migration and platform guides provide broader context |
 | Best board game Shopify theme | `/guides/best-shopify-themes-for-board-games` | Comparison method and route selection | Board game solution page is the Guildframe product route |
-| Move from Kickstarter to Shopify | `/guides/move-from-kickstarter-to-shopify` | Step-by-step migration | Kickstarter solution page is the implementation offer |
-| Kickstarter Late Pledges vs Shopify | `/guides/kickstarter-late-pledges-vs-shopify` | Two-channel decision | Platform comparison covers the broader stack |
+| What happens after Kickstarter is funded | `/guides/what-happens-after-kickstarter-is-funded` | Post-funding roadmap from payment collection to ongoing sales | Migration and sales-channel guides handle their narrower implementation decisions |
+| Kickstarter to Shopify migration guide | `/guides/move-from-kickstarter-to-shopify` | Step-by-step storefront implementation | Kickstarter solution page is the commercial offer |
+| Selling after Kickstarter | `/guides/kickstarter-late-pledges-vs-shopify` | Late pledge, preorder and permanent-store decision | Preorder guide owns Shopify preorder implementation; platform comparison covers the broader stack |
 | BackerKit vs Shopify vs Gamefound | `/guides/backerkit-vs-shopify-vs-gamefound` | System-of-record and stack decision | Late Pledges guide covers Kickstarter specifically |
 | Kickstarter to Shopify timeline | `/guides/kickstarter-to-shopify-launch-timeline` | Sequencing and launch readiness | Migration guide explains the full operational process |
 | Board game preorders on Shopify | `/guides/sell-board-game-preorders-on-shopify` | Preorder setup and communication | Late Pledges guide chooses the channel |

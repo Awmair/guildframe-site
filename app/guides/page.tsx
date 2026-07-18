@@ -13,7 +13,13 @@ export const metadata = pageMetadata({
 
 const guides = [
   {
-    title: "How to Move From Kickstarter to Shopify After Your Campaign Is Funded",
+    title: "What Happens After Your Kickstarter Is Funded?",
+    copy: "A clear roadmap for payment collection, backer data, fulfillment, late demand and the permanent store.",
+    href: "/guides/what-happens-after-kickstarter-is-funded",
+    tag: "Post-funding roadmap",
+  },
+  {
+    title: "Kickstarter to Shopify Migration Guide",
     copy: "A step-by-step plan for products, content, operations and launch timing after crowdfunding.",
     href: "/guides/move-from-kickstarter-to-shopify",
     tag: "Migration guide",
@@ -25,8 +31,8 @@ const guides = [
     tag: "Theme comparison",
   },
   {
-    title: "Kickstarter Late Pledges vs Shopify: Which Should You Use After Funding?",
-    copy: "Understand the job of each channel and when tabletop creators may need both.",
+    title: "Selling After Kickstarter: Late Pledges, Preorders or Shopify?",
+    copy: "Choose the right post-campaign sales path while keeping delivery promises and backer trust clear.",
     href: "/guides/kickstarter-late-pledges-vs-shopify",
     tag: "Platform strategy",
   },
