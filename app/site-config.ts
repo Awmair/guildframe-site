@@ -12,7 +12,7 @@ export const siteConfig = {
   analyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || null,
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
-  socialImage: "/og-guildframe-offers-v3.jpg",
+  socialImage: "/og-guildframe-offers-v4.jpg",
   price: "$419",
   servicePrice: "$1,399",
   description:

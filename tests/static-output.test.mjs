@@ -152,8 +152,8 @@ test("exports AEO and social metadata", async () => {
   assert.match(await readPage("/resources"), /"@type":"CollectionPage"/i);
 
   const homepage = await readPage("/");
-  assert.match(homepage, /og-guildframe-offers-v3\.jpg/i);
-  assert.match(homepage, /"image":"http:\/\/localhost:3000\/og-guildframe-offers-v3\.jpg"/i);
+  assert.match(homepage, /og-guildframe-offers-v4\.jpg/i);
+  assert.match(homepage, /"image":"http:\/\/localhost:3000\/og-guildframe-offers-v4\.jpg"/i);
   assert.match(homepage, /"availability":"https:\/\/schema\.org\/InStock"/i);
   assert.match(homepage, /"@type":"OnlineStore"/i);
   assert.match(homepage, /"@type":"Service"/i);
@@ -234,7 +234,7 @@ test("keeps copy and responsive mockups clean", async () => {
   const files = await collectSourceFiles(appRoot);
   for (const file of files) {
     const source = await readFile(file, "utf8");
-    assert.doesNotMatch(source, /[—–]/u, file.pathname);
+    assert.doesNotMatch(source, /[\u2013\u2014]/u, file.pathname);
     assert.doesNotMatch(source, /free custom setup|free setup included|custom setup included|setup bonus/i, file.pathname);
   }
 
