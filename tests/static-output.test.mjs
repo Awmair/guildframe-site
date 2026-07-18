@@ -130,6 +130,14 @@ test("exports AEO and social metadata", async () => {
   assert.match(await readPage("/about"), /"@type":"AboutPage"/i);
   assert.match(await readPage("/editorial-policy"), /Guildframe Editorial Policy/i);
   assert.match(await readPage("/authors/guildframe"), /"@type":"ProfilePage"/i);
+  assert.match(
+    await readPage("/authors/guildframe"),
+    /"dateCreated":"2026-07-17T00:00:00\+05:00"/i,
+  );
+  assert.match(
+    await readPage("/authors/guildframe"),
+    /"dateModified":"2026-07-17T00:00:00\+05:00"/i,
+  );
   assert.match(await readPage("/resources"), /"@type":"CollectionPage"/i);
 
   const homepage = await readPage("/");
@@ -137,6 +145,7 @@ test("exports AEO and social metadata", async () => {
   assert.match(homepage, /"image":"http:\/\/localhost:3000\/og-guildframe-launch-v2\.jpg"/i);
   assert.match(homepage, /"availability":"https:\/\/schema\.org\/InStock"/i);
   assert.match(homepage, /"@type":"OnlineStore"/i);
+  assert.doesNotMatch(homepage, /"@type":"Audience"/i);
   assert.doesNotMatch(homepage, /OutOfStock/i);
   assert.match(homepage, /G-TEST123456/i);
 
