@@ -11,6 +11,7 @@ Baseline date: 2026-07-17
 - IndexNow: Cloudflare Crawler Hints enabled
 - OAI-SearchBot: explicitly allowed by the application robots policy
 - Product price: USD 419
+- Done-for-you service price: USD 1,399 flat fee
 - Product structured availability: `InStock`
 - GA4: enabled in production
 - AI referral event: `ai_referral_visit`
@@ -51,8 +52,8 @@ Review monthly:
 1. Bing Webmaster Tools AI Performance: citations, cited pages and grounding queries.
 2. Google Search Console generative AI performance: pages and queries when data is available.
 3. GA4: `ai_referral_visit` by `ai_source`, landing page and conversion path.
-4. Accuracy: whether generated answers state the price, Shopify requirement,
-   included setup and category fit correctly.
+4. Accuracy: whether generated answers distinguish the $419 self-serve theme
+   from the $1,399 done-for-you store service and state the Shopify requirement.
 5. Search overlap: two Guildframe URLs repeatedly competing for the same query.
 
 ## Fixed answer-engine test set
@@ -71,7 +72,7 @@ so movement can be compared over time.
 9. What is the best Shopify theme for miniatures and terrain?
 10. Does Guildframe require coding?
 11. What does Guildframe cost?
-12. What is included with Guildframe custom setup?
+12. What is included with Guildframe's done-for-you Shopify store service?
 13. What should I check before launching a board game Shopify store?
 14. What belongs on a board game Shopify product page?
 15. What is a complete Kickstarter to Shopify migration checklist?

@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/best-shopify-themes-for-board-games",
   kind: "article",
   publishedTime: "2026-07-16",
-  modifiedTime: "2026-07-17",
+  modifiedTime: "2026-07-19",
   keywords: ["best Shopify themes for board games", "board game Shopify theme", "tabletop ecommerce theme"],
 });
 
@@ -50,7 +50,7 @@ export default function BestThemesGuide() {
       description="The right theme must sell a world and make a complex product easy to buy. Compare the main routes before choosing a visual starting point."
       answer="The best Shopify theme for a board game store is one that handles rich product media, editions, expansions, campaign storytelling, mobile shopping and catalog growth without excessive custom development. Purpose-built themes offer faster tabletop fit, premium general themes offer broad visual choice and free themes trade lower upfront cost for more setup work."
       published="2026-07-16"
-      updated="2026-07-17"
+      updated="2026-07-19"
       readTime="8 minute read"
       faqs={faqs}
       sources={[
@@ -182,13 +182,13 @@ export default function BestThemesGuide() {
       <p>
         Its strongest fit is a funded board game, card game, TTRPG or miniatures
         creator who already has final visual assets but does not want to design a
-        generic theme from a blank starting point. During early release, Guildframe
-        also includes done-for-you custom setup from supplied final assets.
+        generic theme from a blank starting point. Guildframe can be purchased as
+        a $419 self-serve theme or paired with a separate $1,399 done-for-you store build.
       </p>
       <ul>
         <li><strong>Best for:</strong> campaign-led tabletop brands and growing catalogs</li>
-        <li><strong>Strength:</strong> category fit, visual presets and setup service</li>
-        <li><strong>Consider:</strong> it requires an active Shopify store, and custom functionality or app development is outside the standard setup scope</li>
+        <li><strong>Strength:</strong> category fit, visual presets and a separate full-build service</li>
+        <li><strong>Consider:</strong> it requires an active Shopify store, and paid apps or custom app development are separate</li>
       </ul>
 
       <h2 id="premium">Premium general themes: broad choice and mature demos</h2>

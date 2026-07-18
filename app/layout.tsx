@@ -7,11 +7,11 @@ import { absoluteUrl, siteConfig } from "./site-config";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Shopify Theme for Tabletop Game Creators | Guildframe",
+    default: "Shopify Theme and Store Design for Tabletop Creators | Guildframe",
     template: "%s | Guildframe",
   },
   description:
-    "Guildframe is a Shopify theme for tabletop game creators moving from a funded Kickstarter campaign to a permanent online store.",
+    "Buy Guildframe's premium tabletop Shopify theme for $419, or get a complete done-for-you Shopify storefront for a flat $1,399.",
   keywords: [
     "Kickstarter to Shopify",
     "Kickstarter Shopify theme",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Shopify Theme for Tabletop Game Creators | Guildframe",
+    title: "Shopify Theme and Store Design for Tabletop Creators | Guildframe",
     description:
-      "Move from a funded tabletop Kickstarter to a permanent Shopify store with a purpose-built theme and free custom setup.",
+      "Choose a $419 premium tabletop Shopify theme or a $1,399 done-for-you store designed and developed from zero to publish.",
     type: "website",
     siteName: "Guildframe",
     url: "/",
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
         url: siteConfig.socialImage,
         width: 1200,
         height: 630,
-        alt: "Guildframe: from funded campaign to live Shopify store in minutes",
+        alt: "Guildframe premium Shopify theme and done-for-you store service for tabletop creators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shopify Theme for Tabletop Game Creators | Guildframe",
+    title: "Shopify Theme and Store Design for Tabletop Creators | Guildframe",
     description:
       "A plug-and-play Shopify system built for funded tabletop creators.",
     images: [siteConfig.socialImage],

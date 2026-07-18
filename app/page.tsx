@@ -3,7 +3,7 @@
 import { type CSSProperties, useEffect, useState } from "react";
 import { JsonLd } from "./components/JsonLd";
 import { siteConfig } from "./site-config";
-import { guildframeProductData } from "./product-data";
+import { guildframeProductData, guildframeServiceData } from "./product-data";
 
 const styleOptions = [
   {
@@ -144,24 +144,24 @@ const faqs = [
       "Yes, for a focused campaign with final products, artwork and copy ready. Larger catalogs naturally take longer.",
   },
   {
-    question: "How does free custom setup work?",
+    question: "What are the two ways to use Guildframe?",
     answer:
-      "Buy Guildframe, send us your final assets and we’ll build the agreed storefront pages for you to review.",
+      "Buy the $419 theme and build the store yourself with Shopify's visual editor, or choose the $1,399 done-for-you service and we will design and develop the entire storefront from an empty Shopify store to a reviewed build ready to publish.",
   },
   {
-    question: "What do you need, and when will it be ready?",
+    question: "What is included in the done-for-you service?",
     answer:
-      "Send your logo, colors, product details, campaign copy and final artwork. Most focused stores are ready for review within an estimated 3 to 5 business days.",
+      "We structure the storefront, configure Guildframe, design the key pages, add your supplied products and content, optimize desktop and mobile layouts, test the buying path and prepare the store for publication.",
   },
   {
-    question: "What is included in the setup?",
+    question: "Is the done-for-you price really flat?",
     answer:
-      "We confirm the pages, assets, review process and delivery window before starting. Custom features, app development, copywriting and extra requests are separate.",
+      "Yes. The Guildframe design and development service is $1,399 regardless of catalog size. You provide approved product data, copy and visual assets. Shopify fees, paid apps, custom app development, photography and new copywriting are separate.",
   },
   {
-    question: "How long is free setup available?",
+    question: "How long does a done-for-you store take?",
     answer:
-      "It is a limited-time early release bonus. If the offer is displayed when you buy, it is included with your order.",
+      "Timing depends on asset readiness, catalog complexity and review speed. We confirm a delivery plan before work begins, then take the approved store from zero to a publish-ready build.",
   },
 ];
 
@@ -263,7 +263,10 @@ export default function Home() {
   return (
     <>
       <JsonLd
-        data={{ "@context": "https://schema.org", ...guildframeProductData() }}
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [guildframeProductData(), guildframeServiceData()],
+        }}
       />
       <a className="skip-link" href="#main-content">
         Skip to content
@@ -324,11 +327,11 @@ export default function Home() {
               in 15 minutes.
             </h1>
             <p className="hero-support">
-              Guildframe is a Shopify theme for tabletop game creators. Turn a
-              funded Kickstarter into a live store in minutes.
+              Build it yourself with our premium tabletop theme, or let us
+              design and develop the entire Shopify store for you.
             </p>
-            <a className="primary-button" href="#styles">
-              See the 4 styles <span aria-hidden="true">↘</span>
+            <a className="primary-button" href="#pricing">
+              Compare both options <span aria-hidden="true">↘</span>
             </a>
           </div>
 
@@ -341,9 +344,8 @@ export default function Home() {
               <span>To live storefront.</span>
             </h2>
             <p>
-              Agencies cost thousands. Generic themes still need to be rebuilt
-              around your products. Guildframe gives you the complete starting
-              point.
+              Choose the premium theme and stay hands-on, or hand us the whole
+              build. Either way, you start with a system made for tabletop.
             </p>
           </div>
         </section>
@@ -728,79 +730,79 @@ export default function Home() {
             <article className="comparison-guildframe">
               <div className="comparison-label">
                 <span>Guildframe</span>
-                <em>Purpose-built for tabletop</em>
+                <em>Two purpose-built routes</em>
               </div>
-              <h3>The complete starting point.</h3>
+              <h3>Use the theme, or use the team.</h3>
               <ul>
-                <li><span>One-time price</span><strong>$419</strong></li>
-                <li><span>Self-launch</span><strong>About 15 minutes</strong></li>
+                <li><span>Premium theme</span><strong>$419</strong></li>
+                <li><span>Done-for-you store</span><strong>$1,399</strong></li>
                 <li><span>Tabletop-ready</span><strong>From day one</strong></li>
-                <li><span>Custom setup</span><strong>$2,500 included</strong></li>
+                <li><span>Catalog size fee</span><strong>None</strong></li>
               </ul>
             </article>
           </div>
           <p className="comparison-note">
             The 15-minute self-launch is intended for a focused campaign with
-            final artwork and content ready. Done-for-you setup is typically
-            delivered in 3 to 5 business days after final assets are received.
+            final artwork and content ready. Done-for-you delivery depends on
+            asset readiness, catalog complexity and the review cycle.
           </p>
         </section>
 
         <section className="bonus-section section-pad">
           <div className="bonus-offer" data-reveal>
-            <p>A comparable custom store setup can cost</p>
-            <s>$2,500</s>
+            <p>Done-for-you Shopify store</p>
             <div className="bonus-free">
-              <strong>$0</strong>
-              <span>when you buy Guildframe</span>
+              <strong>$1,399</strong>
+              <span>one flat project fee</span>
             </div>
+            <strong className="service-size-proof">Any catalog size. Zero to publish.</strong>
           </div>
           <div className="bonus-copy" data-reveal>
             <h2>
-              Buy Guildframe.
-              <span>We&apos;ll design your Shopify store for free.</span>
+              Hand us the store.
+              <span>We&apos;ll take it to launch.</span>
             </h2>
             <p>
-              Buy Guildframe during the early release and we’ll turn your
-              supplied campaign assets into a polished Shopify storefront at no
-              extra cost. This $2,500 setup bonus is available for a limited time.
+              We design and develop your entire Shopify storefront using
+              Guildframe, from an empty store to a polished build ready to
+              publish. The $1,399 project fee stays the same regardless of store size.
             </p>
             <div className="bonus-availability">
-              <span>Limited-time early release bonus</span>
-              <strong>Estimated delivery: 3 to 5 business days</strong>
+              <span>Flat fee. No per-product surcharge.</span>
+              <strong>Delivery plan confirmed before work begins.</strong>
             </div>
-            <div className="setup-journey" aria-label="How free custom setup works">
+            <div className="setup-journey" aria-label="How the done-for-you Shopify service works">
               <div className="setup-journey-steps">
                 <article>
                   <span>01</span>
-                  <h3>Buy Guildframe</h3>
-                  <p>Choose your storefront style and secure the setup bonus.</p>
+                  <h3>Send your store brief</h3>
+                  <p>Share your products, campaign content, branding and final assets.</p>
                 </article>
                 <article>
                   <span>02</span>
-                  <h3>Send your assets</h3>
-                  <p>Share your logo, products, campaign copy and final artwork.</p>
+                  <h3>We design and build</h3>
+                  <p>We create the pages, catalog structure and responsive storefront.</p>
                 </article>
                 <article>
                   <span>03</span>
-                  <h3>Review your store</h3>
-                  <p>We build and polish it, then send it back ready to review.</p>
+                  <h3>Review and publish</h3>
+                  <p>Approve the finished build, then publish it on Shopify.</p>
                 </article>
               </div>
             </div>
             <a
-              href={siteConfig.purchasePath}
+              href={siteConfig.servicePath}
               className="bonus-button"
-              data-analytics-event="begin_checkout"
-              data-analytics-label="Get Guildframe and free custom setup"
-              data-analytics-location="custom setup offer"
+              data-analytics-event="service_interest"
+              data-analytics-label="View done-for-you Shopify service"
+              data-analytics-location="done-for-you offer"
             >
-              Get Guildframe + Free Custom Setup <span aria-hidden="true">↗</span>
+              Get a done-for-you store <span aria-hidden="true">↗</span>
             </a>
             <small>
-              Scope, required assets and delivery timing are confirmed before
-              work begins. New custom features, app development, copywriting and
-              requests outside the agreed visual setup are separate.
+              You provide approved product data, copy and visual assets. Shopify
+              fees, paid apps, custom app development, photography and new
+              copywriting are separate.
             </small>
           </div>
         </section>
@@ -808,96 +810,78 @@ export default function Home() {
         <section className="pricing-section section-pad" id="pricing">
           <div className="pricing-intro" data-reveal>
             <h2>
-              One price.
-              <span>Ready to launch.</span>
+              Choose how you launch.
+              <span>Theme or full build.</span>
             </h2>
             <p>
-              Four storefront styles, the complete theme system and $2,500 of
-              custom setup included during early release.
+              Stay hands-on with the premium theme, or give us the complete
+              Shopify store and receive it ready to publish.
             </p>
           </div>
 
-          <div className="pricing-card" data-reveal>
-            <div className="pricing-buy">
-              <img
-                className="pricing-buy-logo"
-                src="/brand/guildframe-logo.svg"
-                alt="Guildframe"
-                width="1000"
-                height="220"
-                loading="lazy"
-                decoding="async"
-              />
+          <div className="pricing-options" data-reveal>
+            <article className="pricing-option pricing-option-theme">
+              <span className="pricing-option-label">Do it yourself</span>
+              <h3>Guildframe premium theme</h3>
+              <p>Everything you need to build the store yourself without code.</p>
               <div className="pricing-price-row">
                 <div className="price">$419</div>
-                <span>One-time</span>
+                <span>one-time</span>
               </div>
-              <p>Own the theme. Launch when you&apos;re ready.</p>
-              <div className="pricing-bonus-callout">
-                <s>$2,500 customization</s>
-                <strong>Included free</strong>
-              </div>
+              <ul>
+                <li>Four complete tabletop styles</li>
+                <li>Campaign, product and content pages</li>
+                <li>Full Shopify editor controls</li>
+                <li>Responsive, speed-focused layouts</li>
+                <li>Setup documentation</li>
+              </ul>
               <a
                 href={siteConfig.purchasePath}
                 className="checkout-button"
                 data-analytics-event="begin_checkout"
-                data-analytics-label="Get Guildframe for $419"
-                data-analytics-location="pricing"
+                data-analytics-label="Buy Guildframe theme for $419"
+                data-analytics-location="pricing theme option"
               >
-                Get Guildframe for $419 <span aria-hidden="true">↗</span>
+                Buy the theme for $419 <span aria-hidden="true">↗</span>
               </a>
-              <small>
-                Requires an active Shopify store. No subscription fee for
-                Guildframe.
-              </small>
-            </div>
+              <small>Requires an active Shopify store. No Guildframe subscription.</small>
+            </article>
 
-            <div className="pricing-inclusions">
-              <h3>Everything included.</h3>
-              <ul>
-                <li>Four complete styles</li>
-                <li>Campaign and product pages</li>
-                <li>Shopify editor controls</li>
-                <li>Responsive layouts</li>
-                <li>Setup documentation</li>
-                <li className="pricing-customization-line">
-                  $2,500 custom setup included
-                </li>
-              </ul>
-              <div className="pricing-trust" aria-label="Guildframe quality commitments">
-                <img
-                  src="/images/pricing-trust-icons-v1.jpg"
-                  alt="Fully customizable, mobile responsive and speed optimized"
-                  aria-hidden="true"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="pricing-trust-labels">
-                  <div>
-                    <strong>Fully customizable</strong>
-                    <span>Make it unmistakably yours.</span>
-                  </div>
-                  <div>
-                    <strong>Mobile responsive</strong>
-                    <span>Designed for every screen.</span>
-                  </div>
-                  <div>
-                    <strong>Speed optimized</strong>
-                    <span>Built to stay lightweight.</span>
-                  </div>
-                </div>
+            <article className="pricing-option pricing-option-service">
+              <span className="pricing-option-label">Done for you</span>
+              <h3>Complete Shopify store</h3>
+              <p>We design and develop the entire storefront from zero to publish.</p>
+              <div className="pricing-price-row">
+                <div className="price">$1,399</div>
+                <span>flat fee</span>
               </div>
-            </div>
+              <ul>
+                <li>Guildframe theme included in the build</li>
+                <li>Full storefront design and development</li>
+                <li>Products and supplied content added</li>
+                <li>Desktop, tablet and mobile polish</li>
+                <li>Buying-path testing and publish handoff</li>
+              </ul>
+              <a
+                href={siteConfig.servicePath}
+                className="checkout-button checkout-button-service"
+                data-analytics-event="service_interest"
+                data-analytics-label="Get done-for-you Shopify store for $1399"
+                data-analytics-location="pricing service option"
+              >
+                Get the full store for $1,399 <span aria-hidden="true">↗</span>
+              </a>
+              <small>Same service fee regardless of catalog size. Third-party costs are separate.</small>
+            </article>
           </div>
           <div className="pricing-promise" data-reveal>
             <div>
-              <h3>Know exactly what we&apos;re building before we begin.</h3>
+              <h3>Two clear offers. No hidden hybrid.</h3>
             </div>
             <p>
-              We confirm your pages, supplied assets, review process and
-              delivery window before customization starts. Anything outside
-              that scope is discussed and approved first. No surprise work.
-              No surprise charges.
+              The $419 theme is self-serve and fully customizable. The $1,399
+              service is a complete Guildframe storefront build. We confirm the
+              brief, required assets, review process and delivery plan first.
             </p>
           </div>
         </section>
@@ -923,17 +907,17 @@ export default function Home() {
 
       <a
         className={`mobile-buy-cta ${showMobileCta ? "is-visible" : ""}`}
-        href={siteConfig.purchasePath}
-        aria-label="Get Guildframe for $419 with free custom setup"
-        data-analytics-event="begin_checkout"
-        data-analytics-label="Get Guildframe and free setup"
+        href="#pricing"
+        aria-label="Compare the Guildframe theme and done-for-you store"
+        data-analytics-event="view_pricing"
+        data-analytics-label="Compare both Guildframe offers"
         data-analytics-location="mobile sticky CTA"
       >
         <span>
-          <strong>Get Guildframe + free setup</strong>
-          <small>Limited-time early release offer</small>
+          <strong>Choose your launch path</strong>
+          <small>Theme or done-for-you store</small>
         </span>
-        <b>$419</b>
+        <b>View</b>
       </a>
 
       <footer className="site-footer" id="footer">
@@ -948,11 +932,11 @@ export default function Home() {
               give your audience a polished place to keep buying.
             </p>
             <div className="footer-actions">
-              <a className="footer-primary" href="#styles">
-                See the 4 styles <span aria-hidden="true">↗</span>
+              <a className="footer-primary" href={siteConfig.purchasePath}>
+                Buy the $419 theme <span aria-hidden="true">↗</span>
               </a>
-              <a className="footer-secondary" href="#pricing">
-                View pricing
+              <a className="footer-secondary" href={siteConfig.servicePath}>
+                Get the $1,399 full build
               </a>
             </div>
           </div>
@@ -992,6 +976,7 @@ export default function Home() {
             <div>
               <strong>Get Guildframe</strong>
               <a href="#pricing">Pricing</a>
+              <a href={siteConfig.servicePath}>Done-for-you Shopify store</a>
               <a href="#faq">FAQ</a>
               <a href="/guides">Guides</a>
               <a href="/resources">Reference library</a>

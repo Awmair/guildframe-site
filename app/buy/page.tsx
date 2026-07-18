@@ -7,7 +7,7 @@ import { guildframeProductData } from "../product-data";
 export const metadata: Metadata = pageMetadata({
   title: "Buy Guildframe",
   description:
-    "Get the Guildframe Shopify theme for tabletop creators, four complete styles and free custom storefront setup during early release.",
+    "Buy the Guildframe premium Shopify theme for tabletop creators for $419. Get four complete styles, flexible editor controls and responsive storefront layouts.",
   path: "/buy",
   keywords: [
     "buy Guildframe",
@@ -23,7 +23,7 @@ const inclusions = [
   "Shopify editor controls",
   "Responsive layouts for desktop, tablet and mobile",
   "Setup documentation",
-  "$2,500 custom setup included during early release",
+  "One-time license with no Guildframe subscription",
 ];
 
 export default function BuyPage() {
@@ -43,12 +43,12 @@ export default function BuyPage() {
         <section className="buy-hero">
           <div className="buy-copy">
             <h1>
-              Get Guildframe.
-              <span>Launch your world.</span>
+              Build it yourself.
+              <span>Make it unmistakably yours.</span>
             </h1>
             <p>
-              One tabletop-focused Shopify theme, four distinct styles and a
-              free custom setup service during early release.
+              Get the complete tabletop-focused Shopify theme, choose one of
+              four distinct styles and customize every detail without code.
             </p>
             <div className="buy-price-row">
               <strong>$419</strong>
@@ -94,34 +94,36 @@ export default function BuyPage() {
 
         <section className="buy-setup-scope">
           <div>
-            <h2>How free custom setup works</h2>
+            <h2>Want us to build the entire store instead?</h2>
             <p>
-              After purchase, choose a style and send your final logo, product
-              details, campaign copy and artwork. We confirm the pages, assets,
-              review process and delivery window before work begins.
+              Choose the $1,399 done-for-you service. We design and develop the
+              complete Guildframe storefront from an empty Shopify store to a
+              reviewed build ready to publish.
             </p>
+            <a className="buy-service-link" href={siteConfig.servicePath}>
+              Explore the done-for-you store <span aria-hidden="true">↗</span>
+            </a>
           </div>
           <ol>
             <li>
               <span>01</span>
-              <strong>Buy Guildframe</strong>
-              <p>Secure the early release setup bonus.</p>
+              <strong>Choose a style</strong>
+              <p>Start from the visual world that best fits your game.</p>
             </li>
             <li>
               <span>02</span>
-              <strong>Send final assets</strong>
-              <p>Share the content required for the agreed pages.</p>
+              <strong>Add your content</strong>
+              <p>Bring in your products, campaign story and final artwork.</p>
             </li>
             <li>
               <span>03</span>
-              <strong>Review your store</strong>
-              <p>We build, polish and return it ready for review.</p>
+              <strong>Customize and publish</strong>
+              <p>Tune the design in Shopify, test the store and go live.</p>
             </li>
           </ol>
           <p className="buy-scope-note">
-            Custom features, app development, copywriting and work outside the
-            agreed visual setup are separate. Most focused stores are estimated
-            for review within 3 to 5 business days after final assets arrive.
+            The theme requires an active Shopify store. Shopify plan, payment
+            processing, paid apps and custom app development are separate.
           </p>
         </section>
       </main>

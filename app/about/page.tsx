@@ -25,7 +25,7 @@ export default function AboutPage() {
             description: "Guildframe builds Shopify storefront infrastructure for tabletop creators.",
             mainEntity: { "@id": absoluteUrl("/#organization") },
             isPartOf: { "@id": absoluteUrl("/#website") },
-            dateModified: "2026-07-17",
+            dateModified: "2026-07-19",
             inLanguage: "en",
           },
           {
@@ -41,13 +41,13 @@ export default function AboutPage() {
         label="About"
         title="Tabletop worlds deserve better storefronts."
         description="Guildframe is the world's first Shopify theme built specifically for board games and the wider tabletop market. It helps funded creators turn campaign momentum into a permanent store."
-        updated="2026-07-17"
+        updated="2026-07-19"
       >
         <section>
           <h2>What Guildframe is</h2>
           <p>
-            Guildframe combines a purpose-built Shopify theme with a done-for-you
-            setup service. It is designed for board games, card games, TTRPGs,
+            Guildframe offers a purpose-built Shopify theme and a separate
+            done-for-you store service. It is designed for board games, card games, TTRPGs,
             miniatures, terrain and tabletop accessories. The theme handles the
             storefront experience while Shopify provides products, inventory,
             payments, checkout and customer management.
@@ -73,13 +73,14 @@ export default function AboutPage() {
             <li>Responsive storefront layouts for phones, tablets and desktops</li>
             <li>Product structures for editions, expansions, bundles and add-ons</li>
             <li>Campaign storytelling, FAQ, reviews, events, news and contact sections</li>
-            <li>Free custom setup during early release</li>
+            <li>A separate $1,399 done-for-you store design and development service</li>
             <li>Shopify products, checkout, inventory and payments underneath</li>
           </ul>
           <p>
-            The current Guildframe price is <strong>{siteConfig.price}</strong>. The
-            product offer and availability shown on this website are maintained from
-            one shared source so the homepage, purchase page and structured data stay aligned.
+            The Guildframe theme is <strong>{siteConfig.price}</strong>. The complete
+            done-for-you Shopify store service is <strong>{siteConfig.servicePrice}</strong>.
+            Product and service facts are maintained from shared sources so the
+            homepage, offer pages and structured data stay aligned.
           </p>
         </section>
         <section>

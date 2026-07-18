@@ -4,14 +4,19 @@ export const siteConfig = {
   name: "Guildframe",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   purchasePath: "/buy",
+  servicePath: "/done-for-you-shopify-store",
   checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim() || null,
+  serviceInquiryUrl:
+    process.env.NEXT_PUBLIC_SERVICE_INQUIRY_URL?.trim() ||
+    "mailto:hello@guildframe.com?subject=Done-for-you%20Shopify%20store",
   analyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || null,
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
-  socialImage: "/og-guildframe-launch-v2.jpg",
+  socialImage: "/og-guildframe-offers-v3.jpg",
   price: "$419",
+  servicePrice: "$1,399",
   description:
-    "A Shopify theme and done-for-you setup service for tabletop creators moving from a funded Kickstarter campaign to a permanent online store.",
+    "A premium Shopify theme and flat-fee done-for-you store service for tabletop creators moving from a funded campaign to a permanent online store.",
 };
 
 export const absoluteUrl = (path = "/") =>

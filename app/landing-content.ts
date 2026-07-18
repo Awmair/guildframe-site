@@ -21,7 +21,7 @@ export const boardGameContent: LandingPageContent = {
   title: "A board game Shopify theme built for",
   highlight: "complete worlds.",
   answer:
-    "Guildframe is a Shopify theme for board game creators and publishers. It turns campaign artwork, editions, expansions and product detail into a polished storefront, with mobile layouts and free custom setup included during early release.",
+    "Guildframe is a Shopify theme for board game creators and publishers. Buy the fully customizable theme for $419, or choose the $1,399 done-for-you service and receive a complete storefront ready to publish.",
   image: "/images/pdp-guildframe-responsive-v1.jpg",
   imageAlt:
     "Guildframe board game product page displayed on desktop and mobile",
@@ -65,8 +65,8 @@ export const boardGameContent: LandingPageContent = {
       copy: "Use Shopify checkout, inventory, payments, products and compatible apps normally.",
     },
     {
-      title: "Done-for-you setup",
-      copy: "Send your final assets and we will build the agreed storefront for you to review.",
+      title: "Done-for-you option",
+      copy: "For a flat $1,399, send your final assets and we will design and develop the entire storefront for you to review and publish.",
     },
   ],
   steps: commonSteps,
@@ -89,7 +89,7 @@ export const boardGameContent: LandingPageContent = {
     {
       question: "Does Guildframe include Shopify?",
       answer:
-        "No. Guildframe is a theme and setup service for an active Shopify store. Your Shopify plan, payment processing and any third-party app fees are separate.",
+        "No. Guildframe is a theme and store-building service for an active Shopify store. Your Shopify plan, payment processing and any third-party app fees are separate.",
     },
   ],
   related: [
@@ -161,8 +161,8 @@ export const kickstarterContent: LandingPageContent = {
       copy: "Manage products, inventory, payments and checkout with Shopify's commerce system.",
     },
     {
-      title: "Free custom setup",
-      copy: "During early release, our team builds the agreed storefront from your supplied final assets.",
+      title: "Done-for-you store build",
+      copy: "For a flat $1,399, our team designs and develops the complete storefront from your supplied final assets, regardless of catalog size.",
     },
   ],
   steps: commonSteps,
@@ -256,8 +256,8 @@ export const ttrpgContent: LandingPageContent = {
       copy: "Keep long-form storytelling and product choices readable on smaller screens.",
     },
     {
-      title: "Custom setup included",
-      copy: "We can turn your final campaign assets into the agreed storefront during early release.",
+      title: "Done-for-you option",
+      copy: "Choose the $1,399 service and we will turn your final campaign assets into a complete Shopify storefront ready to publish.",
     },
   ],
   steps: commonSteps,
@@ -278,9 +278,9 @@ export const ttrpgContent: LandingPageContent = {
         "Yes. Guildframe includes four visual starting points and controls for colors, typography, spacing, sections, media and product content through Shopify's theme editor.",
     },
     {
-      question: "Is free setup included with the TTRPG theme?",
+      question: "Can you build the entire TTRPG store for me?",
       answer:
-        "Yes, during the early release offer. We confirm the pages, supplied final assets, review process and estimated delivery window before customization begins.",
+        "Yes. The done-for-you service is a separate $1,399 flat-fee offer. We confirm the brief, supplied assets, review process and delivery plan before development begins.",
     },
   ],
   related: [
@@ -375,7 +375,7 @@ export const miniaturesContent: LandingPageContent = {
     {
       question: "Can you build the store for my studio?",
       answer:
-        "Yes. Free custom setup is included during early release when you provide final product information, logo, copy and artwork. We confirm the scope before work starts.",
+        "Yes. Choose the $1,399 done-for-you service and provide your final product information, logo, copy and artwork. We design and develop the store from zero to a publish-ready build for the same service fee regardless of catalog size.",
     },
   ],
   related: [

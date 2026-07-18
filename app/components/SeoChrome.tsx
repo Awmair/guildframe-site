@@ -15,12 +15,12 @@ export function SeoHeader() {
       </nav>
       <Link
         className="seo-header-cta"
-        href="/buy"
-        data-analytics-event="begin_checkout"
-        data-analytics-label="Get Guildframe"
+        href="/#pricing"
+        data-analytics-event="view_pricing"
+        data-analytics-label="Compare Guildframe offers"
         data-analytics-location="SEO header"
       >
-        Get Guildframe <span aria-hidden="true">↗</span>
+        View both options <span aria-hidden="true">↗</span>
       </Link>
     </header>
   );
@@ -33,22 +33,33 @@ export function SeoFooter() {
         <div>
           <h2>Your world deserves a storefront built for it.</h2>
         </div>
-        <Link
-          className="seo-button seo-button-light"
-          href="/buy"
-          data-analytics-event="begin_checkout"
-          data-analytics-label="Get Guildframe and free custom setup"
-          data-analytics-location="SEO footer"
-        >
-          Get Guildframe + Free Custom Setup <span aria-hidden="true">↗</span>
-        </Link>
+        <div className="seo-footer-actions">
+          <Link
+            className="seo-button seo-button-light"
+            href="/buy"
+            data-analytics-event="begin_checkout"
+            data-analytics-label="Buy Guildframe theme for $419"
+            data-analytics-location="SEO footer"
+          >
+            Buy the $419 theme <span aria-hidden="true">↗</span>
+          </Link>
+          <Link
+            className="seo-button seo-button-outline"
+            href="/done-for-you-shopify-store"
+            data-analytics-event="service_interest"
+            data-analytics-label="View done-for-you Shopify service"
+            data-analytics-location="SEO footer"
+          >
+            Get the $1,399 full build <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
       </div>
       <div className="seo-footer-grid">
         <div className="seo-footer-brand">
           <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="1000" height="220" />
           <p>
-            A Shopify theme for tabletop game creators, with free done-for-you
-            storefront setup during early release.
+            A premium Shopify theme and flat-fee done-for-you storefront service
+            for tabletop game creators.
           </p>
         </div>
         <nav aria-label="Solutions">
@@ -57,6 +68,7 @@ export function SeoFooter() {
           <Link href="/shopify-theme-for-ttrpg">TTRPG stores</Link>
           <Link href="/shopify-theme-for-miniatures">Miniature stores</Link>
           <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
+          <Link href="/done-for-you-shopify-store">Done-for-you Shopify store</Link>
         </nav>
         <nav aria-label="Resources">
           <strong>Resources</strong>

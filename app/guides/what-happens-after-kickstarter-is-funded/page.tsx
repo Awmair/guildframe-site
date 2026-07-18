@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/what-happens-after-kickstarter-is-funded",
   kind: "article",
   publishedTime: "2026-07-18",
-  modifiedTime: "2026-07-18",
+  modifiedTime: "2026-07-19",
   keywords: [
     "what happens after a Kickstarter project is funded",
     "Kickstarter after funding",
@@ -54,7 +54,7 @@ export default function WhatHappensAfterKickstarterPage() {
       description="Funding closes one chapter and starts the operational work. Here is the sequence from successful campaign to fulfilled rewards and a permanent store."
       answer="After a Kickstarter is funded, pledge payments are processed, the final backer report settles, funds are paid out, surveys or pledge management collect fulfillment details and the creator produces and delivers the rewards. At the same time, the creator can plan late pledges, preorders and a permanent online store, provided new sales do not create unclear promises or undermine backer fulfillment."
       published="2026-07-18"
-      updated="2026-07-18"
+      updated="2026-07-19"
       readTime="8 minute read"
       faqs={faqs}
       sources={[
@@ -196,7 +196,7 @@ export default function WhatHappensAfterKickstarterPage() {
         <li>Tell backers whether the store changes anything about their fulfillment.</li>
       </ul>
       <p>
-        Use the <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link> for the complete storefront implementation sequence, or review <Link href="/kickstarter-to-shopify">Guildframe&apos;s Kickstarter to Shopify system</Link> if you want a tabletop-ready theme and custom setup.
+        Use the <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link> for the complete storefront implementation sequence. Then choose <Link href="/buy">Guildframe&apos;s $419 tabletop theme</Link> or the <Link href="/done-for-you-shopify-store">$1,399 done-for-you Shopify store</Link> based on how hands-on you want to be.
       </p>
 
       <h2 id="roadmap">A practical post-funding roadmap</h2>

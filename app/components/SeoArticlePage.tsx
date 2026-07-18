@@ -192,20 +192,31 @@ export function SeoArticlePage({
               ))}
             </section>
             <div className="article-cta">
-              <h2>Turn the campaign you already made into a store you can keep.</h2>
+              <h2>Choose how your Shopify store gets built.</h2>
               <p>
-                Guildframe gives tabletop creators a purpose-built Shopify
-                theme plus free custom setup during early release.
+                Buy the fully customizable Guildframe theme for $419, or let us
+                design and develop the complete storefront for a flat $1,399.
               </p>
-              <Link
-                className="seo-button seo-button-light"
-                href="/buy"
-                data-analytics-event="begin_checkout"
-                data-analytics-label="Get Guildframe and free custom setup"
-                data-analytics-location="article CTA"
-              >
-                Get Guildframe + Free Custom Setup ↗
-              </Link>
+              <div className="article-cta-actions">
+                <Link
+                  className="seo-button seo-button-light"
+                  href="/buy"
+                  data-analytics-event="begin_checkout"
+                  data-analytics-label="Buy Guildframe theme for $419"
+                  data-analytics-location="article CTA"
+                >
+                  Buy the $419 theme ↗
+                </Link>
+                <Link
+                  className="seo-button seo-button-outline"
+                  href="/done-for-you-shopify-store"
+                  data-analytics-event="service_interest"
+                  data-analytics-label="View done-for-you Shopify service"
+                  data-analytics-location="article CTA"
+                >
+                  Get the $1,399 full build ↗
+                </Link>
+              </div>
             </div>
           </article>
         </div>

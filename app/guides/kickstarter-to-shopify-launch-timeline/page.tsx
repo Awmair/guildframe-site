@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/kickstarter-to-shopify-launch-timeline",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-17",
+  modifiedTime: "2026-07-19",
   keywords: [
     "Kickstarter to Shopify timeline",
     "when to launch Shopify after Kickstarter",
@@ -34,9 +34,9 @@ const faqs = [
       "It can, but only when delivery timing is explicit and the launch will not create a reasonable impression that retail customers are being prioritized over backers. Many creators prepare the store early and control product availability until operations are ready.",
   },
   {
-    question: "How long does Guildframe custom setup take?",
+    question: "How long does Guildframe's done-for-you store take?",
     answer:
-      "Guildframe typically estimates 3 to 5 business days after receiving final logos, product information, campaign copy and artwork. Complex catalogs or incomplete assets can extend the review cycle.",
+      "Timing depends on final asset readiness, catalog complexity and review speed. Guildframe confirms a delivery plan before starting the $1,399 done-for-you build.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function KickstarterToShopifyTimelinePage() {
       description="Know what to prepare before funding closes, what must wait for final operational facts and when the permanent store is ready to open."
       answer="A practical Kickstarter to Shopify launch timeline begins before the campaign ends with domain, catalog and asset planning. After funding, finalize products and fulfillment boundaries, build the storefront, test checkout and mobile buying, then open sales only when delivery promises and inventory rules are accurate. A focused build can take days; operational readiness determines the true launch date."
       published="2026-07-17"
-      updated="2026-07-17"
+      updated="2026-07-19"
       readTime="8 minute read"
       faqs={faqs}
       sources={[
@@ -142,7 +142,7 @@ export default function KickstarterToShopifyTimelinePage() {
         <li><strong>Operations:</strong> configure payments, taxes, shipping zones, inventory locations and notifications.</li>
       </ol>
       <p>
-        If the campaign assets are final, <Link href="/kickstarter-to-shopify">Guildframe&apos;s custom setup</Link> can prepare the visual storefront while the creator keeps control of products, operations and launch approval.
+        If the campaign assets are final, <Link href="/done-for-you-shopify-store">Guildframe&apos;s done-for-you Shopify service</Link> can prepare the complete storefront while the creator keeps control of products, operations and launch approval.
       </p>
 
       <h2 id="testing">Testing and review</h2>

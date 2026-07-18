@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     { path: "/", modified: contentDates.home },
     { path: "/buy", modified: contentDates.buy },
+    { path: "/done-for-you-shopify-store", modified: contentDates.doneForYouShopifyStore },
     { path: "/shopify-theme-for-board-games", modified: contentDates.boardGames },
     { path: "/kickstarter-to-shopify", modified: contentDates.kickstarter },
     { path: "/shopify-theme-for-ttrpg", modified: contentDates.ttrpg },

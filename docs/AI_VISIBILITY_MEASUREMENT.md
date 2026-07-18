@@ -40,7 +40,7 @@ Review Bing Webmaster Tools AI Performance monthly:
 - topics and intents when available
 
 Record both the number and the exact pages cited. A citation that states the wrong
-price, platform requirement or included setup is an accuracy problem even when the
+theme price, service price or platform requirement is an accuracy problem even when the
 visibility number increases.
 
 ## Fixed monthly prompt set
@@ -56,7 +56,7 @@ Use the same prompts in ChatGPT search, Bing Copilot and Google generative searc
 7. BackerKit vs Shopify vs Gamefound after crowdfunding?
 8. What should a board game Shopify product page include?
 9. How many tabletop game projects funded on Kickstarter in 2024?
-10. What does Guildframe cost and what setup is included?
+10. What do the Guildframe theme and done-for-you store service cost?
 
 For each prompt, record whether Guildframe was mentioned, linked, cited and
 accurately summarized. Keep screenshots or exported dashboard evidence where the

@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Guildframe",
     short_name: "Guildframe",
     description:
-      "A Shopify theme and setup service for tabletop game creators.",
+      "A premium Shopify theme and done-for-you store service for tabletop game creators.",
     start_url: "/",
     display: "standalone",
     background_color: "#EEE8DC",

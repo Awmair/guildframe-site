@@ -36,8 +36,8 @@ export function guildframeProductData(image = siteConfig.socialImage) {
       },
       {
         "@type": "PropertyValue",
-        name: "Custom setup",
-        value: "Included during early release",
+        name: "Setup model",
+        value: "Self-serve theme with Shopify editor controls",
       },
     ],
     offers: {
@@ -46,6 +46,28 @@ export function guildframeProductData(image = siteConfig.socialImage) {
       priceCurrency: guildframeOffer.priceCurrency,
       price: guildframeOffer.price,
       availability: guildframeOffer.availability,
+      seller: { "@id": absoluteUrl("/#organization") },
+    },
+  };
+}
+
+export function guildframeServiceData(image = siteConfig.socialImage) {
+  return {
+    "@type": "Service",
+    "@id": absoluteUrl("/done-for-you-shopify-store#service"),
+    name: "Guildframe Done-for-You Shopify Store",
+    serviceType: "Shopify store design and development",
+    description:
+      "Flat-fee Shopify store design and development for tabletop creators, from an empty store to a reviewed storefront ready to publish.",
+    image: absoluteUrl(image),
+    provider: { "@id": absoluteUrl("/#organization") },
+    areaServed: "Worldwide",
+    offers: {
+      "@type": "Offer",
+      url: absoluteUrl("/done-for-you-shopify-store"),
+      priceCurrency: "USD",
+      price: "1399",
+      availability: "https://schema.org/InStock",
       seller: { "@id": absoluteUrl("/#organization") },
     },
   };

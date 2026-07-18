@@ -95,11 +95,14 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
                 <Link className="seo-text-link" href="/#styles">
                   Explore the four styles
                 </Link>
+                <Link className="seo-text-link" href="/done-for-you-shopify-store">
+                  Get a done-for-you store
+                </Link>
               </div>
               <div className="seo-proof-strip" aria-label="Guildframe highlights">
                 <span>Shopify underneath</span>
                 <span>Mobile responsive</span>
-                <span>Free custom setup</span>
+                <span>$1,399 full-build option</span>
               </div>
             </div>
             <div className="seo-hero-visual">
@@ -158,12 +161,12 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
             ))}
           </div>
           <div className="seo-offer-note">
-            <strong>{siteConfig.price} one-time</strong>
+            <strong>Choose your build path</strong>
             <p>
-              Buy Guildframe during early release and we will design your
-              Shopify storefront with your supplied final assets at no extra cost.
+              Buy the fully customizable theme for {siteConfig.price}, or get
+              the entire Shopify storefront designed and developed for {siteConfig.servicePrice}.
             </p>
-            <Link href="/#pricing">See pricing and setup scope ↗</Link>
+            <Link href="/#pricing">Compare both offers ↗</Link>
           </div>
         </section>
 
