@@ -906,7 +906,7 @@ export default function Home() {
             data-analytics-label="Email Guildframe"
             data-analytics-location="homepage contact section"
           >
-            Contact Umair <span aria-hidden="true">↗</span>
+            Contact the developer <span aria-hidden="true">↗</span>
           </a>
         </section>
 
@@ -1013,7 +1013,7 @@ export default function Home() {
               <a href="/shopify-theme-for-miniatures">Miniature stores</a>
               <a href="/about">About Guildframe</a>
               <a href="/editorial-policy">Editorial policy</a>
-              <a href={siteConfig.contactInquiryUrl}>Contact Umair</a>
+              <a href={siteConfig.contactInquiryUrl}>Contact</a>
               <a href="#top">Back to top ↑</a>
             </div>
           </nav>
