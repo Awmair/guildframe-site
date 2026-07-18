@@ -26,8 +26,8 @@ export function guildframeProductData(image = siteConfig.socialImage) {
       },
       {
         "@type": "PropertyValue",
-        name: "Storefront styles",
-        value: "Four complete tabletop styles",
+        name: "Storefront presets",
+        value: "Rune Single, Rune Studio, Saga Single and Saga Studio",
       },
       {
         "@type": "PropertyValue",

@@ -7,64 +7,64 @@ import { guildframeProductData, guildframeServiceData } from "./product-data";
 
 const styleOptions = [
   {
-    name: "Guildframe",
-    note: "Flexible and editorial",
+    name: "Rune Single",
+    note: "Cinematic for one flagship game",
     description:
-      "Best for growing tabletop brands and larger product ranges.",
-    image: "/images/pdp-guildframe-responsive-v1.jpg",
-    cover: "/images/presets/guildframe-wide.jpg",
-    portrait: "/images/presets/guildframe-portrait.jpg",
-    color: "#1657FF",
-    surface: "#E9E4D8",
-    ink: "#17191C",
-    tags: ["Adventure games", "Growing catalogs", "Story-led brands"],
-  },
-  {
-    name: "Nightbanner",
-    note: "Dark and cinematic",
-    description:
-      "Best for fantasy games, TTRPGs, miniatures and artwork-led releases.",
+      "For one flagship game where atmosphere, story and a focused product journey lead the store.",
     image: "/images/pdp-nightbanner-responsive-v1.jpg",
     cover: "/images/presets/nightbanner-wide.jpg",
     portrait: "/images/presets/nightbanner-portrait.jpg",
     color: "#776BFF",
     surface: "#101620",
     ink: "#FBF7EE",
-    tags: ["Dark fantasy", "TTRPGs", "Miniatures"],
+    tags: ["Flagship games", "Cinematic worlds", "Focused launches"],
   },
   {
-    name: "Brightmarch",
-    note: "Bright and playful",
+    name: "Rune Studio",
+    note: "Cinematic for a small studio",
     description:
-      "Best for family games, party games and approachable card games.",
+      "For small studios with multiple games, expansions and a cinematic editorial identity.",
+    image: "/images/pdp-guildframe-responsive-v1.jpg",
+    cover: "/images/presets/guildframe-wide.jpg",
+    portrait: "/images/presets/guildframe-portrait.jpg",
+    color: "#1657FF",
+    surface: "#E9E4D8",
+    ink: "#17191C",
+    tags: ["Small studios", "Growing catalogs", "Cinematic brands"],
+  },
+  {
+    name: "Saga Single",
+    note: "Playful for one flagship game",
+    description:
+      "For one flagship game with bright art, approachable energy and a focused product journey.",
     image: "/images/pdp-brightmarch-responsive-v1.jpg",
     cover: "/images/presets/brightmarch-wide.jpg",
     portrait: "/images/presets/brightmarch-portrait.jpg",
     color: "#F06A4C",
     surface: "#F5D987",
     ink: "#182239",
-    tags: ["Family games", "Party games", "Colorful cards"],
+    tags: ["Flagship games", "Playful worlds", "Bright launches"],
   },
   {
-    name: "Vaultmark",
-    note: "Structured and premium",
+    name: "Saga Studio",
+    note: "Playful for a small studio",
     description:
-      "Best for collector products, TCGs, editions, expansions and larger catalogs.",
+      "For small studios with multiple colorful games, expansions and products.",
     image: "/images/pdp-vaultmark-responsive-v1.jpg",
     cover: "/images/presets/vaultmark-wide.jpg",
     portrait: "/images/presets/vaultmark-portrait.jpg",
     color: "#C69A2E",
     surface: "#191919",
     ink: "#F4EEE3",
-    tags: ["Collector editions", "TCGs", "Premium releases"],
+    tags: ["Small studios", "Growing catalogs", "Playful brands"],
   },
 ];
 
 const processSteps = [
   {
     number: "01",
-    title: "Choose a style",
-    copy: "Pick a complete look.",
+    title: "Choose a preset",
+    copy: "Pick the structure and mood that fit your catalog.",
   },
   {
     number: "02",
@@ -112,7 +112,7 @@ const features = [
     number: "05",
     icon: "responsive",
     title: "Mobile from the start",
-    copy: "Every style is designed for phones, tablets and desktops.",
+    copy: "Every preset is designed for phones, tablets and desktops.",
   },
   {
     number: "06",
@@ -281,7 +281,7 @@ export default function Home() {
             How it works
           </a>
           <a className={activeSection === "styles" ? "is-active" : ""} href="#styles">
-            Styles
+            Presets
           </a>
           <a
             className={activeSection === "customization" ? "is-active" : ""}
@@ -297,7 +297,7 @@ export default function Home() {
           </a>
         </nav>
         <a className="nav-cta" href="#styles">
-          See the demo <span aria-hidden="true">↗</span>
+          See the 4 presets <span aria-hidden="true">↗</span>
         </a>
       </header>
 
@@ -485,11 +485,11 @@ export default function Home() {
                     <span />
                     <span />
                     <span />
-                    <strong>Nightbanner · responsive</strong>
+                    <strong>Rune Single / responsive</strong>
                   </div>
                   <img
                     src="/images/pdp-nightbanner-responsive-v1.jpg"
-                    alt="Nightbanner Shopify product page shown on desktop and mobile"
+                    alt="Rune Single Shopify product page shown on desktop and mobile"
                     loading="lazy"
                     decoding="async"
                   />
@@ -511,11 +511,11 @@ export default function Home() {
         <section className="styles-section section-pad" id="styles">
           <div className="styles-intro" data-reveal>
             <div>
-              <h2>Four worlds. One engine.</h2>
+              <h2>Four presets. One premium theme.</h2>
             </div>
             <p>
-              Open a preset to see how completely Guildframe can change
-              character.
+              Choose a cinematic or playful direction, then pick the version
+              built for one flagship game or a small studio catalog.
             </p>
           </div>
 
@@ -829,7 +829,7 @@ export default function Home() {
                 <span>one-time</span>
               </div>
               <ul>
-                <li>Four complete tabletop styles</li>
+                <li>Rune Single, Rune Studio, Saga Single and Saga Studio</li>
                 <li>Campaign, product and content pages</li>
                 <li>Full Shopify editor controls</li>
                 <li>Responsive, speed-focused layouts</li>
@@ -886,6 +886,30 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="contact-question-section section-pad" id="contact">
+          <div data-reveal>
+            <span>Direct help from Guildframe</span>
+            <h2>Got questions or queries?</h2>
+            <p>
+              Ask about the theme, presets, store requirements or the complete
+              done-for-you service. You will hear directly from Umair.
+            </p>
+            <div className="shopify-partner-badge" aria-label="Guildframe is a Shopify Partner">
+              <span aria-hidden="true">S</span>
+              <strong>Shopify Partner</strong>
+            </div>
+          </div>
+          <a
+            className="contact-question-button"
+            href={siteConfig.contactInquiryUrl}
+            data-analytics-event="contact_interest"
+            data-analytics-label="Email Guildframe"
+            data-analytics-location="homepage contact section"
+          >
+            Contact Umair <span aria-hidden="true">↗</span>
+          </a>
+        </section>
+
         <section className="faq-section section-pad" id="faq">
           <div className="faq-heading" data-reveal>
             <h2>Questions, answered.</h2>
@@ -928,7 +952,7 @@ export default function Home() {
               <span>Keep selling beyond Kickstarter.</span>
             </h2>
             <p>
-              Choose your style, add the campaign content you already have and
+              Choose your preset, add the campaign content you already have and
               give your audience a polished place to keep buying.
             </p>
             <div className="footer-actions">
@@ -969,7 +993,7 @@ export default function Home() {
             <div>
               <strong>Explore</strong>
               <a href="#process">How it works</a>
-              <a href="#styles">Styles</a>
+              <a href="#styles">Presets</a>
               <a href="#customization">Customization</a>
               <a href="#features">What&apos;s included</a>
             </div>
@@ -989,6 +1013,7 @@ export default function Home() {
               <a href="/shopify-theme-for-miniatures">Miniature stores</a>
               <a href="/about">About Guildframe</a>
               <a href="/editorial-policy">Editorial policy</a>
+              <a href={siteConfig.contactInquiryUrl}>Contact Umair</a>
               <a href="#top">Back to top ↑</a>
             </div>
           </nav>

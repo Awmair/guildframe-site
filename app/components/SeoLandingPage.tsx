@@ -93,7 +93,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
                   Get Guildframe for {siteConfig.price} <span aria-hidden="true">↗</span>
                 </Link>
                 <Link className="seo-text-link" href="/#styles">
-                  Explore the four styles
+                  Explore the four presets
                 </Link>
                 <Link className="seo-text-link" href="/done-for-you-shopify-store">
                   Get a done-for-you store

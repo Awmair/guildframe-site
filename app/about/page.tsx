@@ -69,7 +69,7 @@ export default function AboutPage() {
         <section>
           <h2>What Guildframe includes</h2>
           <ul className="trust-checklist">
-            <li>Four complete visual styles designed for tabletop products</li>
+            <li>Four purpose-built presets: Rune Single, Rune Studio, Saga Single and Saga Studio</li>
             <li>Responsive storefront layouts for phones, tablets and desktops</li>
             <li>Product structures for editions, expansions, bundles and add-ons</li>
             <li>Campaign storytelling, FAQ, reviews, events, news and contact sections</li>

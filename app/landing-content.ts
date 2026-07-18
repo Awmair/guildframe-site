@@ -2,8 +2,8 @@ import type { LandingPageContent } from "./components/SeoLandingPage";
 
 const commonSteps = [
   {
-    title: "Choose a storefront style",
-    copy: "Start with one of four complete visual directions built around tabletop products and campaign storytelling.",
+    title: "Choose a storefront preset",
+    copy: "Choose Rune or Saga, then use the Single or Studio structure built for your catalog.",
   },
   {
     title: "Bring your campaign assets",
@@ -215,7 +215,7 @@ export const ttrpgContent: LandingPageContent = {
   answer:
     "Guildframe is a Shopify theme for TTRPG publishers and independent creators. Present core books, supplements, adventures, dice and accessories inside a cinematic, mobile-friendly storefront that can grow with your world.",
   image: "/images/pdp-nightbanner-responsive-v1.jpg",
-  imageAlt: "Nightbanner TTRPG product page on desktop and mobile",
+  imageAlt: "Rune Single TTRPG product page on desktop and mobile",
   audience: "TTRPG books, adventures, supplements, dice and accessories",
   benefits: [
     {
@@ -237,7 +237,7 @@ export const ttrpgContent: LandingPageContent = {
   capabilities: [
     {
       title: "World-first art direction",
-      copy: "Choose a cinematic preset and tune it to your setting, typography and campaign palette.",
+      copy: "Choose Rune Single for one flagship world or Rune Studio for a growing cinematic catalog.",
     },
     {
       title: "Format clarity",
@@ -275,7 +275,7 @@ export const ttrpgContent: LandingPageContent = {
     {
       question: "Will my store still feel like my game?",
       answer:
-        "Yes. Guildframe includes four visual starting points and controls for colors, typography, spacing, sections, media and product content through Shopify's theme editor.",
+        "Yes. Guildframe includes Rune Single, Rune Studio, Saga Single and Saga Studio, plus controls for colors, typography, spacing, sections, media and product content through Shopify's theme editor.",
     },
     {
       question: "Can you build the entire TTRPG store for me?",
@@ -295,8 +295,8 @@ export const ttrpgContent: LandingPageContent = {
       href: "/guides/backerkit-vs-shopify-vs-gamefound",
     },
     {
-      title: "Explore the Nightbanner style",
-      copy: "See Guildframe's dark, cinematic direction for lore-rich tabletop worlds.",
+      title: "Explore the Rune presets",
+      copy: "See Guildframe's cinematic direction for a flagship game or a small studio catalog.",
       href: "/#styles",
     },
   ],
@@ -343,8 +343,8 @@ export const miniaturesContent: LandingPageContent = {
       copy: "Group factions, terrain sets, accessories and compatible add-ons for easier discovery.",
     },
     {
-      title: "Collector-ready visual styles",
-      copy: "Start with a premium preset and customize it to match your studio's identity.",
+      title: "Purpose-built visual presets",
+      copy: "Choose a Single or Studio structure, then customize it to match your identity.",
     },
     {
       title: "Responsive shopping",
@@ -390,8 +390,8 @@ export const miniaturesContent: LandingPageContent = {
       href: "/guides/kickstarter-late-pledges-vs-shopify",
     },
     {
-      title: "Explore the Vaultmark style",
-      copy: "See Guildframe's structured, premium direction for collectors and editions.",
+      title: "Explore the Studio presets",
+      copy: "See the Rune Studio and Saga Studio structures for growing tabletop catalogs.",
       href: "/#styles",
     },
   ],

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "../site-config";
 
 export function SeoHeader() {
   return (
@@ -7,7 +8,7 @@ export function SeoHeader() {
         <img src="/brand/guildframe-logo.svg" alt="Guildframe" width="1000" height="220" />
       </Link>
       <nav aria-label="Primary navigation">
-        <Link href="/#styles">Styles</Link>
+        <Link href="/#styles">Presets</Link>
         <Link href="/shopify-theme-for-board-games">Board games</Link>
         <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
         <Link href="/guides">Guides</Link>
@@ -89,8 +90,11 @@ export function SeoFooter() {
         </nav>
       </div>
       <div className="seo-footer-bottom">
-        <span>Guildframe. Built for tabletop commerce.</span>
-        <Link href="/">Back to homepage ↑</Link>
+        <span>Guildframe. Built for tabletop commerce. Shopify Partner.</span>
+        <div>
+          <a href={siteConfig.contactInquiryUrl}>{siteConfig.contactEmail}</a>
+          <Link href="/">Back to homepage ↑</Link>
+        </div>
       </div>
     </footer>
   );

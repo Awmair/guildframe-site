@@ -187,6 +187,12 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   assert.match(buy, /data-analytics-event="checkout_redirect"/i);
   assert.match(home, /Buy the theme for \$419/i);
   assert.match(home, /Get the full store for \$1,399/i);
+  assert.match(home, /Rune Single/i);
+  assert.match(home, /Rune Studio/i);
+  assert.match(home, /Saga Single/i);
+  assert.match(home, /Saga Studio/i);
+  assert.match(home, /mailto:umair@guildframe\.com\?subject=Guildframe%20question/i);
+  assert.match(home, /Shopify Partner/i);
   assert.doesNotMatch(home, /free custom setup|custom setup included|included free/i);
   assert.match(missing, /This path ends here/i);
   assert.match(missing, /content="noindex/i);

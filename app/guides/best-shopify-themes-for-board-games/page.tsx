@@ -177,7 +177,7 @@ export default function BestThemesGuide() {
 
       <h2 id="guildframe">Guildframe: purpose-built for tabletop commerce</h2>
       <p>
-        <Link href="/shopify-theme-for-board-games">Guildframe is a Shopify theme for board game creators</Link> moving from a campaign or early product line into a permanent store. It includes four complete visual styles, tabletop-oriented product and story sections, mobile layouts and Shopify editor controls.
+        <Link href="/shopify-theme-for-board-games">Guildframe is a Shopify theme for board game creators</Link> moving from a campaign or early product line into a permanent store. It includes four purpose-built presets: Rune Single, Rune Studio, Saga Single and Saga Studio, plus tabletop-oriented product and story sections, mobile layouts and Shopify editor controls.
       </p>
       <p>
         Its strongest fit is a funded board game, card game, TTRPG or miniatures

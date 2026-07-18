@@ -2,13 +2,16 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "Guildframe",
+  contactEmail: "umair@guildframe.com",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   purchasePath: "/buy",
   servicePath: "/done-for-you-shopify-store",
   checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim() || null,
   serviceInquiryUrl:
     process.env.NEXT_PUBLIC_SERVICE_INQUIRY_URL?.trim() ||
-    "mailto:hello@guildframe.com?subject=Done-for-you%20Shopify%20store",
+    "mailto:umair@guildframe.com?subject=Done-for-you%20Shopify%20store",
+  contactInquiryUrl:
+    "mailto:umair@guildframe.com?subject=Guildframe%20question",
   analyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || null,
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
