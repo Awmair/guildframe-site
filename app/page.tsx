@@ -892,7 +892,7 @@ export default function Home() {
             <h2>Got questions or queries?</h2>
             <p>
               Ask about the theme, presets, store requirements or the complete
-              done-for-you service. You will hear directly from Umair.
+              done-for-you service. You will hear from the developer.
             </p>
             <div className="shopify-partner-badge" aria-label="Guildframe is a Shopify Partner">
               <span aria-hidden="true">S</span>

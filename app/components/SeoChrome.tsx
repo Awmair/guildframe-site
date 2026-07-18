@@ -92,7 +92,7 @@ export function SeoFooter() {
       <div className="seo-footer-bottom">
         <span>Guildframe. Built for tabletop commerce. Shopify Partner.</span>
         <div>
-          <a href={siteConfig.contactInquiryUrl}>{siteConfig.contactEmail}</a>
+          <a href={siteConfig.contactInquiryUrl}>Email the developer</a>
           <Link href="/">Back to homepage ↑</Link>
         </div>
       </div>

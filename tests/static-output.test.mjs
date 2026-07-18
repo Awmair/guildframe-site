@@ -193,6 +193,8 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   assert.match(home, /Saga Studio/i);
   assert.match(home, /mailto:umair@guildframe\.com\?subject=Guildframe%20question/i);
   assert.match(home, /Contact the developer/i);
+  assert.match(home, /You will hear from the developer/i);
+  assert.doesNotMatch(home, />Umair</i);
   assert.match(home, /Shopify Partner/i);
   assert.doesNotMatch(home, /free custom setup|custom setup included|included free/i);
   assert.match(missing, /This path ends here/i);
