@@ -13,6 +13,8 @@ export const siteConfig = {
   contactInquiryUrl:
     "mailto:umair@guildframe.com?subject=Guildframe%20question",
   analyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || null,
+  clarityProjectId:
+    process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID?.trim() || "xp0rrg52qu",
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
   socialImage: "/og-guildframe-offers-v4.jpg",

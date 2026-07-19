@@ -17,6 +17,7 @@ const aiSourceStorageKey = "guildframe-ai-source";
 export function Analytics() {
   const pathname = usePathname();
   const measurementId = siteConfig.analyticsId;
+  const clarityProjectId = siteConfig.clarityProjectId;
 
   useEffect(() => {
     if (!measurementId || !window.gtag) return;
@@ -95,17 +96,26 @@ export function Analytics() {
     return () => document.removeEventListener("click", trackClick);
   }, [measurementId]);
 
-  if (!measurementId) return null;
+  if (!measurementId && !clarityProjectId) return null;
 
   return (
     <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-        strategy="afterInteractive"
-      />
-      <Script id="guildframe-google-analytics" strategy="afterInteractive">
-        {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','${measurementId}',{send_page_view:false});`}
-      </Script>
+      {measurementId ? (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+            strategy="afterInteractive"
+          />
+          <Script id="guildframe-google-analytics" strategy="afterInteractive">
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','${measurementId}',{send_page_view:false});`}
+          </Script>
+        </>
+      ) : null}
+      {clarityProjectId ? (
+        <Script id="guildframe-microsoft-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${clarityProjectId}");`}
+        </Script>
+      ) : null}
     </>
   );
 }
