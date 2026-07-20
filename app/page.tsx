@@ -63,23 +63,23 @@ const styleOptions = [
 const processSteps = [
   {
     number: "01",
-    title: "Share your world",
-    copy: "Send your products, artwork, brand and final campaign content.",
+    title: "Send your assets",
+    copy: "Share your products, copy, brand kit and final artwork.",
   },
   {
     number: "02",
-    title: "We design and build",
-    copy: "We shape the storefront, set up the catalog and polish every screen.",
+    title: "Review your preview",
+    copy: "We build the store and send you a working preview for feedback.",
   },
   {
     number: "03",
-    title: "Review and launch",
-    copy: "Review the finished store, approve it and publish on Shopify.",
+    title: "Approve and launch",
+    copy: "We apply the final polish, test the store and prepare it to publish.",
   },
   {
     number: "LIVE",
-    title: "Your world is open",
-    copy: "Your audience has a permanent place to shop.",
+    title: "Your store is open",
+    copy: "Products, pages, mobile and checkout are ready for customers.",
   },
 ];
 
@@ -356,7 +356,7 @@ export default function Home() {
             <div className="process-copy">
               <h2>1, 2, 3. Live.</h2>
               <p className="process-intro">
-                From final assets to a complete Shopify store in three clear steps.
+                From your final assets to a live Shopify store in three clear steps.
               </p>
               <div
                 className="process-steps"
@@ -397,15 +397,15 @@ export default function Home() {
                 aria-hidden={activeProcess !== 0}
               >
                 <div className="campaign-topline">
-                  <span>Your Kickstarter</span>
+                  <span>Your store assets</span>
                   <strong className="campaign-funded">
                     <i aria-hidden="true" />
-                    Funded · 126%
+                    Files ready
                   </strong>
                 </div>
                 <img
                   src="/images/guildframe-launch-kit.jpg"
-                  alt="A funded Kickstarter campaign ready to become a Shopify store"
+                  alt="Final product artwork, brand files and store assets ready for a Shopify build"
                   loading="lazy"
                   decoding="async"
                 />
@@ -413,8 +413,8 @@ export default function Home() {
                   <i />
                 </div>
                 <div className="campaign-meta">
-                  <strong>Your campaign</strong>
-                  <span>Goal reached · Ready for your store</span>
+                  <strong>Your build brief</strong>
+                  <span>Products, copy and artwork supplied</span>
                 </div>
               </div>
 
