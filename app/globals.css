@@ -405,6 +405,10 @@ section[id] {
   color: var(--charcoal);
 }
 
+.hero h1 .hero-heading-line-blue {
+  transform: translateY(0.12em);
+}
+
 .hero-support {
   font-size: clamp(18px, 1.35vw, 22px);
   line-height: 1.55;
