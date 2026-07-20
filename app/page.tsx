@@ -315,9 +315,9 @@ export default function Home() {
               </p>
             </div>
             <h1>
-              Shopify stores
-              <span>built for tabletop</span>
-              games.
+              <span className="hero-heading-line hero-heading-line-dark">Shopify stores</span>
+              <span className="hero-heading-line">built for tabletop</span>
+              <span className="hero-heading-line hero-heading-line-dark">games.</span>
             </h1>
             <p className="hero-support">
               We design and develop complete Shopify storefronts for board

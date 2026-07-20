@@ -384,10 +384,13 @@ section[id] {
 }
 
 .hero h1 {
+  display: flex;
+  flex-direction: column;
   font-size: clamp(58px, 6.25vw, 100px);
   font-weight: 800;
+  gap: 0.035em;
   letter-spacing: -0.068em;
-  line-height: 0.9;
+  line-height: 0.88;
   margin: 22px 0 24px;
   max-width: 960px;
   text-wrap: balance;
@@ -396,6 +399,10 @@ section[id] {
 .hero h1 span {
   color: var(--cobalt);
   display: block;
+}
+
+.hero h1 .hero-heading-line-dark {
+  color: var(--charcoal);
 }
 
 .hero-support {
