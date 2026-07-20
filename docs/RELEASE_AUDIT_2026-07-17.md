@@ -31,7 +31,7 @@ This is recorded as a performance improvement, not an indexing blocker.
 
 ## Structured-data checks
 
-- One consistent Guildframe Product entity and USD 419 Offer
+- One consistent Guildframe Product entity and USD 349 Offer
 - `InStock` preserved across the offer schema
 - OnlineStore and WebSite entities connected by stable IDs
 - Articles include ISO publication and modification dates

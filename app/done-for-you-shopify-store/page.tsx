@@ -5,11 +5,12 @@ import { guildframeServiceData } from "../product-data";
 import { absoluteUrl, pageMetadata, siteConfig } from "../site-config";
 
 export const metadata = pageMetadata({
-  title: "Done-for-You Shopify Store for Tabletop Brands",
+  title: "Shopify Design and Development for Tabletop Brands",
   description:
-    "Get a complete Shopify store designed and developed for your tabletop brand for a flat $1,399, from an empty store to a publish-ready storefront.",
+    "Get a complete Shopify store designed and developed for your tabletop brand for $2,199, including up to 50 product SKUs and a publish-ready handoff.",
   path: "/done-for-you-shopify-store",
   keywords: [
+    "Shopify developer for tabletop games",
     "done for you Shopify store",
     "Shopify store design service",
     "Shopify development for board games",
@@ -41,7 +42,7 @@ export default function DoneForYouShopifyStorePage() {
               name: "Done-for-You Shopify Store for Tabletop Brands",
               url: absoluteUrl("/done-for-you-shopify-store"),
               description:
-                "A flat-fee Shopify store design and development service for tabletop creators.",
+                "Shopify design and development for tabletop creators and studios, including up to 50 product SKUs.",
               about: { "@id": absoluteUrl("/done-for-you-shopify-store#service") },
               isPartOf: { "@id": absoluteUrl("/#website") },
               inLanguage: "en",
@@ -75,15 +76,14 @@ export default function DoneForYouShopifyStorePage() {
           />
           <div className="service-hero-grid">
             <div>
-              <span className="service-route-label">Done for you</span>
               <h1>
-                Your complete Shopify store.
-                <em>Designed, built and ready to publish.</em>
+                Your tabletop world.
+                <em>Built to sell on Shopify.</em>
               </h1>
               <p>
-                Give us your products, campaign content and brand assets. We
-                turn an empty Shopify store into a polished tabletop storefront
-                for one flat fee, regardless of catalog size.
+                We design and develop your complete Shopify storefront, add up
+                to 50 product SKUs and take it from an empty store to a polished
+                build ready to publish.
               </p>
               <a
                 className="service-primary-button"
@@ -92,7 +92,7 @@ export default function DoneForYouShopifyStorePage() {
                 data-analytics-label="Start done-for-you Shopify project"
                 data-analytics-location="service hero"
               >
-                Start your $1,399 store <span aria-hidden="true">↗</span>
+                Build my store for $2,199 <span aria-hidden="true">↗</span>
               </a>
               <small>
                 We confirm the brief, required assets, review process and
@@ -101,14 +101,29 @@ export default function DoneForYouShopifyStorePage() {
             </div>
             <aside className="service-price-card" aria-label="Done-for-you service summary">
               <span>Flat project fee</span>
-              <strong>$1,399</strong>
-              <p>Same service price for a focused catalog or a large store.</p>
+              <strong>$2,199</strong>
+              <p>For creators and studios with up to 50 product SKUs.</p>
               <ul>
                 <li>Zero to publish-ready</li>
                 <li>Guildframe theme included</li>
-                <li>Responsive design and development</li>
+                <li>Responsive design, development and testing</li>
               </ul>
             </aside>
+          </div>
+        </section>
+
+        <section className="service-final-cta service-diy-option">
+          <div>
+            <h2>Want to build it yourself?</h2>
+            <p>
+              Get Guildframe, our premium Shopify theme purpose built for
+              tabletop games, with four complete presets and full visual editor
+              controls.
+            </p>
+          </div>
+          <div>
+            <strong className="service-diy-price">$349</strong>
+            <Link href="/buy">Get the theme for $349 <span aria-hidden="true">↗</span></Link>
           </div>
         </section>
 
@@ -155,10 +170,11 @@ export default function DoneForYouShopifyStorePage() {
 
         <section className="service-scope">
           <div>
-            <h2>What the flat fee means.</h2>
+            <h2>A clear scope. No hourly ambiguity.</h2>
             <p>
-              We do not increase the Guildframe service fee because your catalog
-              has more products. The build remains $1,399.
+              The $2,199 project includes the complete storefront and up to 50
+              product SKUs. We confirm the pages, assets, review process and
+              delivery plan before development begins.
             </p>
           </div>
           <div>
@@ -173,8 +189,8 @@ export default function DoneForYouShopifyStorePage() {
         </section>
 
         <section className="service-final-cta">
-          <h2>Skip the build. Open the store.</h2>
-          <p>Tell us what you sell and where your Shopify store stands today.</p>
+          <h2>Ready to build your tabletop store?</h2>
+          <p>Tell us what you sell, what is ready and where your Shopify store stands today.</p>
           <div>
             <a
               className="service-primary-button"
@@ -183,9 +199,8 @@ export default function DoneForYouShopifyStorePage() {
               data-analytics-label="Start done-for-you Shopify project"
               data-analytics-location="service final CTA"
             >
-              Start your project <span aria-hidden="true">↗</span>
+              Contact the developer <span aria-hidden="true">↗</span>
             </a>
-            <Link href="/buy">Prefer to build it yourself? Buy the $419 theme.</Link>
           </div>
         </section>
       </main>

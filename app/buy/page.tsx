@@ -7,7 +7,7 @@ import { guildframeProductData } from "../product-data";
 export const metadata: Metadata = pageMetadata({
   title: "Buy Guildframe",
   description:
-    "Buy the Guildframe premium Shopify theme for tabletop creators for $419. Get four purpose-built presets, flexible editor controls and responsive storefront layouts.",
+    "Buy the Guildframe premium Shopify theme for tabletop creators for $349. Get four purpose-built presets, flexible editor controls and responsive storefront layouts.",
   path: "/buy",
   keywords: [
     "buy Guildframe",
@@ -51,7 +51,7 @@ export default function BuyPage() {
               four distinct presets and customize every detail without code.
             </p>
             <div className="buy-price-row">
-              <strong>$419</strong>
+              <strong>$349</strong>
               <span>One-time payment</span>
             </div>
 
@@ -96,8 +96,8 @@ export default function BuyPage() {
           <div>
             <h2>Want us to build the entire store instead?</h2>
             <p>
-              Choose the $1,399 done-for-you service. We design and develop the
-              complete Guildframe storefront from an empty Shopify store to a
+              For $2,199, we design and develop your complete Shopify storefront,
+              add up to 50 product SKUs and take it from an empty store to a
               reviewed build ready to publish.
             </p>
             <a className="buy-service-link" href={siteConfig.servicePath}>

@@ -102,7 +102,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               <div className="seo-proof-strip" aria-label="Guildframe highlights">
                 <span>Shopify underneath</span>
                 <span>Mobile responsive</span>
-                <span>$1,399 full-build option</span>
+                <span>$2,199 full build for up to 50 SKUs</span>
               </div>
             </div>
             <div className="seo-hero-visual">

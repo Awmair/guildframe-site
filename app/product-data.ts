@@ -2,11 +2,12 @@ import { absoluteUrl, siteConfig } from "./site-config";
 
 export const guildframeOffer = {
   name: "Guildframe",
-  price: "419",
+  price: "349",
   priceCurrency: "USD",
   availability: "https://schema.org/InStock",
   category: "Shopify theme for tabletop game creators",
-  description: siteConfig.description,
+  description:
+    "A premium Shopify theme purpose built for board games, card games, TTRPGs, miniatures and tabletop studios, with four complete storefront presets.",
 } as const;
 
 export function guildframeProductData(image = siteConfig.socialImage) {
@@ -55,10 +56,10 @@ export function guildframeServiceData(image = siteConfig.socialImage) {
   return {
     "@type": "Service",
     "@id": absoluteUrl("/done-for-you-shopify-store#service"),
-    name: "Guildframe Done-for-You Shopify Store",
-    serviceType: "Shopify store design and development",
+    name: "Guildframe Shopify Design and Development",
+    serviceType: "Shopify design and development for tabletop brands",
     description:
-      "Flat-fee Shopify store design and development for tabletop creators, from an empty store to a reviewed storefront ready to publish.",
+      "Complete Shopify storefront design and development for tabletop creators and studios with up to 50 product SKUs, from an empty store to a reviewed build ready to publish.",
     image: absoluteUrl(image),
     provider: { "@id": absoluteUrl("/#organization") },
     areaServed: "Worldwide",
@@ -66,7 +67,7 @@ export function guildframeServiceData(image = siteConfig.socialImage) {
       "@type": "Offer",
       url: absoluteUrl("/done-for-you-shopify-store"),
       priceCurrency: "USD",
-      price: "1399",
+      price: "2199",
       availability: "https://schema.org/InStock",
       seller: { "@id": absoluteUrl("/#organization") },
     },

@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/best-shopify-themes-for-board-games",
   kind: "article",
   publishedTime: "2026-07-16",
-  modifiedTime: "2026-07-19",
+  modifiedTime: "2026-07-21",
   keywords: ["best Shopify themes for board games", "board game Shopify theme", "tabletop ecommerce theme"],
 });
 
@@ -50,7 +50,7 @@ export default function BestThemesGuide() {
       description="The right theme must sell a world and make a complex product easy to buy. Compare the main routes before choosing a visual starting point."
       answer="The best Shopify theme for a board game store is one that handles rich product media, editions, expansions, campaign storytelling, mobile shopping and catalog growth without excessive custom development. Purpose-built themes offer faster tabletop fit, premium general themes offer broad visual choice and free themes trade lower upfront cost for more setup work."
       published="2026-07-16"
-      updated="2026-07-19"
+      updated="2026-07-21"
       readTime="8 minute read"
       faqs={faqs}
       sources={[
@@ -183,7 +183,7 @@ export default function BestThemesGuide() {
         Its strongest fit is a funded board game, card game, TTRPG or miniatures
         creator who already has final visual assets but does not want to design a
         generic theme from a blank starting point. Guildframe can be purchased as
-        a $419 self-serve theme or paired with a separate $1,399 done-for-you store build.
+        a $349 self-serve theme or paired with a separate $2,199 store build for up to 50 product SKUs.
       </p>
       <ul>
         <li><strong>Best for:</strong> campaign-led tabletop brands and growing catalogs</li>

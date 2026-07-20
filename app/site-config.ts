@@ -9,7 +9,7 @@ export const siteConfig = {
   checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim() || null,
   serviceInquiryUrl:
     process.env.NEXT_PUBLIC_SERVICE_INQUIRY_URL?.trim() ||
-    "mailto:umair@guildframe.com?subject=Done-for-you%20Shopify%20store",
+    "mailto:umair@guildframe.com?subject=Shopify%20store%20project",
   contactInquiryUrl:
     "mailto:umair@guildframe.com?subject=Guildframe%20question",
   analyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || null,
@@ -17,11 +17,11 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID?.trim() || "xp0rrg52qu",
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
-  socialImage: "/og-guildframe-offers-v4.jpg",
-  price: "$419",
-  servicePrice: "$1,399",
+  socialImage: "/og-guildframe-offers-v5.jpg",
+  price: "$349",
+  servicePrice: "$2,199",
   description:
-    "A premium Shopify theme and flat-fee done-for-you store service for tabletop creators moving from a funded campaign to a permanent online store.",
+    "Shopify design and development for tabletop creators, plus a premium DIY theme purpose built for board games, TTRPGs, card games and miniatures.",
 };
 
 export const absoluteUrl = (path = "/") =>
@@ -54,7 +54,7 @@ export function pageMetadata({
         url: siteConfig.socialImage,
         width: 1200,
         height: 630,
-        alt: "Guildframe Shopify theme for tabletop game creators",
+        alt: "Guildframe Shopify storefront design and theme for tabletop game creators",
       },
     ],
   };

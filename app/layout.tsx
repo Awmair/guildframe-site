@@ -7,12 +7,16 @@ import { absoluteUrl, siteConfig } from "./site-config";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Shopify Theme and Store Design for Tabletop Creators | Guildframe",
+    default: "Shopify Developer for Tabletop Games | Guildframe",
     template: "%s | Guildframe",
   },
   description:
-    "Buy Guildframe's premium tabletop Shopify theme for $419, or get a complete done-for-you Shopify storefront for a flat $1,399.",
+    "Guildframe designs and develops complete Shopify storefronts for tabletop creators. Get a full store for $2,199, or build it yourself with the $349 Guildframe theme.",
   keywords: [
+    "Shopify developer for tabletop games",
+    "board game Shopify developer",
+    "tabletop ecommerce developer",
+    "Shopify website design for game studios",
     "Kickstarter to Shopify",
     "Kickstarter Shopify theme",
     "board game Shopify theme",
@@ -42,9 +46,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Shopify Theme and Store Design for Tabletop Creators | Guildframe",
+    title: "Shopify Storefronts Built for Tabletop Games | Guildframe",
     description:
-      "Choose a $419 premium tabletop Shopify theme or a $1,399 done-for-you store designed and developed from zero to publish.",
+      "Get a complete tabletop Shopify store designed and developed for $2,199, or build it yourself with the $349 Guildframe theme.",
     type: "website",
     siteName: "Guildframe",
     url: "/",
@@ -53,15 +57,15 @@ export const metadata: Metadata = {
         url: siteConfig.socialImage,
         width: 1200,
         height: 630,
-        alt: "Guildframe premium Shopify theme and done-for-you store service for tabletop creators",
+        alt: "Guildframe Shopify design and development for tabletop creators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shopify Theme and Store Design for Tabletop Creators | Guildframe",
+    title: "Shopify Storefronts Built for Tabletop Games | Guildframe",
     description:
-      "A plug-and-play Shopify system built for funded tabletop creators.",
+      "Complete Shopify design and development for tabletop creators, with a premium DIY theme for teams that want to build it themselves.",
     images: [siteConfig.socialImage],
   },
 };
@@ -85,7 +89,7 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "OnlineStore",
+                "@type": "Organization",
                 "@id": absoluteUrl("/#organization"),
                 name: "Guildframe",
                 url: absoluteUrl("/"),
@@ -97,6 +101,8 @@ export default function RootLayout({
                   { "@id": absoluteUrl("/editorial-policy") },
                 ],
                 knowsAbout: [
+                  "Shopify design",
+                  "Shopify development",
                   "Shopify themes",
                   "Tabletop ecommerce",
                   "Kickstarter to Shopify migration",

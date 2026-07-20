@@ -153,10 +153,10 @@ export function SeoArticlePage({
             <Link
               href="/buy"
               data-analytics-event="begin_checkout"
-              data-analytics-label="Get Guildframe for $419"
+              data-analytics-label="Get Guildframe for $349"
               data-analytics-location="article sidebar"
             >
-              Get Guildframe for $419 ↗
+              Get Guildframe for $349 ↗
             </Link>
           </aside>
 
@@ -194,18 +194,19 @@ export function SeoArticlePage({
             <div className="article-cta">
               <h2>Choose how your Shopify store gets built.</h2>
               <p>
-                Buy the fully customizable Guildframe theme for $419, or let us
-                design and develop the complete storefront for a flat $1,399.
+                Hire Guildframe to design and develop your complete Shopify
+                storefront for $2,199, including up to 50 product SKUs, or buy
+                the fully customizable Guildframe theme for $349.
               </p>
               <div className="article-cta-actions">
                 <Link
                   className="seo-button seo-button-light"
                   href="/buy"
                   data-analytics-event="begin_checkout"
-                  data-analytics-label="Buy Guildframe theme for $419"
+                  data-analytics-label="Buy Guildframe theme for $349"
                   data-analytics-location="article CTA"
                 >
-                  Buy the $419 theme ↗
+                  Buy the $349 theme ↗
                 </Link>
                 <Link
                   className="seo-button seo-button-outline"
@@ -214,7 +215,7 @@ export function SeoArticlePage({
                   data-analytics-label="View done-for-you Shopify service"
                   data-analytics-location="article CTA"
                 >
-                  Get the $1,399 full build ↗
+                  Build my store for $2,199 ↗
                 </Link>
               </div>
             </div>

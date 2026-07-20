@@ -63,23 +63,23 @@ const styleOptions = [
 const processSteps = [
   {
     number: "01",
-    title: "Choose a preset",
-    copy: "Pick the structure and mood that fit your catalog.",
+    title: "Share your world",
+    copy: "Send your products, artwork, brand and final campaign content.",
   },
   {
     number: "02",
-    title: "Add your products",
-    copy: "Add your products and campaign content.",
+    title: "We design and build",
+    copy: "We shape the storefront, set up the catalog and polish every screen.",
   },
   {
     number: "03",
-    title: "Publish your store",
-    copy: "Check everything, then publish.",
+    title: "Review and launch",
+    copy: "Review the finished store, approve it and publish on Shopify.",
   },
   {
     number: "LIVE",
     title: "Your world is open",
-    copy: "Your audience can shop.",
+    copy: "Your audience has a permanent place to shop.",
   },
 ];
 
@@ -124,9 +124,9 @@ const features = [
 
 const faqs = [
   {
-    question: "What is Guildframe, and does it include Shopify?",
+    question: "What does Guildframe do?",
     answer:
-      "Guildframe is a tabletop-focused Shopify theme. It requires an active Shopify store and uses Shopify’s checkout, inventory and payments. Shopify plan and app fees are separate.",
+      "Guildframe designs and develops Shopify storefronts for tabletop creators and studios. We also make a premium DIY theme with four complete presets. Both options require an active Shopify store and use Shopify's checkout, inventory and payments.",
   },
   {
     question: "Can I customize it without code?",
@@ -146,7 +146,7 @@ const faqs = [
   {
     question: "What are the two ways to use Guildframe?",
     answer:
-      "Buy the $419 theme and build the store yourself with Shopify's visual editor, or choose the $1,399 done-for-you service and we will design and develop the entire storefront from an empty Shopify store to a reviewed build ready to publish.",
+      "Hire Guildframe to design and develop your complete Shopify storefront for $2,199, including up to 50 product SKUs, or buy the $349 Guildframe theme and build it yourself with Shopify's visual editor.",
   },
   {
     question: "What is included in the done-for-you service?",
@@ -156,7 +156,7 @@ const faqs = [
   {
     question: "Is the done-for-you price really flat?",
     answer:
-      "Yes. The Guildframe design and development service is $1,399 regardless of catalog size. You provide approved product data, copy and visual assets. Shopify fees, paid apps, custom app development, photography and new copywriting are separate.",
+      "Yes. Guildframe's complete design and development service is $2,199 for creators and studios with up to 50 product SKUs. You provide approved product data, copy and visual assets. Shopify fees, paid apps, custom app development, photography and new copywriting are separate.",
   },
   {
     question: "How long does a done-for-you store take?",
@@ -280,24 +280,17 @@ export default function Home() {
           <a className={activeSection === "process" ? "is-active" : ""} href="#process">
             How it works
           </a>
+          <a href={siteConfig.servicePath}>Services</a>
           <a className={activeSection === "styles" ? "is-active" : ""} href="#styles">
-            Presets
-          </a>
-          <a
-            className={activeSection === "customization" ? "is-active" : ""}
-            href="#customization"
-          >
-            Customize
-          </a>
-          <a className={activeSection === "features" ? "is-active" : ""} href="#features">
-            What&apos;s included
+            Theme
           </a>
           <a className={activeSection === "pricing" ? "is-active" : ""} href="#pricing">
             Pricing
           </a>
+          <a href={siteConfig.contactInquiryUrl}>Contact</a>
         </nav>
-        <a className="nav-cta" href="#styles">
-          See the 4 presets <span aria-hidden="true">↗</span>
+        <a className="nav-cta" href={siteConfig.servicePath}>
+          Build my store <span aria-hidden="true">↗</span>
         </a>
       </header>
 
@@ -322,17 +315,22 @@ export default function Home() {
               </p>
             </div>
             <h1>
-              Your Kickstarter.
-              <span>Live on Shopify</span>
-              in 15 minutes.
+              Shopify stores
+              <span>built for tabletop</span>
+              games.
             </h1>
             <p className="hero-support">
-              Build it yourself with our premium tabletop theme, or let us
-              design and develop the entire Shopify store for you.
+              We design and develop complete Shopify storefronts for board
+              games, card games, TTRPGs, miniatures and tabletop studios.
             </p>
-            <a className="primary-button" href="#process">
-              How it works <span aria-hidden="true">↘</span>
-            </a>
+            <div className="hero-actions">
+              <a className="primary-button" href={siteConfig.servicePath}>
+                Build my Shopify store <span aria-hidden="true">↗</span>
+              </a>
+              <a className="hero-text-link" href="#process">
+                See how it works <span aria-hidden="true">↘</span>
+              </a>
+            </div>
           </div>
 
         </section>
@@ -340,12 +338,12 @@ export default function Home() {
         <section className="problem-section section-pad">
           <div className="problem-copy" data-reveal>
             <h2>
-              From funded campaign.
-              <span>To live storefront.</span>
+              Your game has its own world.
+              <span>Your store should feel like part of it.</span>
             </h2>
             <p>
-              Choose the premium theme and stay hands-on, or hand us the whole
-              build. Either way, you start with a system made for tabletop.
+              Editions, expansions, bundles, add-ons and campaign stories all
+              need to work together. We build the Shopify store around them.
             </p>
           </div>
         </section>
@@ -358,7 +356,7 @@ export default function Home() {
             <div className="process-copy">
               <h2>1, 2, 3. Live.</h2>
               <p className="process-intro">
-                From funded campaign to Shopify store in three clear steps.
+                From final assets to a complete Shopify store in three clear steps.
               </p>
               <div
                 className="process-steps"
@@ -693,82 +691,81 @@ export default function Home() {
 
         <section className="comparison-section section-pad">
           <div className="comparison-heading" data-reveal>
-            <h2>Compare the real path to launch.</h2>
+            <h2>Three ways to build your store.</h2>
             <p>
-              Price is only half the decision. Compare the work between a blank
-              theme and a storefront built specifically for tabletop.
+              The difference is not just the price. It is how much work stays
+              with you, and how well the team understands tabletop commerce.
             </p>
           </div>
 
           <div className="comparison-grid" data-reveal>
             <article>
               <div className="comparison-label">
-                <span>Agency or freelancer</span>
-                <em>Custom from scratch</em>
+                <span>Generic Shopify theme</span>
+                <em>A starting point</em>
               </div>
-              <h3>Maximum flexibility. Maximum project.</h3>
+              <h3>A theme, with the hard work left to you.</h3>
               <ul>
-                <li><span>Typical cost</span><strong>$2,000+</strong></li>
-                <li><span>Time to launch</span><strong>3 to 8 weeks</strong></li>
-                <li><span>Tabletop-ready</span><strong>Built to brief</strong></li>
-                <li><span>Setup help</span><strong>Usually included</strong></li>
+                <li><span>Tabletop expertise</span><strong>None built in</strong></li>
+                <li><span>Designed for your brand</span><strong>Limited</strong></li>
+                <li><span>Store built for you</span><strong>No</strong></li>
+                <li><span>What you receive</span><strong>Theme only</strong></li>
               </ul>
             </article>
             <article>
               <div className="comparison-label">
-                <span>Generic Shopify theme</span>
-                <em>Blank starting point</em>
+                <span>Generalist agency</span>
+                <em>Custom after the briefing</em>
               </div>
-              <h3>Lower cost. More work left for you.</h3>
+              <h3>Custom work, after they learn the category.</h3>
               <ul>
-                <li><span>Typical cost</span><strong>Around $500</strong></li>
-                <li><span>Time to launch</span><strong>Several days</strong></li>
-                <li><span>Tabletop-ready</span><strong>Needs adapting</strong></li>
-                <li><span>Setup help</span><strong>Self-serve</strong></li>
+                <li><span>Tabletop expertise</span><strong>Requires briefing</strong></li>
+                <li><span>Designed for your brand</span><strong>Yes</strong></li>
+                <li><span>Product setup</span><strong>Scope dependent</strong></li>
+                <li><span>Project price</span><strong>Variable</strong></li>
               </ul>
             </article>
             <article className="comparison-guildframe">
               <div className="comparison-label">
                 <span>Guildframe</span>
-                <em>Two purpose-built routes</em>
+                <em>Built specifically for tabletop</em>
               </div>
-              <h3>Use the theme, or use the team.</h3>
+              <h3>Category expertise with a complete build.</h3>
               <ul>
-                <li><span>Premium theme</span><strong>$419</strong></li>
-                <li><span>Done-for-you store</span><strong>$1,399</strong></li>
-                <li><span>Tabletop-ready</span><strong>From day one</strong></li>
-                <li><span>Catalog size fee</span><strong>None</strong></li>
+                <li><span>Tabletop expertise</span><strong>Built in</strong></li>
+                <li><span>Designed for your brand</span><strong>Yes</strong></li>
+                <li><span>Product setup</span><strong>Up to 50 SKUs</strong></li>
+                <li><span>Project price</span><strong>$2,199</strong></li>
               </ul>
             </article>
           </div>
           <p className="comparison-note">
-            The 15-minute self-launch is intended for a focused campaign with
-            final artwork and content ready. Done-for-you delivery depends on
-            asset readiness, catalog complexity and the review cycle.
+            Every project starts with a confirmed brief, asset checklist,
+            review process and delivery plan.
           </p>
         </section>
 
         <section className="bonus-section section-pad">
           <div className="bonus-offer" data-reveal>
-            <p>Done-for-you Shopify store</p>
+            <p>Shopify design and development</p>
             <div className="bonus-free">
-              <strong>$1,399</strong>
+              <strong>$2,199</strong>
               <span>one flat project fee</span>
             </div>
-            <strong className="service-size-proof">Any catalog size. Zero to publish.</strong>
+            <strong className="service-size-proof">Up to 50 product SKUs. Zero to publish.</strong>
           </div>
           <div className="bonus-copy" data-reveal>
             <h2>
-              Hand us the store.
-              <span>We&apos;ll take it to launch.</span>
+              Your complete Shopify store.
+              <span>One clear price.</span>
             </h2>
             <p>
-              We design and develop your entire Shopify storefront using
-              Guildframe, from an empty store to a polished build ready to
-              publish. The $1,399 project fee stays the same regardless of store size.
+              We design and develop your storefront from an empty Shopify store
+              to a polished, tested build ready to publish. Your brand, your
+              products and your world, handled from zero to launch.
             </p>
             <div className="bonus-availability">
-              <span>Flat fee. No per-product surcharge.</span>
+              <span>Built for creators and studios with up to 50 product SKUs.</span>
               <strong>Delivery plan confirmed before work begins.</strong>
             </div>
             <div className="setup-journey" aria-label="How the done-for-you Shopify service works">
@@ -797,7 +794,7 @@ export default function Home() {
               data-analytics-label="View done-for-you Shopify service"
               data-analytics-location="done-for-you offer"
             >
-              Get a done-for-you store <span aria-hidden="true">↗</span>
+              Build my Shopify store <span aria-hidden="true">↗</span>
             </a>
             <small>
               You provide approved product data, copy and visual assets. Shopify
@@ -810,22 +807,49 @@ export default function Home() {
         <section className="pricing-section section-pad" id="pricing">
           <div className="pricing-intro" data-reveal>
             <h2>
-              Choose how you launch.
-              <span>Theme or full build.</span>
+              Choose the right way to build.
+              <span>We can do it for you.</span>
             </h2>
             <p>
-              Stay hands-on with the premium theme, or give us the complete
-              Shopify store and receive it ready to publish.
+              Start with a complete storefront built by a tabletop specialist,
+              or use our premium theme and build it yourself.
             </p>
           </div>
 
           <div className="pricing-options" data-reveal>
-            <article className="pricing-option pricing-option-theme">
-              <span className="pricing-option-label">Do it yourself</span>
-              <h3>Guildframe premium theme</h3>
-              <p>Everything you need to build the store yourself without code.</p>
+            <article className="pricing-option pricing-option-service">
+              <span className="pricing-option-label">Design and development</span>
+              <h3>Your complete Shopify store</h3>
+              <p>Built specifically for your tabletop brand, from zero to publish.</p>
               <div className="pricing-price-row">
-                <div className="price">$419</div>
+                <div className="price">$2,199</div>
+                <span>flat fee</span>
+              </div>
+              <ul>
+                <li>Guildframe theme included in the build</li>
+                <li>Full storefront design and development</li>
+                <li>Up to 50 product SKUs added</li>
+                <li>Desktop, tablet and mobile polish</li>
+                <li>Buying-path testing and publish handoff</li>
+              </ul>
+              <a
+                href={siteConfig.servicePath}
+                className="checkout-button checkout-button-service"
+                data-analytics-event="service_interest"
+                data-analytics-label="Get Shopify store design and development for $2199"
+                data-analytics-location="pricing service option"
+              >
+                Build my store for $2,199 <span aria-hidden="true">↗</span>
+              </a>
+              <small>For creators and studios with up to 50 product SKUs. Third-party costs are separate.</small>
+            </article>
+
+            <article className="pricing-option pricing-option-theme">
+              <span className="pricing-option-label">Want to build it yourself?</span>
+              <h3>Get the Guildframe theme</h3>
+              <p>A premium Shopify theme purpose built for tabletop games.</p>
+              <div className="pricing-price-row">
+                <div className="price">$349</div>
                 <span>one-time</span>
               </div>
               <ul>
@@ -839,56 +863,28 @@ export default function Home() {
                 href={siteConfig.purchasePath}
                 className="checkout-button"
                 data-analytics-event="begin_checkout"
-                data-analytics-label="Buy Guildframe theme for $419"
+                data-analytics-label="Buy Guildframe theme for $349"
                 data-analytics-location="pricing theme option"
               >
-                Buy the theme for $419 <span aria-hidden="true">↗</span>
+                Get the theme for $349 <span aria-hidden="true">↗</span>
               </a>
               <small>Requires an active Shopify store. No Guildframe subscription.</small>
-            </article>
-
-            <article className="pricing-option pricing-option-service">
-              <span className="pricing-option-label">Done for you</span>
-              <h3>Complete Shopify store</h3>
-              <p>We design and develop the entire storefront from zero to publish.</p>
-              <div className="pricing-price-row">
-                <div className="price">$1,399</div>
-                <span>flat fee</span>
-              </div>
-              <ul>
-                <li>Guildframe theme included in the build</li>
-                <li>Full storefront design and development</li>
-                <li>Products and supplied content added</li>
-                <li>Desktop, tablet and mobile polish</li>
-                <li>Buying-path testing and publish handoff</li>
-              </ul>
-              <a
-                href={siteConfig.servicePath}
-                className="checkout-button checkout-button-service"
-                data-analytics-event="service_interest"
-                data-analytics-label="Get done-for-you Shopify store for $1399"
-                data-analytics-location="pricing service option"
-              >
-                Get the full store for $1,399 <span aria-hidden="true">↗</span>
-              </a>
-              <small>Same service fee regardless of catalog size. Third-party costs are separate.</small>
             </article>
           </div>
           <div className="pricing-promise" data-reveal>
             <div>
-              <h3>Two clear offers. No hidden hybrid.</h3>
+              <h3>One specialist. Two clear ways to launch.</h3>
             </div>
             <p>
-              The $419 theme is self-serve and fully customizable. The $1,399
-              service is a complete Guildframe storefront build. We confirm the
-              brief, required assets, review process and delivery plan first.
+              Choose a complete $2,199 store build for up to 50 product SKUs,
+              or buy the fully customizable Guildframe theme for $349 and build
+              it yourself.
             </p>
           </div>
         </section>
 
         <section className="contact-question-section section-pad" id="contact">
           <div data-reveal>
-            <span>Direct help from Guildframe</span>
             <h2>Got questions or queries?</h2>
             <p>
               Ask about the theme, presets, store requirements or the complete
@@ -938,8 +934,8 @@ export default function Home() {
         data-analytics-location="mobile sticky CTA"
       >
         <span>
-          <strong>Choose your launch path</strong>
-          <small>Theme or done-for-you store</small>
+          <strong>Build your Shopify store</strong>
+          <small>Complete service or DIY theme</small>
         </span>
         <b>View</b>
       </a>
@@ -948,19 +944,19 @@ export default function Home() {
         <div className="footer-cta">
           <div className="footer-cta-copy">
             <h2>
-              Your campaign is funded.{" "}
-              <span>Keep selling beyond Kickstarter.</span>
+              Your game deserves a store.{" "}
+              <span>We know how to build it.</span>
             </h2>
             <p>
-              Choose your preset, add the campaign content you already have and
-              give your audience a polished place to keep buying.
+              Hire Guildframe for the complete Shopify storefront, or build it
+              yourself with our premium tabletop theme.
             </p>
             <div className="footer-actions">
-              <a className="footer-primary" href={siteConfig.purchasePath}>
-                Buy the $419 theme <span aria-hidden="true">↗</span>
+              <a className="footer-primary" href={siteConfig.servicePath}>
+                Build my store for $2,199 <span aria-hidden="true">↗</span>
               </a>
-              <a className="footer-secondary" href={siteConfig.servicePath}>
-                Get the $1,399 full build
+              <a className="footer-secondary" href={siteConfig.purchasePath}>
+                Get the $349 theme
               </a>
             </div>
           </div>
@@ -979,12 +975,12 @@ export default function Home() {
           <div className="footer-brand">
             <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="1000" height="220" />
             <p>
-              The Kickstarter-to-Shopify system built specifically for
-              tabletop creators.
+              Shopify design, development and a premium DIY theme built
+              specifically for tabletop creators.
             </p>
             <div className="footer-trust">
-              <span>One-time payment</span>
-              <span>No code required</span>
+              <span>Tabletop specialist</span>
+              <span>Clear project pricing</span>
               <span>Shopify underneath</span>
             </div>
           </div>

@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/move-from-kickstarter-to-shopify",
   kind: "article",
   publishedTime: "2026-07-16",
-  modifiedTime: "2026-07-19",
+  modifiedTime: "2026-07-21",
   keywords: [
     "Kickstarter to Shopify migration guide",
     "migrate Kickstarter products to Shopify",
@@ -41,7 +41,7 @@ const faqs = [
   {
     question: "How long does a Kickstarter to Shopify migration take?",
     answer:
-      "A focused catalog with final assets can be prepared quickly. Larger catalogs, complex variants, international tax, preorder rules or fulfillment integrations require more planning. Guildframe offers a $419 self-serve theme and a separate $1,399 done-for-you store build with timing confirmed after the brief and final assets are reviewed.",
+      "A focused catalog with final assets can be prepared quickly. Larger catalogs, complex variants, international tax, preorder rules or fulfillment integrations require more planning. Guildframe offers a $349 self-serve theme and a separate $2,199 store build for up to 50 product SKUs, with timing confirmed after the brief and final assets are reviewed.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function MoveKickstarterToShopifyGuide() {
       description="Your campaign page proved demand. This guide shows how to turn the assets and product structure you already built into a permanent Shopify storefront."
       answer="To move from Kickstarter to Shopify, finalize the products you will sell, separate campaign fulfillment from new store orders, reuse your strongest campaign assets, configure Shopify operations, test every buying path and launch with clear delivery language. The store complements Kickstarter and any pledge manager rather than replacing their campaign-specific jobs."
       published="2026-07-16"
-      updated="2026-07-19"
+      updated="2026-07-21"
       readTime="9 minute read"
       faqs={faqs}
       sources={[

@@ -65,10 +65,11 @@ export default function EditorialPolicyPage() {
         <section>
           <h2>Commercial transparency</h2>
           <p>
-            Guildframe sells a Shopify theme and done-for-you store service. Pages about
-            Shopify themes, Kickstarter migration and tabletop storefronts may link
-            to the relevant Guildframe offer page. Theme price, service price and
-            scope must match the visible offers and structured data.
+            Guildframe provides Shopify design and development for tabletop
+            brands and sells a separate DIY theme. Pages about Shopify themes,
+            Kickstarter migration and tabletop storefronts may link to the
+            relevant offer page. Service price, theme price and scope must match
+            the visible offers and structured data.
           </p>
           <p>
             Comparisons explain the job each platform performs. They are not paid

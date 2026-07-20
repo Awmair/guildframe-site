@@ -21,7 +21,7 @@ export const boardGameContent: LandingPageContent = {
   title: "A board game Shopify theme built for",
   highlight: "complete worlds.",
   answer:
-    "Guildframe is a Shopify theme for board game creators and publishers. Buy the fully customizable theme for $419, or choose the $1,399 done-for-you service and receive a complete storefront ready to publish.",
+    "Guildframe designs and develops complete Shopify storefronts for board game creators and publishers for $2,199, including up to 50 product SKUs. Prefer to build it yourself? The fully customizable Guildframe theme is $349.",
   image: "/images/pdp-guildframe-responsive-v1.jpg",
   imageAlt:
     "Guildframe board game product page displayed on desktop and mobile",
@@ -65,8 +65,8 @@ export const boardGameContent: LandingPageContent = {
       copy: "Use Shopify checkout, inventory, payments, products and compatible apps normally.",
     },
     {
-      title: "Done-for-you option",
-      copy: "For a flat $1,399, send your final assets and we will design and develop the entire storefront for you to review and publish.",
+      title: "Complete store build",
+      copy: "For $2,199, send your final assets and we will design and develop the entire storefront, including up to 50 product SKUs, for you to review and publish.",
     },
   ],
   steps: commonSteps,
@@ -133,7 +133,7 @@ export const kickstarterContent: LandingPageContent = {
     },
     {
       title: "Launch with less setup work",
-      copy: "Use a tabletop-ready structure and optional done-for-you setup instead of starting with a blank generic theme.",
+      copy: "Use a tabletop-ready structure or a complete Guildframe store build instead of starting with a blank generic theme.",
     },
   ],
   proofTitle: "Crowdfunding validates the game. Shopify helps you keep selling it.",
@@ -162,7 +162,7 @@ export const kickstarterContent: LandingPageContent = {
     },
     {
       title: "Done-for-you store build",
-      copy: "For a flat $1,399, our team designs and develops the complete storefront from your supplied final assets, regardless of catalog size.",
+      copy: "For $2,199, we design and develop the complete storefront from your supplied final assets, including up to 50 product SKUs.",
     },
   ],
   steps: commonSteps,
@@ -257,7 +257,7 @@ export const ttrpgContent: LandingPageContent = {
     },
     {
       title: "Done-for-you option",
-      copy: "Choose the $1,399 service and we will turn your final campaign assets into a complete Shopify storefront ready to publish.",
+      copy: "Choose the $2,199 service and we will turn your final campaign assets into a complete Shopify storefront with up to 50 product SKUs, ready to publish.",
     },
   ],
   steps: commonSteps,
@@ -280,7 +280,7 @@ export const ttrpgContent: LandingPageContent = {
     {
       question: "Can you build the entire TTRPG store for me?",
       answer:
-        "Yes. The done-for-you service is a separate $1,399 flat-fee offer. We confirm the brief, supplied assets, review process and delivery plan before development begins.",
+        "Yes. The complete design and development service is $2,199 for up to 50 product SKUs. We confirm the brief, supplied assets, review process and delivery plan before development begins.",
     },
   ],
   related: [
@@ -375,7 +375,7 @@ export const miniaturesContent: LandingPageContent = {
     {
       question: "Can you build the store for my studio?",
       answer:
-        "Yes. Choose the $1,399 done-for-you service and provide your final product information, logo, copy and artwork. We design and develop the store from zero to a publish-ready build for the same service fee regardless of catalog size.",
+        "Yes. Choose the $2,199 design and development service and provide your final product information, logo, copy and artwork. We build the store from zero to a publish-ready storefront with up to 50 product SKUs.",
     },
   ],
   related: [

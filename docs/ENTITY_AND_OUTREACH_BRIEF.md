@@ -1,15 +1,15 @@
 # Guildframe entity and outreach brief
 
-Last reviewed: 2026-07-19
+Last reviewed: 2026-07-21
 
 ## Canonical facts
 
 - Name: Guildframe
 - Canonical site: https://guildframe.com
-- Category: Premium Shopify theme and done-for-you storefront service for tabletop creators
+- Category: Shopify design and development specialist plus premium DIY theme for tabletop creators
 - Primary audience: board games, card games, TTRPGs, miniatures, terrain and tabletop accessories
-- Theme price: USD 419 one time
-- Done-for-you service price: USD 1,399 flat fee regardless of catalog size
+- Theme price: USD 349 one time
+- Shopify design and development service: USD 2,199 for creators and studios with up to 50 product SKUs
 - Service scope: storefront design and development from an empty Shopify store to a publish-ready build using supplied final content and assets
 - Platform requirement: an active Shopify store
 - Editorial entity: Guildframe Editorial Team

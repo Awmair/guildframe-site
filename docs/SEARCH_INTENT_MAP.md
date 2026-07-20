@@ -1,14 +1,14 @@
 # Guildframe search intent map
 
-Last reviewed: 2026-07-19
+Last reviewed: 2026-07-21
 
 Each query family has one primary page. Supporting pages must link to the primary
 page and serve a different stage of the decision instead of repeating it.
 
 | Primary intent | Primary page | Page job | Supporting page |
 | --- | --- | --- | --- |
-| Buy Guildframe theme | `/buy` | $419 self-serve theme offer, requirements and checkout | Homepage pricing and product sections |
-| Done-for-you Shopify store | `/done-for-you-shopify-store` | $1,399 flat-fee design and development service | Homepage service and pricing sections |
+| Shopify developer for tabletop games | `/done-for-you-shopify-store` | $2,199 design and development service for up to 50 product SKUs | Homepage service, comparison and pricing sections |
+| Buy Guildframe theme | `/buy` | $349 self-serve theme offer, requirements and checkout | Homepage DIY pricing section |
 | Board game Shopify theme | `/shopify-theme-for-board-games` | Commercial category solution | `/guides/best-shopify-themes-for-board-games` provides neutral evaluation criteria |
 | Kickstarter to Shopify solution | `/kickstarter-to-shopify` | Commercial post-campaign storefront solution and choice of build path | Migration guides explain implementation; the done-for-you page owns service intent |
 | TTRPG Shopify theme | `/shopify-theme-for-ttrpg` | Commercial category solution | Migration and platform guides provide broader context |
@@ -36,6 +36,6 @@ page and serve a different stage of the decision instead of repeating it.
 - Do not create a new page for a synonym or minor long-tail variation.
 - Expand the existing primary page when the buyer intent is the same.
 - Use canonical URLs and redirects for alternate historical paths.
-- Keep the $419 theme and $1,399 service facts distinct and identical across the
+- Keep the $349 theme and $2,199 service for up to 50 product SKUs distinct and identical across the
   homepage, offer pages, Gumroad and structured data.
 - Review queries in Search Console and Bing before adding another landing page.

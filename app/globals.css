@@ -405,6 +405,31 @@ section[id] {
   max-width: 660px;
 }
 
+.hero-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero-text-link {
+  border-bottom: 1px solid rgba(23, 25, 28, 0.36);
+  color: var(--charcoal);
+  font-size: 13px;
+  font-weight: 780;
+  letter-spacing: 0.04em;
+  margin-top: 28px;
+  padding: 10px 2px 8px;
+  text-transform: uppercase;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.hero-text-link:hover {
+  border-color: var(--cobalt);
+  color: var(--cobalt);
+}
+
 .primary-button,
 .checkout-button {
   align-items: center;
@@ -8137,6 +8162,50 @@ section[id] {
   padding-bottom: 4px;
 }
 
+.service-diy-option {
+  align-items: center;
+  background: var(--stone);
+  color: var(--charcoal);
+  display: grid;
+  gap: clamp(32px, 7vw, 110px);
+  grid-template-columns: minmax(0, 1fr) auto;
+  text-align: left;
+}
+
+.service-diy-option > div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+.service-diy-option h2 {
+  margin-top: 0;
+}
+
+.service-diy-option p {
+  color: rgba(23, 25, 28, 0.68);
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.6;
+  margin: 20px 0 0;
+  max-width: 720px;
+}
+
+.service-diy-price {
+  font-size: clamp(58px, 6vw, 88px);
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+}
+
+.service-diy-option > div > a:last-child {
+  background: var(--charcoal);
+  border: 0;
+  color: var(--white);
+  margin-top: 18px;
+  padding: 18px 22px;
+}
+
 .contact-question-section {
   align-items: center;
   background:
@@ -8282,6 +8351,15 @@ section[id] {
   .service-scope,
   .service-final-cta {
     padding: 64px 20px;
+  }
+
+  .service-diy-option {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .service-diy-option > div {
+    align-items: flex-start;
   }
 
   .service-deliverable-grid article {

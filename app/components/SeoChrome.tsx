@@ -8,20 +8,20 @@ export function SeoHeader() {
         <img src="/brand/guildframe-logo.svg" alt="Guildframe" width="1000" height="220" />
       </Link>
       <nav aria-label="Primary navigation">
-        <Link href="/#styles">Presets</Link>
+        <Link href="/done-for-you-shopify-store">Services</Link>
+        <Link href="/#styles">Theme</Link>
         <Link href="/shopify-theme-for-board-games">Board games</Link>
         <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
         <Link href="/guides">Guides</Link>
-        <Link href="/resources">Resources</Link>
       </nav>
       <Link
         className="seo-header-cta"
-        href="/#pricing"
-        data-analytics-event="view_pricing"
-        data-analytics-label="Compare Guildframe offers"
+        href="/done-for-you-shopify-store"
+        data-analytics-event="service_interest"
+        data-analytics-label="Build my Shopify store"
         data-analytics-location="SEO header"
       >
-        View both options <span aria-hidden="true">↗</span>
+        Build my store <span aria-hidden="true">↗</span>
       </Link>
     </header>
   );
@@ -37,21 +37,21 @@ export function SeoFooter() {
         <div className="seo-footer-actions">
           <Link
             className="seo-button seo-button-light"
-            href="/buy"
-            data-analytics-event="begin_checkout"
-            data-analytics-label="Buy Guildframe theme for $419"
+            href="/done-for-you-shopify-store"
+            data-analytics-event="service_interest"
+            data-analytics-label="Get Shopify store design and development for $2199"
             data-analytics-location="SEO footer"
           >
-            Buy the $419 theme <span aria-hidden="true">↗</span>
+            Build my store for $2,199 <span aria-hidden="true">↗</span>
           </Link>
           <Link
             className="seo-button seo-button-outline"
-            href="/done-for-you-shopify-store"
-            data-analytics-event="service_interest"
-            data-analytics-label="View done-for-you Shopify service"
+            href="/buy"
+            data-analytics-event="begin_checkout"
+            data-analytics-label="Buy Guildframe theme for $349"
             data-analytics-location="SEO footer"
           >
-            Get the $1,399 full build <span aria-hidden="true">↗</span>
+            Get the $349 theme <span aria-hidden="true">↗</span>
           </Link>
         </div>
       </div>
@@ -59,8 +59,8 @@ export function SeoFooter() {
         <div className="seo-footer-brand">
           <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="1000" height="220" />
           <p>
-            A premium Shopify theme and flat-fee done-for-you storefront service
-            for tabletop game creators.
+            Shopify design, development and a premium DIY theme built
+            specifically for tabletop game creators.
           </p>
         </div>
         <nav aria-label="Solutions">

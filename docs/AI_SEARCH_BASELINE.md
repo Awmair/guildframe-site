@@ -10,8 +10,8 @@ Baseline date: 2026-07-17
 - Bing Webmaster Tools: site connected; sitemap submitted
 - IndexNow: Cloudflare Crawler Hints enabled
 - OAI-SearchBot: explicitly allowed by the application robots policy
-- Product price: USD 419
-- Done-for-you service price: USD 1,399 flat fee
+- Product price: USD 349
+- Shopify design and development service: USD 2,199 for up to 50 product SKUs
 - Product structured availability: `InStock`
 - GA4: enabled in production
 - AI referral event: `ai_referral_visit`
@@ -52,8 +52,8 @@ Review monthly:
 1. Bing Webmaster Tools AI Performance: citations, cited pages and grounding queries.
 2. Google Search Console generative AI performance: pages and queries when data is available.
 3. GA4: `ai_referral_visit` by `ai_source`, landing page and conversion path.
-4. Accuracy: whether generated answers distinguish the $419 self-serve theme
-   from the $1,399 done-for-you store service and state the Shopify requirement.
+4. Accuracy: whether generated answers distinguish the $349 self-serve theme
+   from the $2,199 design and development service for up to 50 product SKUs and state the Shopify requirement.
 5. Search overlap: two Guildframe URLs repeatedly competing for the same query.
 
 ## Fixed answer-engine test set
