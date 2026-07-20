@@ -7827,6 +7827,7 @@ section[id] {
   font-size: 12px;
   line-height: 1.5;
   margin-top: 16px;
+  min-height: 36px;
 }
 
 .checkout-button-service {
@@ -8335,6 +8336,10 @@ section[id] {
 
   .pricing-option {
     padding: 30px 24px;
+  }
+
+  .pricing-option > small {
+    min-height: 0;
   }
 
   .service-hero {
