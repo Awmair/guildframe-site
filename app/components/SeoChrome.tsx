@@ -39,19 +39,19 @@ export function SeoFooter() {
             className="seo-button seo-button-light"
             href="/done-for-you-shopify-store"
             data-analytics-event="service_interest"
-            data-analytics-label="Get Shopify store design and development for $2199"
+            data-analytics-label="Start Shopify store design and development"
             data-analytics-location="SEO footer"
           >
-            Build my store for $2,199 <span aria-hidden="true">↗</span>
+            Build my Shopify store <span aria-hidden="true">↗</span>
           </Link>
           <Link
             className="seo-button seo-button-outline"
             href="/buy"
             data-analytics-event="begin_checkout"
-            data-analytics-label="Buy Guildframe theme for $349"
+            data-analytics-label="Get Guildframe theme"
             data-analytics-location="SEO footer"
           >
-            Get the $349 theme <span aria-hidden="true">↗</span>
+            Get the theme <span aria-hidden="true">↗</span>
           </Link>
         </div>
       </div>

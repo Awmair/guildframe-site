@@ -146,7 +146,7 @@ const faqs = [
   {
     question: "What are the two ways to use Guildframe?",
     answer:
-      "Hire Guildframe to design and develop your complete Shopify storefront for $2,199, including up to 50 product SKUs, or buy the $349 Guildframe theme and build it yourself with Shopify's visual editor.",
+      "Hire Guildframe to design and develop your complete Shopify storefront with up to 50 product SKUs, or buy the Guildframe theme and build it yourself with Shopify's visual editor.",
   },
   {
     question: "What is included in the done-for-you service?",
@@ -156,7 +156,7 @@ const faqs = [
   {
     question: "Is the done-for-you price really flat?",
     answer:
-      "Yes. Guildframe's complete design and development service is $2,199 for creators and studios with up to 50 product SKUs. You provide approved product data, copy and visual assets. Shopify fees, paid apps, custom app development, photography and new copywriting are separate.",
+      "Yes. The price shown above covers the complete design and development service for creators and studios with up to 50 product SKUs. You provide approved product data, copy and visual assets. Shopify fees, paid apps, custom app development, photography and new copywriting are separate.",
   },
   {
     question: "How long does a done-for-you store take?",
@@ -735,7 +735,7 @@ export default function Home() {
                 <li><span>Tabletop expertise</span><strong>Built in</strong></li>
                 <li><span>Designed for your brand</span><strong>Yes</strong></li>
                 <li><span>Product setup</span><strong>Up to 50 SKUs</strong></li>
-                <li><span>Project price</span><strong>$2,199</strong></li>
+                <li><span>Project price</span><strong>Flat fee</strong></li>
               </ul>
             </article>
           </div>
@@ -749,8 +749,8 @@ export default function Home() {
           <div className="bonus-offer" data-reveal>
             <p>Shopify design and development</p>
             <div className="bonus-free">
-              <strong>$2,199</strong>
-              <span>one flat project fee</span>
+              <strong>Built for you</strong>
+              <span>one clear project scope</span>
             </div>
             <strong className="service-size-proof">Up to 50 product SKUs. Zero to publish.</strong>
           </div>
@@ -826,7 +826,7 @@ export default function Home() {
                 <span>flat fee</span>
               </div>
               <ul>
-                <li>Guildframe theme included in the build</li>
+                <li>Custom storefront built around your brand</li>
                 <li>Full storefront design and development</li>
                 <li>Up to 50 product SKUs added</li>
                 <li>Desktop, tablet and mobile polish</li>
@@ -836,10 +836,10 @@ export default function Home() {
                 href={siteConfig.servicePath}
                 className="checkout-button checkout-button-service"
                 data-analytics-event="service_interest"
-                data-analytics-label="Get Shopify store design and development for $2199"
+                data-analytics-label="Start Shopify store design and development"
                 data-analytics-location="pricing service option"
               >
-                Build my store for $2,199 <span aria-hidden="true">↗</span>
+                Start my store build <span aria-hidden="true">↗</span>
               </a>
               <small>For creators and studios with up to 50 product SKUs. Third-party costs are separate.</small>
             </article>
@@ -863,10 +863,10 @@ export default function Home() {
                 href={siteConfig.purchasePath}
                 className="checkout-button"
                 data-analytics-event="begin_checkout"
-                data-analytics-label="Buy Guildframe theme for $349"
+                data-analytics-label="Get Guildframe theme"
                 data-analytics-location="pricing theme option"
               >
-                Get the theme for $349 <span aria-hidden="true">↗</span>
+                Get the theme <span aria-hidden="true">↗</span>
               </a>
               <small>Requires an active Shopify store. No Guildframe subscription.</small>
             </article>
@@ -876,9 +876,8 @@ export default function Home() {
               <h3>One specialist. Two clear ways to launch.</h3>
             </div>
             <p>
-              Choose a complete $2,199 store build for up to 50 product SKUs,
-              or buy the fully customizable Guildframe theme for $349 and build
-              it yourself.
+              Choose a complete store build for up to 50 product SKUs, or buy
+              the fully customizable Guildframe theme and build it yourself.
             </p>
           </div>
         </section>
@@ -953,10 +952,10 @@ export default function Home() {
             </p>
             <div className="footer-actions">
               <a className="footer-primary" href={siteConfig.servicePath}>
-                Build my store for $2,199 <span aria-hidden="true">↗</span>
+                Build my Shopify store <span aria-hidden="true">↗</span>
               </a>
               <a className="footer-secondary" href={siteConfig.purchasePath}>
-                Get the $349 theme
+                Get the theme
               </a>
             </div>
           </div>

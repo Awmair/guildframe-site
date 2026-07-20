@@ -186,8 +186,9 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   assert.match(home, /data-analytics-event="begin_checkout"/i);
   assert.match(buy, /https:\/\/checkout\.example\/guildframe/i);
   assert.match(buy, /data-analytics-event="checkout_redirect"/i);
-  assert.match(home, /Get the theme for \$349/i);
-  assert.match(home, /Build my store for \$2,199/i);
+  assert.match(home, /Start my store build/i);
+  assert.match(home, /Get the theme/i);
+  assert.doesNotMatch(home, /Build my store for \$2,199|Get the theme for \$349/i);
   assert.match(home, /Rune Single/i);
   assert.match(home, /Rune Studio/i);
   assert.match(home, /Saga Single/i);

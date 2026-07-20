@@ -153,10 +153,10 @@ export function SeoArticlePage({
             <Link
               href="/buy"
               data-analytics-event="begin_checkout"
-              data-analytics-label="Get Guildframe for $349"
+              data-analytics-label="Get Guildframe theme"
               data-analytics-location="article sidebar"
             >
-              Get Guildframe for $349 ↗
+              Get the Guildframe theme ↗
             </Link>
           </aside>
 
@@ -203,10 +203,10 @@ export function SeoArticlePage({
                   className="seo-button seo-button-light"
                   href="/buy"
                   data-analytics-event="begin_checkout"
-                  data-analytics-label="Buy Guildframe theme for $349"
+                  data-analytics-label="Get Guildframe theme"
                   data-analytics-location="article CTA"
                 >
-                  Buy the $349 theme ↗
+                  Get the theme ↗
                 </Link>
                 <Link
                   className="seo-button seo-button-outline"
@@ -215,7 +215,7 @@ export function SeoArticlePage({
                   data-analytics-label="View done-for-you Shopify service"
                   data-analytics-location="article CTA"
                 >
-                  Build my store for $2,199 ↗
+                  Build my Shopify store ↗
                 </Link>
               </div>
             </div>

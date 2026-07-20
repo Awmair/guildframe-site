@@ -20,7 +20,7 @@ export const metadata = pageMetadata({
 });
 
 const deliverables = [
-  "Guildframe theme configured for your brand",
+  "Custom storefront design built around your brand",
   "Homepage, catalog, product and essential content pages",
   "Products and supplied campaign content added",
   "Navigation, collections and buying paths structured",
@@ -92,7 +92,7 @@ export default function DoneForYouShopifyStorePage() {
                 data-analytics-label="Start done-for-you Shopify project"
                 data-analytics-location="service hero"
               >
-                Build my store for $2,199 <span aria-hidden="true">↗</span>
+                Start my store project <span aria-hidden="true">↗</span>
               </a>
               <small>
                 We confirm the brief, required assets, review process and
@@ -105,7 +105,7 @@ export default function DoneForYouShopifyStorePage() {
               <p>For creators and studios with up to 50 product SKUs.</p>
               <ul>
                 <li>Zero to publish-ready</li>
-                <li>Guildframe theme included</li>
+                <li>Custom tabletop storefront</li>
                 <li>Responsive design, development and testing</li>
               </ul>
             </aside>
@@ -123,7 +123,7 @@ export default function DoneForYouShopifyStorePage() {
           </div>
           <div>
             <strong className="service-diy-price">$349</strong>
-            <Link href="/buy">Get the theme for $349 <span aria-hidden="true">↗</span></Link>
+            <Link href="/buy">Get the theme <span aria-hidden="true">↗</span></Link>
           </div>
         </section>
 
@@ -172,9 +172,9 @@ export default function DoneForYouShopifyStorePage() {
           <div>
             <h2>A clear scope. No hourly ambiguity.</h2>
             <p>
-              The $2,199 project includes the complete storefront and up to 50
-              product SKUs. We confirm the pages, assets, review process and
-              delivery plan before development begins.
+              The project includes the complete storefront and up to 50 product
+              SKUs. We confirm the pages, assets, review process and delivery
+              plan before development begins.
             </p>
           </div>
           <div>
