@@ -266,6 +266,13 @@ test("exports AEO and social metadata", async () => {
   assert.doesNotMatch(homepage, /OutOfStock/i);
   assert.match(homepage, /G-TEST123456/i);
 
+  const homepageImages = homepage.match(/<img\b[^>]*>/gi) ?? [];
+  assert.ok(homepageImages.length > 0, "Homepage should contain images");
+  for (const image of homepageImages) {
+    assert.match(image, /\bwidth="\d+"/i, image);
+    assert.match(image, /\bheight="\d+"/i, image);
+  }
+
   const service = await readPage("/done-for-you-shopify-store");
   assert.match(service, /"@type":"Service"/i);
   assert.match(service, /"price":"2199"/i);
