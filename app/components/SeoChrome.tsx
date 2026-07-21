@@ -47,8 +47,8 @@ export function SeoFooter() {
           </Link>
           <Link
             className="seo-button seo-button-outline"
-            href="/buy"
-            data-analytics-event="begin_checkout"
+            href="#start-project"
+            data-analytics-event="theme_interest"
             data-analytics-label="Get Guildframe theme"
             data-analytics-location="SEO footer"
           >

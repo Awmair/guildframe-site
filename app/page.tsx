@@ -268,9 +268,9 @@ function PricingSection({
             <li>Setup documentation</li>
           </ul>
           <a
-            href={siteConfig.purchasePath}
+            href="#start-project"
             className="checkout-button"
-            data-analytics-event="begin_checkout"
+            data-analytics-event="theme_interest"
             data-analytics-label="Get Guildframe theme"
             data-analytics-location={`${analyticsLocation} theme option`}
           >
@@ -727,7 +727,7 @@ export default function Home() {
               Buy Guildframe, our premium Shopify theme purpose built for
               tabletop games, then shape it around your world without code.
             </p>
-            <a href={siteConfig.purchasePath}>
+            <a href="#start-project">
               Get the theme <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -921,7 +921,7 @@ export default function Home() {
               <a className="footer-primary" href="#start-project">
                 Get my free preview <span aria-hidden="true">↗</span>
               </a>
-              <a className="footer-secondary" href={siteConfig.purchasePath}>
+              <a className="footer-secondary" href="#start-project">
                 Get the theme
               </a>
             </div>

@@ -123,7 +123,7 @@ export default function DoneForYouShopifyStorePage() {
           </div>
           <div>
             <strong className="service-diy-price">$349</strong>
-            <Link href="/buy">Get the theme <span aria-hidden="true">↗</span></Link>
+            <Link href="#start-project">Get the theme <span aria-hidden="true">↗</span></Link>
           </div>
         </section>
 

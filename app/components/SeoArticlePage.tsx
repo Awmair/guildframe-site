@@ -151,8 +151,8 @@ export function SeoArticlePage({
               ))}
             </nav>
             <Link
-              href="/buy"
-              data-analytics-event="begin_checkout"
+              href="#start-project"
+              data-analytics-event="theme_interest"
               data-analytics-label="Get Guildframe theme"
               data-analytics-location="article sidebar"
             >
@@ -201,8 +201,8 @@ export function SeoArticlePage({
               <div className="article-cta-actions">
                 <Link
                   className="seo-button seo-button-light"
-                  href="/buy"
-                  data-analytics-event="begin_checkout"
+                  href="#start-project"
+                  data-analytics-event="theme_interest"
                   data-analytics-label="Get Guildframe theme"
                   data-analytics-location="article CTA"
                 >

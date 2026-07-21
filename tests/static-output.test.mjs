@@ -281,7 +281,7 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   const redirects = await readFile(new URL("_redirects", outputRoot), "utf8");
   const headers = await readFile(new URL("_headers", outputRoot), "utf8");
 
-  assert.match(home, /href="\/buy"[^>]*class="checkout-button"/i);
+  assert.match(home, /href="#start-project"[^>]*class="checkout-button"/i);
   assert.doesNotMatch(home, /class="hero-text-link" href="#process">\s*See how it works/i);
   assert.doesNotMatch(
     home,
@@ -292,9 +292,13 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
     "The launch-choice panel should appear before the first pricing cards",
   );
   assert.doesNotMatch(home, /href="#faq"[^>]*class="checkout-button"/i);
-  assert.match(home, /data-analytics-event="begin_checkout"/i);
-  assert.match(buy, /https:\/\/checkout\.example\/guildframe/i);
-  assert.match(buy, /data-analytics-event="checkout_redirect"/i);
+  assert.match(home, /data-analytics-event="theme_interest"/i);
+  assert.match(
+    buy,
+    /<a\b(?=[^>]*href="#start-project")(?=[^>]*class="buy-checkout-button")[^>]*>/i,
+  );
+  assert.doesNotMatch(buy, /https:\/\/checkout\.example\/guildframe/i);
+  assert.doesNotMatch(buy, /data-analytics-event="checkout_redirect"/i);
   assert.match(home, /Get the theme/i);
   assert.match(home, /Get my free preview/i);
   assert.doesNotMatch(

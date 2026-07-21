@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "../components/JsonLd";
 import { SeoFooter, SeoHeader } from "../components/SeoChrome";
-import { pageMetadata, siteConfig } from "../site-config";
+import { pageMetadata } from "../site-config";
 import { guildframeProductData } from "../product-data";
 
 export const metadata: Metadata = pageMetadata({
@@ -55,25 +55,15 @@ export default function BuyPage() {
               <span>One-time payment</span>
             </div>
 
-            {siteConfig.checkoutUrl ? (
-              <a
-                className="buy-checkout-button"
-                href={siteConfig.checkoutUrl}
-                data-analytics-event="checkout_redirect"
-                data-analytics-label="Continue to secure checkout"
-                data-analytics-location="purchase page"
-                rel="nofollow"
-              >
-                Continue to secure checkout <span aria-hidden="true">↗</span>
-              </a>
-            ) : (
-              <div className="buy-checkout-pending" id="checkout-unavailable">
-                <strong>Online checkout is opening soon.</strong>
-                <span>
-                  The secure Gumroad purchase link will be added here.
-                </span>
-              </div>
-            )}
+            <a
+              className="buy-checkout-button"
+              href="#start-project"
+              data-analytics-event="theme_interest"
+              data-analytics-label="Get Guildframe theme"
+              data-analytics-location="purchase page"
+            >
+              Get the theme <span aria-hidden="true">↗</span>
+            </a>
 
             <small>
               Requires an active Shopify store. Shopify plan, payment processing

@@ -85,8 +85,8 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               <div className="seo-actions">
                 <Link
                   className="seo-button"
-                  href="/buy"
-                  data-analytics-event="begin_checkout"
+                  href="#start-project"
+                  data-analytics-event="theme_interest"
                   data-analytics-label={`Get Guildframe for ${siteConfig.price}`}
                   data-analytics-location="solution hero"
                 >
