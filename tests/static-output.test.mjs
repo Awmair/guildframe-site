@@ -52,6 +52,101 @@ test("exports every public page with search essentials", async (t) => {
   }
 });
 
+test("exports the project inquiry form on every public page", async (t) => {
+  for (const [path] of pages) {
+    await t.test(path, async () => {
+      const html = await readPage(path);
+      const form = html.match(
+        /<form\b(?=[^>]*\baction="https:\/\/formspree\.io\/f\/mrewkezq")[^>]*>[\s\S]*?<\/form>/i,
+      )?.[0];
+
+      assert.ok(form, `missing Formspree inquiry form: ${path}`);
+      assert.match(
+        form,
+        /<input\b(?=[^>]*\bname="name")(?=[^>]*\btype="text")(?=[^>]*\brequired(?:="")?)[^>]*>/i,
+        `missing required name field: ${path}`,
+      );
+      assert.match(
+        form,
+        /<input\b(?=[^>]*\bname="email")(?=[^>]*\btype="email")(?=[^>]*\brequired(?:="")?)[^>]*>/i,
+        `missing required email field: ${path}`,
+      );
+      assert.match(
+        form,
+        /<textarea\b(?=[^>]*\bname="message")(?=[^>]*\brequired(?:="")?)[^>]*>/i,
+        `missing required message field: ${path}`,
+      );
+
+      const formId = html.indexOf('id="start-project"');
+      const formSectionEnd = html.indexOf("</section>", formId);
+      const footerStart = html.indexOf("<footer", formSectionEnd);
+      assert.ok(formId >= 0 && formSectionEnd > formId && footerStart > formSectionEnd);
+      assert.doesNotMatch(
+        html.slice(formSectionEnd + "</section>".length, footerStart),
+        /<section\b/i,
+        `inquiry form must be the last section before the footer: ${path}`,
+      );
+    });
+  }
+});
+
+test("routes every homepage free-preview CTA to one inquiry section", async () => {
+  const home = await readPage("/");
+  const previewCtas = [...home.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)]
+    .filter(([, , contents]) =>
+      /\bGet my free preview\b/i.test(contents.replace(/<[^>]+>/g, " ")),
+    );
+
+  assert.ok(previewCtas.length > 0, "missing homepage free-preview CTAs");
+  for (const [, attributes] of previewCtas) {
+    assert.match(attributes, /\bhref="#start-project"/i);
+  }
+  assert.equal(
+    (home.match(/<section\b[^>]*\bid="start-project"[^>]*>/gi) ?? []).length,
+    1,
+    "homepage must contain exactly one #start-project form section",
+  );
+  assert.ok(
+    home.indexOf("Your game deserves a store") < home.indexOf('id="start-project"'),
+    "homepage final choice section must appear before the inquiry form",
+  );
+});
+
+test("keeps every internal page link and section anchor valid", async () => {
+  const knownPaths = new Set(pages.map(([path]) => path));
+  const pageCache = new Map();
+
+  for (const [sourcePath] of pages) {
+    const html = await readPage(sourcePath);
+    const hrefs = [...html.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>/gi)]
+      .map((match) => match[1].replaceAll("&amp;", "&"));
+
+    for (const href of hrefs) {
+      const target = new URL(href, `http://localhost:3000${sourcePath}`);
+      if (target.origin !== "http://localhost:3000") continue;
+
+      const targetPath = target.pathname === "/"
+        ? "/"
+        : target.pathname.replace(/\/$/, "");
+      if (!knownPaths.has(targetPath)) {
+        assert.equal(target.hash, "", `asset link cannot target a section: ${href} on ${sourcePath}`);
+        await access(new URL(targetPath.slice(1), outputRoot));
+        continue;
+      }
+
+      if (!target.hash) continue;
+      const targetHtml = pageCache.get(targetPath) ?? await readPage(targetPath);
+      pageCache.set(targetPath, targetHtml);
+      const id = decodeURIComponent(target.hash.slice(1));
+      assert.match(
+        targetHtml,
+        new RegExp(`\\bid="${id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`, "i"),
+        `broken section anchor ${href} on ${sourcePath}`,
+      );
+    }
+  }
+});
+
 test("exports a complete sitemap and crawlable robots policy", async () => {
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
   const robots = await readFile(new URL("robots.txt", outputRoot), "utf8");
@@ -181,24 +276,47 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   const headers = await readFile(new URL("_headers", outputRoot), "utf8");
 
   assert.match(home, /href="\/buy"[^>]*class="checkout-button"/i);
-  assert.match(home, /class="hero-text-link" href="#process">\s*See how it works/i);
+  assert.doesNotMatch(home, /class="hero-text-link" href="#process">\s*See how it works/i);
+  assert.doesNotMatch(
+    home,
+    /<h3>Send your store brief<\/h3>|<h3>We design and build<\/h3>|<h3>Review and publish<\/h3>/i,
+  );
+  assert.ok(
+    home.indexOf("One specialist. Two clear ways to launch.") < home.indexOf("pricing-options"),
+    "The launch-choice panel should appear before the first pricing cards",
+  );
   assert.doesNotMatch(home, /href="#faq"[^>]*class="checkout-button"/i);
   assert.match(home, /data-analytics-event="begin_checkout"/i);
   assert.match(buy, /https:\/\/checkout\.example\/guildframe/i);
   assert.match(buy, /data-analytics-event="checkout_redirect"/i);
-  assert.match(home, /Start my store build/i);
   assert.match(home, /Get the theme/i);
+  assert.match(home, /Get my free preview/i);
+  assert.doesNotMatch(
+    home,
+    /Start my store|Build my(?: Shopify)? store|Get free preview|Get my free store preview|Request (?:a |my )?free (?:store )?preview/i,
+  );
+  assert.match(home, /\$2,199/i);
+  assert.match(home, /\$349/i);
+  assert.match(home, /within 72 hours/i);
   assert.doesNotMatch(home, /Build my store for \$2,199|Get the theme for \$349/i);
+  assert.doesNotMatch(home, /\$419|\$1,399|within 48 hours|free 48-hour/i);
+  assert.doesNotMatch(home, /Three ways to build your store/i);
   assert.match(home, /Rune Single/i);
   assert.match(home, /Rune Studio/i);
   assert.match(home, /Saga Single/i);
   assert.match(home, /Saga Studio/i);
   assert.match(home, /mailto:umair@guildframe\.com\?subject=Guildframe%20question/i);
-  assert.match(home, /Contact the developer/i);
-  assert.match(home, /You will hear from the developer/i);
+  assert.doesNotMatch(home, /Got questions or queries|You will hear from the developer/i);
   assert.doesNotMatch(home, />Umair</i);
   assert.match(home, /Shopify Partner/i);
   assert.doesNotMatch(home, /free custom setup|custom setup included|included free/i);
+
+  const primaryPricing = home.match(/<section\b[^>]*\bid="pricing"[^>]*>[\s\S]*?<\/section>/i)?.[0] ?? "";
+  const finalPricing = home.match(/<section\b[^>]*\bid="pricing-final"[^>]*>[\s\S]*?<\/section>/i)?.[0] ?? "";
+  assert.ok(primaryPricing, "missing primary pricing section");
+  assert.ok(finalPricing, "missing final pricing section");
+  assert.doesNotMatch(primaryPricing, /Two ways to launch your store/i);
+  assert.match(finalPricing, /Two ways to launch your store/i);
   assert.match(missing, /This path ends here/i);
   assert.match(missing, /content="noindex/i);
   assert.match(redirects, /^\/pricing \/#pricing 301/m);
@@ -248,6 +366,7 @@ test("keeps copy and responsive mockups clean", async () => {
     const source = await readFile(file, "utf8");
     assert.doesNotMatch(source, /[\u2013\u2014]/u, file.pathname);
     assert.doesNotMatch(source, /free custom setup|free setup included|custom setup included|setup bonus/i, file.pathname);
+    assert.doesNotMatch(source, /48[ -]?hours?|48-hour/i, file.pathname);
   }
 
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");

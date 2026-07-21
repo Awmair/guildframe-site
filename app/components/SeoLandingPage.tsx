@@ -95,8 +95,8 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
                 <Link className="seo-text-link" href="/#styles">
                   Explore the four presets
                 </Link>
-                <Link className="seo-text-link" href="/done-for-you-shopify-store">
-                  Get a done-for-you store
+                <Link className="seo-text-link" href="#start-project">
+                  Get my free preview
                 </Link>
               </div>
               <div className="seo-proof-strip" aria-label="Guildframe highlights">

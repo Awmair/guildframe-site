@@ -10,6 +10,7 @@ export const siteConfig = {
   serviceInquiryUrl:
     process.env.NEXT_PUBLIC_SERVICE_INQUIRY_URL?.trim() ||
     "mailto:umair@guildframe.com?subject=Shopify%20store%20project",
+  formEndpoint: "https://formspree.io/f/mrewkezq",
   contactInquiryUrl:
     "mailto:umair@guildframe.com?subject=Guildframe%20question",
   analyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || null,

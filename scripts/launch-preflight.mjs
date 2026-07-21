@@ -5,7 +5,7 @@ const failures = [];
 const warnings = [];
 
 const requiredFiles = [
-  "public/og-guildframe-launch-v2.jpg",
+  "public/og-guildframe-offers-v5.jpg",
   "public/_headers",
   "public/_redirects",
   "app/not-found.tsx",

@@ -210,12 +210,12 @@ export function SeoArticlePage({
                 </Link>
                 <Link
                   className="seo-button seo-button-outline"
-                  href="/done-for-you-shopify-store"
+                  href="#start-project"
                   data-analytics-event="service_interest"
-                  data-analytics-label="View done-for-you Shopify service"
+                  data-analytics-label="Get my free preview"
                   data-analytics-location="article CTA"
                 >
-                  Build my Shopify store ↗
+                  Get my free preview ↗
                 </Link>
               </div>
             </div>

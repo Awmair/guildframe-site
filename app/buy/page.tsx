@@ -100,8 +100,8 @@ export default function BuyPage() {
               add up to 50 product SKUs and take it from an empty store to a
               reviewed build ready to publish.
             </p>
-            <a className="buy-service-link" href={siteConfig.servicePath}>
-              Explore the done-for-you store <span aria-hidden="true">↗</span>
+            <a className="buy-service-link" href="#start-project">
+              Get my free preview <span aria-hidden="true">↗</span>
             </a>
           </div>
           <ol>

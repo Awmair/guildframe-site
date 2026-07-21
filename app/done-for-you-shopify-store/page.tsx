@@ -2,7 +2,7 @@ import Link from "next/link";
 import { JsonLd } from "../components/JsonLd";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { guildframeServiceData } from "../product-data";
-import { absoluteUrl, pageMetadata, siteConfig } from "../site-config";
+import { absoluteUrl, pageMetadata } from "../site-config";
 
 export const metadata = pageMetadata({
   title: "Shopify Design and Development for Tabletop Brands",
@@ -87,12 +87,12 @@ export default function DoneForYouShopifyStorePage() {
               </p>
               <a
                 className="service-primary-button"
-                href={siteConfig.serviceInquiryUrl}
+                href="#start-project"
                 data-analytics-event="generate_lead"
-                data-analytics-label="Start done-for-you Shopify project"
+                data-analytics-label="Get my free preview"
                 data-analytics-location="service hero"
               >
-                Start my store project <span aria-hidden="true">↗</span>
+                Get my free preview <span aria-hidden="true">↗</span>
               </a>
               <small>
                 We confirm the brief, required assets, review process and
@@ -194,7 +194,7 @@ export default function DoneForYouShopifyStorePage() {
           <div>
             <a
               className="service-primary-button"
-              href={siteConfig.serviceInquiryUrl}
+              href="#start-project"
               data-analytics-event="generate_lead"
               data-analytics-label="Start done-for-you Shopify project"
               data-analytics-location="service final CTA"
