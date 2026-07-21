@@ -31,8 +31,7 @@ after every policy change.
 
 ## `llms.txt`
 
-Guildframe does not currently publish `llms.txt`. Google states that it ignores
-this file for Search and its generative AI features. No official Bing or OpenAI
-guidance currently makes it a prerequisite for citation. Reconsider only if a
-major target system documents support and the file can remain accurate without
-duplicating the site.
+Guildframe publishes `llms.txt` as a concise, supplemental discovery summary.
+It is not a substitute for crawlable pages, canonical metadata, schema or the
+sitemap. Keep it aligned with the live offers, prices, preset names and primary
+guides whenever those facts change.
