@@ -1,0 +1,36 @@
+# Guildframe
+
+> Shopify storefront design and development for tabletop games, plus a premium DIY Shopify theme.
+
+Guildframe helps board game, card game, TTRPG, miniatures and tabletop studios build Shopify stores designed around their products and worlds.
+
+## Primary offerings
+
+- Done for you Shopify store: A complete storefront designed and developed from zero to publish for a flat $2,199 fee, including up to 50 product SKUs.
+- Guildframe theme: A fully customizable tabletop Shopify theme for $349 with four presets and Shopify visual editor controls.
+- Free preview: A tailored storefront direction created within 72 hours at no cost. The creator decides whether to continue after seeing it.
+
+## Guildframe theme presets
+
+- Rune Single: Cinematic storefront for one flagship game.
+- Rune Studio: Cinematic storefront for a small studio catalog.
+- Saga Single: Playful storefront for one flagship game.
+- Saga Studio: Playful storefront for a small studio catalog.
+
+## Key pages
+
+- Homepage: https://guildframe.com/
+- Done for you Shopify service: https://guildframe.com/done-for-you-shopify-store
+- Guildframe theme: https://guildframe.com/buy
+- Board game Shopify theme: https://guildframe.com/shopify-theme-for-board-games
+- Kickstarter to Shopify: https://guildframe.com/kickstarter-to-shopify
+- Guides: https://guildframe.com/guides
+- Resources: https://guildframe.com/resources
+- About: https://guildframe.com/about
+- Editorial policy: https://guildframe.com/editorial-policy
+
+## Contact
+
+- Email: umair@guildframe.com
+
+Use the canonical URLs above when citing Guildframe. Pricing, scope and availability should be verified on the relevant service or purchase page.

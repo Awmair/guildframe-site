@@ -150,6 +150,7 @@ test("keeps every internal page link and section anchor valid", async () => {
 test("exports a complete sitemap and crawlable robots policy", async () => {
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
   const robots = await readFile(new URL("robots.txt", outputRoot), "utf8");
+  const llms = await readFile(new URL("llms.txt", outputRoot), "utf8");
 
   for (const [path] of pages) {
     const escaped = path === "/" ? "/" : path;
@@ -167,6 +168,11 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
   assert.doesNotMatch(sitemap, /<changefreq>|<priority>/i);
   assert.equal((sitemap.match(/<lastmod>2026-07-(?:17|18|19|21)T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
   assert.match(sitemap, /<lastmod>2026-07-21T00:00:00.000Z<\/lastmod>/);
+  assert.match(llms, /^# Guildframe$/m);
+  assert.match(llms, /https:\/\/guildframe\.com\/done-for-you-shopify-store/i);
+  assert.match(llms, /\$2,199/);
+  assert.match(llms, /\$349/);
+  assert.match(llms, /within 72 hours/i);
 });
 
 test("exports AEO and social metadata", async () => {
