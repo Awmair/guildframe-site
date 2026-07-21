@@ -49,7 +49,7 @@ export default function KickstarterToShopifyChecklistPage() {
         { label: "Migrate to Shopify", publisher: "Shopify Help Center", href: "https://help.shopify.com/en/manual/migrating-to-shopify" },
         { label: "How to transition from Kickstarter to Shopify", publisher: "Shopify", href: "https://www.shopify.com/ca/blog/how-to-transition-from-kickstarter-to-shopify" },
         { label: "Products", publisher: "Shopify Help Center", href: "https://help.shopify.com/en/manual/products" },
-        { label: "Creator questions about pledges and backers", publisher: "Kickstarter Support", href: "https://help.kickstarter.com/hc/en-us/categories/115000499073-Creator-Questions" },
+        { label: "Kickstarter creator support", publisher: "Kickstarter Support", href: "https://help.kickstarter.com/hc/en-us" },
       ]}
       toc={[
         { id: "scope", label: "Define the system roles" },

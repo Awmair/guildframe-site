@@ -47,7 +47,7 @@ export default function PlatformComparisonMatrixPage() {
       faqs={faqs}
       sources={[
         { label: "How BackerKit works", publisher: "BackerKit", href: "https://www.backerkit.com/features" },
-        { label: "Crowdfunding on Gamefound", publisher: "Gamefound", href: "https://gamefound.com/en/crowdfunding" },
+        { label: "Become a creator on Gamefound", publisher: "Gamefound", href: "https://gamefound.com/en/creators/becomeacreator" },
         { label: "Gamefound Knowledge Base", publisher: "Gamefound", href: "https://help.gamefound.com/" },
         { label: "Shopify products", publisher: "Shopify Help Center", href: "https://help.shopify.com/en/manual/products" },
         { label: "Shopify checkout", publisher: "Shopify Help Center", href: "https://help.shopify.com/en/manual/checkout-settings" },
