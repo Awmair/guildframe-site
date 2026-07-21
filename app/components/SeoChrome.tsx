@@ -10,7 +10,7 @@ export function SeoHeader() {
       </Link>
       <nav aria-label="Primary navigation">
         <Link href="/done-for-you-shopify-store">Services</Link>
-        <Link href="/#styles">Theme</Link>
+        <Link href="/#styles">DIY</Link>
         <Link href="/shopify-theme-for-board-games">Board games</Link>
         <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
         <Link href="/guides">Guides</Link>

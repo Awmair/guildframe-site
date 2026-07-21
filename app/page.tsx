@@ -381,7 +381,7 @@ export default function Home() {
           </a>
           <a href={siteConfig.servicePath}>Services</a>
           <a className={activeSection === "styles" ? "is-active" : ""} href="#styles">
-            Theme
+            DIY
           </a>
           <a className={activeSection === "pricing" ? "is-active" : ""} href="#pricing">
             Pricing
