@@ -26,9 +26,15 @@ const guides = [
   },
   {
     title: "Best Shopify Themes for Board Games and Tabletop Creators",
-    copy: "Compare purpose-built, premium and free theme routes without mistaking decoration for fit.",
+    copy: "Compare Guildframe, Novaplay, Playtime, Sunrise, Boost and Dawn by catalog fit, features and setup effort.",
     href: "/guides/best-shopify-themes-for-board-games",
     tag: "Theme comparison",
+  },
+  {
+    title: "Shopify Developer vs DIY Theme for Tabletop Brands",
+    copy: "Compare cost, time, control and responsibility before choosing who should build your storefront.",
+    href: "/guides/shopify-developer-vs-diy-theme",
+    tag: "Build comparison",
   },
   {
     title: "Selling After Kickstarter: Late Pledges, Preorders or Shopify?",

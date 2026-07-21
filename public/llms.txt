@@ -25,6 +25,8 @@ Guildframe helps board game, card game, TTRPG, miniatures and tabletop studios b
 - Board game Shopify theme: https://guildframe.com/shopify-theme-for-board-games
 - Kickstarter to Shopify: https://guildframe.com/kickstarter-to-shopify
 - Guides: https://guildframe.com/guides
+- Best Shopify themes for board games: https://guildframe.com/guides/best-shopify-themes-for-board-games
+- Shopify developer vs DIY theme: https://guildframe.com/guides/shopify-developer-vs-diy-theme
 - Resources: https://guildframe.com/resources
 - About: https://guildframe.com/about
 - Editorial policy: https://guildframe.com/editorial-policy

@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/guides/what-happens-after-kickstarter-is-funded", modified: contentDates.whatHappensAfterKickstarter },
     { path: "/guides/move-from-kickstarter-to-shopify", modified: contentDates.moveFromKickstarter },
     { path: "/guides/best-shopify-themes-for-board-games", modified: contentDates.bestBoardGameThemes },
+    { path: "/guides/shopify-developer-vs-diy-theme", modified: contentDates.shopifyDeveloperVsDiyTheme },
     { path: "/guides/kickstarter-late-pledges-vs-shopify", modified: contentDates.latePledgesVsShopify },
     { path: "/guides/backerkit-vs-shopify-vs-gamefound", modified: contentDates.backerkitVsShopifyVsGamefound },
     { path: "/guides/kickstarter-to-shopify-launch-timeline", modified: contentDates.kickstarterToShopifyTimeline },
