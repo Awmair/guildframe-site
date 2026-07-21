@@ -13,6 +13,8 @@ const styleOptions = [
     description:
       "For one flagship game where atmosphere, story and a focused product journey lead the store.",
     image: "/images/pdp-nightbanner-responsive-v1.jpg",
+    imageWidth: 1536,
+    imageHeight: 1024,
     cover: "/images/presets/nightbanner-wide.jpg",
     portrait: "/images/presets/nightbanner-portrait.jpg",
     color: "#776BFF",
@@ -26,6 +28,8 @@ const styleOptions = [
     description:
       "For small studios with multiple games, expansions and a cinematic editorial identity.",
     image: "/images/pdp-guildframe-responsive-v1.jpg",
+    imageWidth: 1586,
+    imageHeight: 992,
     cover: "/images/presets/guildframe-wide.jpg",
     portrait: "/images/presets/guildframe-portrait.jpg",
     color: "#1657FF",
@@ -39,6 +43,8 @@ const styleOptions = [
     description:
       "For one flagship game with bright art, approachable energy and a focused product journey.",
     image: "/images/pdp-brightmarch-responsive-v1.jpg",
+    imageWidth: 1536,
+    imageHeight: 1024,
     cover: "/images/presets/brightmarch-wide.jpg",
     portrait: "/images/presets/brightmarch-portrait.jpg",
     color: "#F06A4C",
@@ -52,6 +58,8 @@ const styleOptions = [
     description:
       "For small studios with multiple colorful games, expansions and products.",
     image: "/images/pdp-vaultmark-responsive-v1.jpg",
+    imageWidth: 1536,
+    imageHeight: 1024,
     cover: "/images/presets/vaultmark-wide.jpg",
     portrait: "/images/presets/vaultmark-portrait.jpg",
     color: "#C69A2E",
@@ -553,6 +561,8 @@ export default function Home() {
                 <img
                   src="/images/guildframe-launch-kit.jpg"
                   alt="Final product artwork, brand files and store assets ready for a Shopify build"
+                  width={1536}
+                  height={1024}
                   loading="lazy"
                   decoding="async"
                 />
@@ -573,6 +583,8 @@ export default function Home() {
                   <img
                     src="/images/pdp-guildframe-responsive-v1.jpg"
                     alt="A tailored Shopify storefront direction shown on desktop and mobile"
+                    width={1586}
+                    height={992}
                     loading="lazy"
                     decoding="async"
                   />
@@ -595,6 +607,8 @@ export default function Home() {
                   <img
                     src="/images/guildframe-ready-to-publish-v1.jpg"
                     alt="A completed Shopify storefront ready to publish"
+                    width={1536}
+                    height={1024}
                     loading="lazy"
                     decoding="async"
                   />
@@ -625,6 +639,8 @@ export default function Home() {
                   <img
                     src="/images/pdp-nightbanner-responsive-v1.jpg"
                     alt="Rune Single Shopify product page shown on desktop and mobile"
+                    width={1536}
+                    height={1024}
                     loading="lazy"
                     decoding="async"
                   />
@@ -768,6 +784,8 @@ export default function Home() {
                     className="preset-card-image preset-card-image--wide"
                     src={style.cover}
                     alt={`${style.name} tabletop storefront preview`}
+                    width={1440}
+                    height={900}
                     loading="lazy"
                     decoding="async"
                   />
@@ -775,6 +793,8 @@ export default function Home() {
                     className="preset-card-image preset-card-image--portrait"
                     src={style.portrait}
                     alt={`${style.name} tabletop storefront mobile preview`}
+                    width={768}
+                    height={960}
                     loading="lazy"
                     decoding="async"
                   />
@@ -816,6 +836,8 @@ export default function Home() {
                   key={selectedStyle.image}
                   src={selectedStyle.image}
                   alt={`${selectedStyle.name} product page shown on desktop and mobile`}
+                  width={selectedStyle.imageWidth}
+                  height={selectedStyle.imageHeight}
                   loading="lazy"
                   decoding="async"
                 />
@@ -931,6 +953,8 @@ export default function Home() {
             <img
               src="/images/guildframe-footer-launch-system-v1.jpg"
               alt="A premium tabletop game kit connected to an open storefront"
+              width={1536}
+              height={1024}
               loading="lazy"
               decoding="async"
             />
