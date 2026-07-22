@@ -21,7 +21,10 @@ for (const file of requiredFiles) {
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-const checkoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim();
+const checkoutEnabled = process.env.NEXT_PUBLIC_THEME_CHECKOUT_ENABLED === "true";
+const checkoutUrl = checkoutEnabled
+  ? process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim()
+  : null;
 const analyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
 
 if (!siteUrl) failures.push("NEXT_PUBLIC_SITE_URL is not set.");
@@ -32,10 +35,12 @@ if (siteUrl && /localhost|127\.0\.0\.1/i.test(siteUrl)) {
   failures.push("NEXT_PUBLIC_SITE_URL cannot use localhost for a production build.");
 }
 
-if (!checkoutUrl) {
+if (!checkoutEnabled) {
   warnings.push(
-    "NEXT_PUBLIC_CHECKOUT_URL is not set. The purchase page will show the launch-pending state.",
+    "Theme checkout is disabled. The purchase page will show the launch-pending state.",
   );
+} else if (!checkoutUrl) {
+  failures.push("Theme checkout is enabled but NEXT_PUBLIC_CHECKOUT_URL is not set.");
 }
 if (checkoutUrl && !/^https:\/\//i.test(checkoutUrl)) {
   failures.push("NEXT_PUBLIC_CHECKOUT_URL must use HTTPS.");

@@ -6,7 +6,10 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   purchasePath: "/buy",
   servicePath: "/done-for-you-shopify-store",
-  checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim() || null,
+  checkoutUrl:
+    process.env.NEXT_PUBLIC_THEME_CHECKOUT_ENABLED === "true"
+      ? process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim() || null
+      : null,
   serviceInquiryUrl:
     process.env.NEXT_PUBLIC_SERVICE_INQUIRY_URL?.trim() ||
     "/#start-project",

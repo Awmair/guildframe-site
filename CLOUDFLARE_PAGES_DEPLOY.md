@@ -13,6 +13,7 @@ testing. Never commit `.env.local`.
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Yes | `https://guildframe.com` |
 | `NEXT_PUBLIC_CHECKOUT_URL` | Later | Final Gumroad payment or product URL |
+| `NEXT_PUBLIC_THEME_CHECKOUT_ENABLED` | Later | Set to `true` only when the final purchase link is ready |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Later | GA4 web stream ID beginning with `G-` |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional | Google HTML verification token; leave empty when using DNS verification |
 
