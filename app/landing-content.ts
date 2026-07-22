@@ -21,7 +21,7 @@ export const boardGameContent: LandingPageContent = {
   title: "A board game Shopify theme built for",
   highlight: "complete worlds.",
   answer:
-    "Guildframe designs and develops complete Shopify storefronts for board game creators and publishers for $2,199, including up to 50 product SKUs. Prefer to build it yourself? The fully customizable Guildframe theme is $349.",
+    "Guildframe designs and develops complete Shopify storefronts for board game creators and publishers for $2,500, including up to 50 product SKUs. Prefer to build it yourself? The fully customizable Guildframe theme is $349.",
   image: "/images/pdp-guildframe-responsive-v1.jpg",
   imageAlt:
     "Guildframe board game product page displayed on desktop and mobile",
@@ -29,7 +29,7 @@ export const boardGameContent: LandingPageContent = {
   benefits: [
     {
       title: "Sell the whole product line",
-      copy: "Present core games, deluxe editions, expansions, bundles, add-ons and preorders without forcing them into a generic catalog.",
+      copy: "Present core games, deluxe editions, expansions, bundles, add ons and preorders without forcing them into a generic catalog.",
     },
     {
       title: "Keep the campaign story",
@@ -42,10 +42,10 @@ export const boardGameContent: LandingPageContent = {
   ],
   proofTitle: "A storefront designed around how tabletop products are actually sold.",
   proofCopy:
-    "Board games need more than a product image and an add-to-cart button. Guildframe gives editions, components, campaign context, media, FAQs and related products a clear place in the buying journey.",
+    "Board games need more than a product image and an add to cart button. Guildframe gives editions, components, campaign context, media, FAQs and related products a clear place in the buying journey.",
   capabilities: [
     {
-      title: "Edition-friendly product pages",
+      title: "Edition friendly product pages",
       copy: "Explain core, deluxe and collector versions clearly, with strong media and variant choices.",
     },
     {
@@ -53,7 +53,7 @@ export const boardGameContent: LandingPageContent = {
       copy: "Reuse the story, proof and artwork that helped your campaign fund.",
     },
     {
-      title: "Expansion-ready collections",
+      title: "Expansion ready collections",
       copy: "Organize games, expansions, accessories and bundles as your catalog grows.",
     },
     {
@@ -66,7 +66,7 @@ export const boardGameContent: LandingPageContent = {
     },
     {
       title: "Complete store build",
-      copy: "For $2,199, send your final assets and we will design and develop the entire storefront, including up to 50 product SKUs, for you to review and publish.",
+      copy: "For $2,500, send your final assets and we will design and develop the entire storefront, including up to 50 product SKUs, for you to review and publish.",
     },
   ],
   steps: commonSteps,
@@ -74,7 +74,7 @@ export const boardGameContent: LandingPageContent = {
     {
       question: "What is the best Shopify theme for a board game store?",
       answer:
-        "The best theme is one that can explain the game, distinguish editions, show components clearly, support campaign storytelling and remain easy to shop on mobile. Guildframe is purpose-built around those tabletop requirements.",
+        "The best theme is one that can explain the game, distinguish editions, show components clearly, support campaign storytelling and remain easy to shop on mobile. Guildframe is purpose built around those tabletop requirements.",
     },
     {
       question: "Can Guildframe sell expansions, bundles and preorders?",
@@ -89,13 +89,13 @@ export const boardGameContent: LandingPageContent = {
     {
       question: "Does Guildframe include Shopify?",
       answer:
-        "No. Guildframe is a theme and store-building service for an active Shopify store. Your Shopify plan, payment processing and any third-party app fees are separate.",
+        "No. Guildframe is a theme and store building service for an active Shopify store. Your Shopify plan, payment processing and any third party app fees are separate.",
     },
   ],
   related: [
     {
       title: "How to move from Kickstarter to Shopify",
-      copy: "A practical post-campaign migration plan for products, pages, customers and launch timing.",
+      copy: "A practical post campaign migration plan for products, pages, customers and launch timing.",
       href: "/guides/move-from-kickstarter-to-shopify",
     },
     {
@@ -129,7 +129,7 @@ export const kickstarterContent: LandingPageContent = {
     },
     {
       title: "Own the ongoing storefront",
-      copy: "Build a permanent home for post-campaign sales, new customers, expansions and future releases.",
+      copy: "Build a permanent home for post campaign sales, new customers, expansions and future releases.",
     },
     {
       title: "Launch with less setup work",
@@ -145,7 +145,7 @@ export const kickstarterContent: LandingPageContent = {
       copy: "Reuse finalized story sections, artwork, product details and FAQs in a store-friendly structure.",
     },
     {
-      title: "Post-campaign product pages",
+      title: "Post campaign product pages",
       copy: "Turn rewards and editions into products customers can understand beyond the pledge window.",
     },
     {
@@ -161,8 +161,8 @@ export const kickstarterContent: LandingPageContent = {
       copy: "Manage products, inventory, payments and checkout with Shopify's commerce system.",
     },
     {
-      title: "Done-for-you store build",
-      copy: "For $2,199, we design and develop the complete storefront from your supplied final assets, including up to 50 product SKUs.",
+      title: "Done for you store build",
+      copy: "For $2,500, we design and develop the complete storefront from your supplied final assets, including up to 50 product SKUs.",
     },
   ],
   steps: commonSteps,
@@ -175,7 +175,7 @@ export const kickstarterContent: LandingPageContent = {
     {
       question: "Does Shopify replace Kickstarter or a pledge manager?",
       answer:
-        "No. Kickstarter funds and communicates around the campaign, while pledge managers can handle post-campaign surveys, upgrades and fulfillment data. Shopify is best treated as the permanent online store for ongoing commerce.",
+        "No. Kickstarter funds and communicates around the campaign, while pledge managers can handle post campaign surveys, upgrades and fulfillment data. Shopify is best treated as the permanent online store for ongoing commerce.",
     },
     {
       question: "Can I reuse my Kickstarter campaign page?",
@@ -213,7 +213,7 @@ export const ttrpgContent: LandingPageContent = {
   title: "A TTRPG Shopify theme for",
   highlight: "stories that keep expanding.",
   answer:
-    "Guildframe is a Shopify theme for TTRPG publishers and independent creators. Present core books, supplements, adventures, dice and accessories inside a cinematic, mobile-friendly storefront that can grow with your world.",
+    "Guildframe is a Shopify theme for TTRPG publishers and independent creators. Present core books, supplements, adventures, dice and accessories inside a cinematic, mobile friendly storefront that can grow with your world.",
   image: "/images/pdp-nightbanner-responsive-v1.jpg",
   imageAlt: "Rune Single TTRPG product page on desktop and mobile",
   audience: "TTRPG books, adventures, supplements, dice and accessories",
@@ -236,7 +236,7 @@ export const ttrpgContent: LandingPageContent = {
     "TTRPG customers often enter through the world, then need a simple way to understand formats, compatibility and reading order. Guildframe balances atmosphere with practical product discovery.",
   capabilities: [
     {
-      title: "World-first art direction",
+      title: "World first art direction",
       copy: "Choose Rune Single for one flagship world or Rune Studio for a growing cinematic catalog.",
     },
     {
@@ -253,11 +253,11 @@ export const ttrpgContent: LandingPageContent = {
     },
     {
       title: "Mobile responsive layouts",
-      copy: "Keep long-form storytelling and product choices readable on smaller screens.",
+      copy: "Keep long form storytelling and product choices readable on smaller screens.",
     },
     {
-      title: "Done-for-you option",
-      copy: "Choose the $2,199 service and we will turn your final campaign assets into a complete Shopify storefront with up to 50 product SKUs, ready to publish.",
+      title: "Done for you option",
+      copy: "Choose the $2,500 service and we will turn your final campaign assets into a complete Shopify storefront with up to 50 product SKUs, ready to publish.",
     },
   ],
   steps: commonSteps,
@@ -280,7 +280,7 @@ export const ttrpgContent: LandingPageContent = {
     {
       question: "Can you build the entire TTRPG store for me?",
       answer:
-        "Yes. The complete design and development service is $2,199 for up to 50 product SKUs. We confirm the brief, supplied assets, review process and delivery plan before development begins.",
+        "Yes. The complete design and development service is $2,500 for up to 50 product SKUs. We confirm the brief, supplied assets, review process and delivery plan before development begins.",
     },
   ],
   related: [
@@ -290,7 +290,7 @@ export const ttrpgContent: LandingPageContent = {
       href: "/guides/move-from-kickstarter-to-shopify",
     },
     {
-      title: "Compare post-campaign platforms",
+      title: "Compare post campaign platforms",
       copy: "See where BackerKit, Shopify and Gamefound fit after crowdfunding.",
       href: "/guides/backerkit-vs-shopify-vs-gamefound",
     },
@@ -319,7 +319,7 @@ export const miniaturesContent: LandingPageContent = {
     },
     {
       title: "Organize by game, faction or range",
-      copy: "Help customers move through connected products, collections, bundles and add-ons.",
+      copy: "Help customers move through connected products, collections, bundles and add ons.",
     },
     {
       title: "Balance premium and practical",
@@ -331,19 +331,19 @@ export const miniaturesContent: LandingPageContent = {
     "Miniature stores need disciplined product information as much as dramatic artwork. Guildframe gives photography, specifications, variants and related ranges a strong visual hierarchy.",
   capabilities: [
     {
-      title: "High-impact product media",
+      title: "High impact product media",
       copy: "Show painted examples, sprues, packaging and detail views in a clean gallery.",
     },
     {
-      title: "Variant-friendly information",
+      title: "Variant friendly information",
       copy: "Clarify scale, material, pose, finish or edition choices before purchase.",
     },
     {
-      title: "Range-based collections",
-      copy: "Group factions, terrain sets, accessories and compatible add-ons for easier discovery.",
+      title: "Range based collections",
+      copy: "Group factions, terrain sets, accessories and compatible add ons for easier discovery.",
     },
     {
-      title: "Purpose-built visual presets",
+      title: "Purpose built visual presets",
       copy: "Choose a Single or Studio structure, then customize it to match your identity.",
     },
     {
@@ -370,23 +370,23 @@ export const miniaturesContent: LandingPageContent = {
     {
       question: "Can I use video and detailed product images?",
       answer:
-        "Guildframe is designed for rich product media. Keep assets optimized for the web so close-up detail stays sharp without making mobile pages unnecessarily heavy.",
+        "Guildframe is designed for rich product media. Keep assets optimized for the web so close up detail stays sharp without making mobile pages unnecessarily heavy.",
     },
     {
       question: "Can you build the store for my studio?",
       answer:
-        "Yes. Choose the $2,199 design and development service and provide your final product information, logo, copy and artwork. We build the store from zero to a publish-ready storefront with up to 50 product SKUs.",
+        "Yes. Choose the $2,500 design and development service and provide your final product information, logo, copy and artwork. We build the store from zero to a publish ready storefront with up to 50 product SKUs.",
     },
   ],
   related: [
     {
       title: "Move a funded miniature campaign to Shopify",
-      copy: "Turn campaign rewards and add-ons into a clear permanent product catalog.",
+      copy: "Turn campaign rewards and add ons into a clear permanent product catalog.",
       href: "/guides/move-from-kickstarter-to-shopify",
     },
     {
       title: "Kickstarter late pledges vs Shopify",
-      copy: "Choose the right channel for post-campaign access and long-term sales.",
+      copy: "Choose the right channel for post campaign access and long term sales.",
       href: "/guides/kickstarter-late-pledges-vs-shopify",
     },
     {

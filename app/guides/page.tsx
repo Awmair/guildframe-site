@@ -6,7 +6,7 @@ import { absoluteUrl, pageMetadata } from "../site-config";
 export const metadata = pageMetadata({
   title: "Tabletop Ecommerce and Kickstarter Guides",
   description:
-    "Practical guides for moving from crowdfunding to Shopify, choosing a board game theme and planning post-campaign commerce.",
+    "Practical guides for moving from crowdfunding to Shopify, choosing a board game theme and planning post campaign commerce.",
   path: "/guides",
   keywords: ["tabletop ecommerce guides", "Kickstarter to Shopify guide", "board game ecommerce"],
 });
@@ -16,11 +16,11 @@ const guides = [
     title: "What Happens After Your Kickstarter Is Funded?",
     copy: "A clear roadmap for payment collection, backer data, fulfillment, late demand and the permanent store.",
     href: "/guides/what-happens-after-kickstarter-is-funded",
-    tag: "Post-funding roadmap",
+    tag: "Post funding roadmap",
   },
   {
     title: "Kickstarter to Shopify Migration Guide",
-    copy: "A step-by-step plan for products, content, operations and launch timing after crowdfunding.",
+    copy: "A step by step plan for products, content, operations and launch timing after crowdfunding.",
     href: "/guides/move-from-kickstarter-to-shopify",
     tag: "Migration guide",
   },
@@ -38,19 +38,19 @@ const guides = [
   },
   {
     title: "Selling After Kickstarter: Late Pledges, Preorders or Shopify?",
-    copy: "Choose the right post-campaign sales path while keeping delivery promises and backer trust clear.",
+    copy: "Choose the right post campaign sales path while keeping delivery promises and backer trust clear.",
     href: "/guides/kickstarter-late-pledges-vs-shopify",
     tag: "Platform strategy",
   },
   {
     title: "BackerKit vs Shopify vs Gamefound: What Each Platform Does After Crowdfunding",
-    copy: "Separate crowdfunding, pledge management and long-term ecommerce before choosing your stack.",
+    copy: "Separate crowdfunding, pledge management and long term ecommerce before choosing your stack.",
     href: "/guides/backerkit-vs-shopify-vs-gamefound",
     tag: "Platform comparison",
   },
   {
     title: "Kickstarter to Shopify Launch Timeline",
-    copy: "A phase-by-phase plan from campaign close through product setup, testing and public store launch.",
+    copy: "A phase by phase plan from campaign close through product setup, testing and public store launch.",
     href: "/guides/kickstarter-to-shopify-launch-timeline",
     tag: "Launch timeline",
   },
@@ -61,10 +61,28 @@ const guides = [
     tag: "Preorder guide",
   },
   {
-    title: "How to Sell Board Game Expansions, Add-ons and Bundles on Shopify",
+    title: "How to Sell Board Game Expansions, Add ons and Bundles on Shopify",
     copy: "Structure core games, editions and compatible extras without recreating confusing pledge tiers.",
     href: "/guides/sell-board-game-expansions-add-ons-shopify",
     tag: "Catalog guide",
+  },
+  {
+    title: "Selling Miniatures Internationally: VAT, IOSS and Shopify",
+    copy: "Plan markets, shipping, customs data, EU VAT, IOSS and customer delivery promises before launch.",
+    href: "/guides/selling-miniatures-internationally-vat-ioss",
+    tag: "International sales",
+  },
+  {
+    title: "How Much Does a Board Game Website Cost?",
+    copy: "Budget the platform, theme or build, apps, product setup and ongoing store operation.",
+    href: "/guides/how-much-does-a-board-game-website-cost",
+    tag: "Cost guide",
+  },
+  {
+    title: "Shopify vs Etsy for Selling Miniatures and Terrain",
+    copy: "Compare discovery, fees, brand control, catalog structure and the value of using both channels.",
+    href: "/guides/shopify-vs-etsy-for-selling-miniatures",
+    tag: "Platform comparison",
   },
 ];
 
@@ -115,7 +133,7 @@ export default function GuidesPage() {
           <h1>Build what comes <em>after funding.</em></h1>
           <p>
             Clear, practical guidance for tabletop creators choosing a Shopify
-            theme, planning post-campaign commerce and building a permanent store.
+            theme, planning post campaign commerce and building a permanent store.
           </p>
         </section>
         <section className="guides-grid">

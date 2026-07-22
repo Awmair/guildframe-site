@@ -7,7 +7,7 @@ import { absoluteUrl, pageMetadata } from "../site-config";
 export const metadata = pageMetadata({
   title: "Shopify Design and Development for Tabletop Brands",
   description:
-    "Get a complete Shopify store designed and developed for your tabletop brand for $2,199, including up to 50 product SKUs and a publish-ready handoff.",
+    "Get a complete Shopify store designed and developed for your tabletop brand for $2,500, including up to 50 product SKUs and a publish ready handoff.",
   path: "/done-for-you-shopify-store",
   keywords: [
     "Shopify developer for tabletop games",
@@ -25,7 +25,7 @@ const deliverables = [
   "Products and supplied campaign content added",
   "Navigation, collections and buying paths structured",
   "Desktop, tablet and mobile design polish",
-  "Storefront testing and publish-ready handoff",
+  "Storefront testing and publish ready handoff",
 ];
 
 export default function DoneForYouShopifyStorePage() {
@@ -39,7 +39,7 @@ export default function DoneForYouShopifyStorePage() {
             {
               "@type": "WebPage",
               "@id": absoluteUrl("/done-for-you-shopify-store#webpage"),
-              name: "Done-for-You Shopify Store for Tabletop Brands",
+              name: "Done for You Shopify Store for Tabletop Brands",
               url: absoluteUrl("/done-for-you-shopify-store"),
               description:
                 "Shopify design and development for tabletop creators and studios, including up to 50 product SKUs.",
@@ -54,7 +54,7 @@ export default function DoneForYouShopifyStorePage() {
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "Done-for-you Shopify store",
+                  name: "Done for you Shopify store",
                   item: absoluteUrl("/done-for-you-shopify-store"),
                 },
               ],
@@ -71,7 +71,7 @@ export default function DoneForYouShopifyStorePage() {
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
-              { label: "Done-for-you Shopify store" },
+              { label: "Done for you Shopify store" },
             ]}
           />
           <div className="service-hero-grid">
@@ -99,12 +99,12 @@ export default function DoneForYouShopifyStorePage() {
                 delivery plan before work begins.
               </small>
             </div>
-            <aside className="service-price-card" aria-label="Done-for-you service summary">
+            <aside className="service-price-card" aria-label="Done for you service summary">
               <span>Flat project fee</span>
-              <strong>$2,199</strong>
+              <strong>$2,500</strong>
               <p>For creators and studios with up to 50 product SKUs.</p>
               <ul>
-                <li>Zero to publish-ready</li>
+                <li>Zero to publish ready</li>
                 <li>Custom tabletop storefront</li>
                 <li>Responsive design, development and testing</li>
               </ul>
@@ -123,7 +123,7 @@ export default function DoneForYouShopifyStorePage() {
           </div>
           <div>
             <strong className="service-diy-price">$349</strong>
-            <Link href="#start-project">Get the theme <span aria-hidden="true">↗</span></Link>
+            <Link href="/buy">Get the theme <span aria-hidden="true">↗</span></Link>
           </div>
         </section>
 
@@ -131,7 +131,7 @@ export default function DoneForYouShopifyStorePage() {
           <div className="service-section-heading">
             <h2>The entire storefront, handled.</h2>
             <p>
-              We build the customer-facing Shopify experience while you retain
+              We build the customer facing Shopify experience while you retain
               ownership of the store, products and ongoing operations.
             </p>
           </div>
@@ -142,6 +142,24 @@ export default function DoneForYouShopifyStorePage() {
                 <p>{item}</p>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="service-care-plan">
+          <div>
+            <span>After launch, we stay on deck</span>
+            <h2>Keep the store ready for every release.</h2>
+            <p>
+              Add the Guildframe Care Plan after your store build for theme and
+              section updates, small adjustments and one new campaign or product
+              launch page each month.
+            </p>
+          </div>
+          <div>
+            <strong>$99</strong>
+            <span>per month</span>
+            <a href="#start-project">Ask about the Care Plan <span aria-hidden="true">↗</span></a>
+            <small>Cancel anytime. Third party costs are separate.</small>
           </div>
         </section>
 
@@ -196,10 +214,10 @@ export default function DoneForYouShopifyStorePage() {
               className="service-primary-button"
               href="#start-project"
               data-analytics-event="generate_lead"
-              data-analytics-label="Start done-for-you Shopify project"
+                data-analytics-label="Get my free preview"
               data-analytics-location="service final CTA"
             >
-              Contact the developer <span aria-hidden="true">↗</span>
+              Get my free preview <span aria-hidden="true">↗</span>
             </a>
           </div>
         </section>

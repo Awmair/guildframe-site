@@ -37,8 +37,9 @@ export function ProjectInquiryForm({ source }: { source: string }) {
           <span>Hear back within 24 hours.</span>
         </h2>
         <p>
-          Tell us what you are building. If it is a fit, we will create your
-          free storefront direction within 72 hours. You decide whether to continue.
+          Tell us what you are building. If your final artwork and products are
+          ready to sell, we will create your free Shopify store direction within
+          72 hours. You decide whether to continue.
         </p>
         <div className="project-inquiry-promises" aria-label="Inquiry promises">
           <span>No payment</span>

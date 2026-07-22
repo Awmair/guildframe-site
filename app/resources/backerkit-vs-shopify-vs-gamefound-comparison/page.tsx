@@ -16,15 +16,15 @@ export const metadata = pageMetadata({
 const faqs = [
   {
     question: "Is Shopify a pledge manager?",
-    answer: "No. Shopify is an ecommerce platform for products, checkout, inventory and customer relationships. A pledge manager is designed around backer surveys, upgrades, add-ons and fulfillment data after a crowdfunding campaign.",
+    answer: "No. Shopify is an ecommerce platform for products, checkout, inventory and customer relationships. A pledge manager is designed around backer surveys, upgrades, add ons and fulfillment data after a crowdfunding campaign.",
   },
   {
     question: "Can a creator use BackerKit and Shopify together?",
-    answer: "Yes. BackerKit can manage campaign or pledge-specific workflows while Shopify runs the permanent public store. The important operational choice is which system owns backer fulfillment data and which owns new retail orders.",
+    answer: "Yes. BackerKit can manage campaign or pledge specific workflows while Shopify runs the permanent public store. The important operational choice is which system owns backer fulfillment data and which owns new retail orders.",
   },
   {
     question: "Can Gamefound and Shopify be used together?",
-    answer: "Yes. Gamefound can support crowdfunding and pledge-management workflows while Shopify supports ongoing direct ecommerce. Product names, availability and customer messaging should remain consistent across both systems.",
+    answer: "Yes. Gamefound can support crowdfunding and pledge management workflows while Shopify supports ongoing direct ecommerce. Product names, availability and customer messaging should remain consistent across both systems.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function PlatformComparisonMatrixPage() {
       category="Crowdfunding operations"
       title="Tabletop Crowdfunding Platform Role Matrix"
       description="Use this operational matrix to assign funding, pledge management, fulfillment data and permanent ecommerce to the right system."
-      answer="BackerKit and Gamefound are built around crowdfunding and backer workflows, while Shopify is built for ongoing ecommerce. Many tabletop creators use a campaign or pledge platform for backer-specific work and Shopify as the permanent product, checkout and customer layer."
+      answer="BackerKit and Gamefound are built around crowdfunding and backer workflows, while Shopify is built for ongoing ecommerce. Many tabletop creators use a campaign or pledge platform for backer specific work and Shopify as the permanent product, checkout and customer layer."
       published="2026-07-17"
       updated="2026-07-18"
       readTime="6 minute reference"
@@ -69,12 +69,12 @@ export default function PlatformComparisonMatrixPage() {
         headers={["Capability", "BackerKit", "Shopify", "Gamefound"]}
         rows={[
           ["Crowdfunding campaign", "Yes, through its crowdfunding offering", "No", "Yes"],
-          ["Pledge surveys and upgrades", "Core role", "Not a native pledge-manager role", "Core role within supported campaign flows"],
-          ["Backer add-ons", "Designed for campaign workflows", "Handled as retail products or apps", "Designed for campaign workflows"],
+          ["Pledge surveys and upgrades", "Core role", "Not a native pledge manager role", "Core role within supported campaign flows"],
+          ["Backer add ons", "Designed for campaign workflows", "Handled as retail products or apps", "Designed for campaign workflows"],
           ["Permanent product catalog", "Secondary to campaign workflows", "Core role", "Secondary to crowdfunding workflows"],
           ["Retail checkout", "Campaign and backer context", "Core role", "Campaign and pledge context"],
-          ["Inventory for ongoing sales", "Not its primary long-term job", "Core role", "Not its primary long-term job"],
-          ["Brand content and collections", "Limited compared with a full store", "Core role through themes and content", "Campaign-focused presentation"],
+          ["Inventory for ongoing sales", "Not its primary long term job", "Core role", "Not its primary long term job"],
+          ["Brand content and collections", "Limited compared with a full store", "Core role through themes and content", "Campaign focused presentation"],
           ["Repeat customer commerce", "Possible, but not the primary storefront model", "Core role", "Possible within platform context"],
         ]}
       />
@@ -84,16 +84,16 @@ export default function PlatformComparisonMatrixPage() {
         managing backers or running a permanent store.
       </ArticleCallout>
 
-      <h2 id="funding">Funding and pledge-management roles</h2>
+      <h2 id="funding">Funding and pledge management roles</h2>
       <p>
         BackerKit and Gamefound are relevant when the project still needs a
-        campaign, pledge upgrades, add-ons, surveys or fulfillment data tied to
+        campaign, pledge upgrades, add ons, surveys or fulfillment data tied to
         backers. Their workflows retain campaign context that a general ecommerce
         platform does not provide natively.
       </p>
       <ul>
-        <li><strong>BackerKit:</strong> campaign and pledge-management tools designed around creators and backers.</li>
-        <li><strong>Gamefound:</strong> a tabletop-focused crowdfunding platform with campaign and pledge workflows.</li>
+        <li><strong>BackerKit:</strong> campaign and pledge management tools designed around creators and backers.</li>
+        <li><strong>Gamefound:</strong> a tabletop focused crowdfunding platform with campaign and pledge workflows.</li>
         <li><strong>Shopify:</strong> a product and checkout platform for standard ecommerce, not the original campaign record.</li>
       </ul>
       <p>
@@ -113,7 +113,7 @@ export default function PlatformComparisonMatrixPage() {
         For a tabletop publisher, the permanent store usually needs to explain core
         games, editions, expansions, bundles and accessories without assuming the
         customer understands a pledge tier. That is the problem solved by a
-        purpose-built <Link href="/shopify-theme-for-board-games">board game Shopify theme</Link>.
+        purpose built <Link href="/shopify-theme-for-board-games">board game Shopify theme</Link>.
       </p>
 
       <h2 id="stacks">Common platform stacks</h2>
@@ -121,7 +121,7 @@ export default function PlatformComparisonMatrixPage() {
         headers={["Creator situation", "Practical stack", "Ownership rule"]}
         rows={[
           ["BackerKit campaign with ongoing retail", "BackerKit plus Shopify", "BackerKit owns campaign and backer workflows; Shopify owns new retail orders"],
-          ["Gamefound campaign with permanent brand store", "Gamefound plus Shopify", "Gamefound owns campaign pledges; Shopify owns the long-term catalog"],
+          ["Gamefound campaign with permanent brand store", "Gamefound plus Shopify", "Gamefound owns campaign pledges; Shopify owns the long term catalog"],
           ["Campaign fulfilled and no pledge manager needed", "Shopify", "Shopify becomes the clear commerce source of truth"],
           ["New campaign while an older catalog keeps selling", "Campaign platform plus Shopify", "Separate current backer promises from existing retail inventory"],
         ]}

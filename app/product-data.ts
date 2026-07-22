@@ -38,7 +38,7 @@ export function guildframeProductData(image = siteConfig.socialImage) {
       {
         "@type": "PropertyValue",
         name: "Setup model",
-        value: "Self-serve theme with Shopify editor controls",
+        value: "Self serve theme with Shopify editor controls",
       },
     ],
     offers: {
@@ -56,10 +56,10 @@ export function guildframeServiceData(image = siteConfig.socialImage) {
   return {
     "@type": "Service",
     "@id": absoluteUrl("/done-for-you-shopify-store#service"),
-    name: "Guildframe Shopify Design and Development",
-    serviceType: "Shopify design and development for tabletop brands",
+    name: "Guildframe Shopify Store Design and Development",
+    serviceType: "Shopify store design and development for tabletop brands",
     description:
-      "Complete Shopify storefront design and development for tabletop creators and studios with up to 50 product SKUs, from an empty store to a reviewed build ready to publish.",
+      "Complete Shopify store design and development for tabletop creators and studios with up to 50 product SKUs, from an empty store to a reviewed build ready to publish.",
     image: absoluteUrl(image),
     provider: { "@id": absoluteUrl("/#organization") },
     areaServed: "Worldwide",
@@ -67,7 +67,28 @@ export function guildframeServiceData(image = siteConfig.socialImage) {
       "@type": "Offer",
       url: absoluteUrl("/done-for-you-shopify-store"),
       priceCurrency: "USD",
-      price: "2199",
+      price: "2500",
+      availability: "https://schema.org/InStock",
+      seller: { "@id": absoluteUrl("/#organization") },
+    },
+  };
+}
+
+export function guildframeCarePlanData() {
+  return {
+    "@type": "Service",
+    "@id": absoluteUrl("/#care-plan"),
+    name: "Guildframe Care Plan",
+    serviceType: "Ongoing Shopify store support for tabletop studios",
+    description:
+      "Monthly Shopify theme and section updates, small store adjustments and one campaign or product launch page each month after a Guildframe store build.",
+    provider: { "@id": absoluteUrl("/#organization") },
+    areaServed: "Worldwide",
+    offers: {
+      "@type": "Offer",
+      url: absoluteUrl("/#pricing"),
+      priceCurrency: "USD",
+      price: "99",
       availability: "https://schema.org/InStock",
       seller: { "@id": absoluteUrl("/#organization") },
     },

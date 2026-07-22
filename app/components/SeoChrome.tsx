@@ -47,7 +47,7 @@ export function SeoFooter() {
           </Link>
           <Link
             className="seo-button seo-button-outline"
-            href="#start-project"
+            href={siteConfig.purchasePath}
             data-analytics-event="theme_interest"
             data-analytics-label="Get Guildframe theme"
             data-analytics-location="SEO footer"
@@ -62,8 +62,8 @@ export function SeoFooter() {
           <div className="seo-footer-brand">
             <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="1000" height="220" />
             <p>
-              Shopify design, development and a premium DIY theme built
-              specifically for tabletop game creators.
+              Shopify stores and a premium DIY theme built specifically for
+              tabletop game creators.
             </p>
           </div>
           <nav aria-label="Solutions">
@@ -72,7 +72,7 @@ export function SeoFooter() {
             <Link href="/shopify-theme-for-ttrpg">TTRPG stores</Link>
             <Link href="/shopify-theme-for-miniatures">Miniature stores</Link>
             <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
-            <Link href="/done-for-you-shopify-store">Done-for-you Shopify store</Link>
+            <Link href="/done-for-you-shopify-store">Done for you Shopify store</Link>
           </nav>
           <nav aria-label="Resources">
             <strong>Resources</strong>
@@ -82,6 +82,12 @@ export function SeoFooter() {
             </Link>
             <Link href="/guides/best-shopify-themes-for-board-games">
               Theme comparison
+            </Link>
+            <Link href="/guides/how-much-does-a-board-game-website-cost">
+              Store cost guide
+            </Link>
+            <Link href="/guides/selling-miniatures-internationally-vat-ioss">
+              International selling guide
             </Link>
             <Link href="/resources">Checklists and references</Link>
             <Link href="/resources/kickstarter-tabletop-games-benchmark">
@@ -93,7 +99,7 @@ export function SeoFooter() {
           </nav>
         </div>
         <div className="seo-footer-bottom">
-          <span>Guildframe. Built for tabletop commerce. Shopify Partner.</span>
+          <span>Guildframe. Your world, ready for customers. Shopify Partner.</span>
           <div>
             <a href={siteConfig.contactInquiryUrl}>Email the developer</a>
             <Link href="/">Back to homepage ↑</Link>

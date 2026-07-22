@@ -10,7 +10,7 @@ import { pageMetadata } from "../../site-config";
 export const metadata = pageMetadata({
   title: "2024 Kickstarter Tabletop Games Funding Benchmark",
   description:
-    "A source-backed Kickstarter tabletop games benchmark with 2024 funding, success-rate and top-campaign data plus transparent calculations.",
+    "A source backed Kickstarter tabletop games benchmark with 2024 funding, success rate and top campaign data plus transparent calculations.",
   path: "/resources/kickstarter-tabletop-games-benchmark",
   kind: "article",
   publishedTime: "2026-07-17",
@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "Can I use this dataset in an article or presentation?",
     answer:
-      "Yes. Cite Kickstarter as the original source and Guildframe for the derived calculations or downloadable table. The top-campaign funding values are lower bounds because Kickstarter published them as rounded figures with plus signs.",
+      "Yes. Cite Kickstarter as the original source and Guildframe for the derived calculations or downloadable table. The top campaign funding values are lower bounds because Kickstarter published them as rounded figures with plus signs.",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
       category="Tabletop crowdfunding data"
       title="2024 Kickstarter Tabletop Games Funding Benchmark"
       description="A transparent reference for the scale, success rate and concentration of tabletop game funding on Kickstarter in 2024."
-      answer="Kickstarter reported 6,646 tabletop game launches in 2024, 5,314 successfully funded projects, an 80% success rate and $220 million pledged to successful tabletop campaigns. The published figures imply roughly $41,400 pledged per successful project as a simple mean, while the ten highest-funded campaigns accounted for at least $41.1 million."
+      answer="Kickstarter reported 6,646 tabletop game launches in 2024, 5,314 successfully funded projects, an 80% success rate and $220 million pledged to successful tabletop campaigns. The published figures imply roughly $41,400 pledged per successful project as a simple mean, while the ten highest funded campaigns accounted for at least $41.1 million."
       published="2026-07-17"
       updated="2026-07-17"
       readTime="6 minute read"
@@ -110,8 +110,8 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
           ["Calculated success rate", "5,314 / 6,646", "79.96%", "Consistent with Kickstarter's rounded 80%"],
           ["Projects not successfully funded", "6,646 - 5,314", "1,332", "About one in five reported launches"],
           ["Simple mean pledged per success", "$220M / 5,314", "About $41,400", "Not a median and strongly affected by large campaigns"],
-          ["Top 10 funding lower bound", "Sum of published rounded figures", "At least $41.1M", "At least 18.7% of the successful-tabletop total"],
-          ["Top 10 published backers", "Sum of reported backer counts", "232,773", "Counts are campaign-level, not unique people"],
+          ["Top 10 funding lower bound", "Sum of published rounded figures", "At least $41.1M", "At least 18.7% of the successful tabletop total"],
+          ["Top 10 published backers", "Sum of reported backer counts", "232,773", "Counts are campaign level, not unique people"],
         ]}
       />
       <ArticleCallout>
@@ -120,16 +120,16 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
         or profitability of these campaigns in the cited release.
       </ArticleCallout>
 
-      <h2 id="top-campaigns">The ten highest-funded tabletop campaigns</h2>
+      <h2 id="top-campaigns">The ten highest funded tabletop campaigns</h2>
       <ArticleTable
-        caption="Kickstarter's ten highest-funded tabletop game campaigns of 2024"
+        caption="Kickstarter's ten highest funded tabletop game campaigns of 2024"
         headers={["Rank", "Campaign", "Published funding", "Backers"]}
         rows={[
           ["1", "Brandon Sanderson's Cosmere RPG", "$15.1M+", "55,106"],
           ["2", "Altered TCG", "$6.7M+", "14,997"],
           ["3", "Trench Crusade", "$3.3M+", "20,170"],
           ["4", "Twisted Cryptids", "$3.1M+", "33,210"],
-          ["5", "Discworld RPG: Adventures in Ankh-Morpork", "$3.0M+", "17,223"],
+          ["5", "Discworld RPG: Adventures in Ankh Morpork", "$3.0M+", "17,223"],
           ["6", "Root: The Homeland Expansion", "$2.4M+", "27,549"],
           ["7", "DC20", "$2.2M+", "20,684"],
           ["8", "Terraria: The Board Game", "$2.0M+", "15,237"],
@@ -141,13 +141,13 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
       <h2 id="methodology">Methodology and limitations</h2>
       <ol>
         <li><strong>Source selection:</strong> the benchmark uses Kickstarter&apos;s own 2024 Games retrospective as the primary dataset.</li>
-        <li><strong>Calculations:</strong> Guildframe divided or summed the published totals without estimating missing campaign-level values.</li>
-        <li><strong>Rounded figures:</strong> top-campaign funding was published with plus signs, so the combined $41.1 million is a lower bound.</li>
+        <li><strong>Calculations:</strong> Guildframe divided or summed the published totals without estimating missing campaign level values.</li>
+        <li><strong>Rounded figures:</strong> top campaign funding was published with plus signs, so the combined $41.1 million is a lower bound.</li>
         <li><strong>Backer counts:</strong> a person may back more than one campaign. The combined count is not a unique audience total.</li>
-        <li><strong>Commercial outcomes:</strong> pledges are not store revenue, profit, fulfillment success or long-term customer value.</li>
+        <li><strong>Commercial outcomes:</strong> pledges are not store revenue, profit, fulfillment success or long term customer value.</li>
       </ol>
 
-      <h2 id="commerce">What the figures mean for post-campaign commerce</h2>
+      <h2 id="commerce">What the figures mean for post campaign commerce</h2>
       <p>
         A successful campaign creates an audience and a delivery obligation. It
         does not automatically create a permanent product catalog, customer journey
@@ -160,12 +160,12 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
         <li>Convert reward tiers into understandable products, variants and bundles.</li>
         <li>Keep delivery timing visible beside every purchase action.</li>
         <li>Retain campaign storytelling while shortening the path to a buying decision.</li>
-        <li>Measure the store as a long-term sales channel, not as another funding total.</li>
+        <li>Measure the store as a long term sales channel, not as another funding total.</li>
       </ul>
 
       <h2 id="download">Download the benchmark data</h2>
       <p>
-        The campaign-level table is available as a clean CSV for analysis,
+        The campaign level table is available as a clean CSV for analysis,
         attribution and reuse. Preserve the original Kickstarter source when
         publishing derived work.
       </p>

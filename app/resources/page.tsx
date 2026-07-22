@@ -26,7 +26,7 @@ const resources = [
   },
   {
     title: "Tabletop Crowdfunding Platform Role Matrix",
-    copy: "Assign funding, pledge management, fulfillment data and long-term commerce to the right system.",
+    copy: "Assign funding, pledge management, fulfillment data and long term commerce to the right system.",
     href: "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
     tag: "Platform matrix",
   },
@@ -38,7 +38,7 @@ const resources = [
   },
   {
     title: "2024 Kickstarter Tabletop Games Funding Benchmark",
-    copy: "Source-backed launch, success-rate and funding figures with transparent calculations and downloadable data.",
+    copy: "Source backed launch, success rate and funding figures with transparent calculations and downloadable data.",
     href: "/resources/kickstarter-tabletop-games-benchmark",
     tag: "Original analysis",
   },
@@ -86,8 +86,8 @@ export default function ResourcesPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Resources" }]} />
           <h1>Reference tools for <em>tabletop commerce.</em></h1>
           <p>
-            Source-backed checklists and comparison tables built for quick use,
-            clean citation and confident post-campaign decisions.
+            Source backed checklists and comparison tables built for quick use,
+            clean citation and confident post campaign decisions.
           </p>
         </section>
         <section className="guides-grid resources-grid">

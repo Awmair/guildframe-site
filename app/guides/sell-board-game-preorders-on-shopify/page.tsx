@@ -47,7 +47,7 @@ export default function SellBoardGamePreordersOnShopifyPage() {
       category="Board game preorders"
       title="How to Sell Board Game Preorders on Shopify After Crowdfunding"
       description="A preorder should make future delivery easy to understand, not turn a permanent store into an ambiguous pledge page."
-      answer="To sell board game preorders on Shopify, choose a compatible preorder app, separate preorder inventory from backer obligations, label the product and purchase action clearly, publish realistic fulfillment timing, test payment and cancellation behavior, and send updates when dates change. Use Shopify for permanent retail orders and keep campaign-specific reward management in the appropriate crowdfunding system."
+      answer="To sell board game preorders on Shopify, choose a compatible preorder app, separate preorder inventory from backer obligations, label the product and purchase action clearly, publish realistic fulfillment timing, test payment and cancellation behavior, and send updates when dates change. Use Shopify for permanent retail orders and keep campaign specific reward management in the appropriate crowdfunding system."
       published="2026-07-17"
       updated="2026-07-17"
       readTime="8 minute read"
@@ -97,7 +97,7 @@ export default function SellBoardGamePreordersOnShopifyPage() {
         headers={["Decision", "Kickstarter Late Pledge", "Shopify preorder"]}
         rows={[
           ["Buyer context", "Joining a funded campaign", "Ordering from the permanent store"],
-          ["Offer structure", "Reward tiers and campaign add-ons", "Products, variants and retail offers"],
+          ["Offer structure", "Reward tiers and campaign add ons", "Products, variants and retail offers"],
           ["Customer record", "Backer and campaign systems", "Shopify customer and order systems"],
           ["Best fit", "Campaign continuation", "Ongoing preorder and retail catalog"],
           ["Main risk", "Prolonging campaign complexity", "Confusing retail orders with backer obligations"],
@@ -151,21 +151,21 @@ export default function SellBoardGamePreordersOnShopifyPage() {
           ["Product details", "Contents, edition, language and known dependencies"],
           ["Cart", "Preorder status and whether mixed orders ship together"],
           ["Confirmation email", "Order summary, expected timing and update channel"],
-          ["Policy page", "Cancellation, refund, delay and address-change rules"],
+          ["Policy page", "Cancellation, refund, delay and address change rules"],
         ]}
       />
 
       <h2 id="test">Test the complete preorder flow</h2>
       <p>
         Place test orders for every important edition, region and payment behavior.
-        Confirm the customer-facing wording, order tags, inventory changes,
+        Confirm the customer facing wording, order tags, inventory changes,
         notifications, taxes and fulfillment status. Test a cancellation and refund
         before the public launch.
       </p>
       <ul>
         <li>Phone navigation and selectors are usable with touch and keyboard.</li>
         <li>The purchase action does not imply immediate shipping.</li>
-        <li>Mixed in-stock and preorder carts behave as stated.</li>
+        <li>Mixed in stock and preorder carts behave as stated.</li>
         <li>Support can identify preorder orders quickly.</li>
         <li>Analytics distinguishes preorder product and checkout activity.</li>
       </ul>

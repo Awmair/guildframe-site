@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: "How should a tabletop store handle preorders?",
-    answer: "State preorder status and the expected delivery window beside the price and purchase action. Repeat any material timing or cancellation terms before checkout and avoid language that could be mistaken for in-stock shipping.",
+    answer: "State preorder status and the expected delivery window beside the price and purchase action. Repeat any material timing or cancellation terms before checkout and avoid language that could be mistaken for in stock shipping.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
       category="Board game ecommerce"
       title="Board Game Shopify Store Checklist"
       description="Use this launch reference to check the catalog, content, operations, mobile experience and search essentials of a tabletop Shopify store."
-      answer="A launch-ready board game Shopify store needs customer-friendly products, clear editions and bundles, strong product media, complete policies, tested checkout and shipping, responsive mobile layouts, accessible content, accurate structured data and a final test order."
+      answer="A launch ready board game Shopify store needs customer friendly products, clear editions and bundles, strong product media, complete policies, tested checkout and shipping, responsive mobile layouts, accessible content, accurate structured data and a final test order."
       published="2026-07-17"
       updated="2026-07-17"
       readTime="7 minute reference"
@@ -72,7 +72,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
         <li>Core games, deluxe editions, expansions, bundles and accessories are clearly separated</li>
         <li>Variants are used for true product options such as language, edition, scale or finish</li>
         <li>Each bundle states exactly what is included</li>
-        <li>Preorders, backorders and in-stock products use unmistakable delivery language</li>
+        <li>Preorders, backorders and in stock products use unmistakable delivery language</li>
         <li>Collections use customer terms rather than internal campaign labels</li>
       </ul>
       <ArticleTable
@@ -96,7 +96,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
         <li>Product pages show the box, components, table presence and useful detail views</li>
         <li>Player count, play time, age guidance, language and contents are easy to scan</li>
         <li>Edition differences are compared beside the purchase decision</li>
-        <li>Rules, how-to-play media, reviews and awards are visible where relevant</li>
+        <li>Rules, how to play media, reviews and awards are visible where relevant</li>
         <li>About or campaign story preserves creator identity without repeating the full campaign</li>
         <li>FAQ, contact, shipping and returns answer operational questions in plain language</li>
       </ul>
@@ -129,10 +129,10 @@ export default function BoardGameShopifyStoreChecklistPage() {
         <li>Variant selectors and purchase buttons have clear labels and visible focus states</li>
         <li>Images use descriptive alt text, explicit dimensions and efficient formats</li>
         <li>Heading order is logical and every page has one descriptive H1</li>
-        <li>Motion respects reduced-motion preferences</li>
+        <li>Motion respects reduced motion preferences</li>
       </ul>
 
-      <h2 id="search">5. Search and answer-engine readiness</h2>
+      <h2 id="search">5. Search and answer engine readiness</h2>
       <ul className="article-checklist">
         <li>Each page has a unique title, description and canonical URL</li>
         <li>Product facts shown to customers match Product and Offer structured data</li>
@@ -140,11 +140,11 @@ export default function BoardGameShopifyStoreChecklistPage() {
         <li>Robots rules allow intended search and answer crawlers</li>
         <li>The XML sitemap contains every public canonical page and accurate modification dates</li>
         <li>Important pages are linked from navigation, guides or the footer</li>
-        <li>Source-backed guides show review dates and primary citations</li>
+        <li>Source backed guides show review dates and primary citations</li>
       </ul>
       <p>
         Use the <Link href="/resources/board-game-product-page-checklist">board game product page checklist</Link>
-        for the product-specific layer and the <Link href="/editorial-policy">Guildframe editorial policy</Link>
+        for the product specific layer and the <Link href="/editorial-policy">Guildframe editorial policy</Link>
         for the source and update standard.
       </p>
 
@@ -160,7 +160,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
       </ol>
       <p>
         A store is ready when a new customer can understand the product, trust the
-        delivery promise and complete checkout without campaign-era context.
+        delivery promise and complete checkout without campaign era context.
       </p>
     </SeoArticlePage>
   );

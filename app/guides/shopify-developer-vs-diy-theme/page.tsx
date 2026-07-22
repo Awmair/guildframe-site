@@ -33,12 +33,12 @@ const faqs = [
   {
     question: "Is a custom Shopify build better than a premium theme?",
     answer:
-      "Not automatically. A focused premium theme can be the better value when its structure already matches your business. A developer-led build becomes more valuable when your catalog, brand presentation, integrations or launch deadline require more planning and execution.",
+      "Not automatically. A focused premium theme can be the better value when its structure already matches your business. A developer led build becomes more valuable when your catalog, brand presentation, integrations or launch deadline require more planning and execution.",
   },
   {
     question: "Can I start with a theme and hire a developer later?",
     answer:
-      "Yes. Shopify keeps products, collections, menus, pages and blog posts separate from many theme-specific settings. A developer can later refine the current theme or prepare a new draft theme, but custom content and code may still need to be rebuilt or migrated.",
+      "Yes. Shopify keeps products, collections, menus, pages and blog posts separate from many theme specific settings. A developer can later refine the current theme or prepare a new draft theme, but custom content and code may still need to be rebuilt or migrated.",
   },
   {
     question: "What should I prepare before hiring a Shopify developer?",
@@ -118,7 +118,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
 
       <h2 id="comparison">Shopify developer vs DIY theme at a glance</h2>
       <ArticleTable
-        caption="Comparison of a DIY Shopify theme and a developer-led store build"
+        caption="Comparison of a DIY Shopify theme and a developer led store build"
         headers={["Decision area", "DIY theme", "Shopify developer"]}
         rows={[
           ["Initial cost", "Lower", "Higher"],
@@ -128,7 +128,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
           ["Product setup", "You enter and organize products", "Can be included in the project scope"],
           ["Testing", "You test every device and flow", "Developer completes structured testing before handoff"],
           ["Ongoing control", "Direct control from the start", "Control transfers after the completed handoff"],
-          ["Best fit", "Hands-on creators with time", "Creators who want a finished result"],
+          ["Best fit", "Hands on creators with time", "Creators who want a finished result"],
         ]}
       />
 
@@ -155,9 +155,9 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
 
       <h2 id="developer">Hire a Shopify developer when you want the result</h2>
       <p>
-        A developer-led build is valuable when the work extends beyond choosing
+        A developer led build is valuable when the work extends beyond choosing
         colors and placing images. Tabletop stores often need decisions about core
-        games, deluxe editions, expansions, add-ons, preorders, language versions,
+        games, deluxe editions, expansions, add ons, preorders, language versions,
         product compatibility and campaign content. Those decisions affect the
         catalog, navigation and product pages together.
       </p>
@@ -166,7 +166,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         <li>You want one person responsible for the complete storefront.</li>
         <li>Your catalog includes several editions, expansions or bundles.</li>
         <li>Your campaign content needs to become concise store content.</li>
-        <li>Your brand must feel distinctive rather than theme-led.</li>
+        <li>Your brand must feel distinctive rather than theme led.</li>
         <li>You have a firm launch date and limited internal time.</li>
         <li>You want mobile, navigation, product and checkout flows tested before handoff.</li>
       </ul>
@@ -174,7 +174,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         Shopify recommends defining requirements, budget, timing and expected
         outcomes before contacting a Partner. Guildframe&apos;s
         <Link href="/done-for-you-shopify-store"> Shopify design and development service</Link>
-        covers a complete storefront with up to 50 product SKUs for $2,199.
+        covers a complete storefront with up to 50 product SKUs for $2,500.
       </p>
       <ArticleCallout>
         Guildframe prepares an initial store direction within 72 hours at no cost.
@@ -190,7 +190,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       </p>
       <ArticleTable
         caption="Work that belongs in the total Shopify store budget"
-        headers={["Work", "DIY theme owner", "Developer-led build owner"]}
+        headers={["Work", "DIY theme owner", "Developer led build owner"]}
         rows={[
           ["Catalog and navigation plan", "Merchant", "Developer with merchant approval"],
           ["Page layouts", "Merchant within theme controls", "Developer"],
@@ -203,7 +203,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       />
       <p>
         A DIY theme remains the better value when you genuinely want to do the
-        work. A developer-led build becomes the better value when it prevents weeks
+        work. A developer led build becomes the better value when it prevents weeks
         of uncertainty or lets your team focus on production, fulfillment,
         marketing and the next release.
       </p>
@@ -217,7 +217,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         <li><strong>What happens if the first direction is wrong?</strong> Understand previews, revisions and approval before committing.</li>
       </ol>
       <p>
-        If the answers point toward a hands-on build, review the
+        If the answers point toward a hands on build, review the
         <Link href="/buy"> Guildframe DIY theme</Link>. If they point toward a
         completed storefront, send the project brief and use the free preview to
         judge the direction before moving forward.

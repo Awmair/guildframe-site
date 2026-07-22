@@ -23,7 +23,7 @@ const faqs = [
     answer: "Use enough media to explain the purchase: box and components, table presence, detail views, edition differences and scale where relevant. Image quality and decision value matter more than a fixed count.",
   },
   {
-    question: "Should rules and how-to-play content be on the product page?",
+    question: "Should rules and how to play content be on the product page?",
     answer: "Include the clearest gameplay explanation and link to complete rules or videos when they help the buying decision. Keep the purchase path readable rather than embedding every possible detail above the primary action.",
   },
 ];
@@ -40,7 +40,7 @@ export default function BoardGameProductPageChecklistPage() {
       category="Shopify product pages"
       title="Board Game Shopify Product Page Checklist"
       description="A practical anatomy for tabletop product pages that need to explain the world, the game, the edition and the delivery promise without slowing down the purchase."
-      answer="A strong board game Shopify product page combines a clear purchase block with useful artwork, gameplay facts, component details, edition comparison, proof, delivery terms, mobile-friendly controls and Product structured data that matches the visible offer."
+      answer="A strong board game Shopify product page combines a clear purchase block with useful artwork, gameplay facts, component details, edition comparison, proof, delivery terms, mobile friendly controls and Product structured data that matches the visible offer."
       published="2026-07-17"
       updated="2026-07-17"
       readTime="7 minute reference"
@@ -69,7 +69,7 @@ export default function BoardGameProductPageChecklistPage() {
       </p>
       <ul className="article-checklist">
         <li>Product name matches the box and catalog language</li>
-        <li>Price and any compare-at price are accurate</li>
+        <li>Price and any compare at price are accurate</li>
         <li>Availability, preorder status or delivery timing is visible beside the action</li>
         <li>One short sentence explains the central player experience</li>
         <li>Edition or language choice appears before Add to cart</li>
@@ -85,7 +85,7 @@ export default function BoardGameProductPageChecklistPage() {
       <ArticleTable
         headers={["Media type", "Question it answers", "Useful example"]}
         rows={[
-          ["Box hero", "What product is this?", "Front-facing box or complete product arrangement"],
+          ["Box hero", "What product is this?", "Front facing box or complete product arrangement"],
           ["Component spread", "What is included?", "Boards, cards, miniatures, books and tokens laid out clearly"],
           ["Table scene", "What does play feel like?", "A realistic setup at readable scale"],
           ["Detail image", "What is the quality?", "Card stock, miniature sculpt, terrain texture or book spread"],
@@ -108,7 +108,7 @@ export default function BoardGameProductPageChecklistPage() {
         taste without opening a campaign archive or external review.
       </p>
       <ul className="article-checklist">
-        <li>Player count and best-supported player range</li>
+        <li>Player count and best supported player range</li>
         <li>Typical play time and setup expectations</li>
         <li>Age guidance and important content notes</li>
         <li>Core mechanics, tone and intended player experience</li>
@@ -118,7 +118,7 @@ export default function BoardGameProductPageChecklistPage() {
         <li>Required base game or compatibility information for expansions</li>
       </ul>
 
-      <h2 id="editions">4. Editions, variants, bundles and add-ons</h2>
+      <h2 id="editions">4. Editions, variants, bundles and add ons</h2>
       <p>
         Edition choices create friction when the difference is hidden in campaign
         terminology. Compare the contents and value directly beside the selector.
@@ -137,11 +137,11 @@ export default function BoardGameProductPageChecklistPage() {
       <h2 id="proof">5. Proof, policies and objections</h2>
       <ul className="article-checklist">
         <li>Reviews, awards or campaign proof are specific and attributable</li>
-        <li>How-to-play video or rulebook is available when it reduces uncertainty</li>
+        <li>How to play video or rulebook is available when it reduces uncertainty</li>
         <li>Shipping timing and regions are easy to find</li>
         <li>Returns, damaged items and replacement policy are linked</li>
         <li>Preorder and backorder language is repeated near the purchase action</li>
-        <li>FAQ answers product-specific objections rather than repeating general policies</li>
+        <li>FAQ answers product specific objections rather than repeating general policies</li>
         <li>Related products distinguish expansions, accessories and true alternatives</li>
       </ul>
 
@@ -157,7 +157,7 @@ export default function BoardGameProductPageChecklistPage() {
         <li>Breadcrumbs and internal links connect the page to its collection and related products</li>
       </ul>
       <p>
-        Use this page-level reference with the broader
+        Use this page level reference with the broader
         <Link href="/resources/board-game-shopify-store-checklist"> board game Shopify store checklist</Link>.
         If the catalog began as campaign rewards, continue with the
         <Link href="/resources/kickstarter-to-shopify-migration-checklist"> Kickstarter to Shopify migration checklist</Link>.

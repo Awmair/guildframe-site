@@ -12,7 +12,7 @@
     "build:pages:local": "npm run build && node scripts/optimize-pages-output.mjs",
     "preflight": "node scripts/launch-preflight.mjs",
     "preflight:strict": "node scripts/launch-preflight.mjs --strict",
-    "test": "NEXT_PUBLIC_SITE_URL=http://localhost:3000 NEXT_PUBLIC_CHECKOUT_URL=https://checkout.example/guildframe NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456 npm run build:pages:local && node --test tests/static-output.test.mjs",
+    "test": "NEXT_PUBLIC_SITE_URL=http://localhost:3000 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456 npm run build:pages:local && node --test tests/static-output.test.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },

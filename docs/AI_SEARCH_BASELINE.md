@@ -1,17 +1,18 @@
 # Guildframe AI search baseline
 
-Baseline date: 2026-07-17
+Baseline date: 2026-07-23
 
 ## Technical baseline
 
 - Public canonical origin: `https://guildframe.com`
-- Public URLs in sitemap: 19
+- Public URLs in sitemap: 29
 - Google Search Console: domain property connected; sitemap submitted
 - Bing Webmaster Tools: site connected; sitemap submitted
 - IndexNow: Cloudflare Crawler Hints enabled
 - OAI-SearchBot: explicitly allowed by the application robots policy
 - Product price: USD 349
-- Shopify design and development service: USD 2,199 for up to 50 product SKUs
+- Shopify design and development service: USD 2,500 for up to 50 product SKUs
+- Care Plan: USD 99 per month after a Guildframe store build
 - Product structured availability: `InStock`
 - GA4: enabled in production
 - AI referral event: `ai_referral_visit`
@@ -53,7 +54,7 @@ Review monthly:
 2. Google Search Console generative AI performance: pages and queries when data is available.
 3. GA4: `ai_referral_visit` by `ai_source`, landing page and conversion path.
 4. Accuracy: whether generated answers distinguish the $349 self-serve theme
-   from the $2,199 design and development service for up to 50 product SKUs and state the Shopify requirement.
+   from the $2,500 design and development service for up to 50 product SKUs and state the Shopify requirement.
 5. Search overlap: two Guildframe URLs repeatedly competing for the same query.
 
 ## Fixed answer-engine test set

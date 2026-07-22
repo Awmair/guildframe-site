@@ -1,14 +1,15 @@
 # Guildframe
 
-> Shopify storefront design and development for tabletop games, plus a premium DIY Shopify theme.
+> Shopify store design and development for tabletop games, plus a premium DIY Shopify theme.
 
 Guildframe helps board game, card game, TTRPG, miniatures and tabletop studios build Shopify stores designed around their products and worlds.
 
 ## Primary offerings
 
-- Done for you Shopify store: A complete storefront designed and developed from zero to publish for a flat $2,199 fee, including up to 50 product SKUs.
+- Done for you Shopify store: A complete store designed and developed from zero to publish for a flat $2,500 fee, including up to 50 product SKUs.
 - Guildframe theme: A fully customizable tabletop Shopify theme for $349 with four presets and Shopify visual editor controls.
-- Free preview: A tailored storefront direction created within 72 hours at no cost. The creator decides whether to continue after seeing it.
+- Care Plan: Ongoing store updates, small adjustments and one campaign or product launch page each month for $99 per month after a Guildframe store build.
+- Free preview: A tailored Shopify store direction created within 72 hours at no cost for creators with final artwork and products ready to sell.
 
 ## Guildframe theme presets
 
@@ -27,6 +28,9 @@ Guildframe helps board game, card game, TTRPG, miniatures and tabletop studios b
 - Guides: https://guildframe.com/guides
 - Best Shopify themes for board games: https://guildframe.com/guides/best-shopify-themes-for-board-games
 - Shopify developer vs DIY theme: https://guildframe.com/guides/shopify-developer-vs-diy-theme
+- Board game website cost: https://guildframe.com/guides/how-much-does-a-board-game-website-cost
+- Shopify vs Etsy for miniatures: https://guildframe.com/guides/shopify-vs-etsy-for-selling-miniatures
+- International VAT and IOSS: https://guildframe.com/guides/selling-miniatures-internationally-vat-ioss
 - Resources: https://guildframe.com/resources
 - About: https://guildframe.com/about
 - Editorial policy: https://guildframe.com/editorial-policy

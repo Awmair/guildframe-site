@@ -34,9 +34,9 @@ const faqs = [
       "It can, but only when delivery timing is explicit and the launch will not create a reasonable impression that retail customers are being prioritized over backers. Many creators prepare the store early and control product availability until operations are ready.",
   },
   {
-    question: "How long does Guildframe's done-for-you store take?",
+    question: "How long does Guildframe's done for you store take?",
     answer:
-      "Timing depends on final asset readiness, catalog complexity and review speed. Guildframe confirms a delivery plan before starting the $2,199 store build for up to 50 product SKUs.",
+      "Timing depends on final asset readiness, catalog complexity and review speed. Guildframe confirms a delivery plan before starting the $2,500 store build for up to 50 product SKUs.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function KickstarterToShopifyTimelinePage() {
   return (
     <SeoArticlePage
       slug="kickstarter-to-shopify-launch-timeline"
-      category="Post-campaign launch planning"
+      category="Post campaign launch planning"
       title="Kickstarter to Shopify Launch Timeline"
       description="Know what to prepare before funding closes, what must wait for final operational facts and when the permanent store is ready to open."
       answer="A practical Kickstarter to Shopify launch timeline begins before the campaign ends with domain, catalog and asset planning. After funding, finalize products and fulfillment boundaries, build the storefront, test checkout and mobile buying, then open sales only when delivery promises and inventory rules are accurate. A focused build can take days; operational readiness determines the true launch date."
@@ -87,11 +87,11 @@ export default function KickstarterToShopifyTimelinePage() {
 
       <h2 id="timeline">Recommended Kickstarter to Shopify timeline</h2>
       <ArticleTable
-        caption="A practical post-campaign storefront sequence"
+        caption="A practical post campaign storefront sequence"
         headers={["Phase", "Primary work", "Exit condition"]}
         rows={[
           ["During campaign", "Reserve domain, inventory assets and draft the catalog", "One owner and one source of truth are named"],
-          ["Days 1 to 3", "Lock products, prices, variants and order boundaries", "New-store offers are operationally accurate"],
+          ["Days 1 to 3", "Lock products, prices, variants and order boundaries", "New store offers are operationally accurate"],
           ["Days 3 to 7", "Build products, navigation, policies and campaign story", "Every page points to a real customer task"],
           ["Days 5 to 10", "Test mobile, checkout, tax, shipping and notifications", "A test order completes without ambiguity"],
           ["Launch", "Open the intended products and communicate clearly", "Backers and new buyers understand what happens next"],
@@ -108,15 +108,15 @@ export default function KickstarterToShopifyTimelinePage() {
       <p>
         Prepare the reusable layer while the campaign is still active. Reserve the
         permanent domain, identify the person responsible for Shopify and collect
-        final logos, product renders, box contents, how-to-play material and brand
+        final logos, product renders, box contents, how to play material and brand
         copy. Draft the store catalog without publishing uncertain products.
       </p>
       <ul>
         <li>List the products that will remain available after crowdfunding.</li>
-        <li>Separate permanent products from campaign-only rewards.</li>
+        <li>Separate permanent products from campaign only rewards.</li>
         <li>Map core games, editions, expansions, bundles and accessories.</li>
         <li>Record which platform owns backer choices, addresses and fulfillment status.</li>
-        <li>Prepare a plain-language status message for customers and backers.</li>
+        <li>Prepare a plain language status message for customers and backers.</li>
       </ul>
 
       <h2 id="week-one">The first week after funding</h2>
@@ -142,7 +142,7 @@ export default function KickstarterToShopifyTimelinePage() {
         <li><strong>Operations:</strong> configure payments, taxes, shipping zones, inventory locations and notifications.</li>
       </ol>
       <p>
-        If the campaign assets are final, <Link href="/done-for-you-shopify-store">Guildframe&apos;s done-for-you Shopify service</Link> can prepare the complete storefront while the creator keeps control of products, operations and launch approval.
+        If the campaign assets are final, <Link href="/done-for-you-shopify-store">Guildframe&apos;s done for you Shopify service</Link> can prepare the complete storefront while the creator keeps control of products, operations and launch approval.
       </p>
 
       <h2 id="testing">Testing and review</h2>
@@ -158,7 +158,7 @@ export default function KickstarterToShopifyTimelinePage() {
         <li>Every active product has accurate inventory behavior</li>
         <li>Shipping regions, rates and taxes match the plan</li>
         <li>Order and support emails reach the correct inbox</li>
-        <li>Campaign-only promises are not presented as retail offers</li>
+        <li>Campaign only promises are not presented as retail offers</li>
       </ul>
 
       <h2 id="launch-gate">The final launch gate</h2>

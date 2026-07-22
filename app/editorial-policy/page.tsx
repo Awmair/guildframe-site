@@ -48,7 +48,7 @@ export default function EditorialPolicyPage() {
           <h2>Editorial purpose</h2>
           <p>
             Guildframe publishes guidance for tabletop creators planning Shopify
-            stores, moving beyond crowdfunding and comparing post-campaign tools.
+            stores, moving beyond crowdfunding and comparing post campaign tools.
             Every page should help a reader make or execute a specific decision.
             We do not create pages merely to target a synonym.
           </p>
@@ -58,7 +58,7 @@ export default function EditorialPolicyPage() {
           <ol>
             <li><strong>Primary sources first.</strong> Platform help centers, product documentation and official policy pages are preferred.</li>
             <li><strong>Visible evidence.</strong> Guides list the sources reviewed and connect them to structured Article citations.</li>
-            <li><strong>Current facts.</strong> Time-sensitive platform features, pricing and policies are rechecked before material updates.</li>
+            <li><strong>Current facts.</strong> Time sensitive platform features, pricing and policies are rechecked before material updates.</li>
             <li><strong>Clear inference.</strong> Guildframe recommendations are presented as analysis, not as platform policy.</li>
           </ol>
         </section>

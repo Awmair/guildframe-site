@@ -7,11 +7,11 @@ import { absoluteUrl, siteConfig } from "./site-config";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Shopify Developer for Tabletop Games | Guildframe",
+    default: "Shopify Stores for Tabletop Games | Guildframe",
     template: "%s | Guildframe",
   },
   description:
-    "Guildframe designs and develops complete Shopify storefronts for tabletop creators. Get a full store for $2,199, or build it yourself with the $349 Guildframe theme.",
+    "Guildframe designs and develops complete Shopify stores for tabletop creators. Get a full store for $2,500, or build it yourself with the $349 Guildframe theme.",
   keywords: [
     "Shopify developer for tabletop games",
     "board game Shopify developer",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Shopify Storefronts Built for Tabletop Games | Guildframe",
+    title: "Shopify Stores Built for Tabletop Games | Guildframe",
     description:
-      "Get a complete tabletop Shopify store designed and developed for $2,199, or build it yourself with the $349 Guildframe theme.",
+      "Get a complete tabletop Shopify store designed and developed for $2,500, or build it yourself with the $349 Guildframe theme.",
     type: "website",
     siteName: "Guildframe",
     url: "/",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shopify Storefronts Built for Tabletop Games | Guildframe",
+    title: "Shopify Stores Built for Tabletop Games | Guildframe",
     description:
       "Complete Shopify design and development for tabletop creators, with a premium DIY theme for teams that want to build it themselves.",
     images: [siteConfig.socialImage],

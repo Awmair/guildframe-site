@@ -9,18 +9,18 @@ export const siteConfig = {
   checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim() || null,
   serviceInquiryUrl:
     process.env.NEXT_PUBLIC_SERVICE_INQUIRY_URL?.trim() ||
-    "mailto:umair@guildframe.com?subject=Shopify%20store%20project",
+    "/#start-project",
   formEndpoint: "https://formspree.io/f/mrewkezq",
   contactInquiryUrl:
-    "mailto:umair@guildframe.com?subject=Guildframe%20question",
+    "/#start-project",
   analyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || null,
   clarityProjectId:
     process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID?.trim() || "xp0rrg52qu",
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
-  socialImage: "/og-guildframe-offers-v5.jpg",
+  socialImage: "/og-guildframe-offers-v6.jpg",
   price: "$349",
-  servicePrice: "$2,199",
+  servicePrice: "$2,500",
   description:
     "Shopify design and development for tabletop creators, plus a premium DIY theme purpose built for board games, TTRPGs, card games and miniatures.",
 };

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { JsonLd } from "../components/JsonLd";
 import { SeoFooter, SeoHeader } from "../components/SeoChrome";
-import { pageMetadata } from "../site-config";
+import { pageMetadata, siteConfig } from "../site-config";
 import { guildframeProductData } from "../product-data";
 
 export const metadata: Metadata = pageMetadata({
   title: "Buy Guildframe",
   description:
-    "Buy the Guildframe premium Shopify theme for tabletop creators for $349. Get four purpose-built presets, flexible editor controls and responsive storefront layouts.",
+    "Buy the Guildframe premium Shopify theme for tabletop creators for $349. Get four purpose built presets, flexible editor controls and responsive storefront layouts.",
   path: "/buy",
   keywords: [
     "buy Guildframe",
@@ -18,15 +18,17 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const inclusions = [
-  "Four purpose-built storefront presets",
+  "Four purpose built storefront presets",
   "Campaign, product and content page templates",
   "Shopify editor controls",
   "Responsive layouts for desktop, tablet and mobile",
   "Setup documentation",
-  "One-time license with no Guildframe subscription",
+  "One time license with no Guildframe subscription",
 ];
 
 export default function BuyPage() {
+  const checkoutHref = siteConfig.checkoutUrl;
+
   return (
     <>
       <JsonLd
@@ -47,17 +49,17 @@ export default function BuyPage() {
               <span>Make it unmistakably yours.</span>
             </h1>
             <p>
-              Get the complete tabletop-focused Shopify theme, choose one of
+              Get the complete tabletop focused Shopify theme, choose one of
               four distinct presets and customize every detail without code.
             </p>
             <div className="buy-price-row">
               <strong>$349</strong>
-              <span>One-time payment</span>
+              <span>One time payment</span>
             </div>
 
             <a
               className="buy-checkout-button"
-              href="#start-project"
+              href={checkoutHref ?? "#theme-checkout"}
               data-analytics-event="theme_interest"
               data-analytics-label="Get Guildframe theme"
               data-analytics-location="purchase page"
@@ -67,7 +69,7 @@ export default function BuyPage() {
 
             <small>
               Requires an active Shopify store. Shopify plan, payment processing
-              and third-party app fees are separate.
+              and third party app fees are separate.
             </small>
           </div>
 
@@ -82,11 +84,34 @@ export default function BuyPage() {
           </aside>
         </section>
 
+        <section className="buy-checkout-placeholder" id="theme-checkout">
+          <div>
+            <h2>One theme. Four complete storefront directions.</h2>
+            <p>
+              The secure purchase link will open from this page. Theme access,
+              documentation and installation steps are delivered after payment.
+            </p>
+          </div>
+          {checkoutHref ? (
+            <a
+              className="buy-checkout-button"
+              href={checkoutHref}
+              data-analytics-event="theme_interest"
+              data-analytics-label="Get Guildframe theme"
+              data-analytics-location="theme checkout"
+            >
+              Get the theme <span aria-hidden="true">↗</span>
+            </a>
+          ) : (
+            <span className="buy-checkout-status">Secure checkout link pending</span>
+          )}
+        </section>
+
         <section className="buy-setup-scope">
           <div>
             <h2>Want us to build the entire store instead?</h2>
             <p>
-              For $2,199, we design and develop your complete Shopify storefront,
+              For $2,500, we design and develop your complete Shopify storefront,
               add up to 50 product SKUs and take it from an empty store to a
               reviewed build ready to publish.
             </p>

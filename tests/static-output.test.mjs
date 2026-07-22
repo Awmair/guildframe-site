@@ -5,11 +5,11 @@ import test from "node:test";
 const outputRoot = new URL("../out/", import.meta.url);
 
 const pages = [
-  ["/", "Shopify Developer for Tabletop Games | Guildframe", "Shopify stores"],
+  ["/", "Shopify Stores for Tabletop Games | Guildframe", "Shopify stores"],
   ["/buy", "Buy Guildframe | Guildframe", "Build it yourself"],
   ["/done-for-you-shopify-store", "Shopify Design and Development for Tabletop Brands | Guildframe", "Your tabletop world"],
   ["/shopify-theme-for-board-games", "Shopify Theme for Board Games | Guildframe", "board game Shopify theme"],
-  ["/kickstarter-to-shopify", "Kickstarter to Shopify for Tabletop Creators | Guildframe", "funded Kickstarter"],
+  ["/kickstarter-to-shopify", "Kickstarter to Shopify for Funded Tabletop Games | Guildframe", "Your campaign funded"],
   ["/shopify-theme-for-ttrpg", "Shopify Theme for TTRPG Publishers | Guildframe", "TTRPG Shopify theme"],
   ["/shopify-theme-for-miniatures", "Shopify Theme for Miniatures and Terrain | Guildframe", "miniatures Shopify theme"],
   ["/guides", "Tabletop Ecommerce and Kickstarter Guides | Guildframe", "Build what comes"],
@@ -21,7 +21,10 @@ const pages = [
   ["/guides/backerkit-vs-shopify-vs-gamefound", "BackerKit vs Shopify vs Gamefound After Crowdfunding | Guildframe", "BackerKit vs Shopify vs Gamefound"],
   ["/guides/kickstarter-to-shopify-launch-timeline", "Kickstarter to Shopify Launch Timeline | Guildframe", "Kickstarter to Shopify Launch Timeline"],
   ["/guides/sell-board-game-preorders-on-shopify", "How to Sell Board Game Preorders on Shopify | Guildframe", "How to Sell Board Game Preorders"],
-  ["/guides/sell-board-game-expansions-add-ons-shopify", "Sell Board Game Expansions and Add-ons on Shopify | Guildframe", "How to Sell Board Game Expansions"],
+  ["/guides/sell-board-game-expansions-add-ons-shopify", "Sell Board Game Expansions and Add ons on Shopify | Guildframe", "How to Sell Board Game Expansions"],
+  ["/guides/selling-miniatures-internationally-vat-ioss", "Selling Miniatures Internationally: VAT and IOSS | Guildframe", "Selling Miniatures Internationally"],
+  ["/guides/how-much-does-a-board-game-website-cost", "How Much Does a Board Game Website Cost? | Guildframe", "How Much Does a Board Game Website Cost"],
+  ["/guides/shopify-vs-etsy-for-selling-miniatures", "Shopify vs Etsy for Selling Miniatures | Guildframe", "Shopify vs Etsy for Selling Miniatures"],
   ["/about", "About Guildframe | Guildframe", "Tabletop worlds deserve"],
   ["/editorial-policy", "Editorial Policy | Guildframe", "Useful first"],
   ["/authors/guildframe", "Guildframe Editorial Team | Guildframe", "Guildframe Editorial Team"],
@@ -167,11 +170,11 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
   assert.doesNotMatch(robots, /Content-Signal:/i);
   assert.match(robots, /Sitemap: http:\/\/localhost:3000\/sitemap\.xml/i);
   assert.doesNotMatch(sitemap, /<changefreq>|<priority>/i);
-  assert.equal((sitemap.match(/<lastmod>2026-07-(?:17|18|19|21)T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
-  assert.match(sitemap, /<lastmod>2026-07-21T00:00:00.000Z<\/lastmod>/);
+  assert.equal((sitemap.match(/<lastmod>2026-07-(?:17|18|19|21|23)T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
+  assert.match(sitemap, /<lastmod>2026-07-23T00:00:00.000Z<\/lastmod>/);
   assert.match(llms, /^# Guildframe$/m);
   assert.match(llms, /https:\/\/guildframe\.com\/done-for-you-shopify-store/i);
-  assert.match(llms, /\$2,199/);
+  assert.match(llms, /\$2,500/);
   assert.match(llms, /\$349/);
   assert.match(llms, /within 72 hours/i);
 });
@@ -179,7 +182,6 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
 test("exports AEO and social metadata", async () => {
   const solutionPaths = [
     "/shopify-theme-for-board-games",
-    "/kickstarter-to-shopify",
     "/shopify-theme-for-ttrpg",
     "/shopify-theme-for-miniatures",
   ];
@@ -193,6 +195,9 @@ test("exports AEO and social metadata", async () => {
     "/guides/kickstarter-to-shopify-launch-timeline",
     "/guides/sell-board-game-preorders-on-shopify",
     "/guides/sell-board-game-expansions-add-ons-shopify",
+    "/guides/selling-miniatures-internationally-vat-ioss",
+    "/guides/how-much-does-a-board-game-website-cost",
+    "/guides/shopify-vs-etsy-for-selling-miniatures",
     "/resources/board-game-shopify-store-checklist",
     "/resources/kickstarter-to-shopify-migration-checklist",
     "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
@@ -208,6 +213,9 @@ test("exports AEO and social metadata", async () => {
     ["/guides/kickstarter-late-pledges-vs-shopify", "2026-07-18"],
     ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-07-18"],
     ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "2026-07-18"],
+    ["/guides/selling-miniatures-internationally-vat-ioss", "2026-07-23"],
+    ["/guides/how-much-does-a-board-game-website-cost", "2026-07-23"],
+    ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-07-23"],
   ]);
 
   for (const path of solutionPaths) {
@@ -256,12 +264,12 @@ test("exports AEO and social metadata", async () => {
   assert.match(await readPage("/resources"), /"@type":"CollectionPage"/i);
 
   const homepage = await readPage("/");
-  assert.match(homepage, /og-guildframe-offers-v5\.jpg/i);
-  assert.match(homepage, /"image":"http:\/\/localhost:3000\/og-guildframe-offers-v5\.jpg"/i);
+  assert.match(homepage, /og-guildframe-offers-v6\.jpg/i);
+  assert.match(homepage, /"image":"http:\/\/localhost:3000\/og-guildframe-offers-v6\.jpg"/i);
   assert.match(homepage, /"availability":"https:\/\/schema\.org\/InStock"/i);
   assert.match(homepage, /"@type":"Organization"/i);
   assert.match(homepage, /"@type":"Service"/i);
-  assert.match(homepage, /"price":"2199"/i);
+  assert.match(homepage, /"price":"2500"/i);
   assert.doesNotMatch(homepage, /"@type":"Audience"/i);
   assert.doesNotMatch(homepage, /OutOfStock/i);
   assert.match(homepage, /G-TEST123456/i);
@@ -275,13 +283,17 @@ test("exports AEO and social metadata", async () => {
 
   const service = await readPage("/done-for-you-shopify-store");
   assert.match(service, /"@type":"Service"/i);
-  assert.match(service, /"price":"2199"/i);
+  assert.match(service, /"price":"2500"/i);
   assert.match(service, /"priceCurrency":"USD"/i);
+
+  const campaignService = await readPage("/kickstarter-to-shopify");
+  assert.match(campaignService, /"@type":"Service"/i);
+  assert.match(campaignService, /"@type":"FAQPage"/i);
 
   const benchmark = await readPage("/resources/kickstarter-tabletop-games-benchmark");
   assert.match(benchmark, /kickstarter-tabletop-games-benchmark-2024\.csv/i);
   assert.match(benchmark, /Guildframe calculations from Kickstarter/i);
-  assert.doesNotMatch(benchmark, /"@type":"FAQPage"/i);
+  assert.match(benchmark, /"@type":"FAQPage"/i);
 });
 
 test("keeps purchase, recovery and redirects launch-ready", async () => {
@@ -291,22 +303,23 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   const redirects = await readFile(new URL("_redirects", outputRoot), "utf8");
   const headers = await readFile(new URL("_headers", outputRoot), "utf8");
 
-  assert.match(home, /href="#start-project"[^>]*class="checkout-button"/i);
+  assert.match(home, /href="#start-project"[^>]*class="[^"]*checkout-button[^"]*"/i);
   assert.doesNotMatch(home, /class="hero-text-link" href="#process">\s*See how it works/i);
   assert.doesNotMatch(
     home,
     /<h3>Send your store brief<\/h3>|<h3>We design and build<\/h3>|<h3>Review and publish<\/h3>/i,
   );
   assert.ok(
-    home.indexOf("One specialist. Two clear ways to launch.") < home.indexOf("pricing-options"),
-    "The launch-choice panel should appear before the first pricing cards",
+    home.indexOf("Choose how your store gets built.") < home.indexOf("pricing-options"),
+    "The pricing introduction should appear before the pricing cards",
   );
   assert.doesNotMatch(home, /href="#faq"[^>]*class="checkout-button"/i);
   assert.match(home, /data-analytics-event="theme_interest"/i);
   assert.match(
     buy,
-    /<a\b(?=[^>]*href="#start-project")(?=[^>]*class="buy-checkout-button")[^>]*>/i,
+    /<a\b(?=[^>]*href="#theme-checkout")(?=[^>]*class="buy-checkout-button")[^>]*>/i,
   );
+  assert.match(buy, /Secure checkout link pending/i);
   assert.doesNotMatch(buy, /https:\/\/checkout\.example\/guildframe/i);
   assert.doesNotMatch(buy, /data-analytics-event="checkout_redirect"/i);
   assert.match(home, /Get the theme/i);
@@ -315,17 +328,17 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
     home,
     /Start my store|Build my(?: Shopify)? store|Get free preview|Get my free store preview|Request (?:a |my )?free (?:store )?preview/i,
   );
-  assert.match(home, /\$2,199/i);
+  assert.match(home, /\$2,500/i);
   assert.match(home, /\$349/i);
   assert.match(home, /within 72 hours/i);
-  assert.doesNotMatch(home, /Build my store for \$2,199|Get the theme for \$349/i);
+  assert.doesNotMatch(home, /Build my store for \$2,500|Get the theme for \$349/i);
   assert.doesNotMatch(home, /\$419|\$1,399|within 48 hours|free 48-hour/i);
   assert.doesNotMatch(home, /Three ways to build your store/i);
   assert.match(home, /Rune Single/i);
   assert.match(home, /Rune Studio/i);
   assert.match(home, /Saga Single/i);
   assert.match(home, /Saga Studio/i);
-  assert.match(home, /mailto:umair@guildframe\.com\?subject=Guildframe%20question/i);
+  assert.doesNotMatch(home, /mailto:/i);
   assert.doesNotMatch(home, /Got questions or queries|You will hear from the developer/i);
   assert.doesNotMatch(home, />Umair</i);
   assert.match(home, /Shopify Partner/i);
@@ -334,9 +347,9 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
   const primaryPricing = home.match(/<section\b[^>]*\bid="pricing"[^>]*>[\s\S]*?<\/section>/i)?.[0] ?? "";
   const finalPricing = home.match(/<section\b[^>]*\bid="pricing-final"[^>]*>[\s\S]*?<\/section>/i)?.[0] ?? "";
   assert.ok(primaryPricing, "missing primary pricing section");
-  assert.ok(finalPricing, "missing final pricing section");
-  assert.doesNotMatch(primaryPricing, /Two ways to launch your store/i);
-  assert.match(finalPricing, /Two ways to launch your store/i);
+  assert.equal(finalPricing, "", "homepage should have only one pricing section");
+  assert.match(primaryPricing, /Guildframe Care Plan/i);
+  assert.match(primaryPricing, /\$99/i);
   assert.match(missing, /This path ends here/i);
   assert.match(missing, /content="noindex/i);
   assert.match(redirects, /^\/pricing \/#pricing 301/m);
@@ -389,11 +402,27 @@ test("keeps copy and responsive mockups clean", async () => {
     assert.doesNotMatch(source, /48[ -]?hours?|48-hour/i, file.pathname);
   }
 
+  for (const [path] of pages) {
+    const html = await readPage(path);
+    const visibleText = html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&[a-zA-Z0-9#]+;/g, " ");
+    assert.doesNotMatch(visibleText, /[\u2013\u2014]|\b[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\b/u, path);
+  }
+
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   const imageRule = css.match(/\.seo-hero-visual img\s*\{([^}]+)\}/)?.[1] ?? "";
   assert.match(imageRule, /height:\s*auto/i);
   assert.match(imageRule, /object-fit:\s*contain/i);
   assert.doesNotMatch(imageRule, /object-fit:\s*cover/i);
+
+  for (const selector of ["funded-creator-visual", "campaign-service-hero-image"]) {
+    const rule = css.match(new RegExp(`\\.${selector} img\\s*\\{([^}]+)\\}`))?.[1] ?? "";
+    assert.match(rule, /height:\s*auto/i, selector);
+    assert.doesNotMatch(rule, /object-fit:\s*cover/i, selector);
+  }
 });
 
 test("does not ship GitHub Actions workflows", async () => {

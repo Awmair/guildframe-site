@@ -4,7 +4,11 @@ import { type CSSProperties, useEffect, useState } from "react";
 import { JsonLd } from "./components/JsonLd";
 import { ProjectInquiryForm } from "./components/ProjectInquiryForm";
 import { siteConfig } from "./site-config";
-import { guildframeProductData, guildframeServiceData } from "./product-data";
+import {
+  guildframeCarePlanData,
+  guildframeProductData,
+  guildframeServiceData,
+} from "./product-data";
 
 const styleOptions = [
   {
@@ -148,29 +152,29 @@ const faqs = [
       "Board games, card games, TTRPGs, miniatures, terrain, accessories, editions, expansions, bundles and preorders.",
   },
   {
-    question: "How does the free 72-hour preview work?",
+    question: "How does the free 72 hour preview work?",
     answer:
-      "Send your store brief, brand assets and a representative set of products. We create a tailored storefront direction within 72 hours at no cost. You decide whether to continue with the full build after seeing it.",
+      "Send your store brief, final artwork, brand assets and products that are ready to sell. We create a tailored Shopify store direction within 72 hours at no cost. You decide whether to continue with the full build after seeing it.",
   },
   {
-    question: "What are the two ways to use Guildframe?",
+    question: "What are the three ways to use Guildframe?",
     answer:
-      "Hire Guildframe to design and develop your complete Shopify storefront with up to 50 product SKUs, or buy the Guildframe theme and build it yourself with Shopify's visual editor.",
+      "Hire Guildframe to design and develop your complete Shopify store with up to 50 product SKUs, buy the Guildframe theme and build it yourself, or add the Care Plan after a Guildframe build for ongoing updates and one new campaign or product launch page each month.",
   },
   {
-    question: "What is included in the done-for-you service?",
+    question: "What is included in the done for you service?",
     answer:
       "We structure the storefront, create a custom design around your brand, build the key pages, add your supplied products and content, optimize desktop and mobile layouts, test the buying path and prepare the store for publication.",
   },
   {
-    question: "Is the done-for-you price really flat?",
+    question: "Is the done for you price really flat?",
     answer:
       "Yes. The price shown above covers the complete design and development service for creators and studios with up to 50 product SKUs. You provide approved product data, copy and visual assets. Shopify fees, paid apps, custom app development, photography and new copywriting are separate.",
   },
   {
-    question: "How long does a done-for-you store take?",
+    question: "How long does a done for you store take?",
     answer:
-      "Timing depends on asset readiness, catalog complexity and review speed. We confirm a delivery plan before work begins, then take the approved store from zero to a publish-ready build.",
+      "A complete store typically takes 2 to 3 weeks from preview approval to a build that is ready to publish. We confirm the delivery plan before work begins based on your final assets, catalog and review schedule.",
   },
 ];
 
@@ -196,40 +200,22 @@ const customizationOptions = [
 function PricingSection({
   id,
   analyticsLocation,
-  showIntro = true,
-  showPromise = false,
 }: {
   id: string;
   analyticsLocation: string;
-  showIntro?: boolean;
-  showPromise?: boolean;
 }) {
   return (
     <section className="pricing-section section-pad" id={id}>
-      {showIntro ? (
-        <div className="pricing-intro" data-reveal>
-          <h2>
-            Two ways to launch your store.
-            <span>We build it, or you use our theme.</span>
-          </h2>
-          <p>
-            Start with a complete storefront built by a tabletop specialist,
-            or use our premium theme and build it yourself.
-          </p>
-        </div>
-      ) : null}
-
-      {showPromise ? (
-        <div className="pricing-promise pricing-promise-first" data-reveal>
-          <div>
-            <h3>One specialist. Two clear ways to launch.</h3>
-          </div>
-          <p>
-            Choose a complete store build for up to 50 product SKUs, or buy
-            the fully customizable Guildframe theme and build it yourself.
-          </p>
-        </div>
-      ) : null}
+      <div className="pricing-intro" data-reveal>
+        <h2>
+          Choose how your store gets built.
+          <span>Start strong. Keep growing.</span>
+        </h2>
+        <p>
+          Hire a tabletop specialist, build with the Guildframe theme, or keep
+          Guildframe on deck after launch.
+        </p>
+      </div>
 
       <div className="pricing-options" data-reveal>
         <article className="pricing-option pricing-option-service">
@@ -237,7 +223,7 @@ function PricingSection({
           <h3>Your complete Shopify store</h3>
           <p>Built specifically for your tabletop brand, from zero to publish.</p>
           <div className="pricing-price-row">
-            <div className="price">$2,199</div>
+            <div className="price">$2,500</div>
             <span>flat fee</span>
           </div>
           <ul>
@@ -246,7 +232,7 @@ function PricingSection({
             <li>Full storefront design and development</li>
             <li>Up to 50 product SKUs added</li>
             <li>Desktop, tablet and mobile polish</li>
-            <li>Buying-path testing and publish handoff</li>
+            <li>Buying path testing and publish handoff</li>
           </ul>
           <a
             href="#start-project"
@@ -257,7 +243,7 @@ function PricingSection({
           >
             Get my free preview <span aria-hidden="true">↗</span>
           </a>
-          <small>For creators and studios with up to 50 product SKUs. Third-party costs are separate.</small>
+          <small>For creators and studios with up to 50 product SKUs. Third party costs are separate.</small>
         </article>
 
         <article className="pricing-option pricing-option-theme">
@@ -266,17 +252,17 @@ function PricingSection({
           <p>A premium Shopify theme purpose built for tabletop games.</p>
           <div className="pricing-price-row">
             <div className="price">$349</div>
-            <span>one-time</span>
+            <span>one time</span>
           </div>
           <ul>
             <li>Rune Single, Rune Studio, Saga Single and Saga Studio</li>
             <li>Campaign, product and content pages</li>
             <li>Full Shopify editor controls</li>
-            <li>Responsive, speed-focused layouts</li>
+            <li>Responsive, speed focused layouts</li>
             <li>Setup documentation</li>
           </ul>
           <a
-            href="#start-project"
+            href="/buy"
             className="checkout-button"
             data-analytics-event="theme_interest"
             data-analytics-label="Get Guildframe theme"
@@ -285,6 +271,33 @@ function PricingSection({
             Get the theme <span aria-hidden="true">↗</span>
           </a>
           <small>Requires an active Shopify store. No Guildframe subscription.</small>
+        </article>
+
+        <article className="pricing-option pricing-option-care">
+          <span className="pricing-option-label">After launch, we stay on deck</span>
+          <h3>Guildframe Care Plan</h3>
+          <p>Ongoing support for studios that keep releasing new work.</p>
+          <div className="pricing-price-row">
+            <div className="price">$99</div>
+            <span>per month</span>
+          </div>
+          <ul>
+            <li>Theme and section updates</li>
+            <li>Small storefront adjustments</li>
+            <li>One campaign or product launch page each month</li>
+            <li>Support from the same tabletop specialist</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a
+            href="#start-project"
+            className="checkout-button checkout-button-care"
+            data-analytics-event="care_plan_interest"
+            data-analytics-label="Ask about the Care Plan"
+            data-analytics-location={`${analyticsLocation} care plan option`}
+          >
+            Ask about the Care Plan <span aria-hidden="true">↗</span>
+          </a>
+          <small>Available after a Guildframe store build. Third party costs are separate.</small>
         </article>
       </div>
     </section>
@@ -372,7 +385,11 @@ export default function Home() {
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@graph": [guildframeProductData(), guildframeServiceData()],
+          "@graph": [
+            guildframeProductData(),
+            guildframeServiceData(),
+            guildframeCarePlanData(),
+          ],
         }}
       />
       <a className="skip-link" href="#main-content">
@@ -384,17 +401,15 @@ export default function Home() {
           <img src="/brand/guildframe-logo.svg" alt="Guildframe" width="1000" height="220" />
         </a>
         <nav aria-label="Primary navigation">
-          <a className={activeSection === "process" ? "is-active" : ""} href="#process">
-            How it works
-          </a>
           <a href={siteConfig.servicePath}>Services</a>
+          <a href="/kickstarter-to-shopify">After funding</a>
           <a className={activeSection === "styles" ? "is-active" : ""} href="#styles">
             DIY
           </a>
           <a className={activeSection === "pricing" ? "is-active" : ""} href="#pricing">
             Pricing
           </a>
-          <a href={siteConfig.contactInquiryUrl}>Contact</a>
+          <a href="#start-project">Contact</a>
         </nav>
         <a className="nav-cta" href="#start-project">
           Get my free preview <span aria-hidden="true">↗</span>
@@ -445,6 +460,43 @@ export default function Home() {
 
         </section>
 
+        <section className="funded-creator-section section-pad" id="after-funding">
+          <div className="funded-creator-visual" data-reveal>
+            <img
+              src="/images/post-campaign-tabletop-store-v1.webp"
+              alt="A funded tabletop campaign becoming an organized permanent online store"
+              width="1828"
+              height="860"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div className="funded-creator-copy" data-reveal>
+            <h2>
+              Just funded your game?
+              <span>We handle what comes next.</span>
+            </h2>
+            <p>
+              Backers are waiting, late demand is still arriving and retail
+              needs a permanent home. We turn your final campaign assets into a
+              Shopify store while fulfillment keeps moving.
+            </p>
+            <ul>
+              <li>BackerKit and Gamefound handoff planning</li>
+              <li>Late pledge and preorder setup</li>
+              <li>Products, editions, bundles and add ons</li>
+              <li>International shipping, EU VAT and IOSS configuration</li>
+            </ul>
+            <div className="funded-creator-actions">
+              <a className="primary-button" href="/kickstarter-to-shopify">
+                Plan the next stage <span aria-hidden="true">↗</span>
+              </a>
+              <a href="#start-project">Get my free preview</a>
+            </div>
+            <small>Free previews are for creators with final artwork and products ready to sell.</small>
+          </div>
+        </section>
+
         <section className="problem-section section-pad">
           <div className="problem-copy" data-reveal>
             <h2>
@@ -452,7 +504,7 @@ export default function Home() {
               <span>Your store should feel like part of it.</span>
             </h2>
             <p>
-              Editions, expansions, bundles, add-ons and campaign stories all
+              Editions, expansions, bundles, add ons and campaign stories all
               need to work together. We build the Shopify store around them.
             </p>
           </div>
@@ -501,6 +553,9 @@ export default function Home() {
               Get my free preview <span aria-hidden="true">↗</span>
             </a>
           </div>
+          <p className="preview-scope-note">
+            Free previews are for creators with final artwork and products ready to sell.
+          </p>
         </section>
 
         <section
@@ -615,7 +670,7 @@ export default function Home() {
                   <div className="publish-status">
                     <div>
                       <strong>Ready to go</strong>
-                      <span>Everything is set.</span>
+                      <span>Pages and products checked</span>
                     </div>
                     <div className="publish-action">
                       Publish store
@@ -647,7 +702,7 @@ export default function Home() {
                 </div>
                 <div className="live-stamp">
                   <span>Shopify status</span>
-                  <strong>We&apos;re live</strong>
+                  <strong>Open for orders</strong>
                   <i />
                 </div>
               </div>
@@ -729,24 +784,9 @@ export default function Home() {
           </div>
         </section>
 
-        <PricingSection
-          id="pricing"
-          analyticsLocation="primary pricing"
-          showIntro={false}
-          showPromise
-        />
+        <PricingSection id="pricing" analyticsLocation="primary pricing" />
 
         <section className="styles-section section-pad" id="styles">
-          <div className="theme-entry" data-reveal>
-            <h2>Want to build it yourself?</h2>
-            <p>
-              Buy Guildframe, our premium Shopify theme purpose built for
-              tabletop games, then shape it around your world without code.
-            </p>
-            <a href="#start-project">
-              Get the theme <span aria-hidden="true">↗</span>
-            </a>
-          </div>
           <div className="styles-intro" data-reveal>
             <div>
               <h2>Four presets. One premium theme.</h2>
@@ -909,8 +949,6 @@ export default function Home() {
           </div>
         </section>
 
-        <PricingSection id="pricing-final" analyticsLocation="final pricing" />
-
         <section className="faq-section section-pad" id="faq">
           <div className="faq-heading" data-reveal>
             <h2>Questions, answered.</h2>
@@ -943,7 +981,7 @@ export default function Home() {
               <a className="footer-primary" href="#start-project">
                 Get my free preview <span aria-hidden="true">↗</span>
               </a>
-              <a className="footer-secondary" href="#start-project">
+              <a className="footer-secondary" href="/buy">
                 Get the theme
               </a>
             </div>
@@ -958,6 +996,33 @@ export default function Home() {
               loading="lazy"
               decoding="async"
             />
+          </div>
+        </section>
+
+        <section className="founder-section section-pad" aria-labelledby="founder-title">
+          <div className="founder-portrait" data-reveal>
+            <img
+              src="/images/guildframe-founder-portrait-v1.webp"
+              alt="The developer behind Guildframe"
+              width="1254"
+              height="1254"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div className="founder-copy" data-reveal>
+            <span className="founder-name">Umair Q.</span>
+            <span className="founder-role">Founder &amp; Developer</span>
+            <h2 id="founder-title">One specialist from first brief to final handoff.</h2>
+            <p>
+              Umair builds Shopify stores that help tabletop creators turn
+              finished worlds into clear, dependable places to sell.
+            </p>
+            <p>
+              He combines practical design and development with an understanding
+              of editions, expansions, preorders and growing product lines. Every
+              Guildframe project is planned, designed and built directly with him.
+            </p>
           </div>
         </section>
 
@@ -1005,7 +1070,7 @@ export default function Home() {
             <div>
               <strong>Get Guildframe</strong>
               <a href="#pricing">Pricing</a>
-              <a href={siteConfig.servicePath}>Done-for-you Shopify store</a>
+              <a href={siteConfig.servicePath}>Done for you Shopify store</a>
               <a href="#faq">FAQ</a>
               <a href="/guides">Guides</a>
               <a href="/resources">Reference library</a>

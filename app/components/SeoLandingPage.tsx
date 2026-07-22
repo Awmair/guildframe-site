@@ -64,6 +64,17 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
             },
             productData,
             breadcrumbData,
+            {
+              "@type": "FAQPage",
+              mainEntity: content.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            },
           ],
         }}
       />
@@ -85,7 +96,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               <div className="seo-actions">
                 <Link
                   className="seo-button"
-                  href="#start-project"
+                  href={siteConfig.purchasePath}
                   data-analytics-event="theme_interest"
                   data-analytics-label={`Get Guildframe for ${siteConfig.price}`}
                   data-analytics-location="solution hero"
@@ -102,7 +113,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               <div className="seo-proof-strip" aria-label="Guildframe highlights">
                 <span>Shopify underneath</span>
                 <span>Mobile responsive</span>
-                <span>$2,199 full build for up to 50 SKUs</span>
+                <span>$2,500 full build for up to 50 SKUs</span>
               </div>
             </div>
             <div className="seo-hero-visual">

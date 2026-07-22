@@ -113,6 +113,17 @@ export function SeoArticlePage({
                 },
               ],
             },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            },
           ],
         }}
       />
@@ -151,7 +162,7 @@ export function SeoArticlePage({
               ))}
             </nav>
             <Link
-              href="#start-project"
+              href={siteConfig.purchasePath}
               data-analytics-event="theme_interest"
               data-analytics-label="Get Guildframe theme"
               data-analytics-location="article sidebar"
@@ -195,13 +206,13 @@ export function SeoArticlePage({
               <h2>Choose how your Shopify store gets built.</h2>
               <p>
                 Hire Guildframe to design and develop your complete Shopify
-                storefront for $2,199, including up to 50 product SKUs, or buy
+                storefront for $2,500, including up to 50 product SKUs, or buy
                 the fully customizable Guildframe theme for $349.
               </p>
               <div className="article-cta-actions">
                 <Link
                   className="seo-button seo-button-light"
-                  href="#start-project"
+                  href={siteConfig.purchasePath}
                   data-analytics-event="theme_interest"
                   data-analytics-label="Get Guildframe theme"
                   data-analytics-location="article CTA"

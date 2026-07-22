@@ -39,7 +39,7 @@ export default function KickstarterToShopifyChecklistPage() {
       sidebarTitle="Migration phases"
       category="Shopify migration"
       title="Kickstarter to Shopify Migration Checklist"
-      description="A phase-by-phase reference for turning a funded tabletop campaign into a permanent Shopify store without confusing backers or rebuilding every asset."
+      description="A phase by phase reference for turning a funded tabletop campaign into a permanent Shopify store without confusing backers or rebuilding every asset."
       answer="A Kickstarter to Shopify migration has six phases: define each platform's role, convert rewards into retail products, map campaign assets to store pages, configure Shopify operations, test every customer path and launch with separate messaging for backers and new buyers."
       published="2026-07-17"
       updated="2026-07-17"
@@ -66,7 +66,7 @@ export default function KickstarterToShopifyChecklistPage() {
         headers={["System", "Source of truth for", "Do not use it to replace"]}
         rows={[
           ["Kickstarter", "Campaign, pledges, updates and backer context", "A permanent retail catalog"],
-          ["Pledge manager", "Surveys, upgrades, add-ons and fulfillment data", "Long-term brand commerce"],
+          ["Pledge manager", "Surveys, upgrades, add ons and fulfillment data", "Long term brand commerce"],
           ["Shopify", "New products, checkout, inventory and repeat customers", "Original campaign obligations"],
         ]}
       />
@@ -79,7 +79,7 @@ export default function KickstarterToShopifyChecklistPage() {
       </ul>
       <ArticleCallout>
         Shopify should become the permanent commerce layer, not a silent replacement
-        for existing campaign promises or pledge-manager records.
+        for existing campaign promises or pledge manager records.
       </ArticleCallout>
 
       <h2 id="products">Phase 2: convert campaign rewards into retail products</h2>
@@ -87,10 +87,10 @@ export default function KickstarterToShopifyChecklistPage() {
         <li>List every item that a new customer can actually buy</li>
         <li>Separate core games, deluxe editions, expansions, accessories and bundles</li>
         <li>Define product titles, handles, prices, SKUs, weights and inventory rules</li>
-        <li>Convert pledge choices into products or variants using customer-friendly labels</li>
+        <li>Convert pledge choices into products or variants using customer friendly labels</li>
         <li>Write a contents list for every edition and bundle</li>
         <li>Assign final hero images, gallery media and descriptive alt text</li>
-        <li>Mark preorder, backorder or in-stock status accurately</li>
+        <li>Mark preorder, backorder or in stock status accurately</li>
       </ul>
       <p>
         Use the <Link href="/resources/board-game-product-page-checklist">board game product page checklist</Link>
@@ -103,14 +103,14 @@ export default function KickstarterToShopifyChecklistPage() {
         rows={[
           ["Campaign hero and promise", "Homepage or featured collection", "Shorten and add a direct shopping route"],
           ["Reward tier chart", "Products, variants and bundles", "Rebuild around retail choices"],
-          ["Gameplay and components", "Product page", "Lead with decision-critical facts"],
+          ["Gameplay and components", "Product page", "Lead with decision critical facts"],
           ["Creator story", "About or campaign story", "Preserve identity and remove deadline language"],
           ["Campaign FAQ", "Product FAQ and policies", "Update shipping, returns and availability"],
           ["Updates and reviews", "News, testimonials or proof", "Keep only evergreen customer value"],
         ]}
       />
       <ul className="article-checklist">
-        <li>Audit every claim for outdated stretch goals, dates and campaign-only language</li>
+        <li>Audit every claim for outdated stretch goals, dates and campaign only language</li>
         <li>Compress and resize images for responsive delivery</li>
         <li>Replace pledge terminology with product and customer terminology</li>
         <li>Preserve useful proof such as reviews, awards, player quotes and campaign success</li>

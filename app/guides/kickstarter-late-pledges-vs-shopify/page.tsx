@@ -10,7 +10,7 @@ import { pageMetadata } from "../../site-config";
 export const metadata = pageMetadata({
   title: "Selling After Kickstarter: Late Pledges vs Shopify",
   description:
-    "Compare late pledges, preorders and Shopify for selling after Kickstarter. Choose the right post-campaign sales path without confusing backers.",
+    "Compare late pledges, preorders and Shopify for selling after Kickstarter. Choose the right post campaign sales path without confusing backers.",
   path: "/guides/kickstarter-late-pledges-vs-shopify",
   kind: "article",
   publishedTime: "2026-07-16",
@@ -31,12 +31,12 @@ const faqs = [
   {
     question: "Can I use Kickstarter Late Pledges and Shopify together?",
     answer:
-      "Yes, if the roles are clear. Late pledges can serve campaign-adjacent demand while Shopify becomes the long-term branded store. Keep pricing, availability, delivery timing and customer support instructions consistent across both.",
+      "Yes, if the roles are clear. Late pledges can serve campaign adjacent demand while Shopify becomes the long term branded store. Keep pricing, availability, delivery timing and customer support instructions consistent across both.",
   },
   {
     question: "Which option is better for preorders after Kickstarter?",
     answer:
-      "Use the option that matches the job. Late pledges may be simpler for eligible campaign rewards and campaign context. Shopify may be better for an ongoing preorder catalog, broader brand discovery and long-term customer operations. Your fulfillment and communication workflow should drive the choice.",
+      "Use the option that matches the job. Late pledges may be simpler for eligible campaign rewards and campaign context. Shopify may be better for an ongoing preorder catalog, broader brand discovery and long term customer operations. Your fulfillment and communication workflow should drive the choice.",
   },
   {
     question: "When should I stop accepting late pledges?",
@@ -49,10 +49,10 @@ export default function LatePledgesVsShopifyGuide() {
   return (
     <SeoArticlePage
       slug="kickstarter-late-pledges-vs-shopify"
-      category="Post-campaign strategy"
+      category="Post campaign strategy"
       title="Selling After Kickstarter: Late Pledges, Preorders or Shopify?"
       description="Demand does not disappear when the campaign closes. Compare the three practical ways to keep selling while protecting backer trust."
-      answer="After Kickstarter, use late pledges to extend eligible campaign rewards, preorders to sell a clearly defined future product and Shopify to build a permanent branded store. Many tabletop creators use a short campaign-adjacent late pledge period, then move ongoing preorders and retail sales to Shopify. Keep pricing, delivery timing and backer fulfillment boundaries consistent across every channel."
+      answer="After Kickstarter, use late pledges to extend eligible campaign rewards, preorders to sell a clearly defined future product and Shopify to build a permanent branded store. Many tabletop creators use a short campaign adjacent late pledge period, then move ongoing preorders and retail sales to Shopify. Keep pricing, delivery timing and backer fulfillment boundaries consistent across every channel."
       published="2026-07-16"
       updated="2026-07-18"
       readTime="7 minute read"
@@ -85,7 +85,7 @@ export default function LatePledgesVsShopifyGuide() {
       ]}
     >
       <ArticleDefinition term="Selling after Kickstarter">
-        The post-campaign stage where creators capture late demand through
+        The post campaign stage where creators capture late demand through
         campaign rewards, clearly labeled preorders or a permanent ecommerce
         catalog. Each route creates a different customer promise.
       </ArticleDefinition>
@@ -138,13 +138,13 @@ export default function LatePledgesVsShopifyGuide() {
         <li>The available rewards still match production and allocation.</li>
         <li>The delivery promise can be stated with confidence.</li>
         <li>Campaign context helps the buyer understand what they are supporting.</li>
-        <li>The team wants one more defined campaign-adjacent sales window.</li>
+        <li>The team wants one more defined campaign adjacent sales window.</li>
       </ul>
       <p>
         The limit is strategic: a reward page is not the same as a permanent product
         catalog. It may not be the place where a future customer discovers your
         second game, reads an evergreen guide, browses a full accessory range or
-        joins a long-term brand relationship.
+        joins a long term brand relationship.
       </p>
 
       <h2 id="preorders">Choose preorders when the product is defined but not ready to ship</h2>
@@ -164,7 +164,7 @@ export default function LatePledgesVsShopifyGuide() {
       <h2 id="shopify">Choose Shopify when you are building the permanent storefront</h2>
       <p>
         Shopify is the stronger fit when the goal extends beyond one campaign. It
-        lets creators reorganize rewards into customer-friendly products, build
+        lets creators reorganize rewards into customer friendly products, build
         collections, publish editorial pages, use a branded domain and develop an
         owned storefront for future launches.
       </p>
@@ -177,13 +177,13 @@ export default function LatePledgesVsShopifyGuide() {
       </ul>
       <p>
         The setup requirement is higher because you are building a real store. A
-        purpose-built <Link href="/kickstarter-to-shopify">Kickstarter to Shopify theme</Link> can reduce that work by giving campaign assets a suitable structure from the start.
+        purpose built <Link href="/kickstarter-to-shopify">Kickstarter to Shopify theme</Link> can reduce that work by giving campaign assets a suitable structure from the start.
       </p>
 
       <h2 id="both">Using late pledges and Shopify together</h2>
       <p>
         The two channels can overlap for a period, but they should not compete with
-        contradictory offers. Decide which channel serves campaign-era buyers and
+        contradictory offers. Decide which channel serves campaign era buyers and
         which serves the permanent market. Then align the facts.
       </p>
       <ol>
@@ -209,7 +209,7 @@ export default function LatePledgesVsShopifyGuide() {
         <Link href="/guides/sell-board-game-preorders-on-shopify"> board game preorders on Shopify</Link> before configuring inventory and customer communication.
       </p>
       <ArticleTable
-        caption="Decision framework for post-campaign sales"
+        caption="Decision framework for post campaign sales"
         headers={["If this is your priority", "Use this as the primary path"]}
         rows={[
           ["Extend the original reward window", "Kickstarter Late Pledges"],

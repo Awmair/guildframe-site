@@ -90,14 +90,14 @@ export default function WhatHappensAfterKickstarterPage() {
         { id: "fulfillment", label: "Production and fulfillment" },
         { id: "sales", label: "Ways to keep selling" },
         { id: "store", label: "When to build the store" },
-        { id: "roadmap", label: "Post-funding roadmap" },
+        { id: "roadmap", label: "Post funding roadmap" },
         { id: "faq", label: "Quick answers" },
       ]}
     >
       <ArticleDefinition term="After Kickstarter funding">
         The period after a successful campaign closes, when the project moves
         from pledges into payment collection, backer operations, production,
-        fulfillment and longer-term commerce.
+        fulfillment and longer term commerce.
       </ArticleDefinition>
 
       <h2 id="first-days">What happens in the first days after funding</h2>
@@ -111,7 +111,7 @@ export default function WhatHappensAfterKickstarterPage() {
         Kickstarter currently says the payout process begins 14 calendar days
         after the project deadline. Bank processing can take additional time.
         Treat the final collected amount, not the public campaign total alone,
-        as the basis for production and cash-flow decisions.
+        as the basis for production and cash flow decisions.
       </p>
       <ArticleCallout>
         <strong>Do not spend against the headline total too early.</strong> First
@@ -123,7 +123,7 @@ export default function WhatHappensAfterKickstarterPage() {
       <p>
         Once the project has ended successfully, the creator can use the backer
         report and the selected survey or pledge manager workflow to organize
-        reward choices, add-ons, shipping destinations and fulfillment status.
+        reward choices, add ons, shipping destinations and fulfillment status.
         Kickstarter notes that report data can continue changing as backers
         complete surveys, update addresses or receive refunds.
       </p>
@@ -139,11 +139,11 @@ export default function WhatHappensAfterKickstarterPage() {
         Funding is not the finish line. The creator still needs to finalize files,
         place production orders, inspect samples, manage freight, collect missing
         delivery information and send rewards. A simple internal source of truth
-        should show every reward, add-on, quantity, address state and fulfillment
+        should show every reward, add on, quantity, address state and fulfillment
         status.
       </p>
       <ArticleTable
-        caption="The post-funding operating sequence"
+        caption="The post funding operating sequence"
         headers={["Stage", "Creator responsibility", "Backer message"]}
         rows={[
           ["Payment collection", "Reconcile collected and dropped pledges", "Explain when the next update will arrive"],
@@ -161,7 +161,7 @@ export default function WhatHappensAfterKickstarterPage() {
         promise being made.
       </p>
       <ArticleTable
-        caption="Post-Kickstarter sales routes"
+        caption="Post Kickstarter sales routes"
         headers={["Route", "Use it for", "Avoid it when"]}
         rows={[
           ["Kickstarter Late Pledges", "Extending eligible campaign rewards", "The reward or production allocation is no longer reliable"],
@@ -190,16 +190,16 @@ export default function WhatHappensAfterKickstarterPage() {
       </p>
       <ul>
         <li>Reuse final campaign art, product explanations and creator story.</li>
-        <li>Separate campaign-only rewards from the permanent catalog.</li>
+        <li>Separate campaign only rewards from the permanent catalog.</li>
         <li>State preorder or delivery timing beside every purchase action.</li>
         <li>Test checkout, shipping, tax, email and inventory behavior.</li>
         <li>Tell backers whether the store changes anything about their fulfillment.</li>
       </ul>
       <p>
-        Use the <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link> for the complete storefront implementation sequence. Then choose the <Link href="/done-for-you-shopify-store">$2,199 Shopify store build for up to 50 product SKUs</Link> or <Link href="/buy">Guildframe&apos;s $349 tabletop theme</Link> based on how hands-on you want to be.
+        Use the <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link> for the complete storefront implementation sequence. Then choose the <Link href="/done-for-you-shopify-store">$2,500 Shopify store build for up to 50 product SKUs</Link> or <Link href="/buy">Guildframe&apos;s $349 tabletop theme</Link> based on how hands on you want to be.
       </p>
 
-      <h2 id="roadmap">A practical post-funding roadmap</h2>
+      <h2 id="roadmap">A practical post funding roadmap</h2>
       <ol className="article-checklist">
         <li>Reconcile collected pledges and the final working budget</li>
         <li>Confirm the survey, pledge manager and backer support workflow</li>
@@ -207,7 +207,7 @@ export default function WhatHappensAfterKickstarterPage() {
         <li>Publish a realistic backer communication schedule</li>
         <li>Define whether late pledges or preorders remain available</li>
         <li>Prepare the permanent product catalog and storefront</li>
-        <li>Test new-order operations before accepting public sales</li>
+        <li>Test new order operations before accepting public sales</li>
         <li>Keep backer fulfillment and new retail orders clearly separated</li>
       </ol>
       <p>

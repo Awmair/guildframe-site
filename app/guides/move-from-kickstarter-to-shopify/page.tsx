@@ -36,12 +36,12 @@ const faqs = [
   {
     question: "Does Shopify replace a pledge manager?",
     answer:
-      "Usually not. A pledge manager can handle surveys, upgrades, add-ons and fulfillment data for backers. Shopify is designed for ongoing ecommerce, product discovery, checkout and repeat customer relationships.",
+      "Usually not. A pledge manager can handle surveys, upgrades, add ons and fulfillment data for backers. Shopify is designed for ongoing ecommerce, product discovery, checkout and repeat customer relationships.",
   },
   {
     question: "How long does a Kickstarter to Shopify migration take?",
     answer:
-      "A focused catalog with final assets can be prepared quickly. Larger catalogs, complex variants, international tax, preorder rules or fulfillment integrations require more planning. Guildframe offers a $349 self-serve theme and a separate $2,199 store build for up to 50 product SKUs, with timing confirmed after the brief and final assets are reviewed.",
+      "A focused catalog with final assets can be prepared quickly. Larger catalogs, complex variants, international tax, preorder rules or fulfillment integrations require more planning. Guildframe offers a $349 self serve theme and a separate $2,500 store build for up to 50 product SKUs, with timing confirmed after the brief and final assets are reviewed.",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function MoveKickstarterToShopifyGuide() {
       category="Kickstarter to Shopify"
       title="Kickstarter to Shopify Migration Guide"
       description="Your campaign page proved demand. This guide shows how to turn the assets and product structure you already built into a permanent Shopify storefront."
-      answer="To move from Kickstarter to Shopify, finalize the products you will sell, separate campaign fulfillment from new store orders, reuse your strongest campaign assets, configure Shopify operations, test every buying path and launch with clear delivery language. The store complements Kickstarter and any pledge manager rather than replacing their campaign-specific jobs."
+      answer="To move from Kickstarter to Shopify, finalize the products you will sell, separate campaign fulfillment from new store orders, reuse your strongest campaign assets, configure Shopify operations, test every buying path and launch with clear delivery language. The store complements Kickstarter and any pledge manager rather than replacing their campaign specific jobs."
       published="2026-07-16"
       updated="2026-07-21"
       readTime="9 minute read"
@@ -86,7 +86,7 @@ export default function MoveKickstarterToShopifyGuide() {
       ]}
     >
       <ArticleDefinition term="Kickstarter to Shopify migration">
-        The operational move from a time-limited crowdfunding campaign to a
+        The operational move from a time limited crowdfunding campaign to a
         permanent Shopify catalog and customer journey. It does not mean copying
         backer data or campaign reward logic into Shopify without review.
       </ArticleDefinition>
@@ -99,12 +99,12 @@ export default function MoveKickstarterToShopifyGuide() {
         Kickstarter is where you present a project, gather pledges and communicate
         with backers around a campaign. Shopify is where you run an ongoing
         ecommerce business. The move is not a literal transfer of the campaign
-        page. It is a change from a time-bound funding experience to a permanent
+        page. It is a change from a time bound funding experience to a permanent
         product and customer experience.
       </p>
       <p>
         A pledge manager may sit between those stages. It can collect surveys,
-        shipping choices, upgrades and add-ons from backers. Shopify can then
+        shipping choices, upgrades and add ons from backers. Shopify can then
         become the public store for new orders, repeat purchases and future
         releases. Shopify also publishes a useful overview of the broader
         <a href="https://www.shopify.com/ca/blog/how-to-transition-from-kickstarter-to-shopify" target="_blank" rel="noreferrer"> Kickstarter to Shopify transition</a>.
@@ -114,7 +114,7 @@ export default function MoveKickstarterToShopifyGuide() {
         headers={["System", "Best at", "Not primarily designed for"]}
         rows={[
           ["Kickstarter", "Funding a defined creative project", "Running a permanent product catalog"],
-          ["Pledge manager", "Backer surveys, upgrades and fulfillment data", "Long-term brand discovery and retail browsing"],
+          ["Pledge manager", "Backer surveys, upgrades and fulfillment data", "Long term brand discovery and retail browsing"],
           ["Shopify", "Ongoing products, checkout, customers and content", "Managing the original crowdfunding campaign"],
         ]}
       />
@@ -130,7 +130,7 @@ export default function MoveKickstarterToShopifyGuide() {
         building pages, decide exactly what a new customer can buy and what happens
         after checkout.
       </p>
-      <h3>Convert rewards into a customer-friendly catalog</h3>
+      <h3>Convert rewards into a customer friendly catalog</h3>
       <p>
         Campaign rewards are often bundles built around pledge logic. Store
         products should be understandable without the campaign tier chart. Separate
@@ -154,7 +154,7 @@ export default function MoveKickstarterToShopifyGuide() {
       <p>
         Confirm shipping regions, tax settings, return policy, customer support
         address, payment methods and inventory location. If fulfillment is still in
-        progress, write one plain-language status statement that can appear on every
+        progress, write one plain language status statement that can appear on every
         relevant product page.
       </p>
 
@@ -174,7 +174,7 @@ export default function MoveKickstarterToShopifyGuide() {
           ["How to play", "Product page and supporting guide", "Keep the clearest proof and remove campaign repetition"],
           ["Creator story", "About or campaign story page", "Preserve trust while adding ongoing brand context"],
           ["Campaign FAQ", "Product FAQ and policy pages", "Update delivery, returns and availability"],
-          ["Updates", "News or journal", "Republish only evergreen, customer-relevant material"],
+          ["Updates", "News or journal", "Republish only evergreen, customer relevant material"],
         ]}
       />
       <p>
@@ -192,13 +192,13 @@ export default function MoveKickstarterToShopifyGuide() {
       </p>
       <ol>
         <li><strong>Create products first.</strong> Navigation and homepage sections should point to real product destinations.</li>
-        <li><strong>Choose a theme that supports the content.</strong> Look for strong product media, flexible sections, mobile clarity and readable long-form layouts.</li>
+        <li><strong>Choose a theme that supports the content.</strong> Look for strong product media, flexible sections, mobile clarity and readable long form layouts.</li>
         <li><strong>Build collections around customer language.</strong> Use labels such as Core Games, Expansions, Miniatures or Adventures rather than internal campaign terminology.</li>
         <li><strong>Connect operations.</strong> Configure checkout, payments, inventory, shipping, taxes, policies and essential apps.</li>
         <li><strong>Add analytics and search tools.</strong> Prepare measurement before the first public store visit.</li>
       </ol>
       <p>
-        A purpose-built option such as <Link href="/kickstarter-to-shopify">Guildframe&apos;s Kickstarter to Shopify system</Link> reduces design setup because the visual and content structure already anticipates tabletop products, editions and campaign storytelling.
+        A purpose built option such as <Link href="/kickstarter-to-shopify">Guildframe&apos;s Kickstarter to Shopify system</Link> reduces design setup because the visual and content structure already anticipates tabletop products, editions and campaign storytelling.
       </p>
       <p>
         Use the <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link> when you need to sequence this work around campaign close, asset delivery and store testing.
@@ -217,7 +217,7 @@ export default function MoveKickstarterToShopifyGuide() {
         <li>Only one clear H1 appears on each page.</li>
         <li>Canonical URLs, sitemap and robots rules are present.</li>
         <li>Product, organization, article and FAQ structured data match visible content.</li>
-        <li>No campaign-era delivery statement remains accidentally unchanged.</li>
+        <li>No campaign era delivery statement remains accidentally unchanged.</li>
       </ul>
 
       <h2 id="launch">6. Launch without confusing existing backers</h2>
@@ -242,7 +242,7 @@ export default function MoveKickstarterToShopifyGuide() {
         <li>Shipping, tax, payments, inventory and support configured</li>
         <li>Desktop and mobile buying paths tested</li>
         <li>Search metadata, schema, sitemap and internal links checked</li>
-        <li>Backer announcement and new-customer launch message prepared</li>
+        <li>Backer announcement and new customer launch message prepared</li>
       </ul>
       <p>
         The goal is not to recreate Kickstarter inside Shopify. It is to preserve the

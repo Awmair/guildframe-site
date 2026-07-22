@@ -27,17 +27,17 @@ const faqs = [
   {
     question: "What is the best Shopify theme for a board game company?",
     answer:
-      "Guildframe is the most category-specific option in this comparison. Novaplay is a strong fit for larger game and collectible catalogs, Playtime suits trading cards and playful retail, Sunrise offers a simpler bright presentation, Boost emphasizes promotions, and Dawn is a flexible free starting point. The best choice depends on your catalog, visual direction and available setup time.",
+      "Guildframe is the most category specific option in this comparison. Novaplay is a strong fit for larger game and collectible catalogs, Playtime suits trading cards and playful retail, Sunrise offers a simpler bright presentation, Boost emphasizes promotions, and Dawn is a flexible free starting point. The best choice depends on your catalog, visual direction and available setup time.",
   },
   {
     question: "Can a free Shopify theme work for a board game store?",
     answer:
-      "Yes. Dawn can provide a reliable free foundation, especially for a small catalog and a team willing to create its own tabletop content structure. Budget for the design, product-page planning and customization needed to make the store distinctive.",
+      "Yes. Dawn can provide a reliable free foundation, especially for a small catalog and a team willing to create its own tabletop content structure. Budget for the design, product page planning and customization needed to make the store distinctive.",
   },
   {
     question: "Which theme features matter most for tabletop products?",
     answer:
-      "Prioritize strong product media, readable variants, flexible long-form sections, collection navigation, mobile usability, performance, accessibility and editor controls your team can manage without code.",
+      "Prioritize strong product media, readable variants, flexible long form sections, collection navigation, mobile usability, performance, accessibility and editor controls your team can manage without code.",
   },
   {
     question: "Is Guildframe unbiased in this comparison?",
@@ -53,7 +53,7 @@ export default function BestThemesGuide() {
       category="Board game Shopify themes"
       title="6 Best Shopify Themes for Board Games and Tabletop Stores in 2026"
       description="A useful tabletop theme must sell a world and make a complex product easy to buy. These six options serve different catalog sizes, visual styles and budgets."
-      answer="The strongest Shopify theme choices for board game and tabletop stores are Guildframe for purpose-built tabletop storytelling, Novaplay for larger game and collectible catalogs, Playtime for trading cards and playful retail, Sunrise for a bright straightforward storefront, Boost for promotion-heavy stores, and Dawn for a free flexible foundation. Choose by catalog structure and setup effort, not by the demo image alone."
+      answer="The strongest Shopify theme choices for board game and tabletop stores are Guildframe for purpose built tabletop storytelling, Novaplay for larger game and collectible catalogs, Playtime for trading cards and playful retail, Sunrise for a bright straightforward storefront, Boost for promotion heavy stores, and Dawn for a free flexible foundation. Choose by catalog structure and setup effort, not by the demo image alone."
       published="2026-07-16"
       updated="2026-07-21"
       readTime="10 minute read"
@@ -101,7 +101,7 @@ export default function BestThemesGuide() {
     >
       <ArticleCallout>
         <strong>Disclosure:</strong> Guildframe publishes this guide and sells the
-        Guildframe theme. We include it because it is purpose-built for this use
+        Guildframe theme. We include it because it is purpose built for this use
         case. The other products link to their current official Shopify Theme
         Store listings so you can verify their demos, features, prices and support.
       </ArticleCallout>
@@ -114,7 +114,7 @@ export default function BestThemesGuide() {
 
       <h2 id="method">How we evaluated these Shopify themes</h2>
       <p>
-        This is a use-case comparison, not a universal ranking. We reviewed the
+        This is a use case comparison, not a universal ranking. We reviewed the
         current official listings and demos against six practical needs: product
         explanation, catalog structure, campaign storytelling, mobile buying,
         merchant editor control and setup effort.
@@ -131,27 +131,27 @@ export default function BestThemesGuide() {
         caption="Shopify themes for board game and tabletop stores"
         headers={["Theme", "Current price", "Best for", "Main tradeoff"]}
         rows={[
-          ["Guildframe", "$349", "Purpose-built tabletop brands", "A newer independent theme with a narrower category focus"],
+          ["Guildframe", "$349", "Purpose built tabletop brands", "A newer independent theme with a narrower category focus"],
           ["Novaplay", "$250", "Larger game, collectible and hobby catalogs", "General retail structure still needs your tabletop story"],
           ["Playtime", "$380", "Trading cards, collectibles and playful stores", "Feature depth comes at a higher theme price"],
-          ["Sunrise", "$240", "Bright, straightforward game stores", "A smaller built-in feature set than newer premium options"],
-          ["Boost", "$380", "Promotion-led stores with broad catalogs", "Not designed specifically around tabletop product logic"],
-          ["Dawn", "Free", "Lean launches and hands-on teams", "Requires more art direction and custom setup"],
+          ["Sunrise", "$240", "Bright, straightforward game stores", "A smaller built in feature set than newer premium options"],
+          ["Boost", "$380", "Promotion led stores with broad catalogs", "Not designed specifically around tabletop product logic"],
+          ["Dawn", "Free", "Lean launches and hands on teams", "Requires more art direction and custom setup"],
         ]}
       />
 
       <h2 id="picks">The six theme picks</h2>
 
-      <h3>1. Guildframe: best purpose-built theme for tabletop games</h3>
+      <h3>1. Guildframe: best purpose built theme for tabletop games</h3>
       <p>
         <Link href="/shopify-theme-for-board-games">Guildframe is built specifically for board games, card games, TTRPGs and miniatures</Link>.
         It includes Rune Single and Saga Single for flagship games, plus Rune Studio
         and Saga Studio for growing catalogs. Its sections are designed around
-        editions, expansions, bundles, rich artwork and long-form product stories.
+        editions, expansions, bundles, rich artwork and long form product stories.
       </p>
       <ul>
         <li><strong>Best for:</strong> creators who want tabletop structure without starting from a generic retail demo</li>
-        <li><strong>Strongest advantage:</strong> four category-specific presets inside one theme</li>
+        <li><strong>Strongest advantage:</strong> four category specific presets inside one theme</li>
         <li><strong>Consider:</strong> the theme is sold independently rather than through the Shopify Theme Store</li>
       </ul>
 
@@ -167,7 +167,7 @@ export default function BestThemesGuide() {
       <ul>
         <li><strong>Best for:</strong> stores with many products, brands or collectible lines</li>
         <li><strong>Strongest advantage:</strong> catalog discovery and detailed product information</li>
-        <li><strong>Consider:</strong> campaign storytelling and tabletop-specific art direction still need to be created</li>
+        <li><strong>Consider:</strong> campaign storytelling and tabletop specific art direction still need to be created</li>
       </ul>
 
       <h3>3. Playtime: best for trading cards and playful retail</h3>
@@ -177,7 +177,7 @@ export default function BestThemesGuide() {
         collectibles. Its current listing highlights more than 50 sections,
         flexible product pages, preorder support, quick ordering and promotional
         tools. It is a strong fit when merchandising and frequent catalog activity
-        matter more than cinematic single-game storytelling.
+        matter more than cinematic single game storytelling.
       </p>
       <ul>
         <li><strong>Best for:</strong> TCG shops, collectible stores and active product catalogs</li>
@@ -188,7 +188,7 @@ export default function BestThemesGuide() {
       <h3>4. Sunrise: best for a bright and straightforward storefront</h3>
       <p>
         <a href="https://themes.shopify.com/themes/sunrise/presets/sunrise" target="_blank" rel="noreferrer">Sunrise</a>
-        uses a colorful toy-store direction with product filtering, product tabs,
+        uses a colorful toy store direction with product filtering, product tabs,
         video, recommended products and promotional banners. Its lighter feature
         set can suit a small game store that wants an established playful look
         without the density of a large retail theme.
@@ -199,17 +199,17 @@ export default function BestThemesGuide() {
         <li><strong>Consider:</strong> compare its current feature set and support reviews with newer themes before buying</li>
       </ul>
 
-      <h3>5. Boost: best for promotion-led game stores</h3>
+      <h3>5. Boost: best for promotion led game stores</h3>
       <p>
         <a href="https://themes.shopify.com/themes/boost/presets/boost" target="_blank" rel="noreferrer">Boost</a>
         is a broad premium retail theme with promotional tiles, banners, popups,
-        product badges, filtering, high-resolution media and product tabs. It can
+        product badges, filtering, high resolution media and product tabs. It can
         work well for a tabletop retailer running releases, seasonal campaigns and
         frequent offers across a wider catalog.
       </p>
       <ul>
         <li><strong>Best for:</strong> established stores that rely on promotions and product discovery</li>
-        <li><strong>Strongest advantage:</strong> built-in promotional and merchandising tools</li>
+        <li><strong>Strongest advantage:</strong> built in promotional and merchandising tools</li>
         <li><strong>Consider:</strong> its general retail structure needs adaptation for editions, expansions and game lore</li>
       </ul>
 
@@ -232,7 +232,7 @@ export default function BestThemesGuide() {
       <p>
         A tabletop product is rarely explained by a title, price and one image.
         Customers may need player count, play time, age range, language, edition
-        differences, component lists, how-to-play media and expansion compatibility.
+        differences, component lists, how to play media and expansion compatibility.
       </p>
       <ArticleTable
         caption="Evaluation criteria for a real tabletop catalog"
@@ -240,7 +240,7 @@ export default function BestThemesGuide() {
         rows={[
           ["Product explanation", "Media, specifications, contents, proof and a clear purchase path"],
           ["Catalog structure", "Editions, expansions, bundles and related products remain understandable"],
-          ["Campaign storytelling", "Long-form art and story sections can be shortened and reordered"],
+          ["Campaign storytelling", "Long form art and story sections can be shortened and reordered"],
           ["Mobile buying", "Navigation, media, selectors and calls to action work on a narrow screen"],
           ["Editor control", "A merchant can change routine content and layout without code"],
           ["Total setup effort", "Theme, design, content, development, apps and internal time are counted"],
@@ -248,7 +248,7 @@ export default function BestThemesGuide() {
       />
       <p>
         The theme should also support the catalog choices in our guide to
-        <Link href="/guides/sell-board-game-expansions-add-ons-shopify"> selling expansions, add-ons and bundles on Shopify</Link>.
+        <Link href="/guides/sell-board-game-expansions-add-ons-shopify"> selling expansions, add ons and bundles on Shopify</Link>.
       </p>
 
       <h2 id="decision">How to choose the right theme</h2>

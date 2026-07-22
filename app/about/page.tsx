@@ -49,7 +49,7 @@ export default function AboutPage() {
             Guildframe designs and develops complete Shopify storefronts for
             board games, card games, TTRPGs, miniatures, terrain and tabletop
             accessories. For creators who prefer to build the store themselves,
-            Guildframe also offers a premium purpose-built theme.
+            Guildframe also offers a premium purpose built theme.
           </p>
           <p>
             The goal is simple: give tabletop brands a store that understands
@@ -67,11 +67,11 @@ export default function AboutPage() {
         <section>
           <h2>What Guildframe includes</h2>
           <ul className="trust-checklist">
-            <li>Four purpose-built presets: Rune Single, Rune Studio, Saga Single and Saga Studio</li>
+            <li>Four purpose built presets: Rune Single, Rune Studio, Saga Single and Saga Studio</li>
             <li>Responsive storefront layouts for phones, tablets and desktops</li>
-            <li>Product structures for editions, expansions, bundles and add-ons</li>
+            <li>Product structures for editions, expansions, bundles and add ons</li>
             <li>Campaign storytelling, FAQ, reviews, events, news and contact sections</li>
-            <li>A $2,199 Shopify design and development service for up to 50 product SKUs</li>
+            <li>A $2,500 Shopify design and development service for up to 50 product SKUs</li>
             <li>A separate $349 premium theme for creators who want to build it themselves</li>
             <li>Shopify products, checkout, inventory and payments underneath</li>
           </ul>
@@ -86,7 +86,7 @@ export default function AboutPage() {
           <h2>How we publish trustworthy guidance</h2>
           <p>
             Guildframe publishes practical guidance about tabletop ecommerce,
-            Shopify and post-campaign operations. Platform claims are checked
+            Shopify and post campaign operations. Platform claims are checked
             against primary documentation, commercial relationships are disclosed,
             and every guide shows its reviewed date and source list.
           </p>

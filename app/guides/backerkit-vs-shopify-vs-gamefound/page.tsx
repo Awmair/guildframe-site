@@ -22,12 +22,12 @@ const faqs = [
   {
     question: "Is BackerKit a replacement for Shopify?",
     answer:
-      "Not generally. BackerKit is closely associated with crowdfunding and post-campaign workflows such as surveys, add-ons and order management. Shopify is designed as a permanent ecommerce store. Some creators connect the systems rather than choosing only one.",
+      "Not generally. BackerKit is closely associated with crowdfunding and post campaign workflows such as surveys, add ons and order management. Shopify is designed as a permanent ecommerce store. Some creators connect the systems rather than choosing only one.",
   },
   {
     question: "Is Gamefound a pledge manager or a crowdfunding platform?",
     answer:
-      "Gamefound supports crowdfunding and post-campaign pledge management workflows. The exact features and terms can change, so review the current official platform documentation for your project and region.",
+      "Gamefound supports crowdfunding and post campaign pledge management workflows. The exact features and terms can change, so review the current official platform documentation for your project and region.",
   },
   {
     question: "Can BackerKit orders be sent to Shopify?",
@@ -48,7 +48,7 @@ export default function BackerkitShopifyGamefoundGuide() {
       category="Platform comparison"
       title="BackerKit vs Shopify vs Gamefound: What Each Platform Does After Crowdfunding"
       description="These platforms are often compared as if they do the same job. Separate crowdfunding, pledge management and permanent ecommerce before choosing your stack."
-      answer="BackerKit is strongest around crowdfunding and post-campaign backer workflows, Shopify is strongest as a permanent branded ecommerce store, and Gamefound combines tabletop crowdfunding with pledge management capabilities. The right setup depends on whether you are funding a project, managing backer orders or selling products long term."
+      answer="BackerKit is strongest around crowdfunding and post campaign backer workflows, Shopify is strongest as a permanent branded ecommerce store, and Gamefound combines tabletop crowdfunding with pledge management capabilities. The right setup depends on whether you are funding a project, managing backer orders or selling products long term."
       published="2026-07-16"
       updated="2026-07-18"
       readTime="8 minute read"
@@ -80,7 +80,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         { id: "faq", label: "Quick answers" },
       ]}
     >
-      <ArticleDefinition term="Post-campaign platform stack">
+      <ArticleDefinition term="Post campaign platform stack">
         The smallest set of systems that covers crowdfunding, backer choices,
         fulfillment data and permanent ecommerce while keeping one clear owner for
         each order type and customer promise.
@@ -96,7 +96,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         caption="BackerKit, Shopify and Gamefound primary roles"
         headers={["Platform", "Primary role", "Strongest fit after funding"]}
         rows={[
-          ["BackerKit", "Crowdfunding and backer management", "Surveys, add-ons, order data and campaign workflows"],
+          ["BackerKit", "Crowdfunding and backer management", "Surveys, add ons, order data and campaign workflows"],
           ["Shopify", "Permanent ecommerce", "Public catalog, checkout, content and ongoing customer operations"],
           ["Gamefound", "Tabletop crowdfunding and pledge management", "Campaign continuation and backer pledge workflows"],
         ]}
@@ -110,22 +110,22 @@ export default function BackerkitShopifyGamefoundGuide() {
       <h2 id="backerkit">Where BackerKit fits</h2>
       <p>
         BackerKit is widely used around crowdfunding. After a campaign, a creator may
-        need to collect addresses, confirm choices, offer upgrades, sell add-ons,
+        need to collect addresses, confirm choices, offer upgrades, sell add ons,
         calculate shipping and prepare reliable fulfillment data. That work is much
         closer to pledge management than ordinary retail checkout.
       </p>
       <p>
         BackerKit also publishes guidance on
-        <a href="https://www.backerkit.com/blog/guides/post-campaign-guide/chapter-4-planning-for-pre-orders/" target="_blank" rel="noreferrer"> planning post-campaign preorders</a>
+        <a href="https://www.backerkit.com/blog/guides/post-campaign-guide/chapter-4-planning-for-pre-orders/" target="_blank" rel="noreferrer"> planning post campaign preorders</a>
         and documents how eligible
         <a href="https://help.backerkit.com/article/659-how-are-orders-pushed-from-backerkit-to-shopify" target="_blank" rel="noreferrer"> BackerKit orders can be pushed to Shopify</a>.
         Those connections illustrate the complementary model: manage campaign data
-        in a campaign-oriented system, then use Shopify where it supports ongoing
+        in a campaign oriented system, then use Shopify where it supports ongoing
         operations.
       </p>
       <ul>
-        <li><strong>Choose it when:</strong> backer surveys, add-ons, upgrades and fulfillment data are central.</li>
-        <li><strong>Do not assume:</strong> that a campaign or preorder surface replaces the need for a long-term branded store.</li>
+        <li><strong>Choose it when:</strong> backer surveys, add ons, upgrades and fulfillment data are central.</li>
+        <li><strong>Do not assume:</strong> that a campaign or preorder surface replaces the need for a long term branded store.</li>
         <li><strong>Check carefully:</strong> current fees, supported integrations, order mapping and tax or shipping responsibilities.</li>
       </ul>
 
@@ -149,7 +149,7 @@ export default function BackerkitShopifyGamefoundGuide() {
       </ul>
       <p>
         Guildframe sits inside this Shopify stage. It provides a
-        <Link href="/shopify-theme-for-board-games"> purpose-built tabletop Shopify theme</Link>
+        <Link href="/shopify-theme-for-board-games"> purpose built tabletop Shopify theme</Link>
         and setup service, not a crowdfunding or pledge management system.
       </p>
 
@@ -157,14 +157,14 @@ export default function BackerkitShopifyGamefoundGuide() {
       <p>
         Gamefound is closely associated with tabletop crowdfunding and pledge
         management. That category fit can be valuable for creators who want campaign
-        discovery, tabletop-aware reward structures and post-campaign pledge
+        discovery, tabletop aware reward structures and post campaign pledge
         workflows in a connected environment.
       </p>
       <p>
-        Gamefound&apos;s own knowledge base describes a pledge-manager flow in which
-        backers select rewards and add-ons, provide shipping information and submit
+        Gamefound&apos;s own knowledge base describes a pledge manager flow in which
+        backers select rewards and add ons, provide shipping information and submit
         the pledge or order. Review the current
-        <a href="https://help.gamefound.com/article/97-how-can-i-pledge" target="_blank" rel="noreferrer"> Gamefound pledge-manager instructions</a>
+        <a href="https://help.gamefound.com/article/97-how-can-i-pledge" target="_blank" rel="noreferrer"> Gamefound pledge manager instructions</a>
         before designing an operational handoff.
       </p>
       <p>
@@ -175,7 +175,7 @@ export default function BackerkitShopifyGamefoundGuide() {
       </p>
       <ul>
         <li><strong>Choose it when:</strong> tabletop crowdfunding and pledge workflows are central to the project.</li>
-        <li><strong>Do not assume:</strong> the campaign page is the ideal forever-home for a growing retail catalog.</li>
+        <li><strong>Do not assume:</strong> the campaign page is the ideal forever home for a growing retail catalog.</li>
         <li><strong>Confirm directly:</strong> current campaign requirements, fees, pledge management features and data export options.</li>
       </ul>
 
@@ -187,7 +187,7 @@ export default function BackerkitShopifyGamefoundGuide() {
           ["You are raising funds for a new tabletop project", "BackerKit or Gamefound crowdfunding", "Shopify prepared for later retail"],
           ["You funded on Kickstarter and need surveys and upgrades", "A suitable pledge manager", "Shopify for ongoing sales"],
           ["Your game is fulfilled and you are growing retail sales", "Shopify", "Crowdfunding platform for future launches"],
-          ["You need a limited post-campaign order window", "Late pledge or pledge manager flow", "Shopify as the permanent destination"],
+          ["You need a limited post campaign order window", "Late pledge or pledge manager flow", "Shopify as the permanent destination"],
           ["You have several released games and expansions", "Shopify", "Campaign tools only when launching a new project"],
         ]}
       />
@@ -214,7 +214,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         <li><strong>Give customers one clear support path.</strong> Tell backers and retail customers where to ask for help.</li>
       </ol>
       <ArticleCallout>
-        BackerKit vs Shopify vs Gamefound is rarely a winner-takes-all question. The
+        BackerKit vs Shopify vs Gamefound is rarely a winner takes all question. The
         better question is which system should own each stage, and how cleanly the
         data and customer promise move between them.
       </ArticleCallout>

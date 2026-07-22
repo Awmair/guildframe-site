@@ -1,13 +1,13 @@
 # Guildframe search intent map
 
-Last reviewed: 2026-07-21
+Last reviewed: 2026-07-23
 
 Each query family has one primary page. Supporting pages must link to the primary
 page and serve a different stage of the decision instead of repeating it.
 
 | Primary intent | Primary page | Page job | Supporting page |
 | --- | --- | --- | --- |
-| Shopify developer for tabletop games | `/done-for-you-shopify-store` | $2,199 design and development service for up to 50 product SKUs | Homepage service, comparison and pricing sections |
+| Shopify developer for tabletop games | `/done-for-you-shopify-store` | $2,500 design and development service for up to 50 product SKUs | Homepage service, comparison and pricing sections |
 | Buy Guildframe theme | `/buy` | $349 self-serve theme offer, requirements and checkout | Homepage DIY pricing section |
 | Board game Shopify theme | `/shopify-theme-for-board-games` | Commercial category solution | `/guides/best-shopify-themes-for-board-games` provides neutral evaluation criteria |
 | Kickstarter to Shopify solution | `/kickstarter-to-shopify` | Commercial post-campaign storefront solution and choice of build path | Migration guides explain implementation; the done-for-you page owns service intent |
@@ -21,6 +21,9 @@ page and serve a different stage of the decision instead of repeating it.
 | Kickstarter to Shopify timeline | `/guides/kickstarter-to-shopify-launch-timeline` | Sequencing and launch readiness | Migration guide explains the full operational process |
 | Board game preorders on Shopify | `/guides/sell-board-game-preorders-on-shopify` | Preorder setup and communication | Late Pledges guide chooses the channel |
 | Board game expansions and add-ons | `/guides/sell-board-game-expansions-add-ons-shopify` | Product, variant and bundle architecture | Product-page checklist handles page-level QA |
+| International miniature sales, VAT and IOSS | `/guides/selling-miniatures-internationally-vat-ioss` | Cross border product data, tax, customs and shipping readiness | Miniatures solution page owns commercial theme intent |
+| Board game website cost | `/guides/how-much-does-a-board-game-website-cost` | Platform, build and ongoing cost explanation | Developer vs DIY guide owns the route decision |
+| Shopify vs Etsy for miniatures | `/guides/shopify-vs-etsy-for-selling-miniatures` | Marketplace versus owned store decision | Miniatures solution page owns the Shopify offer |
 | About Guildframe | `/about` | Brand, product and company entity trust | Product pages link here for organization context |
 | Guildframe editorial standards | `/editorial-policy` | Research, sourcing and correction policy | Author page identifies the responsible team |
 | Guildframe Editorial Team | `/authors/guildframe` | Organization author profile and expertise | Guides and references use this stable author entity |
@@ -36,6 +39,6 @@ page and serve a different stage of the decision instead of repeating it.
 - Do not create a new page for a synonym or minor long-tail variation.
 - Expand the existing primary page when the buyer intent is the same.
 - Use canonical URLs and redirects for alternate historical paths.
-- Keep the $349 theme and $2,199 service for up to 50 product SKUs distinct and identical across the
+- Keep the $349 theme and $2,500 service for up to 50 product SKUs distinct and identical across the
   homepage, offer pages, Gumroad and structured data.
 - Review queries in Search Console and Bing before adding another landing page.

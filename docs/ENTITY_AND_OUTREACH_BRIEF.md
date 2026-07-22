@@ -1,6 +1,6 @@
 # Guildframe entity and outreach brief
 
-Last reviewed: 2026-07-21
+Last reviewed: 2026-07-23
 
 ## Canonical facts
 
@@ -9,7 +9,8 @@ Last reviewed: 2026-07-21
 - Category: Shopify design and development specialist plus premium DIY theme for tabletop creators
 - Primary audience: board games, card games, TTRPGs, miniatures, terrain and tabletop accessories
 - Theme price: USD 349 one time
-- Shopify design and development service: USD 2,199 for creators and studios with up to 50 product SKUs
+- Shopify design and development service: USD 2,500 for creators and studios with up to 50 product SKUs
+- Care Plan: USD 99 per month after a Guildframe store build
 - Service scope: storefront design and development from an empty Shopify store to a publish-ready build using supplied final content and assets
 - Platform requirement: an active Shopify store
 - Editorial entity: Guildframe Editorial Team
@@ -30,6 +31,8 @@ endorsements until they exist and can be verified.
    - Operational hook: preorder communication and Kickstarter boundary guidance.
 4. `/guides/sell-board-game-expansions-add-ons-shopify`
    - Catalog hook: product, variant, bundle and compatibility decisions.
+5. `/guides/selling-miniatures-internationally-vat-ioss`
+   - International sales hook: current EU VAT, IOSS, customs data and customer promise checklist.
 
 ## Relevant independent audiences
 
