@@ -172,8 +172,8 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
   assert.doesNotMatch(robots, /Content-Signal:/i);
   assert.match(robots, /Sitemap: http:\/\/localhost:3000\/sitemap\.xml/i);
   assert.doesNotMatch(sitemap, /<changefreq>|<priority>/i);
-  assert.equal((sitemap.match(/<lastmod>2026-0(?:7-(?:17|18|19|21|23)|8-09)T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
-  assert.match(sitemap, /<lastmod>2026-08-09T00:00:00.000Z<\/lastmod>/);
+  assert.equal((sitemap.match(/<lastmod>2026-0(?:7-(?:17|18|19|21|23)|8-(?:09|13))T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
+  assert.match(sitemap, /<lastmod>2026-08-13T00:00:00.000Z<\/lastmod>/);
   assert.match(llms, /^# Guildframe$/m);
   assert.match(llms, /https:\/\/guildframe\.com\/done-for-you-shopify-store/i);
   assert.match(llms, /\$2,500/);
@@ -211,15 +211,15 @@ test("exports AEO and social metadata", async () => {
   const modifiedDates = new Map([
     ["/guides/what-happens-after-kickstarter-is-funded", "2026-08-09"],
     ["/guides/move-from-kickstarter-to-shopify", "2026-08-09"],
-    ["/guides/best-shopify-themes-for-board-games", "2026-08-09"],
+    ["/guides/best-shopify-themes-for-board-games", "2026-08-13"],
     ["/guides/shopify-developer-vs-diy-theme", "2026-08-09"],
     ["/guides/kickstarter-to-shopify-launch-timeline", "2026-07-21"],
     ["/guides/kickstarter-late-pledges-vs-shopify", "2026-07-18"],
     ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-07-18"],
     ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "2026-07-18"],
     ["/guides/selling-miniatures-internationally-vat-ioss", "2026-07-23"],
-    ["/guides/how-much-does-a-board-game-website-cost", "2026-08-09"],
-    ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-07-23"],
+    ["/guides/how-much-does-a-board-game-website-cost", "2026-08-13"],
+    ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-08-13"],
     ["/guides/build-a-tabletop-shopify-store-with-ai", "2026-08-09"],
     ["/resources/tabletop-shopify-metafield-schema", "2026-08-09"],
   ]);
@@ -269,13 +269,13 @@ test("exports AEO and social metadata", async () => {
   );
   assert.match(
     await readPage("/authors/guildframe"),
-    /"dateModified":"2026-07-18"/i,
+    /"dateModified":"2026-08-13"/i,
   );
   assert.match(await readPage("/resources"), /"@type":"CollectionPage"/i);
 
   const homepage = await readPage("/");
-  assert.match(homepage, /og-guildframe-offers-v6\.jpg/i);
-  assert.match(homepage, /"image":"http:\/\/localhost:3000\/og-guildframe-offers-v6\.jpg"/i);
+  assert.match(homepage, /og-guildframe-offers-v7\.jpg/i);
+  assert.match(homepage, /"image":"http:\/\/localhost:3000\/og-guildframe-offers-v7\.jpg"/i);
   assert.match(homepage, /"availability":"https:\/\/schema\.org\/InStock"/i);
   assert.match(homepage, /"@type":"Organization"/i);
   assert.match(homepage, /"@type":"Service"/i);
@@ -404,6 +404,81 @@ async function collectSourceFiles(directory) {
   return files;
 }
 
+const retiredOfferPrice = /\$(?:349|419|1,399|2,199)\b|\b(?:349|419|1,399|2,199)\s+dollars?\b/i;
+const retiredPresetName = /\b(?:Rune Single|Rune Studio|Saga Single|Saga Studio|Nightbanner|Brightmarch|Vaultmark)\b/i;
+const guildframeThemeClaim = [
+  /\bthe Guildframe (?:DIY |Shopify |tabletop |premium )?theme\b/i,
+  /\bGuildframe(?:'s|&apos;s)? (?:DIY |Shopify |tabletop |premium )?theme\b/i,
+  /\bGuildframe (?:offers?|provides?|sells?) (?:an? )?(?:(?:\$[\d,]+|[\d,]+ dollars?) )?(?:DIY |Shopify |tabletop |premium )*theme\b/i,
+  /\b(?:buy|purchase|order|get) (?:a |the )?(?:DIY |Shopify |tabletop |premium )*theme (?:from|by) Guildframe\b/i,
+];
+const commercialOfferPaths = new Set([
+  "/",
+  "/buy",
+  "/about",
+  "/done-for-you-shopify-store",
+  "/kickstarter-to-shopify",
+  "/shopify-theme-for-board-games",
+  "/shopify-theme-for-ttrpg",
+  "/shopify-theme-for-miniatures",
+]);
+
+const visibleText = (html) => html
+  .replace(/<script[\s\S]*?<\/script>/gi, " ")
+  .replace(/<style[\s\S]*?<\/style>/gi, " ")
+  .replace(/<[^>]+>/g, " ")
+  .replace(/&[a-zA-Z0-9#]+;/g, " ")
+  .replace(/\s+/g, " ");
+
+const sourceCustomerCopy = (source) => source
+  .replace(/\b(?:href|src)\s*=\s*["'`][^"'`]*["'`]/gi, " ")
+  .replace(/\b(?:image|path|url)\s*:\s*["'`][^"'`]*["'`]/gi, " ");
+
+function assertNoRetiredOfferClaims(copy, label) {
+  assert.doesNotMatch(copy, retiredPresetName, label);
+  for (const pattern of guildframeThemeClaim) {
+    assert.doesNotMatch(copy, pattern, label);
+  }
+
+  for (const sentence of copy.split(/[.!?]/)) {
+    if (!retiredOfferPrice.test(sentence)) continue;
+    if (/\bGuildframe\b[^.!?]{0,120}\b(?:does not|doesn't|is not)\b[^.!?]{0,40}\btheme\b/i.test(sentence)) {
+      continue;
+    }
+    assert.doesNotMatch(
+      sentence,
+      /\bGuildframe\b/i,
+      `retired Guildframe offer price in ${label}: ${sentence.trim()}`,
+    );
+  }
+}
+
+test("keeps retired Guildframe offer claims out of operational source and customer copy", async () => {
+  const appRoot = new URL("../app/", import.meta.url);
+  const files = await collectSourceFiles(appRoot);
+  const envExample = await readFile(new URL("../.env.example", import.meta.url), "utf8");
+  const preflight = await readFile(new URL("../scripts/launch-preflight.mjs", import.meta.url), "utf8");
+
+  assert.match(envExample, /^NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED=false$/m);
+  assert.doesNotMatch(envExample, /NEXT_PUBLIC_THEME_CHECKOUT_ENABLED/);
+  assert.match(preflight, /process\.env\.NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED/);
+  assert.doesNotMatch(preflight, /NEXT_PUBLIC_THEME_CHECKOUT_ENABLED|Theme checkout/);
+
+  for (const file of files) {
+    const source = await readFile(file, "utf8");
+    assert.doesNotMatch(source, /NEXT_PUBLIC_THEME_CHECKOUT_ENABLED/, file.pathname);
+    assertNoRetiredOfferClaims(sourceCustomerCopy(source), file.pathname);
+  }
+
+  for (const [path] of pages) {
+    const copy = visibleText(await readPage(path));
+    assertNoRetiredOfferClaims(copy, path);
+    if (commercialOfferPaths.has(path)) {
+      assert.doesNotMatch(copy, retiredOfferPrice, path);
+    }
+  }
+});
+
 test("keeps copy and responsive mockups clean", async () => {
   const appRoot = new URL("../app/", import.meta.url);
   const files = await collectSourceFiles(appRoot);
@@ -416,12 +491,8 @@ test("keeps copy and responsive mockups clean", async () => {
 
   for (const [path] of pages) {
     const html = await readPage(path);
-    const visibleText = html
-      .replace(/<script[\s\S]*?<\/script>/gi, " ")
-      .replace(/<style[\s\S]*?<\/style>/gi, " ")
-      .replace(/<[^>]+>/g, " ")
-      .replace(/&[a-zA-Z0-9#]+;/g, " ");
-    assert.doesNotMatch(visibleText, /[\u2013\u2014]|\b[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\b/u, path);
+    const copy = visibleText(html);
+    assert.doesNotMatch(copy, /[\u2013\u2014]|\b[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\b/u, path);
   }
 
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
@@ -454,12 +525,12 @@ const readableDate = (iso) => {
 // drift apart. A hardcoded visible date previously survived several content
 // updates because nothing compared it with app/content-dates.ts.
 const datedPages = new Map([
-  ["/about", "2026-08-09"],
-  ["/editorial-policy", "2026-07-21"],
-  ["/authors/guildframe", "2026-07-18"],
+  ["/about", "2026-08-13"],
+  ["/editorial-policy", "2026-08-13"],
+  ["/authors/guildframe", "2026-08-13"],
   ["/guides/what-happens-after-kickstarter-is-funded", "2026-08-09"],
   ["/guides/move-from-kickstarter-to-shopify", "2026-08-09"],
-  ["/guides/best-shopify-themes-for-board-games", "2026-08-09"],
+  ["/guides/best-shopify-themes-for-board-games", "2026-08-13"],
   ["/guides/shopify-developer-vs-diy-theme", "2026-08-09"],
   ["/guides/kickstarter-late-pledges-vs-shopify", "2026-07-18"],
   ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-07-18"],
@@ -467,8 +538,8 @@ const datedPages = new Map([
   ["/guides/sell-board-game-preorders-on-shopify", "2026-07-17"],
   ["/guides/sell-board-game-expansions-add-ons-shopify", "2026-07-17"],
   ["/guides/selling-miniatures-internationally-vat-ioss", "2026-07-23"],
-  ["/guides/how-much-does-a-board-game-website-cost", "2026-08-09"],
-  ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-07-23"],
+  ["/guides/how-much-does-a-board-game-website-cost", "2026-08-13"],
+  ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-08-13"],
   ["/guides/build-a-tabletop-shopify-store-with-ai", "2026-08-09"],
   ["/resources/board-game-shopify-store-checklist", "2026-07-17"],
   ["/resources/kickstarter-to-shopify-migration-checklist", "2026-07-17"],

@@ -1,6 +1,6 @@
 # Guildframe AI visibility measurement
 
-Last reviewed: 2026-08-09
+Last reviewed: 2026-08-13
 
 ## What is measured
 
@@ -39,10 +39,10 @@ Review Bing Webmaster Tools AI Performance monthly:
 - citation trend
 - topics and intents when available
 
-Record both the number and the exact pages cited. A citation that states the wrong
-guide price, service price or platform requirement, or that describes Guildframe
-as selling a Shopify theme, is an accuracy problem even when the visibility
-number increases.
+Record both the number and the exact pages cited. A citation that states the
+wrong guide price, service scope, Care Plan terms, preview timing or platform
+requirement, or that describes Guildframe as selling a Shopify theme, is an
+accuracy problem even when the visibility number increases.
 
 ## Fixed monthly prompt set
 
@@ -57,7 +57,8 @@ Use the same prompts in ChatGPT search, Bing Copilot and Google generative searc
 7. BackerKit vs Shopify vs Gamefound after crowdfunding?
 8. What should a board game Shopify product page include?
 9. How many tabletop game projects funded on Kickstarter in 2024?
-10. What do the Guildframe build guide and done for you store service cost?
+10. What do the Guildframe Build Guide, done for you store and Care Plan cost?
+11. Does Guildframe offer a free tailored Shopify store preview, and how quickly?
 
 For each prompt, record whether Guildframe was mentioned, linked, cited and
 accurately summarized. Keep screenshots or exported dashboard evidence where the

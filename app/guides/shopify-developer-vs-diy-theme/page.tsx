@@ -221,7 +221,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       </ol>
       <p>
         If the answers point toward a hands on build, review the
-        <Link href="/buy"> Guildframe DIY theme</Link>. If they point toward a
+        <Link href="/buy"> Guildframe Build Guide</Link>. If they point toward a
         completed storefront, send the project brief and use the free preview to
         judge the direction before moving forward.
       </p>

@@ -22,7 +22,7 @@ export const boardGameContent: LandingPageContent = {
   highlight: "complete worlds.",
   answer:
     "Guildframe designs and develops complete Shopify storefronts for board game creators and publishers for $2,500, including up to 50 product SKUs. Prefer to build it yourself? The $79 Guildframe Build Guide shows you how to do it with AI coding tools.",
-  image: "/images/pdp-guildframe-responsive-v1.jpg",
+  image: "/images/pdp-board-game-store-responsive-v2.jpg",
   imageAlt:
     "A board game product page displayed on desktop and mobile",
   audience: "board games, card games, expansions and collector editions",
@@ -118,7 +118,7 @@ export const ttrpgContent: LandingPageContent = {
   highlight: "stories that keep expanding.",
   answer:
     "Guildframe builds Shopify storefronts for TTRPG publishers and independent creators for $2,500, including up to 50 product SKUs. Present core books, supplements, adventures, dice and accessories inside a mobile friendly store that grows with your world, or build it yourself with the $79 build guide.",
-  image: "/images/pdp-nightbanner-responsive-v1.jpg",
+  image: "/images/pdp-ttrpg-store-responsive-v2.jpg",
   imageAlt: "A TTRPG product page shown on desktop and mobile",
   audience: "TTRPG books, adventures, supplements, dice and accessories",
   benefits: [
@@ -213,7 +213,7 @@ export const miniaturesContent: LandingPageContent = {
   highlight: "detail feel valuable.",
   answer:
     "Guildframe builds Shopify storefronts for miniature studios, terrain makers and tabletop accessory brands for $2,500, including up to 50 product SKUs. Detailed photography, scales, variants, collections and campaign stories get a polished store, or build it yourself with the $79 build guide.",
-  image: "/images/pdp-vaultmark-responsive-v1.jpg",
+  image: "/images/pdp-miniatures-store-responsive-v2.jpg",
   imageAlt: "A miniature and collector product page on desktop and mobile",
   audience: "miniatures, terrain, hobby tools and collector products",
   benefits: [

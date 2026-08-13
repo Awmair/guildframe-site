@@ -1,135 +1,138 @@
 # Guildframe Cloudflare Pages deployment
 
-This project is a static Next.js export designed for Cloudflare Pages' free
-tier. GitHub stores the source. Cloudflare's own Git integration builds and
-deploys it, so GitHub Actions is not involved.
+Last reviewed: 2026-08-13
 
-## 1. Complete the launch settings
+Guildframe is a static Next.js export deployed through the existing Cloudflare
+Pages Git integration. GitHub stores the source, Cloudflare builds `main`, and
+GitHub Actions is not used for deployment.
 
-Create a local `.env.local` from `.env.example` for production-equivalent
-testing. Never commit `.env.local`.
+## Current production configuration
 
-| Variable | Required | Value |
+| Variable | Production state | Purpose |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Yes | `https://guildframe.com` |
-| `NEXT_PUBLIC_CHECKOUT_URL` | Later | Final Gumroad payment or product URL |
-| `NEXT_PUBLIC_THEME_CHECKOUT_ENABLED` | Later | Set to `true` only when the final purchase link is ready |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Later | GA4 web stream ID beginning with `G-` |
-| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional | Google HTML verification token; leave empty when using DNS verification |
+| `NEXT_PUBLIC_SITE_URL` | Configured as `https://guildframe.com` | Canonicals, Open Graph URLs, sitemap entries and schema identifiers |
+| `NEXT_PUBLIC_CHECKOUT_URL` | Inactive while checkout is closed | Final HTTPS payment or product URL |
+| `NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED` | Effective value `false` | Keeps `/buy` in its honest checkout-pending state |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Configured | Loads the production GA4 stream |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional | HTML verification token; unnecessary when Search Console uses DNS verification |
 
-The strict build requires the production domain. Checkout and GA4 are optional:
-the purchase page shows a clear launch-pending state without Gumroad, and the
-analytics component stays disabled until a valid GA4 ID is configured.
+The live homepage currently confirms the production origin and GA4 loader. Do
+not replace working Cloudflare values with placeholders from `.env.example`.
+All `NEXT_PUBLIC_*` values are embedded in public output, so none may contain a
+secret.
 
-## 2. Verify the release locally
+## Pages project settings
 
-```bash
-npm test
-npm run build:pages:local
-npm run preflight:strict
-```
-
-For the final local static build, the environment variables above must be
-available in the shell or `.env.local`. The deployable output is `out/`.
-
-## 3. Push the source to GitHub
-
-Create a private or public GitHub repository, then push this project to its
-`main` branch. Do not add anything under `.github/workflows/`.
-
-Keep these out of Git:
-
-- `.env.local`
-- `node_modules/`
-- `.next/`
-- `out/`
-- `dist/`
-
-## 4. Connect GitHub directly to Cloudflare Pages
-
-In Cloudflare:
-
-1. Open **Workers & Pages**.
-2. Choose **Create application**, then **Pages**, then **Connect to Git**.
-3. Authorize the Cloudflare Workers & Pages GitHub App for only the Guildframe
-   repository.
-4. Select the repository and use `main` as the production branch.
-5. Use these build settings:
+Verify the existing Cloudflare Pages project retains these settings:
 
 | Setting | Value |
 | --- | --- |
+| Production branch | `main` |
 | Framework preset | None |
 | Build command | `npm run build:pages` |
 | Build output directory | `out` |
 | Root directory | `/` |
 | Node version environment variable | `NODE_VERSION=22.13.0` |
 
-6. Add `NEXT_PUBLIC_SITE_URL` to both **Production** and **Preview**. Add the
-   optional checkout and GA4 variables later when those services are ready.
-7. Save and deploy.
+Cloudflare runs `preflight --strict` through `npm run build:pages`, builds the
+static site and publishes `out/`. Other branches may create preview deployments
+without changing production.
 
-Cloudflare now builds every push to `main`. Other branches can produce preview
-URLs without changing production. This is Cloudflare's Git integration, not a
-GitHub Actions workflow.
+The canonical origin must remain `https://guildframe.com` in both Production
+and Preview build settings. Keep the Build Guide checkout disabled in both
+environments until the guide, package and final purchase URL are ready.
 
-## 5. Connect the custom domain
+## Local release verification
 
-After the first `pages.dev` deployment passes review:
+Create `.env.local` from `.env.example` only when production-equivalent local
+checks are needed. Never commit `.env.local`, and use the real production values
+rather than the example placeholders.
 
-1. Open the Pages project and select **Custom domains**.
-2. Add the final domain.
-3. Confirm HTTPS is active.
-4. Update `NEXT_PUBLIC_SITE_URL` to that exact HTTPS origin if the first build
-   used a temporary Pages URL.
-5. Trigger one new production deployment.
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run preflight
+npm run build:pages:local
+```
 
-Do not launch with a `pages.dev` URL in canonical tags if the custom domain is
-the intended public address.
+`npm run preflight` reads values available to the current shell. A local warning
+does not mean the Cloudflare production environment is unconfigured.
 
-## 6. Analytics and conversion verification
+To test strict preflight locally, make the documented values available to the
+process before running:
 
-The site loads GA4 only when `NEXT_PUBLIC_GA_MEASUREMENT_ID` is configured. It
-tracks:
+```bash
+npm run preflight:strict
+```
 
-- page views across every route;
-- `begin_checkout` on Guildframe purchase calls to action;
-- `checkout_redirect` when the visitor leaves the purchase page for payment.
+The deployable output is `out/`, which must not be committed.
 
-After deployment:
+## Release path
+
+Use `RELEASE.md` for review, validation, scoped staging, commit and push. A push
+to `main` starts the production deployment automatically. Wait for the Pages
+deployment to succeed, then verify the live site before closing the release.
+
+## Custom domain
+
+The active production domain is `guildframe.com` over HTTPS. In the Pages
+project, confirm the custom domain stays active and that the canonical origin
+does not fall back to a `pages.dev` URL.
+
+If the custom domain or DNS configuration changes:
+
+1. Confirm HTTPS is active.
+2. Confirm `NEXT_PUBLIC_SITE_URL` still matches the intended public origin.
+3. Trigger a new production deployment.
+4. Recheck the homepage canonical, sitemap, robots file and schema identifiers.
+
+## GA4 and conversion verification
+
+Production already loads GA4 through `NEXT_PUBLIC_GA_MEASUREMENT_ID`. The site
+records page views, AI referrals and labelled commercial interactions. Build
+Guide checkout redirect events appear only after checkout is enabled and a real
+purchase URL exists.
+
+After a release:
 
 1. Open the live site in a private browser window.
-2. Check GA4 **Realtime** for the page view.
-3. Click a purchase button and confirm `begin_checkout`.
-4. Continue from `/buy` and confirm `checkout_redirect`.
-5. Mark the most useful checkout event as a key event in GA4.
+2. Confirm a page view in GA4 Realtime or DebugView.
+3. Test the free preview form and the relevant service, guide or Care Plan call
+   to action.
+4. When Build Guide checkout eventually opens, confirm the redirect reaches the
+   intended live product and its event arrives in GA4.
 
-Cloudflare Web Analytics can also be enabled in the Pages dashboard for a
-simple independent traffic view, but GA4 remains the conversion source.
+Cloudflare Web Analytics may remain enabled as an independent traffic view, but
+GA4 is the conversion source.
 
-## 7. Google Search Console
+## Google Search Console
 
-Use a Domain property and verify ownership with the DNS TXT record in
-Cloudflare DNS. DNS verification avoids placing a verification token in the
-site build.
+Use the existing Domain property and DNS TXT verification in Cloudflare DNS.
+DNS verification avoids embedding a verification token in the site build.
 
-After verification:
+After a material route or metadata release:
 
-1. Submit `https://guildframe.com/sitemap.xml`.
-2. Inspect the homepage, `/buy`, the four solution pages and the four articles.
-3. Request indexing only after the final custom domain is active.
-4. Check Page indexing, Core Web Vitals and Enhancements after Google begins
-   crawling.
+1. Confirm `https://guildframe.com/sitemap.xml` remains accepted.
+2. Inspect the homepage and changed commercial, guide or reference routes.
+3. Request indexing only after the production deployment is stable.
+4. Review Page indexing, Core Web Vitals and Enhancements after recrawl.
 
-## 8. Final live checks
+## Final live checks
 
-- Homepage, `/buy`, four solution pages and four guides return successfully.
+- Homepage, `/buy`, service pages, guides and references return successfully.
 - Unknown URLs show the branded 404 page.
-- `/pricing`, `/blog` and other legacy paths redirect correctly.
-- Canonicals, Open Graph URLs, sitemap and robots.txt use the final domain.
-- Social sharing displays the Guildframe tabletop card.
-- If configured, the payment URL opens the intended live checkout.
-- If configured, GA4 page views and checkout events arrive.
+- Legacy routes redirect to current destinations.
+- Canonicals, Open Graph URLs, sitemap and robots.txt use
+  `https://guildframe.com`.
+- GA4 loads and receives a controlled event.
+- `/buy` keeps the $79 Build Guide checkout closed until the product is ready.
+- The $2,500 service, 50 SKU limit, $99 monthly post-build Care Plan and free
+  tailored preview within 72 hours appear consistently.
+- Guildframe is not presented as a Shopify theme; third-party theme editorial
+  pages remain clearly independent comparisons.
 - Mobile, tablet and desktop layouts have no horizontal overflow.
 
-If a bad release reaches production, open **Deployments** in the Pages project
-and roll back to the prior successful deployment.
+If a bad release reaches production, use **Workers & Pages → Deployments** to
+roll back to the prior successful deployment, then fix forward through
+`RELEASE.md`.

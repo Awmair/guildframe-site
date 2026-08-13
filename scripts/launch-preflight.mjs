@@ -5,7 +5,7 @@ const failures = [];
 const warnings = [];
 
 const requiredFiles = [
-  "public/og-guildframe-offers-v6.jpg",
+  "public/og-guildframe-offers-v7.jpg",
   "public/_headers",
   "public/_redirects",
   "app/not-found.tsx",
@@ -21,7 +21,7 @@ for (const file of requiredFiles) {
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-const checkoutEnabled = process.env.NEXT_PUBLIC_THEME_CHECKOUT_ENABLED === "true";
+const checkoutEnabled = process.env.NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED === "true";
 const checkoutUrl = checkoutEnabled
   ? process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim()
   : null;
@@ -37,10 +37,10 @@ if (siteUrl && /localhost|127\.0\.0\.1/i.test(siteUrl)) {
 
 if (!checkoutEnabled) {
   warnings.push(
-    "Theme checkout is disabled. The purchase page will show the launch-pending state.",
+    "Build Guide checkout is disabled. The purchase page will show the launch-pending state.",
   );
 } else if (!checkoutUrl) {
-  failures.push("Theme checkout is enabled but NEXT_PUBLIC_CHECKOUT_URL is not set.");
+  failures.push("Build Guide checkout is enabled but NEXT_PUBLIC_CHECKOUT_URL is not set.");
 }
 if (checkoutUrl && !/^https:\/\//i.test(checkoutUrl)) {
   failures.push("NEXT_PUBLIC_CHECKOUT_URL must use HTTPS.");

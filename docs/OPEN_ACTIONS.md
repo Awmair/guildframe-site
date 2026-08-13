@@ -1,22 +1,13 @@
 # Open actions
 
-Last reviewed: 2026-08-09
+Last reviewed: 2026-08-13
 
 Everything here needs a decision, an account, real data, or work outside this
 repository. Remove an item when it is done rather than marking it complete.
 
-## Blocking a production launch
+## Before Build Guide checkout can open
 
-### 1. `NEXT_PUBLIC_SITE_URL` is not set
-
-Without it every canonical, `og:url`, sitemap entry and schema identifier is
-built against `http://localhost:3000`. `npm run build:pages` calls
-`preflight --strict` and **will refuse to build** until this is set.
-
-Set it in the Cloudflare Pages dashboard for Production and Preview per
-`../CLOUDFLARE_PAGES_DEPLOY.md`. Value: `https://guildframe.com`.
-
-### 2. The build guide is sold on the site but not written
+### 1. The build guide is offered on the site but not written
 
 `/buy` presents the $79 Guildframe Build Guide with the checkout marked
 pending. That is honest about availability, but the product does not exist yet.
@@ -28,37 +19,22 @@ What has to happen before checkout opens:
   are the part buyers cannot get anywhere else.
 - Package it as a download: the guide, a flat prompt file and the example store.
 - Create the Gumroad product and set `NEXT_PUBLIC_CHECKOUT_URL`, then set
-  `NEXT_PUBLIC_THEME_CHECKOUT_ENABLED=true`.
+  `NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED=true`.
 
-Until then, decide consciously whether to keep the page live. It is the same
-position the retired theme was in.
+Until then, keep checkout disabled and describe availability plainly.
 
-## Configuration, not blocking
+## Operational verification
 
-### 3. Analytics and verification
+### 2. Analytics
 
-- `NEXT_PUBLIC_GA_MEASUREMENT_ID` unset, so GA4 stays off. Measurement plan in
-  `AI_VISIBILITY_MEASUREMENT.md`.
-- No HTML Search Console token, which is fine when the domain is verified by
-  DNS TXT record.
-
-### 4. `output/` and `outreach/` are untracked and unignored
-
-Both are private working folders and neither is in `.gitignore`, so a single
-`git add .` would stage them. The release process in `../RELEASE.md` stages
-explicit paths and never uses `git add .` or `git add -A`.
-
-If they should stay private permanently, add them:
-
-```bash
-printf '\n# private local working folders\n/output/\n/outreach/\n' >> .gitignore
-```
-
-Review before running. This has not been done.
+GA4 is configured and loading on the production site. After material releases,
+send a controlled page view and commercial interaction, then confirm both in
+Realtime or DebugView. The measurement plan is in
+`AI_VISIBILITY_MEASUREMENT.md`.
 
 ## Needs verification or real data
 
-### 5. One cited source points at an EU acceptance environment
+### 3. One cited source points at an EU acceptance environment
 
 `app/guides/selling-miniatures-internationally-vat-ioss/page.tsx` cites a URL on
 `webgate.acceptance.ec.europa.eu`. That is a pre production host: it can change,
@@ -70,7 +46,7 @@ Find the published equivalent on the EU taxation and customs site, confirm it
 still supports the sentence it is attached to, and replace the `href`. Do not
 substitute a guessed URL.
 
-### 6. Search volumes are unmeasured
+### 4. Search volumes are unmeasured
 
 `KEYWORD_AND_SERP_RESEARCH.md` records which pages rank for the target query
 families and where the gaps are. It contains no volumes, because no keyword tool
@@ -90,15 +66,7 @@ Two specific checks once data exists:
 
 ## Performance, optional
 
-### 7. `custom-setup-card-v1.png` is a 1.1 MB PNG
-
-It is the largest asset shipped and is decorative, sitting behind a gradient on
-the homepage that hides most of it. Exporting a WebP or a tuned JPEG at the size
-it actually renders would plausibly save 800 KB with no visible difference.
-Update the one `url()` reference in `app/globals.css` and check the homepage at
-1440 and 390 pixels.
-
-### 8. The homepage is a single large client component
+### 5. The homepage is a single large client component
 
 `app/page.tsx` runs under `"use client"`, so copy that never changes ships as
 client JavaScript because a few pieces of scroll and tab state live at the top

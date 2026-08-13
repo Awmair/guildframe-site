@@ -1,5 +1,7 @@
 # Guildframe website
 
+Last reviewed: 2026-08-13
+
 Static Next.js site for Guildframe: Shopify design and development for tabletop
 creators, plus a build guide for creators who build the store themselves.
 
@@ -13,7 +15,7 @@ pages.
 | Done for you Shopify store, up to 50 product SKUs | $2,500 |
 | Guildframe Build Guide, checkout not open yet | $79 one time |
 | Care Plan, after a Guildframe build | $99 per month |
-| Free store preview within 72 hours | Free |
+| Free tailored store preview within 72 hours | Free |
 
 Guildframe does not sell a Shopify theme.
 
@@ -36,12 +38,14 @@ npm test
 npm run preflight
 ```
 
-- `npm test` builds the real static output and asserts against it: 132 checks
-  covering metadata, structured data, dates, internal links, the sitemap,
-  `llms.txt`, robots, accessibility and shipped assets.
+- `npm test` builds the real static output and checks metadata, structured data,
+  dates, internal links, the sitemap, `llms.txt`, robots, accessibility and
+  shipped assets.
 - `npm run build:pages:local` writes the Cloudflare Pages output to `out/`.
-- `npm run preflight` reports production settings that still need to be added.
-- `npm run preflight:strict` blocks a production build when they are missing.
+- `npm run preflight` checks the settings in the current local shell.
+- `npm run preflight:strict` blocks a production-equivalent build when required
+  local settings are missing. A local warning does not describe the current
+  Cloudflare Pages configuration.
 
 ## Deployment
 

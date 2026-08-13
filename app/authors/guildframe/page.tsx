@@ -73,6 +73,12 @@ export default function GuildframeAuthorPage() {
             deluxe editions, expansions, bundles, add ons, miniatures, terrain and
             long form world building.
           </p>
+          <p>
+            Guildframe sells store design and development, a separate build guide
+            and post build care. When the team compares storefront foundations,
+            it evaluates Shopify and third party options against documented tabletop
+            store needs.
+          </p>
         </section>
         <section>
           <h2>What we are responsible for</h2>

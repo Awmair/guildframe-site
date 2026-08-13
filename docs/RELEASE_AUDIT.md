@@ -1,6 +1,6 @@
 # Guildframe release audit
 
-Last reviewed: 2026-08-09
+Last reviewed: 2026-08-13
 
 This describes the site as it stands today. It is not a change log. When
 something changes, update this file rather than adding a new dated one.
@@ -12,7 +12,7 @@ something changes, update this file rather than adding a new dated one.
 | Done for you Shopify store, up to 50 product SKUs | $2,500 | Live, enquiry through the site form |
 | Guildframe Build Guide | $79 one time | Page published, **checkout not open**, guide not yet written |
 | Care Plan, after a Guildframe build | $99 per month | Live, enquiry through the site form |
-| Free store preview within 72 hours | Free | Live, enquiry through the site form |
+| Free tailored store preview within 72 hours | Free | Live, enquiry through the site form |
 
 Guildframe does not sell a Shopify theme. Nothing on the site may present the
 build guide as one.
@@ -28,10 +28,6 @@ price in structured data, so neither can change quietly.
 | Canonical routes | 31 |
 | Sitemap entries | 31 |
 | Exported HTML pages, including 404 | 33 |
-| Automated checks | 132 |
-| Static export size | 13 MB |
-| Files in `out/` | 352 |
-| JSON-LD blocks across canonical routes | 119 |
 | Distinct schema types | 23 |
 
 Full per route detail is in `PAGE_INVENTORY.csv`.
@@ -58,7 +54,8 @@ the 404 route carries `noindex`.
 
 **Structured data.** One `Organization` and one `WebSite` node in the layout.
 One `Product` at `/buy#product` reused by the homepage and all three category
-pages. One `Service` at `/done-for-you-shopify-store#service` reused by
+pages. Its availability is omitted while Build Guide checkout is closed.
+One `Service` at `/done-for-you-shopify-store#service` reused by
 `/kickstarter-to-shopify`. One author entity at
 `/authors/guildframe#editorial-team` used as both `author` and `reviewedBy` on
 every guide and reference. Every page level node carries a stable `@id` and
@@ -90,6 +87,11 @@ and `/customization` which point at destinations that still exist.
 **Assets.** Every image in `public/` is referenced by something that ships.
 `scripts/optimize-pages-output.mjs` prunes anything unreferenced from `out/` at
 build time and currently finds nothing, which is the intended steady state.
+
+**Production configuration.** The live site uses `https://guildframe.com` for
+canonicals, Open Graph URLs and schema identifiers, and loads GA4. Cloudflare
+Pages keeps the Build Guide checkout disabled until the guide and final purchase
+URL are ready.
 
 ## Accessibility
 
@@ -132,16 +134,17 @@ Run before every push:
 npm run lint && npm run typecheck && npm test && npm run preflight
 ```
 
-`npm test` builds the real static output and asserts against it. Current state:
-lint clean, typecheck clean, **132 of 132 checks passing**, preflight passing
-with the expected launch warnings.
+`npm test` builds the real static output and asserts against it. A release is
+valid only when lint, type checking and the full test suite pass. The preflight
+command reads the current local shell; local warnings do not describe the
+deployed Cloudflare configuration.
 
-`npm run preflight:strict` blocks a production build until the launch values in
-`OPEN_ACTIONS.md` are set. Cloudflare Pages runs it as part of
+`npm run preflight:strict` blocks a production build when its required
+environment values are missing. Cloudflare Pages runs it as part of
 `npm run build:pages`.
 
 ## Known open items
 
-See `OPEN_ACTIONS.md`. The two that gate a real launch are the missing
-`NEXT_PUBLIC_SITE_URL` and the fact that the build guide is sold on the site but
-not yet written.
+See `OPEN_ACTIONS.md`. The commercial gate is the Build Guide: it is offered on
+the site, but the guide, package and checkout URL are not ready, so checkout must
+remain closed.

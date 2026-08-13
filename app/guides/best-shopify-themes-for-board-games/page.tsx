@@ -6,15 +6,16 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import { contentDates } from "../../content-dates";
 
 export const metadata = pageMetadata({
   title: "6 Best Shopify Themes for Board Games in 2026",
   description:
-    "Compare six Shopify themes for board games and tabletop stores, including Guildframe, Novaplay, Playtime, Sunrise, Boost and Dawn.",
+    "Compare six Shopify themes for board games and tabletop stores: Horizon, Novaplay, Playtime, Sunrise, Boost and Dawn.",
   path: "/guides/best-shopify-themes-for-board-games",
   kind: "article",
   publishedTime: "2026-07-16",
-  modifiedTime: "2026-08-09",
+  modifiedTime: contentDates.bestBoardGameThemes,
   keywords: [
     "best Shopify themes for board games",
     "board game Shopify theme",
@@ -27,12 +28,12 @@ const faqs = [
   {
     question: "What is the best Shopify theme for a board game company?",
     answer:
-      "Guildframe is the most category specific option in this comparison. Novaplay is a strong fit for larger game and collectible catalogs, Playtime suits trading cards and playful retail, Sunrise offers a simpler bright presentation, Boost emphasizes promotions, and Dawn is a flexible free starting point. The best choice depends on your catalog, visual direction and available setup time.",
+      "Horizon is a flexible free starting point for new stores. Novaplay is a strong fit for larger game and collectible catalogs, Playtime suits trading cards and playful retail, Sunrise offers a simpler bright presentation, Boost emphasizes promotions, and Dawn is a lean free foundation. The best choice depends on your catalog, visual direction and available setup time.",
   },
   {
     question: "Can a free Shopify theme work for a board game store?",
     answer:
-      "Yes. Dawn can provide a reliable free foundation, especially for a small catalog and a team willing to create its own tabletop content structure. Budget for the design, product page planning and customization needed to make the store distinctive.",
+      "Yes. Horizon offers more layout flexibility, while Dawn provides a lean foundation. Either can work for a team willing to create its own tabletop content structure. Budget for the design, product page planning and customization needed to make the store distinctive.",
   },
   {
     question: "Which theme features matter most for tabletop products?",
@@ -53,12 +54,17 @@ export default function BestThemesGuide() {
       category="Board game Shopify themes"
       title="6 Best Shopify Themes for Board Games and Tabletop Stores in 2026"
       description="A useful tabletop theme must sell a world and make a complex product easy to buy. These six options serve different catalog sizes, visual styles and budgets."
-      answer="The strongest Shopify theme choices for board game and tabletop stores are Guildframe for purpose built tabletop storytelling, Novaplay for larger game and collectible catalogs, Playtime for trading cards and playful retail, Sunrise for a bright straightforward storefront, Boost for promotion heavy stores, and Dawn for a free flexible foundation. Choose by catalog structure and setup effort, not by the demo image alone."
+      answer="The strongest Shopify theme choices for board game and tabletop stores are Horizon for flexible free builds, Novaplay for larger game and collectible catalogs, Playtime for trading cards and playful retail, Sunrise for a bright straightforward storefront, Boost for promotion heavy stores, and Dawn for a lean free foundation. Choose by catalog structure and setup effort, not by the demo image alone."
       published="2026-07-16"
-      updated="2026-08-09"
+      updated={contentDates.bestBoardGameThemes}
       readTime="10 minute read"
       faqs={faqs}
       sources={[
+        {
+          label: "Horizon theme listing",
+          publisher: "Shopify Theme Store",
+          href: "https://themes.shopify.com/themes/horizon/presets/horizon",
+        },
         {
           label: "Novaplay theme listing",
           publisher: "Shopify Theme Store",

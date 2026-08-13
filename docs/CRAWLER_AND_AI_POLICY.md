@@ -1,6 +1,6 @@
 # Guildframe crawler and AI policy
 
-Last reviewed: 2026-08-09
+Last reviewed: 2026-08-13
 
 ## Discovery policy
 
@@ -39,5 +39,6 @@ after every policy change.
 
 Guildframe publishes `llms.txt` as a concise, supplemental discovery summary.
 It is not a substitute for crawlable pages, canonical metadata, schema or the
-sitemap. Keep it aligned with the live offers, prices, preset names and primary
-guides whenever those facts change.
+sitemap. Keep it aligned with the live offers, prices, checkout status, primary
+guides and reference data whenever those facts change. It must state that
+Guildframe does not sell a Shopify theme.

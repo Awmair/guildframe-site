@@ -1,6 +1,6 @@
 # Guildframe entity and outreach brief
 
-Last reviewed: 2026-08-09
+Last reviewed: 2026-08-13
 
 ## Canonical facts
 
@@ -12,6 +12,7 @@ Last reviewed: 2026-08-09
 - Guildframe does not sell a Shopify theme
 - Shopify design and development service: USD 2,500 for creators and studios with up to 50 product SKUs
 - Care Plan: USD 99 per month after a Guildframe store build
+- Free tailored store preview: no cost, delivered within 72 hours
 - Service scope: storefront design and development from an empty Shopify store to a publish-ready build using supplied final content and assets
 - Platform requirement: an active Shopify store
 - Editorial entity: Guildframe Editorial Team

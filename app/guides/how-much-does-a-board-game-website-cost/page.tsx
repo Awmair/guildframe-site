@@ -4,6 +4,7 @@ import {
   ArticleTable,
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
+import { contentDates } from "../../content-dates";
 import { pageMetadata } from "../../site-config";
 
 export const metadata = pageMetadata({
@@ -13,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/how-much-does-a-board-game-website-cost",
   kind: "article",
   publishedTime: "2026-07-23",
-  modifiedTime: "2026-08-09",
+  modifiedTime: contentDates.boardGameWebsiteCost,
   keywords: [
     "how much does a board game website cost",
     "board game ecommerce website cost",
@@ -26,7 +27,7 @@ const faqs = [
   {
     question: "How much does a board game Shopify store cost?",
     answer:
-      "The total combines the Shopify plan, domain, theme or design work, required apps, product setup and ongoing maintenance. Guildframe offers a 349 dollar DIY theme or a 2,500 dollar complete store build for up to 50 product SKUs. Shopify and third party costs remain separate.",
+      "The total combines the Shopify plan, domain, theme or design work, required apps, product setup and ongoing maintenance. Guildframe offers a 79 dollar Build Guide or a 2,500 dollar complete store build for up to 50 product SKUs. Shopify and third party costs remain separate.",
   },
   {
     question: "Is a free Shopify theme enough for a board game?",
@@ -47,9 +48,9 @@ export default function BoardGameWebsiteCostPage() {
       category="Board game website cost"
       title="How Much Does a Board Game Website Cost?"
       description="A useful budget separates the platform, build, content and ongoing operating costs instead of hiding them inside one headline number."
-      answer="A board game ecommerce website can start with a Shopify plan and free theme, add a premium tabletop theme for 349 dollars, or use a complete specialist build such as Guildframe at 2,500 dollars for up to 50 product SKUs. The final cost also includes the domain, payment processing, optional apps, content preparation and ongoing maintenance."
+      answer="A board game ecommerce website can start with a Shopify plan and free theme, use the 79 dollar Guildframe Build Guide to create the store with AI coding tools, or choose a complete Guildframe build at 2,500 dollars for up to 50 product SKUs. The final cost also includes the domain, payment processing, optional apps, content preparation and ongoing maintenance."
       published="2026-07-23"
-      updated="2026-08-09"
+      updated={contentDates.boardGameWebsiteCost}
       readTime="7 minute read"
       faqs={faqs}
       sources={[
@@ -155,7 +156,7 @@ export default function BoardGameWebsiteCostPage() {
         launch date or cannot spare the time required for structure, content entry and testing.
       </p>
       <p>
-        Guildframe provides a <Link href="/buy">349 dollar tabletop theme</Link> and a
+        Guildframe provides a <Link href="/buy">79 dollar Build Guide</Link> and a
         <Link href="/done-for-you-shopify-store"> 2,500 dollar complete Shopify store build</Link>
         for up to 50 product SKUs. The free preview lets qualified creators review
         the visual direction before committing to the build.

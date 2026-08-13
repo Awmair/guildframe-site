@@ -16,5 +16,5 @@
 /data/*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
-/og-guildframe-offers-v6.jpg
+/og-guildframe-offers-v7.jpg
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400

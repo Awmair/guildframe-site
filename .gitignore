@@ -43,6 +43,10 @@ next-env.d.ts
 /outputs/
 /work/
 
+# private local working folders
+/output/
+/outreach/
+
 # local design source and recovery material
 /branding/
 /checkpoints/

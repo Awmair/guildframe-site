@@ -1,159 +1,145 @@
 # Release runbook
 
-Everything you need to pick this repository up cold and push it live.
+Last reviewed: 2026-08-13
 
-Nothing in the current working tree has been staged or committed. `HEAD` is
-`d9b6143` on `main`.
+Use this runbook for every production release. GitHub `main` is connected
+directly to Cloudflare Pages. A successful push triggers `npm run build:pages`
+and publishes `out/`; there is no GitHub Actions deployment workflow.
 
----
+## Current commercial facts
 
-## What is uncommitted right now
+| Offer | Price | Availability |
+| --- | --- | --- |
+| Done for you Shopify store, up to 50 product SKUs | $2,500 | Enquiry open |
+| Guildframe Build Guide | $79 one time | Checkout not open |
+| Care Plan, after a Guildframe build | $99 per month | Enquiry open |
+| Free tailored store preview within 72 hours | Free | Enquiry open |
 
-The site has been repositioned from a Shopify theme, which was never built, to
-the **$79 Guildframe Build Guide**. Offers now are:
+Guildframe does not sell a Shopify theme. Theme-selection guides compare
+Shopify and third-party themes as editorial material; none is a Guildframe
+product.
 
-| Offer | Price |
-| --- | --- |
-| Done for you Shopify store, up to 50 product SKUs | $2,500 |
-| Guildframe Build Guide, checkout not open yet | $79 one time |
-| Care Plan, after a build | $99 per month |
-| Free store preview within 72 hours | Free |
+## 1. Confirm the release scope
 
-Two routes were added, taking the site to 31: a free guide at
-`/guides/build-a-tabletop-shopify-store-with-ai` and a reference at
-`/resources/tabletop-shopify-metafield-schema`.
-
-Twenty stale files were deleted: 18 unreferenced images totalling about 6 MB,
-and two superseded documents. They will show as deletions in `git status`.
-
-Full current state is in `docs/RELEASE_AUDIT.md`. What is still outstanding is
-in `docs/OPEN_ACTIONS.md`.
-
----
-
-## Step 1. Validate
-
-Do not commit if any of these fail.
+Start from the repository root and inspect the full working tree:
 
 ```bash
-cd "/Users/umair/Documents/Guildframe website" && npm run lint && npm run typecheck && npm test && npm run preflight
+cd "/Users/umair/Documents/Guildframe website"
+git status --short
+git diff --check
+git diff --stat
 ```
 
-Expected: lint silent, typecheck silent, `# pass 132` and `# fail 0`, and
-preflight listing `NEXT_PUBLIC_SITE_URL is not set` plus three warnings. Those
-are expected locally and do not block a commit.
+`output/` and `outreach/` are private local working folders. They must remain
+untracked and must not be included in a release.
 
-## Step 2. Look at the site
+## 2. Validate
+
+Do not commit if lint, type checking or tests fail:
 
 ```bash
-cd "/Users/umair/Documents/Guildframe website" && npm run dev
+npm run lint
+npm run typecheck
+npm test
+npm run preflight
 ```
 
-Open `http://localhost:3000`. Worth checking: the homepage pricing block and the
-`#build-it-yourself` section, `/buy`, and the two new pages.
+`npm test` builds and checks the same static output shape used by Cloudflare
+Pages. `npm run preflight` reads the current local shell, so missing local
+values do not mean the deployed Cloudflare environment is missing them.
 
-If a CSS change ever appears to do nothing locally, the Next cache is stale.
-Stop the server, `rm -rf .next`, and start it again. Restarting alone is not
-enough.
-
-## Step 3. Review the diff
+For a production-equivalent local build, provide the values documented in
+`CLOUDFLARE_PAGES_DEPLOY.md`, then run:
 
 ```bash
-cd "/Users/umair/Documents/Guildframe website" && git status --short && git diff --check && git diff --stat
+npm run preflight:strict
+npm run build:pages:local
 ```
 
-`output/` and `outreach/` are private working folders. They must stay untracked.
-
-## Step 4. Stage
-
-Explicit paths only. **Never `git add .` or `git add -A`**, because either would
-stage `output/` and `outreach/`.
+## 3. Review locally
 
 ```bash
-cd "/Users/umair/Documents/Guildframe website" && git add -A -- app public scripts tests docs README.md CONTRIBUTING.md RELEASE.md
+npm run dev
 ```
 
-`-A` is safe here because every path is named explicitly, and it picks up the
-file deletions as well as the edits.
+Open `http://localhost:3000` and review the pages affected by the diff. For any
+commercial change, also check the homepage, `/buy`,
+`/done-for-you-shopify-store` and the three category solution pages.
 
-## Step 5. Confirm what is staged
+The visible offer, metadata, structured data and analytics labels must agree.
+The Build Guide must remain unavailable for checkout until the guide and final
+purchase URL are ready.
+
+## 4. Stage only reviewed files
+
+Never run `git add .` or an unscoped `git add -A` in this repository. Stage the
+exact reviewed paths, then inspect the staged result:
 
 ```bash
-cd "/Users/umair/Documents/Guildframe website" && git status --short
+git add -- README.md
+git status --short
+git diff --cached --check
+git diff --cached
 ```
 
-`output/` and `outreach/` must still show `??`. If either shows as staged, stop:
+Replace the example with every exact path reviewed for the release. Confirm that
+`output/` and `outreach/` still show as untracked and that no environment file,
+generated output or unrelated local work is staged.
+
+## 5. Commit and synchronize
+
+Use an imperative message that describes the actual release:
 
 ```bash
-cd "/Users/umair/Documents/Guildframe website" && git restore --staged output outreach
+git commit -m "<release summary>"
+git pull --rebase origin main
 ```
 
-Then read the staged diff:
+If the rebase brings in remote changes, rerun the validation commands and
+review the resulting diff before continuing.
+
+## 6. Publish
+
+Pushing `main` starts the Cloudflare Pages production deployment:
 
 ```bash
-cd "/Users/umair/Documents/Guildframe website" && git diff --cached
+git push origin main
 ```
 
-## Step 6. Commit
+Wait for the Cloudflare build to succeed before treating the release as live.
+The current Pages settings are listed in `CLOUDFLARE_PAGES_DEPLOY.md`.
+
+## 7. Verify production
+
+Check the deployed HTML, not only the source tree:
+
+1. The homepage and every changed route return successfully.
+2. Canonicals, Open Graph URLs, schema identifiers, the sitemap and robots file
+   use `https://guildframe.com`.
+3. GA4 loads and a controlled page view reaches Realtime or DebugView.
+4. The homepage states the $2,500 service limit of 50 product SKUs, the $99
+   monthly Care Plan after a Guildframe build and the free tailored preview
+   within 72 hours.
+5. `/buy` shows the $79 Build Guide with checkout not open.
+6. No Guildframe page presents Guildframe as a Shopify theme. The independent
+   theme comparison remains an editorial comparison of third-party options.
+7. `/resources/kickstarter-tabletop-games-benchmark` still presents the 2024
+   benchmark and its downloadable data.
+
+Finish with:
 
 ```bash
-cd "/Users/umair/Documents/Guildframe website" && git commit -m "Replace the theme offer with the Guildframe Build Guide"
+git status --short
+git log -1 --stat
 ```
 
-Fuller message if you prefer:
+If production is broken, use the Cloudflare Pages deployment history to roll
+back to the previous successful deployment, then fix forward through this same
+runbook.
 
-```bash
-cd "/Users/umair/Documents/Guildframe website" && git commit -m "Replace the theme offer with the Guildframe Build Guide" -m "Retire the unbuilt theme and sell a build guide for creators using AI coding tools. Adds a free AI build guide and a tabletop metafield schema reference. Fixes date integrity across the trust pages, connects the structured data graph, adds Dataset markup, keeps static export payload files out of the search index, and removes 6 MB of unreferenced assets. Test suite 68 to 132 checks."
-```
+## Before opening Build Guide checkout
 
-## Step 7. Push
-
-Pull with rebase only after the commit exists.
-
-```bash
-cd "/Users/umair/Documents/Guildframe website" && git pull --rebase origin main
-```
-
-**Pushing to `main` triggers a Cloudflare Pages production build and publishes
-the site.**
-
-```bash
-cd "/Users/umair/Documents/Guildframe website" && git push origin main
-```
-
-## Step 8. Confirm
-
-```bash
-cd "/Users/umair/Documents/Guildframe website" && git status --short && git log -1 --stat
-```
-
-Expected: a clean tree apart from `output/` and `outreach/`, and your commit at
-`HEAD`.
-
----
-
-## The deploy will fail until you set one value
-
-Cloudflare Pages runs `npm run build:pages`, which calls `preflight --strict`.
-That **refuses to build** while `NEXT_PUBLIC_SITE_URL` is unset.
-
-Set it to `https://guildframe.com` for Production and Preview in the Cloudflare
-Pages dashboard before pushing, or expect the first build to fail. Steps are in
-`CLOUDFLARE_PAGES_DEPLOY.md`.
-
-## Check by hand once live
-
-1. `/robots.txt` shows `Disallow: /*.txt$` and `Allow: /llms.txt`.
-2. `/llms.txt` lists all 31 routes and states that Guildframe does not sell a
-   theme.
-3. `/buy` shows the $79 build guide and `Secure checkout link pending`.
-4. The two new routes resolve and appear in `/sitemap.xml`.
-5. No page mentions $349, Rune Single or Saga Studio.
-6. `/resources/kickstarter-tabletop-games-benchmark` validates as a `Dataset` in
-   a structured data testing tool.
-
-## Before you sell the guide
-
-`/buy` advertises a product that does not exist yet. `docs/BUILD_GUIDE_SPEC.md`
-is the outline to write against, and `docs/OPEN_ACTIONS.md` item 2 lists what
-has to happen before checkout opens.
+The guide, its download package and the final HTTPS purchase URL must exist.
+Then set `NEXT_PUBLIC_CHECKOUT_URL` and
+`NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED=true`, run the full validation sequence and
+verify the live checkout handoff. Until then, keep the guide checkout disabled.

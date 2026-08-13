@@ -4,10 +4,9 @@ export const guildframeOffer = {
   name: "Guildframe Build Guide",
   price: "79",
   priceCurrency: "USD",
-  availability: "https://schema.org/InStock",
   category: "Digital build guide for tabletop Shopify stores",
   description:
-    "A guide for tabletop creators who want to build their own Shopify store using an AI tool, with the exact prompts to copy, what to fix when the AI gets something wrong, and a finished example store to copy from.",
+    "A $79 guide for tabletop creators who want to build their own Shopify store using an AI tool, with the exact prompts to copy, what to fix when the AI gets something wrong, and a finished example store to copy from. Checkout is not open yet.",
 } as const;
 
 export function guildframeProductData(image = siteConfig.socialImage) {
@@ -40,13 +39,17 @@ export function guildframeProductData(image = siteConfig.socialImage) {
         name: "Catalogs covered",
         value: "Board games, card games, TTRPGs, miniatures and terrain",
       },
+      {
+        "@type": "PropertyValue",
+        name: "Checkout status",
+        value: "Not open yet",
+      },
     ],
     offers: {
       "@type": "Offer",
       url: absoluteUrl("/buy"),
       priceCurrency: guildframeOffer.priceCurrency,
       price: guildframeOffer.price,
-      availability: guildframeOffer.availability,
       seller: { "@id": absoluteUrl("/#organization") },
     },
   };
@@ -81,7 +84,7 @@ export function guildframeCarePlanData() {
     name: "Guildframe Care Plan",
     serviceType: "Ongoing Shopify store support for tabletop studios",
     description:
-      "Monthly Shopify theme and section updates, small store adjustments and one campaign or product launch page each month after a Guildframe store build.",
+      "Monthly maintenance for the customer's Shopify storefront and installed theme, small store adjustments and one campaign or product launch page each month after a Guildframe store build.",
     provider: { "@id": absoluteUrl("/#organization") },
     areaServed: "Worldwide",
     offers: {

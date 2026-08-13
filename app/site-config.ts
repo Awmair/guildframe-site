@@ -7,7 +7,7 @@ export const siteConfig = {
   purchasePath: "/buy",
   servicePath: "/done-for-you-shopify-store",
   checkoutUrl:
-    process.env.NEXT_PUBLIC_THEME_CHECKOUT_ENABLED === "true"
+    process.env.NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED === "true"
       ? process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim() || null
       : null,
   serviceInquiryUrl:
@@ -21,7 +21,7 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID?.trim() || "xp0rrg52qu",
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
-  socialImage: "/og-guildframe-offers-v6.jpg",
+  socialImage: "/og-guildframe-offers-v7.jpg",
   price: "$79",
   servicePrice: "$2,500",
   guideName: "Guildframe Build Guide",
@@ -59,7 +59,7 @@ export function pageMetadata({
         url: siteConfig.socialImage,
         width: 1200,
         height: 630,
-        alt: "Guildframe Shopify storefront design and theme for tabletop game creators",
+        alt: "Guildframe Shopify storefront design and Build Guide for tabletop game creators",
       },
     ],
   };

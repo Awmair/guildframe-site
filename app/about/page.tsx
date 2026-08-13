@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   description:
     "Learn why Guildframe designs and develops Shopify storefronts for board games, TTRPGs, miniatures and funded tabletop creators.",
   path: "/about",
-  keywords: ["about Guildframe", "Shopify theme for tabletop games", "board game ecommerce"],
+  keywords: ["about Guildframe", "Shopify stores for tabletop games", "board game ecommerce"],
 });
 
 export default function AboutPage() {
@@ -73,12 +73,15 @@ export default function AboutPage() {
             <li>Product structures for editions, expansions, bundles and add ons</li>
             <li>Campaign storytelling, FAQ, reviews, events, news and contact sections</li>
             <li>A $2,500 Shopify design and development service for up to 50 product SKUs</li>
+            <li>A free tailored storefront preview within 72 hours before the full build</li>
             <li>A separate $79 build guide for creators who want to build it themselves</li>
+            <li>An optional $99 monthly Care Plan after a Guildframe store build</li>
             <li>Shopify products, checkout, inventory and payments underneath</li>
           </ul>
           <p>
             The complete Shopify design and development service is <strong>{siteConfig.servicePrice}</strong>
-            for up to 50 product SKUs. The Guildframe theme is <strong>{siteConfig.price}</strong>.
+            for up to 50 product SKUs. The Guildframe Build Guide is <strong>{siteConfig.price}</strong>,
+            although its checkout is not open yet. Guildframe does not sell a Shopify theme.
             Product and service facts are maintained from shared sources so the
             homepage, offer pages and structured data stay aligned.
           </p>

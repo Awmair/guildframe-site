@@ -582,7 +582,7 @@ export default function Home() {
               >
                 <div className="preview-build-frame">
                   <img
-                    src="/images/pdp-guildframe-responsive-v1.jpg"
+                    src="/images/pdp-board-game-store-responsive-v2.jpg"
                     alt="A tailored Shopify storefront direction shown on desktop and mobile"
                     width={1586}
                     height={992}
@@ -638,7 +638,7 @@ export default function Home() {
                     <strong>Storefront / responsive</strong>
                   </div>
                   <img
-                    src="/images/pdp-nightbanner-responsive-v1.jpg"
+                    src="/images/pdp-ttrpg-store-responsive-v2.jpg"
                     alt="A finished tabletop Shopify product page shown on desktop and mobile"
                     width={1536}
                     height={1024}

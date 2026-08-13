@@ -1,8 +1,8 @@
 # Guildframe Build Guide: what to write
 
-Last reviewed: 2026-08-09
+Last reviewed: 2026-08-13
 
-The site sells this guide at $79 with checkout marked pending. This is the
+The site presents this guide at $79 with checkout marked pending. This is the
 outline to write against. Nothing here is built yet.
 
 ## What it is
@@ -132,6 +132,6 @@ without promising lifetime updates.
 1. Write the guide and run every prompt.
 2. Package the download.
 3. Create the Gumroad product.
-4. Set `NEXT_PUBLIC_CHECKOUT_URL` and `NEXT_PUBLIC_THEME_CHECKOUT_ENABLED=true`.
+4. Set `NEXT_PUBLIC_CHECKOUT_URL` and `NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED=true`.
 5. Re-run `npm test`. The suite asserts the pending state, so it will tell you
    what to update when checkout goes live.

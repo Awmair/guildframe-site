@@ -4,6 +4,7 @@ import {
   ArticleTable,
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
+import { contentDates } from "../../content-dates";
 import { pageMetadata } from "../../site-config";
 
 export const metadata = pageMetadata({
@@ -13,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/shopify-vs-etsy-for-selling-miniatures",
   kind: "article",
   publishedTime: "2026-07-23",
-  modifiedTime: "2026-07-23",
+  modifiedTime: contentDates.shopifyVsEtsyMiniatures,
   keywords: [
     "Shopify vs Etsy for selling miniatures",
     "sell miniatures on Shopify",
@@ -49,7 +50,7 @@ export default function ShopifyVsEtsyMiniaturesPage() {
       description="Etsy provides marketplace discovery. Shopify provides an owned store. The strongest choice depends on whether you need initial reach, brand control or both."
       answer="Choose Etsy when marketplace discovery and a low setup barrier matter most. Choose Shopify when you want a branded miniature store, direct customer relationships, stronger catalog organization and control over content and checkout. Established sellers can use Etsy for discovery and Shopify as the permanent brand store, provided inventory and customer promises stay consistent."
       published="2026-07-23"
-      updated="2026-07-23"
+      updated={contentDates.shopifyVsEtsyMiniatures}
       readTime="7 minute read"
       faqs={faqs}
       sources={[
@@ -137,8 +138,8 @@ export default function ShopifyVsEtsyMiniaturesPage() {
         <li>Wholesale, preorders, bundles or subscriptions are becoming important.</li>
       </ul>
       <p>
-        Guildframe provides a <Link href="/shopify-theme-for-miniatures">Shopify theme for miniature and terrain stores</Link>
-        with layouts designed around detailed products, variants and collections.
+        Guildframe provides <Link href="/shopify-theme-for-miniatures">Shopify design and development for miniature and terrain stores</Link>,
+        with storefronts structured around detailed products, variants and collections.
       </p>
 
       <h2 id="both">Using both can be the strongest channel strategy</h2>
