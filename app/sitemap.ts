@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/guides/selling-miniatures-internationally-vat-ioss", modified: contentDates.internationalVatIoss },
     { path: "/guides/how-much-does-a-board-game-website-cost", modified: contentDates.boardGameWebsiteCost },
     { path: "/guides/shopify-vs-etsy-for-selling-miniatures", modified: contentDates.shopifyVsEtsyMiniatures },
+    { path: "/guides/build-a-tabletop-shopify-store-with-ai", modified: contentDates.buildWithAi },
     { path: "/about", modified: contentDates.about },
     { path: "/editorial-policy", modified: contentDates.editorialPolicy },
     { path: "/authors/guildframe", modified: contentDates.authorGuildframe },
@@ -35,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/backerkit-vs-shopify-vs-gamefound-comparison", modified: contentDates.platformMatrix },
     { path: "/resources/board-game-product-page-checklist", modified: contentDates.productPageChecklist },
     { path: "/resources/kickstarter-tabletop-games-benchmark", modified: contentDates.kickstarterTabletopBenchmark },
+    { path: "/resources/tabletop-shopify-metafield-schema", modified: contentDates.metafieldSchema },
   ];
 
   return routes.map((route) => ({

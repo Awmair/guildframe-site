@@ -10,7 +10,7 @@ export function SeoHeader() {
       </Link>
       <nav aria-label="Primary navigation">
         <Link href="/done-for-you-shopify-store">Services</Link>
-        <Link href="/#styles">DIY</Link>
+        <Link href="/buy">Build guide</Link>
         <Link href="/shopify-theme-for-board-games">Board games</Link>
         <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
         <Link href="/guides">Guides</Link>
@@ -48,11 +48,11 @@ export function SeoFooter() {
           <Link
             className="seo-button seo-button-outline"
             href={siteConfig.purchasePath}
-            data-analytics-event="theme_interest"
-            data-analytics-label="Get Guildframe theme"
+            data-analytics-event="guide_interest"
+            data-analytics-label="Get the build guide"
             data-analytics-location="SEO footer"
           >
-            Get the theme <span aria-hidden="true">↗</span>
+            Get the build guide <span aria-hidden="true">↗</span>
           </Link>
         </div>
       </div>
@@ -62,8 +62,8 @@ export function SeoFooter() {
           <div className="seo-footer-brand">
             <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="1000" height="220" />
             <p>
-              Shopify stores and a premium DIY theme built specifically for
-              tabletop game creators.
+              Shopify stores built for tabletop game creators, plus a build
+              guide for creators who want to build it themselves.
             </p>
           </div>
           <nav aria-label="Solutions">
@@ -77,6 +77,9 @@ export function SeoFooter() {
           <nav aria-label="Resources">
             <strong>Resources</strong>
             <Link href="/guides">Guides</Link>
+            <Link href="/guides/build-a-tabletop-shopify-store-with-ai">
+              Build with AI
+            </Link>
             <Link href="/guides/move-from-kickstarter-to-shopify">
               Migration guide
             </Link>

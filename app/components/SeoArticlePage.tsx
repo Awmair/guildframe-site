@@ -3,6 +3,7 @@ import Link from "next/link";
 import { JsonLd } from "./JsonLd";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
 import { absoluteUrl, siteConfig } from "../site-config";
+import { formatContentDate } from "../content-dates";
 
 export type ArticleFaq = { question: string; answer: string };
 export type ArticleSource = {
@@ -10,15 +11,6 @@ export type ArticleSource = {
   publisher: string;
   href: string;
 };
-
-function formatArticleDate(value: string) {
-  const [year, month, day] = value.split("-").map(Number);
-  const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
-  ];
-  return `${months[month - 1]} ${day}, ${year}`;
-}
 
 export function SeoArticlePage({
   slug,
@@ -66,13 +58,29 @@ export function SeoArticlePage({
           "@context": "https://schema.org",
           "@graph": [
             {
+              "@type": "WebPage",
+              "@id": absoluteUrl(canonicalPath),
+              url: absoluteUrl(canonicalPath),
+              name: title,
+              description,
+              isPartOf: { "@id": absoluteUrl("/#website") },
+              breadcrumb: { "@id": absoluteUrl(`${canonicalPath}#breadcrumb`) },
+              primaryImageOfPage: {
+                "@type": "ImageObject",
+                url: absoluteUrl(siteConfig.socialImage),
+              },
+              datePublished: published,
+              dateModified: updated,
+              inLanguage: "en",
+            },
+            {
               "@type": schemaType,
+              "@id": absoluteUrl(`${canonicalPath}#article`),
               headline: title,
               description,
               datePublished: published,
               dateModified: updated,
               mainEntityOfPage: {
-                "@type": "WebPage",
                 "@id": absoluteUrl(canonicalPath),
               },
               image: absoluteUrl(siteConfig.socialImage),
@@ -82,7 +90,12 @@ export function SeoArticlePage({
               author: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
               reviewedBy: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
               publisher: { "@id": absoluteUrl("/#organization") },
-              citation: sources.map((source) => source.href),
+              citation: sources.map((source) => ({
+                "@type": "CreativeWork",
+                name: source.label,
+                url: source.href,
+                publisher: { "@type": "Organization", name: source.publisher },
+              })),
               about: [
                 "Shopify",
                 "Tabletop games",
@@ -92,6 +105,7 @@ export function SeoArticlePage({
             },
             {
               "@type": "BreadcrumbList",
+              "@id": absoluteUrl(`${canonicalPath}#breadcrumb`),
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -115,6 +129,8 @@ export function SeoArticlePage({
             },
             {
               "@type": "FAQPage",
+              "@id": absoluteUrl(`${canonicalPath}#faq`),
+              isPartOf: { "@id": absoluteUrl(canonicalPath) },
               mainEntity: faqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,
@@ -144,7 +160,7 @@ export function SeoArticlePage({
             <h1>{title}</h1>
             <p>{description}</p>
             <div className="article-meta">
-              <span>Updated <time dateTime={updated}>{formatArticleDate(updated)}</time></span>
+              <span>Updated <time dateTime={updated}>{formatContentDate(updated)}</time></span>
               <span>{readTime}</span>
               <Link href="/authors/guildframe">Guildframe Editorial Team</Link>
             </div>
@@ -163,11 +179,11 @@ export function SeoArticlePage({
             </nav>
             <Link
               href={siteConfig.purchasePath}
-              data-analytics-event="theme_interest"
-              data-analytics-label="Get Guildframe theme"
+              data-analytics-event="guide_interest"
+              data-analytics-label="Get the build guide"
               data-analytics-location="article sidebar"
             >
-              Get the Guildframe theme ↗
+              Get the Guildframe Build Guide ↗
             </Link>
           </aside>
 
@@ -180,7 +196,7 @@ export function SeoArticlePage({
               <h2 id="article-sources-title">Sources reviewed</h2>
               <p>
                 Platform features and policies can change. These primary sources
-                were reviewed on <time dateTime={updated}>{formatArticleDate(updated)}</time>.
+                were reviewed on <time dateTime={updated}>{formatContentDate(updated)}</time>.
               </p>
               <ul>
                 {sources.map((source) => (
@@ -206,18 +222,18 @@ export function SeoArticlePage({
               <h2>Choose how your Shopify store gets built.</h2>
               <p>
                 Hire Guildframe to design and develop your complete Shopify
-                storefront for $2,500, including up to 50 product SKUs, or buy
-                the fully customizable Guildframe theme for $349.
+                storefront for $2,500, including up to 50 product SKUs, or build
+                it yourself with the $79 Guildframe Build Guide.
               </p>
               <div className="article-cta-actions">
                 <Link
                   className="seo-button seo-button-light"
                   href={siteConfig.purchasePath}
-                  data-analytics-event="theme_interest"
-                  data-analytics-label="Get Guildframe theme"
+                  data-analytics-event="guide_interest"
+                  data-analytics-label="Get the build guide"
                   data-analytics-location="article CTA"
                 >
-                  Get the theme ↗
+                  Get the build guide ↗
                 </Link>
                 <Link
                   className="seo-button seo-button-outline"
@@ -296,7 +312,7 @@ export function ArticleTable({
       <table>
         {caption ? <caption>{caption}</caption> : null}
         <thead>
-          <tr>{headers.map((header) => <th key={header}>{header}</th>)}</tr>
+          <tr>{headers.map((header) => <th scope="col" key={header}>{header}</th>)}</tr>
         </thead>
         <tbody>
           {rows.map((row, rowIndex) => (

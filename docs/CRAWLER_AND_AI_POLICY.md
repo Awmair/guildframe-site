@@ -1,6 +1,6 @@
 # Guildframe crawler and AI policy
 
-Last reviewed: 2026-07-17
+Last reviewed: 2026-08-09
 
 ## Discovery policy
 
@@ -16,6 +16,12 @@ Guildframe permits indexing and answer-engine retrieval of its public pages.
 
 The application emits explicit allow rules for `OAI-SearchBot` and
 `ChatGPT-User`, explicit blocks for training crawlers, and the sitemap URL.
+
+The static export writes a React payload file beside every route, such as
+`/about.txt`. Those files duplicate page text and exist only for client side
+navigation, so every allowed user agent group carries `Disallow: /*.txt$` with
+an explicit `Allow: /llms.txt`. Search engines resolve the conflict by path
+specificity, so `llms.txt` stays crawlable while the payloads do not.
 Cloudflare managed robots.txt is disabled because its non-standard
 `Content-Signal` directive produces a Bing Webmaster Tools parser error. Audit
 the rendered `https://guildframe.com/robots.txt`, not only `app/robots.ts`,

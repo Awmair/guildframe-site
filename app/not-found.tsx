@@ -11,8 +11,11 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <>
+      <a className="skip-link" href="#not-found-content">
+        Skip to content
+      </a>
       <SeoHeader />
-      <main className="not-found-page">
+      <main className="not-found-page" id="not-found-content">
         <div>
           <span>404</span>
           <h1>This path ends here.</h1>

@@ -7,12 +7,13 @@ runtime binding.
 ## Main surfaces
 
 - `app/page.tsx`: interactive marketing homepage
-- `app/buy/page.tsx`: stable purchase route and checkout handoff
+- `app/buy/page.tsx`: build guide purchase route and checkout handoff
 - `app/components/SeoLandingPage.tsx`: shared solution-page structure
 - `app/components/SeoArticlePage.tsx`: shared article and AEO structure
 - `app/components/TrustPage.tsx`: shared About, editorial and author layout
 - `app/resources/`: source-backed checklists and comparison references
 - `app/landing-content.ts`: structured solution-page content
+- `app/content-dates.ts`: the single source of truth for every published date
 - `app/site-config.ts`: domain, checkout, analytics and shared metadata settings
 - `app/sitemap.ts`, `app/robots.ts`, `app/manifest.ts`: search and browser files
 - `public/_headers`, `public/_redirects`: Cloudflare Pages behavior
@@ -38,3 +39,7 @@ in the public website.
 Articles and solution pages are file-based and share common shells. New pages
 should preserve one clear H1, unique metadata, a canonical URL, structured data,
 internal links, sitemap inclusion and mobile-safe layout.
+
+Adding a page means updating `app/sitemap.ts`, `app/content-dates.ts`,
+`public/llms.txt`, `docs/SEARCH_INTENT_MAP.md` and the page list in
+`tests/static-output.test.mjs`. The test suite fails if any of those is missed.

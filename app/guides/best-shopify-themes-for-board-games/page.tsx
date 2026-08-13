@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/best-shopify-themes-for-board-games",
   kind: "article",
   publishedTime: "2026-07-16",
-  modifiedTime: "2026-07-21",
+  modifiedTime: "2026-08-09",
   keywords: [
     "best Shopify themes for board games",
     "board game Shopify theme",
@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Is Guildframe unbiased in this comparison?",
     answer:
-      "Guildframe publishes this guide and sells the Guildframe theme. That relationship is disclosed clearly. The comparison uses current official theme listings and recommends each option for a different use case rather than claiming Guildframe is right for every store.",
+      "Guildframe builds Shopify stores for tabletop brands and sells a build guide, and does not sell a theme. No option in this comparison is a Guildframe product. The comparison uses current official theme listings and recommends each option for a different use case.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function BestThemesGuide() {
       description="A useful tabletop theme must sell a world and make a complex product easy to buy. These six options serve different catalog sizes, visual styles and budgets."
       answer="The strongest Shopify theme choices for board game and tabletop stores are Guildframe for purpose built tabletop storytelling, Novaplay for larger game and collectible catalogs, Playtime for trading cards and playful retail, Sunrise for a bright straightforward storefront, Boost for promotion heavy stores, and Dawn for a free flexible foundation. Choose by catalog structure and setup effort, not by the demo image alone."
       published="2026-07-16"
-      updated="2026-07-21"
+      updated="2026-08-09"
       readTime="10 minute read"
       faqs={faqs}
       sources={[
@@ -100,10 +100,10 @@ export default function BestThemesGuide() {
       ]}
     >
       <ArticleCallout>
-        <strong>Disclosure:</strong> Guildframe publishes this guide and sells the
-        Guildframe theme. We include it because it is purpose built for this use
-        case. The other products link to their current official Shopify Theme
-        Store listings so you can verify their demos, features, prices and support.
+        <strong>Disclosure:</strong> Guildframe publishes this guide, builds
+        Shopify stores for tabletop brands and sells a build guide. We do not
+        sell a theme, so no option below is ours. Each links to its current
+        official Shopify listing so you can verify demos, features and prices.
       </ArticleCallout>
 
       <ArticleDefinition term="Board game Shopify theme">
@@ -131,7 +131,7 @@ export default function BestThemesGuide() {
         caption="Shopify themes for board game and tabletop stores"
         headers={["Theme", "Current price", "Best for", "Main tradeoff"]}
         rows={[
-          ["Guildframe", "$349", "Purpose built tabletop brands", "A newer independent theme with a narrower category focus"],
+          ["Horizon", "Free", "New stores wanting layout flexibility", "A heavier structure than Dawn, and more to learn"],
           ["Novaplay", "$250", "Larger game, collectible and hobby catalogs", "General retail structure still needs your tabletop story"],
           ["Playtime", "$380", "Trading cards, collectibles and playful stores", "Feature depth comes at a higher theme price"],
           ["Sunrise", "$240", "Bright, straightforward game stores", "A smaller built in feature set than newer premium options"],
@@ -142,17 +142,18 @@ export default function BestThemesGuide() {
 
       <h2 id="picks">The six theme picks</h2>
 
-      <h3>1. Guildframe: best purpose built theme for tabletop games</h3>
+      <h3>1. Horizon: best free starting point for a new store</h3>
       <p>
-        <Link href="/shopify-theme-for-board-games">Guildframe is built specifically for board games, card games, TTRPGs and miniatures</Link>.
-        It includes Rune Single and Saga Single for flagship games, plus Rune Studio
-        and Saga Studio for growing catalogs. Its sections are designed around
-        editions, expansions, bundles, rich artwork and long form product stories.
+        Horizon is Shopify&apos;s current default free theme for new stores. It
+        uses deeply nested blocks, which lets you assemble complex layouts in
+        the theme editor rather than in code. For a tabletop store that means
+        edition comparisons and component blocks can be built without a
+        developer touching every change.
       </p>
       <ul>
-        <li><strong>Best for:</strong> creators who want tabletop structure without starting from a generic retail demo</li>
-        <li><strong>Strongest advantage:</strong> four category specific presets inside one theme</li>
-        <li><strong>Consider:</strong> the theme is sold independently rather than through the Shopify Theme Store</li>
+        <li><strong>Best for:</strong> new stores with no existing design that want layout flexibility</li>
+        <li><strong>Strongest advantage:</strong> block depth and editor control at no cost</li>
+        <li><strong>Consider:</strong> a heavier structure than Dawn, with more files and more to learn</li>
       </ul>
 
       <h3>2. Novaplay: best for larger game and collectible catalogs</h3>
@@ -250,6 +251,15 @@ export default function BestThemesGuide() {
         The theme should also support the catalog choices in our guide to
         <Link href="/guides/sell-board-game-expansions-add-ons-shopify"> selling expansions, add ons and bundles on Shopify</Link>.
       </p>
+
+      <ArticleCallout>
+        <strong>The theme is the foundation, not the store.</strong> None of
+        these ship an edition comparison, a component list or a base game
+        compatibility notice, because no general theme does. Those are sections
+        you add on top. If you plan to build them with AI coding tools, the{" "}
+        <Link href="/guides/build-a-tabletop-shopify-store-with-ai">AI build guide</Link>{" "}
+        covers what those tools handle well and where they break.
+      </ArticleCallout>
 
       <h2 id="decision">How to choose the right theme</h2>
       <ol>

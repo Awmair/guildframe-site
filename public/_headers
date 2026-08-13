@@ -13,5 +13,8 @@
 /brand/*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
-/og-guildframe-launch-v2.jpg
+/data/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+/og-guildframe-offers-v6.jpg
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400

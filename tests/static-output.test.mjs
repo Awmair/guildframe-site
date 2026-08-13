@@ -6,12 +6,12 @@ const outputRoot = new URL("../out/", import.meta.url);
 
 const pages = [
   ["/", "Shopify Stores for Tabletop Games | Guildframe", "Shopify stores"],
-  ["/buy", "Buy Guildframe | Guildframe", "Build it yourself"],
+  ["/buy", "Buy the Guildframe Build Guide | Guildframe", "Build it yourself"],
   ["/done-for-you-shopify-store", "Shopify Design and Development for Tabletop Brands | Guildframe", "Your tabletop world"],
-  ["/shopify-theme-for-board-games", "Shopify Theme for Board Games | Guildframe", "board game Shopify theme"],
+  ["/shopify-theme-for-board-games", "Shopify Theme and Store Setup for Board Games | Guildframe", "board game Shopify store"],
   ["/kickstarter-to-shopify", "Kickstarter to Shopify for Funded Tabletop Games | Guildframe", "Your campaign funded"],
-  ["/shopify-theme-for-ttrpg", "Shopify Theme for TTRPG Publishers | Guildframe", "TTRPG Shopify theme"],
-  ["/shopify-theme-for-miniatures", "Shopify Theme for Miniatures and Terrain | Guildframe", "miniatures Shopify theme"],
+  ["/shopify-theme-for-ttrpg", "Shopify Store and Theme Setup for TTRPG Publishers | Guildframe", "TTRPG Shopify store"],
+  ["/shopify-theme-for-miniatures", "Shopify Store and Theme Setup for Miniatures | Guildframe", "miniatures Shopify store"],
   ["/guides", "Tabletop Ecommerce and Kickstarter Guides | Guildframe", "Build what comes"],
   ["/guides/what-happens-after-kickstarter-is-funded", "What Happens After Your Kickstarter Is Funded? | Guildframe", "What Happens After Your Kickstarter Is Funded"],
   ["/guides/move-from-kickstarter-to-shopify", "Kickstarter to Shopify Migration Guide | Guildframe", "Kickstarter to Shopify Migration Guide"],
@@ -25,6 +25,7 @@ const pages = [
   ["/guides/selling-miniatures-internationally-vat-ioss", "Selling Miniatures Internationally: VAT and IOSS | Guildframe", "Selling Miniatures Internationally"],
   ["/guides/how-much-does-a-board-game-website-cost", "How Much Does a Board Game Website Cost? | Guildframe", "How Much Does a Board Game Website Cost"],
   ["/guides/shopify-vs-etsy-for-selling-miniatures", "Shopify vs Etsy for Selling Miniatures | Guildframe", "Shopify vs Etsy for Selling Miniatures"],
+  ["/guides/build-a-tabletop-shopify-store-with-ai", "Build a Tabletop Shopify Store With AI | Guildframe", "Build a Tabletop Shopify Store With AI"],
   ["/about", "About Guildframe | Guildframe", "Tabletop worlds deserve"],
   ["/editorial-policy", "Editorial Policy | Guildframe", "Useful first"],
   ["/authors/guildframe", "Guildframe Editorial Team | Guildframe", "Guildframe Editorial Team"],
@@ -34,6 +35,7 @@ const pages = [
   ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "Tabletop Crowdfunding Platform Role Matrix | Guildframe", "Tabletop Crowdfunding Platform Role Matrix"],
   ["/resources/board-game-product-page-checklist", "Board Game Shopify Product Page Checklist | Guildframe", "Board Game Shopify Product Page Checklist"],
   ["/resources/kickstarter-tabletop-games-benchmark", "2024 Kickstarter Tabletop Games Funding Benchmark | Guildframe", "6,646"],
+  ["/resources/tabletop-shopify-metafield-schema", "Tabletop Shopify Metafield Schema | Guildframe", "Tabletop Shopify Metafield Schema"],
 ];
 
 const outputFile = (path) =>
@@ -170,12 +172,12 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
   assert.doesNotMatch(robots, /Content-Signal:/i);
   assert.match(robots, /Sitemap: http:\/\/localhost:3000\/sitemap\.xml/i);
   assert.doesNotMatch(sitemap, /<changefreq>|<priority>/i);
-  assert.equal((sitemap.match(/<lastmod>2026-07-(?:17|18|19|21|23)T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
-  assert.match(sitemap, /<lastmod>2026-07-23T00:00:00.000Z<\/lastmod>/);
+  assert.equal((sitemap.match(/<lastmod>2026-0(?:7-(?:17|18|19|21|23)|8-09)T00:00:00.000Z<\/lastmod>/g) ?? []).length, pages.length);
+  assert.match(sitemap, /<lastmod>2026-08-09T00:00:00.000Z<\/lastmod>/);
   assert.match(llms, /^# Guildframe$/m);
   assert.match(llms, /https:\/\/guildframe\.com\/done-for-you-shopify-store/i);
   assert.match(llms, /\$2,500/);
-  assert.match(llms, /\$349/);
+  assert.match(llms, /\$79/);
   assert.match(llms, /within 72 hours/i);
 });
 
@@ -198,30 +200,34 @@ test("exports AEO and social metadata", async () => {
     "/guides/selling-miniatures-internationally-vat-ioss",
     "/guides/how-much-does-a-board-game-website-cost",
     "/guides/shopify-vs-etsy-for-selling-miniatures",
+    "/guides/build-a-tabletop-shopify-store-with-ai",
     "/resources/board-game-shopify-store-checklist",
     "/resources/kickstarter-to-shopify-migration-checklist",
     "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
     "/resources/board-game-product-page-checklist",
     "/resources/kickstarter-tabletop-games-benchmark",
+    "/resources/tabletop-shopify-metafield-schema",
   ];
   const modifiedDates = new Map([
-    ["/guides/what-happens-after-kickstarter-is-funded", "2026-07-21"],
-    ["/guides/move-from-kickstarter-to-shopify", "2026-07-21"],
-    ["/guides/best-shopify-themes-for-board-games", "2026-07-21"],
-    ["/guides/shopify-developer-vs-diy-theme", "2026-07-21"],
+    ["/guides/what-happens-after-kickstarter-is-funded", "2026-08-09"],
+    ["/guides/move-from-kickstarter-to-shopify", "2026-08-09"],
+    ["/guides/best-shopify-themes-for-board-games", "2026-08-09"],
+    ["/guides/shopify-developer-vs-diy-theme", "2026-08-09"],
     ["/guides/kickstarter-to-shopify-launch-timeline", "2026-07-21"],
     ["/guides/kickstarter-late-pledges-vs-shopify", "2026-07-18"],
     ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-07-18"],
     ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "2026-07-18"],
     ["/guides/selling-miniatures-internationally-vat-ioss", "2026-07-23"],
-    ["/guides/how-much-does-a-board-game-website-cost", "2026-07-23"],
+    ["/guides/how-much-does-a-board-game-website-cost", "2026-08-09"],
     ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-07-23"],
+    ["/guides/build-a-tabletop-shopify-store-with-ai", "2026-08-09"],
+    ["/resources/tabletop-shopify-metafield-schema", "2026-08-09"],
   ]);
 
   for (const path of solutionPaths) {
     const html = await readPage(path);
     assert.match(html, /"@type":"Product"/i, path);
-    assert.match(html, /"price":"349"/i, path);
+    assert.match(html, /"price":"79"/i, path);
     assert.match(html, /"priceCurrency":"USD"/i, path);
   }
 
@@ -233,8 +239,11 @@ test("exports AEO and social metadata", async () => {
     assert.match(html, /"reviewedBy":\{"@id":"http:\/\/localhost:3000\/authors\/guildframe#editorial-team"\}/i, path);
     const modifiedDate = modifiedDates.get(path) ?? "2026-07-17";
     assert.match(html, new RegExp(`"dateModified":"${modifiedDate}"`, "i"), path);
-    assert.match(html, /"citation":\["https:\/\//i, path);
+    assert.match(html, /"citation":\[\{"@type":"CreativeWork","name":"[^"]+","url":"https:\/\//i, path);
+    assert.match(html, /"citation":\[[\s\S]*?"publisher":\{"@type":"Organization","name":"[^"]+"\}/i, path);
     assert.match(html, /Sources reviewed/i, path);
+    assert.match(html, new RegExp(`"@id":"http://localhost:3000${path}#breadcrumb"`, "i"), path);
+    assert.match(html, new RegExp(`"@id":"http://localhost:3000${path}#article"`, "i"), path);
   }
 
   const referencePaths = [
@@ -243,6 +252,7 @@ test("exports AEO and social metadata", async () => {
     "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
     "/resources/board-game-product-page-checklist",
     "/resources/kickstarter-tabletop-games-benchmark",
+    "/resources/tabletop-shopify-metafield-schema",
   ];
   for (const path of referencePaths) {
     const html = await readPage(path);
@@ -259,7 +269,7 @@ test("exports AEO and social metadata", async () => {
   );
   assert.match(
     await readPage("/authors/guildframe"),
-    /"dateModified":"2026-07-17T19:00:00Z"/i,
+    /"dateModified":"2026-07-18"/i,
   );
   assert.match(await readPage("/resources"), /"@type":"CollectionPage"/i);
 
@@ -314,30 +324,32 @@ test("keeps purchase, recovery and redirects launch-ready", async () => {
     "The pricing introduction should appear before the pricing cards",
   );
   assert.doesNotMatch(home, /href="#faq"[^>]*class="checkout-button"/i);
-  assert.match(home, /data-analytics-event="theme_interest"/i);
+  assert.match(home, /data-analytics-event="guide_interest"/i);
   assert.match(
     buy,
-    /<a\b(?=[^>]*href="#theme-checkout")(?=[^>]*class="buy-checkout-button")[^>]*>/i,
+    /<a\b(?=[^>]*href="#guide-checkout")(?=[^>]*class="buy-checkout-button")[^>]*>/i,
   );
   assert.match(buy, /Secure checkout link pending/i);
+  assert.match(buy, /\$79/);
+  assert.doesNotMatch(buy, /\$349|Rune Single|Saga Studio/i);
   assert.doesNotMatch(buy, /https:\/\/checkout\.example\/guildframe/i);
   assert.doesNotMatch(buy, /data-analytics-event="checkout_redirect"/i);
-  assert.match(home, /Get the theme/i);
+  assert.doesNotMatch(buy, /data-analytics-event="theme_interest"/i);
+  assert.match(home, /Get the build guide/i);
   assert.match(home, /Get my free preview/i);
   assert.doesNotMatch(
     home,
     /Start my store|Build my(?: Shopify)? store|Get free preview|Get my free store preview|Request (?:a |my )?free (?:store )?preview/i,
   );
   assert.match(home, /\$2,500/i);
-  assert.match(home, /\$349/i);
+  assert.match(home, /\$79/i);
   assert.match(home, /within 72 hours/i);
-  assert.doesNotMatch(home, /Build my store for \$2,500|Get the theme for \$349/i);
+  assert.doesNotMatch(home, /Build my store for \$2,500|Get the guide for \$79/i);
   assert.doesNotMatch(home, /\$419|\$1,399|within 48 hours|free 48-hour/i);
   assert.doesNotMatch(home, /Three ways to build your store/i);
-  assert.match(home, /Rune Single/i);
-  assert.match(home, /Rune Studio/i);
-  assert.match(home, /Saga Single/i);
-  assert.match(home, /Saga Studio/i);
+  assert.doesNotMatch(home, /Rune Single|Rune Studio|Saga Single|Saga Studio/i);
+  assert.doesNotMatch(home, /premium (?:DIY )?theme|Guildframe theme/i);
+  assert.match(home, /Guildframe Build Guide/i);
   assert.doesNotMatch(home, /mailto:/i);
   assert.doesNotMatch(home, /Got questions or queries|You will hear from the developer/i);
   assert.doesNotMatch(home, />Umair</i);
@@ -427,4 +439,176 @@ test("keeps copy and responsive mockups clean", async () => {
 
 test("does not ship GitHub Actions workflows", async () => {
   await assert.rejects(access(new URL("../.github/workflows/", import.meta.url)));
+});
+
+const monthNames = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+const readableDate = (iso) => {
+  const [year, month, day] = iso.split("-").map(Number);
+  return `${monthNames[month - 1]} ${day}, ${year}`;
+};
+
+// The sitemap, the schema dateModified and the date a reader sees must never
+// drift apart. A hardcoded visible date previously survived several content
+// updates because nothing compared it with app/content-dates.ts.
+const datedPages = new Map([
+  ["/about", "2026-08-09"],
+  ["/editorial-policy", "2026-07-21"],
+  ["/authors/guildframe", "2026-07-18"],
+  ["/guides/what-happens-after-kickstarter-is-funded", "2026-08-09"],
+  ["/guides/move-from-kickstarter-to-shopify", "2026-08-09"],
+  ["/guides/best-shopify-themes-for-board-games", "2026-08-09"],
+  ["/guides/shopify-developer-vs-diy-theme", "2026-08-09"],
+  ["/guides/kickstarter-late-pledges-vs-shopify", "2026-07-18"],
+  ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-07-18"],
+  ["/guides/kickstarter-to-shopify-launch-timeline", "2026-07-21"],
+  ["/guides/sell-board-game-preorders-on-shopify", "2026-07-17"],
+  ["/guides/sell-board-game-expansions-add-ons-shopify", "2026-07-17"],
+  ["/guides/selling-miniatures-internationally-vat-ioss", "2026-07-23"],
+  ["/guides/how-much-does-a-board-game-website-cost", "2026-08-09"],
+  ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-07-23"],
+  ["/guides/build-a-tabletop-shopify-store-with-ai", "2026-08-09"],
+  ["/resources/board-game-shopify-store-checklist", "2026-07-17"],
+  ["/resources/kickstarter-to-shopify-migration-checklist", "2026-07-17"],
+  ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "2026-07-18"],
+  ["/resources/board-game-product-page-checklist", "2026-07-17"],
+  ["/resources/kickstarter-tabletop-games-benchmark", "2026-07-17"],
+  ["/resources/tabletop-shopify-metafield-schema", "2026-08-09"],
+]);
+
+test("keeps visible review dates, schema dates and sitemap dates identical", async (t) => {
+  const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
+  const contentDates = await readFile(new URL("../app/content-dates.ts", import.meta.url), "utf8");
+
+  for (const [path, expected] of datedPages) {
+    await t.test(path, async () => {
+      const html = await readPage(path);
+      assert.match(
+        html,
+        new RegExp(`<time datetime="${expected}">${readableDate(expected)}</time>`, "i"),
+        `visible review date must match ${expected}`,
+      );
+      assert.doesNotMatch(
+        html,
+        new RegExp(`<time datetime="${expected}">(?!${readableDate(expected)})`, "i"),
+        `visible review date must not be hardcoded away from ${expected}`,
+      );
+      assert.match(html, new RegExp(`"dateModified":"${expected}"`), `schema dateModified must be ${expected}`);
+
+      const entry = sitemap.match(
+        new RegExp(`<loc>http://localhost:3000${path}</loc>\\s*<lastmod>([^<]+)</lastmod>`),
+      );
+      assert.ok(entry, `sitemap entry missing: ${path}`);
+      assert.equal(entry[1], `${expected}T00:00:00.000Z`, `sitemap lastmod must be ${expected}`);
+    });
+  }
+
+  for (const expected of new Set(datedPages.values())) {
+    assert.ok(contentDates.includes(`"${expected}"`), `app/content-dates.ts must still declare ${expected}`);
+  }
+});
+
+test("keeps the React payload files out of the search index", async () => {
+  const robots = await readFile(new URL("robots.txt", outputRoot), "utf8");
+  assert.match(robots, /^Disallow: \/\*\.txt\$$/m, "static export payload files must be disallowed");
+  assert.match(robots, /^Allow: \/llms\.txt$/m, "llms.txt must stay explicitly allowed");
+
+  const payload = await readFile(new URL("about.txt", outputRoot), "utf8");
+  assert.match(payload, /Tabletop worlds deserve/i, "about.txt still mirrors page text, so the rule is required");
+});
+
+test("publishes an accurate llms.txt for every canonical route", async () => {
+  const llms = await readFile(new URL("llms.txt", outputRoot), "utf8");
+  for (const [path] of pages) {
+    const url = `https://guildframe.com${path === "/" ? "/" : path}`;
+    assert.ok(llms.includes(url), `llms.txt must list ${url}`);
+  }
+  assert.match(llms, /checkout link is not open yet/i, "llms.txt must state the real checkout status");
+  assert.match(llms, /kickstarter-tabletop-games-benchmark-2024\.csv/i, "llms.txt must expose the citable dataset");
+  assert.doesNotMatch(llms, /[–—]/u, "llms.txt must follow the no visible dash rule");
+});
+
+test("keeps every meta description inside the truncation limit", async (t) => {
+  for (const [path] of pages) {
+    await t.test(path, async () => {
+      const html = await readPage(path);
+      const description = html.match(/<meta name="description" content="([^"]+)"/i)?.[1] ?? "";
+      assert.ok(description.length >= 90, `description too short (${description.length}): ${path}`);
+      assert.ok(description.length <= 160, `description too long (${description.length}): ${path}`);
+    });
+  }
+});
+
+test("keeps comparison tables and the purchase route accessible and connected", async () => {
+  const benchmark = await readPage("/resources/kickstarter-tabletop-games-benchmark");
+  assert.doesNotMatch(benchmark, /<th(?=[\s>])(?![^>]*\bscope=)/i, "table headers need a scope");
+  assert.match(benchmark, /"@type":"Dataset"/, "the downloadable benchmark needs Dataset markup");
+  assert.match(benchmark, /"@type":"DataDownload"/);
+  assert.match(benchmark, /"encodingFormat":"text\/csv"/);
+  assert.match(
+    benchmark,
+    /"measurementTechnique":"[^"]*Kickstarter published[^"]*"/,
+    "the dataset must keep its visible methodology in schema",
+  );
+
+  const buy = await readPage("/buy");
+  assert.match(buy, /"@type":"BreadcrumbList"/, "the purchase route needs breadcrumb markup");
+  assert.match(buy, /"@id":"http:\/\/localhost:3000\/buy#webpage"/);
+  assert.match(buy, /class="seo-breadcrumbs"/, "the purchase route needs a visible breadcrumb");
+  assert.match(buy, /href="\/guides\/shopify-developer-vs-diy-theme"/, "the theme route must link to the decision guide");
+
+  const home = await readPage("/");
+  assert.match(home, /"@type":"FAQPage"/, "the visible homepage answers need FAQ markup");
+  assert.match(home, /"@id":"http:\/\/localhost:3000\/#webpage"/);
+  assert.match(home, /What does Guildframe do\?/, "FAQ markup must mirror the visible questions");
+});
+
+test("keeps the lowest linked primary pages reachable from their own topic", async () => {
+  const required = new Map([
+    ["/guides/shopify-developer-vs-diy-theme", ["/buy", "/done-for-you-shopify-store", "/shopify-theme-for-ttrpg"]],
+    ["/guides/shopify-vs-etsy-for-selling-miniatures", ["/shopify-theme-for-miniatures"]],
+    ["/guides/how-much-does-a-board-game-website-cost", ["/buy", "/done-for-you-shopify-store"]],
+  ]);
+
+  for (const [target, sources] of required) {
+    for (const source of sources) {
+      const html = await readPage(source);
+      assert.match(
+        html,
+        new RegExp(`href="${target}"`),
+        `${source} must keep its contextual link to ${target}`,
+      );
+    }
+  }
+});
+
+test("ships no unreferenced image asset in the deployable output", async () => {
+  const textExtensions = new Set([".css", ".html", ".js", ".json", ".txt", ".webmanifest", ".xml"]);
+  const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".svg", ".webp"]);
+  const allowed = new Set(["/favicon.svg", "/favicon-192x192.png", "/favicon-512x512.png"]);
+
+  const walk = async (directory) => {
+    const entries = await readdir(directory, { withFileTypes: true });
+    const found = [];
+    for (const entry of entries) {
+      const url = new URL(`${entry.name}${entry.isDirectory() ? "/" : ""}`, directory);
+      if (entry.isDirectory()) found.push(...await walk(url));
+      if (entry.isFile()) found.push(url);
+    }
+    return found;
+  };
+
+  const files = await walk(outputRoot);
+  const extensionOf = (url) => url.pathname.slice(url.pathname.lastIndexOf("."));
+  const corpus = (await Promise.all(
+    files.filter((url) => textExtensions.has(extensionOf(url))).map((url) => readFile(url, "utf8")),
+  )).join("\n");
+
+  for (const url of files.filter((entry) => imageExtensions.has(extensionOf(entry)))) {
+    const relative = `/${decodeURIComponent(url.pathname).slice(decodeURIComponent(outputRoot.pathname).length)}`;
+    if (allowed.has(relative)) continue;
+    assert.ok(corpus.includes(relative), `unreferenced asset shipped to production: ${relative}`);
+  }
 });

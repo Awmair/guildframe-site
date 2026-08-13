@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
+import { formatContentDate } from "../content-dates";
 
 export function TrustPage({
   title,
@@ -25,7 +26,7 @@ export function TrustPage({
           <div>
             <h1>{title}</h1>
             <p>{description}</p>
-            <span>Reviewed <time dateTime={updated}>July 17, 2026</time></span>
+            <span>Reviewed <time dateTime={updated}>{formatContentDate(updated)}</time></span>
           </div>
         </header>
         <article className="trust-content" id="trust-content">

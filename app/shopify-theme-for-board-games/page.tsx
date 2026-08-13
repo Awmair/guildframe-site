@@ -3,9 +3,9 @@ import { boardGameContent } from "../landing-content";
 import { pageMetadata } from "../site-config";
 
 export const metadata = pageMetadata({
-  title: "Shopify Theme for Board Games",
+  title: "Shopify Theme and Store Setup for Board Games",
   description:
-    "A premium board game Shopify theme for tabletop creators. Buy the customizable theme for $349 or get a complete Shopify store build for $2,500, including up to 50 product SKUs.",
+    "Choose a board game Shopify theme and structure the store around editions, expansions and bundles. Full build for $2,500, or build it yourself for $79.",
   path: "/shopify-theme-for-board-games",
   keywords: ["Shopify theme for board games", "board game Shopify theme", "tabletop Shopify theme"],
 });

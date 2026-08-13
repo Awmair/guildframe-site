@@ -116,14 +116,17 @@ export default function DoneForYouShopifyStorePage() {
           <div>
             <h2>Want to build it yourself?</h2>
             <p>
-              Get Guildframe, our premium Shopify theme purpose built for
-              tabletop games, with four complete presets and full visual editor
-              controls.
+              Get the Guildframe Build Guide and build the storefront yourself
+              with AI coding tools, using the catalog architecture, metafield
+              schema and prompts we use on client work.
             </p>
           </div>
           <div>
-            <strong className="service-diy-price">$349</strong>
-            <Link href="/buy">Get the theme <span aria-hidden="true">↗</span></Link>
+            <strong className="service-diy-price">$79</strong>
+            <Link href="/buy">Get the build guide <span aria-hidden="true">↗</span></Link>
+            <Link className="service-diy-guide" href="/guides/shopify-developer-vs-diy-theme">
+              Compare both routes first
+            </Link>
           </div>
         </section>
 
@@ -202,6 +205,13 @@ export default function DoneForYouShopifyStorePage() {
             <p>
               Shopify plans, paid apps, custom app development, photography,
               illustration and new copywriting are not included.
+            </p>
+            <p>
+              For a full budget picture, read the{" "}
+              <Link href="/guides/how-much-does-a-board-game-website-cost">
+                board game website cost guide
+              </Link>
+              .
             </p>
           </div>
         </section>

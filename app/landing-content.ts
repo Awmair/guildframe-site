@@ -2,8 +2,8 @@ import type { LandingPageContent } from "./components/SeoLandingPage";
 
 const commonSteps = [
   {
-    title: "Choose a storefront preset",
-    copy: "Choose Rune or Saga, then use the Single or Studio structure built for your catalog.",
+    title: "Choose a storefront foundation",
+    copy: "Pick the Shopify theme foundation that fits your catalog, then plan the sections your products actually need.",
   },
   {
     title: "Bring your campaign assets",
@@ -17,14 +17,14 @@ const commonSteps = [
 
 export const boardGameContent: LandingPageContent = {
   slug: "shopify-theme-for-board-games",
-  eyebrow: "Shopify theme for board games",
-  title: "A board game Shopify theme built for",
+  eyebrow: "Board game stores",
+  title: "A board game Shopify store built for",
   highlight: "complete worlds.",
   answer:
-    "Guildframe designs and develops complete Shopify storefronts for board game creators and publishers for $2,500, including up to 50 product SKUs. Prefer to build it yourself? The fully customizable Guildframe theme is $349.",
+    "Guildframe designs and develops complete Shopify storefronts for board game creators and publishers for $2,500, including up to 50 product SKUs. Prefer to build it yourself? The $79 Guildframe Build Guide shows you how to do it with AI coding tools.",
   image: "/images/pdp-guildframe-responsive-v1.jpg",
   imageAlt:
-    "Guildframe board game product page displayed on desktop and mobile",
+    "A board game product page displayed on desktop and mobile",
   audience: "board games, card games, expansions and collector editions",
   benefits: [
     {
@@ -36,8 +36,8 @@ export const boardGameContent: LandingPageContent = {
       copy: "Carry the world, artwork and product explanation that earned the pledge into the store that follows it.",
     },
     {
-      title: "Make every detail yours",
-      copy: "Control colors, typography, spacing, layouts and product information through Shopify without code.",
+      title: "Keep control of the build",
+      copy: "Own the Shopify store, the theme files and the product data, whether we build it or you do.",
     },
   ],
   proofTitle: "A storefront designed around how tabletop products are actually sold.",
@@ -57,7 +57,7 @@ export const boardGameContent: LandingPageContent = {
       copy: "Organize games, expansions, accessories and bundles as your catalog grows.",
     },
     {
-      title: "Responsive by default",
+      title: "Responsive on every screen",
       copy: "Give players a focused buying experience on phones, tablets and desktops.",
     },
     {
@@ -74,22 +74,22 @@ export const boardGameContent: LandingPageContent = {
     {
       question: "What is the best Shopify theme for a board game store?",
       answer:
-        "The best theme is one that can explain the game, distinguish editions, show components clearly, support campaign storytelling and remain easy to shop on mobile. Guildframe is purpose built around those tabletop requirements.",
+        "The best theme is one that can explain the game, distinguish editions, show components clearly, support campaign storytelling and remain easy to shop on mobile. Dawn and Horizon both give you a workable foundation, and the work that matters is the catalog structure and the product page sections you add on top.",
     },
     {
-      question: "Can Guildframe sell expansions, bundles and preorders?",
+      question: "Can a Shopify store handle expansions, bundles and preorders?",
       answer:
-        "Yes. You can use Shopify products, variants and collections to present core games, expansions, bundles, accessories and preorders. The exact preorder workflow can also use a compatible Shopify app if needed.",
+        "Yes. Shopify products, variants and collections can present core games, expansions, bundles, accessories and preorders. The decision that matters is which of those should be a product, which should be a variant and which should be a bundle. The exact preorder workflow can also use a compatible Shopify app.",
     },
     {
       question: "Do I need to know how to code?",
       answer:
-        "No. Guildframe uses Shopify's visual theme editor, so you can change colors, typography, spacing, sections, layouts and product content without editing code.",
+        "Not for the done for you build. If you build it yourself, AI coding tools handle most of the Liquid, and the Guildframe Build Guide covers the catalog and product page decisions those tools cannot make for you.",
     },
     {
       question: "Does Guildframe include Shopify?",
       answer:
-        "No. Guildframe is a theme and store building service for an active Shopify store. Your Shopify plan, payment processing and any third party app fees are separate.",
+        "No. Guildframe is a store building service and a build guide for an active Shopify store. Your Shopify plan, payment processing and any third party app fees are separate.",
     },
   ],
   related: [
@@ -111,111 +111,15 @@ export const boardGameContent: LandingPageContent = {
   ],
 };
 
-export const kickstarterContent: LandingPageContent = {
-  slug: "kickstarter-to-shopify",
-  eyebrow: "Kickstarter to Shopify",
-  title: "Move from a funded Kickstarter to",
-  highlight: "a live Shopify store.",
-  answer:
-    "Guildframe helps tabletop creators move from Kickstarter to Shopify without rebuilding their campaign from scratch. Reuse your final artwork, product information, story and audience proof inside a permanent storefront built for ongoing sales.",
-  image: "/images/guildframe-funded-to-live-v2.jpg",
-  imageAlt:
-    "A funded Kickstarter campaign becoming a live Guildframe Shopify store",
-  audience: "funded tabletop campaigns ready for the next stage",
-  benefits: [
-    {
-      title: "Preserve what already worked",
-      copy: "Bring the artwork, product copy, campaign story and social proof your audience already understands.",
-    },
-    {
-      title: "Own the ongoing storefront",
-      copy: "Build a permanent home for post campaign sales, new customers, expansions and future releases.",
-    },
-    {
-      title: "Launch with less setup work",
-      copy: "Use a tabletop-ready structure or a complete Guildframe store build instead of starting with a blank generic theme.",
-    },
-  ],
-  proofTitle: "Crowdfunding validates the game. Shopify helps you keep selling it.",
-  proofCopy:
-    "A pledge manager, late pledge page and online store can each serve a different job. Guildframe focuses on the permanent storefront: a branded place for products, content, customer discovery and repeat sales after the campaign.",
-  capabilities: [
-    {
-      title: "Campaign content migration",
-      copy: "Reuse finalized story sections, artwork, product details and FAQs in a store-friendly structure.",
-    },
-    {
-      title: "Post campaign product pages",
-      copy: "Turn rewards and editions into products customers can understand beyond the pledge window.",
-    },
-    {
-      title: "A home for future launches",
-      copy: "Keep news, events, expansions and new campaign links under one recognizable brand.",
-    },
-    {
-      title: "Mobile shopping",
-      copy: "Make it easy for returning backers and new customers to browse from any screen.",
-    },
-    {
-      title: "Shopify checkout and inventory",
-      copy: "Manage products, inventory, payments and checkout with Shopify's commerce system.",
-    },
-    {
-      title: "Done for you store build",
-      copy: "For $2,500, we design and develop the complete storefront from your supplied final assets, including up to 50 product SKUs.",
-    },
-  ],
-  steps: commonSteps,
-  faqs: [
-    {
-      question: "How do I move from Kickstarter to Shopify?",
-      answer:
-        "Prepare final product data, campaign artwork, policies and fulfillment timing. Build the Shopify catalog and branded pages, test checkout and mobile, then direct new shoppers to the store while continuing to communicate with backers through the appropriate campaign channels.",
-    },
-    {
-      question: "Does Shopify replace Kickstarter or a pledge manager?",
-      answer:
-        "No. Kickstarter funds and communicates around the campaign, while pledge managers can handle post campaign surveys, upgrades and fulfillment data. Shopify is best treated as the permanent online store for ongoing commerce.",
-    },
-    {
-      question: "Can I reuse my Kickstarter campaign page?",
-      answer:
-        "You can reuse final artwork, product descriptions, story sections and FAQs that you own, then reorganize them for a store where customers browse products and buy directly.",
-    },
-    {
-      question: "When should I open Shopify after a campaign?",
-      answer:
-        "Open it when your product information, pricing, fulfillment message and customer support process are clear. You can prepare the storefront before fulfillment, but the store must explain availability and delivery timing accurately.",
-    },
-  ],
-  related: [
-    {
-      title: "What happens after your Kickstarter is funded?",
-      copy: "Understand payment collection, backer operations, fulfillment and the path to ongoing sales.",
-      href: "/guides/what-happens-after-kickstarter-is-funded",
-    },
-    {
-      title: "Selling after Kickstarter",
-      copy: "Compare late pledges, preorders and Shopify without confusing backers or new customers.",
-      href: "/guides/kickstarter-late-pledges-vs-shopify",
-    },
-    {
-      title: "Kickstarter to Shopify migration guide",
-      copy: "Follow the practical sequence from final campaign assets to a tested permanent store.",
-      href: "/guides/move-from-kickstarter-to-shopify",
-    },
-  ],
-};
-
 export const ttrpgContent: LandingPageContent = {
   slug: "shopify-theme-for-ttrpg",
-  eyebrow: "Shopify theme for TTRPG creators",
-  title: "A TTRPG Shopify theme for",
+  eyebrow: "TTRPG stores",
+  title: "A TTRPG Shopify store for",
   highlight: "stories that keep expanding.",
   answer:
-    "Guildframe is a Shopify theme for TTRPG publishers and independent creators. Present core books, supplements, adventures, dice and accessories inside a cinematic, mobile friendly storefront that can grow with your world.",
+    "Guildframe builds Shopify storefronts for TTRPG publishers and independent creators for $2,500, including up to 50 product SKUs. Present core books, supplements, adventures, dice and accessories inside a mobile friendly store that grows with your world, or build it yourself with the $79 build guide.",
   image: "/images/pdp-nightbanner-responsive-v1.jpg",
-  imageAlt: "Rune Single TTRPG product page on desktop and mobile",
+  imageAlt: "A TTRPG product page shown on desktop and mobile",
   audience: "TTRPG books, adventures, supplements, dice and accessories",
   benefits: [
     {
@@ -237,7 +141,7 @@ export const ttrpgContent: LandingPageContent = {
   capabilities: [
     {
       title: "World first art direction",
-      copy: "Choose Rune Single for one flagship world or Rune Studio for a growing cinematic catalog.",
+      copy: "Lead with the setting, then let format, compatibility and reading order do the selling.",
     },
     {
       title: "Format clarity",
@@ -268,14 +172,14 @@ export const ttrpgContent: LandingPageContent = {
         "Yes. Physical products can use Shopify normally. Digital file delivery typically uses a compatible Shopify app, so choose one that matches your file size, licensing and customer access needs.",
     },
     {
-      question: "Can the theme handle a large TTRPG catalog?",
+      question: "Can Shopify handle a large TTRPG catalog?",
       answer:
         "Yes. Shopify collections, navigation and product data can organize core books, adventures, supplements, accessories and bundles. A clear catalog structure should be planned before setup.",
     },
     {
       question: "Will my store still feel like my game?",
       answer:
-        "Yes. Guildframe includes Rune Single, Rune Studio, Saga Single and Saga Studio, plus controls for colors, typography, spacing, sections, media and product content through Shopify's theme editor.",
+        "Yes. The storefront is designed around your artwork, typography and setting rather than a generic template, and every visual setting stays editable in Shopify after handoff.",
     },
     {
       question: "Can you build the entire TTRPG store for me?",
@@ -295,22 +199,22 @@ export const ttrpgContent: LandingPageContent = {
       href: "/guides/backerkit-vs-shopify-vs-gamefound",
     },
     {
-      title: "Explore the Rune presets",
-      copy: "See Guildframe's cinematic direction for a flagship game or a small studio catalog.",
-      href: "/#styles",
+      title: "Shopify developer vs DIY theme",
+      copy: "Decide whether to build the TTRPG store yourself or have the storefront built for you.",
+      href: "/guides/shopify-developer-vs-diy-theme",
     },
   ],
 };
 
 export const miniaturesContent: LandingPageContent = {
   slug: "shopify-theme-for-miniatures",
-  eyebrow: "Shopify theme for miniatures",
-  title: "A miniatures Shopify theme that makes",
+  eyebrow: "Miniature stores",
+  title: "A miniatures Shopify store that makes",
   highlight: "detail feel valuable.",
   answer:
-    "Guildframe is a Shopify theme for miniature studios, terrain makers and tabletop accessory brands. It gives detailed product photography, scales, variants, collections and campaign stories a polished storefront on desktop and mobile.",
+    "Guildframe builds Shopify storefronts for miniature studios, terrain makers and tabletop accessory brands for $2,500, including up to 50 product SKUs. Detailed photography, scales, variants, collections and campaign stories get a polished store, or build it yourself with the $79 build guide.",
   image: "/images/pdp-vaultmark-responsive-v1.jpg",
-  imageAlt: "Premium miniature and collector product page on desktop and mobile",
+  imageAlt: "A miniature and collector product page on desktop and mobile",
   audience: "miniatures, terrain, hobby tools and collector products",
   benefits: [
     {
@@ -343,8 +247,8 @@ export const miniaturesContent: LandingPageContent = {
       copy: "Group factions, terrain sets, accessories and compatible add ons for easier discovery.",
     },
     {
-      title: "Purpose built visual presets",
-      copy: "Choose a Single or Studio structure, then customize it to match your identity.",
+      title: "Structure that fits the range",
+      copy: "Organize a single flagship range or a growing studio catalog without forcing either shape.",
     },
     {
       title: "Responsive shopping",
@@ -370,7 +274,7 @@ export const miniaturesContent: LandingPageContent = {
     {
       question: "Can I use video and detailed product images?",
       answer:
-        "Guildframe is designed for rich product media. Keep assets optimized for the web so close up detail stays sharp without making mobile pages unnecessarily heavy.",
+        "Yes. A miniature store depends on rich product media. Keep assets optimized for the web so close up detail stays sharp without making mobile pages unnecessarily heavy.",
     },
     {
       question: "Can you build the store for my studio?",
@@ -390,9 +294,9 @@ export const miniaturesContent: LandingPageContent = {
       href: "/guides/kickstarter-late-pledges-vs-shopify",
     },
     {
-      title: "Explore the Studio presets",
-      copy: "See the Rune Studio and Saga Studio structures for growing tabletop catalogs.",
-      href: "/#styles",
+      title: "Shopify vs Etsy for selling miniatures",
+      copy: "Compare marketplace discovery with an owned store before committing to one channel.",
+      href: "/guides/shopify-vs-etsy-for-selling-miniatures",
     },
   ],
 };

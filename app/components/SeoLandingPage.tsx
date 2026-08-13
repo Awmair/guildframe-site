@@ -25,6 +25,7 @@ export type LandingPageContent = {
 export function SeoLandingPage({ content }: { content: LandingPageContent }) {
   const breadcrumbData = {
     "@type": "BreadcrumbList",
+    "@id": absoluteUrl(`/${content.slug}#breadcrumb`),
     itemListElement: [
       {
         "@type": "ListItem",
@@ -51,10 +52,12 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
           "@graph": [
             {
               "@type": "WebPage",
+              "@id": absoluteUrl(`/${content.slug}#webpage`),
               name: `${content.title} ${content.highlight}`,
               url: absoluteUrl(`/${content.slug}`),
               description: content.answer,
               isPartOf: { "@id": absoluteUrl("/#website") },
+              breadcrumb: { "@id": absoluteUrl(`/${content.slug}#breadcrumb`) },
               primaryImageOfPage: {
                 "@type": "ImageObject",
                 url: absoluteUrl(content.image),
@@ -66,6 +69,8 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
             breadcrumbData,
             {
               "@type": "FAQPage",
+              "@id": absoluteUrl(`/${content.slug}#faq`),
+              isPartOf: { "@id": absoluteUrl(`/${content.slug}#webpage`) },
               mainEntity: content.faqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,
@@ -97,14 +102,14 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
                 <Link
                   className="seo-button"
                   href={siteConfig.purchasePath}
-                  data-analytics-event="theme_interest"
-                  data-analytics-label={`Get Guildframe for ${siteConfig.price}`}
+                  data-analytics-event="guide_interest"
+                  data-analytics-label={`Get the build guide for ${siteConfig.price}`}
                   data-analytics-location="solution hero"
                 >
-                  Get Guildframe for {siteConfig.price} <span aria-hidden="true">↗</span>
+                  Get the build guide for {siteConfig.price} <span aria-hidden="true">↗</span>
                 </Link>
-                <Link className="seo-text-link" href="/#styles">
-                  Explore the four presets
+                <Link className="seo-text-link" href="/guides/build-a-tabletop-shopify-store-with-ai">
+                  Build it yourself with AI
                 </Link>
                 <Link className="seo-text-link" href="#start-project">
                   Get my free preview
@@ -174,8 +179,9 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
           <div className="seo-offer-note">
             <strong>Choose your build path</strong>
             <p>
-              Buy the fully customizable theme for {siteConfig.price}, or get
-              the entire Shopify storefront designed and developed for {siteConfig.servicePrice}.
+              Build it yourself with the {siteConfig.price} Guildframe Build
+              Guide, or get the entire Shopify storefront designed and developed
+              for {siteConfig.servicePrice}.
             </p>
             <Link href="/#pricing">Compare both offers ↗</Link>
           </div>
@@ -183,7 +189,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
 
         <section className="seo-faq-section">
           <div className="seo-section-heading">
-            <h2>Questions creators ask before choosing a theme.</h2>
+            <h2>Questions creators ask before choosing a route.</h2>
           </div>
           <div className="seo-faq-list">
             {content.faqs.map((faq, index) => (

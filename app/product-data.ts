@@ -1,13 +1,13 @@
 import { absoluteUrl, siteConfig } from "./site-config";
 
 export const guildframeOffer = {
-  name: "Guildframe",
-  price: "349",
+  name: "Guildframe Build Guide",
+  price: "79",
   priceCurrency: "USD",
   availability: "https://schema.org/InStock",
-  category: "Shopify theme for tabletop game creators",
+  category: "Digital build guide for tabletop Shopify stores",
   description:
-    "A premium Shopify theme purpose built for board games, card games, TTRPGs, miniatures and tabletop studios, with four complete storefront presets.",
+    "A guide for tabletop creators who want to build their own Shopify store using an AI tool, with the exact prompts to copy, what to fix when the AI gets something wrong, and a finished example store to copy from.",
 } as const;
 
 export function guildframeProductData(image = siteConfig.socialImage) {
@@ -18,7 +18,7 @@ export function guildframeProductData(image = siteConfig.socialImage) {
     description: guildframeOffer.description,
     category: guildframeOffer.category,
     image: absoluteUrl(image),
-    brand: { "@type": "Brand", name: guildframeOffer.name },
+    brand: { "@type": "Brand", name: siteConfig.name },
     additionalProperty: [
       {
         "@type": "PropertyValue",
@@ -27,18 +27,18 @@ export function guildframeProductData(image = siteConfig.socialImage) {
       },
       {
         "@type": "PropertyValue",
-        name: "Storefront presets",
-        value: "Rune Single, Rune Studio, Saga Single and Saga Studio",
+        name: "Format",
+        value: "Downloadable guide with a prompt file and a finished example store",
       },
       {
         "@type": "PropertyValue",
-        name: "Responsive layouts",
-        value: "Desktop, tablet and mobile",
+        name: "AI tools covered",
+        value: "Claude, Cursor and Codex",
       },
       {
         "@type": "PropertyValue",
-        name: "Setup model",
-        value: "Self serve theme with Shopify editor controls",
+        name: "Catalogs covered",
+        value: "Board games, card games, TTRPGs, miniatures and terrain",
       },
     ],
     offers: {

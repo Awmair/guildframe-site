@@ -3,9 +3,9 @@ import { miniaturesContent } from "../landing-content";
 import { pageMetadata } from "../site-config";
 
 export const metadata = pageMetadata({
-  title: "Shopify Theme for Miniatures and Terrain",
+  title: "Shopify Store and Theme Setup for Miniatures",
   description:
-    "A miniatures Shopify theme for detailed product media, variants, ranges and collections. Built for miniature studios and terrain makers.",
+    "Build a miniatures Shopify store for detailed product media, variants, ranges and collections. Full build for $2,500, or build it yourself for $79.",
   path: "/shopify-theme-for-miniatures",
   keywords: ["Shopify theme for miniatures", "miniature store Shopify theme", "terrain ecommerce website"],
 });

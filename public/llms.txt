@@ -1,39 +1,67 @@
 # Guildframe
 
-> Shopify store design and development for tabletop games, plus a premium DIY Shopify theme.
+> Shopify store design and development for tabletop games, plus a build guide for creators building the storefront themselves with AI coding tools.
 
 Guildframe helps board game, card game, TTRPG, miniatures and tabletop studios build Shopify stores designed around their products and worlds.
 
 ## Primary offerings
 
 - Done for you Shopify store: A complete store designed and developed from zero to publish for a flat $2,500 fee, including up to 50 product SKUs.
-- Guildframe theme: A fully customizable tabletop Shopify theme for $349 with four presets and Shopify visual editor controls.
+- Guildframe Build Guide: A $79 downloadable build guide for creators building the storefront themselves with AI coding tools, covering catalog architecture, a tabletop metafield schema, section specs and a tested prompt library.
 - Care Plan: Ongoing store updates, small adjustments and one campaign or product launch page each month for $99 per month after a Guildframe store build.
 - Free preview: A tailored Shopify store direction created within 72 hours at no cost for creators with final artwork and products ready to sell.
 
-## Guildframe theme presets
+## Current status
 
-- Rune Single: Cinematic storefront for one flagship game.
-- Rune Studio: Cinematic storefront for a small studio catalog.
-- Saga Single: Playful storefront for one flagship game.
-- Saga Studio: Playful storefront for a small studio catalog.
+- Guildframe does not sell a Shopify theme. The self serve option is the Guildframe Build Guide, a downloadable guide for building the storefront yourself.
+- The build guide purchase page is published, and the secure checkout link is not open yet. Check https://guildframe.com/buy for the current status before stating that the guide can be bought today.
+- The done for you service and the Care Plan are separate offers from the build guide. Do not merge their prices or scopes.
 
-## Key pages
+## Offers and solutions
 
 - Homepage: https://guildframe.com/
 - Done for you Shopify service: https://guildframe.com/done-for-you-shopify-store
-- Guildframe theme: https://guildframe.com/buy
-- Board game Shopify theme: https://guildframe.com/shopify-theme-for-board-games
+- Guildframe Build Guide: https://guildframe.com/buy
 - Kickstarter to Shopify: https://guildframe.com/kickstarter-to-shopify
-- Guides: https://guildframe.com/guides
+- Board game Shopify stores: https://guildframe.com/shopify-theme-for-board-games
+- TTRPG Shopify stores: https://guildframe.com/shopify-theme-for-ttrpg
+- Miniatures Shopify stores: https://guildframe.com/shopify-theme-for-miniatures
+
+## Guides
+
+- All guides: https://guildframe.com/guides
+- Build a tabletop Shopify store with AI: https://guildframe.com/guides/build-a-tabletop-shopify-store-with-ai
+- What happens after your Kickstarter is funded: https://guildframe.com/guides/what-happens-after-kickstarter-is-funded
+- Kickstarter to Shopify migration guide: https://guildframe.com/guides/move-from-kickstarter-to-shopify
+- Kickstarter to Shopify launch timeline: https://guildframe.com/guides/kickstarter-to-shopify-launch-timeline
+- Selling after Kickstarter, late pledges vs Shopify: https://guildframe.com/guides/kickstarter-late-pledges-vs-shopify
+- BackerKit vs Shopify vs Gamefound: https://guildframe.com/guides/backerkit-vs-shopify-vs-gamefound
 - Best Shopify themes for board games: https://guildframe.com/guides/best-shopify-themes-for-board-games
 - Shopify developer vs DIY theme: https://guildframe.com/guides/shopify-developer-vs-diy-theme
 - Board game website cost: https://guildframe.com/guides/how-much-does-a-board-game-website-cost
-- Shopify vs Etsy for miniatures: https://guildframe.com/guides/shopify-vs-etsy-for-selling-miniatures
-- International VAT and IOSS: https://guildframe.com/guides/selling-miniatures-internationally-vat-ioss
-- Resources: https://guildframe.com/resources
+- Sell board game preorders on Shopify: https://guildframe.com/guides/sell-board-game-preorders-on-shopify
+- Sell board game expansions and add ons on Shopify: https://guildframe.com/guides/sell-board-game-expansions-add-ons-shopify
+- Selling miniatures internationally, VAT and IOSS: https://guildframe.com/guides/selling-miniatures-internationally-vat-ioss
+- Shopify vs Etsy for selling miniatures: https://guildframe.com/guides/shopify-vs-etsy-for-selling-miniatures
+
+## References and data
+
+- Reference library: https://guildframe.com/resources
+- Tabletop Shopify metafield schema: https://guildframe.com/resources/tabletop-shopify-metafield-schema
+- Board game Shopify store checklist: https://guildframe.com/resources/board-game-shopify-store-checklist
+- Kickstarter to Shopify migration checklist: https://guildframe.com/resources/kickstarter-to-shopify-migration-checklist
+- Tabletop crowdfunding platform role matrix: https://guildframe.com/resources/backerkit-vs-shopify-vs-gamefound-comparison
+- Board game product page checklist: https://guildframe.com/resources/board-game-product-page-checklist
+- 2024 Kickstarter tabletop games funding benchmark: https://guildframe.com/resources/kickstarter-tabletop-games-benchmark
+- Benchmark dataset: https://guildframe.com/data/kickstarter-tabletop-games-benchmark-2024.csv
+
+The benchmark page separates figures reported by Kickstarter from calculations made by Guildframe. Cite Kickstarter for the reported totals and Guildframe for the derived ratios.
+
+## Trust and identity
+
 - About: https://guildframe.com/about
 - Editorial policy: https://guildframe.com/editorial-policy
+- Guildframe Editorial Team, the author of the guides and references: https://guildframe.com/authors/guildframe
 
 ## Contact
 

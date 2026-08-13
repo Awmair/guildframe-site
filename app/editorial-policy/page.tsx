@@ -2,6 +2,7 @@ import Link from "next/link";
 import { JsonLd } from "../components/JsonLd";
 import { TrustPage } from "../components/TrustPage";
 import { absoluteUrl, pageMetadata } from "../site-config";
+import { contentDates } from "../content-dates";
 
 export const metadata = pageMetadata({
   title: "Editorial Policy",
@@ -26,7 +27,7 @@ export default function EditorialPolicyPage() {
             about: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
             publisher: { "@id": absoluteUrl("/#organization") },
             isPartOf: { "@id": absoluteUrl("/#website") },
-            dateModified: "2026-07-17",
+            dateModified: contentDates.editorialPolicy,
             inLanguage: "en",
           },
           {
@@ -42,7 +43,7 @@ export default function EditorialPolicyPage() {
         label="Editorial policy"
         title="Useful first. Verifiable always."
         description="Guildframe guidance is written to answer a creator's real decision clearly, separate facts from judgment and make important claims easy to verify."
-        updated="2026-07-17"
+        updated={contentDates.editorialPolicy}
       >
         <section>
           <h2>Editorial purpose</h2>

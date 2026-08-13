@@ -5,7 +5,11 @@ import {
   ArticleTable,
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
-import { pageMetadata } from "../../site-config";
+import { JsonLd } from "../../components/JsonLd";
+import { absoluteUrl, pageMetadata } from "../../site-config";
+
+const benchmarkPath = "/resources/kickstarter-tabletop-games-benchmark";
+const benchmarkCsvPath = "/data/kickstarter-tabletop-games-benchmark-2024.csv";
 
 export const metadata = pageMetadata({
   title: "2024 Kickstarter Tabletop Games Funding Benchmark",
@@ -42,9 +46,45 @@ const faqs = [
 
 export default function KickstarterTabletopGamesBenchmarkPage() {
   return (
+    <>
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "@id": absoluteUrl(`${benchmarkPath}#dataset`),
+        name: "2024 Kickstarter tabletop games funding benchmark",
+        description:
+          "Kickstarter's published 2024 tabletop totals plus the ten highest funded tabletop campaigns, with the reproducible ratios Guildframe derived from them.",
+        url: absoluteUrl(benchmarkPath),
+        isPartOf: { "@id": absoluteUrl(benchmarkPath) },
+        creator: { "@id": absoluteUrl("/#organization") },
+        publisher: { "@id": absoluteUrl("/#organization") },
+        temporalCoverage: "2024",
+        datePublished: "2026-07-17",
+        dateModified: "2026-07-17",
+        isAccessibleForFree: true,
+        measurementTechnique:
+          "Division and summation of the totals Kickstarter published on February 5, 2025. No campaign level values were estimated.",
+        variableMeasured: [
+          "Tabletop projects launched",
+          "Successfully funded projects",
+          "Amount pledged to successful campaigns",
+          "Reported success rate",
+          "Top campaign funding",
+          "Top campaign backer counts",
+        ],
+        isBasedOn: "https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/",
+        distribution: {
+          "@type": "DataDownload",
+          encodingFormat: "text/csv",
+          contentUrl: absoluteUrl(benchmarkCsvPath),
+          name: "2024 tabletop Kickstarter benchmark CSV",
+        },
+      }}
+    />
     <SeoArticlePage
       slug="kickstarter-tabletop-games-benchmark"
-      path="/resources/kickstarter-tabletop-games-benchmark"
+      path={benchmarkPath}
       collectionLabel="Resources"
       collectionHref="/resources"
       schemaType="TechArticle"
@@ -170,10 +210,11 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
         publishing derived work.
       </p>
       <p>
-        <a href="/data/kickstarter-tabletop-games-benchmark-2024.csv" download>
+        <a href={benchmarkCsvPath} download>
           Download the 2024 tabletop Kickstarter benchmark CSV
         </a>
       </p>
     </SeoArticlePage>
+    </>
   );
 }

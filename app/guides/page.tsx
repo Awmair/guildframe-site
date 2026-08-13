@@ -13,6 +13,12 @@ export const metadata = pageMetadata({
 
 const guides = [
   {
+    title: "Build a Tabletop Shopify Store With AI",
+    copy: "What AI coding tools do well, where they break, and the catalog decisions no model can make for you.",
+    href: "/guides/build-a-tabletop-shopify-store-with-ai",
+    tag: "AI assisted builds",
+  },
+  {
     title: "What Happens After Your Kickstarter Is Funded?",
     copy: "A clear roadmap for payment collection, backer data, fulfillment, late demand and the permanent store.",
     href: "/guides/what-happens-after-kickstarter-is-funded",

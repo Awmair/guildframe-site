@@ -10,7 +10,7 @@ import { pageMetadata } from "../../site-config";
 export const metadata = pageMetadata({
   title: "Selling Miniatures Internationally: VAT and IOSS",
   description:
-    "Plan international Shopify sales for miniatures, terrain and tabletop games with shipping zones, HS codes, EU VAT, IOSS, duties and clear customer delivery terms.",
+    "Plan international Shopify sales for miniatures, terrain and tabletop games with shipping zones, HS codes, EU VAT, IOSS, duties and clear delivery terms.",
   path: "/guides/selling-miniatures-internationally-vat-ioss",
   kind: "article",
   publishedTime: "2026-07-23",

@@ -1,77 +1,14 @@
 "use client";
 
-import { type CSSProperties, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { JsonLd } from "./components/JsonLd";
 import { ProjectInquiryForm } from "./components/ProjectInquiryForm";
-import { siteConfig } from "./site-config";
+import { absoluteUrl, siteConfig } from "./site-config";
 import {
   guildframeCarePlanData,
   guildframeProductData,
   guildframeServiceData,
 } from "./product-data";
-
-const styleOptions = [
-  {
-    name: "Rune Single",
-    note: "Cinematic for one flagship game",
-    description:
-      "For one flagship game where atmosphere, story and a focused product journey lead the store.",
-    image: "/images/pdp-nightbanner-responsive-v1.jpg",
-    imageWidth: 1536,
-    imageHeight: 1024,
-    cover: "/images/presets/nightbanner-wide.jpg",
-    portrait: "/images/presets/nightbanner-portrait.jpg",
-    color: "#776BFF",
-    surface: "#101620",
-    ink: "#FBF7EE",
-    tags: ["Flagship games", "Cinematic worlds", "Focused launches"],
-  },
-  {
-    name: "Rune Studio",
-    note: "Cinematic for a small studio",
-    description:
-      "For small studios with multiple games, expansions and a cinematic editorial identity.",
-    image: "/images/pdp-guildframe-responsive-v1.jpg",
-    imageWidth: 1586,
-    imageHeight: 992,
-    cover: "/images/presets/guildframe-wide.jpg",
-    portrait: "/images/presets/guildframe-portrait.jpg",
-    color: "#1657FF",
-    surface: "#E9E4D8",
-    ink: "#17191C",
-    tags: ["Small studios", "Growing catalogs", "Cinematic brands"],
-  },
-  {
-    name: "Saga Single",
-    note: "Playful for one flagship game",
-    description:
-      "For one flagship game with bright art, approachable energy and a focused product journey.",
-    image: "/images/pdp-brightmarch-responsive-v1.jpg",
-    imageWidth: 1536,
-    imageHeight: 1024,
-    cover: "/images/presets/brightmarch-wide.jpg",
-    portrait: "/images/presets/brightmarch-portrait.jpg",
-    color: "#F06A4C",
-    surface: "#F5D987",
-    ink: "#182239",
-    tags: ["Flagship games", "Playful worlds", "Bright launches"],
-  },
-  {
-    name: "Saga Studio",
-    note: "Playful for a small studio",
-    description:
-      "For small studios with multiple colorful games, expansions and products.",
-    image: "/images/pdp-vaultmark-responsive-v1.jpg",
-    imageWidth: 1536,
-    imageHeight: 1024,
-    cover: "/images/presets/vaultmark-wide.jpg",
-    portrait: "/images/presets/vaultmark-portrait.jpg",
-    color: "#C69A2E",
-    surface: "#191919",
-    ink: "#F4EEE3",
-    tags: ["Small studios", "Growing catalogs", "Playful brands"],
-  },
-];
 
 const processSteps = [
   {
@@ -139,15 +76,20 @@ const faqs = [
   {
     question: "What does Guildframe do?",
     answer:
-      "Guildframe designs and develops Shopify storefronts for tabletop creators and studios. We also make a premium DIY theme with four complete presets. Both options require an active Shopify store and use Shopify's checkout, inventory and payments.",
+      "Guildframe designs and builds Shopify stores for tabletop creators and studios. We also publish the Guildframe Build Guide for creators who would rather build it themselves using an AI tool. Both routes need an active Shopify store and use Shopify for checkout, stock and payments.",
   },
   {
-    question: "Can I customize it without code?",
+    question: "What is the Guildframe Build Guide?",
     answer:
-      "Yes. Change colors, typography, spacing, sections, layouts and product content through Shopify’s visual theme editor.",
+      "A downloadable guide that shows you how to build your own Shopify store using an AI tool such as Claude, Cursor or Codex. It gives you the exact prompts to copy, tells you what to do when the AI gets something wrong, and shows you how to set up editions, expansions, add ons and preorders so buyers pick the right thing.",
   },
   {
-    question: "What can I sell with it?",
+    question: "Can AI build my tabletop store for me?",
+    answer:
+      "An AI tool can build most of the store for you. What it cannot do is decide how your game, editions and expansions should be listed, or judge whether the delivery date you show next to a preorder is safe to promise. Those are the decisions the build guide walks you through.",
+  },
+  {
+    question: "What can I sell with a Guildframe store?",
     answer:
       "Board games, card games, TTRPGs, miniatures, terrain, accessories, editions, expansions, bundles and preorders.",
   },
@@ -159,7 +101,7 @@ const faqs = [
   {
     question: "What are the three ways to use Guildframe?",
     answer:
-      "Hire Guildframe to design and develop your complete Shopify store with up to 50 product SKUs, buy the Guildframe theme and build it yourself, or add the Care Plan after a Guildframe build for ongoing updates and one new campaign or product launch page each month.",
+      "Hire Guildframe to design and build your complete Shopify store with up to 50 products, buy the Guildframe Build Guide and build it yourself, or add the Care Plan after a Guildframe build for ongoing updates and one new campaign or launch page each month.",
   },
   {
     question: "What is included in the done for you service?",
@@ -178,25 +120,6 @@ const faqs = [
   },
 ];
 
-const customizationOptions = [
-  {
-    label: "Typography + scale",
-    detail: "Change heading size, body type and the visual rhythm of every page.",
-  },
-  {
-    label: "Colors + buttons",
-    detail: "Match your campaign palette, calls to action and storefront accents.",
-  },
-  {
-    label: "Spacing + width",
-    detail: "Tune page density, section spacing and content width without code.",
-  },
-  {
-    label: "Images + layout",
-    detail: "Control image ratios, product media and the order of each section.",
-  },
-];
-
 function PricingSection({
   id,
   analyticsLocation,
@@ -212,8 +135,8 @@ function PricingSection({
           <span>Start strong. Keep growing.</span>
         </h2>
         <p>
-          Hire a tabletop specialist, build with the Guildframe theme, or keep
-          Guildframe on deck after launch.
+          Hire a tabletop specialist, build it yourself with the Guildframe
+          Build Guide, or keep Guildframe on deck after launch.
         </p>
       </div>
 
@@ -248,29 +171,29 @@ function PricingSection({
 
         <article className="pricing-option pricing-option-theme">
           <span className="pricing-option-label">Want to build it yourself?</span>
-          <h3>Get the Guildframe theme</h3>
-          <p>A premium Shopify theme purpose built for tabletop games.</p>
+          <h3>Get the Guildframe Build Guide</h3>
+          <p>Build the store yourself using AI. We give you the words to type.</p>
           <div className="pricing-price-row">
-            <div className="price">$349</div>
+            <div className="price">$79</div>
             <span>one time</span>
           </div>
           <ul>
-            <li>Rune Single, Rune Studio, Saga Single and Saga Studio</li>
-            <li>Campaign, product and content pages</li>
-            <li>Full Shopify editor controls</li>
-            <li>Responsive, speed focused layouts</li>
-            <li>Setup documentation</li>
+            <li>The exact prompts to copy into your AI tool</li>
+            <li>What each prompt gets wrong, and how to fix it</li>
+            <li>How to set up editions, expansions, add ons and preorders</li>
+            <li>Where to put player count, playtime and what is in the box</li>
+            <li>A finished example, and what to check before you open</li>
           </ul>
           <a
             href="/buy"
             className="checkout-button"
-            data-analytics-event="theme_interest"
-            data-analytics-label="Get Guildframe theme"
-            data-analytics-location={`${analyticsLocation} theme option`}
+            data-analytics-event="guide_interest"
+            data-analytics-label="Get the build guide"
+            data-analytics-location={`${analyticsLocation} build guide option`}
           >
-            Get the theme <span aria-hidden="true">↗</span>
+            Get the build guide <span aria-hidden="true">↗</span>
           </a>
-          <small>Requires an active Shopify store. No Guildframe subscription.</small>
+          <small>You need a Shopify store and an AI tool such as Claude, Cursor or Codex. Checkout opens soon.</small>
         </article>
 
         <article className="pricing-option pricing-option-care">
@@ -306,8 +229,6 @@ function PricingSection({
 
 export default function Home() {
   const [activeProcess, setActiveProcess] = useState(0);
-  const [activeStyle, setActiveStyle] = useState(0);
-  const [activeControl, setActiveControl] = useState(0);
   const [activeSection, setActiveSection] = useState("top");
   const [navFilled, setNavFilled] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(false);
@@ -373,8 +294,6 @@ export default function Home() {
     };
   }, []);
 
-  const selectedStyle = styleOptions[activeStyle];
-  const selectedControl = customizationOptions[activeControl];
 
   const chooseProcess = (index: number) => {
     setActiveProcess(index);
@@ -386,12 +305,39 @@ export default function Home() {
         data={{
           "@context": "https://schema.org",
           "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": absoluteUrl("/#webpage"),
+              url: absoluteUrl("/"),
+              name: "Shopify Stores for Tabletop Games",
+              description: siteConfig.description,
+              isPartOf: { "@id": absoluteUrl("/#website") },
+              about: { "@id": absoluteUrl("/#organization") },
+              primaryImageOfPage: {
+                "@type": "ImageObject",
+                url: absoluteUrl(siteConfig.socialImage),
+              },
+              inLanguage: "en",
+            },
             guildframeProductData(),
             guildframeServiceData(),
             guildframeCarePlanData(),
+            {
+              "@type": "FAQPage",
+              "@id": absoluteUrl("/#faq"),
+              isPartOf: { "@id": absoluteUrl("/#webpage") },
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            },
           ],
         }}
       />
+      <noscript>
+        <style>{"[data-reveal]{opacity:1!important;transform:none!important}"}</style>
+      </noscript>
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
@@ -403,8 +349,8 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href={siteConfig.servicePath}>Services</a>
           <a href="/kickstarter-to-shopify">After funding</a>
-          <a className={activeSection === "styles" ? "is-active" : ""} href="#styles">
-            DIY
+          <a className={activeSection === "build-it-yourself" ? "is-active" : ""} href="#build-it-yourself">
+            Build it yourself
           </a>
           <a className={activeSection === "pricing" ? "is-active" : ""} href="#pricing">
             Pricing
@@ -467,7 +413,7 @@ export default function Home() {
               alt="A funded tabletop campaign becoming an organized permanent online store"
               width="1828"
               height="860"
-              loading="eager"
+              loading="lazy"
               decoding="async"
             />
           </div>
@@ -689,11 +635,11 @@ export default function Home() {
                     <span />
                     <span />
                     <span />
-                    <strong>Rune Single / responsive</strong>
+                    <strong>Storefront / responsive</strong>
                   </div>
                   <img
                     src="/images/pdp-nightbanner-responsive-v1.jpg"
-                    alt="Rune Single Shopify product page shown on desktop and mobile"
+                    alt="A finished tabletop Shopify product page shown on desktop and mobile"
                     width={1536}
                     height={1024}
                     loading="lazy"
@@ -786,166 +732,60 @@ export default function Home() {
 
         <PricingSection id="pricing" analyticsLocation="primary pricing" />
 
-        <section className="styles-section section-pad" id="styles">
-          <div className="styles-intro" data-reveal>
-            <div>
-              <h2>Four presets. One premium theme.</h2>
-            </div>
+        <section className="diy-section section-pad" id="build-it-yourself">
+          <div className="diy-heading" data-reveal>
+            <h2>
+              Building it yourself?
+              <span>We give you the prompts.</span>
+            </h2>
             <p>
-              Choose a cinematic or playful direction, then pick the version
-              built for one flagship game or a small studio catalog.
+              AI tools can build a Shopify store. What they cannot work out is
+              how your game, its editions and its expansions should be laid out
+              so buyers pick the right thing. We have already worked that out,
+              and the guide gives you the prompts that put it in place.
             </p>
           </div>
 
-          <div className="preset-explorer" data-reveal>
-            <div
-              className="preset-gallery"
-              role="group"
-              aria-label="Guildframe preset worlds"
-            >
-              {styleOptions.map((style, index) => (
-                <button
-                  type="button"
-                  aria-pressed={activeStyle === index}
-                  aria-controls="preset-detail"
-                  className={`preset-card ${activeStyle === index ? "is-active" : ""}`}
-                  onClick={() => setActiveStyle(index)}
-                  onFocus={() => setActiveStyle(index)}
-                  style={
-                    {
-                      "--preset-accent": style.color,
-                      "--preset-surface": style.surface,
-                      "--preset-ink": style.ink,
-                    } as CSSProperties
-                  }
-                  key={style.name}
-                >
-                  <img
-                    className="preset-card-image preset-card-image--wide"
-                    src={style.cover}
-                    alt={`${style.name} tabletop storefront preview`}
-                    width={1440}
-                    height={900}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <img
-                    className="preset-card-image preset-card-image--portrait"
-                    src={style.portrait}
-                    alt={`${style.name} tabletop storefront mobile preview`}
-                    width={768}
-                    height={960}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="preset-card-shade" aria-hidden="true" />
-                  <div className="preset-card-copy">
-                    <h3>{style.name}</h3>
-                  </div>
-                  <i className="preset-card-mark" aria-hidden="true" />
-                </button>
-              ))}
-            </div>
-
-            <div
-              className="preset-detail"
-              id="preset-detail"
-              role="region"
-              aria-live="polite"
-              aria-label={`${selectedStyle.name} preset details`}
-              style={
-                {
-                  "--preset-accent": selectedStyle.color,
-                  "--preset-surface": selectedStyle.surface,
-                  "--preset-ink": selectedStyle.ink,
-                } as CSSProperties
-              }
-            >
-              <div className="preset-detail-copy">
-                <span>{selectedStyle.name} preset</span>
-                <h3>{selectedStyle.note}</h3>
-                <p>{selectedStyle.description}</p>
-                <div className="preset-tags" aria-label="Best suited for">
-                  {selectedStyle.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="preset-proof">
-                <img
-                  key={selectedStyle.image}
-                  src={selectedStyle.image}
-                  alt={`${selectedStyle.name} product page shown on desktop and mobile`}
-                  width={selectedStyle.imageWidth}
-                  height={selectedStyle.imageHeight}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span>Responsive product page · desktop + mobile</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="customization-section section-pad"
-          id="customization"
-        >
-          <div className="customization-intro" data-reveal>
-            <h2>
-              Make every detail{" "}
-              <span>feel like your game.</span>
-            </h2>
-            <div>
+          <div className="diy-grid" data-reveal>
+            <article>
+              <span>01</span>
+              <h3>Copy the prompts</h3>
               <p>
-                Change the size, color, type, spacing, buttons and image ratios
-                directly in Shopify. No code required.
+                Every prompt is written out in full. Paste one into Claude,
+                Cursor or Codex and it builds that part of your store.
               </p>
-            </div>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Set your products up right</h3>
+              <p>
+                Your game, editions, expansions and add ons laid out the way
+                stores that sell well lay them out.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Check what it built</h3>
+              <p>
+                AI invents things, including customer reviews you never had. We
+                show you exactly what to look for before you open.
+              </p>
+            </article>
           </div>
 
-          <div className="customization-visual" data-reveal>
-            <div
-              className="customization-controls"
-              aria-label="Editable design controls"
+          <div className="diy-actions" data-reveal>
+            <a
+              className="primary-button"
+              href="/buy"
+              data-analytics-event="guide_interest"
+              data-analytics-label="Get the build guide"
+              data-analytics-location="homepage build it yourself"
             >
-              {customizationOptions.map((option, index) => (
-                <button
-                  type="button"
-                  aria-pressed={activeControl === index}
-                  className={activeControl === index ? "is-active" : ""}
-                  onClick={() => setActiveControl(index)}
-                  key={option.label}
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
-            <div
-              className={`customization-editor-frame customization-editor-frame-${activeControl + 1}`}
-            >
-              <div className="customization-editor-canvas">
-                <img
-                  src="/images/shopify-theme-editor-customization-v1.jpg"
-                  alt="Shopify theme editor showing controls for typography, colors, spacing, width, buttons and image ratios"
-                  width="1579"
-                  height="996"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <i
-                  className={`customization-hotspot customization-hotspot-${activeControl + 1}`}
-                  aria-hidden="true"
-                />
-              </div>
-            </div>
-            <div
-              className="customization-callout"
-              aria-live="polite"
-            >
-              <span>{selectedControl.label}</span>
-              <strong>{selectedControl.detail}</strong>
-            </div>
+              Get the build guide <span aria-hidden="true">↗</span>
+            </a>
+            <a href="/guides/build-a-tabletop-shopify-store-with-ai">
+              Read the free guide first
+            </a>
           </div>
         </section>
 
@@ -975,14 +815,14 @@ export default function Home() {
             </h2>
             <p>
               Hire Guildframe for the complete Shopify storefront, or build it
-              yourself with our premium tabletop theme.
+              yourself with our tabletop build guide.
             </p>
             <div className="footer-actions">
               <a className="footer-primary" href="#start-project">
                 Get my free preview <span aria-hidden="true">↗</span>
               </a>
               <a className="footer-secondary" href="/buy">
-                Get the theme
+                Get the build guide
               </a>
             </div>
           </div>
@@ -1049,7 +889,7 @@ export default function Home() {
           <div className="footer-brand">
             <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="1000" height="220" />
             <p>
-              Shopify design, development and a premium DIY theme built
+              Shopify design, development and a build guide made
               specifically for tabletop creators.
             </p>
             <div className="footer-trust">
@@ -1063,8 +903,8 @@ export default function Home() {
             <div>
               <strong>Explore</strong>
               <a href="#process">How it works</a>
-              <a href="#styles">Presets</a>
-              <a href="#customization">Customization</a>
+              <a href="#build-it-yourself">Build it yourself</a>
+              <a href="/buy">Build guide</a>
               <a href="#features">What&apos;s included</a>
             </div>
             <div>

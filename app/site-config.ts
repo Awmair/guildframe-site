@@ -22,10 +22,11 @@ export const siteConfig = {
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
   socialImage: "/og-guildframe-offers-v6.jpg",
-  price: "$349",
+  price: "$79",
   servicePrice: "$2,500",
+  guideName: "Guildframe Build Guide",
   description:
-    "Shopify design and development for tabletop creators, plus a premium DIY theme purpose built for board games, TTRPGs, card games and miniatures.",
+    "Shopify design and development for tabletop creators, plus a build guide for creators who want to build the store themselves using an AI tool.",
 };
 
 export const absoluteUrl = (path = "/") =>

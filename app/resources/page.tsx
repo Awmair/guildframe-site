@@ -13,6 +13,12 @@ export const metadata = pageMetadata({
 
 const resources = [
   {
+    title: "Tabletop Shopify Metafield Schema",
+    copy: "A reusable product data structure for board games, TTRPGs and miniatures, with the type and purpose of every field.",
+    href: "/resources/tabletop-shopify-metafield-schema",
+    tag: "Product data",
+  },
+  {
     title: "Board Game Shopify Store Checklist",
     copy: "A complete launch checklist for catalog, content, operations, mobile UX and search readiness.",
     href: "/resources/board-game-shopify-store-checklist",

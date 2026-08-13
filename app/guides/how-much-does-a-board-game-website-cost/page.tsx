@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
   path: "/guides/how-much-does-a-board-game-website-cost",
   kind: "article",
   publishedTime: "2026-07-23",
-  modifiedTime: "2026-07-23",
+  modifiedTime: "2026-08-09",
   keywords: [
     "how much does a board game website cost",
     "board game ecommerce website cost",
@@ -49,7 +49,7 @@ export default function BoardGameWebsiteCostPage() {
       description="A useful budget separates the platform, build, content and ongoing operating costs instead of hiding them inside one headline number."
       answer="A board game ecommerce website can start with a Shopify plan and free theme, add a premium tabletop theme for 349 dollars, or use a complete specialist build such as Guildframe at 2,500 dollars for up to 50 product SKUs. The final cost also includes the domain, payment processing, optional apps, content preparation and ongoing maintenance."
       published="2026-07-23"
-      updated="2026-07-23"
+      updated="2026-08-09"
       readTime="7 minute read"
       faqs={faqs}
       sources={[
@@ -102,7 +102,7 @@ export default function BoardGameWebsiteCostPage() {
         headers={["Route", "Starting build cost", "You remain responsible for"]}
         rows={[
           ["Free theme", "No theme purchase", "Planning, design choices, products, content and testing"],
-          ["Guildframe DIY theme", "$349", "Products, content, configuration, testing and publication"],
+          ["Build it yourself with the Guildframe Build Guide", "$79", "Products, content, build, configuration, testing and publication"],
           ["Guildframe complete build", "$2,500", "Final assets, approvals, Shopify and third party costs"],
         ]}
       />

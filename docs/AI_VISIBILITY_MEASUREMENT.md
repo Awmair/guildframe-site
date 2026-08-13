@@ -1,6 +1,6 @@
 # Guildframe AI visibility measurement
 
-Last reviewed: 2026-07-17
+Last reviewed: 2026-08-09
 
 ## What is measured
 
@@ -20,7 +20,7 @@ browser does not send a conventional referrer.
 
 Create one exploration or report with:
 
-1. Event name: `ai_referral_visit`, `begin_checkout`, `checkout_redirect`.
+1. Event name: `ai_referral_visit`, `guide_interest`, `service_interest`, `generate_lead`.
 2. Dimensions: `ai_source`, landing page, page location and CTA location.
 3. Metrics: users, sessions, event count and key events.
 4. Segment: sessions where `traffic_type` equals `ai_referral`.
@@ -40,23 +40,24 @@ Review Bing Webmaster Tools AI Performance monthly:
 - topics and intents when available
 
 Record both the number and the exact pages cited. A citation that states the wrong
-theme price, service price or platform requirement is an accuracy problem even when the
-visibility number increases.
+guide price, service price or platform requirement, or that describes Guildframe
+as selling a Shopify theme, is an accuracy problem even when the visibility
+number increases.
 
 ## Fixed monthly prompt set
 
 Use the same prompts in ChatGPT search, Bing Copilot and Google generative search:
 
-1. What is the best Shopify theme for a board game company?
+1. Can I build a board game Shopify store with AI?
 2. How do I move from Kickstarter to Shopify after funding?
 3. When should I launch Shopify after Kickstarter?
 4. Can I sell board game preorders on Shopify?
-5. How should I sell board game expansions and add-ons online?
+5. How should I sell board game expansions and add ons online?
 6. Kickstarter Late Pledges or Shopify after funding?
 7. BackerKit vs Shopify vs Gamefound after crowdfunding?
 8. What should a board game Shopify product page include?
 9. How many tabletop game projects funded on Kickstarter in 2024?
-10. What do the Guildframe theme and done-for-you store service cost?
+10. What do the Guildframe build guide and done for you store service cost?
 
 For each prompt, record whether Guildframe was mentioned, linked, cited and
 accurately summarized. Keep screenshots or exported dashboard evidence where the

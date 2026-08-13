@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/shopify-developer-vs-diy-theme",
   kind: "article",
   publishedTime: "2026-07-21",
-  modifiedTime: "2026-07-21",
+  modifiedTime: "2026-08-09",
   keywords: [
     "Shopify developer vs theme",
     "hire Shopify developer or buy theme",
@@ -56,7 +56,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       description="Both routes can produce a strong store. The right choice depends on whether you want to assemble it yourself or hand the complete build to a specialist."
       answer="Choose a DIY Shopify theme when your catalog is straightforward, your assets are ready and you can dedicate time to store structure, content entry and testing. Hire a Shopify developer when you want the storefront planned, designed, built and polished for you, especially when your tabletop catalog includes several editions, expansions, bundles or a firm launch date."
       published="2026-07-21"
-      updated="2026-07-21"
+      updated="2026-08-09"
       readTime="8 minute read"
       faqs={faqs}
       sources={[
@@ -148,9 +148,12 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         <li>You want to minimize the upfront cash cost.</li>
       </ul>
       <p>
-        Guildframe&apos;s DIY option is a $349 premium theme with four complete
-        presets for flagship games and growing tabletop studios. Compare it with
-        other options in the <Link href="/guides/best-shopify-themes-for-board-games">best Shopify themes for board games guide</Link>.
+        Guildframe&apos;s DIY option is the $79 <Link href="/buy">Guildframe Build Guide</Link>,
+        which covers catalog architecture, a tabletop metafield schema, section
+        specs and a prompt library for AI coding tools. Compare theme
+        foundations in the <Link href="/guides/best-shopify-themes-for-board-games">best Shopify themes for board games guide</Link>,
+        and see what AI tools can and cannot do in the{" "}
+        <Link href="/guides/build-a-tabletop-shopify-store-with-ai">AI build guide</Link>.
       </p>
 
       <h2 id="developer">Hire a Shopify developer when you want the result</h2>

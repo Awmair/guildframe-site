@@ -2,6 +2,7 @@ import Link from "next/link";
 import { JsonLd } from "../../components/JsonLd";
 import { TrustPage } from "../../components/TrustPage";
 import { absoluteUrl, pageMetadata } from "../../site-config";
+import { contentDates } from "../../content-dates";
 
 export const metadata = pageMetadata({
   title: "Guildframe Editorial Team",
@@ -23,7 +24,7 @@ export default function GuildframeAuthorPage() {
             url: absoluteUrl("/authors/guildframe"),
             name: "Guildframe Editorial Team",
             dateCreated: "2026-07-16T19:00:00Z",
-            dateModified: "2026-07-17T19:00:00Z",
+            dateModified: contentDates.authorGuildframe,
             mainEntity: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
             isPartOf: { "@id": absoluteUrl("/#website") },
             inLanguage: "en",
@@ -57,7 +58,7 @@ export default function GuildframeAuthorPage() {
         label="Author"
         title="Guildframe Editorial Team"
         description="We research the practical bridge between crowdfunding, tabletop product storytelling and a permanent Shopify storefront."
-        updated="2026-07-18"
+        updated={contentDates.authorGuildframe}
       >
         <section>
           <h2>Editorial focus</h2>

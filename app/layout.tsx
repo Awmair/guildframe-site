@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Guildframe",
   },
   description:
-    "Guildframe designs and develops complete Shopify stores for tabletop creators. Get a full store for $2,500, or build it yourself with the $349 Guildframe theme.",
+    "Guildframe designs and develops complete Shopify stores for tabletop creators. Get a full store for $2,500, or build it yourself with the $79 build guide.",
   keywords: [
     "Shopify developer for tabletop games",
     "board game Shopify developer",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shopify Stores Built for Tabletop Games | Guildframe",
     description:
-      "Get a complete tabletop Shopify store designed and developed for $2,500, or build it yourself with the $349 Guildframe theme.",
+      "Get a complete tabletop Shopify store designed and developed for $2,500, or build it yourself with the $79 Guildframe Build Guide.",
     type: "website",
     siteName: "Guildframe",
     url: "/",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shopify Stores Built for Tabletop Games | Guildframe",
     description:
-      "Complete Shopify design and development for tabletop creators, with a premium DIY theme for teams that want to build it themselves.",
+      "Complete Shopify design and development for tabletop creators, plus a build guide for teams that want to build it themselves with AI.",
     images: [siteConfig.socialImage],
   },
 };

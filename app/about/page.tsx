@@ -2,6 +2,7 @@ import Link from "next/link";
 import { JsonLd } from "../components/JsonLd";
 import { TrustPage } from "../components/TrustPage";
 import { absoluteUrl, pageMetadata, siteConfig } from "../site-config";
+import { contentDates } from "../content-dates";
 
 export const metadata = pageMetadata({
   title: "About Guildframe",
@@ -25,7 +26,7 @@ export default function AboutPage() {
             description: "Guildframe designs and develops Shopify storefronts for tabletop creators.",
             mainEntity: { "@id": absoluteUrl("/#organization") },
             isPartOf: { "@id": absoluteUrl("/#website") },
-            dateModified: "2026-07-21",
+            dateModified: contentDates.about,
             inLanguage: "en",
           },
           {
@@ -40,8 +41,8 @@ export default function AboutPage() {
       <TrustPage
         label="About"
         title="Tabletop worlds deserve better storefronts."
-        description="Guildframe is a Shopify design and development specialist for board games and the wider tabletop market. It also makes a premium DIY theme for creators who want to build the store themselves."
-        updated="2026-07-21"
+        description="Guildframe is a Shopify design and development specialist for board games and the wider tabletop market. It also publishes a build guide for creators who want to build the store themselves with AI coding tools."
+        updated={contentDates.about}
       >
         <section>
           <h2>What Guildframe is</h2>
@@ -49,7 +50,7 @@ export default function AboutPage() {
             Guildframe designs and develops complete Shopify storefronts for
             board games, card games, TTRPGs, miniatures, terrain and tabletop
             accessories. For creators who prefer to build the store themselves,
-            Guildframe also offers a premium purpose built theme.
+            Guildframe also publishes a build guide for AI coding tools.
           </p>
           <p>
             The goal is simple: give tabletop brands a store that understands
@@ -67,12 +68,12 @@ export default function AboutPage() {
         <section>
           <h2>What Guildframe includes</h2>
           <ul className="trust-checklist">
-            <li>Four purpose built presets: Rune Single, Rune Studio, Saga Single and Saga Studio</li>
+            <li>Catalog architecture for editions, expansions, add ons and bundles</li>
             <li>Responsive storefront layouts for phones, tablets and desktops</li>
             <li>Product structures for editions, expansions, bundles and add ons</li>
             <li>Campaign storytelling, FAQ, reviews, events, news and contact sections</li>
             <li>A $2,500 Shopify design and development service for up to 50 product SKUs</li>
-            <li>A separate $349 premium theme for creators who want to build it themselves</li>
+            <li>A separate $79 build guide for creators who want to build it themselves</li>
             <li>Shopify products, checkout, inventory and payments underneath</li>
           </ul>
           <p>
