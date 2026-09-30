@@ -52,7 +52,7 @@ export default function WhatHappensAfterKickstarterPage() {
       slug="what-happens-after-kickstarter-is-funded"
       category="After Kickstarter funding"
       title="What Happens After Your Kickstarter Is Funded?"
-      description="Funding closes one chapter and starts the operational work. Here is the sequence from successful campaign to fulfilled rewards and a permanent store."
+      description="After funding, you need to collect payments, confirm backer details, produce the rewards and deliver them. Here’s how store planning fits into that work."
       answer="After a Kickstarter is funded, pledge payments are processed, the final backer report settles, funds are paid out, surveys or pledge management collect fulfillment details and the creator produces and delivers the rewards. At the same time, the creator can plan late pledges, preorders and a permanent online store, provided new sales do not create unclear promises or undermine backer fulfillment."
       published="2026-07-18"
       updated={contentDates.whatHappensAfterKickstarter}
@@ -137,11 +137,7 @@ export default function WhatHappensAfterKickstarterPage() {
 
       <h2 id="fulfillment">Production and fulfillment become the primary promise</h2>
       <p>
-        Funding is not the finish line. The creator still needs to finalize files,
-        place production orders, inspect samples, manage freight, collect missing
-        delivery information and send rewards. A simple internal source of truth
-        should show every reward, add on, quantity, address state and fulfillment
-        status.
+        After funding, finalise files, place production orders, inspect samples, arrange freight and collect missing delivery details. Keep a record of each reward, extra, quantity, address and fulfilment status.
       </p>
       <ArticleTable
         caption="The post funding operating sequence"
@@ -167,7 +163,7 @@ export default function WhatHappensAfterKickstarterPage() {
         rows={[
           ["Kickstarter Late Pledges", "Extending eligible campaign rewards", "The reward or production allocation is no longer reliable"],
           ["Preorders", "Selling a defined future product with clear timing", "The contents or delivery window are still too uncertain"],
-          ["Shopify store", "Building a permanent catalog and customer journey", "New retail orders cannot be separated from backer fulfillment"],
+          ["Shopify store", "Building a permanent catalog and buying process", "New retail orders cannot be separated from backer fulfillment"],
         ]}
       />
       <p>
@@ -212,9 +208,7 @@ export default function WhatHappensAfterKickstarterPage() {
         <li>Keep backer fulfillment and new retail orders clearly separated</li>
       </ol>
       <p>
-        The central shift is from proving demand to keeping promises. Build the
-        permanent store alongside that work, but let operational truth determine
-        when it is ready to sell.
+        You can prepare the permanent store while fulfilment continues. Open sales when inventory, delivery timing and the process for new orders are ready.
       </p>
     </SeoArticlePage>
   );

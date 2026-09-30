@@ -41,8 +41,8 @@ export default function EditorialPolicyPage() {
       }} />
       <TrustPage
         label="Editorial policy"
-        title="Useful first. Verifiable always."
-        description="Guildframe guidance is written to answer a creator's real decision clearly, separate facts from judgment and make important claims easy to verify."
+        title="How I write the guides."
+        description="The guides explain campaign design and launch preparation, with sources for platform facts and clear labels for design advice."
         updated={contentDates.editorialPolicy}
       >
         <section>
@@ -50,8 +50,7 @@ export default function EditorialPolicyPage() {
           <p>
             Guildframe publishes guidance for tabletop creators preparing
             crowdfunding campaigns and planning what comes after funding.
-            Every page should help a reader make or execute a specific decision.
-            We do not create pages merely to target a synonym.
+            Each page answers a practical question, such as what to send a designer or how to compare rewards.
           </p>
         </section>
         <section>
@@ -68,8 +67,7 @@ export default function EditorialPolicyPage() {
           <p>
             Guildframe sells Kickstarter and Gamefound campaign design for $975 USD.
             Commercial pages and structured data must describe the same price and scope.
-            A free mockup explores an opening campaign section. The illustrative
-            game imagery is created with ImageGen and is not presented as client work.
+            A free mockup explores an opening campaign section. Concept mockups are labelled separately from the client campaigns in Past work. Client quotes are short, verbatim excerpts matched to their projects.
             We do not claim funding results or guaranteed search rankings.
           </p>
           <p>
@@ -87,17 +85,14 @@ export default function EditorialPolicyPage() {
             <li>Corrections preserve the useful answer instead of silently changing its intent.</li>
           </ul>
           <p>
-            The responsible author is the <Link href="/authors/guildframe">Guildframe Editorial Team</Link>.
+            The guides are written by <Link href="/authors/guildframe">Guildframe</Link>.
             Product and company details are documented on the <Link href="/about">About page</Link>.
           </p>
         </section>
         <section>
           <h2>AI and search use</h2>
           <p>
-            Content is structured for people first, with concise answers, descriptive
-            headings, accessible tables, citations and stable entities that also help
-            search engines and answer systems interpret it accurately. Guildframe
-            does not publish unsupported claims solely to attract citations.
+            The guides use direct answers, descriptive headings, tables and source links. The same facts appear in page text and search metadata so readers and search systems can check them.
           </p>
         </section>
       </TrustPage>

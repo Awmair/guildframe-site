@@ -138,8 +138,7 @@ export default function ShopifyVsEtsyMiniaturesPage() {
         <li>Wholesale, preorders, bundles or subscriptions are becoming important.</li>
       </ul>
       <p>
-        Guildframe provides <Link href="/shopify-theme-for-miniatures">Shopify design and development for miniature and terrain stores</Link>,
-        with storefronts structured around detailed products, variants and collections.
+        The <Link href="/shopify-theme-for-miniatures">miniatures store planning reference</Link> covers detailed products, variants and collections.
       </p>
 
       <h2 id="both">Using both can be the strongest channel strategy</h2>
@@ -163,7 +162,7 @@ export default function ShopifyVsEtsyMiniaturesPage() {
 
       <h2 id="move">Plan the move without losing working demand</h2>
       <ol>
-        <li><strong>Audit profitable Etsy listings.</strong> Keep the products that genuinely bring qualified buyers.</li>
+        <li><strong>Audit profitable Etsy listings.</strong> Keep the listings that bring customers who buy.</li>
         <li><strong>Build the Shopify catalog.</strong> Use clearer product names, collections, variants and compatibility information.</li>
         <li><strong>Choose the inventory owner.</strong> Prevent both channels from selling the same final unit.</li>
         <li><strong>Prepare the brand store.</strong> Add product education, policies, email capture and a direct support route.</li>

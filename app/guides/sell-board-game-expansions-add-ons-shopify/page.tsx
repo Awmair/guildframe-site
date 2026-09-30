@@ -1,3 +1,4 @@
+import { contentDates } from "../../content-dates";
 import Link from "next/link";
 import {
   ArticleCallout,
@@ -14,7 +15,7 @@ export const metadata = pageMetadata({
   path: "/guides/sell-board-game-expansions-add-ons-shopify",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-17",
+  modifiedTime: contentDates.expansionsAndAddons,
   keywords: [
     "sell board game expansions Shopify",
     "board game add ons ecommerce",
@@ -49,7 +50,7 @@ export default function SellExpansionsAddonsShopifyPage() {
       description="Turn campaign reward complexity into a catalog that helps a customer choose the right game, edition and compatible extras."
       answer="Sell board game expansions and add ons on Shopify as separate products when they need independent inventory, media or discovery. Use variants for true versions of one product and bundles for a defined set sold together. Every expansion page should name the required base game, compatible edition, language, included contents and fulfillment status before the purchase action."
       published="2026-07-17"
-      updated="2026-07-17"
+      updated={contentDates.expansionsAndAddons}
       readTime="8 minute read"
       faqs={faqs}
       sources={[
@@ -170,7 +171,7 @@ export default function SellExpansionsAddonsShopifyPage() {
         Avoid placing every cross sell above the product explanation.
       </p>
       <p>
-        A <Link href="/shopify-theme-for-board-games">purpose built board game Shopify theme</Link> should support product facts, long form media and related products without requiring the creator to hardcode each relationship into the design.
+        The <Link href="/shopify-theme-for-board-games">board game store planning reference</Link> covers product facts, longer explanations and links between related products.
       </p>
 
       <h2 id="qa">Catalog quality assurance</h2>

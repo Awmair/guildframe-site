@@ -1,3 +1,4 @@
+import { contentDates } from "../../content-dates";
 import Link from "next/link";
 import {
   ArticleCallout,
@@ -14,7 +15,7 @@ export const metadata = pageMetadata({
   path: "/guides/kickstarter-late-pledges-vs-shopify",
   kind: "article",
   publishedTime: "2026-07-16",
-  modifiedTime: "2026-07-18",
+  modifiedTime: contentDates.latePledgesVsShopify,
   keywords: [
     "selling after Kickstarter",
     "post campaign preorders",
@@ -51,10 +52,10 @@ export default function LatePledgesVsShopifyGuide() {
       slug="kickstarter-late-pledges-vs-shopify"
       category="Post campaign strategy"
       title="Selling After Kickstarter: Late Pledges, Preorders or Shopify?"
-      description="Demand does not disappear when the campaign closes. Compare the three practical ways to keep selling while protecting backer trust."
+      description="If people find your game after the campaign closes, decide whether they should place a late pledge, preorder or store order."
       answer="After Kickstarter, use late pledges to extend eligible campaign rewards, preorders to sell a clearly defined future product and Shopify to build a permanent branded store. Many tabletop creators use a short campaign adjacent late pledge period, then move ongoing preorders and retail sales to Shopify. Keep pricing, delivery timing and backer fulfillment boundaries consistent across every channel."
       published="2026-07-16"
-      updated="2026-07-18"
+      updated={contentDates.latePledgesVsShopify}
       readTime="7 minute read"
       faqs={faqs}
       sources={[
@@ -149,7 +150,7 @@ export default function LatePledgesVsShopifyGuide() {
 
       <h2 id="preorders">Choose preorders when the product is defined but not ready to ship</h2>
       <p>
-        A preorder is a sales state rather than a platform. You can accept one
+        A preorder describes a purchase before the product is ready to ship. You can accept one
         through Shopify or another suitable system, but the page should say that
         the item is a preorder, provide a realistic delivery window and explain
         whether quantities are limited.
@@ -176,8 +177,7 @@ export default function LatePledgesVsShopifyGuide() {
         <li>You are ready to distinguish new retail orders from backer fulfillment.</li>
       </ul>
       <p>
-        The setup requirement is higher because you are building a real store. A
-        purpose built <Link href="/kickstarter-to-shopify">Kickstarter to Shopify theme</Link> can reduce that work by giving campaign assets a suitable structure from the start.
+        The setup requirement is higher because you are building a real store. The <Link href="/kickstarter-to-shopify">Kickstarter to Shopify planning page</Link> explains how to reuse your campaign assets in the store.
       </p>
 
       <h2 id="both">Using late pledges and Shopify together</h2>
@@ -221,10 +221,7 @@ export default function LatePledgesVsShopifyGuide() {
         ]}
       />
       <p>
-        For many funded tabletop creators, the sequence is more useful than the
-        contest: campaign, optional late pledge window, pledge management where
-        needed, then a permanent Shopify store. Each system should do the job it was
-        designed to do.
+        You may use a campaign, a late pledge window, pledge management and a permanent store at different stages. Keep the order types and responsibilities clear as you move between them.
       </p>
     </SeoArticlePage>
   );

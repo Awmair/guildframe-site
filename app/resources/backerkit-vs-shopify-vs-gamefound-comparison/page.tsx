@@ -1,3 +1,4 @@
+import { contentDates } from "../../content-dates";
 import Link from "next/link";
 import { ArticleCallout, ArticleTable, SeoArticlePage } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
@@ -9,7 +10,7 @@ export const metadata = pageMetadata({
   path: "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-18",
+  modifiedTime: contentDates.platformMatrix,
   keywords: ["tabletop crowdfunding platform matrix", "crowdfunding platform roles", "pledge manager ecommerce workflow"],
 });
 
@@ -42,7 +43,7 @@ export default function PlatformComparisonMatrixPage() {
       description="Use this operational matrix to assign funding, pledge management, fulfillment data and permanent ecommerce to the right system."
       answer="BackerKit and Gamefound are built around crowdfunding and backer workflows, while Shopify is built for ongoing ecommerce. Many tabletop creators use a campaign or pledge platform for backer specific work and Shopify as the permanent product, checkout and customer layer."
       published="2026-07-17"
-      updated="2026-07-18"
+      updated={contentDates.platformMatrix}
       readTime="6 minute reference"
       faqs={faqs}
       sources={[
@@ -106,14 +107,15 @@ export default function PlatformComparisonMatrixPage() {
       <p>
         Shopify is designed to keep selling after the campaign cycle. It provides a
         permanent catalog, collections, inventory, checkout, customer records,
-        discounts, content and an extensible app ecosystem. A Shopify theme controls
+        discounts, content and apps. A Shopify theme controls
         how that system is presented to customers.
       </p>
       <p>
         For a tabletop publisher, the permanent store usually needs to explain core
         games, editions, expansions, bundles and accessories without assuming the
-        customer understands a pledge tier. That is the problem solved by a
-        purpose built <Link href="/shopify-theme-for-board-games">board game Shopify theme</Link>.
+        customer understands a pledge tier. The
+        {" "}<Link href="/shopify-theme-for-board-games">board game store planning page</Link>{" "}
+        covers these product relationships.
       </p>
 
       <h2 id="stacks">Common platform stacks</h2>

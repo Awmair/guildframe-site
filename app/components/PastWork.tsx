@@ -1,0 +1,10 @@
+import {pastWork,clientTestimonials} from "../past-work";
+export function PastWork() {
+  return <section className="gf-section gf-past-work" id="past-work" aria-labelledby="past-work-title">
+    <div className="gf-section-heading" data-reveal><div><span className="gf-eyebrow">Past work</span><h2 id="past-work-title">Campaigns I’ve<br /><em>helped put together.</em></h2></div><p>Three projects from the tabletop world, with links to their published Kickstarter campaigns.</p></div>
+    <div className="gf-work-grid">{pastWork.map(project=><article className="gf-work-card glass" key={project.name} data-reveal><div className="gf-work-image"><img src={`/images/work/${project.image}.webp`} alt={project.alt} width="1200" height="675" loading="lazy" /></div><div className="gf-work-copy"><span className="gf-eyebrow">{project.category}</span><h3>{project.name}</h3><p className="gf-work-subtitle">{project.title}</p><p>{project.description}</p><a className="gf-text-link" href={project.href} target="_blank" rel="noopener noreferrer">View Kickstarter <span aria-hidden="true">↗</span><span className="gf-sr-only"> for {project.name} (opens in a new tab)</span></a><small>{project.imageNote}</small></div></article>)}</div>
+  </section>;
+}
+export function ClientTestimonials() {
+  return <section className="gf-section gf-testimonials" id="testimonials" aria-labelledby="testimonials-title"><div className="gf-section-heading" data-reveal><div><span className="gf-eyebrow">Client feedback</span><h2 id="testimonials-title">From the people<br /><em>behind the projects.</em></h2></div><p>Short excerpts from client reviews of the work shown above.</p></div><div className="gf-quote-grid">{clientTestimonials.map(t=><figure className="gf-quote glass" key={t.project} data-reveal><span className="gf-quote-mark" aria-hidden="true">“</span><blockquote><p>{t.quote}</p></blockquote><figcaption><strong>{t.project}</strong><span>Client: {t.client}</span></figcaption></figure>)}</div></section>;
+}

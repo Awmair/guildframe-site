@@ -11,7 +11,9 @@
 - Contact: umair@guildframe.com.
 - Categories: board games, card games and TCGs, TTRPGs, miniatures and terrain, dice and tabletop accessories.
 - New game illustration, video production, advertising, production and fulfilment are separate from campaign page design.
-- Site imagery: original illustrative concepts generated with ImageGen, not client campaigns or proof of funding results.
+- Concept imagery: original fictional games generated with ImageGen and labelled as concepts.
+- Past work: ScentedRealms, FutureProof Terrain and Quiver Time, linked to their real Kickstarter campaigns. Original campaign artwork and a credited Quiver Time product photo illustrate this section.
+- Testimonials: two verbatim client excerpts matched to ScentedRealms and FutureProof Terrain. No funding result is attributed to design.
 - Older Shopify articles are retained as after-funding references. The former paid Build Guide and Shopify build offers are no longer promoted.
 - No promise of funding success or search rankings.
 

@@ -54,8 +54,8 @@ export default function BuildWithAiGuidePage() {
       slug="build-a-tabletop-shopify-store-with-ai"
       category="AI assisted Shopify builds"
       title="Build a Tabletop Shopify Store With AI"
-      description="What AI coding tools genuinely do well on Shopify, where they break, and the catalog decisions no model can make for a tabletop product line."
-      answer="AI coding tools can build real Shopify theme sections, write Liquid, draft product copy and set up structured data. They cannot change Shopify checkout, and they cannot decide how your editions, expansions and add ons should be modelled or whether your preorder promise is safe to publish. The code is the easy half. For a tabletop catalog, the modelling decisions are the half that determines whether the store works."
+      description="Where AI coding tools can help with a Shopify store, what to check in the generated code and which product decisions you need to make yourself."
+      answer="AI coding tools can build real Shopify theme sections, write Liquid, draft product copy and set up structured data. They cannot change Shopify checkout, and they cannot decide how your editions, expansions and add ons should be modelled or whether your preorder promise is safe to publish. Give the tool confirmed product relationships and review what it builds."
       published={contentDates.buildWithAi}
       updated={contentDates.buildWithAi}
       readTime="9 minute read"
@@ -106,8 +106,7 @@ export default function BuildWithAiGuidePage() {
         A Shopify storefront is a theme: a folder of Liquid templates, section
         files and settings that Shopify renders around its own commerce engine.
         An AI coding tool opens that folder and edits it the way it would edit
-        any other codebase. That is the whole mechanism, and understanding it
-        sets a realistic expectation of what changes.
+        any other codebase. Those edits change the storefront shown to customers.
       </p>
       <p>
         Three boundaries are worth knowing before you start. Checkout belongs to
@@ -125,10 +124,9 @@ export default function BuildWithAiGuidePage() {
         settings keys and API fields that do not exist.
       </p>
 
-      <h2 id="where-it-helps">Where AI genuinely helps</h2>
+      <h2 id="where-it-helps">Where AI can help</h2>
       <p>
-        The honest answer is that it helps most where the work is structured,
-        repetitive and verifiable.
+        AI is useful for repeated work that you can describe and check.
       </p>
       <ul>
         <li>
@@ -181,8 +179,7 @@ export default function BuildWithAiGuidePage() {
 
       <h2 id="what-ai-cannot-know">The part no model knows: your catalog</h2>
       <p>
-        This is the section that matters, and it is the reason a generic AI
-        build guide will not get a tabletop store right.
+        Decide how the products relate before asking the tool to build their pages.
       </p>
       <p>
         A model can write a product page. It cannot tell you whether your deluxe
@@ -197,7 +194,7 @@ export default function BuildWithAiGuidePage() {
           <strong>Editions.</strong> Core, deluxe and collector versions can be
           variants of one product or separate products. Separate products win
           when each needs its own media, description and discoverability.
-          Variants win when the difference is genuinely one attribute.
+          Variants can work when one attribute distinguishes the versions.
         </li>
         <li>
           <strong>Expansions.</strong> An expansion is its own product, and it
@@ -337,8 +334,7 @@ export default function BuildWithAiGuidePage() {
 
       <h2 id="when-to-stop">When to stop and hire someone</h2>
       <p>
-        Building it yourself is a real option and it is not always the right
-        one. Honest stopping conditions:
+        Consider getting help when:
       </p>
       <ul>
         <li>
@@ -362,12 +358,11 @@ export default function BuildWithAiGuidePage() {
         </li>
       </ul>
       <p>
-        The last one is not a technical problem, and it is the one that costs
-        creators the most. If you want the store handled instead, the{" "}
+        Check the delivery promise against your fulfilment schedule before publishing. Use the{" "}
         <Link href="/done-for-you-shopify-store">
-          done for you Shopify build
+          store planning page
         </Link>{" "}
-        covers the full storefront, and{" "}
+        to prepare your requirements, and{" "}
         <Link href="/guides/how-much-does-a-board-game-website-cost">
           the cost guide
         </Link>{" "}

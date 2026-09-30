@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Should I open Shopify before Kickstarter fulfillment is complete?",
     answer:
-      "You can prepare or open the store before fulfillment is complete if availability, delivery timing and the distinction between backer rewards and new orders are unmistakably clear. Avoid creating an expectation that store customers will ship ahead of backers unless that is genuinely your plan.",
+      "You can prepare or open the store before fulfillment is complete if availability, delivery timing and the distinction between backer rewards and new orders are unmistakably clear. Avoid creating an expectation that store customers will ship ahead of backers unless that is the plan you have confirmed.",
   },
   {
     question: "Does Shopify replace a pledge manager?",
@@ -52,7 +52,7 @@ export default function MoveKickstarterToShopifyGuide() {
       slug="move-from-kickstarter-to-shopify"
       category="Kickstarter to Shopify"
       title="Kickstarter to Shopify Migration Guide"
-      description="Your campaign page proved demand. This guide shows how to turn the assets and product structure you already built into a permanent Shopify storefront."
+      description="Use your campaign artwork and product details to prepare an ongoing Shopify store, with a separate plan for new orders and backer rewards."
       answer="To move from Kickstarter to Shopify, finalize the products you will sell, separate campaign fulfillment from new store orders, reuse your strongest campaign assets, configure Shopify operations, test every buying path and launch with clear delivery language. The store complements Kickstarter and any pledge manager rather than replacing their campaign specific jobs."
       published="2026-07-16"
       updated={contentDates.moveFromKickstarter}
@@ -88,7 +88,7 @@ export default function MoveKickstarterToShopifyGuide() {
     >
       <ArticleDefinition term="Kickstarter to Shopify migration">
         The operational move from a time limited crowdfunding campaign to a
-        permanent Shopify catalog and customer journey. It does not mean copying
+        permanent Shopify catalog and buying process. It does not mean copying
         backer data or campaign reward logic into Shopify without review.
       </ArticleDefinition>
       <p>
@@ -185,7 +185,7 @@ export default function MoveKickstarterToShopifyGuide() {
         natural points.
       </p>
 
-      <h2 id="build">4. Build the Shopify storefront around buying journeys</h2>
+      <h2 id="build">4. Help shoppers find the right products</h2>
       <p>
         Start with the smallest complete site. A focused tabletop store usually
         needs a homepage, collection or catalog, product pages, campaign story or
@@ -199,7 +199,7 @@ export default function MoveKickstarterToShopifyGuide() {
         <li><strong>Add analytics and search tools.</strong> Prepare measurement before the first public store visit.</li>
       </ol>
       <p>
-        A purpose built option such as <Link href="/kickstarter-to-shopify">Guildframe&apos;s Kickstarter to Shopify system</Link> reduces design setup because the visual and content structure already anticipates tabletop products, editions and campaign storytelling.
+        Use the <Link href="/kickstarter-to-shopify">Kickstarter to Shopify planning page</Link> to map the products, editions and campaign content your store needs.
       </p>
       <p>
         Use the <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link> when you need to sequence this work around campaign close, asset delivery and store testing.
@@ -246,9 +246,7 @@ export default function MoveKickstarterToShopifyGuide() {
         <li>Backer announcement and new customer launch message prepared</li>
       </ul>
       <p>
-        The goal is not to recreate Kickstarter inside Shopify. It is to preserve the
-        strongest parts of the campaign while giving the product a simpler,
-        permanent place to sell.
+        Keep the useful campaign artwork and product explanations. Adapt the pages so a new customer can choose a product without knowing the pledge tiers.
       </p>
     </SeoArticlePage>
   );

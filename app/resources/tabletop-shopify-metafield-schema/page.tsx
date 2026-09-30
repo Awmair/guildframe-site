@@ -124,7 +124,7 @@ export default function TabletopMetafieldSchemaPage() {
         </li>
         <li>
           <strong>Keys:</strong> lower case, underscore separated, singular
-          unless the value is genuinely a list.
+          unless it contains a list.
         </li>
         <li>
           <strong>Owner:</strong> product level unless the value differs between

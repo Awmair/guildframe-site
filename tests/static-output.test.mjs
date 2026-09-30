@@ -5,14 +5,14 @@ import test from "node:test";
 const outputRoot = new URL("../out/", import.meta.url);
 
 const pages = [
-  ["/", "Kickstarter Campaign Design for Tabletop Games | Guildframe", "Good games"],
+  ["/", "Kickstarter Campaign Design for Tabletop Games | Guildframe", "Campaign design"],
   ["/buy", "Book Your Campaign Design | Guildframe", "Start with a free mockup"],
   ["/done-for-you-shopify-store", "Shopify Store Planning After Your Campaign | Guildframe", "A store comes after"],
   ["/shopify-theme-for-board-games", "Shopify Theme and Store Setup for Board Games | Guildframe", "Plan your board game"],
   ["/kickstarter-to-shopify", "Kickstarter to Shopify for Funded Tabletop Games | Guildframe", "Your campaign funded"],
   ["/shopify-theme-for-ttrpg", "Shopify Store and Theme Setup for TTRPG Publishers | Guildframe", "Plan your TTRPG"],
   ["/shopify-theme-for-miniatures", "Shopify Store and Theme Setup for Miniatures | Guildframe", "Plan your miniatures"],
-  ["/guides", "Kickstarter Campaign Design and Launch Guides | Guildframe", "Make your next"],
+  ["/guides", "Kickstarter Campaign Design and Launch Guides | Guildframe", "Guides for your"],
   ["/guides/what-happens-after-kickstarter-is-funded", "What Happens After Your Kickstarter Is Funded? | Guildframe", "What Happens After Your Kickstarter Is Funded"],
   ["/guides/move-from-kickstarter-to-shopify", "Kickstarter to Shopify Migration Guide | Guildframe", "Kickstarter to Shopify Migration Guide"],
   ["/guides/best-shopify-themes-for-board-games", "6 Best Shopify Themes for Board Games in 2026 | Guildframe", "6 Best Shopify Themes for Board Games"],
@@ -26,9 +26,9 @@ const pages = [
   ["/guides/how-much-does-a-board-game-website-cost", "How Much Does a Board Game Website Cost? | Guildframe", "How Much Does a Board Game Website Cost"],
   ["/guides/shopify-vs-etsy-for-selling-miniatures", "Shopify vs Etsy for Selling Miniatures | Guildframe", "Shopify vs Etsy for Selling Miniatures"],
   ["/guides/build-a-tabletop-shopify-store-with-ai", "Build a Tabletop Shopify Store With AI | Guildframe", "Build a Tabletop Shopify Store With AI"],
-  ["/about", "About Guildframe | Guildframe", "Good games deserve"],
-  ["/editorial-policy", "Editorial Policy | Guildframe", "Useful first"],
-  ["/authors/guildframe", "Guildframe Editorial Team | Guildframe", "Guildframe Editorial Team"],
+  ["/about", "About Guildframe | Guildframe", "Campaign design for tabletop creators"],
+  ["/editorial-policy", "Editorial Policy | Guildframe", "How I write"],
+  ["/authors/guildframe", "Guides by Guildframe | Guildframe", "Guides by Guildframe"],
   ["/resources", "Tabletop Ecommerce Checklists and References | Guildframe", "Reference tools"],
   ["/resources/board-game-shopify-store-checklist", "Board Game Shopify Store Checklist | Guildframe", "Board Game Shopify Store Checklist"],
   ["/resources/kickstarter-to-shopify-migration-checklist", "Kickstarter to Shopify Migration Checklist | Guildframe", "Kickstarter to Shopify Migration Checklist"],
@@ -36,13 +36,13 @@ const pages = [
   ["/resources/board-game-product-page-checklist", "Board Game Shopify Product Page Checklist | Guildframe", "Board Game Shopify Product Page Checklist"],
   ["/resources/kickstarter-tabletop-games-benchmark", "2024 Kickstarter Tabletop Games Funding Benchmark | Guildframe", "6,646"],
   ["/resources/tabletop-shopify-metafield-schema", "Tabletop Shopify Metafield Schema | Guildframe", "Tabletop Shopify Metafield Schema"],
-  ["/campaign-design", "Kickstarter Campaign Design for Games | Guildframe", "Your game deserves"],
-  ["/gamefound-campaign-design", "Gamefound Campaign Design for Tabletop Games | Guildframe", "A Gamefound page"],
-  ["/board-game-kickstarter-campaign-design", "Kickstarter Campaign Design for Board games | Guildframe", "their next game night"],
-  ["/card-game-kickstarter-campaign-design", "Kickstarter Campaign Design for Card games and TCGs | Guildframe", "A great deck"],
-  ["/ttrpg-kickstarter-campaign-design", "Kickstarter Campaign Design for Tabletop RPGs | Guildframe", "Your next world"],
-  ["/miniatures-kickstarter-campaign-design", "Kickstarter Campaign Design for Miniatures and Terrain | Guildframe", "Give the detail"],
-  ["/tabletop-accessories-campaign-design", "Tabletop Accessories Campaign Design | Guildframe", "Make the little things"],
+  ["/campaign-design", "Kickstarter Campaign Design for Games | Guildframe", "Campaign copy"],
+  ["/gamefound-campaign-design", "Gamefound Campaign Design for Tabletop Games | Guildframe", "Gamefound campaign design"],
+  ["/board-game-kickstarter-campaign-design", "Kickstarter Campaign Design for Board games | Guildframe", "for your board game"],
+  ["/card-game-kickstarter-campaign-design", "Kickstarter Campaign Design for Card games and TCGs | Guildframe", "card games"],
+  ["/ttrpg-kickstarter-campaign-design", "Kickstarter Campaign Design for Tabletop RPGs | Guildframe", "your tabletop RPG"],
+  ["/miniatures-kickstarter-campaign-design", "Kickstarter Campaign Design for Miniatures and Terrain | Guildframe", "miniatures"],
+  ["/tabletop-accessories-campaign-design", "Tabletop Accessories Campaign Design | Guildframe", "dice"],
   ["/guides/board-game-kickstarter-campaign-design-cost", "How Much Does Board Game Kickstarter Campaign Design Cost? | Guildframe", "How Much Does Board Game Kickstarter Campaign Design Cost"],
   ["/guides/board-game-kickstarter-page-checklist", "Board Game Kickstarter Page Checklist Before Launch | Guildframe", "Board Game Kickstarter Page Checklist Before Launch"],
   ["/guides/what-to-send-kickstarter-campaign-designer", "What to Send Your Kickstarter Campaign Designer | Guildframe", "What to Send Your Kickstarter Campaign Designer"],
@@ -175,7 +175,7 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
   assert.match(robots, /Sitemap: http:\/\/localhost:3000\/sitemap\.xml/i);
   assert.doesNotMatch(sitemap, /<changefreq>|<priority>/i);
   assert.equal((sitemap.match(/<lastmod>[^<]+<\/lastmod>/g) ?? []).length, pages.length);
-  assert.match(sitemap, /<lastmod>2026-08-13T00:00:00.000Z<\/lastmod>/);
+  assert.match(sitemap, /<lastmod>2026-09-30T00:00:00.000Z<\/lastmod>/);
   assert.match(llms, /^# Guildframe$/m);
   assert.match(llms, /https:\/\/guildframe\.com\/done-for-you-shopify-store/i);
   assert.match(llms, /\$975/);
@@ -218,6 +218,8 @@ test("exports AEO and social metadata", async () => {
   articlePaths.push("/guides/kickstarter-campaign-graphics-mobile-readability");
   articlePaths.push("/guides/when-to-hire-kickstarter-campaign-designer");
   const modifiedDates = new Map([
+    ["/guides/sell-board-game-expansions-add-ons-shopify", "2026-09-30"],
+    ["/resources/kickstarter-tabletop-games-benchmark", "2026-09-30"],
     ["/guides/when-to-hire-kickstarter-campaign-designer", "2026-09-30"],
     ["/guides/kickstarter-campaign-graphics-mobile-readability", "2026-09-30"],
     ["/guides/kickstarter-vs-gamefound-campaign-page-design", "2026-09-30"],
@@ -228,17 +230,17 @@ test("exports AEO and social metadata", async () => {
     ["/guides/board-game-kickstarter-campaign-design-cost", "2026-09-30"],
     ["/guides/what-happens-after-kickstarter-is-funded", "2026-09-30"],
     ["/guides/move-from-kickstarter-to-shopify", "2026-09-30"],
-    ["/guides/best-shopify-themes-for-board-games", "2026-08-13"],
+    ["/guides/best-shopify-themes-for-board-games", "2026-09-30"],
     ["/guides/shopify-developer-vs-diy-theme", "2026-09-30"],
     ["/guides/kickstarter-to-shopify-launch-timeline", "2026-09-30"],
-    ["/guides/kickstarter-late-pledges-vs-shopify", "2026-07-18"],
-    ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-07-18"],
-    ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "2026-07-18"],
+    ["/guides/kickstarter-late-pledges-vs-shopify", "2026-09-30"],
+    ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-09-30"],
+    ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "2026-09-30"],
     ["/guides/selling-miniatures-internationally-vat-ioss", "2026-07-23"],
     ["/guides/how-much-does-a-board-game-website-cost", "2026-09-30"],
-    ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-08-13"],
+    ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-09-30"],
     ["/guides/build-a-tabletop-shopify-store-with-ai", "2026-09-30"],
-    ["/resources/tabletop-shopify-metafield-schema", "2026-08-09"],
+    ["/resources/tabletop-shopify-metafield-schema", "2026-09-30"],
   ]);
 
   for (const path of solutionPaths) {
@@ -273,7 +275,7 @@ test("exports AEO and social metadata", async () => {
   for (const path of referencePaths) {
     const html = await readPage(path);
     assert.match(html, /"@type":"TechArticle"/i, path);
-    assert.match(html, /Guildframe Editorial Team/i, path);
+    assert.match(html, /<meta name="author" content="Guildframe"/i, path);
   }
 
   assert.match(await readPage("/about"), /"@type":"AboutPage"/i);
@@ -323,7 +325,7 @@ test("keeps campaign pricing, recovery and redirects ready",async()=>{
  const home=await readPage("/");const campaign=await readPage("/campaign-design");const buy=await readPage("/buy");
  for(const html of [home,campaign,buy]){assert.match(html,/\$975/);assert.match(html,/free mockup/i);assert.doesNotMatch(html,/\$79|\$2,500|\$99|fiverr|checkout pending|within 72 hours/i);}
  assert.match(home,/mailto:umair@guildframe.com/);assert.match(home,/"price":"975"/);assert.match(campaign,/"priceCurrency":"USD"/);
- assert.match(home,/original concept imagery/i);assert.match(home,/prefers-reduced-motion|gf-home/i);
+ assert.match(home,/Concept mockups showing different types/i);assert.match(home,/prefers-reduced-motion|gf-home/i);
  const missing=await readFile(new URL("404.html",outputRoot),"utf8");assert.match(missing,/This path ends here/);assert.match(missing,/content="noindex/);
  const redirects=await readFile(new URL("_redirects",outputRoot),"utf8");assert.match(redirects,/^\/pricing \/#pricing 301/m);assert.match(redirects,/^\/customization \/campaign-design 301/m);
  const headers=await readFile(new URL("_headers",outputRoot),"utf8");assert.match(headers,/X-Content-Type-Options: nosniff/i);
@@ -498,23 +500,23 @@ const datedPages = new Map([
   ["/authors/guildframe", "2026-09-30"],
   ["/guides/what-happens-after-kickstarter-is-funded", "2026-09-30"],
   ["/guides/move-from-kickstarter-to-shopify", "2026-09-30"],
-  ["/guides/best-shopify-themes-for-board-games", "2026-08-13"],
+  ["/guides/best-shopify-themes-for-board-games", "2026-09-30"],
   ["/guides/shopify-developer-vs-diy-theme", "2026-09-30"],
-  ["/guides/kickstarter-late-pledges-vs-shopify", "2026-07-18"],
-  ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-07-18"],
+  ["/guides/kickstarter-late-pledges-vs-shopify", "2026-09-30"],
+  ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-09-30"],
   ["/guides/kickstarter-to-shopify-launch-timeline", "2026-09-30"],
   ["/guides/sell-board-game-preorders-on-shopify", "2026-07-17"],
-  ["/guides/sell-board-game-expansions-add-ons-shopify", "2026-07-17"],
+  ["/guides/sell-board-game-expansions-add-ons-shopify", "2026-09-30"],
   ["/guides/selling-miniatures-internationally-vat-ioss", "2026-07-23"],
   ["/guides/how-much-does-a-board-game-website-cost", "2026-09-30"],
-  ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-08-13"],
+  ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-09-30"],
   ["/guides/build-a-tabletop-shopify-store-with-ai", "2026-09-30"],
   ["/resources/board-game-shopify-store-checklist", "2026-07-17"],
   ["/resources/kickstarter-to-shopify-migration-checklist", "2026-07-17"],
-  ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "2026-07-18"],
+  ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "2026-09-30"],
   ["/resources/board-game-product-page-checklist", "2026-07-17"],
-  ["/resources/kickstarter-tabletop-games-benchmark", "2026-07-17"],
-  ["/resources/tabletop-shopify-metafield-schema", "2026-08-09"],
+  ["/resources/kickstarter-tabletop-games-benchmark", "2026-09-30"],
+  ["/resources/tabletop-shopify-metafield-schema", "2026-09-30"],
 ]);
 
 test("keeps visible review dates, schema dates and sitemap dates identical", async (t) => {
@@ -555,7 +557,7 @@ test("keeps the React payload files out of the search index", async () => {
   assert.match(robots, /^Allow: \/llms\.txt$/m, "llms.txt must stay explicitly allowed");
 
   const payload = await readFile(new URL("about.txt", outputRoot), "utf8");
-  assert.match(payload, /Good games deserve/i, "about.txt still mirrors page text, so the rule is required");
+  assert.match(payload, /Campaign design for tabletop creators/i, "about.txt still mirrors page text, so the rule is required");
 });
 
 test("publishes an accurate llms.txt for every canonical route", async () => {
@@ -584,7 +586,7 @@ test("keeps comparison tables, campaign pages and answers connected",async()=>{
  const benchmark=await readPage("/resources/kickstarter-tabletop-games-benchmark");assert.doesNotMatch(benchmark,/<th(?=[\s>])(?![^>]*\bscope=)/i);assert.match(benchmark,/"@type":"Dataset"/);assert.match(benchmark,/"@type":"DataDownload"/);assert.match(benchmark,/"encodingFormat":"text\/csv"/);
  const buy=await readPage("/buy");assert.match(buy,/href="\/campaign-design"/);assert.match(buy,/class="seo-breadcrumbs"/);
  const home=await readPage("/");assert.match(home,/"@type":"FAQPage"/);assert.match(home,/How much does campaign design cost/);
- const cost=await readPage("/guides/board-game-kickstarter-campaign-design-cost");assert.match(cost,/<caption>/);assert.match(cost,/scope="col"/);assert.match(cost,/not an industry average/i);
+ const cost=await readPage("/guides/board-game-kickstarter-campaign-design-cost");assert.match(cost,/<caption>/);assert.match(cost,/scope="col"/);assert.match(cost,/isn’t a measured industry average/i);
 });
 
 test("connects the high intent launch pages to the service",async()=>{
@@ -621,5 +623,51 @@ test("ships no unreferenced image asset in the deployable output", async () => {
     const relative = `/${decodeURIComponent(url.pathname).slice(decodeURIComponent(outputRoot.pathname).length)}`;
     if (allowed.has(relative)) continue;
     assert.ok(corpus.includes(relative), `unreferenced asset shipped to production: ${relative}`);
+  }
+});
+
+test("shows verified client projects separately from concept mockups", async () => {
+  const html = await readPage("/");
+  const work = html.match(/<section\b[^>]*\bid="past-work"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(work);
+  const links = [
+    "https://www.kickstarter.com/projects/hans-h-h-hansen/scentedrealms-fantasy-scents-for-immersive-gameplay",
+    "https://www.kickstarter.com/projects/snotgoblingaming/futureproof-wargaming-terrain-by-snot-goblin-gaming",
+    "https://www.kickstarter.com/projects/quivertime/quiver-time-citadel-deck-block-cards-dice-tokens-and-coins",
+  ];
+  for (const href of links) assert.ok(work.includes(`href="${href}"`));
+  for (const asset of ["scented-realms", "futureproof", "quiver-time"]) {
+    assert.ok(work.includes(`/images/work/${asset}.webp`));
+    await access(new URL(`images/work/${asset}.webp`, outputRoot));
+  }
+  assert.doesNotMatch(work, /SNACK ATTACK|ORBITAL CREW|COMMON GROUND|Concept mockup/);
+  const concepts = html.match(/<section\b[^>]*\bid="mockups"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(concepts);
+  assert.equal((concepts.match(/Concept mockup/g) ?? []).length, 3);
+  for (const asset of ["party-cards", "adventure-cards", "minimal-cards"]) {
+    assert.ok(concepts.includes(`/images/campaign/${asset}.webp`));
+    await access(new URL(`images/campaign/${asset}.webp`, outputRoot));
+  }
+});
+
+test("preserves project matched client excerpts and attribution", async () => {
+  for (const path of ["/", "/campaign-design"]) {
+    const html = await readPage(path);
+    const quotes = html.match(/<section\b[^>]*\bid="testimonials"[\s\S]*?<\/section>/)?.[0];
+    assert.ok(quotes, path);
+    assert.equal((quotes.match(/<blockquote>/g) ?? []).length, 2);
+    assert.match(quotes, /Great communication, fast updates, overall great work!/);
+    assert.match(quotes, /FutureProof Terrain<\/strong><span>Client: <!-- -->mpmeguire/);
+    assert.match(quotes, /Exceptional service with great attention to detail and artistic skills/);
+    assert.match(quotes, /ScentedRealms<\/strong><span>Client: <!-- -->softmobile/);
+    assert.doesNotMatch(quotes, /Quiver Time|aggregateRating|ratingValue/);
+  }
+});
+
+test("keeps the site focused on direct enquiries", async () => {
+  for (const [path] of pages) {
+    const html = await readPage(path);
+    assert.doesNotMatch(html, /fiverr|designologists|cloudinary/i, path);
+    assert.match(html, /mailto:umair@guildframe\.com/, path);
   }
 });

@@ -143,7 +143,7 @@ export default function KickstarterToShopifyTimelinePage() {
         <li><strong>Operations:</strong> configure payments, taxes, shipping zones, inventory locations and notifications.</li>
       </ol>
       <p>
-        If the campaign assets are final, <Link href="/done-for-you-shopify-store">Guildframe&apos;s done for you Shopify service</Link> can prepare the complete storefront while the creator keeps control of products, operations and launch approval.
+        Use the <Link href="/done-for-you-shopify-store">store planning reference</Link> to organise the catalogue and decide who will handle the build, operations and publication.
       </p>
 
       <h2 id="testing">Testing and review</h2>

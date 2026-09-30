@@ -109,12 +109,10 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         Shopify&apos;s theme editor lets merchants change sections, blocks, colors,
         typography and content without editing code. That makes a DIY build
         possible. It does not decide how editions should be organized, which
-        campaign content belongs on a product page or how the complete customer
-        journey should be tested.
+        campaign content belongs on a product page or how the complete buying process should be tested.
       </p>
       <ArticleCallout>
-        The question is not whether you are capable of using Shopify. It is whether
-        building the store is the best use of your time before launch.
+        Decide how much time you can spend building and testing the store before launch.
       </ArticleCallout>
 
       <h2 id="comparison">Shopify developer vs DIY theme at a glance</h2>
@@ -191,10 +189,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         ]}
       />
       <p>
-        A DIY theme remains the better value when you genuinely want to do the
-        work. A developer led build becomes the better value when it prevents weeks
-        of uncertainty or lets your team focus on production, fulfillment,
-        marketing and the next release.
+        A DIY theme can cost less if you have the time to configure it. Hiring a developer can free your team to handle production, fulfilment, marketing and the next release.
       </p>
 
       <h2 id="decision">Use five questions to make the decision</h2>
@@ -207,8 +202,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       </ol>
       <p>If you are building yourself, use the free checklists and Shopify’s documentation. If you hire a developer, agree who owns the catalogue, content, testing and publication tasks.</p>
       <ArticleCallout>
-        Choose the theme when you want the tools. Choose the developer when you want
-        someone accountable for turning those tools into the finished store.
+        Choose a theme if you’ll do the setup yourself. If you hire a developer, agree which parts of the finished store they’re responsible for.
       </ArticleCallout>
     </SeoArticlePage>
   );

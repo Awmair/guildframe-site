@@ -33,7 +33,7 @@ const afterFundingGuides = [
   },
   {
     title: "Best Shopify Themes for Board Games and Tabletop Creators",
-    copy: "Compare Guildframe, Novaplay, Playtime, Sunrise, Boost and Dawn by catalog fit, features and setup effort.",
+    copy: "Compare Shopify themes by catalogue fit, features and the work needed to set them up.",
     href: "/guides/best-shopify-themes-for-board-games",
     tag: "Theme comparison",
   },
@@ -140,11 +140,9 @@ export default function GuidesPage() {
       <main className="guides-main" id="guides-content">
         <section className="guides-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
-          <h1>Make your next <em>launch clearer.</em></h1>
+          <h1>Guides for your <em>next game launch.</em></h1>
           <p>
-            Practical answers for your Kickstarter or Gamefound launch.
-            Design budgets, asset handoffs, rewards and page reviews,
-            with after funding references when you need them.
+            What to budget for design, which files to send and how to review your campaign before launch. There are also guides for planning a store after funding.
           </p>
         </section>
         <section className="guides-grid">
@@ -163,7 +161,7 @@ export default function GuidesPage() {
         <section className="gf-archive-heading"><h2>After funding</h2><p>Existing references for building a store and planning ongoing sales.</p></section><section className="guides-grid">{afterFundingGuides.map(guide=><Link href={guide.href} key={guide.href}><div><span>{guide.tag}</span></div><h2>{guide.title}</h2><p>{guide.copy}</p><strong>Read the guide ↗</strong></Link>)}</section>
         <section className="guides-solutions">
           <div>
-            <h2>Built for your part of the tabletop world.</h2>
+            <h2>Find the service for your project.</h2>
           </div>
           <nav aria-label="Guildframe solutions">
             <Link href="/board-game-kickstarter-campaign-design">Board games ↗</Link>

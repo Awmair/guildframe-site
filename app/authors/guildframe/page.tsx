@@ -5,11 +5,11 @@ import { absoluteUrl, pageMetadata } from "../../site-config";
 import { contentDates } from "../../content-dates";
 
 export const metadata = pageMetadata({
-  title: "Guildframe Editorial Team",
+  title: "Guides by Guildframe",
   description:
-    "Meet the Guildframe Editorial Team behind our Shopify, tabletop ecommerce and post-crowdfunding guides and references.",
+    "Guides by Guildframe on campaign design, launch preparation and selling after crowdfunding. Find the sources and how to suggest a correction.",
   path: "/authors/guildframe",
-  keywords: ["Guildframe Editorial Team", "tabletop ecommerce experts", "Shopify board game guidance"],
+  keywords: ["Guildframe", "tabletop ecommerce experts", "Shopify board game guidance"],
 });
 
 export default function GuildframeAuthorPage() {
@@ -22,7 +22,7 @@ export default function GuildframeAuthorPage() {
             "@type": "ProfilePage",
             "@id": absoluteUrl("/authors/guildframe"),
             url: absoluteUrl("/authors/guildframe"),
-            name: "Guildframe Editorial Team",
+            name: "Guildframe",
             dateCreated: "2026-07-16T19:00:00Z",
             dateModified: contentDates.authorGuildframe,
             mainEntity: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
@@ -32,10 +32,10 @@ export default function GuildframeAuthorPage() {
           {
             "@type": "Organization",
             "@id": absoluteUrl("/authors/guildframe#editorial-team"),
-            name: "Guildframe Editorial Team",
+            name: "Guildframe",
             url: absoluteUrl("/authors/guildframe"),
             memberOf: { "@id": absoluteUrl("/#organization") },
-            description: "The Guildframe team that researches and publishes tabletop campaign and ecommerce guidance.",
+            description: "Guildframe’s campaign design and tabletop publishing guidance.",
             knowsAbout: [
               "Shopify themes",
               "Board game ecommerce",
@@ -49,34 +49,27 @@ export default function GuildframeAuthorPage() {
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
-              { "@type": "ListItem", position: 2, name: "Guildframe Editorial Team", item: absoluteUrl("/authors/guildframe") },
+              { "@type": "ListItem", position: 2, name: "Guildframe", item: absoluteUrl("/authors/guildframe") },
             ],
           },
         ],
       }} />
       <TrustPage
         label="Author"
-        title="Guildframe Editorial Team"
-        description="Guidance from Guildframe on tabletop campaign design, launch preparation and post campaign planning."
+        title="Guides by Guildframe"
+        description="Practical guides on preparing a tabletop campaign and planning sales after funding."
         updated={contentDates.authorGuildframe}
       >
         <section>
           <h2>Editorial focus</h2>
           <p>
-            The Guildframe Editorial Team writes and reviews content about board
-            game campaign design, launch preparation, Kickstarter migration,
-            pledge manager boundaries and post campaign selling systems.
+            I write these guides to help creators prepare campaign pages, organise their assets and plan what comes after funding. They cover board game launches, Kickstarter migration, pledge management and ongoing sales.
           </p>
           <p>
-            Our work combines platform documentation with the specific catalog and
-            storytelling needs of tabletop creators. That includes core games,
-            deluxe editions, expansions, bundles, add ons, miniatures, terrain and
-            long form world building.
+            The guides use platform documentation alongside the details tabletop projects need to explain: game editions, expansions, bundles, miniatures, terrain and RPG books.
           </p>
           <p>
-            Guildframe provides campaign page design for $975 USD. When the team compares storefront foundations,
-            it evaluates Shopify and third party options against documented tabletop
-            store needs.
+            Campaign design costs $975 USD. The storefront guides compare Shopify and third party options by the needs of a tabletop catalogue.
           </p>
         </section>
         <section>

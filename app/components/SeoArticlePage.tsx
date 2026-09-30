@@ -162,7 +162,7 @@ export function SeoArticlePage({
             <div className="article-meta">
               <span>Updated <time dateTime={updated}>{formatContentDate(updated)}</time></span>
               <span>{readTime}</span>
-              <Link href="/authors/guildframe">Guildframe Editorial Team</Link>
+              <Link href="/authors/guildframe">Guildframe</Link>
             </div>
           </div>
         </header>
@@ -195,9 +195,7 @@ export function SeoArticlePage({
             <section className="article-sources" aria-labelledby="article-sources-title">
               <h2 id="article-sources-title">Sources and references</h2>
               <p>
-                Platform features and policies can change. Use these primary sources
-                to check the current documentation. Design recommendations are
-                Guildframe’s editorial guidance.
+                These links point to the platform documentation behind the guide. Features and policies can change, so check the current guidance before acting. Design advice is from Guildframe.
               </p>
               <ul>
                 {sources.map((source) => (
@@ -220,11 +218,9 @@ export function SeoArticlePage({
               ))}
             </section>
             <div className="article-cta">
-              <h2>Give your game a clear introduction.</h2>
+              <h2>Need help with your campaign page?</h2>
               <p>
-                Kickstarter and Gamefound campaign design for tabletop creators.
-                Page structure, copy and campaign graphics for $975 USD.
-                Start with a free opening section mockup.
+                I design Kickstarter and Gamefound pages for tabletop projects. The $975 package covers page structure, copy and graphics. Send your game and artwork for a free opening mockup.
               </p>
               <div className="article-cta-actions">
                 <Link

@@ -1,3 +1,4 @@
+import { contentDates } from "../../content-dates";
 import {
   ArticleCallout,
   ArticleDefinition,
@@ -18,7 +19,7 @@ export const metadata = pageMetadata({
   path: "/resources/kickstarter-tabletop-games-benchmark",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-17",
+  modifiedTime: contentDates.kickstarterTabletopBenchmark,
   keywords: [
     "Kickstarter tabletop games statistics",
     "board game Kickstarter benchmark",
@@ -61,7 +62,7 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
         publisher: { "@id": absoluteUrl("/#organization") },
         temporalCoverage: "2024",
         datePublished: "2026-07-17",
-        dateModified: "2026-07-17",
+        dateModified: contentDates.kickstarterTabletopBenchmark,
         isAccessibleForFree: true,
         measurementTechnique:
           "Division and summation of the totals Kickstarter published on February 5, 2025. No campaign level values were estimated.",
@@ -94,7 +95,7 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
       description="A transparent reference for the scale, success rate and concentration of tabletop game funding on Kickstarter in 2024."
       answer="Kickstarter reported 6,646 tabletop game launches in 2024, 5,314 successfully funded projects, an 80% success rate and $220 million pledged to successful tabletop campaigns. The published figures imply roughly $41,400 pledged per successful project as a simple mean, while the ten highest funded campaigns accounted for at least $41.1 million."
       published="2026-07-17"
-      updated="2026-07-17"
+      updated={contentDates.kickstarterTabletopBenchmark}
       readTime="6 minute read"
       faqs={faqs}
       sources={[
@@ -190,7 +191,7 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
       <h2 id="commerce">What the figures mean for post campaign commerce</h2>
       <p>
         A successful campaign creates an audience and a delivery obligation. It
-        does not automatically create a permanent product catalog, customer journey
+        does not automatically create a permanent product catalog, buying process
         or retail operating system. Shopify&apos;s migration guidance recommends
         preparing products, customer communication, fulfillment and the ongoing
         ecommerce infrastructure around the campaign.

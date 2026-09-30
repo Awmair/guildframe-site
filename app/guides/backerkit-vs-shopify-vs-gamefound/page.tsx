@@ -1,3 +1,4 @@
+import { contentDates } from "../../content-dates";
 import Link from "next/link";
 import {
   ArticleCallout,
@@ -14,7 +15,7 @@ export const metadata = pageMetadata({
   path: "/guides/backerkit-vs-shopify-vs-gamefound",
   kind: "article",
   publishedTime: "2026-07-16",
-  modifiedTime: "2026-07-18",
+  modifiedTime: contentDates.backerkitVsShopifyVsGamefound,
   keywords: ["BackerKit vs Shopify vs Gamefound", "pledge manager vs Shopify", "tabletop crowdfunding platforms"],
 });
 
@@ -47,10 +48,10 @@ export default function BackerkitShopifyGamefoundGuide() {
       slug="backerkit-vs-shopify-vs-gamefound"
       category="Platform comparison"
       title="BackerKit vs Shopify vs Gamefound: What Each Platform Does After Crowdfunding"
-      description="These platforms are often compared as if they do the same job. Separate crowdfunding, pledge management and permanent ecommerce before choosing your stack."
+      description="Compare which jobs each platform covers: funding the campaign, managing backer orders and running the ongoing store."
       answer="BackerKit is strongest around crowdfunding and post campaign backer workflows, Shopify is strongest as a permanent branded ecommerce store, and Gamefound combines tabletop crowdfunding with pledge management capabilities. The right setup depends on whether you are funding a project, managing backer orders or selling products long term."
       published="2026-07-16"
-      updated="2026-07-18"
+      updated={contentDates.backerkitVsShopifyVsGamefound}
       readTime="8 minute read"
       faqs={faqs}
       sources={[
@@ -88,9 +89,7 @@ export default function BackerkitShopifyGamefoundGuide() {
       <h2 id="jobs">Start with the job, not the platform name</h2>
       <p>
         A tabletop business may need to fund a project, manage thousands of backer
-        choices and run a store for years. Those are related workflows, not one
-        workflow. Comparing every platform as a direct substitute creates poor
-        decisions because each product has a different center of gravity.
+        choices and run a store for years. Each platform covers a different part of that work. Check which tasks you need it to handle before comparing features.
       </p>
       <ArticleTable
         caption="BackerKit, Shopify and Gamefound primary roles"
@@ -124,7 +123,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         operations.
       </p>
       <ul>
-        <li><strong>Choose it when:</strong> backer surveys, add ons, upgrades and fulfillment data are central.</li>
+        <li><strong>Choose it when:</strong> you need backer surveys, extras, upgrades and fulfilment data.</li>
         <li><strong>Do not assume:</strong> that a campaign or preorder surface replaces the need for a long term branded store.</li>
         <li><strong>Check carefully:</strong> current fees, supported integrations, order mapping and tax or shipping responsibilities.</li>
       </ul>
@@ -133,11 +132,11 @@ export default function BackerkitShopifyGamefoundGuide() {
       <p>
         Shopify is strongest when the project becomes an ongoing product business.
         It gives the brand a permanent domain, navigable catalog, product templates,
-        customer checkout, inventory, payments, content and an app ecosystem.
+        customer checkout, inventory, payments, content and an apps.
       </p>
       <p>
         A Shopify store should not be forced to behave like a pledge manager. Its
-        value is the public customer journey after the campaign: discover the game,
+        value is the buying process after the campaign: discover the game,
         understand the edition, browse expansions, buy and return for future
         releases. Shopify also has a dedicated overview for
         <a href="https://www.shopify.com/sell/games" target="_blank" rel="noreferrer"> selling games online</a>.
@@ -148,9 +147,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         <li><strong>Plan carefully:</strong> product structure, fulfillment status, migration permissions and integrations.</li>
       </ul>
       <p>
-        Guildframe sits inside this Shopify stage. It provides a
-        <Link href="/shopify-theme-for-board-games"> purpose built tabletop Shopify theme</Link>
-        and setup service, not a crowdfunding or pledge management system.
+        Guildframe’s <Link href="/shopify-theme-for-board-games">store planning references</Link> cover the catalogue work that follows a campaign.
       </p>
 
       <h2 id="gamefound">Where Gamefound fits</h2>
@@ -214,9 +211,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         <li><strong>Give customers one clear support path.</strong> Tell backers and retail customers where to ask for help.</li>
       </ol>
       <ArticleCallout>
-        BackerKit vs Shopify vs Gamefound is rarely a winner takes all question. The
-        better question is which system should own each stage, and how cleanly the
-        data and customer promise move between them.
+        Choose which system will handle each stage. Then check how orders, addresses and fulfilment information move between them.
       </ArticleCallout>
     </SeoArticlePage>
   );

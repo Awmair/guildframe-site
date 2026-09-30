@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "Is Guildframe unbiased in this comparison?",
     answer:
-      "Guildframe builds Shopify stores for tabletop brands and sells a build guide, and does not sell a theme. No option in this comparison is a Guildframe product. The comparison uses current official theme listings and recommends each option for a different use case.",
+      "No. Guildframe provides campaign design. The themes in this comparison are from Shopify or third party developers. Use their official listings to check the features, demos and prices.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function BestThemesGuide() {
       slug="best-shopify-themes-for-board-games"
       category="Board game Shopify themes"
       title="6 Best Shopify Themes for Board Games and Tabletop Stores in 2026"
-      description="A useful tabletop theme must sell a world and make a complex product easy to buy. These six options serve different catalog sizes, visual styles and budgets."
+      description="Compare these six themes by your catalogue size, product details, visual style and the setup work you can take on."
       answer="The strongest Shopify theme choices for board game and tabletop stores are Horizon for flexible free builds, Novaplay for larger game and collectible catalogs, Playtime for trading cards and playful retail, Sunrise for a bright straightforward storefront, Boost for promotion heavy stores, and Dawn for a lean free foundation. Choose by catalog structure and setup effort, not by the demo image alone."
       published="2026-07-16"
       updated={contentDates.bestBoardGameThemes}
@@ -106,10 +106,7 @@ export default function BestThemesGuide() {
       ]}
     >
       <ArticleCallout>
-        <strong>Disclosure:</strong> Guildframe publishes this guide, builds
-        Shopify stores for tabletop brands and sells a build guide. We do not
-        sell a theme, so no option below is ours. Each links to its current
-        official Shopify listing so you can verify demos, features and prices.
+        <strong>Disclosure:</strong> Guildframe publishes this guide and provides campaign design. The themes below are from Shopify or third party developers. Each links to its official listing so you can check demos, features and prices.
       </ArticleCallout>
 
       <ArticleDefinition term="Board game Shopify theme">
@@ -277,13 +274,11 @@ export default function BestThemesGuide() {
         <li><strong>Calculate the finished cost.</strong> Add design, content, development, apps and internal time to the theme price.</li>
       </ol>
       <p>
-        If the real decision is whether to configure a theme yourself or hire a
+        If you’re deciding whether to configure a theme yourself or hire a
         specialist, use our <Link href="/guides/shopify-developer-vs-diy-theme">Shopify developer versus DIY theme comparison</Link>.
       </p>
       <ArticleCallout>
-        The best theme is the one that makes your actual game easier to understand
-        and your team faster to operate. A beautiful demo in the wrong category is
-        still the wrong starting point.
+        Try the theme with your own game before choosing it. Check that customers can understand the editions and your team can update the pages.
       </ArticleCallout>
     </SeoArticlePage>
   );

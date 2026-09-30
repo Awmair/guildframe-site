@@ -63,7 +63,7 @@ export function pageMetadata({
     title,
     description,
     keywords,
-    authors: [{ name: "Guildframe Editorial Team", url: "/authors/guildframe" }],
+    authors: [{ name: "Guildframe", url: "/authors/guildframe" }],
     creator: "Guildframe",
     publisher: "Guildframe",
     alternates: { canonical: path },
@@ -74,7 +74,7 @@ export function pageMetadata({
             type: "article",
             publishedTime,
             modifiedTime: modifiedTime ?? publishedTime,
-            authors: ["Guildframe Editorial Team"],
+            authors: ["Guildframe"],
           }
         : { ...sharedOpenGraph, type: "website" },
     twitter: {
