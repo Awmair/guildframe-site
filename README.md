@@ -1,85 +1,32 @@
 # Guildframe website
 
-Last reviewed: 2026-08-13
+Reviewed: 2026-09-30
 
-Static Next.js site for Guildframe: Shopify design and development for tabletop
-creators, plus a build guide for creators who build the store themselves.
+Static Next.js website for direct-customer Kickstarter and Gamefound campaign design.
 
-31 public routes covering the offers, 13 guides, 6 references and the trust
-pages.
+Campaign design is $975 USD. A free opening section mockup is requested through the existing Formspree endpoint. Public contact is umair@guildframe.com. Formspree controls the recipient inbox; source code does not configure or verify that external setting.
 
-## Offers
+Playful Precision identity: cream, coral, petrol and mint; Manrope typography; an ImageGen logo and six ImageGen game visuals. Images are original illustrative concepts, not client campaigns. See docs/CAMPAIGN_REBRAND.md for the visual brief, asset provenance and content map.
 
-| Offer | Price |
-| --- | --- |
-| Done for you Shopify store, up to 50 product SKUs | $2,500 |
-| Guildframe Build Guide, checkout not open yet | $79 one time |
-| Care Plan, after a Guildframe build | $99 per month |
-| Free tailored store preview within 72 hours | Free |
+46 public routes: 7 new campaign service/category pages, 8 new launch articles, and the 31 existing routes retained with revised branding and commercial links. Former paid-guide and Shopify build promotions have been retired. Existing Shopify guidance remains after-funding editorial material.
 
-Guildframe does not sell a Shopify theme.
+## Development and validation
 
-## Local review
-
-```bash
-npm install
+```sh
+npm ci
 npm run dev
-```
-
-Open `http://localhost:3000`. If a CSS change appears to do nothing, stop the
-server, `rm -rf .next`, and start it again.
-
-## Validation
-
-```bash
 npm run lint
 npm run typecheck
 npm test
-npm run preflight
+NEXT_PUBLIC_SITE_URL=https://guildframe.com npm run preflight:strict
 ```
 
-- `npm test` builds the real static output and checks metadata, structured data,
-  dates, internal links, the sitemap, `llms.txt`, robots, accessibility and
-  shipped assets.
-- `npm run build:pages:local` writes the Cloudflare Pages output to `out/`.
-- `npm run preflight` checks the settings in the current local shell.
-- `npm run preflight:strict` blocks a production-equivalent build when required
-  local settings are missing. A local warning does not describe the current
-  Cloudflare Pages configuration.
+`npm test` verifies the actual static export. `npm run build:pages` is the existing production build, exported to out/ and deployed by Cloudflare Pages from GitHub main. No GitHub Actions deployment is used.
 
-## Deployment
+## Copy and claims
 
-Cloudflare Pages builds directly from `main`. No GitHub Actions workflow is used
-or wanted.
+Use direct, natural language. Do not publish invented clients, reviews, funding results or turnaround guarantees. Pricing, scope, schema, metadata and llms.txt must agree. Keep a unique canonical, title and description for each indexable page. Cite primary documentation for platform facts. Generated sample imagery must remain labelled as concepts.
 
-**[RELEASE.md](./RELEASE.md) is the runbook**: validate, review, stage, commit
-and push, plus what to check once the site is live.
+## Motion and access
 
-Dashboard settings are in
-[CLOUDFLARE_PAGES_DEPLOY.md](./CLOUDFLARE_PAGES_DEPLOY.md).
-
-## Documentation
-
-| Document | What it holds |
-| --- | --- |
-| [Release audit](./docs/RELEASE_AUDIT.md) | The current state of the site, technical and editorial |
-| [Open actions](./docs/OPEN_ACTIONS.md) | What still needs a decision, an account or real data |
-| [Page inventory](./docs/PAGE_INVENTORY.csv) | Every route with its intent, reader, schema and link counts |
-| [Search intent map](./docs/SEARCH_INTENT_MAP.md) | Which page owns which query family. Authority when adding a page |
-| [Keyword and SERP research](./docs/KEYWORD_AND_SERP_RESEARCH.md) | Query families, competition and gaps |
-| [Build guide spec](./docs/BUILD_GUIDE_SPEC.md) | The outline for the $79 guide, which is not written yet |
-| [Architecture](./docs/ARCHITECTURE.md) | How the site is built and what to update when adding a page |
-| [Crawler and AI policy](./docs/CRAWLER_AND_AI_POLICY.md) | Robots rules and why each exists |
-| [AI search baseline](./docs/AI_SEARCH_BASELINE.md) | Discovery setup and the fixed answer engine test set |
-| [AI visibility measurement](./docs/AI_VISIBILITY_MEASUREMENT.md) | What to measure monthly, and how |
-| [Entity and outreach brief](./docs/ENTITY_AND_OUTREACH_BRIEF.md) | Canonical facts and linkable assets |
-
-## Conventions
-
-- Dates live in `app/content-dates.ts` and nowhere else. The visible date, the
-  schema date and the sitemap date must always agree, and a test enforces it.
-- Prices live in `app/site-config.ts` and `app/product-data.ts`.
-- Rendered copy uses no em dash, no en dash and no visible hyphenated compound.
-  A test enforces it.
-- Adding a page means updating the sitemap, content dates, `llms.txt`, the
-  intent map and the test page list.
+Motion uses transform and opacity with one-time scroll reveals and brief hover/press feedback. Content is readable before JavaScript. Reduced motion disables movement. Glass panels have reduced-transparency and increased-contrast fallbacks. Mobile inputs use 16px text to prevent focus zoom.

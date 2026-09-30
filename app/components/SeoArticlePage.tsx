@@ -93,11 +93,11 @@ export function SeoArticlePage({
               citation: sources.map((source) => ({
                 "@type": "CreativeWork",
                 name: source.label,
-                url: source.href,
+                url: source.href.startsWith("/") ? absoluteUrl(source.href) : source.href,
                 publisher: { "@type": "Organization", name: source.publisher },
               })),
               about: [
-                "Shopify",
+                "Tabletop campaign design",
                 "Tabletop games",
                 "Crowdfunding",
                 category,
@@ -179,11 +179,11 @@ export function SeoArticlePage({
             </nav>
             <Link
               href={siteConfig.purchasePath}
-              data-analytics-event="guide_interest"
-              data-analytics-label="Get the build guide"
+              data-analytics-event="service_interest"
+              data-analytics-label="Campaign design"
               data-analytics-location="article sidebar"
             >
-              Get the Guildframe Build Guide ↗
+              Campaign design · $975 ↗
             </Link>
           </aside>
 
@@ -193,10 +193,11 @@ export function SeoArticlePage({
             </div>
             {children}
             <section className="article-sources" aria-labelledby="article-sources-title">
-              <h2 id="article-sources-title">Sources reviewed</h2>
+              <h2 id="article-sources-title">Sources and references</h2>
               <p>
-                Platform features and policies can change. These primary sources
-                were reviewed on <time dateTime={updated}>{formatContentDate(updated)}</time>.
+                Platform features and policies can change. Use these primary sources
+                to check the current documentation. Design recommendations are
+                Guildframe’s editorial guidance.
               </p>
               <ul>
                 {sources.map((source) => (
@@ -219,30 +220,30 @@ export function SeoArticlePage({
               ))}
             </section>
             <div className="article-cta">
-              <h2>Choose how your Shopify store gets built.</h2>
+              <h2>Give your game a clear introduction.</h2>
               <p>
-                Hire Guildframe to design and develop your complete Shopify
-                storefront for $2,500, including up to 50 product SKUs, or build
-                it yourself with the $79 Guildframe Build Guide.
+                Kickstarter and Gamefound campaign design for tabletop creators.
+                Page structure, copy and campaign graphics for $975 USD.
+                Start with a free opening section mockup.
               </p>
               <div className="article-cta-actions">
                 <Link
                   className="seo-button seo-button-light"
                   href={siteConfig.purchasePath}
-                  data-analytics-event="guide_interest"
-                  data-analytics-label="Get the build guide"
+                  data-analytics-event="service_interest"
+                  data-analytics-label="Campaign design"
                   data-analytics-location="article CTA"
                 >
-                  Get the build guide ↗
+                  See campaign design ↗
                 </Link>
                 <Link
                   className="seo-button seo-button-outline"
                   href="#start-project"
                   data-analytics-event="service_interest"
-                  data-analytics-label="Get my free preview"
+                  data-analytics-label="Get my free mockup"
                   data-analytics-location="article CTA"
                 >
-                  Get my free preview ↗
+                  Get my free mockup ↗
                 </Link>
               </div>
             </div>

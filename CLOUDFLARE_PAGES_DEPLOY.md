@@ -11,8 +11,6 @@ GitHub Actions is not used for deployment.
 | Variable | Production state | Purpose |
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Configured as `https://guildframe.com` | Canonicals, Open Graph URLs, sitemap entries and schema identifiers |
-| `NEXT_PUBLIC_CHECKOUT_URL` | Inactive while checkout is closed | Final HTTPS payment or product URL |
-| `NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED` | Effective value `false` | Keeps `/buy` in its honest checkout-pending state |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Configured | Loads the production GA4 stream |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional | HTML verification token; unnecessary when Search Console uses DNS verification |
 
@@ -39,8 +37,7 @@ static site and publishes `out/`. Other branches may create preview deployments
 without changing production.
 
 The canonical origin must remain `https://guildframe.com` in both Production
-and Preview build settings. Keep the Build Guide checkout disabled in both
-environments until the guide, package and final purchase URL are ready.
+and Preview build settings. The campaign service begins through an enquiry. Retired guide checkout variables are unused.
 
 ## Local release verification
 

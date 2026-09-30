@@ -5,7 +5,7 @@ import { pageMetadata } from "../site-config";
 export const metadata = pageMetadata({
   title: "Shopify Store and Theme Setup for TTRPG Publishers",
   description:
-    "Build a TTRPG Shopify store for books, adventures, supplements, dice and accessories. Full build for $2,500, or build it yourself with the $79 guide.",
+    "Plan a TTRPG Shopify store for books, PDFs, adventures and supplements. Organise formats, compatibility and product information after your campaign.",
   path: "/shopify-theme-for-ttrpg",
   keywords: ["TTRPG Shopify theme", "Shopify theme for RPG publishers", "tabletop RPG ecommerce"],
 });

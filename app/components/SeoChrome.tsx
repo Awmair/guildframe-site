@@ -3,130 +3,21 @@ import { ProjectInquiryForm } from "./ProjectInquiryForm";
 import { siteConfig } from "../site-config";
 
 export function SeoHeader() {
-  return (
-    <header className="seo-header">
-      <Link className="seo-brand" href="/" aria-label="Guildframe home">
-        <img src="/brand/guildframe-logo.svg" alt="Guildframe" width="1000" height="220" />
-      </Link>
-      <nav aria-label="Primary navigation">
-        <Link href="/done-for-you-shopify-store">Services</Link>
-        <Link href="/buy">Build guide</Link>
-        <Link href="/shopify-theme-for-board-games">Board games</Link>
-        <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
-        <Link href="/guides">Guides</Link>
-      </nav>
-      <Link
-        className="seo-header-cta"
-        href="#start-project"
-        data-analytics-event="service_interest"
-        data-analytics-label="Get my free preview"
-        data-analytics-location="SEO header"
-      >
-        Get my free preview <span aria-hidden="true">↗</span>
-      </Link>
-    </header>
-  );
+  return <header className="gf-header glass">
+    <Link className="gf-brand" href="/" aria-label="Guildframe home"><img src="/brand/guildframe-campaign-logo.png" alt="Guildframe" width="1000" height="202" /></Link>
+    <nav className="gf-desktop-nav" aria-label="Primary navigation"><Link href="/campaign-design">Campaign design</Link><Link href="/#games">Your game</Link><Link href="/guides">Launch guides</Link></nav>
+    <Link className="gf-button gf-button-small" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Free campaign mockup" data-analytics-location="header">Free mockup <span aria-hidden="true">↗</span></Link>
+    <details className="gf-mobile-menu"><summary aria-label="Open navigation">Menu</summary><nav className="glass" aria-label="Mobile navigation"><Link href="/campaign-design">Campaign design</Link><Link href="/#games">Your game</Link><Link href="/guides">Launch guides</Link><Link href="/about">About</Link></nav></details>
+  </header>;
 }
-
 export function SeoFooter() {
-  return (
-    <>
-      <div className="seo-footer-cta">
-        <div>
-          <h2>Your world deserves a storefront built for it.</h2>
-        </div>
-        <div className="seo-footer-actions">
-          <Link
-            className="seo-button seo-button-light"
-            href="#start-project"
-            data-analytics-event="service_interest"
-            data-analytics-label="Get my free preview"
-            data-analytics-location="SEO footer"
-          >
-            Get my free preview <span aria-hidden="true">↗</span>
-          </Link>
-          <Link
-            className="seo-button seo-button-outline"
-            href={siteConfig.purchasePath}
-            data-analytics-event="guide_interest"
-            data-analytics-label="Get the build guide"
-            data-analytics-location="SEO footer"
-          >
-            Get the build guide <span aria-hidden="true">↗</span>
-          </Link>
-        </div>
-      </div>
-      <ProjectInquiryForm source="sitewide page footer" />
-      <footer className="seo-footer">
-        <div className="seo-footer-grid">
-          <div className="seo-footer-brand">
-            <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="1000" height="220" />
-            <p>
-              Shopify stores built for tabletop game creators, plus a build
-              guide for creators who want to build it themselves.
-            </p>
-          </div>
-          <nav aria-label="Solutions">
-            <strong>Solutions</strong>
-            <Link href="/shopify-theme-for-board-games">Board game stores</Link>
-            <Link href="/shopify-theme-for-ttrpg">TTRPG stores</Link>
-            <Link href="/shopify-theme-for-miniatures">Miniature stores</Link>
-            <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
-            <Link href="/done-for-you-shopify-store">Done for you Shopify store</Link>
-          </nav>
-          <nav aria-label="Resources">
-            <strong>Resources</strong>
-            <Link href="/guides">Guides</Link>
-            <Link href="/guides/build-a-tabletop-shopify-store-with-ai">
-              Build with AI
-            </Link>
-            <Link href="/guides/move-from-kickstarter-to-shopify">
-              Migration guide
-            </Link>
-            <Link href="/guides/best-shopify-themes-for-board-games">
-              Theme comparison
-            </Link>
-            <Link href="/guides/how-much-does-a-board-game-website-cost">
-              Store cost guide
-            </Link>
-            <Link href="/guides/selling-miniatures-internationally-vat-ioss">
-              International selling guide
-            </Link>
-            <Link href="/resources">Checklists and references</Link>
-            <Link href="/resources/kickstarter-tabletop-games-benchmark">
-              Kickstarter tabletop benchmark
-            </Link>
-            <Link href="/about">About Guildframe</Link>
-            <Link href="/editorial-policy">Editorial policy</Link>
-            <Link href="/#pricing">Pricing</Link>
-          </nav>
-        </div>
-        <div className="seo-footer-bottom">
-          <span>Guildframe. Your world, ready for customers. Shopify Partner.</span>
-          <div>
-            <a href={siteConfig.contactInquiryUrl}>Email the developer</a>
-            <Link href="/">Back to homepage ↑</Link>
-          </div>
-        </div>
-      </footer>
-    </>
-  );
+  return <><ProjectInquiryForm source="sitewide campaign enquiry" /><footer className="gf-footer">
+    <div className="gf-footer-top"><div><Link className="gf-brand" href="/"><img src="/brand/guildframe-campaign-logo.png" alt="Guildframe" width="1000" height="202" /></Link><p>Good games deserve a great introduction.<br />Campaign design for the whole tabletop.</p><a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a></div>
+    <nav aria-label="Campaign services"><strong>Make your launch count</strong><Link href="/campaign-design">Campaign design · $975</Link><Link href="/board-game-kickstarter-campaign-design">Board games</Link><Link href="/card-game-kickstarter-campaign-design">Card games &amp; TCGs</Link><Link href="/ttrpg-kickstarter-campaign-design">Tabletop RPGs</Link><Link href="/miniatures-kickstarter-campaign-design">Miniatures &amp; terrain</Link><Link href="/tabletop-accessories-campaign-design">Dice &amp; accessories</Link><Link href="/gamefound-campaign-design">Gamefound design</Link></nav>
+    <nav aria-label="Guildframe resources"><strong>A little help before launch</strong><Link href="/guides">Launch guides</Link><Link href="/about">About Guildframe</Link><Link href="/editorial-policy">Editorial policy</Link><Link href="/resources">Research &amp; references</Link><Link href="/kickstarter-to-shopify">After your campaign</Link><a href="#start-project">Request a free mockup</a></nav></div>
+    <div className="gf-footer-bottom"><span>© 2026 Guildframe. Made for people who make games.</span><span>Independent design studio.</span></div>
+  </footer></>;
 }
-
-export function Breadcrumbs({
-  items,
-}: {
-  items: { label: string; href?: string }[];
-}) {
-  return (
-    <nav className="seo-breadcrumbs" aria-label="Breadcrumb">
-      <ol>
-        {items.map((item, index) => (
-          <li key={`${item.label}-${index}`}>
-            {item.href ? <Link href={item.href}>{item.label}</Link> : item.label}
-          </li>
-        ))}
-      </ol>
-    </nav>
-  );
+export function Breadcrumbs({items}:{items:{label:string;href?:string}[]}) {
+ return <nav className="seo-breadcrumbs" aria-label="Breadcrumb"><ol>{items.map((item,index)=><li key={`${item.label}-${index}`}>{item.href?<Link href={item.href}>{item.label}</Link>:item.label}</li>)}</ol></nav>;
 }

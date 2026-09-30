@@ -1,17 +1,18 @@
 import Link from "next/link";
+import {launchGuides} from "../launch-guides";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
 
 export const metadata = pageMetadata({
-  title: "Tabletop Ecommerce and Kickstarter Guides",
+  title: "Kickstarter Campaign Design and Launch Guides",
   description:
-    "Practical guides for moving from crowdfunding to Shopify, choosing a board game theme and planning post campaign commerce.",
+    "Practical launch guides for tabletop Kickstarter and Gamefound campaigns. Plan design costs, artwork, reward graphics and a campaign page ready for backers.",
   path: "/guides",
   keywords: ["tabletop ecommerce guides", "Kickstarter to Shopify guide", "board game ecommerce"],
 });
 
-const guides = [
+const afterFundingGuides = [
   {
     title: "Build a Tabletop Shopify Store With AI",
     copy: "What AI coding tools do well, where they break, and the catalog decisions no model can make for you.",
@@ -92,6 +93,9 @@ const guides = [
   },
 ];
 
+const campaignGuides = launchGuides.map(g=>({title:g.title,copy:g.description,href:`/guides/${g.slug}`,tag:g.tag}));
+const guides=[...campaignGuides,...afterFundingGuides];
+
 export default function GuidesPage() {
   return (
     <>
@@ -103,7 +107,7 @@ export default function GuidesPage() {
             "@id": absoluteUrl("/guides"),
             name: "Guildframe Guides",
             url: absoluteUrl("/guides"),
-            description: "Tabletop ecommerce and post-crowdfunding guides.",
+            description: "Campaign design, launch preparation and post-crowdfunding guides.",
             isPartOf: { "@id": absoluteUrl("/#website") },
             mainEntity: { "@id": absoluteUrl("/guides#guide-list") },
             inLanguage: "en",
@@ -136,14 +140,15 @@ export default function GuidesPage() {
       <main className="guides-main" id="guides-content">
         <section className="guides-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
-          <h1>Build what comes <em>after funding.</em></h1>
+          <h1>Make your next <em>launch clearer.</em></h1>
           <p>
-            Clear, practical guidance for tabletop creators choosing a Shopify
-            theme, planning post campaign commerce and building a permanent store.
+            Practical answers for your Kickstarter or Gamefound launch.
+            Design budgets, asset handoffs, rewards and page reviews,
+            with after funding references when you need them.
           </p>
         </section>
         <section className="guides-grid">
-          {guides.map((guide, index) => (
+          {campaignGuides.map((guide, index) => (
             <Link href={guide.href} key={guide.title}>
               <div>
                 <span>{guide.tag}</span>
@@ -155,14 +160,15 @@ export default function GuidesPage() {
             </Link>
           ))}
         </section>
+        <section className="gf-archive-heading"><h2>After funding</h2><p>Existing references for building a store and planning ongoing sales.</p></section><section className="guides-grid">{afterFundingGuides.map(guide=><Link href={guide.href} key={guide.href}><div><span>{guide.tag}</span></div><h2>{guide.title}</h2><p>{guide.copy}</p><strong>Read the guide ↗</strong></Link>)}</section>
         <section className="guides-solutions">
           <div>
             <h2>Built for your part of the tabletop world.</h2>
           </div>
           <nav aria-label="Guildframe solutions">
-            <Link href="/shopify-theme-for-board-games">Board games ↗</Link>
-            <Link href="/shopify-theme-for-ttrpg">TTRPGs ↗</Link>
-            <Link href="/shopify-theme-for-miniatures">Miniatures ↗</Link>
+            <Link href="/board-game-kickstarter-campaign-design">Board games ↗</Link>
+            <Link href="/ttrpg-kickstarter-campaign-design">TTRPGs ↗</Link>
+            <Link href="/miniatures-kickstarter-campaign-design">Miniatures ↗</Link>
             <Link href="/kickstarter-to-shopify">Kickstarter to Shopify ↗</Link>
             <Link href="/resources">Checklists and references ↗</Link>
           </nav>

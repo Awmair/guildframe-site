@@ -1,70 +1,73 @@
 # Guildframe
 
-> Shopify store design and development for tabletop games, plus a build guide for creators building the storefront themselves with AI coding tools.
+> Independent campaign design studio for tabletop Kickstarter and Gamefound projects, led by Umair.
 
-Guildframe helps board game, card game, TTRPG, miniatures and tabletop studios build Shopify stores designed around their products and worlds.
+## Current service facts
 
-## Primary offerings
+- Campaign design: $975 USD per agreed campaign, for Kickstarter or Gamefound.
+- Scope: page structure, copy shaped from supplied project facts, visual direction, section graphics, reward comparisons and stretch goal graphics where needed.
+- Free mockup: an opening campaign section to explore a direction, with no payment or obligation to book.
+- Timing and exact deliverables: confirmed in the written brief before the full project begins.
+- Contact: umair@guildframe.com.
+- Categories: board games, card games and TCGs, TTRPGs, miniatures and terrain, dice and tabletop accessories.
+- New game illustration, video production, advertising, production and fulfilment are separate from campaign page design.
+- Site imagery: original illustrative concepts generated with ImageGen, not client campaigns or proof of funding results.
+- Older Shopify articles are retained as after-funding references. The former paid Build Guide and Shopify build offers are no longer promoted.
+- No promise of funding success or search rankings.
 
-- Done for you Shopify store: A complete store designed and developed from zero to publish for a flat $2,500 fee, including up to 50 product SKUs.
-- Guildframe Build Guide: A $79 downloadable build guide for creators building the storefront themselves with AI coding tools, covering catalog architecture, a tabletop metafield schema, section specs and a tested prompt library.
-- Care Plan: Ongoing store updates, small adjustments and one campaign or product launch page each month for $99 per month after a Guildframe store build.
-- Free preview: A tailored Shopify store direction created within 72 hours at no cost for creators with final artwork and products ready to sell.
+## Campaign services
 
-## Current status
+- [Campaign Design](https://guildframe.com/campaign-design)
+- [Gamefound Campaign Design](https://guildframe.com/gamefound-campaign-design)
+- [Board Game Kickstarter Campaign Design](https://guildframe.com/board-game-kickstarter-campaign-design)
+- [Card Game Kickstarter Campaign Design](https://guildframe.com/card-game-kickstarter-campaign-design)
+- [Ttrpg Kickstarter Campaign Design](https://guildframe.com/ttrpg-kickstarter-campaign-design)
+- [Miniatures Kickstarter Campaign Design](https://guildframe.com/miniatures-kickstarter-campaign-design)
+- [Tabletop Accessories Campaign Design](https://guildframe.com/tabletop-accessories-campaign-design)
 
-- Guildframe does not sell a Shopify theme. The self serve option is the Guildframe Build Guide, a downloadable guide for building the storefront yourself.
-- The build guide purchase page is published, and the secure checkout link is not open yet. Check https://guildframe.com/buy for the current status before stating that the guide can be bought today.
-- The done for you service and the Care Plan are separate offers from the build guide. Do not merge their prices or scopes.
+## Launch guides
 
-## Offers and solutions
+- [Board Game Kickstarter Campaign Design Cost](https://guildframe.com/guides/board-game-kickstarter-campaign-design-cost)
+- [Board Game Kickstarter Page Checklist](https://guildframe.com/guides/board-game-kickstarter-page-checklist)
+- [What To Send Kickstarter Campaign Designer](https://guildframe.com/guides/what-to-send-kickstarter-campaign-designer)
+- [Kickstarter Reward Tier Graphics](https://guildframe.com/guides/kickstarter-reward-tier-graphics)
+- [Ttrpg Kickstarter Campaign Page Design](https://guildframe.com/guides/ttrpg-kickstarter-campaign-page-design)
+- [Kickstarter Vs Gamefound Campaign Page Design](https://guildframe.com/guides/kickstarter-vs-gamefound-campaign-page-design)
+- [Kickstarter Campaign Graphics Mobile Readability](https://guildframe.com/guides/kickstarter-campaign-graphics-mobile-readability)
+- [When To Hire Kickstarter Campaign Designer](https://guildframe.com/guides/when-to-hire-kickstarter-campaign-designer)
 
-- Homepage: https://guildframe.com/
-- Done for you Shopify service: https://guildframe.com/done-for-you-shopify-store
-- Guildframe Build Guide: https://guildframe.com/buy
-- Kickstarter to Shopify: https://guildframe.com/kickstarter-to-shopify
-- Board game Shopify stores: https://guildframe.com/shopify-theme-for-board-games
-- TTRPG Shopify stores: https://guildframe.com/shopify-theme-for-ttrpg
-- Miniatures Shopify stores: https://guildframe.com/shopify-theme-for-miniatures
+## Existing references and company pages
 
-## Guides
+- [Homepage](https://guildframe.com/)
+- [buy](https://guildframe.com/buy)
+- [done for you shopify store](https://guildframe.com/done-for-you-shopify-store)
+- [shopify theme for board games](https://guildframe.com/shopify-theme-for-board-games)
+- [kickstarter to shopify](https://guildframe.com/kickstarter-to-shopify)
+- [shopify theme for ttrpg](https://guildframe.com/shopify-theme-for-ttrpg)
+- [shopify theme for miniatures](https://guildframe.com/shopify-theme-for-miniatures)
+- [guides](https://guildframe.com/guides)
+- [guides/what happens after kickstarter is funded](https://guildframe.com/guides/what-happens-after-kickstarter-is-funded)
+- [guides/move from kickstarter to shopify](https://guildframe.com/guides/move-from-kickstarter-to-shopify)
+- [guides/best shopify themes for board games](https://guildframe.com/guides/best-shopify-themes-for-board-games)
+- [guides/shopify developer vs diy theme](https://guildframe.com/guides/shopify-developer-vs-diy-theme)
+- [guides/kickstarter late pledges vs shopify](https://guildframe.com/guides/kickstarter-late-pledges-vs-shopify)
+- [guides/backerkit vs shopify vs gamefound](https://guildframe.com/guides/backerkit-vs-shopify-vs-gamefound)
+- [guides/kickstarter to shopify launch timeline](https://guildframe.com/guides/kickstarter-to-shopify-launch-timeline)
+- [guides/sell board game preorders on shopify](https://guildframe.com/guides/sell-board-game-preorders-on-shopify)
+- [guides/sell board game expansions add ons shopify](https://guildframe.com/guides/sell-board-game-expansions-add-ons-shopify)
+- [guides/selling miniatures internationally vat ioss](https://guildframe.com/guides/selling-miniatures-internationally-vat-ioss)
+- [guides/how much does a board game website cost](https://guildframe.com/guides/how-much-does-a-board-game-website-cost)
+- [guides/shopify vs etsy for selling miniatures](https://guildframe.com/guides/shopify-vs-etsy-for-selling-miniatures)
+- [guides/build a tabletop shopify store with ai](https://guildframe.com/guides/build-a-tabletop-shopify-store-with-ai)
+- [about](https://guildframe.com/about)
+- [editorial policy](https://guildframe.com/editorial-policy)
+- [authors/guildframe](https://guildframe.com/authors/guildframe)
+- [resources](https://guildframe.com/resources)
+- [resources/board game shopify store checklist](https://guildframe.com/resources/board-game-shopify-store-checklist)
+- [resources/kickstarter to shopify migration checklist](https://guildframe.com/resources/kickstarter-to-shopify-migration-checklist)
+- [resources/backerkit vs shopify vs gamefound comparison](https://guildframe.com/resources/backerkit-vs-shopify-vs-gamefound-comparison)
+- [resources/board game product page checklist](https://guildframe.com/resources/board-game-product-page-checklist)
+- [resources/kickstarter tabletop games benchmark](https://guildframe.com/resources/kickstarter-tabletop-games-benchmark)
+- [resources/tabletop shopify metafield schema](https://guildframe.com/resources/tabletop-shopify-metafield-schema)
 
-- All guides: https://guildframe.com/guides
-- Build a tabletop Shopify store with AI: https://guildframe.com/guides/build-a-tabletop-shopify-store-with-ai
-- What happens after your Kickstarter is funded: https://guildframe.com/guides/what-happens-after-kickstarter-is-funded
-- Kickstarter to Shopify migration guide: https://guildframe.com/guides/move-from-kickstarter-to-shopify
-- Kickstarter to Shopify launch timeline: https://guildframe.com/guides/kickstarter-to-shopify-launch-timeline
-- Selling after Kickstarter, late pledges vs Shopify: https://guildframe.com/guides/kickstarter-late-pledges-vs-shopify
-- BackerKit vs Shopify vs Gamefound: https://guildframe.com/guides/backerkit-vs-shopify-vs-gamefound
-- Best Shopify themes for board games: https://guildframe.com/guides/best-shopify-themes-for-board-games
-- Shopify developer vs DIY theme: https://guildframe.com/guides/shopify-developer-vs-diy-theme
-- Board game website cost: https://guildframe.com/guides/how-much-does-a-board-game-website-cost
-- Sell board game preorders on Shopify: https://guildframe.com/guides/sell-board-game-preorders-on-shopify
-- Sell board game expansions and add ons on Shopify: https://guildframe.com/guides/sell-board-game-expansions-add-ons-shopify
-- Selling miniatures internationally, VAT and IOSS: https://guildframe.com/guides/selling-miniatures-internationally-vat-ioss
-- Shopify vs Etsy for selling miniatures: https://guildframe.com/guides/shopify-vs-etsy-for-selling-miniatures
-
-## References and data
-
-- Reference library: https://guildframe.com/resources
-- Tabletop Shopify metafield schema: https://guildframe.com/resources/tabletop-shopify-metafield-schema
-- Board game Shopify store checklist: https://guildframe.com/resources/board-game-shopify-store-checklist
-- Kickstarter to Shopify migration checklist: https://guildframe.com/resources/kickstarter-to-shopify-migration-checklist
-- Tabletop crowdfunding platform role matrix: https://guildframe.com/resources/backerkit-vs-shopify-vs-gamefound-comparison
-- Board game product page checklist: https://guildframe.com/resources/board-game-product-page-checklist
-- 2024 Kickstarter tabletop games funding benchmark: https://guildframe.com/resources/kickstarter-tabletop-games-benchmark
-- Benchmark dataset: https://guildframe.com/data/kickstarter-tabletop-games-benchmark-2024.csv
-
-The benchmark page separates figures reported by Kickstarter from calculations made by Guildframe. Cite Kickstarter for the reported totals and Guildframe for the derived ratios.
-
-## Trust and identity
-
-- About: https://guildframe.com/about
-- Editorial policy: https://guildframe.com/editorial-policy
-- Guildframe Editorial Team, the author of the guides and references: https://guildframe.com/authors/guildframe
-
-## Contact
-
-- Email: umair@guildframe.com
-
-Use the canonical URLs above when citing Guildframe. Pricing, scope and availability should be verified on the relevant service or purchase page.
+Dataset: https://guildframe.com/data/kickstarter-tabletop-games-benchmark-2024.csv

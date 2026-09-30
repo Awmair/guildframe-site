@@ -2,7 +2,7 @@ import Link from "next/link";
 import { JsonLd } from "./JsonLd";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
 import { absoluteUrl, siteConfig } from "../site-config";
-import { guildframeProductData } from "../product-data";
+
 
 export type LandingPageContent = {
   slug: string;
@@ -42,7 +42,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
     ],
   };
 
-  const productData = guildframeProductData(content.image);
+
 
   return (
     <>
@@ -62,10 +62,10 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
                 "@type": "ImageObject",
                 url: absoluteUrl(content.image),
               },
-              about: { "@id": absoluteUrl("/buy#product") },
+              about: { "@id": absoluteUrl("/#organization") },
               inLanguage: "en",
             },
-            productData,
+
             breadcrumbData,
             {
               "@type": "FAQPage",
@@ -98,28 +98,8 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
                 {content.title} <em>{content.highlight}</em>
               </h1>
               <p className="seo-answer">{content.answer}</p>
-              <div className="seo-actions">
-                <Link
-                  className="seo-button"
-                  href={siteConfig.purchasePath}
-                  data-analytics-event="guide_interest"
-                  data-analytics-label={`Get the build guide for ${siteConfig.price}`}
-                  data-analytics-location="solution hero"
-                >
-                  Get the build guide for {siteConfig.price} <span aria-hidden="true">↗</span>
-                </Link>
-                <Link className="seo-text-link" href="/guides/build-a-tabletop-shopify-store-with-ai">
-                  Build it yourself with AI
-                </Link>
-                <Link className="seo-text-link" href="#start-project">
-                  Get my free preview
-                </Link>
-              </div>
-              <div className="seo-proof-strip" aria-label="Guildframe highlights">
-                <span>Shopify underneath</span>
-                <span>Mobile responsive</span>
-                <span>$2,500 full build for up to 50 SKUs</span>
-              </div>
+              <div className="seo-actions"><Link className="seo-button" href="/guides/move-from-kickstarter-to-shopify">Read the migration guide ↗</Link><Link className="seo-text-link" href="/campaign-design">Planning another campaign?</Link></div>
+              <div className="seo-proof-strip"><span>After funding reference</span><span>Mobile buying paths</span><span>Clear product information</span></div>
             </div>
             <div className="seo-hero-visual">
               <img
@@ -176,15 +156,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               </article>
             ))}
           </div>
-          <div className="seo-offer-note">
-            <strong>Choose your build path</strong>
-            <p>
-              Build it yourself with the {siteConfig.price} Guildframe Build
-              Guide, or get the entire Shopify storefront designed and developed
-              for {siteConfig.servicePrice}.
-            </p>
-            <Link href="/#pricing">Compare both offers ↗</Link>
-          </div>
+          <div className="seo-offer-note"><strong>Before your next launch</strong><p>Guildframe’s current service is campaign design for Kickstarter and Gamefound, at $975 USD.</p><Link href={siteConfig.purchasePath}>See campaign design ↗</Link></div>
         </section>
 
         <section className="seo-faq-section">

@@ -6,6 +6,7 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import {contentDates} from "../../content-dates";
 
 export const metadata = pageMetadata({
   title: "Kickstarter to Shopify Launch Timeline",
@@ -14,7 +15,7 @@ export const metadata = pageMetadata({
   path: "/guides/kickstarter-to-shopify-launch-timeline",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-21",
+  modifiedTime: contentDates.kickstarterToShopifyTimeline,
   keywords: [
     "Kickstarter to Shopify timeline",
     "when to launch Shopify after Kickstarter",
@@ -36,7 +37,7 @@ const faqs = [
   {
     question: "How long does Guildframe's done for you store take?",
     answer:
-      "Timing depends on final asset readiness, catalog complexity and review speed. Guildframe confirms a delivery plan before starting the $2,500 store build for up to 50 product SKUs.",
+      "Timing depends on final asset readiness, catalog complexity and review speed. Agree a delivery plan with your developer after the brief and assets are reviewed.",
   },
 ];
 
@@ -49,7 +50,7 @@ export default function KickstarterToShopifyTimelinePage() {
       description="Know what to prepare before funding closes, what must wait for final operational facts and when the permanent store is ready to open."
       answer="A practical Kickstarter to Shopify launch timeline begins before the campaign ends with domain, catalog and asset planning. After funding, finalize products and fulfillment boundaries, build the storefront, test checkout and mobile buying, then open sales only when delivery promises and inventory rules are accurate. A focused build can take days; operational readiness determines the true launch date."
       published="2026-07-17"
-      updated="2026-07-21"
+      updated={contentDates.kickstarterToShopifyTimeline}
       readTime="8 minute read"
       faqs={faqs}
       sources={[

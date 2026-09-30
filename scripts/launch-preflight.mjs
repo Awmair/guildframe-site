@@ -5,7 +5,9 @@ const failures = [];
 const warnings = [];
 
 const requiredFiles = [
-  "public/og-guildframe-offers-v7.jpg",
+  "public/og-guildframe-campaign.jpg",
+  "public/brand/guildframe-campaign-logo.png",
+  "public/images/campaign/hero.webp",
   "public/_headers",
   "public/_redirects",
   "app/not-found.tsx",
@@ -21,10 +23,6 @@ for (const file of requiredFiles) {
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-const checkoutEnabled = process.env.NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED === "true";
-const checkoutUrl = checkoutEnabled
-  ? process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim()
-  : null;
 const analyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
 
 if (!siteUrl) failures.push("NEXT_PUBLIC_SITE_URL is not set.");
@@ -33,17 +31,6 @@ if (siteUrl && !/^https:\/\/[^/]+\/?$/i.test(siteUrl)) {
 }
 if (siteUrl && /localhost|127\.0\.0\.1/i.test(siteUrl)) {
   failures.push("NEXT_PUBLIC_SITE_URL cannot use localhost for a production build.");
-}
-
-if (!checkoutEnabled) {
-  warnings.push(
-    "Build Guide checkout is disabled. The purchase page will show the launch-pending state.",
-  );
-} else if (!checkoutUrl) {
-  failures.push("Build Guide checkout is enabled but NEXT_PUBLIC_CHECKOUT_URL is not set.");
-}
-if (checkoutUrl && !/^https:\/\//i.test(checkoutUrl)) {
-  failures.push("NEXT_PUBLIC_CHECKOUT_URL must use HTTPS.");
 }
 
 if (!analyticsId) {

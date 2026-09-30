@@ -1,6 +1,6 @@
 # Release runbook
 
-Last reviewed: 2026-08-13
+Last reviewed: 2026-09-30
 
 Use this runbook for every production release. GitHub `main` is connected
 directly to Cloudflare Pages. A successful push triggers `npm run build:pages`
@@ -8,16 +8,7 @@ and publishes `out/`; there is no GitHub Actions deployment workflow.
 
 ## Current commercial facts
 
-| Offer | Price | Availability |
-| --- | --- | --- |
-| Done for you Shopify store, up to 50 product SKUs | $2,500 | Enquiry open |
-| Guildframe Build Guide | $79 one time | Checkout not open |
-| Care Plan, after a Guildframe build | $99 per month | Enquiry open |
-| Free tailored store preview within 72 hours | Free | Enquiry open |
-
-Guildframe does not sell a Shopify theme. Theme-selection guides compare
-Shopify and third-party themes as editorial material; none is a Guildframe
-product.
+Campaign design: $975 USD per agreed Kickstarter or Gamefound project. Free opening section mockup. Contact: umair@guildframe.com. Exact deliverables and timing are confirmed in the brief. Existing after-funding articles remain editorial references.
 
 ## 1. Confirm the release scope
 

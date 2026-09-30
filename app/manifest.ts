@@ -7,11 +7,11 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Guildframe",
     short_name: "Guildframe",
     description:
-      "Shopify design and development for tabletop creators, plus a build guide for creators building the storefront themselves.",
+      "Kickstarter and Gamefound campaign design for tabletop creators.",
     start_url: "/",
     display: "standalone",
-    background_color: "#EEE8DC",
-    theme_color: "#2450DC",
+    background_color: "#FFF5E7",
+    theme_color: "#153E40",
     icons: [
       {
         src: "/favicon-192x192.png",

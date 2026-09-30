@@ -35,15 +35,16 @@ const candidates = files.filter((file) => {
   const relative = path.relative(outputRoot, file);
   const isImageDirectory = relative.startsWith(`images${path.sep}`);
   const isRootAsset = !relative.includes(path.sep);
+  const isBrandAsset = relative.startsWith(`brand${path.sep}`);
   return (
-    (isImageDirectory || isRootAsset) &&
+    (isImageDirectory || isRootAsset || isBrandAsset) &&
     assetExtensions.has(path.extname(file).toLowerCase())
   );
 });
 
 // Favicons are declared by the browser and the manifest rather than by a
 // literal path in every page, so they are never treated as removable.
-const protectedRootAssets = new Set(["favicon.svg", "favicon-192x192.png", "favicon-512x512.png"]);
+const protectedRootAssets = new Set(["favicon.png", "favicon-192x192.png", "favicon-512x512.png"]);
 
 let removedBytes = 0;
 let removedFiles = 0;

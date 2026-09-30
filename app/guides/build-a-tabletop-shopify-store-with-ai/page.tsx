@@ -333,15 +333,7 @@ export default function BuildWithAiGuidePage() {
         on a real store. The empty state and the mobile width are the two
         constraints models drop most often when they are not stated explicitly.
       </p>
-      <ArticleCallout>
-        The full prompt library, the tabletop metafield schema those prompts are
-        written against, and a worked sample catalog are in the{" "}
-        <Link href="/buy">Guildframe Build Guide</Link>. The{" "}
-        <Link href="/resources/tabletop-shopify-metafield-schema">
-          metafield schema reference
-        </Link>{" "}
-        is published here in full and free to use.
-      </ArticleCallout>
+      <ArticleCallout>The <Link href="/resources/tabletop-shopify-metafield-schema">tabletop metafield schema</Link> is published in full and free to use. Pair it with the examples in this guide.</ArticleCallout>
 
       <h2 id="when-to-stop">When to stop and hire someone</h2>
       <p>

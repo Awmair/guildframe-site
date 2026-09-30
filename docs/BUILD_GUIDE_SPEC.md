@@ -1,3 +1,5 @@
+> Historical reference from the earlier Shopify positioning. Current campaign positioning, pricing and content map are in CAMPAIGN_REBRAND.md (2026-09-30). Previous commercial offers and product plans in this document are superseded.
+
 # Guildframe Build Guide: what to write
 
 Last reviewed: 2026-08-13

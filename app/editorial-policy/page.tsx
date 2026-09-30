@@ -7,7 +7,7 @@ import { contentDates } from "../content-dates";
 export const metadata = pageMetadata({
   title: "Editorial Policy",
   description:
-    "How Guildframe researches, writes, reviews, updates and corrects its Shopify and tabletop ecommerce guidance.",
+    "How Guildframe researches, writes, reviews, updates and corrects its campaign design and tabletop launch guidance.",
   path: "/editorial-policy",
   keywords: ["Guildframe editorial policy", "tabletop ecommerce research", "Shopify guide sources"],
 });
@@ -48,8 +48,8 @@ export default function EditorialPolicyPage() {
         <section>
           <h2>Editorial purpose</h2>
           <p>
-            Guildframe publishes guidance for tabletop creators planning Shopify
-            stores, moving beyond crowdfunding and comparing post campaign tools.
+            Guildframe publishes guidance for tabletop creators preparing
+            crowdfunding campaigns and planning what comes after funding.
             Every page should help a reader make or execute a specific decision.
             We do not create pages merely to target a synonym.
           </p>
@@ -66,13 +66,11 @@ export default function EditorialPolicyPage() {
         <section>
           <h2>Commercial transparency</h2>
           <p>
-            Guildframe provides Shopify design and development for tabletop
-            brands and publishes a separate $79 build guide for creators who
-            want to build their own store. The guide&apos;s checkout is not open yet,
-            and Guildframe does not sell a Shopify theme. Pages about Shopify
-            themes, Kickstarter migration and tabletop storefronts may link to
-            the relevant offer page. Service and guide prices, Care Plan terms,
-            preview terms and scope must match the visible offers and structured data.
+            Guildframe sells Kickstarter and Gamefound campaign design for $975 USD.
+            Commercial pages and structured data must describe the same price and scope.
+            A free mockup explores an opening campaign section. The illustrative
+            game imagery is created with ImageGen and is not presented as client work.
+            We do not claim funding results or guaranteed search rankings.
           </p>
           <p>
             Comparisons explain the job each platform performs. They are not paid

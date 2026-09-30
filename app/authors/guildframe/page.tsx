@@ -35,7 +35,7 @@ export default function GuildframeAuthorPage() {
             name: "Guildframe Editorial Team",
             url: absoluteUrl("/authors/guildframe"),
             memberOf: { "@id": absoluteUrl("/#organization") },
-            description: "The Guildframe team that researches and publishes tabletop ecommerce guidance.",
+            description: "The Guildframe team that researches and publishes tabletop campaign and ecommerce guidance.",
             knowsAbout: [
               "Shopify themes",
               "Board game ecommerce",
@@ -57,14 +57,14 @@ export default function GuildframeAuthorPage() {
       <TrustPage
         label="Author"
         title="Guildframe Editorial Team"
-        description="We research the practical bridge between crowdfunding, tabletop product storytelling and a permanent Shopify storefront."
+        description="Guidance from Guildframe on tabletop campaign design, launch preparation and post campaign planning."
         updated={contentDates.authorGuildframe}
       >
         <section>
           <h2>Editorial focus</h2>
           <p>
             The Guildframe Editorial Team writes and reviews content about board
-            game ecommerce, Shopify theme selection, Kickstarter migration,
+            game campaign design, launch preparation, Kickstarter migration,
             pledge manager boundaries and post campaign selling systems.
           </p>
           <p>
@@ -74,8 +74,7 @@ export default function GuildframeAuthorPage() {
             long form world building.
           </p>
           <p>
-            Guildframe sells store design and development, a separate build guide
-            and post build care. When the team compares storefront foundations,
+            Guildframe provides campaign page design for $975 USD. When the team compares storefront foundations,
             it evaluates Shopify and third party options against documented tabletop
             store needs.
           </p>

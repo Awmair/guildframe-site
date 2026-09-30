@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl } from "./site-config";
 import { contentDates } from "./content-dates";
+import {campaignPages} from "./campaign-pages";
+import {campaignDate} from "./campaign-content";
+import {launchGuides,launchGuideDate} from "./launch-guides";
 
 export const dynamic = "force-static";
 
@@ -39,7 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/tabletop-shopify-metafield-schema", modified: contentDates.metafieldSchema },
   ];
 
-  return routes.map((route) => ({
+  const allRoutes=[...routes,...campaignPages.map(p=>({path:`/${p.slug}`,modified:campaignDate})),...launchGuides.map(g=>({path:`/guides/${g.slug}`,modified:launchGuideDate}))];
+  return allRoutes.map((route) => ({
     url: absoluteUrl(route.path),
     lastModified: new Date(`${route.modified}T00:00:00.000Z`),
   }));

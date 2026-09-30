@@ -4,12 +4,8 @@ export const siteConfig = {
   name: "Guildframe",
   contactEmail: "umair@guildframe.com",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  purchasePath: "/buy",
-  servicePath: "/done-for-you-shopify-store",
-  checkoutUrl:
-    process.env.NEXT_PUBLIC_GUIDE_CHECKOUT_ENABLED === "true"
-      ? process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim() || null
-      : null,
+  purchasePath: "/campaign-design",
+  servicePath: "/campaign-design",
   serviceInquiryUrl:
     process.env.NEXT_PUBLIC_SERVICE_INQUIRY_URL?.trim() ||
     "/#start-project",
@@ -21,12 +17,11 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID?.trim() || "xp0rrg52qu",
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
-  socialImage: "/og-guildframe-offers-v7.jpg",
-  price: "$79",
-  servicePrice: "$2,500",
-  guideName: "Guildframe Build Guide",
+  socialImage: "/og-guildframe-campaign.jpg",
+  price: "$975",
+  campaignPrice: "$975",
   description:
-    "Shopify design and development for tabletop creators, plus a build guide for creators who want to build the store themselves using an AI tool.",
+    "Kickstarter and Gamefound campaign design for board games, card games, TTRPGs, miniatures and tabletop accessories. Campaign design costs $975.",
 };
 
 export const absoluteUrl = (path = "/") =>
@@ -59,7 +54,7 @@ export function pageMetadata({
         url: siteConfig.socialImage,
         width: 1200,
         height: 630,
-        alt: "Guildframe Shopify storefront design and Build Guide for tabletop game creators",
+        alt: "Guildframe campaign design for games, RPGs, miniatures and accessories",
       },
     ],
   };

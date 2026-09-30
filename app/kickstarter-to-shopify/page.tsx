@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
-import { guildframeServiceData } from "../product-data";
+
 
 export const metadata = pageMetadata({
   title: "Kickstarter to Shopify for Funded Tabletop Games",
@@ -36,14 +36,12 @@ const faqs = [
       "Shopify can accept preorders or new retail orders, but those orders are not campaign pledges. Keep original backer obligations inside the campaign or pledge manager workflow and label Shopify delivery terms clearly.",
   },
   {
-    question: "How long does Guildframe take to build the store?",
-    answer:
-      "A complete store typically takes 2 to 3 weeks from preview approval to a build that is ready to publish. The delivery plan is confirmed before work begins.",
+    question: "How long should store preparation take?",
+    answer: "Timing depends on your catalogue, assets, operations and review process. Agree a schedule after those requirements are clear.",
   },
   {
-    question: "Who qualifies for the free 72 hour preview?",
-    answer:
-      "The preview is for funded creators with final artwork and products ready to sell. Send the campaign, product structure and representative assets so Guildframe can create a useful store direction.",
+    question: "What does Guildframe offer for a new campaign?",
+    answer: "Kickstarter and Gamefound campaign page design costs $975 USD. Request a free opening section mockup to explore a direction before booking.",
   },
 ];
 
@@ -83,12 +81,11 @@ export default function KickstarterToShopifyPage() {
               about: { "@id": absoluteUrl("/done-for-you-shopify-store#service") },
               primaryImageOfPage: {
                 "@type": "ImageObject",
-                url: absoluteUrl("/images/post-campaign-tabletop-store-v1.webp"),
+                url: absoluteUrl("/images/campaign/hero.webp"),
               },
               isPartOf: { "@id": absoluteUrl("/#website") },
               inLanguage: "en",
             },
-            guildframeServiceData("/images/post-campaign-tabletop-store-v1.webp"),
             {
               "@type": "FAQPage",
               mainEntity: faqs.map((faq) => ({
@@ -124,24 +121,24 @@ export default function KickstarterToShopifyPage() {
                 <em>Now build what comes next.</em>
               </h1>
               <p>
-                Guildframe turns a funded tabletop campaign into a permanent
+                After a funded tabletop campaign, plan a permanent
                 Shopify store for late demand, preorders, retail sales and future releases.
               </p>
               <p>
-                We plan the handoff from Kickstarter, BackerKit or Gamefound,
-                then build the catalog, customer journey and international selling setup.
+                Review the handoff from Kickstarter, BackerKit or Gamefound,
+                then plan the catalogue, buying path and international selling setup.
               </p>
               <div className="campaign-service-actions">
-                <a className="service-primary-button" href="#start-project">
-                  Get my free preview <span aria-hidden="true">↗</span>
-                </a>
+                <Link className="service-primary-button" href="/guides/move-from-kickstarter-to-shopify">
+                  Read the migration guide <span aria-hidden="true">↗</span>
+                </Link>
                 <Link href="/guides/kickstarter-to-shopify-launch-timeline">View the launch timeline</Link>
               </div>
-              <small>Free previews are for creators with final artwork and products ready to sell.</small>
+              <small>After funding reference. Review your assets and operating requirements first.</small>
             </div>
             <div className="campaign-service-hero-image">
               <img
-                src="/images/post-campaign-tabletop-store-v1.webp"
+                src="/images/campaign/hero.webp"
                 alt="A funded board game campaign becoming a permanent online store with organized products and shipping"
                 width="1828"
                 height="860"
@@ -230,21 +227,7 @@ export default function KickstarterToShopifyPage() {
           </ul>
         </section>
 
-        <section className="campaign-offer-section">
-          <div>
-            <h2>See the store direction before committing.</h2>
-            <p>
-              Send the campaign, final artwork and representative products.
-              Guildframe creates a tailored preview within 72 hours at no cost.
-            </p>
-          </div>
-          <div>
-            <strong>$2,500</strong>
-            <span>Flat fee for up to 50 product SKUs</span>
-            <p>A complete store typically takes 2 to 3 weeks after preview approval.</p>
-            <a className="service-primary-button" href="#start-project">Get my free preview <span aria-hidden="true">↗</span></a>
-          </div>
-        </section>
+        <section className="campaign-offer-section"><div><h2>Preparing another campaign?</h2><p>Guildframe’s current service is Kickstarter and Gamefound campaign design. Send your artwork and launch plans to explore a free opening mockup.</p></div><div><strong>$975</strong><span>USD for the agreed campaign design</span><a className="service-primary-button" href="#start-project">Get my free mockup ↗</a></div></section>
 
         <section className="campaign-faq-section" id="faq">
           <div className="campaign-section-heading"><h2>Questions after funding.</h2></div>

@@ -5,7 +5,7 @@ import { pageMetadata } from "../site-config";
 export const metadata = pageMetadata({
   title: "Shopify Store and Theme Setup for Miniatures",
   description:
-    "Build a miniatures Shopify store for detailed product media, variants, ranges and collections. Full build for $2,500, or build it yourself for $79.",
+    "Plan a miniatures Shopify store for physical models, STL files and terrain. Make scale, variants and delivery information clear after crowdfunding.",
   path: "/shopify-theme-for-miniatures",
   keywords: ["Shopify theme for miniatures", "miniature store Shopify theme", "terrain ecommerce website"],
 });

@@ -6,6 +6,7 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import {contentDates} from "../../content-dates";
 
 export const metadata = pageMetadata({
   title: "Shopify Developer vs DIY Theme for Tabletop Brands",
@@ -14,7 +15,7 @@ export const metadata = pageMetadata({
   path: "/guides/shopify-developer-vs-diy-theme",
   kind: "article",
   publishedTime: "2026-07-21",
-  modifiedTime: "2026-08-09",
+  modifiedTime: contentDates.shopifyDeveloperVsDiyTheme,
   keywords: [
     "Shopify developer vs theme",
     "hire Shopify developer or buy theme",
@@ -56,7 +57,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       description="Both routes can produce a strong store. The right choice depends on whether you want to assemble it yourself or hand the complete build to a specialist."
       answer="Choose a DIY Shopify theme when your catalog is straightforward, your assets are ready and you can dedicate time to store structure, content entry and testing. Hire a Shopify developer when you want the storefront planned, designed, built and polished for you, especially when your tabletop catalog includes several editions, expansions, bundles or a firm launch date."
       published="2026-07-21"
-      updated="2026-08-09"
+      updated={contentDates.shopifyDeveloperVsDiyTheme}
       readTime="8 minute read"
       faqs={faqs}
       sources={[
@@ -147,14 +148,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         <li>Your launch date gives you enough time to build and test carefully.</li>
         <li>You want to minimize the upfront cash cost.</li>
       </ul>
-      <p>
-        Guildframe&apos;s DIY option is the $79 <Link href="/buy">Guildframe Build Guide</Link>,
-        which covers catalog architecture, a tabletop metafield schema, section
-        specs and a prompt library for AI coding tools. Compare theme
-        foundations in the <Link href="/guides/best-shopify-themes-for-board-games">best Shopify themes for board games guide</Link>,
-        and see what AI tools can and cannot do in the{" "}
-        <Link href="/guides/build-a-tabletop-shopify-store-with-ai">AI build guide</Link>.
-      </p>
+      <p>Use the free <Link href="/resources/board-game-shopify-store-checklist">store checklist</Link> to organise your catalogue and compare the build responsibilities before choosing a route.</p>
 
       <h2 id="developer">Hire a Shopify developer when you want the result</h2>
       <p>
@@ -173,16 +167,8 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         <li>You have a firm launch date and limited internal time.</li>
         <li>You want mobile, navigation, product and checkout flows tested before handoff.</li>
       </ul>
-      <p>
-        Shopify recommends defining requirements, budget, timing and expected
-        outcomes before contacting a Partner. Guildframe&apos;s
-        <Link href="/done-for-you-shopify-store"> Shopify design and development service</Link>
-        covers a complete storefront with up to 50 product SKUs for $2,500.
-      </p>
-      <ArticleCallout>
-        Guildframe prepares an initial store direction within 72 hours at no cost.
-        You decide whether to continue after seeing the preview.
-      </ArticleCallout>
+      <p>Shopify recommends defining requirements, budget, timing and expected outcomes before contacting a Partner. Ask for a written quote that matches your catalogue and operational needs.</p>
+      <ArticleCallout>Agree the project scope, review process and timing with the developer before committing.</ArticleCallout>
 
       <h2 id="cost">Compare the finished cost, not only the starting price</h2>
       <p>
@@ -219,12 +205,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         <li><strong>Does the theme already solve the hard parts?</strong> Check real product pages, not only the homepage demo.</li>
         <li><strong>What happens if the first direction is wrong?</strong> Understand previews, revisions and approval before committing.</li>
       </ol>
-      <p>
-        If the answers point toward a hands on build, review the
-        <Link href="/buy"> Guildframe Build Guide</Link>. If they point toward a
-        completed storefront, send the project brief and use the free preview to
-        judge the direction before moving forward.
-      </p>
+      <p>If you are building yourself, use the free checklists and Shopify’s documentation. If you hire a developer, agree who owns the catalogue, content, testing and publication tasks.</p>
       <ArticleCallout>
         Choose the theme when you want the tools. Choose the developer when you want
         someone accountable for turning those tools into the finished store.
