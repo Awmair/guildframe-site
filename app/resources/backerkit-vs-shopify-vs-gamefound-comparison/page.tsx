@@ -40,8 +40,8 @@ export default function PlatformComparisonMatrixPage() {
       sidebarTitle="Platform role matrix"
       category="Crowdfunding operations"
       title="Tabletop Crowdfunding Platform Role Matrix"
-      description="Use this operational matrix to assign funding, pledge management, fulfillment data and permanent ecommerce to the right system."
-      answer="BackerKit and Gamefound are built around crowdfunding and backer workflows, while Shopify is built for ongoing ecommerce. Many tabletop creators use a campaign or pledge platform for backer specific work and Shopify as the permanent product, checkout and customer layer."
+      description="Compare which platform handles funding, surveys, backer order details and ongoing store sales."
+      answer="Use this matrix to assign funding, backer surveys, upgrades and delivery records to the relevant campaign or pledge system. Use Shopify for your ongoing retail store. When connecting platforms, document which system owns each order and which data the others receive."
       published="2026-07-17"
       updated={contentDates.platformMatrix}
       readTime="6 minute reference"

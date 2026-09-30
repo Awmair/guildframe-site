@@ -47,8 +47,8 @@ export default function KickstarterToShopifyTimelinePage() {
       slug="kickstarter-to-shopify-launch-timeline"
       category="Post campaign launch planning"
       title="Kickstarter to Shopify Launch Timeline"
-      description="Know what to prepare before funding closes, what must wait for final operational facts and when the permanent store is ready to open."
-      answer="A practical Kickstarter to Shopify launch timeline begins before the campaign ends with domain, catalog and asset planning. After funding, finalize products and fulfillment boundaries, build the storefront, test checkout and mobile buying, then open sales only when delivery promises and inventory rules are accurate. A focused build can take days; operational readiness determines the true launch date."
+      description="Plan your Shopify store before the campaign closes, then build and test it once the products and delivery details are confirmed."
+      answer="Start domain, product and artwork preparation during the campaign. After funding, confirm product prices, inventory and delivery terms, build the store and test checkout. Open sales when you can fulfil new orders accurately. The schedule depends on those decisions and the build scope."
       published="2026-07-17"
       updated={contentDates.kickstarterToShopifyTimeline}
       readTime="8 minute read"
@@ -162,7 +162,7 @@ export default function KickstarterToShopifyTimelinePage() {
         <li>Campaign only promises are not presented as retail offers</li>
       </ul>
 
-      <h2 id="launch-gate">The final launch gate</h2>
+      <h2 id="launch-gate">Checks before opening store orders</h2>
       <ArticleTable
         caption="Conditions to check before accepting public orders"
         headers={["Question", "Ready when"]}
@@ -176,9 +176,7 @@ export default function KickstarterToShopifyTimelinePage() {
         ]}
       />
       <p>
-        Launch when these conditions are true, not simply when the campaign timer
-        reaches zero. The permanent store should reduce uncertainty for the audience
-        you already earned.
+        Open sales after these checks pass. Tell existing backers how the store relates to their rewards and tell new customers what is available.
       </p>
     </SeoArticlePage>
   );

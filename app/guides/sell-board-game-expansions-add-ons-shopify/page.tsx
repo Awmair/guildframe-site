@@ -9,7 +9,7 @@ import {
 import { pageMetadata } from "../../site-config";
 
 export const metadata = pageMetadata({
-  title: "Sell Board Game Expansions and Add ons on Shopify",
+  title: "Board Game Expansions & Bundles on Shopify",
   description:
     "Structure core games, deluxe editions, expansions, add ons and bundles on Shopify without recreating confusing pledge tiers.",
   path: "/guides/sell-board-game-expansions-add-ons-shopify",
@@ -47,8 +47,8 @@ export default function SellExpansionsAddonsShopifyPage() {
       slug="sell-board-game-expansions-add-ons-shopify"
       category="Tabletop catalog architecture"
       title="How to Sell Board Game Expansions, Add ons and Bundles on Shopify"
-      description="Turn campaign reward complexity into a catalog that helps a customer choose the right game, edition and compatible extras."
-      answer="Sell board game expansions and add ons on Shopify as separate products when they need independent inventory, media or discovery. Use variants for true versions of one product and bundles for a defined set sold together. Every expansion page should name the required base game, compatible edition, language, included contents and fulfillment status before the purchase action."
+      description="Organise base games, editions, expansions and bundles so customers can see what they need and what each product includes."
+      answer="Give expansions their own Shopify products when they need separate stock, images or descriptions. Use variants for versions of one product and bundles for items sold together. State the required base game, compatible edition, language and contents on every expansion page."
       published="2026-07-17"
       updated={contentDates.expansionsAndAddons}
       readTime="8 minute read"
@@ -147,7 +147,7 @@ export default function SellExpansionsAddonsShopifyPage() {
         documentation before building a campaign specific workflow around it.
       </p>
 
-      <h2 id="compatibility">Make expansion compatibility impossible to miss</h2>
+      <h2 id="compatibility">State which base game and edition are required</h2>
       <p>
         An expansion page should answer the dependency question before the customer
         reaches the cart. Use consistent product fields or metafields for reusable
@@ -174,7 +174,7 @@ export default function SellExpansionsAddonsShopifyPage() {
         The <Link href="/shopify-theme-for-board-games">board game store planning reference</Link> covers product facts, longer explanations and links between related products.
       </p>
 
-      <h2 id="qa">Catalog quality assurance</h2>
+      <h2 id="qa">Test products, variants and bundles</h2>
       <ol>
         <li><strong>Search each product:</strong> confirm titles and descriptions distinguish the core game, edition and expansion.</li>
         <li><strong>Browse on mobile:</strong> selectors, compatibility and contents must remain visible and readable.</li>

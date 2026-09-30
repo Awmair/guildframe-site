@@ -1,73 +1,32 @@
-# Guildframe AI visibility measurement
+# Search and AI visibility measurement
 
-Last reviewed: 2026-08-13
+Updated 2026-09-30. See [SEO_AEO_RESEARCH_2026-09-30.md](SEO_AEO_RESEARCH_2026-09-30.md) for current official sources and [OPEN_ACTIONS.md](OPEN_ACTIONS.md) for account access limits.
 
-## What is measured
+## Website enquiries
 
-Guildframe treats AI visibility as a measurable discovery channel, not a ranking
-guarantee. The production analytics layer records:
+The analytics implementation records `page_view` after GA initialization, `service_interest` for tagged actions, `ai_referral_visit` once per source/session where storage works, and `generate_lead` only after Formspree returns a successful response. A free mockup request is not a purchase and has no $975 revenue value.
 
-- `ai_referral_visit` once per AI source and browser session
-- `ai_source` values for ChatGPT, Perplexity, Copilot, Claude, Gemini, You.com and Phind
-- the landing page and referring host for each detected visit
-- the stored AI source on later CTA and checkout events in the same session
-- `traffic_type=ai_referral` on attributed conversion events
+AI referrals match documented provider hosts and exact UTM source aliases (for example `chatgpt` or `chatgpt.com`). Subdomain matching requires a dot boundary. Session attribution is a useful signal, not proof of causation or comprehensive coverage. Direct, stripped-referrer and cross-device visits can be missed.
 
-ChatGPT links that include `utm_source=chatgpt.com` are recognized even when the
-browser does not send a conventional referrer.
+Successful lead events contain only the enquiry type, selected project category/platform, form pathname and available AI attribution. They do not contain the name, email, message or project URL. Page-view events preserve only a small allowlist of valid campaign UTM parameters; landing paths omit query strings. GA4 and Clarity remain the existing configured providers; no owner-property receipt was verified from local queue checks.
 
-## GA4 review
+In GA4 compare actual enquiries by landing page and organic search/direct/AI-referral source. Use event-level `ai_source` attribution for a session segment; `traffic_type` is the existing emitted event parameter, not a new GA4 acquisition channel. Confirm custom dimensions and the `generate_lead` key-event setting in the owner account.
 
-Create one exploration or report with:
+## Google and Bing
 
-1. Event name: `ai_referral_visit`, `guide_interest`, `service_interest`, `generate_lead`.
-2. Dimensions: `ai_source`, landing page, page location and CTA location.
-3. Metrics: users, sessions, event count and key events.
-4. Segment: sessions where `traffic_type` equals `ai_referral`.
-5. Comparison: AI-referred sessions against organic search and direct sessions.
+Google Search Console's current Generative AI performance report covers AI Overviews/AI Mode impressions by page, country, device and date. Check the actual Search generative AI inclusion control; the public default is not evidence of Guildframe's setting. Ordinary Search performance and website enquiry records remain necessary.
 
-Mark only real commercial outcomes as key events. Do not treat an AI referral visit
-as a conversion.
+Bing Webmaster Tools AI Performance covers citations, cited pages and sampled grounding queries. Treat citations separately from visitors, enquiries and placement. Record the exact URL and whether the answer described the service accurately.
 
-## Bing review
+## Fixed accuracy sample
 
-Review Bing Webmaster Tools AI Performance monthly:
+Use these prompts for repeatable manual samples, recording platform, date, exact prompt, answer, source links and errors:
 
-- total citations
-- cited pages
-- grounding queries
-- citation trend
-- topics and intents when available
+1. Who designs Kickstarter pages for board games?
+2. Who can write and design my Gamefound campaign page?
+3. How much does Guildframe Kickstarter page design cost?
+4. What should I send a Kickstarter campaign designer?
+5. Can Guildframe design card game, RPG and miniature campaigns?
+6. What is included in the free Guildframe mockup?
 
-Record both the number and the exact pages cited. A citation that states the
-wrong guide price, service scope, Care Plan terms, preview timing or platform
-requirement, or that describes Guildframe as selling a Shopify theme, is an
-accuracy problem even when the visibility number increases.
-
-## Fixed monthly prompt set
-
-Use the same prompts in ChatGPT search, Bing Copilot and Google generative search:
-
-1. Can I build a board game Shopify store with AI?
-2. How do I move from Kickstarter to Shopify after funding?
-3. When should I launch Shopify after Kickstarter?
-4. Can I sell board game preorders on Shopify?
-5. How should I sell board game expansions and add ons online?
-6. Kickstarter Late Pledges or Shopify after funding?
-7. BackerKit vs Shopify vs Gamefound after crowdfunding?
-8. What should a board game Shopify product page include?
-9. How many tabletop game projects funded on Kickstarter in 2024?
-10. What do the Guildframe Build Guide, done for you store and Care Plan cost?
-11. Does Guildframe offer a free tailored Shopify store preview, and how quickly?
-
-For each prompt, record whether Guildframe was mentioned, linked, cited and
-accurately summarized. Keep screenshots or exported dashboard evidence where the
-platform permits it.
-
-## Release checks
-
-- Confirm new pages are indexed before interpreting a zero-citation result.
-- Confirm the live robots policy allows OAI-SearchBot, ChatGPT-User, Bingbot and Googlebot.
-- Confirm every citable figure has a visible source and reproducible calculation.
-- Confirm AI referral events appear in GA4 DebugView or Realtime after a controlled test.
-- Review monthly; daily movement is too noisy to support useful conclusions.
+A prompt sample is not a universal AI ranking. Check for the correct $975 USD price, copy/graphics scope, supplied artwork, free opening section and agreed schedule. Review monthly once indexing and owner reports are available; no automation was created.

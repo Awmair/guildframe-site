@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   path: "/resources/kickstarter-to-shopify-migration-checklist",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-17",
+  modifiedTime: "2026-09-30",
   keywords: ["Kickstarter to Shopify migration checklist", "Shopify migration checklist", "move Kickstarter to Shopify"],
 });
 
@@ -39,10 +39,10 @@ export default function KickstarterToShopifyChecklistPage() {
       sidebarTitle="Migration phases"
       category="Shopify migration"
       title="Kickstarter to Shopify Migration Checklist"
-      description="A phase by phase reference for turning a funded tabletop campaign into a permanent Shopify store without confusing backers or rebuilding every asset."
-      answer="A Kickstarter to Shopify migration has six phases: define each platform's role, convert rewards into retail products, map campaign assets to store pages, configure Shopify operations, test every customer path and launch with separate messaging for backers and new buyers."
+      description="Use this checklist to prepare products, adapt campaign content and test your new Shopify store."
+      answer="List retail products and prices, gather campaign artwork, separate backer rewards from store orders and configure Shopify payments, shipping and inventory. Rewrite the campaign material for product pages, check mobile layouts and complete a test order before opening sales."
       published="2026-07-17"
-      updated="2026-07-17"
+      updated="2026-09-30"
       readTime="6 minute reference"
       faqs={faqs}
       sources={[

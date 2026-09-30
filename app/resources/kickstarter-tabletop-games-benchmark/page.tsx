@@ -92,7 +92,7 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
       sidebarTitle="In this benchmark"
       category="Tabletop crowdfunding data"
       title="2024 Kickstarter Tabletop Games Funding Benchmark"
-      description="A transparent reference for the scale, success rate and concentration of tabletop game funding on Kickstarter in 2024."
+      description="Review Kickstarter’s published 2024 tabletop funding figures, the ten largest campaigns and calculations derived from those figures."
       answer="Kickstarter reported 6,646 tabletop game launches in 2024, 5,314 successfully funded projects, an 80% success rate and $220 million pledged to successful tabletop campaigns. The published figures imply roughly $41,400 pledged per successful project as a simple mean, while the ten highest funded campaigns accounted for at least $41.1 million."
       published="2026-07-17"
       updated={contentDates.kickstarterTabletopBenchmark}
@@ -188,7 +188,7 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
         <li><strong>Commercial outcomes:</strong> pledges are not store revenue, profit, fulfillment success or long term customer value.</li>
       </ol>
 
-      <h2 id="commerce">What the figures mean for post campaign commerce</h2>
+      <h2 id="commerce">Plan delivery and store sales after funding</h2>
       <p>
         A successful campaign creates an audience and a delivery obligation. It
         does not automatically create a permanent product catalog, buying process

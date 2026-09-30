@@ -1,14 +1,14 @@
 import {campaignDate} from "./campaign-content";
 export type LaunchSection={id:string;title:string;paragraphs:string[];list?:string[];table?:{headers:string[];rows:string[][]};source?:number};
-export type LaunchGuide={slug:string;title:string;description:string;tag:string;answer:string;sections:LaunchSection[];faqs:{question:string;answer:string}[];sources:{label:string;publisher:string;href:string}[]};
+export type LaunchGuide={slug:string;title:string;seoTitle?:string;relatedSlugs:string[];servicePath:string;serviceLabel:string;description:string;tag:string;answer:string;sections:LaunchSection[];faqs:{question:string;answer:string}[];sources:{label:string;publisher:string;href:string}[]};
 export const launchGuideDate=campaignDate;
 export const launchGuides:LaunchGuide[]=[
   {
     "slug": "board-game-kickstarter-campaign-design-cost",
     "title": "How Much Does Board Game Kickstarter Campaign Design Cost?",
-    "description": "Budget for board game Kickstarter campaign design. See Guildframe’s $975 offer, the assets you need and the scope questions to ask before booking.",
+    "description": "Guildframe charges $975 USD for Kickstarter or Gamefound page design, including campaign copy and graphics. See the scope and request a free opening mockup.",
     "tag": "Budget planning",
-    "answer": "Guildframe campaign design costs $975 USD for one Kickstarter or Gamefound project. The brief covers page structure, copy and graphics using your artwork. You can request a free opening mockup before booking. The price is specific to Guildframe; it isn’t a measured industry average.",
+    "answer": "Guildframe charges $975 USD for one Kickstarter or Gamefound campaign page. That includes page structure, copy, section graphics and reward comparisons using your artwork. Request a free opening mockup before booking. Other designers’ prices depend on their scope; this guide explains the Guildframe package.",
     "sources": [
       {
         "label": "Guildframe campaign design scope and price",
@@ -100,12 +100,20 @@ export const launchGuides:LaunchGuide[]=[
         "question": "Can I request a mockup before deciding?",
         "answer": "Yes. Send your project and artwork through the free mockup form. There is no obligation to book the full campaign."
       }
-    ]
+    ],
+    "seoTitle": "Kickstarter Page Design Cost: $975 Copy & Graphics",
+    "relatedSlugs": [
+      "when-to-hire-kickstarter-campaign-designer",
+      "what-to-send-kickstarter-campaign-designer",
+      "board-game-kickstarter-page-checklist"
+    ],
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign copy and graphics"
   },
   {
     "slug": "board-game-kickstarter-page-checklist",
     "title": "Board Game Kickstarter Page Checklist Before Launch",
-    "description": "Check your board game Kickstarter page before launch: opening, gameplay, components, reward contents, production facts and a useful mobile review.",
+    "description": "Check your board game Kickstarter page before launch: gameplay, box contents, rewards, shipping information and mobile readability.",
     "tag": "Launch preparation",
     "answer": "Check whether a new reader can explain your game, name what comes in the box, compare the rewards and find the delivery plan. Then review the Kickstarter preview on a phone with someone who hasn’t played the game. Their questions will show you what still needs work.",
     "sources": [
@@ -199,12 +207,20 @@ export const launchGuides:LaunchGuide[]=[
         "question": "Can I get help before the page is finished?",
         "answer": "Yes. A free Guildframe mockup can explore the opening and identify the assets needed for the full campaign."
       }
-    ]
+    ],
+    "seoTitle": "Board Game Kickstarter Page Checklist",
+    "relatedSlugs": [
+      "kickstarter-reward-tier-graphics",
+      "kickstarter-campaign-graphics-mobile-readability",
+      "what-to-send-kickstarter-campaign-designer"
+    ],
+    "servicePath": "/board-game-kickstarter-campaign-design",
+    "serviceLabel": "Board game Kickstarter page design"
   },
   {
     "slug": "what-to-send-kickstarter-campaign-designer",
     "title": "What to Send Your Kickstarter Campaign Designer",
-    "description": "Prepare a useful Kickstarter campaign design brief: artwork, gameplay, reward contents, production facts and launch plans in one organised handoff.",
+    "description": "Send your Kickstarter designer the game summary, artwork, reward contents and launch plans. Use this checklist to prepare the brief.",
     "tag": "Your design brief",
     "answer": "Send a short game summary, artwork, gameplay information, reward contents and prices, production details, your platform and a planned launch date. Mark finished files and placeholders. Explain the folder so your designer knows which files to use.",
     "sources": [
@@ -304,12 +320,20 @@ export const launchGuides:LaunchGuide[]=[
         "question": "Can the designer write campaign copy?",
         "answer": "Guildframe shapes the copy from your information. You remain responsible for confirming product, gameplay, reward and production facts."
       }
-    ]
+    ],
+    "seoTitle": "What to Send Your Kickstarter Campaign Designer",
+    "relatedSlugs": [
+      "when-to-hire-kickstarter-campaign-designer",
+      "board-game-kickstarter-campaign-design-cost",
+      "kickstarter-reward-tier-graphics"
+    ],
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign copy and graphics"
   },
   {
     "slug": "kickstarter-reward-tier-graphics",
     "title": "Kickstarter Reward Tier Graphics for Board Games",
-    "description": "Plan clear Kickstarter reward tier graphics for board games, card games and RPGs. Compare contents, editions and optional extras without visual clutter.",
+    "description": "Design Kickstarter reward graphics that show the contents of each tier. Compare board game editions, card decks, RPG books and optional extras.",
     "tag": "Reward design",
     "answer": "A reward graphic should name the tier, show its contents and explain how it differs from the others. Use consistent images and labels, and compare each graphic with the platform’s reward setup before launch.",
     "sources": [
@@ -353,6 +377,37 @@ export const launchGuides:LaunchGuide[]=[
             [
               "Digital reward",
               "File format, content and applicable licence"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "example",
+        "title": "Example: compare the contents before the artwork",
+        "paragraphs": [
+          "This fictional reward plan shows how a single list keeps the graphics consistent. Replace the names and counts with your confirmed products. Optional extras need their own label, even if they appear beside a reward in a photograph."
+        ],
+        "table": {
+          "headers": [
+            "Example reward",
+            "Included",
+            "Optional extra"
+          ],
+          "rows": [
+            [
+              "Base card game",
+              "One complete 60 card deck and rules",
+              "Card sleeves"
+            ],
+            [
+              "Two deck bundle",
+              "Two complete 60 card decks and rules",
+              "Card sleeves"
+            ],
+            [
+              "RPG print + PDF",
+              "One printed book and its PDF",
+              "Dice set"
             ]
           ]
         }
@@ -404,12 +459,20 @@ export const launchGuides:LaunchGuide[]=[
         "question": "Are reward graphics included in Guildframe campaign design?",
         "answer": "Reward presentation is part of the $975 campaign design service. The exact graphics and comparison format are agreed in the brief."
       }
-    ]
+    ],
+    "seoTitle": "Kickstarter Reward Tier Graphics for Board Games",
+    "relatedSlugs": [
+      "kickstarter-campaign-graphics-mobile-readability",
+      "board-game-kickstarter-page-checklist",
+      "ttrpg-kickstarter-campaign-page-design"
+    ],
+    "servicePath": "/card-game-kickstarter-campaign-design",
+    "serviceLabel": "Card game Kickstarter page design"
   },
   {
     "slug": "ttrpg-kickstarter-campaign-page-design",
     "title": "How to Design a TTRPG Kickstarter Campaign Page",
-    "description": "Plan a TTRPG Kickstarter page for rulebooks, adventures and zines. Explain the play experience, show readable spreads and distinguish PDF and print rewards.",
+    "description": "Build a TTRPG Kickstarter page that explains the game, shows sample spreads and separates PDF and print rewards. A practical guide for RPG creators.",
     "tag": "RPG launches",
     "answer": "Explain what happens during a session, which system or books players need and what each reward contains. Show readable sample pages and accurate print and digital details. Leave room for those answers within the atmosphere of the game.",
     "sources": [
@@ -503,12 +566,20 @@ export const launchGuides:LaunchGuide[]=[
         "question": "Can one campaign show print and digital rewards?",
         "answer": "Yes. Present the contents and format clearly for each option, then make sure the platform reward setup matches."
       }
-    ]
+    ],
+    "seoTitle": "How to Design a TTRPG Kickstarter Campaign Page",
+    "relatedSlugs": [
+      "kickstarter-reward-tier-graphics",
+      "what-to-send-kickstarter-campaign-designer",
+      "kickstarter-campaign-graphics-mobile-readability"
+    ],
+    "servicePath": "/ttrpg-kickstarter-campaign-design",
+    "serviceLabel": "TTRPG Kickstarter page design"
   },
   {
     "slug": "kickstarter-vs-gamefound-campaign-page-design",
     "title": "Kickstarter vs Gamefound: Campaign Page Design Differences",
-    "description": "Compare Kickstarter and Gamefound campaign page design: story sections, reward presentation, preview checks and how to prepare assets for your chosen platform.",
+    "description": "Compare Kickstarter and Gamefound story sections, reward layouts and preview tools. Prepare campaign copy and graphics for the platform you choose.",
     "tag": "Platform planning",
     "answer": "Both platforms need a clear game introduction, product images and rewards. Prepare the assets for the editor you’ll use. Gamefound has separate story and reward sections with visibility by stage. On Kickstarter, check the prelaunch page and campaign preview separately.",
     "sources": [
@@ -596,18 +667,26 @@ export const launchGuides:LaunchGuide[]=[
       },
       {
         "question": "Is Gamefound always better for board games?",
-        "answer": "This page does not make that claim. Platform suitability requires a separate review of the project, audience and operating requirements."
+        "answer": "There is no funding comparison in this guide. Choose a platform after checking your audience, eligibility, fees and operating requirements as well as its page editor."
       },
       {
         "question": "Does Guildframe charge differently for Gamefound?",
         "answer": "The stated campaign design price is $975 for either Kickstarter or Gamefound, with scope confirmed in the brief."
       }
-    ]
+    ],
+    "seoTitle": "Kickstarter vs Gamefound: Page Design",
+    "relatedSlugs": [
+      "what-to-send-kickstarter-campaign-designer",
+      "kickstarter-reward-tier-graphics",
+      "kickstarter-campaign-graphics-mobile-readability"
+    ],
+    "servicePath": "/gamefound-campaign-design",
+    "serviceLabel": "Gamefound page design"
   },
   {
     "slug": "kickstarter-campaign-graphics-mobile-readability",
-    "title": "Make Kickstarter Campaign Graphics Readable on Mobile",
-    "description": "Review Kickstarter campaign graphics on a phone. Fix tiny labels, crowded reward comparisons and oversized sections before your tabletop game launch.",
+    "title": "Kickstarter Image Sizes and Readable Campaign Graphics",
+    "description": "Check Kickstarter image size, file formats and mobile readability. Make campaign graphics and reward comparisons readable without zooming.",
     "tag": "Design review",
     "answer": "Review campaign graphics at their actual width on a phone. Readers should be able to understand the premise, component labels and reward differences without zooming. Simplify dense graphics, split them into sections or put the details in readable page text.",
     "sources": [
@@ -671,12 +750,13 @@ export const launchGuides:LaunchGuide[]=[
       },
       {
         "id": "media",
-        "title": "Follow the platform guidance for the actual file",
+        "title": "Kickstarter image sizes and file formats",
         "paragraphs": [
-          "Read the current media guidance before exporting a batch. Upload a representative file and check its compression and layout; a file that works in an image editor may display differently in the campaign.",
-          "Gamefound’s description guidance includes image and video recommendations and a warning about very tall videos on mobile. Verify those details for your export. Kickstarter has its own requirements."
+          "Kickstarter’s current media guidance sets a 50 MB image limit, recommends JPEG, PNG or GIF, and advises scaling images to 700 pixels or more before upload. Uploaded images are compressed. These are story image guidelines; check the Basics editor separately for your project cover.",
+          "Keep an editable master, export one section and check the uploaded result before preparing the rest. Larger source files do not fix labels that become too small on a phone.",
+          "Gamefound uses its own description editor and media guidance. Confirm the requirements there rather than assuming the Kickstarter export will display the same way."
         ],
-        "source": 1
+        "source": 0
       },
       {
         "id": "review",
@@ -690,8 +770,8 @@ export const launchGuides:LaunchGuide[]=[
     ],
     "faqs": [
       {
-        "question": "What exact pixel width should every graphic use?",
-        "answer": "Use the current guidance for your chosen platform and inspect the uploaded result. There is no single dimension stated here for both platforms."
+        "question": "What size should Kickstarter campaign images be?",
+        "answer": "Kickstarter advises scaling story images to 700 pixels or more and limits each file to 50 MB. It recommends JPEG, PNG or GIF. Check the uploaded image on a phone because the platform compresses files and the displayed width varies."
       },
       {
         "question": "Should all campaign text be baked into images?",
@@ -701,12 +781,20 @@ export const launchGuides:LaunchGuide[]=[
         "question": "Can animated graphics help?",
         "answer": "Sometimes, when movement explains play or shows a product function. Keep a useful still image and readable explanation as well."
       }
-    ]
+    ],
+    "seoTitle": "Kickstarter Image Sizes & Mobile Graphics",
+    "relatedSlugs": [
+      "kickstarter-reward-tier-graphics",
+      "board-game-kickstarter-page-checklist",
+      "kickstarter-vs-gamefound-campaign-page-design"
+    ],
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign copy and graphics"
   },
   {
     "slug": "when-to-hire-kickstarter-campaign-designer",
     "title": "When Should You Hire a Kickstarter Campaign Designer?",
-    "description": "Know when to hire a Kickstarter campaign designer. Check artwork readiness, reward decisions and review time before committing to your game launch date.",
+    "description": "Contact a Kickstarter page designer once your game summary and usable artwork are ready. Plan assets, rewards and review time before launch.",
     "tag": "Launch timing",
     "answer": "Contact a campaign designer once you can explain the game and share usable artwork and proposed rewards. You can explore an opening design earlier. Schedule the full page around asset delivery and review time; the right start date depends on what is ready.",
     "sources": [
@@ -795,12 +883,20 @@ export const launchGuides:LaunchGuide[]=[
       },
       {
         "question": "How long does Guildframe campaign design take?",
-        "answer": "Timing is agreed after the brief and assets are reviewed. The site does not promise a universal turnaround for every campaign."
+        "answer": "The schedule depends on the assets, page sections and review process. I confirm it after looking at your brief and planned launch date."
       },
       {
         "question": "Can design replace building a prelaunch audience?",
         "answer": "No. Campaign design and audience preparation are different work. A clear page still needs the right people to discover it."
       }
-    ]
+    ],
+    "seoTitle": "When to Hire a Kickstarter Campaign Designer",
+    "relatedSlugs": [
+      "what-to-send-kickstarter-campaign-designer",
+      "board-game-kickstarter-campaign-design-cost",
+      "board-game-kickstarter-page-checklist"
+    ],
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign copy and graphics"
   }
 ];

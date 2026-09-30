@@ -9,7 +9,7 @@ import {
 import { pageMetadata } from "../../site-config";
 
 export const metadata = pageMetadata({
-  title: "BackerKit vs Shopify vs Gamefound After Crowdfunding",
+  title: "BackerKit vs Shopify vs Gamefound",
   description:
     "Compare BackerKit vs Shopify vs Gamefound for tabletop crowdfunding, pledge management, preorders and permanent ecommerce.",
   path: "/guides/backerkit-vs-shopify-vs-gamefound",
@@ -48,8 +48,8 @@ export default function BackerkitShopifyGamefoundGuide() {
       slug="backerkit-vs-shopify-vs-gamefound"
       category="Platform comparison"
       title="BackerKit vs Shopify vs Gamefound: What Each Platform Does After Crowdfunding"
-      description="Compare which jobs each platform covers: funding the campaign, managing backer orders and running the ongoing store."
-      answer="BackerKit is strongest around crowdfunding and post campaign backer workflows, Shopify is strongest as a permanent branded ecommerce store, and Gamefound combines tabletop crowdfunding with pledge management capabilities. The right setup depends on whether you are funding a project, managing backer orders or selling products long term."
+      description="Compare BackerKit, Shopify and Gamefound for funding, backer orders and ongoing retail sales."
+      answer="BackerKit supports crowdfunding and post campaign backer workflows. Gamefound combines tabletop crowdfunding and pledge management. Shopify runs an ongoing retail store. Choose the tools for the jobs you need, and document how orders, inventory and delivery details pass between them."
       published="2026-07-16"
       updated={contentDates.backerkitVsShopifyVsGamefound}
       readTime="8 minute read"
@@ -86,7 +86,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         fulfillment data and permanent ecommerce while keeping one clear owner for
         each order type and customer promise.
       </ArticleDefinition>
-      <h2 id="jobs">Start with the job, not the platform name</h2>
+      <h2 id="jobs">List the jobs each platform needs to handle</h2>
       <p>
         A tabletop business may need to fund a project, manage thousands of backer
         choices and run a store for years. Each platform covers a different part of that work. Check which tasks you need it to handle before comparing features.
@@ -115,7 +115,7 @@ export default function BackerkitShopifyGamefoundGuide() {
       </p>
       <p>
         BackerKit also publishes guidance on
-        <a href="https://www.backerkit.com/blog/guides/post-campaign-guide/chapter-4-planning-for-pre-orders/" target="_blank" rel="noreferrer"> planning post campaign preorders</a>
+        <a href="https://www.backerkit.com/blog/guides/post campaign-guide/chapter-4-planning-for-pre-orders/" target="_blank" rel="noreferrer"> planning post campaign preorders</a>
         and documents how eligible
         <a href="https://help.backerkit.com/article/659-how-are-orders-pushed-from-backerkit-to-shopify" target="_blank" rel="noreferrer"> BackerKit orders can be pushed to Shopify</a>.
         Those connections illustrate the complementary model: manage campaign data
@@ -132,7 +132,7 @@ export default function BackerkitShopifyGamefoundGuide() {
       <p>
         Shopify is strongest when the project becomes an ongoing product business.
         It gives the brand a permanent domain, navigable catalog, product templates,
-        customer checkout, inventory, payments, content and an apps.
+        customer checkout, inventory, payments, content and apps.
       </p>
       <p>
         A Shopify store should not be forced to behave like a pledge manager. Its
@@ -176,7 +176,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         <li><strong>Confirm directly:</strong> current campaign requirements, fees, pledge management features and data export options.</li>
       </ul>
 
-      <h2 id="stack">Choose the smallest stack that covers the real work</h2>
+      <h2 id="stack">Connect platforms only when you need them</h2>
       <ArticleTable
         caption="Likely platform roles by business situation"
         headers={["Business situation", "Likely primary system", "Possible supporting system"]}

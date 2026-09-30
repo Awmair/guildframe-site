@@ -52,8 +52,8 @@ export default function WhatHappensAfterKickstarterPage() {
       slug="what-happens-after-kickstarter-is-funded"
       category="After Kickstarter funding"
       title="What Happens After Your Kickstarter Is Funded?"
-      description="After funding, you need to collect payments, confirm backer details, produce the rewards and deliver them. Here’s how store planning fits into that work."
-      answer="After a Kickstarter is funded, pledge payments are processed, the final backer report settles, funds are paid out, surveys or pledge management collect fulfillment details and the creator produces and delivers the rewards. At the same time, the creator can plan late pledges, preorders and a permanent online store, provided new sales do not create unclear promises or undermine backer fulfillment."
+      description="After Kickstarter funding, collect payments and backer details, prepare production and deliver the rewards. This guide explains the sequence and when to plan new sales."
+      answer="After a successful Kickstarter, the platform collects pledge payments and pays out funds. You then confirm backer choices and addresses, produce the rewards and arrange delivery. Plan late pledges or store orders alongside that work, with separate records and clear delivery information."
       published="2026-07-18"
       updated={contentDates.whatHappensAfterKickstarter}
       readTime="8 minute read"
@@ -120,7 +120,7 @@ export default function WhatHappensAfterKickstarterPage() {
         production, freight, fulfillment and contingency.
       </ArticleCallout>
 
-      <h2 id="backers">Backer data and communication become operational</h2>
+      <h2 id="backers">Collect backer choices and delivery details</h2>
       <p>
         Once the project has ended successfully, the creator can use the backer
         report and the selected survey or pledge manager workflow to organize
@@ -135,7 +135,7 @@ export default function WhatHappensAfterKickstarterPage() {
         <li><strong>Protect personal data.</strong> Use backer information for the permitted campaign and fulfillment purpose; do not assume it grants marketing consent.</li>
       </ol>
 
-      <h2 id="fulfillment">Production and fulfillment become the primary promise</h2>
+      <h2 id="fulfillment">Produce and deliver the rewards</h2>
       <p>
         After funding, finalise files, place production orders, inspect samples, arrange freight and collect missing delivery details. Keep a record of each reward, extra, quantity, address and fulfilment status.
       </p>
@@ -196,7 +196,7 @@ export default function WhatHappensAfterKickstarterPage() {
         Use the <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link> for the complete storefront implementation sequence. Decide whether to build the store yourself or hire a developer after reviewing your catalogue and operating requirements.
       </p>
 
-      <h2 id="roadmap">A practical post funding roadmap</h2>
+      <h2 id="roadmap">Steps after your Kickstarter is funded</h2>
       <ol className="article-checklist">
         <li>Reconcile collected pledges and the final working budget</li>
         <li>Confirm the survey, pledge manager and backer support workflow</li>

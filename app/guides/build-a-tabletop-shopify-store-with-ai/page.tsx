@@ -54,8 +54,8 @@ export default function BuildWithAiGuidePage() {
       slug="build-a-tabletop-shopify-store-with-ai"
       category="AI assisted Shopify builds"
       title="Build a Tabletop Shopify Store With AI"
-      description="Where AI coding tools can help with a Shopify store, what to check in the generated code and which product decisions you need to make yourself."
-      answer="AI coding tools can build real Shopify theme sections, write Liquid, draft product copy and set up structured data. They cannot change Shopify checkout, and they cannot decide how your editions, expansions and add ons should be modelled or whether your preorder promise is safe to publish. Give the tool confirmed product relationships and review what it builds."
+      description="Use AI coding tools for Shopify theme work, then check the code, editor settings and product data before publishing."
+      answer="AI coding tools can draft Shopify Liquid sections, product copy and structured data. Theme code cannot modify Shopify checkout. You still need to define editions, expansions, compatibility and delivery terms, then verify the generated code against Shopify documentation and test the store."
       published={contentDates.buildWithAi}
       updated={contentDates.buildWithAi}
       readTime="9 minute read"
@@ -109,7 +109,7 @@ export default function BuildWithAiGuidePage() {
         any other codebase. Those edits change the storefront shown to customers.
       </p>
       <p>
-        Three boundaries are worth knowing before you start. Checkout belongs to
+        Check three boundaries before you start. Checkout belongs to
         Shopify and cannot be edited from a theme. Anything requiring server
         side logic belongs in an app, not a theme. And the theme editor is the
         interface your future self uses to run the store, so a section that
@@ -151,7 +151,7 @@ export default function BuildWithAiGuidePage() {
         </li>
       </ul>
 
-      <h2 id="where-it-breaks">Where it reliably breaks</h2>
+      <h2 id="where-it-breaks">Common errors to check in generated code</h2>
       <p>
         These are the failures worth expecting rather than discovering at
         launch.
@@ -177,7 +177,7 @@ export default function BuildWithAiGuidePage() {
         time.
       </ArticleCallout>
 
-      <h2 id="what-ai-cannot-know">The part no model knows: your catalog</h2>
+      <h2 id="what-ai-cannot-know">Define your products before generating pages</h2>
       <p>
         Decide how the products relate before asking the tool to build their pages.
       </p>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { JsonLd } from "./JsonLd";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
 import { absoluteUrl, siteConfig } from "../site-config";
+import { authorId } from "../seo-entities";
 import { formatContentDate } from "../content-dates";
 
 export type ArticleFaq = { question: string; answer: string };
@@ -87,8 +88,7 @@ export function SeoArticlePage({
               articleSection: category,
               inLanguage: "en",
               isAccessibleForFree: true,
-              author: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
-              reviewedBy: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
+              author: { "@id": authorId() },
               publisher: { "@id": absoluteUrl("/#organization") },
               citation: sources.map((source) => ({
                 "@type": "CreativeWork",
@@ -97,9 +97,7 @@ export function SeoArticlePage({
                 publisher: { "@type": "Organization", name: source.publisher },
               })),
               about: [
-                "Tabletop campaign design",
                 "Tabletop games",
-                "Crowdfunding",
                 category,
               ],
             },
@@ -153,7 +151,7 @@ export function SeoArticlePage({
             items={[
               { label: "Home", href: "/" },
               { label: collectionLabel, href: collectionHref },
-              { label: category },
+              { label: title },
             ]}
           />
           <div className="article-hero-inner">
@@ -162,7 +160,7 @@ export function SeoArticlePage({
             <div className="article-meta">
               <span>Updated <time dateTime={updated}>{formatContentDate(updated)}</time></span>
               <span>{readTime}</span>
-              <Link href="/authors/guildframe">Guildframe</Link>
+              <Link href="/authors/guildframe">By Umair at Guildframe</Link>
             </div>
           </div>
         </header>
@@ -195,7 +193,7 @@ export function SeoArticlePage({
             <section className="article-sources" aria-labelledby="article-sources-title">
               <h2 id="article-sources-title">Sources and references</h2>
               <p>
-                These links point to the platform documentation behind the guide. Features and policies can change, so check the current guidance before acting. Design advice is from Guildframe.
+                The sources below cover platform features, policies and figures used in this article. Check the current documentation before making a decision. Practical recommendations are from Umair at Guildframe.
               </p>
               <ul>
                 {sources.map((source) => (
@@ -209,7 +207,7 @@ export function SeoArticlePage({
               </ul>
             </section>
             <section className="article-faq" id="faq">
-              <h2>Quick answers</h2>
+              <h2>Frequently asked questions</h2>
               {faqs.map((faq) => (
                 <details key={faq.question}>
                   <summary>{faq.question}<i aria-hidden="true">+</i></summary>

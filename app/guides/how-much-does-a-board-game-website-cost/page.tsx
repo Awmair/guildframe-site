@@ -47,8 +47,8 @@ export default function BoardGameWebsiteCostPage() {
       slug="how-much-does-a-board-game-website-cost"
       category="Board game website cost"
       title="How Much Does a Board Game Website Cost?"
-      description="A useful budget separates the platform, build, content and ongoing operating costs instead of hiding them inside one headline number."
-      answer="A board game ecommerce website can start with a Shopify plan and free theme, use a premium theme or commission a custom developer build. The final cost also includes the domain, payment processing, optional apps, content preparation and ongoing maintenance."
+      description="Budget for a board game website by separating the Shopify plan, theme or development, product content and ongoing costs."
+      answer="A board game store budget includes the platform, domain, theme or development, product setup, payment processing and any paid apps. A free theme reduces the theme cost, but you still need to prepare the content and test the store. Get a quote based on your catalogue and required integrations."
       published="2026-07-23"
       updated={contentDates.boardGameWebsiteCost}
       readTime="7 minute read"
@@ -79,7 +79,7 @@ export default function BoardGameWebsiteCostPage() {
         { id: "faq", label: "Quick answers" },
       ]}
     >
-      <h2 id="budget">The budget has four layers</h2>
+      <h2 id="budget">Platform, build, content and ongoing costs</h2>
       <ArticleTable
         caption="Board game website budget layers"
         headers={["Layer", "What it covers", "Payment pattern"]}
@@ -91,7 +91,7 @@ export default function BoardGameWebsiteCostPage() {
         ]}
       />
       <p>
-        Shopify currently lists Basic at 39 dollars per month when paid monthly
+        As of September 30, 2026, Shopify lists Basic at 39 dollars per month when paid monthly
         and 29 dollars per month when billed yearly in the United States. Pricing,
         card rates and regional availability can change, so confirm the current plan
         on Shopify before budgeting.
@@ -130,7 +130,7 @@ export default function BoardGameWebsiteCostPage() {
         are decided.
       </ArticleCallout>
 
-      <h2 id="tabletop">Tabletop stores carry category specific work</h2>
+      <h2 id="tabletop">Budget for editions, expansions and product details</h2>
       <p>
         A board game store often needs more structure than a simple merchandise
         catalog. Core games, deluxe editions, expansions, add ons, language versions
@@ -149,7 +149,7 @@ export default function BoardGameWebsiteCostPage() {
         to estimate the content work before choosing a build route.
       </p>
 
-      <h2 id="choice">Choose according to time, not only budget</h2>
+      <h2 id="choice">Include the setup time your team can spare</h2>
       <p>
         Use a free or premium theme when you want to build and manage the store
         yourself. Hire a specialist when the team needs a finished result, has a firm

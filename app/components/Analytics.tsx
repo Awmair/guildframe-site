@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { siteConfig } from "../site-config";
@@ -16,20 +16,27 @@ const aiSourceStorageKey = "guildframe-ai-source";
 
 export function Analytics() {
   const pathname = usePathname();
+  const [ready, setReady] = useState(false);
   const measurementId = siteConfig.analyticsId;
   const clarityProjectId = siteConfig.clarityProjectId;
 
   useEffect(() => {
-    if (!measurementId || !window.gtag) return;
+    if (!ready || !measurementId || !window.gtag) return;
+    const location = new URL(`${window.location.origin}${pathname}`);
+    const params = new URLSearchParams(window.location.search);
+    for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]) {
+      const value = params.get(key);
+      if (value && /^[a-zA-Z0-9 ._-]{1,120}$/.test(value)) location.searchParams.set(key, value);
+    }
     window.gtag("event", "page_view", {
-      page_path: `${pathname}${window.location.search}`,
-      page_location: window.location.href,
+      page_path: pathname,
+      page_location: location.toString(),
       page_title: document.title,
     });
-  }, [measurementId, pathname]);
+  }, [ready, measurementId, pathname]);
 
   useEffect(() => {
-    if (!measurementId || !window.gtag) return;
+    if (!ready || !measurementId || !window.gtag) return;
 
     const params = new URLSearchParams(window.location.search);
     const campaignSource = params.get("utm_source")?.toLowerCase() ?? "";
@@ -45,9 +52,9 @@ export function Analytics() {
       ["you", ["you.com"]],
       ["phind", ["phind.com"]],
     ];
-    const match = sources.find(([, domains]) =>
-      domains.some(
-        (domain) => campaignSource.includes(domain) || referrerHost.endsWith(domain),
+    const match = sources.find(([source, domains]) =>
+      campaignSource === source || domains.some(
+        (domain) => (campaignSource === domain || referrerHost === domain || referrerHost.endsWith(`.${domain}`)),
       ),
     );
     if (!match) return;
@@ -62,14 +69,14 @@ export function Analytics() {
     }
     window.gtag("event", "ai_referral_visit", {
       ai_source: match[0],
-      landing_page: `${pathname}${window.location.search}`,
+      landing_page: pathname,
       referrer_host: referrerHost || undefined,
     });
-  }, [measurementId, pathname]);
+  }, [ready, measurementId, pathname]);
 
   useEffect(() => {
     const trackClick = (event: MouseEvent) => {
-      if (!measurementId || !window.gtag) return;
+      if (!ready || !measurementId || !window.gtag) return;
       const target = (event.target as Element | null)?.closest<HTMLElement>(
         "[data-analytics-event]",
       );
@@ -86,7 +93,7 @@ export function Analytics() {
         cta_label: target.dataset.analyticsLabel ?? target.textContent?.trim(),
         cta_location: target.dataset.analyticsLocation ?? "unknown",
         link_url:
-          target instanceof HTMLAnchorElement ? target.href : undefined,
+          target instanceof HTMLAnchorElement ? `${target.origin}${target.pathname}${target.hash}` : undefined,
         ai_source: aiSource,
         traffic_type: aiSource ? "ai_referral" : undefined,
       });
@@ -94,7 +101,7 @@ export function Analytics() {
 
     document.addEventListener("click", trackClick);
     return () => document.removeEventListener("click", trackClick);
-  }, [measurementId]);
+  }, [ready, measurementId]);
 
   if (!measurementId && !clarityProjectId) return null;
 
@@ -106,7 +113,7 @@ export function Analytics() {
             src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
             strategy="afterInteractive"
           />
-          <Script id="guildframe-google-analytics" strategy="afterInteractive">
+          <Script id="guildframe-google-analytics" strategy="afterInteractive" onReady={() => setReady(true)}>
             {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','${measurementId}',{send_page_view:false});`}
           </Script>
         </>

@@ -22,3 +22,31 @@ export const campaignFaqs = [
  {question:"Do I have to book after the free mockup?",answer:"No. The opening mockup is free to request and there’s no obligation to book the full campaign. You can decide after you’ve seen the direction."},
 
 ] as const;
+
+
+export const categoryFaqs: Record<string, {question:string;answer:string}[]> = {
+ "board-game-kickstarter-campaign-design": [
+  {question:"What board game artwork should I send?",answer:"Send the box art, component images and a short gameplay explanation. Include player count, play time, proposed rewards and any rules or preview links. Mark prototype images so they can be labelled correctly."},
+  {question:"Can you compare a standard and deluxe edition?",answer:"Yes. Reward comparisons can show which components change and which expansions are included. You confirm the contents and prices; I use the same names across the copy and graphics."},
+ ],
+ "card-game-kickstarter-campaign-design": [
+  {question:"Can you design a Kickstarter page for a TCG or party card game?",answer:"Yes. For a TCG, the page can explain the starter decks, sample cards and pack contents. For a party game, a sample round may explain the game in fewer steps. The copy and graphics use your confirmed card information."},
+  {question:"Does $975 include drawing new card artwork?",answer:"The campaign page uses your supplied card artwork. New card illustration and game design are separate work. The $975 brief covers campaign copy, page graphics and reward presentation."},
+ ],
+ "ttrpg-kickstarter-campaign-design": [
+  {question:"Can the page show both print books and PDF rewards?",answer:"Yes. I label the physical and digital contents separately and show when a print book includes its PDF. You provide the confirmed format, page count, binding and bundle details."},
+  {question:"What should I share for an RPG campaign mockup?",answer:"Send a short description of the game, the cover or usable artwork and any sample spread you can share. Say whether it is a complete system, adventure or supplement and what players need to use it."},
+ ],
+ "miniatures-kickstarter-campaign-design": [
+  {question:"Can you present STL files and physical miniatures in one campaign?",answer:"Yes. The graphics label digital files and physical sets separately, with the scale, sculpt list and included pieces supplied by you. Licence and printing details should be confirmed before publication."},
+  {question:"What images help explain modular terrain?",answer:"Show an assembled layout, the individual pieces and a scale reference. Connection details and different configurations help players understand what a set can build. Label anything shown for context that is not included."},
+ ],
+ "tabletop-accessories-campaign-design": [
+  {question:"Do you design campaigns for deck boxes, sleeves and dice?",answer:"Yes. I use your product photos and measurements to explain storage, materials, dimensions and compatibility. Reward graphics can compare finishes, sizes and bundle contents."},
+  {question:"How do you explain whether an accessory fits a game?",answer:"Use the dimensions and compatibility you have checked. Show the accessory in use and label cards, dice or games shown only for context. Avoid implying compatibility that has not been confirmed."},
+ ],
+ "gamefound-campaign-design": [
+  {question:"Can I reuse my Kickstarter artwork for Gamefound?",answer:"Existing artwork and some copy can be reused. The page layout, story sections and reward graphics still need a check in the Gamefound editor and preview. Confirm the platform before agreeing the deliverables."},
+  {question:"Who controls Gamefound prices, shipping and publication?",answer:"You control the project settings, rewards, prices, taxes, shipping and publication. I prepare the campaign copy and graphics and review how they display in the agreed preview."},
+ ],
+};

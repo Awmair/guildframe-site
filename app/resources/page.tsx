@@ -4,9 +4,9 @@ import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
 
 export const metadata = pageMetadata({
-  title: "Tabletop Ecommerce Checklists and References",
+  title: "Tabletop Shopify Checklists & Crowdfunding Data",
   description:
-    "Citable checklists and comparison tables for board game Shopify stores, product pages and Kickstarter to Shopify migration.",
+    "Shopify store and product page checklists for tabletop publishers, a Kickstarter migration checklist, platform comparisons and 2024 funding data.",
   path: "/resources",
   keywords: ["Shopify checklist", "board game ecommerce checklist", "Kickstarter to Shopify checklist"],
 });
@@ -20,31 +20,31 @@ const resources = [
   },
   {
     title: "Board Game Shopify Store Checklist",
-    copy: "A complete launch checklist for catalog, content, operations, mobile UX and search readiness.",
+    copy: "Check products, content, shipping, checkout and mobile pages before opening your store.",
     href: "/resources/board-game-shopify-store-checklist",
     tag: "Store launch",
   },
   {
     title: "Kickstarter to Shopify Migration Checklist",
-    copy: "A clear sequence for products, campaign assets, backer boundaries, testing and launch.",
+    copy: "Prepare products and campaign artwork, separate backer rewards from store orders and test before launch.",
     href: "/resources/kickstarter-to-shopify-migration-checklist",
     tag: "Migration",
   },
   {
     title: "Tabletop Crowdfunding Platform Role Matrix",
-    copy: "Assign funding, pledge management, fulfillment data and long term commerce to the right system.",
+    copy: "Compare which platform handles funding, surveys, delivery details and ongoing store orders.",
     href: "/resources/backerkit-vs-shopify-vs-gamefound-comparison",
     tag: "Platform matrix",
   },
   {
     title: "Board Game Product Page Checklist",
-    copy: "The content and conversion anatomy of a tabletop Shopify product page, from editions to delivery clarity.",
+    copy: "Check game details, editions, components, delivery information and the purchase buttons.",
     href: "/resources/board-game-product-page-checklist",
     tag: "Product pages",
   },
   {
     title: "2024 Kickstarter Tabletop Games Funding Benchmark",
-    copy: "Source backed launch, success rate and funding figures with transparent calculations and downloadable data.",
+    copy: "Review Kickstarter’s published 2024 tabletop figures, with calculations and a downloadable CSV.",
     href: "/resources/kickstarter-tabletop-games-benchmark",
     tag: "Original analysis",
   },
@@ -59,9 +59,9 @@ export default function ResourcesPage() {
           {
             "@type": "CollectionPage",
             "@id": absoluteUrl("/resources"),
-            name: "Guildframe Tabletop Ecommerce Reference Library",
+            name: "Tabletop Shopify Checklists and Crowdfunding Data",
             url: absoluteUrl("/resources"),
-            description: "Citable checklists and comparison tables for tabletop ecommerce.",
+            description: "Shopify checklists, platform comparisons and Kickstarter funding data for tabletop publishers.",
             isPartOf: { "@id": absoluteUrl("/#website") },
             mainEntity: { "@id": absoluteUrl("/resources#reference-list") },
             inLanguage: "en",
@@ -90,10 +90,9 @@ export default function ResourcesPage() {
       <main className="guides-main" id="resources-content">
         <section className="guides-hero resources-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Resources" }]} />
-          <h1>Reference tools for <em>tabletop commerce.</em></h1>
+          <h1>Shopify checklists &amp; <em>crowdfunding data.</em></h1>
           <p>
-            Source backed checklists and comparison tables built for quick use,
-            clean citation and confident post campaign decisions.
+            Check what your Shopify store needs, compare platform roles and review Kickstarter tabletop funding figures. Use these references alongside the longer guides.
           </p>
         </section>
         <section className="guides-grid resources-grid">

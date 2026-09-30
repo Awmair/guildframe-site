@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   path: "/resources/board-game-product-page-checklist",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-17",
+  modifiedTime: "2026-09-30",
   keywords: ["board game Shopify product page", "Shopify product page checklist", "board game product page design"],
 });
 
@@ -39,10 +39,10 @@ export default function BoardGameProductPageChecklistPage() {
       sidebarTitle="Page anatomy"
       category="Shopify product pages"
       title="Board Game Shopify Product Page Checklist"
-      description="A practical anatomy for tabletop product pages that need to explain the world, the game, the edition and the delivery promise without slowing down the purchase."
-      answer="A strong board game Shopify product page combines a clear purchase block with useful artwork, gameplay facts, component details, edition comparison, proof, delivery terms, mobile friendly controls and Product structured data that matches the visible offer."
+      description="Check the game details, editions, components, availability and purchase controls on each Shopify product page."
+      answer="A board game product page should show the price, edition, availability, box contents, player count and play time. Explain expansion compatibility and expected delivery where relevant. Make the controls usable on a phone and keep Product structured data consistent with the visible offer."
       published="2026-07-17"
-      updated="2026-07-17"
+      updated="2026-09-30"
       readTime="7 minute reference"
       faqs={faqs}
       sources={[
@@ -61,7 +61,7 @@ export default function BoardGameProductPageChecklistPage() {
         { id: "faq", label: "Quick answers" },
       ]}
     >
-      <h2 id="purchase">1. The purchase block</h2>
+      <h2 id="purchase">1. Product name, price and purchase button</h2>
       <p>
         The first screen should let a customer identify the product, understand its
         current buying status and take the next step. It does not need to explain the
@@ -134,7 +134,7 @@ export default function BoardGameProductPageChecklistPage() {
         ]}
       />
 
-      <h2 id="proof">5. Proof, policies and objections</h2>
+      <h2 id="proof">5. Reviews, delivery and return policies</h2>
       <ul className="article-checklist">
         <li>Reviews, awards or campaign proof are specific and attributable</li>
         <li>How to play video or rulebook is available when it reduces uncertainty</li>

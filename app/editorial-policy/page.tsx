@@ -24,7 +24,7 @@ export default function EditorialPolicyPage() {
             url: absoluteUrl("/editorial-policy"),
             name: "Guildframe Editorial Policy",
             description: "How Guildframe researches, reviews and updates its editorial content.",
-            about: { "@id": absoluteUrl("/authors/guildframe#editorial-team") },
+            about: { "@id": absoluteUrl("/authors/guildframe#umair") },
             publisher: { "@id": absoluteUrl("/#organization") },
             isPartOf: { "@id": absoluteUrl("/#website") },
             dateModified: contentDates.editorialPolicy,
@@ -41,7 +41,7 @@ export default function EditorialPolicyPage() {
       }} />
       <TrustPage
         label="Editorial policy"
-        title="How I write the guides."
+        title="Guildframe editorial policy"
         description="The guides explain campaign design and launch preparation, with sources for platform facts and clear labels for design advice."
         updated={contentDates.editorialPolicy}
       >
@@ -57,7 +57,7 @@ export default function EditorialPolicyPage() {
           <h2>Research and sourcing</h2>
           <ol>
             <li><strong>Primary sources first.</strong> Platform help centers, product documentation and official policy pages are preferred.</li>
-            <li><strong>Visible evidence.</strong> Guides list the sources reviewed and connect them to structured Article citations.</li>
+            <li><strong>Visible evidence.</strong> Guides link to the sources behind platform facts and published figures.</li>
             <li><strong>Current facts.</strong> Time sensitive platform features, pricing and policies are rechecked before material updates.</li>
             <li><strong>Clear inference.</strong> Guildframe recommendations are presented as analysis, not as platform policy.</li>
           </ol>
@@ -66,7 +66,7 @@ export default function EditorialPolicyPage() {
           <h2>Commercial transparency</h2>
           <p>
             Guildframe sells Kickstarter and Gamefound campaign design for $975 USD.
-            Commercial pages and structured data must describe the same price and scope.
+            The service pages state what the price includes.
             A free mockup explores an opening campaign section. Concept mockups are labelled separately from the client campaigns in Past work. Client quotes are short, verbatim excerpts matched to their projects.
             We do not claim funding results or guaranteed search rankings.
           </p>
@@ -85,14 +85,14 @@ export default function EditorialPolicyPage() {
             <li>Corrections preserve the useful answer instead of silently changing its intent.</li>
           </ul>
           <p>
-            The guides are written by <Link href="/authors/guildframe">Guildframe</Link>.
+            The guides are written by <Link href="/authors/guildframe">Umair at Guildframe</Link>.
             Product and company details are documented on the <Link href="/about">About page</Link>.
           </p>
         </section>
         <section>
-          <h2>AI and search use</h2>
+          <h2>How to check the advice</h2>
           <p>
-            The guides use direct answers, descriptive headings, tables and source links. The same facts appear in page text and search metadata so readers and search systems can check them.
+            Use the source links to check platform requirements. Where I recommend a layout, a checklist or a workflow, I explain why it helps. If you find an error, email umair@guildframe.com with the page link and the detail to correct.
           </p>
         </section>
       </TrustPage>

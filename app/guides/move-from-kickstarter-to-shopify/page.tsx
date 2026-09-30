@@ -52,8 +52,8 @@ export default function MoveKickstarterToShopifyGuide() {
       slug="move-from-kickstarter-to-shopify"
       category="Kickstarter to Shopify"
       title="Kickstarter to Shopify Migration Guide"
-      description="Use your campaign artwork and product details to prepare an ongoing Shopify store, with a separate plan for new orders and backer rewards."
-      answer="To move from Kickstarter to Shopify, finalize the products you will sell, separate campaign fulfillment from new store orders, reuse your strongest campaign assets, configure Shopify operations, test every buying path and launch with clear delivery language. The store complements Kickstarter and any pledge manager rather than replacing their campaign specific jobs."
+      description="Prepare a Shopify store using your campaign artwork and product details. Keep new store orders separate from the backer rewards you still need to deliver."
+      answer="To move from Kickstarter to Shopify, list the products you will sell, reuse the campaign artwork and rewrite it for product pages. Set up payments, shipping, taxes and inventory, then place test orders. Keep campaign rewards and new store orders in separate workflows."
       published="2026-07-16"
       updated={contentDates.moveFromKickstarter}
       readTime="9 minute read"
@@ -125,13 +125,13 @@ export default function MoveKickstarterToShopifyGuide() {
         permanent destination for commerce after funding.
       </ArticleCallout>
 
-      <h2 id="prepare">2. Prepare the product and operational truth first</h2>
+      <h2 id="prepare">2. Confirm products, prices and delivery details</h2>
       <p>
         A beautiful theme cannot fix unclear products or delivery promises. Before
         building pages, decide exactly what a new customer can buy and what happens
         after checkout.
       </p>
-      <h3>Convert rewards into a customer friendly catalog</h3>
+      <h3>Turn pledge rewards into retail products</h3>
       <p>
         Campaign rewards are often bundles built around pledge logic. Store
         products should be understandable without the campaign tier chart. Separate
@@ -151,7 +151,7 @@ export default function MoveKickstarterToShopifyGuide() {
         <li>Explain preorder or backorder timing beside the purchase action.</li>
         <li>Separate new retail orders from unfulfilled backer rewards operationally.</li>
       </ul>
-      <h3>Resolve the less visible store decisions</h3>
+      <h3>Confirm shipping, payments and policies</h3>
       <p>
         Confirm shipping regions, tax settings, return policy, customer support
         address, payment methods and inventory location. If fulfillment is still in
@@ -161,10 +161,7 @@ export default function MoveKickstarterToShopifyGuide() {
 
       <h2 id="content">3. Turn campaign content into store content</h2>
       <p>
-        The best Kickstarter campaign content answers one question: why should this
-        project exist? The best ecommerce content also answers: what exactly am I
-        buying, which version is right for me, when will it arrive and what should I
-        do next?
+        Store customers need the product contents, edition differences, price and delivery status. Keep useful gameplay explanations from the campaign and adapt them to that purchase.
       </p>
       <ArticleTable
         caption="How to adapt campaign assets for a permanent store"

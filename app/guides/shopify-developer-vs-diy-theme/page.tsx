@@ -9,7 +9,7 @@ import { pageMetadata } from "../../site-config";
 import {contentDates} from "../../content-dates";
 
 export const metadata = pageMetadata({
-  title: "Shopify Developer vs DIY Theme for Tabletop Brands",
+  title: "Shopify Developer vs DIY Theme",
   description:
     "Compare hiring a Shopify developer with building from a DIY theme. See the cost, time, control and best fit for a tabletop game store.",
   path: "/guides/shopify-developer-vs-diy-theme",
@@ -54,8 +54,8 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       slug="shopify-developer-vs-diy-theme"
       category="Shopify build comparison"
       title="Shopify Developer vs DIY Theme: Which Is Right for Your Tabletop Store?"
-      description="Both routes can produce a strong store. The right choice depends on whether you want to assemble it yourself or hand the complete build to a specialist."
-      answer="Choose a DIY Shopify theme when your catalog is straightforward, your assets are ready and you can dedicate time to store structure, content entry and testing. Hire a Shopify developer when you want the storefront planned, designed, built and polished for you, especially when your tabletop catalog includes several editions, expansions, bundles or a firm launch date."
+      description="Compare building a tabletop Shopify store yourself with hiring a developer. Check who will handle products, page content, checkout setup and testing."
+      answer="Use a DIY Shopify theme if your products and artwork are ready and you have time to configure and test the store. Hire a developer when the catalogue, integrations or deadline need more support. Compare written scopes so you know who handles content, setup and launch checks."
       published="2026-07-21"
       updated={contentDates.shopifyDeveloperVsDiyTheme}
       readTime="8 minute read"
@@ -98,7 +98,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         testing and publication with the merchant.
       </ArticleDefinition>
 
-      <h2 id="difference">The practical difference is who owns the work</h2>
+      <h2 id="difference">Who handles the store setup?</h2>
       <p>
         A theme and a developer are not two versions of the same purchase. A theme
         provides the storefront framework. A developer takes responsibility for
@@ -131,7 +131,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         ]}
       />
 
-      <h2 id="diy">Choose a DIY Shopify theme when you want control</h2>
+      <h2 id="diy">When to build the store yourself</h2>
       <p>
         A premium theme is the efficient route when the store does not need a new
         design system from zero. You start with tested layouts and use Shopify&apos;s
@@ -148,7 +148,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       </ul>
       <p>Use the free <Link href="/resources/board-game-shopify-store-checklist">store checklist</Link> to organise your catalogue and compare the build responsibilities before choosing a route.</p>
 
-      <h2 id="developer">Hire a Shopify developer when you want the result</h2>
+      <h2 id="developer">When to hire a Shopify developer</h2>
       <p>
         A developer led build is valuable when the work extends beyond choosing
         colors and placing images. Tabletop stores often need decisions about core
@@ -168,7 +168,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       <p>Shopify recommends defining requirements, budget, timing and expected outcomes before contacting a Partner. Ask for a written quote that matches your catalogue and operational needs.</p>
       <ArticleCallout>Agree the project scope, review process and timing with the developer before committing.</ArticleCallout>
 
-      <h2 id="cost">Compare the finished cost, not only the starting price</h2>
+      <h2 id="cost">Compare setup costs and your team’s time</h2>
       <p>
         The theme price is only one part of a DIY build. The complete cost can also
         include content preparation, image formatting, product entry, apps,

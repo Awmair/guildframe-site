@@ -77,8 +77,8 @@ export default function KickstarterToShopifyPage() {
               name: "Kickstarter to Shopify for Funded Tabletop Games",
               url: absoluteUrl("/kickstarter-to-shopify"),
               description:
-                "A practical post campaign Shopify service for funded tabletop creators.",
-              about: { "@id": absoluteUrl("/done-for-you-shopify-store#service") },
+                "Store planning guidance for tabletop publishers moving from Kickstarter to Shopify.",
+              about: { "@type": "Thing", name: "Kickstarter to Shopify migration" },
               primaryImageOfPage: {
                 "@type": "ImageObject",
                 url: absoluteUrl("/images/campaign/hero.webp"),
@@ -117,8 +117,8 @@ export default function KickstarterToShopifyPage() {
           <div className="campaign-service-hero-grid">
             <div>
               <h1>
-                Your campaign funded.
-                <em>Now build what comes next.</em>
+                Move from Kickstarter{" "}
+                <em>to a Shopify store.</em>
               </h1>
               <p>
                 After a funded tabletop campaign, plan a permanent
@@ -139,9 +139,9 @@ export default function KickstarterToShopifyPage() {
             <div className="campaign-service-hero-image">
               <img
                 src="/images/campaign/hero.webp"
-                alt="A funded board game campaign becoming a permanent online store with organized products and shipping"
-                width="1828"
-                height="860"
+                alt="Original tabletop concepts including board games, cards, RPG books, miniatures and dice"
+                width="1774"
+                height="887"
                 fetchPriority="high"
                 decoding="async"
               />
@@ -151,23 +151,23 @@ export default function KickstarterToShopifyPage() {
 
         <section className="campaign-pressure-section">
           <div className="campaign-pressure-heading">
-            <h2>The campaign ended. The commercial work did not.</h2>
+            <h2>Selling your game after Kickstarter</h2>
             <p>
               New buyers still need somewhere to order, backers need clear boundaries
               and the game needs a home beyond the campaign page.
             </p>
           </div>
           <div className="campaign-pressure-grid">
-            <article><strong>Capture late demand</strong><p>Choose whether late buyers belong in Kickstarter, a pledge manager or a clearly labeled Shopify preorder.</p></article>
-            <article><strong>Protect backer trust</strong><p>Keep campaign fulfillment separate from new retail orders and repeat delivery expectations wherever customers buy.</p></article>
-            <article><strong>Open permanent retail</strong><p>Turn rewards into understandable products, editions, bundles and add ons that can support future releases.</p></article>
+            <article><strong>Choose where late buyers order</strong><p>Choose whether late buyers belong in Kickstarter, a pledge manager or a clearly labeled Shopify preorder.</p></article>
+            <article><strong>Keep backer rewards separate</strong><p>Keep campaign fulfillment separate from new retail orders and repeat delivery expectations wherever customers buy.</p></article>
+            <article><strong>Prepare store products</strong><p>Turn rewards into understandable products, editions, bundles and add ons that can support future releases.</p></article>
           </div>
         </section>
 
         <section className="campaign-timeline-section">
           <div className="campaign-section-heading">
             <h2>A practical post campaign timeline.</h2>
-            <p>Prepare the store early, then publish only when the buying promise is accurate.</p>
+            <p>Prepare products and pages while fulfilment continues. Open sales when you can state availability and delivery terms accurately.</p>
           </div>
           <ol>
             {timeline.map((item, index) => (
@@ -181,8 +181,8 @@ export default function KickstarterToShopifyPage() {
 
         <section className="campaign-handoff-section">
           <div className="campaign-section-heading campaign-section-heading-light">
-            <h2>Give every platform one clear job.</h2>
-            <p>Do not force Shopify to become a pledge manager or let the pledge manager become the permanent brand store.</p>
+            <h2>What Kickstarter, pledge managers and Shopify handle</h2>
+            <p>Keep a record of which system handles campaign pledges, delivery details and new store orders.</p>
           </div>
           <div className="campaign-handoff-grid">
             <article><span>Kickstarter</span><h3>Funding and campaign communication</h3><p>Keep the original pledge record, campaign updates and backer promises connected to the campaign.</p></article>
@@ -197,15 +197,15 @@ export default function KickstarterToShopifyPage() {
             <h2>Preorders and late pledges need different promises.</h2>
             <p>
               A late pledge belongs to the campaign context. A Shopify preorder is a new store order.
-              We configure the product status, payment approach, inventory rule and delivery copy so buyers understand the difference.
+              Set product availability, payments, inventory and delivery text to match that new order.
             </p>
             <Link href="/guides/sell-board-game-preorders-on-shopify">Read the Shopify preorder guide ↗</Link>
           </div>
           <div>
-            <h2>International sales start before checkout.</h2>
+            <h2>Plan international shipping, VAT and duties</h2>
             <p>
               Shipping zones, package weights, duties and tax treatment affect the promise customers see.
-              We configure Shopify around your operational decision, including EU VAT and IOSS requirements where relevant.
+              Confirm the tax and customs requirements for your shipping model, then configure Shopify accordingly.
             </p>
             <Link href="/guides/selling-miniatures-internationally-vat-ioss">Plan VAT and IOSS setup ↗</Link>
           </div>

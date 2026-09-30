@@ -52,8 +52,8 @@ export default function LatePledgesVsShopifyGuide() {
       slug="kickstarter-late-pledges-vs-shopify"
       category="Post campaign strategy"
       title="Selling After Kickstarter: Late Pledges, Preorders or Shopify?"
-      description="If people find your game after the campaign closes, decide whether they should place a late pledge, preorder or store order."
-      answer="After Kickstarter, use late pledges to extend eligible campaign rewards, preorders to sell a clearly defined future product and Shopify to build a permanent branded store. Many tabletop creators use a short campaign adjacent late pledge period, then move ongoing preorders and retail sales to Shopify. Keep pricing, delivery timing and backer fulfillment boundaries consistent across every channel."
+      description="Compare Kickstarter Late Pledges, retail preorders and Shopify orders after your campaign closes."
+      answer="Use Kickstarter Late Pledges for eligible campaign rewards and the backer workflow. Use Shopify for ongoing retail orders or clearly labelled preorders. Before using both, decide which system owns each order and how you will track stock and delivery updates."
       published="2026-07-16"
       updated={contentDates.latePledgesVsShopify}
       readTime="7 minute read"

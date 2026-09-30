@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/sell-board-game-preorders-on-shopify",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-17",
+  modifiedTime: "2026-09-30",
   keywords: [
     "board game preorders Shopify",
     "sell board game preorders online",
@@ -46,10 +46,10 @@ export default function SellBoardGamePreordersOnShopifyPage() {
       slug="sell-board-game-preorders-on-shopify"
       category="Board game preorders"
       title="How to Sell Board Game Preorders on Shopify After Crowdfunding"
-      description="A preorder should make future delivery easy to understand, not turn a permanent store into an ambiguous pledge page."
-      answer="To sell board game preorders on Shopify, choose a compatible preorder app, separate preorder inventory from backer obligations, label the product and purchase action clearly, publish realistic fulfillment timing, test payment and cancellation behavior, and send updates when dates change. Use Shopify for permanent retail orders and keep campaign specific reward management in the appropriate crowdfunding system."
+      description="Set up board game preorders on Shopify with clear payment timing, expected delivery and stock reserved for existing backers."
+      answer="To sell board game preorders on Shopify, choose a compatible preorder app, confirm payment timing and reserve stock for backer rewards. Label each preorder near the price and purchase button. Test checkout, notifications, cancellation and refunds before taking orders."
       published="2026-07-17"
-      updated="2026-07-17"
+      updated="2026-09-30"
       readTime="8 minute read"
       faqs={faqs}
       sources={[

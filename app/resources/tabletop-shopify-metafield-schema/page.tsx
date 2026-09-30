@@ -58,8 +58,8 @@ export default function TabletopMetafieldSchemaPage() {
       sidebarTitle="In this reference"
       category="Tabletop product data"
       title="Tabletop Shopify Metafield Schema"
-      description="A reusable structure for the product data a tabletop store actually needs, so product pages, filters and structured data stay consistent as the catalog grows."
-      answer="A tabletop Shopify store needs structured product data that Shopify does not provide by default: player count, playtime, age guidance, components, base game compatibility, format, scale and delivery status. This reference publishes a namespaced metafield schema covering board games, TTRPGs and miniatures, with the type and purpose of every field, so product pages, collection filters and AI generated sections all read the same values."
+      description="Define Shopify metafields for player count, components, format, compatibility, scale and delivery information."
+      answer="Use Shopify metafields to store tabletop product details separately from the description. This proposed schema covers board games, card games, RPG books, miniatures and terrain. Use the relevant fields for your catalogue and connect them to the theme sections and filters that display them."
       published={contentDates.metafieldSchema}
       updated={contentDates.metafieldSchema}
       readTime="7 minute reference"
@@ -93,7 +93,7 @@ export default function TabletopMetafieldSchemaPage() {
         displayed in a specific place, filtered on, and read by theme code.
       </ArticleDefinition>
 
-      <h2 id="why">Why the schema comes before the storefront</h2>
+      <h2 id="why">Define product fields before building pages</h2>
       <p>
         Most tabletop stores put player count, components and compatibility into
         the product description, then discover they cannot filter a collection
@@ -217,8 +217,7 @@ export default function TabletopMetafieldSchemaPage() {
 
       <h2 id="using-it">Using it on the storefront</h2>
       <p>
-        The schema earns its keep in four places. Plan all four before you build
-        the product page.
+        These fields can support product pages, collection filters, structured data and generated theme sections. Decide where each field will appear before adding it.
       </p>
       <ol>
         <li>

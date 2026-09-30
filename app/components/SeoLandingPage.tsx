@@ -36,7 +36,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
       {
         "@type": "ListItem",
         position: 2,
-        name: content.title,
+        name: `${content.title} ${content.highlight}`,
         item: absoluteUrl(`/${content.slug}`),
       },
     ],
@@ -90,7 +90,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
       <main className="seo-main" id="main-content">
         <section className="seo-hero">
           <Breadcrumbs
-            items={[{ label: "Home", href: "/" }, { label: content.eyebrow }]}
+            items={[{ label: "Home", href: "/" }, { label: `${content.title} ${content.highlight}` }]}
           />
           <div className="seo-hero-grid">
             <div className="seo-hero-copy">
@@ -105,8 +105,8 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               <img
                 src={content.image}
                 alt={content.imageAlt}
-                width="1536"
-                height="1024"
+                width="1000"
+                height="750"
                 fetchPriority="high"
                 decoding="async"
               />
@@ -145,7 +145,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
 
         <section className="seo-how-section">
           <div className="seo-section-heading seo-section-heading-light">
-            <h2>From assets to a storefront you can own.</h2>
+            <h2>Three steps to prepare your Shopify store</h2>
           </div>
           <div className="seo-steps">
             {content.steps.map((step, index) => (
@@ -161,7 +161,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
 
         <section className="seo-faq-section">
           <div className="seo-section-heading">
-            <h2>Questions creators ask before choosing a route.</h2>
+            <h2>Shopify store planning questions</h2>
           </div>
           <div className="seo-faq-list">
             {content.faqs.map((faq, index) => (
@@ -179,7 +179,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
 
         <section className="seo-related-section">
           <div className="seo-section-heading">
-            <h2>Plan the next stage of your tabletop business.</h2>
+            <h2>Shopify setup and migration guides</h2>
           </div>
           <div className="seo-related-grid">
             {content.related.map((item) => (

@@ -5,7 +5,7 @@ import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
 
 export const metadata = pageMetadata({
-  title: "Kickstarter Campaign Design and Launch Guides",
+  title: "Kickstarter Page Design & Launch Guides",
   description:
     "Practical launch guides for tabletop Kickstarter and Gamefound campaigns. Plan design costs, artwork, reward graphics and a campaign page ready for backers.",
   path: "/guides",
@@ -21,7 +21,7 @@ const afterFundingGuides = [
   },
   {
     title: "What Happens After Your Kickstarter Is Funded?",
-    copy: "A clear roadmap for payment collection, backer data, fulfillment, late demand and the permanent store.",
+    copy: "What to do about payments, backer details, production, delivery and new orders after funding.",
     href: "/guides/what-happens-after-kickstarter-is-funded",
     tag: "Post funding roadmap",
   },
@@ -51,7 +51,7 @@ const afterFundingGuides = [
   },
   {
     title: "BackerKit vs Shopify vs Gamefound: What Each Platform Does After Crowdfunding",
-    copy: "Separate crowdfunding, pledge management and long term ecommerce before choosing your stack.",
+    copy: "Compare the tools for funding, surveys, backer rewards and ongoing retail orders.",
     href: "/guides/backerkit-vs-shopify-vs-gamefound",
     tag: "Platform comparison",
   },
@@ -140,7 +140,7 @@ export default function GuidesPage() {
       <main className="guides-main" id="guides-content">
         <section className="guides-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
-          <h1>Guides for your <em>next game launch.</em></h1>
+          <h1>Kickstarter page design <em>&amp; launch guides.</em></h1>
           <p>
             What to budget for design, which files to send and how to review your campaign before launch. There are also guides for planning a store after funding.
           </p>
@@ -165,6 +165,9 @@ export default function GuidesPage() {
           </div>
           <nav aria-label="Guildframe solutions">
             <Link href="/board-game-kickstarter-campaign-design">Board games ↗</Link>
+            <Link href="/card-game-kickstarter-campaign-design">Card games &amp; TCGs ↗</Link>
+            <Link href="/gamefound-campaign-design">Gamefound page design ↗</Link>
+            <Link href="/tabletop-accessories-campaign-design">Dice &amp; accessories ↗</Link>
             <Link href="/ttrpg-kickstarter-campaign-design">TTRPGs ↗</Link>
             <Link href="/miniatures-kickstarter-campaign-design">Miniatures ↗</Link>
             <Link href="/kickstarter-to-shopify">Kickstarter to Shopify ↗</Link>

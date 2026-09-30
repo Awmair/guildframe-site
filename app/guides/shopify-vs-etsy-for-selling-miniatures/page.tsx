@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "What does Etsy charge sellers?",
     answer:
-      "Etsy currently lists a 20 cent listing fee, a 6.5 percent transaction fee and separate payment processing charges that vary by country. Other fees can apply. Confirm the current fees for your location in Etsy Help before comparing costs.",
+      "As of September 30, 2026, Etsy lists a 20 cent listing fee, a 6.5 percent transaction fee and separate payment processing charges that vary by country. Other fees can apply. Confirm the current fees for your location in Etsy Help before comparing costs.",
   },
 ];
 
@@ -47,8 +47,8 @@ export default function ShopifyVsEtsyMiniaturesPage() {
       slug="shopify-vs-etsy-for-selling-miniatures"
       category="Miniature store platform comparison"
       title="Shopify vs Etsy for Selling Miniatures and Terrain"
-      description="Etsy provides marketplace discovery. Shopify provides an owned store. The strongest choice depends on whether you need initial reach, brand control or both."
-      answer="Choose Etsy when marketplace discovery and a low setup barrier matter most. Choose Shopify when you want a branded miniature store, direct customer relationships, stronger catalog organization and control over content and checkout. Established sellers can use Etsy for discovery and Shopify as the permanent brand store, provided inventory and customer promises stay consistent."
+      description="Compare Etsy’s marketplace with a Shopify store for miniature products, customer discovery, fees and catalogue control."
+      answer="Etsy offers marketplace search and a listing based setup. Shopify gives you a dedicated store with control over product pages, collections and customer checkout. Choose based on how customers find you and how you want to manage the catalogue. If you use both, keep stock and delivery information consistent."
       published="2026-07-23"
       updated={contentDates.shopifyVsEtsyMiniatures}
       readTime="7 minute read"
@@ -117,12 +117,12 @@ export default function ShopifyVsEtsyMiniaturesPage() {
         <li>The seller does not yet have an email list or reliable traffic source.</li>
       </ul>
       <ArticleCallout>
-        Compare total fees using real orders. Etsy currently lists a 20 cent listing
+        Compare total fees using real orders. As of September 30, 2026, Etsy lists a 20 cent listing
         fee and a 6.5 percent transaction fee, with separate payment processing and
         possible advertising or regional charges.
       </ArticleCallout>
 
-      <h2 id="shopify">Choose Shopify when the catalog becomes a brand</h2>
+      <h2 id="shopify">When a dedicated Shopify store helps</h2>
       <p>
         Shopify becomes more useful when customers need to understand scales,
         factions, material options, terrain collections, compatible products and
@@ -141,7 +141,7 @@ export default function ShopifyVsEtsyMiniaturesPage() {
         The <Link href="/shopify-theme-for-miniatures">miniatures store planning reference</Link> covers detailed products, variants and collections.
       </p>
 
-      <h2 id="both">Using both can be the strongest channel strategy</h2>
+      <h2 id="both">Using Etsy and Shopify together</h2>
       <p>
         Etsy can remain a discovery channel while Shopify becomes the permanent
         brand store. The arrangement works only when product data, pricing,
@@ -160,7 +160,7 @@ export default function ShopifyVsEtsyMiniaturesPage() {
         ]}
       />
 
-      <h2 id="move">Plan the move without losing working demand</h2>
+      <h2 id="move">Keep existing listings and inventory accurate</h2>
       <ol>
         <li><strong>Audit profitable Etsy listings.</strong> Keep the listings that bring customers who buy.</li>
         <li><strong>Build the Shopify catalog.</strong> Use clearer product names, collections, variants and compatibility information.</li>

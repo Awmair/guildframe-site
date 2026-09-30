@@ -21,7 +21,7 @@ export const siteConfig = {
   price: "$975",
   campaignPrice: "$975",
   description:
-    "Kickstarter and Gamefound campaign design for board games, card games, TTRPGs, miniatures and tabletop accessories. Campaign design costs $975.",
+    "Kickstarter and Gamefound page design for tabletop games. Campaign copy, graphics and reward comparisons for $975 USD, with a free opening mockup.",
 };
 
 export const absoluteUrl = (path = "/") =>
@@ -31,7 +31,6 @@ export function pageMetadata({
   title,
   description,
   path,
-  keywords,
   kind = "website",
   publishedTime,
   modifiedTime,
@@ -62,8 +61,7 @@ export function pageMetadata({
   return {
     title,
     description,
-    keywords,
-    authors: [{ name: "Guildframe", url: "/authors/guildframe" }],
+    authors: [{ name: "Umair", url: "/authors/guildframe" }],
     creator: "Guildframe",
     publisher: "Guildframe",
     alternates: { canonical: path },
@@ -74,7 +72,7 @@ export function pageMetadata({
             type: "article",
             publishedTime,
             modifiedTime: modifiedTime ?? publishedTime,
-            authors: ["Guildframe"],
+            authors: [absoluteUrl("/authors/guildframe")],
           }
         : { ...sharedOpenGraph, type: "website" },
     twitter: {

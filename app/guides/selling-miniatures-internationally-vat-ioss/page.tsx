@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/selling-miniatures-internationally-vat-ioss",
   kind: "article",
   publishedTime: "2026-07-23",
-  modifiedTime: "2026-07-23",
+  modifiedTime: "2026-09-30",
   keywords: [
     "selling miniatures internationally VAT IOSS",
     "Shopify EU VAT miniatures",
@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Did EU low value import rules change in July 2026?",
     answer:
-      "Yes. EU guidance states that the previous customs duty exemption for low value imports ended on July 1, 2026, with a temporary 3 euro customs duty per item for qualifying consignments. Confirm current treatment with official sources and a customs specialist before shipping.",
+      "Yes. EU guidance states that the previous customs duty exemption for low value imports ended on July 1, 2026, with a temporary €3 duty for qualifying B2C consignments valued at €150 or less. The declared item or line grouping affects the charge; it is not automatically €3 for each miniature. Confirm current treatment with official sources and a customs specialist before shipping.",
   },
 ];
 
@@ -52,10 +52,10 @@ export default function SellingMiniaturesInternationallyPage() {
       slug="selling-miniatures-internationally-vat-ioss"
       category="International tabletop sales"
       title="Selling Miniatures Internationally: VAT, IOSS and Shopify Setup"
-      description="International selling starts with product data, tax decisions and delivery promises before it reaches the checkout settings."
-      answer="To sell miniatures, terrain or tabletop games internationally through Shopify, choose the markets you can serve, record accurate weights, HS codes and country of origin, decide whether duties are paid by the seller or customer, confirm VAT and IOSS obligations with a qualified adviser, configure shipping and tax settings, update policies and test representative orders before launch."
+      description="Plan international miniature sales by checking destination markets, package data, VAT, customs duties and who pays import charges."
+      answer="Before selling miniatures internationally, confirm the markets you can serve and record packed weights, dimensions, HS codes and country of origin. Agree who pays import charges, check VAT and IOSS requirements with an adviser, configure shipping and taxes, then test orders for each region."
       published="2026-07-23"
-      updated="2026-07-23"
+      updated="2026-09-30"
       readTime="9 minute read"
       faqs={faqs}
       sources={[
@@ -72,7 +72,7 @@ export default function SellingMiniaturesInternationallyPage() {
         {
           label: "EU applies 3 euro customs duty per item on low value consignments",
           publisher: "European Commission Access2Markets",
-          href: "https://webgate.acceptance.ec.europa.eu/portal9/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments",
+          href: "https://trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments",
         },
         {
           label: "EU VAT One Stop Shop",
@@ -138,8 +138,8 @@ export default function SellingMiniaturesInternationallyPage() {
       <p>
         VAT and customs duty are different charges. IOSS is a VAT reporting route for
         eligible imported goods. From July 1, 2026, EU guidance states that the former
-        customs duty exemption for low value ecommerce imports ended and a temporary
-        3 euro duty per item applies to qualifying consignments.
+        customs duty exemption for low value ecommerce imports ended. A
+        €3 temporary duty applies to qualifying B2C consignments valued at €150 or less. Its calculation depends on the declared items and grouping of declaration lines; do not assume it is charged separately for every sculpt.
       </p>
       <p>
         This can materially affect orders containing several miniature packs or add

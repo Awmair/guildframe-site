@@ -10,6 +10,7 @@ export default function robots(): MetadataRoute.Robots {
       // (for example /about.txt). Those files duplicate page text, are not
       // landing pages, and only exist for client side navigation.
       { userAgent: "*", allow: ["/", "/llms.txt"], disallow: "/*.txt$" },
+      { userAgent: ["Googlebot", "Bingbot", "PerplexityBot", "Claude-SearchBot"], allow: ["/", "/llms.txt"], disallow: "/*.txt$" },
       { userAgent: "OAI-SearchBot", allow: ["/", "/llms.txt"], disallow: "/*.txt$" },
       { userAgent: "ChatGPT-User", allow: ["/", "/llms.txt"], disallow: "/*.txt$" },
       {

@@ -35,7 +35,7 @@ export function TrustPage({
             <strong>How Guildframe works</strong>
             <Link href="/about">About Guildframe</Link>
             <Link href="/editorial-policy">Editorial policy</Link>
-            <Link href="/authors/guildframe">Editorial team</Link>
+            <Link href="/authors/guildframe">About the author</Link>
             <Link href="/resources">Reference library</Link>
           </aside>
         </article>

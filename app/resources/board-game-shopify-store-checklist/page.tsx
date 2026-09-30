@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   path: "/resources/board-game-shopify-store-checklist",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-07-17",
+  modifiedTime: "2026-09-30",
   keywords: ["board game Shopify store checklist", "Shopify store checklist", "tabletop ecommerce checklist"],
 });
 
@@ -39,10 +39,10 @@ export default function BoardGameShopifyStoreChecklistPage() {
       sidebarTitle="In this checklist"
       category="Board game ecommerce"
       title="Board Game Shopify Store Checklist"
-      description="Use this launch reference to check the catalog, content, operations, mobile experience and search essentials of a tabletop Shopify store."
-      answer="A launch ready board game Shopify store needs customer friendly products, clear editions and bundles, strong product media, complete policies, tested checkout and shipping, responsive mobile layouts, accessible content, accurate structured data and a final test order."
+      description="Check products, page content, shipping, checkout, mobile layouts and search settings before opening your board game store."
+      answer="Before launching a board game Shopify store, confirm product contents and editions, add shipping and return policies, and configure payments, taxes and inventory. Check every key page on a phone and place a test order. Verify that search metadata and structured data match the products."
       published="2026-07-17"
-      updated="2026-07-17"
+      updated="2026-09-30"
       readTime="7 minute reference"
       faqs={faqs}
       sources={[
@@ -85,7 +85,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
         ]}
       />
 
-      <h2 id="content">2. Store content and product storytelling</h2>
+      <h2 id="content">2. Page content and product explanations</h2>
       <p>
         A board game Shopify theme should help customers understand the game before
         it asks them to buy. Use campaign artwork and story, but rebuild the page
@@ -132,7 +132,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
         <li>Motion respects reduced motion preferences</li>
       </ul>
 
-      <h2 id="search">5. Search and answer engine readiness</h2>
+      <h2 id="search">5. Search titles, canonical URLs and structured data</h2>
       <ul className="article-checklist">
         <li>Each page has a unique title, description and canonical URL</li>
         <li>Product facts shown to customers match Product and Offer structured data</li>
