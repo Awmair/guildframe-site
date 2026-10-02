@@ -1,13 +1,14 @@
 # Architecture
 
-Reviewed: 2026-09-30. Static Next.js App Router export, deployed by the existing Cloudflare Pages integration from GitHub main. No application backend, database or Actions deployment workflow.
+Reviewed: 2026-10-02. Static Next.js App Router export, deployed by the existing Cloudflare Pages integration from GitHub main. A standalone contact Worker is prepared but awaits Email Sending access and delivery verification before deployment and form activation. No database or Actions deployment workflow.
 
 ## Main modules
 
 - app/page.tsx: server-rendered campaign homepage.
 - app/campaign.css: Playful Precision style system, responsive layouts, glass and reduced-motion/transparency/contrast behaviour, loaded after legacy editorial styles.
 - app/components/CampaignMotion.tsx: progressive one-time reveal enhancement. Base CSS keeps content visible without JavaScript.
-- app/components/ProjectInquiryForm.tsx: existing Formspree route, campaign fields, native validation and accessible success/error states.
+- app/components/ProjectInquiryForm.tsx: configurable endpoint, campaign fields, native validation, synchronous duplicate-submit prevention and accessible success/error states. The existing endpoint remains the default until the contact Worker is verified.
+- workers/contact: standalone Cloudflare email Worker and its route/binding configuration. See CONTACT_EMAIL.md for setup and activation.
 - app/campaign-content.ts: category content, primary FAQs and campaign modification date.
 - app/campaign-pages.ts: seven service and category briefs.
 - app/[campaign]/page.tsx: statically generated service/category routes with unique metadata.
@@ -24,4 +25,4 @@ Assets are generated with ImageGen and optimised with Sharp. Manrope is self-hos
 
 ## Delivery gates
 
-Lint, type checking, actual static output tests, production-origin preflight and browser review. Browser review includes mobile, desktop, image loading, native form validation, intercepted success/error responses, reduced motion and no-JavaScript visibility. The inbox behind Formspree is external configuration and needs separate recipient verification.
+Lint, type checking, contact Worker tests, actual static output tests, production-origin preflight and browser review. Browser review includes mobile, desktop, image loading, native form validation, intercepted success/error responses, reduced motion and no-JavaScript visibility. The contact Worker additionally requires a live email acceptance and recipient inbox check before activation.

@@ -3,6 +3,7 @@ import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const outputRoot = new URL("../out/", import.meta.url);
+const formEndpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT?.trim() || "https://formspree.io/f/mrewkezq";
 
 const pages = [
   ["/", "Kickstarter Page Design for Tabletop Games | Guildframe", "Kickstarter page design"],
@@ -79,10 +80,10 @@ test("exports the project inquiry form on every public page", async (t) => {
     await t.test(path, async () => {
       const html = await readPage(path);
       const form = html.match(
-        /<form\b(?=[^>]*\baction="https:\/\/formspree\.io\/f\/mrewkezq")[^>]*>[\s\S]*?<\/form>/i,
+        new RegExp(`<form\\b(?=[^>]*\\baction="${formEndpoint.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}")[^>]*>[\\s\\S]*?<\\/form>`, "i"),
       )?.[0];
 
-      assert.ok(form, `missing Formspree inquiry form: ${path}`);
+      assert.ok(form, `missing project inquiry form: ${path}`);
       assert.match(
         form,
         /<input\b(?=[^>]*\bname="name")(?=[^>]*\btype="text")(?=[^>]*\brequired(?:="")?)[^>]*>/i,

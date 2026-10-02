@@ -1,10 +1,10 @@
 # Guildframe website
 
-Reviewed: 2026-09-30
+Reviewed: 2026-10-02
 
 Static Next.js website for direct-customer Kickstarter and Gamefound campaign design.
 
-Campaign design is $975 USD. A free opening section mockup is requested through the existing Formspree endpoint. Public contact is umair@guildframe.com. Formspree controls the recipient inbox; source code does not configure or verify that external setting.
+Campaign design is $975 USD. Public contact is umair@guildframe.com. A Cloudflare contact Worker is prepared for formatted free-mockup enquiries, with visitor Reply-To. Account access and an inbox test are required before activation; the existing form endpoint stays active in production until then. See [contact email setup](docs/CONTACT_EMAIL.md).
 
 Playful Precision identity: cream, coral, petrol and mint; Manrope typography; an ImageGen logo and six ImageGen game visuals. Images are original illustrative concepts, not client campaigns. See docs/CAMPAIGN_REBRAND.md for the visual brief, asset provenance and content map.
 
