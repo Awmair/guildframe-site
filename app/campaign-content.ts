@@ -7,22 +7,19 @@ export const gameCategories = [
  {slug:"tabletop-accessories-campaign-design",name:"Dice & accessories",tag:"Dice, storage & gaming accessories",image:"accessories",alt:"Original colourful dice, a coral dice tray, petrol card sleeves and mint tokens",copy:"Show the materials, dimensions and how the accessory fits into a game night.",focus:"Dice, trays, sleeves, tokens, organisers, gaming bags and storage",details:["Dimensions, materials and compatibility explained in everyday language","Useful close ups that show finishes and how the accessory is used","Colour and size choices shown consistently across reward tiers","Bundle contents and any game products shown for context distinguished"]},
 ] as const;
 export const campaignFaqs = [
- {question:"How much does campaign design cost?",answer:"The price is $975 USD for one campaign. We agree the sections, files and schedule before starting. Platform fees, manufacturing and advertising are separate costs."},
- {question:"What is included in the $975 campaign design?",answer:"Page structure, campaign copy, section graphics and reward comparisons using your artwork. Stretch goal graphics are included where needed. The brief lists the final deliverables. New illustration, video and paid advertising are separate."},
- {question:"Do you design for Kickstarter and Gamefound?",answer:"Yes. I prepare the copy and graphics for your chosen platform. Tell me whether you’re using Kickstarter or Gamefound when you request the mockup."},
- {question:"How does the free mockup work?",answer:"Send a short description and a link to any artwork you can share. I’ll review it and design an opening campaign section. You can look at that before deciding whether to book. There’s no payment or obligation."},
- {question:"Can you work with a game that is still in development?",answer:"Yes, if you have enough artwork and a description to work from. Tell me which pieces are unfinished. We can explore the design early, then check the final product details before launch."},
- {question:"Will campaign design guarantee funding?",answer:"No. Design helps people understand the project. Funding also depends on the game, price, audience and launch preparation, so I can’t promise a result."},
- {question:"Do I need finished artwork before getting in touch?",answer:"You need enough artwork to explore a direction, but every piece doesn’t have to be final. Send what you have and label placeholders. The final page needs the artwork and product facts you intend to publish."},
- {question:"How long will the campaign design take?",answer:"I’ll confirm the schedule after reviewing your brief, available artwork and launch date. We allow time for design, feedback and a platform preview check. Tell me about a fixed deadline in your first message."},
- {question:"What if I want changes to the design?",answer:"We agree how feedback and revisions will work before the $975 project starts. Review the opening mockup first so we can discuss the direction before designing the full page."},
- {question:"Will you write the campaign copy?",answer:"Yes. I write the campaign copy from your game information and review it with you. You confirm the rules, contents, production details and other product facts before publication."},
- {question:"What files will I receive?",answer:"You receive the campaign graphics prepared for your chosen platform. We list the output formats and any editable source files in the brief before you book, so you know what will be handed over."},
- {question:"Can you help if I already have a draft campaign page?",answer:"Yes. Send the draft and tell me what needs work. We’ll review the structure, copy and graphics, then agree which sections the $975 project covers."},
- {question:"Do I have to book after the free mockup?",answer:"No. The opening mockup is free to request and there’s no obligation to book the full campaign. You can decide after you’ve seen the direction."},
-
+ {question:"What does Guildframe help with?",answer:"Planning, prelaunch pages and email, campaign copy and graphics, paid advertising and live campaign support. You can book a defined stage or a broader launch engagement. The proposal lists the work, owners, schedule and costs."},
+ {question:"How much does a full launch cost?",answer:"Full launches are quoted after reviewing the game, assets, audience, launch date and support needs. The proposal separates service fees, ad spend, software and other provider costs. Campaign design is also available on its own; its fixed price is listed on the campaign design page."},
+ {question:"Can I hire you just for design or ads?",answer:"Yes. You can book campaign creative, prelaunch preparation, paid advertising or live support separately. We agree where your existing team takes over and what Guildframe will deliver."},
+ {question:"Do you work on Kickstarter and Gamefound?",answer:"Yes. Tell me which platform you plan to use, or ask for help comparing the work involved. The campaign is prepared for your chosen platform and checked there before launch."},
+ {question:"Who manages the paid advertising?",answer:"Umair manages paid advertising at Guildframe. We agree the advertising channels, account access, test plan, spend limits and reporting before ads run. The media budget is separate from the service fee."},
+ {question:"How does the free mockup work?",answer:"Share a short game description and usable artwork. I’ll review it and design one opening campaign section so you can see a direction before booking creative work. It is free to request, with no payment or obligation to book."},
+ {question:"How early should I get in touch?",answer:"Once you can explain the game, share some artwork and discuss a possible launch date. If assets, rewards or production details are still changing, say so. We’ll check readiness and work out a schedule before promising a date."},
+ {question:"What if my launch date is close?",answer:"Send the date, current page, assets and the work still missing. I’ll review what fits the time available before accepting the scope. A smaller, realistic brief is better than a schedule that leaves no time to check the campaign."},
+ {question:"Do I keep my accounts, contacts and files?",answer:"Yes. The campaign and marketing accounts stay yours. We agree access and list the final files and editable sources in the brief. Email contacts are collected through your signup flow with clear permission to contact them."},
+ {question:"Will you guarantee funding or a return on ads?",answer:"No. The game, price, audience, production costs and launch preparation all affect the outcome. We set a test plan and budget, report what the tracking can show and agree when to adjust or stop spending."},
+ {question:"Do you handle manufacturing and shipping?",answer:"The launch service covers creative, marketing and the agreed campaign operations. You and your suppliers own manufacturing, freight, taxes and delivery. We can prepare backer updates and pledge-manager content around the facts you confirm."},
+ {question:"What happens before I pay?",answer:"We review your project and agree the deliverables, fees, payment schedule, support period and revision process in writing. If you want a creative preview, request the free opening mockup first."},
 ] as const;
-
 
 export const categoryFaqs: Record<string, {question:string;answer:string}[]> = {
  "board-game-kickstarter-campaign-design": [
@@ -31,7 +28,7 @@ export const categoryFaqs: Record<string, {question:string;answer:string}[]> = {
  ],
  "card-game-kickstarter-campaign-design": [
   {question:"Can you design a Kickstarter page for a TCG or party card game?",answer:"Yes. For a TCG, the page can explain the starter decks, sample cards and pack contents. For a party game, a sample round may explain the game in fewer steps. The copy and graphics use your confirmed card information."},
-  {question:"Does $975 include drawing new card artwork?",answer:"The campaign page uses your supplied card artwork. New card illustration and game design are separate work. The $975 brief covers campaign copy, page graphics and reward presentation."},
+  {question:"Does campaign design include drawing new card artwork?",answer:"The campaign page uses your supplied card artwork. New card illustration and game design are separate work. The design brief covers campaign copy, page graphics and reward presentation."},
  ],
  "ttrpg-kickstarter-campaign-design": [
   {question:"Can the page show both print books and PDF rewards?",answer:"Yes. I label the physical and digital contents separately and show when a print book includes its PDF. You provide the confirmed format, page count, binding and bundle details."},

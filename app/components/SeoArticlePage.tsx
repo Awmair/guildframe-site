@@ -182,7 +182,7 @@ export function SeoArticlePage({
               data-analytics-label="Campaign design"
               data-analytics-location="article sidebar"
             >
-              Campaign design · $975 ↗
+              Plan your game launch ↗
             </Link>
           </aside>
 
@@ -223,9 +223,9 @@ export function SeoArticlePage({
               ))}
             </section>
             <div className="article-cta">
-              <h2>Need help with your campaign page?</h2>
+              <h2>Need help preparing your launch?</h2>
               <p>
-                I design Kickstarter and Gamefound pages for tabletop projects. The $975 package covers page structure, copy and graphics. Send your game and artwork for a free opening mockup.
+                Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for tabletop projects. Share your game and launch plans to agree a scope. A free opening mockup is available for creative enquiries.
               </p>
               <div className="article-cta-actions">
                 <Link
@@ -235,7 +235,7 @@ export function SeoArticlePage({
                   data-analytics-label="Campaign design"
                   data-analytics-location="article CTA"
                 >
-                  See campaign design ↗
+                  Explore launch services ↗
                 </Link>
                 <Link
                   className="seo-button seo-button-outline"

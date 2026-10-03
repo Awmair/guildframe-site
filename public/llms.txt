@@ -1,23 +1,41 @@
 # Guildframe
 
-> Independent campaign design studio for tabletop Kickstarter and Gamefound projects, led by Umair.
+> Tabletop crowdfunding launch studio led by Umair, for Kickstarter and Gamefound.
 
-This is a supplemental service summary. It does not replace the HTML pages or sitemap.
+This supplemental summary does not replace the HTML pages or sitemap.
 
 ## Current service facts
 
-- Campaign design: $975 USD per agreed campaign, for Kickstarter or Gamefound.
-- Scope: page structure, copy shaped from supplied project facts, visual direction, section graphics, reward comparisons and stretch goal graphics where needed.
-- Free mockup: an opening campaign section to explore a direction, with no payment or obligation to book.
-- Timing and exact deliverables: confirmed in the written brief before the full project begins.
+- Services: launch planning, campaign creative, prelaunch landing pages and email, paid advertising, live campaign management and post-campaign communication.
+- Paid advertising: managed by Umair at Guildframe. Channels, access, spend limits and reporting are agreed in the project scope.
+- Pricing: broader launch work is quoted after a project review. Media spend, software, platform fees and external production are separate costs. The fixed design-only fee is published at https://guildframe.com/campaign-design#pricing.
+- Free mockup: one opening campaign section using supplied artwork, with no payment or obligation to book.
+- Deliverables, fees, payment schedule, support dates and revisions: agreed in writing before work starts.
 - Contact: umair@guildframe.com.
-- Categories: board games, card games and TCGs, TTRPGs, miniatures and terrain, dice and tabletop accessories.
-- New game illustration, video production, advertising, production and fulfilment are separate from campaign page design.
-- Concept imagery: original fictional games generated with ImageGen and labelled as concepts.
-- Past work: ScentedRealms, FutureProof Terrain and Quiver Time, linked to their real Kickstarter campaigns. Original campaign artwork and a credited Quiver Time product photo illustrate this section.
-- Testimonials: two verbatim client excerpts matched to ScentedRealms and FutureProof Terrain. No funding result is attributed to design.
-- Older Shopify articles are retained as after-funding references. The former paid Build Guide and Shopify build offers are no longer promoted.
-- No promise of funding success or search rankings.
+- Categories: board games, party and strategy card games, TCGs, TTRPGs, miniatures, STL collections, terrain, dice and tabletop accessories.
+- Accounts and email contacts stay with the creator. Email signup flows require clear permission.
+- Manufacturing, physical fulfilment, freight and tax decisions belong to the creator and relevant suppliers. Guildframe prepares the scoped launch work and communication.
+- Concept imagery: original fictional game mockups generated with ImageGen and labelled as concepts.
+- Past work: creative work for ScentedRealms, FutureProof Terrain and Quiver Time, with real Kickstarter links. These are creative examples, not attributed advertising results.
+- Testimonials: two verbatim client excerpts about the creative work, matched to ScentedRealms and FutureProof Terrain.
+- Historical Shopify guides remain useful after-funding references at their original URLs.
+- No guarantee of funding, advertising returns or search rankings.
+
+## Launch services
+
+- [Kickstarter launch services for tabletop games](https://guildframe.com/kickstarter-launch-services)
+- [Kickstarter prelaunch marketing](https://guildframe.com/kickstarter-prelaunch-marketing)
+- [Kickstarter paid advertising](https://guildframe.com/kickstarter-advertising)
+- [Kickstarter campaign management](https://guildframe.com/kickstarter-campaign-management)
+- [Gamefound launch services](https://guildframe.com/gamefound-launch-services)
+- [Post-campaign support](https://guildframe.com/post-campaign-support)
+
+## Marketing guides
+
+- [Board game Kickstarter marketing plan](https://guildframe.com/guides/board-game-kickstarter-marketing-plan)
+- [Kickstarter prelaunch email list](https://guildframe.com/guides/kickstarter-prelaunch-email-list)
+- [Kickstarter advertising budget for board games](https://guildframe.com/guides/kickstarter-advertising-budget-board-games)
+- [Live campaign updates and support](https://guildframe.com/guides/kickstarter-live-campaign-updates)
 
 ## Campaign services
 
@@ -46,7 +64,7 @@ This is a supplemental service summary. It does not replace the HTML pages or si
 - [Card Game and TCG Launch Guide](https://guildframe.com/guides/card-game-kickstarter-launch-guide)
 - [Miniatures and STL Launch Guide](https://guildframe.com/guides/miniatures-stl-kickstarter-launch-guide)
 
-- [Kickstarter Page Design Cost: $975 Copy & Graphics](https://guildframe.com/guides/board-game-kickstarter-campaign-design-cost)
+- [Kickstarter Campaign Design Cost & Budget Guide](https://guildframe.com/guides/board-game-kickstarter-campaign-design-cost)
 - [Board Game Kickstarter Page Checklist](https://guildframe.com/guides/board-game-kickstarter-page-checklist)
 - [What to Send Your Kickstarter Campaign Designer](https://guildframe.com/guides/what-to-send-kickstarter-campaign-designer)
 - [Kickstarter Reward Tier Graphics for Board Games](https://guildframe.com/guides/kickstarter-reward-tier-graphics)
@@ -57,14 +75,14 @@ This is a supplemental service summary. It does not replace the HTML pages or si
 
 ## Existing references and company pages
 
-- [Kickstarter Page Design for Tabletop Games](https://guildframe.com/)
-- [Book Your Campaign Design](https://guildframe.com/buy)
+- [Kickstarter Launch Services for Tabletop Games](https://guildframe.com/)
+- [Start Your Tabletop Launch Project](https://guildframe.com/buy)
 - [Shopify Store Planning After Your Campaign](https://guildframe.com/done-for-you-shopify-store)
 - [Shopify Theme and Store Setup for Board Games](https://guildframe.com/shopify-theme-for-board-games)
 - [Kickstarter to Shopify for Funded Tabletop Games](https://guildframe.com/kickstarter-to-shopify)
 - [Shopify Store and Theme Setup for TTRPG Publishers](https://guildframe.com/shopify-theme-for-ttrpg)
 - [Shopify Store and Theme Setup for Miniatures](https://guildframe.com/shopify-theme-for-miniatures)
-- [Kickstarter Page Design & Launch Guides](https://guildframe.com/guides)
+- [Kickstarter Marketing, Design & Launch Guides](https://guildframe.com/guides)
 - [What Happens After Your Kickstarter Is Funded?](https://guildframe.com/guides/what-happens-after-kickstarter-is-funded)
 - [Kickstarter to Shopify Migration Guide](https://guildframe.com/guides/move-from-kickstarter-to-shopify)
 - [6 Best Shopify Themes for Board Games in 2026](https://guildframe.com/guides/best-shopify-themes-for-board-games)

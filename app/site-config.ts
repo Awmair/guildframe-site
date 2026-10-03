@@ -4,8 +4,8 @@ export const siteConfig = {
   name: "Guildframe",
   contactEmail: "umair@guildframe.com",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  purchasePath: "/campaign-design",
-  servicePath: "/campaign-design",
+  purchasePath: "/kickstarter-launch-services",
+  servicePath: "/kickstarter-launch-services",
   serviceInquiryUrl:
     process.env.NEXT_PUBLIC_SERVICE_INQUIRY_URL?.trim() ||
     "/#start-project",
@@ -17,11 +17,9 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID?.trim() || "xp0rrg52qu",
   googleSiteVerification:
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
-  socialImage: "/og-guildframe-campaign.jpg",
-  price: "$975",
-  campaignPrice: "$975",
+  socialImage: "/og-guildframe-launch.jpg",
   description:
-    "Kickstarter and Gamefound page design for tabletop games. Campaign copy, graphics and reward comparisons for $975 USD, with a free opening mockup.",
+    "Kickstarter and Gamefound launch services for tabletop creators. Campaign planning, prelaunch, design, paid advertising and live campaign support.",
 };
 
 export const absoluteUrl = (path = "/") =>
@@ -53,7 +51,7 @@ export function pageMetadata({
         url: siteConfig.socialImage,
         width: 1200,
         height: 630,
-        alt: "Guildframe campaign design for games, RPGs, miniatures and accessories",
+        alt: "Guildframe tabletop crowdfunding launches for games, RPGs, miniatures and accessories",
       },
     ],
   };

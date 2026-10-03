@@ -1,7 +1,7 @@
 import { absoluteUrl, siteConfig } from "./site-config";
 
 export const authorId = () => absoluteUrl("/authors/guildframe#umair");
-export const campaignService = () => ({
+export const campaignService = (includePrice = false) => ({
   "@type": "Service",
   "@id": absoluteUrl("/campaign-design#service"),
   name: "Guildframe Kickstarter and Gamefound page design",
@@ -9,12 +9,18 @@ export const campaignService = () => ({
   description: "Page structure, campaign copy, section graphics and reward comparisons using the creator’s artwork.",
   provider: { "@id": absoluteUrl("/#organization") },
   url: absoluteUrl("/campaign-design"),
-  offers: {
+  ...(includePrice ? { offers: {
     "@type": "Offer",
     price: "975",
     priceCurrency: "USD",
-    url: absoluteUrl("/campaign-design"),
-  },
+    url: absoluteUrl("/campaign-design#pricing"),
+  } } : {}),
+});
+
+export const launchService = (slug = "kickstarter-launch-services", name = "Tabletop Kickstarter and Gamefound launch services", description = siteConfig.description) => ({
+  "@type": "Service", "@id": absoluteUrl(`/${slug}#service`), name, description,
+  serviceType: "Tabletop crowdfunding launch services", url: absoluteUrl(`/${slug}`),
+  provider: { "@id": absoluteUrl("/#organization") },
 });
 
 export const authorEntity = () => ({
@@ -22,9 +28,9 @@ export const authorEntity = () => ({
   "@id": authorId(),
   name: "Umair",
   url: absoluteUrl("/authors/guildframe"),
-  jobTitle: "Campaign designer",
+  jobTitle: "Founder, campaign designer and paid advertising specialist",
   worksFor: { "@id": absoluteUrl("/#organization") },
-  description: "Umair runs Guildframe and designs Kickstarter and Gamefound pages for tabletop projects.",
+  description: "Umair runs Guildframe, designs tabletop crowdfunding campaigns and manages paid advertising.",
   email: siteConfig.contactEmail,
-  knowsAbout: ["Kickstarter page design", "Gamefound page design", "Campaign copy", "Reward graphics", "Tabletop games"],
+  knowsAbout: ["Kickstarter launches", "Gamefound campaigns", "Paid advertising", "Prelaunch marketing", "Campaign copy", "Reward graphics", "Tabletop games"],
 });

@@ -156,7 +156,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               </article>
             ))}
           </div>
-          <div className="seo-offer-note"><strong>Before your next launch</strong><p>Guildframe’s current service is campaign design for Kickstarter and Gamefound, at $975 USD.</p><Link href={siteConfig.purchasePath}>See campaign design ↗</Link></div>
+          <div className="seo-offer-note"><strong>Before your next launch</strong><p>Guildframe helps tabletop creators with launch planning, prelaunch, campaign creative, paid advertising and live support.</p><Link href={siteConfig.purchasePath}>Explore launch services ↗</Link></div>
         </section>
 
         <section className="seo-faq-section">

@@ -1,19 +1,15 @@
 # Guildframe identity and evidence
 
-Updated 2026-09-30. This replaces the earlier Shopify service facts.
+Updated October 3, 2026.
 
-- Guildframe is Umair's independent campaign design studio.
-- Canonical site: https://guildframe.com.
-- Service: Kickstarter and Gamefound page structure, campaign copy, section graphics, component/gameplay presentation, reward comparisons and stretch goal graphics where needed.
-- Price: $975 USD per agreed campaign, using supplied artwork and confirmed project facts.
-- Free mockup: an opening campaign section, with no payment or obligation to book.
-- Brief: exact deliverables, file formats, review process and schedule are agreed before work starts.
-- Categories: board games, card games/TCGs, TTRPGs, miniatures/terrain and tabletop accessories.
-- Contact: umair@guildframe.com.
-- Author: Umair; `/authors/guildframe` identifies the designer and guide writer.
-- Real past work: ScentedRealms, FutureProof Terrain and Quiver Time, with original Kickstarter links. Keep exact project-matched review excerpts and distinguish concept artwork.
-- New illustration, video, advertising, manufacturing and fulfilment require separate planning. Do not invent revision counts, deadlines, business credentials or funding outcomes.
+Guildframe is Umair's independent tabletop crowdfunding launch studio. Site: https://guildframe.com. Contact: umair@guildframe.com.
 
-The service has one consistent schema identity and $975 USD offer. Person, Organization, Article and ProfilePage identities agree with visible content. No fabricated address, review stars, customer counts or platform endorsements were added.
+Services: planning, prelaunch pages and email, campaign creative, paid advertising, campaign management and post-campaign communication. Umair leads creative and advertising. The owner confirmed the paid advertising offer directly. Broader engagements use a written scope and quote; ad spend and other provider costs are separate. The fixed design-only price appears once in its pricing section.
 
-No outreach or link placement is authorized by this research pass. Future outreach should use actual useful guides/examples, independent editorial approval and explicit user authorization before sending messages. No external freelance marketplace is part of the public positioning.
+The free mockup is one opening campaign section using supplied artwork. Exact deliverables, files, fees, support dates, revision process and approvals are agreed before work starts.
+
+Categories include board games, cards and TCGs, TTRPGs, miniatures, STLs, terrain, dice and accessories. Portfolio evidence is creative work for ScentedRealms, FutureProof Terrain and Quiver Time. Preserve the exact project-matched testimonial excerpts and Kickstarter links. Concepts are labelled separately. No advertising result or funding total is attributed to Guildframe from these creative examples.
+
+The Person, Organization, Service, Article and ProfilePage entities agree with the visible content. No invented team, address, review stars, funding guarantees, partner relationships or customer counts are used.
+
+No outreach or link placement was performed. Sending messages to clients, agencies or editors requires explicit authorization. Link targets should be useful guides, worksheets or client-approved case studies. No external freelance marketplace is part of the public positioning.

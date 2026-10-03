@@ -7,7 +7,7 @@ import { contentDates } from "../content-dates";
 export const metadata = pageMetadata({
   title: "Editorial Policy",
   description:
-    "How Guildframe researches, writes, reviews, updates and corrects its campaign design and tabletop launch guidance.",
+    "How Guildframe researches, writes, reviews, updates and corrects its marketing, campaign design and tabletop launch guidance.",
   path: "/editorial-policy",
   keywords: ["Guildframe editorial policy", "tabletop ecommerce research", "Shopify guide sources"],
 });
@@ -65,8 +65,8 @@ export default function EditorialPolicyPage() {
         <section>
           <h2>Commercial transparency</h2>
           <p>
-            Guildframe sells Kickstarter and Gamefound campaign design for $975 USD.
-            The service pages state what the price includes.
+            Guildframe offers Kickstarter and Gamefound launch services, including campaign creative, prelaunch, paid advertising and live support.
+            Broader projects use a scoped quote. The design-only price is listed on its service page.
             A free mockup explores an opening campaign section. Concept mockups are labelled separately from the client campaigns in Past work. Client quotes are short, verbatim excerpts matched to their projects.
             We do not claim funding results or guaranteed search rankings.
           </p>

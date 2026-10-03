@@ -20,7 +20,7 @@ export default function NotFound() {
           <span>404</span>
           <h1>This page could not be found.</h1>
           <p>
-            Use the links below to find campaign design or a launch guide.
+            Use the links below to find launch services or a practical guide.
           </p>
           <div className="not-found-actions">
             <Link className="seo-button" href="/">

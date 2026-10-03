@@ -1,16 +1,19 @@
+import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
 export type LaunchSection={id:string;title:string;paragraphs:string[];list?:string[];table?:{headers:string[];rows:string[][]};source?:number};
 export type LaunchGuide={published?:string;updated?:string;slug:string;title:string;seoTitle?:string;relatedSlugs:string[];servicePath:string;serviceLabel:string;description:string;tag:string;answer:string;sections:LaunchSection[];faqs:{question:string;answer:string}[];sources:{label:string;publisher:string;href:string}[]};
 export const launchGuideDate="2026-09-30";
 export const launchGuides:LaunchGuide[]=[
+  ...marketingGuides,
   ...newLaunchGuides,
+
 
   {
     "slug": "board-game-kickstarter-campaign-design-cost",
     "title": "How Much Does Board Game Kickstarter Campaign Design Cost?",
-    "description": "Guildframe charges $975 USD for Kickstarter or Gamefound page design, including campaign copy and graphics. See the scope and request a free opening mockup.",
+    "description": "Budget your tabletop Kickstarter page by scope: copy, graphics, artwork, video and launch support. Compare quotes and see Guildframe’s design-only option.",
     "tag": "Budget planning",
-    "answer": "Guildframe charges $975 USD for one Kickstarter or Gamefound campaign page. That includes page structure, copy, section graphics and reward comparisons using your artwork. Request a free opening mockup before booking. Other designers’ prices depend on their scope; this guide explains the Guildframe package.",
+    "answer": "Campaign design cost depends on the copy, graphics, artwork and review work included. Compare quotes against a written file list and schedule. Guildframe lists its fixed design-only price on the campaign design page; prelaunch, advertising and live management are scoped separately. Other designers’ prices depend on their scope, so one published fee is not an industry average.",
     "sources": [
       {
         "label": "Guildframe campaign design scope and price",
@@ -41,10 +44,10 @@ export const launchGuides:LaunchGuide[]=[
       },
       {
         "id": "price",
-        "title": "What the $975 Guildframe project covers",
+        "title": "Separate campaign creative from the full launch budget",
         "paragraphs": [
-          "The $975 Guildframe service covers page structure, campaign copy, visual direction, section graphics and reward presentation. Stretch goal graphics are included where the campaign needs them. We agree the file list and schedule before starting.",
-          "I work with your artwork and confirmed product information. New game illustration, video, advertising and fulfilment are separate work. If you need those too, include them in your planning before agreeing the page brief."
+          "Guildframe’s design-only option covers page structure, campaign copy, section graphics and reward presentation using supplied artwork. The current fee is shown on the campaign design page. We agree the file list, review process and schedule before starting.",
+          "Prelaunch pages and email, paid advertising and live campaign management are additional services. A full launch proposal should list service fees separately from media spend, software, platform fees and any external production work."
         ],
         "table": {
           "headers": [
@@ -54,19 +57,23 @@ export const launchGuides:LaunchGuide[]=[
           "rows": [
             [
               "Campaign page design",
-              "$975 USD for the agreed campaign"
+              "Fixed fee on the campaign design service page"
             ],
             [
               "Free opening section mockup",
               "No payment or obligation to book"
             ],
             [
-              "New game illustration or video",
-              "Separate scope if required"
+              "Prelaunch, advertising and live support",
+              "A separate scope and quote"
             ],
             [
-              "Platform, production and advertising costs",
-              "Budgeted separately by the creator"
+              "Ad spend, software and platform fees",
+              "Budgeted separately from the service fee"
+            ],
+            [
+              "New game illustration or video",
+              "Separate production scope if required"
             ]
           ]
         },
@@ -85,14 +92,14 @@ export const launchGuides:LaunchGuide[]=[
         "title": "Book against a written brief",
         "paragraphs": [
           "Get the sections, output files, review process and timing in writing. Someone who knows the reward prices and production details should check the finished content before launch.",
-          "To start with Guildframe, send the game summary, artwork link, platform and planned launch date. The free mockup comes first; the $975 project starts once we’ve agreed the brief and schedule. A permanent store after funding needs its own budget and brief."
+          "To start with Guildframe, send the game summary, artwork link, platform and planned launch date. You can request a free opening mockup for creative work, or discuss a broader launch. Ask for the deliverables, fees and review dates in writing before committing."
         ]
       }
     ],
     "faqs": [
       {
-        "question": "Is $975 an average price for campaign design?",
-        "answer": "No. It is Guildframe’s stated price for the agreed campaign design service. We have not measured an industry average."
+        "question": "Is one studio’s design fee an industry average?",
+        "answer": "No. A published fee applies to that studio’s stated scope. Compare the work, files, revisions and schedule rather than treating one price as the market average."
       },
       {
         "question": "Does the price include designing the game itself?",
@@ -103,14 +110,15 @@ export const launchGuides:LaunchGuide[]=[
         "answer": "Yes. Send your project and artwork through the free mockup form. There is no obligation to book the full campaign."
       }
     ],
-    "seoTitle": "Kickstarter Page Design Cost: $975 Copy & Graphics",
+    "seoTitle": "Kickstarter Campaign Design Cost & Budget Guide",
     "relatedSlugs": [
       "when-to-hire-kickstarter-campaign-designer",
       "what-to-send-kickstarter-campaign-designer",
       "board-game-kickstarter-page-checklist"
     ],
     "servicePath": "/campaign-design",
-    "serviceLabel": "Kickstarter campaign copy and graphics"
+    "serviceLabel": "Kickstarter campaign copy and graphics",
+    "updated": "2026-10-03"
   },
   {
     "slug": "board-game-kickstarter-page-checklist",
@@ -320,7 +328,7 @@ export const launchGuides:LaunchGuide[]=[
         "title": "Agree who reviews the final page",
         "paragraphs": [
           "Choose one person to collect design feedback. If someone else checks rules, rewards or production details, explain how they’ll review the page before agreeing the deadline. Knowing who owns each fact makes corrections easier.",
-          "For a free Guildframe mockup, a game summary, artwork link, platform and launch plans are enough to start. We can try the opening design while you prepare the rest. The full campaign is $975, with scope and timing agreed first."
+          "For a free Guildframe mockup, a game summary, artwork link, platform and launch plans are enough to start. We can explore the opening while you prepare the rest. The full project starts after we agree the scope, fees and schedule."
         ],
         "source": 0
       }
@@ -346,7 +354,8 @@ export const launchGuides:LaunchGuide[]=[
       "kickstarter-reward-tier-graphics"
     ],
     "servicePath": "/campaign-design",
-    "serviceLabel": "Kickstarter campaign copy and graphics"
+    "serviceLabel": "Kickstarter campaign copy and graphics",
+    "updated": "2026-10-03"
   },
   {
     "slug": "kickstarter-reward-tier-graphics",
@@ -489,7 +498,7 @@ export const launchGuides:LaunchGuide[]=[
       },
       {
         "question": "Are reward graphics included in Guildframe campaign design?",
-        "answer": "Reward presentation is part of the $975 campaign design service. The exact graphics and comparison format are agreed in the brief."
+        "answer": "Reward presentation is part of the campaign design service. The exact graphics and comparison format are agreed in the brief."
       }
     ],
     "seoTitle": "Kickstarter Reward Tier Graphics for Board Games",
@@ -581,7 +590,7 @@ export const launchGuides:LaunchGuide[]=[
         "title": "Build a direction that matches the game",
         "paragraphs": [
           "Take the colours, type and imagery from the game. A noir investigation might use restrained colour; a whimsical adventure might be brighter. A horror zine may use empty space to build tension. Keep enough contrast and space for the practical details.",
-          "Guildframe campaign design is $975 for page structure, copy and graphics using your artwork. Send a summary, sample spread and launch plans for a free opening mockup. New book illustration and video are separate work."
+          "Guildframe prepares page structure, copy and graphics using your artwork. Send a summary, sample spread and launch plans for a free opening mockup. New book illustration and video need their own scope."
         ],
         "source": 1
       }
@@ -607,7 +616,8 @@ export const launchGuides:LaunchGuide[]=[
       "kickstarter-campaign-graphics-mobile-readability"
     ],
     "servicePath": "/ttrpg-kickstarter-campaign-design",
-    "serviceLabel": "TTRPG Kickstarter page design"
+    "serviceLabel": "TTRPG Kickstarter page design",
+    "updated": "2026-10-03"
   },
   {
     "slug": "kickstarter-vs-gamefound-campaign-page-design",
@@ -693,7 +703,7 @@ export const launchGuides:LaunchGuide[]=[
         "title": "Export for the editor, then check the uploaded result",
         "paragraphs": [
           "Keep editable source files and export images using the platform’s current media guidance. Break the page into sections so a phone reader can read the main information. A single tall image can make every label too small.",
-          "After upload, check spacing, compression, labels and reward names on the actual page. Guildframe designs for either platform at $975. Confirm the platform before agreeing the files and deliverables."
+          "After upload, check spacing, compression, labels and reward names on the actual page. Guildframe designs for either platform. Confirm the platform before agreeing the files and deliverables."
         ],
         "source": 0
       },
@@ -718,7 +728,7 @@ export const launchGuides:LaunchGuide[]=[
       },
       {
         "question": "Does Guildframe charge differently for Gamefound?",
-        "answer": "The stated campaign design price is $975 for either Kickstarter or Gamefound, with scope confirmed in the brief."
+        "answer": "The fixed campaign design price is listed on the service page. The chosen platform, files and scope are confirmed in the brief. Broader launch services are quoted separately."
       }
     ],
     "seoTitle": "Kickstarter vs Gamefound: Page Design",
@@ -986,7 +996,7 @@ export const launchGuides:LaunchGuide[]=[
         "title": "Prepare the public introduction alongside the full campaign",
         "paragraphs": [
           "Kickstarter recommends sharing a prelaunch page before launch. It lets people follow the project and receive a launch notification. Prepare it alongside the full campaign story.",
-          "Check that the title and main image explain the project while the longer page is being designed. Once you have a summary and artwork, request a free Guildframe opening mockup. Full campaign design is $975, with scope and timing agreed first."
+          "Check that the title and main image explain the project while the longer page is being designed. Once you have a summary and artwork, request a free Guildframe opening mockup. The full scope and timing are agreed before work starts."
         ],
         "source": 0
       }
@@ -1012,7 +1022,8 @@ export const launchGuides:LaunchGuide[]=[
       "board-game-kickstarter-page-checklist"
     ],
     "servicePath": "/campaign-design",
-    "serviceLabel": "Kickstarter campaign copy and graphics"
+    "serviceLabel": "Kickstarter campaign copy and graphics",
+    "updated": "2026-10-03"
   }
 
 ];

@@ -5,9 +5,9 @@ import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
 
 export const metadata = pageMetadata({
-  title: "Kickstarter Page Design & Launch Guides",
+  title: "Kickstarter Marketing, Design & Launch Guides",
   description:
-    "Practical launch guides for tabletop Kickstarter and Gamefound campaigns. Plan design costs, artwork, reward graphics and a campaign page ready for backers.",
+    "Practical Kickstarter and Gamefound launch guides for tabletop creators. Plan prelaunch email, ad budgets, campaign design, rewards and backer updates.",
   path: "/guides",
   keywords: ["board game Kickstarter launch", "tabletop campaign design", "card game Kickstarter guide"],
 });
@@ -107,7 +107,7 @@ export default function GuidesPage() {
             "@id": absoluteUrl("/guides"),
             name: "Guildframe Guides",
             url: absoluteUrl("/guides"),
-            description: "Campaign design, launch preparation and post-crowdfunding guides.",
+            description: "Prelaunch marketing, campaign design, advertising and post-crowdfunding guides.",
             isPartOf: { "@id": absoluteUrl("/#website") },
             mainEntity: { "@id": absoluteUrl("/guides#guide-list") },
             inLanguage: "en",
@@ -140,9 +140,9 @@ export default function GuidesPage() {
       <main className="guides-main" id="guides-content">
         <section className="guides-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
-          <h1>Kickstarter page design <em>&amp; launch guides.</em></h1>
+          <h1>Kickstarter marketing <em>&amp; launch guides.</em></h1>
           <p>
-            Prepare your campaign page, explain the game and check rewards, shipping and launch settings. Find guidance for board games, card games, RPGs, miniatures and Gamefound projects.
+            Plan your audience, emails, ads and campaign page before launch. Find practical guidance for board games, card games, RPGs, miniatures and Gamefound projects.
           </p>
         </section>
         <nav className="guide-topic-nav" aria-label="Guide topics"><Link href="#launch-guides">Campaign launch guides</Link><Link href="/guides/card-game-kickstarter-launch-guide">Card games &amp; TCGs</Link><Link href="/guides/ttrpg-kickstarter-campaign-page-design">Tabletop RPGs</Link><Link href="/guides/miniatures-stl-kickstarter-launch-guide">Miniatures &amp; STL files</Link><Link href="#after-funding">After funding</Link><Link href="/resources/tabletop-campaign-launch-worksheet">Launch worksheet</Link></nav>

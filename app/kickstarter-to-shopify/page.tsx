@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     question: "What does Guildframe offer for a new campaign?",
-    answer: "Kickstarter and Gamefound campaign page design costs $975 USD. Request a free opening section mockup to explore a direction before booking.",
+    answer: "Guildframe offers campaign creative, prelaunch marketing, paid advertising and live support for Kickstarter and Gamefound. Share the project to agree a scope, or request a free opening mockup for creative work.",
   },
 ];
 
@@ -227,7 +227,7 @@ export default function KickstarterToShopifyPage() {
           </ul>
         </section>
 
-        <section className="campaign-offer-section"><div><h2>Preparing another campaign?</h2><p>Guildframe’s current service is Kickstarter and Gamefound campaign design. Send your artwork and launch plans to explore a free opening mockup.</p></div><div><strong>$975</strong><span>USD for the agreed campaign design</span><a className="service-primary-button" href="#start-project">Get my free mockup ↗</a></div></section>
+        <section className="campaign-offer-section"><div><h2>Preparing another campaign?</h2><p>Guildframe brings planning, prelaunch marketing, campaign creative and paid advertising together. Share your game and the work you need help with.</p></div><div><strong>Your next launch</strong><span>A scope built around your project</span><a className="service-primary-button" href="#start-project">Discuss my launch ↗</a></div></section>
 
         <section className="campaign-faq-section" id="faq">
           <div className="campaign-section-heading"><h2>Questions after funding.</h2></div>

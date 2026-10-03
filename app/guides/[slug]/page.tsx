@@ -26,7 +26,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       {s.table && <ArticleTable caption={s.title} headers={s.table.headers} rows={s.table.rows} />}
       {s.source !== undefined && <p className="article-source-note">Source: <a href={g.sources[s.source].href}>{g.sources[s.source].label}</a>.</p>}
     </section>)}
-    <aside className="article-callout"><strong>Need copy and graphics for your page?</strong><p><Link href={g.servicePath}>{g.serviceLabel}</Link> costs $975 USD. Send your game summary and artwork through the form below for a free opening mockup.</p></aside>
+    <aside className="article-callout"><strong>Need help with this part of your launch?</strong><p><Link href={g.servicePath}>{g.serviceLabel}</Link>. Share your project and the work you need help with to agree a scope. You can also request a free opening mockup using your artwork.</p></aside>
     <nav className="gf-service-related" aria-label="Related launch guides">{related.map(guide => <Link key={guide.slug} href={`/guides/${guide.slug}`}>{guide.title} ↗</Link>)}</nav>
   </SeoArticlePage>;
 }

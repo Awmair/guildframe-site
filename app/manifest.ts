@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Guildframe",
     short_name: "Guildframe",
     description:
-      "Kickstarter and Gamefound campaign design for tabletop creators.",
+      "Kickstarter and Gamefound launch services for tabletop creators.",
     start_url: "/",
     display: "standalone",
     background_color: "#FFF5E7",

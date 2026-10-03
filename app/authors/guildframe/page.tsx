@@ -8,7 +8,7 @@ import { launchGuides } from "../../launch-guides";
 
 export const metadata = pageMetadata({
   title: "Umair: Campaign Designer & Guide Author",
-  description: "Meet Umair, the designer behind Guildframe’s $975 Kickstarter and Gamefound page design. Read his guides on campaign copy, graphics and launch preparation.",
+  description: "Meet Umair, Guildframe’s founder, campaign designer and paid advertising specialist. Read his practical tabletop crowdfunding and launch guides.",
   path: "/authors/guildframe",
 });
 
@@ -32,12 +32,12 @@ export default function GuildframeAuthorPage() {
         },
       ],
     }} />
-    <TrustPage label="Author" title="Umair, campaign designer at Guildframe" description="I write the guides and design Kickstarter and Gamefound pages for tabletop creators." updated={contentDates.authorGuildframe}>
+    <TrustPage label="Author" title="Umair, campaign designer at Guildframe" description="I write the guides, lead campaign creative and manage paid advertising at Guildframe." updated={contentDates.authorGuildframe}>
       <section>
         <h2>What I work on</h2>
-        <p>I run Guildframe. My work covers campaign page structure, copy, section graphics and reward comparisons for board games, card games, RPGs, miniatures and accessories.</p>
+        <p>I run Guildframe. My work covers campaign planning, copy, graphics and paid advertising for board games, card games, RPGs, miniatures and accessories. Guildframe brings those into a launch scope with prelaunch and campaign support.</p>
         <p>You can see ScentedRealms, FutureProof Terrain and Quiver Time in <Link href="/#past-work">my past campaign work</Link>. The guides explain the decisions behind a page: what to show first, how to explain the game and how to make rewards easier to compare.</p>
-        <p><Link href="/campaign-design">Full campaign page design is $975 USD</Link>. Send your game summary and artwork for a free opening mockup before booking.</p>
+        <p><Link href="/kickstarter-launch-services">See Guildframe’s launch services</Link>. Send your game and launch plans to discuss the scope, or request a free opening mockup for campaign creative.</p>
       </section>
       <section>
         <h2>How I write the guides</h2>
