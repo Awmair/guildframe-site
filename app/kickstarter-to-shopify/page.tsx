@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ResponsiveImage } from "../components/ResponsiveImage";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
@@ -137,7 +138,7 @@ export default function KickstarterToShopifyPage() {
               <small>After funding reference. Review your assets and operating requirements first.</small>
             </div>
             <div className="campaign-service-hero-image">
-              <img
+              <ResponsiveImage sizes="(max-width: 900px) calc(100vw - 40px), 48vw"
                 src="/images/campaign/hero.webp"
                 alt="Original tabletop concepts including board games, cards, RPG books, miniatures and dice"
                 width="1774"

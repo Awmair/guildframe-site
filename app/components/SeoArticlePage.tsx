@@ -213,6 +213,7 @@ export function SeoArticlePage({
                 ))}
               </ul>
             </section>
+            <aside className="article-author" aria-label="About the author"><span className="gf-author-monogram" aria-hidden="true">U</span><div><strong>Written by Umair</strong><p>Founder, campaign designer and paid advertising specialist at Guildframe.</p><Link href="/authors/guildframe">About the author <span aria-hidden="true">↗</span></Link></div></aside>
             <section className="article-faq" id="faq">
               <h2>Frequently asked questions</h2>
               {faqs.map((faq) => (

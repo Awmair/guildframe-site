@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "./ResponsiveImage";
 import Link from "next/link";
 import { JsonLd } from "./JsonLd";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
@@ -102,7 +103,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               <div className="seo-proof-strip"><span>After funding reference</span><span>Mobile buying paths</span><span>Clear product information</span></div>
             </div>
             <div className="seo-hero-visual">
-              <img
+              <ResponsiveImage sizes="(max-width: 650px) calc(100vw - 40px), 48vw"
                 src={content.image}
                 alt={content.imageAlt}
                 width="1000"

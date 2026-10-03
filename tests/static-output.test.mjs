@@ -748,3 +748,18 @@ test("keeps technical campaign guidance sourced and category answers visible", a
   assert.match(vat, /trade\.ec\.europa\.eu/);
   assert.match(visibleText(vat), /declaration lines/);
 });
+
+test("keeps breadcrumb and FAQ data consistent with the visible pages", async () => {
+  const normalized = (value) => value.replace(/<[^>]*>/g, " ").replaceAll("&amp;", "&").replaceAll("&quot;", '"').replace(/&#x27;|&#39;|&apos;/g, "'").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replace(/\s+/g, " ").trim();
+  for (const [path] of pages) {
+    const html = await readPage(path);
+    const data = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
+    const entities = data.flatMap((value) => value["@graph"] ?? [value]);
+    if (path !== "/") assert.ok(entities.some((entity) => entity["@type"] === "BreadcrumbList"), `missing breadcrumb data: ${path}`);
+    const visible = normalized(html.replace(/<script\b[\s\S]*?<\/script>/g, ""));
+    for (const question of entities.filter((entity) => entity["@type"] === "FAQPage").flatMap((entity) => entity.mainEntity ?? [])) {
+      assert.ok(visible.includes(normalized(question.name)), `FAQ question is not visible: ${path}: ${question.name}`);
+      assert.ok(visible.includes(normalized(question.acceptedAnswer.text)), `FAQ answer differs from visible text: ${path}: ${question.name}`);
+    }
+  }
+});
