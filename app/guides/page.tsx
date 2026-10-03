@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   description:
     "Practical launch guides for tabletop Kickstarter and Gamefound campaigns. Plan design costs, artwork, reward graphics and a campaign page ready for backers.",
   path: "/guides",
-  keywords: ["tabletop ecommerce guides", "Kickstarter to Shopify guide", "board game ecommerce"],
+  keywords: ["board game Kickstarter launch", "tabletop campaign design", "card game Kickstarter guide"],
 });
 
 const afterFundingGuides = [
@@ -142,12 +142,13 @@ export default function GuidesPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
           <h1>Kickstarter page design <em>&amp; launch guides.</em></h1>
           <p>
-            What to budget for design, which files to send and how to review your campaign before launch. There are also guides for planning a store after funding.
+            Prepare your campaign page, explain the game and check rewards, shipping and launch settings. Find guidance for board games, card games, RPGs, miniatures and Gamefound projects.
           </p>
         </section>
-        <section className="guides-grid">
+        <nav className="guide-topic-nav" aria-label="Guide topics"><Link href="#launch-guides">Campaign launch guides</Link><Link href="/guides/card-game-kickstarter-launch-guide">Card games &amp; TCGs</Link><Link href="/guides/ttrpg-kickstarter-campaign-page-design">Tabletop RPGs</Link><Link href="/guides/miniatures-stl-kickstarter-launch-guide">Miniatures &amp; STL files</Link><Link href="#after-funding">After funding</Link><Link href="/resources/tabletop-campaign-launch-worksheet">Launch worksheet</Link></nav>
+        <section className="guides-grid" id="launch-guides">
           {campaignGuides.map((guide, index) => (
-            <Link href={guide.href} key={guide.title}>
+            <Link href={guide.href} key={guide.title} data-reveal>
               <div>
                 <span>{guide.tag}</span>
                 <b>{String(index + 1).padStart(2, "0")}</b>
@@ -158,7 +159,7 @@ export default function GuidesPage() {
             </Link>
           ))}
         </section>
-        <section className="gf-archive-heading"><h2>After funding</h2><p>Existing references for building a store and planning ongoing sales.</p></section><section className="guides-grid">{afterFundingGuides.map(guide=><Link href={guide.href} key={guide.href}><div><span>{guide.tag}</span></div><h2>{guide.title}</h2><p>{guide.copy}</p><strong>Read the guide ↗</strong></Link>)}</section>
+        <section className="gf-archive-heading" id="after-funding"><h2>After funding</h2><p>Plan fulfilment, a permanent store and ongoing sales once your campaign is funded.</p></section><section className="guides-grid">{afterFundingGuides.map(guide=><Link href={guide.href} key={guide.href}><div><span>{guide.tag}</span></div><h2>{guide.title}</h2><p>{guide.copy}</p><strong>Read the guide ↗</strong></Link>)}</section>
         <section className="guides-solutions">
           <div>
             <h2>Find the service for your project.</h2>

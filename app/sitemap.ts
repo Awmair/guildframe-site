@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/editorial-policy", modified: contentDates.editorialPolicy },
     { path: "/authors/guildframe", modified: contentDates.authorGuildframe },
     { path: "/resources", modified: contentDates.resources },
+    { path: "/resources/tabletop-campaign-launch-worksheet", modified: "2026-10-03" },
     { path: "/resources/board-game-shopify-store-checklist", modified: contentDates.storeChecklist },
     { path: "/resources/kickstarter-to-shopify-migration-checklist", modified: contentDates.migrationChecklist },
     { path: "/resources/backerkit-vs-shopify-vs-gamefound-comparison", modified: contentDates.platformMatrix },
@@ -42,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/tabletop-shopify-metafield-schema", modified: contentDates.metafieldSchema },
   ];
 
-  const allRoutes=[...routes,...campaignPages.map(p=>({path:`/${p.slug}`,modified:campaignDate})),...launchGuides.map(g=>({path:`/guides/${g.slug}`,modified:launchGuideDate}))];
+  const allRoutes=[...routes,...campaignPages.map(p=>({path:`/${p.slug}`,modified:campaignDate})),...launchGuides.map(g=>({path:`/guides/${g.slug}`,modified:g.updated ?? launchGuideDate}))];
   return allRoutes.map((route) => ({
     url: absoluteUrl(route.path),
     lastModified: new Date(`${route.modified}T00:00:00.000Z`),

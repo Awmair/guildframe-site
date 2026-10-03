@@ -1,8 +1,10 @@
-import {campaignDate} from "./campaign-content";
+import {newLaunchGuides} from "./launch-guides-new";
 export type LaunchSection={id:string;title:string;paragraphs:string[];list?:string[];table?:{headers:string[];rows:string[][]};source?:number};
-export type LaunchGuide={slug:string;title:string;seoTitle?:string;relatedSlugs:string[];servicePath:string;serviceLabel:string;description:string;tag:string;answer:string;sections:LaunchSection[];faqs:{question:string;answer:string}[];sources:{label:string;publisher:string;href:string}[]};
-export const launchGuideDate=campaignDate;
+export type LaunchGuide={published?:string;updated?:string;slug:string;title:string;seoTitle?:string;relatedSlugs:string[];servicePath:string;serviceLabel:string;description:string;tag:string;answer:string;sections:LaunchSection[];faqs:{question:string;answer:string}[];sources:{label:string;publisher:string;href:string}[]};
+export const launchGuideDate="2026-09-30";
 export const launchGuides:LaunchGuide[]=[
+  ...newLaunchGuides,
+
   {
     "slug": "board-game-kickstarter-campaign-design-cost",
     "title": "How Much Does Board Game Kickstarter Campaign Design Cost?",
@@ -125,7 +127,7 @@ export const launchGuides:LaunchGuide[]=[
       {
         "label": "Setting up a Kickstarter prelaunch page",
         "publisher": "Kickstarter",
-        "href": "https://help.kickstarter.com/hc/en-us/articles/360034769114-Setting-up-your-project-s-pre-launch-page"
+        "href": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page"
       }
     ],
     "sections": [
@@ -192,6 +194,21 @@ export const launchGuides:LaunchGuide[]=[
           "On a phone, check key labels without zooming. Review links, image loading, spelling, product names and production details. Check the public prelaunch page separately; it serves a different purpose, and Kickstarter’s website and app may show different details."
         ],
         "source": 1
+      },
+      {
+        "id": "final-platform-check",
+        "title": "Check the assembled campaign, not only the files",
+        "paragraphs": [
+          "After the last upload, open the actual platform preview. Test the rules and review links without private sharing access. Confirm that heading navigation works where supported, reward prices match the graphics and shipping collection timing is stated.",
+          "Review the image labels for prototypes and unfinished artwork. Give the creator a short list of remaining factual decisions before approving launch."
+        ],
+        "list": [
+          "Gameplay and rules links work for a new visitor.",
+          "Prototype and render labels are visible beside the images.",
+          "Native rewards match contents, prices and optional extras.",
+          "Shipping collection timing and delivery estimates agree.",
+          "The creator has checked the final mobile and desktop views."
+        ]
       }
     ],
     "faqs": [
@@ -210,12 +227,13 @@ export const launchGuides:LaunchGuide[]=[
     ],
     "seoTitle": "Board Game Kickstarter Page Checklist",
     "relatedSlugs": [
-      "kickstarter-reward-tier-graphics",
-      "kickstarter-campaign-graphics-mobile-readability",
-      "what-to-send-kickstarter-campaign-designer"
+      "kickstarter-review-launch-timeline",
+      "board-game-kickstarter-gameplay-rulebook",
+      "kickstarter-shipping-delivery-page"
     ],
     "servicePath": "/board-game-kickstarter-campaign-design",
-    "serviceLabel": "Board game Kickstarter page design"
+    "serviceLabel": "Board game Kickstarter page design",
+    "updated": "2026-10-03"
   },
   {
     "slug": "what-to-send-kickstarter-campaign-designer",
@@ -346,6 +364,11 @@ export const launchGuides:LaunchGuide[]=[
         "label": "Gamefound project detailed description",
         "publisher": "Gamefound",
         "href": "https://help.gamefound.com/article/214-project-detailed-description"
+      },
+      {
+        "label": "Adding rewards and reward images",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236688-how-do-i-add-rewards-to-my-project"
       }
     ],
     "sections": [
@@ -444,6 +467,15 @@ export const launchGuides:LaunchGuide[]=[
           "Gamefound places reward sections alongside the story and controls visibility by campaign stage. Plan the graphics for that structure. The creator confirms the reward configuration and fulfilment details on either platform."
         ],
         "source": 1
+      },
+      {
+        "id": "native-images",
+        "title": "Check the native reward image and add-on settings",
+        "paragraphs": [
+          "Kickstarter reward and add-on images use a 3:2 ratio, at least 348 × 232 pixels and a maximum file size of 50 MB. Supported formats in its reward guidance are JPG, PNG and GIF. These are the native reward fields, not the tall section graphics in the story.",
+          "A digital main reward cannot accept shippable add-ons. Check product format, destinations and the reward configuration before promising a mixed bundle in a graphic."
+        ],
+        "source": 2
       }
     ],
     "faqs": [
@@ -462,12 +494,13 @@ export const launchGuides:LaunchGuide[]=[
     ],
     "seoTitle": "Kickstarter Reward Tier Graphics for Board Games",
     "relatedSlugs": [
-      "kickstarter-campaign-graphics-mobile-readability",
-      "board-game-kickstarter-page-checklist",
-      "ttrpg-kickstarter-campaign-page-design"
+      "card-game-kickstarter-launch-guide",
+      "miniatures-stl-kickstarter-launch-guide",
+      "kickstarter-stretch-goals-planning"
     ],
     "servicePath": "/card-game-kickstarter-campaign-design",
-    "serviceLabel": "Card game Kickstarter page design"
+    "serviceLabel": "Card game Kickstarter page design",
+    "updated": "2026-10-03"
   },
   {
     "slug": "ttrpg-kickstarter-campaign-page-design",
@@ -596,7 +629,12 @@ export const launchGuides:LaunchGuide[]=[
       {
         "label": "Setting up a Kickstarter prelaunch page",
         "publisher": "Kickstarter",
-        "href": "https://help.kickstarter.com/hc/en-us/articles/360034769114-Setting-up-your-project-s-pre-launch-page"
+        "href": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page"
+      },
+      {
+        "label": "Launching an approved Kickstarter project",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236427-how-do-i-launch-my-project-after-it-s-been-approved"
       }
     ],
     "sections": [
@@ -658,6 +696,15 @@ export const launchGuides:LaunchGuide[]=[
           "After upload, check spacing, compression, labels and reward names on the actual page. Guildframe designs for either platform at $975. Confirm the platform before agreeing the files and deliverables."
         ],
         "source": 0
+      },
+      {
+        "id": "stage-checks",
+        "title": "Check launch behaviour and stage visibility",
+        "paragraphs": [
+          "Kickstarter launch is manual after approval; setting a Target Launch Date does not publish the project. Gamefound descriptions and reward visibility depend on the stage and publication settings. Do not treat a finished draft in one stage as proof that the next public stage is complete.",
+          "Use the dedicated launch guides to review the selected platform. Keep the factual reward plan consistent across either platform and adapt the layout to its actual editor."
+        ],
+        "source": 3
       }
     ],
     "faqs": [
@@ -676,12 +723,13 @@ export const launchGuides:LaunchGuide[]=[
     ],
     "seoTitle": "Kickstarter vs Gamefound: Page Design",
     "relatedSlugs": [
-      "what-to-send-kickstarter-campaign-designer",
-      "kickstarter-reward-tier-graphics",
-      "kickstarter-campaign-graphics-mobile-readability"
+      "gamefound-launch-page-checklist",
+      "kickstarter-review-launch-timeline",
+      "kickstarter-prelaunch-page-guide"
     ],
     "servicePath": "/gamefound-campaign-design",
-    "serviceLabel": "Gamefound page design"
+    "serviceLabel": "Gamefound page design",
+    "updated": "2026-10-03"
   },
   {
     "slug": "kickstarter-campaign-graphics-mobile-readability",
@@ -699,9 +747,66 @@ export const launchGuides:LaunchGuide[]=[
         "label": "Gamefound project detailed description",
         "publisher": "Gamefound",
         "href": "https://help.gamefound.com/article/214-project-detailed-description"
+      },
+      {
+        "label": "Adding rewards and reward images",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236688-how-do-i-add-rewards-to-my-project"
+      },
+      {
+        "label": "Project video and Discovery Mode",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236743-is-a-project-video-required-to-launch"
+      },
+      {
+        "label": "Adding a story table of contents",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236730-how-do-i-add-a-table-of-contents-to-my-project-s-story"
       }
     ],
     "sections": [
+      {
+        "id": "specifications",
+        "title": "Match the export to the upload field",
+        "paragraphs": [
+          "A project cover, story section and native reward image serve different purposes. Use the current editor guidance for the specific field. The table separates documented limits from suggested dimensions."
+        ],
+        "table": {
+          "headers": [
+            "Destination",
+            "Current guidance",
+            "Source"
+          ],
+          "rows": [
+            [
+              "Kickstarter story image",
+              "At most 50 MB; JPEG, PNG or GIF recommended; scale to at least 700 px as recommended",
+              "Kickstarter media guidance"
+            ],
+            [
+              "Kickstarter reward image",
+              "3:2 ratio; minimum 348 × 232 px; at most 50 MB; JPG, PNG or GIF",
+              "Kickstarter reward guidance"
+            ],
+            [
+              "Kickstarter main video",
+              "Optional; up to 5120 MB in the Basics tab",
+              "Kickstarter video guidance"
+            ],
+            [
+              "Discovery Mode clip",
+              "Optional; 9:16 vertical; 60 to 90 seconds recommended for this clip",
+              "Kickstarter video guidance"
+            ],
+            [
+              "Gamefound description image",
+              "840 to 1200 px wide recommended; check the section media guidance",
+              "Gamefound description guidance"
+            ]
+          ]
+        },
+        "source": 0
+      },
       {
         "id": "test",
         "title": "Upload a sample and check it on a phone",
@@ -766,6 +871,15 @@ export const launchGuides:LaunchGuide[]=[
           "Check contrast, heading order, links and essential text too. Guildframe reviews the campaign presentation within the agreed brief. A free opening mockup can help establish readable type and layout early."
         ],
         "source": 0
+      },
+      {
+        "id": "navigation",
+        "title": "Make headings work as navigation",
+        "paragraphs": [
+          "Kickstarter story headings can create a table of contents. Image sections can also receive a heading label. Use names such as gameplay, rewards and shipping that help a reader find an answer.",
+          "The section links work on desktop and mobile web; Kickstarter says the feature is not supported in its app. Check the page in both contexts and keep the story understandable without that navigation."
+        ],
+        "source": 4
       }
     ],
     "faqs": [
@@ -784,12 +898,13 @@ export const launchGuides:LaunchGuide[]=[
     ],
     "seoTitle": "Kickstarter Image Sizes & Mobile Graphics",
     "relatedSlugs": [
+      "kickstarter-campaign-video-planning",
       "kickstarter-reward-tier-graphics",
-      "board-game-kickstarter-page-checklist",
-      "kickstarter-vs-gamefound-campaign-page-design"
+      "board-game-kickstarter-page-checklist"
     ],
     "servicePath": "/campaign-design",
-    "serviceLabel": "Kickstarter campaign copy and graphics"
+    "serviceLabel": "Kickstarter campaign copy and graphics",
+    "updated": "2026-10-03"
   },
   {
     "slug": "when-to-hire-kickstarter-campaign-designer",
@@ -801,7 +916,7 @@ export const launchGuides:LaunchGuide[]=[
       {
         "label": "Setting up a Kickstarter prelaunch page",
         "publisher": "Kickstarter",
-        "href": "https://help.kickstarter.com/hc/en-us/articles/360034769114-Setting-up-your-project-s-pre-launch-page"
+        "href": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page"
       },
       {
         "label": "Guildframe campaign design scope and price",
@@ -899,4 +1014,5 @@ export const launchGuides:LaunchGuide[]=[
     "servicePath": "/campaign-design",
     "serviceLabel": "Kickstarter campaign copy and graphics"
   }
+
 ];

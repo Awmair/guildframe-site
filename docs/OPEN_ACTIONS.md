@@ -1,12 +1,13 @@
-# Account checks still needed
+# External checks and activation
 
-Updated 2026-09-30. Current service: $975 USD campaign page copy and graphics for Kickstarter or Gamefound. The free mockup covers an opening section.
+Updated October 3, 2026. Current service: $975 USD campaign copy and graphics for Kickstarter or Gamefound. Free mockup: one opening section.
 
-- **Form recipient:** the site uses the existing Formspree endpoint `mrewkezq`. Umair said he will provide the correct endpoint. Successful requests can be tested locally with intercepted responses, but delivery to `umair@guildframe.com` still needs the correct endpoint and a controlled recipient check. Do not claim an intercepted test confirms email delivery.
-- **Keyword metrics:** obtain an authorized Google Keyword Planner export. Record country, language, period and search network. No volume, CPC or advertiser competition was obtained in this pass. The 138 phrases are evidence-labelled targets, not a measured market forecast.
-- **Google Search Console:** inspect the actual property, sitemap processing, indexed pages, query/page performance and Search generative AI inclusion control. Compare the ordinary Search performance report and Generative AI performance report. Public code/HTTP checks do not confirm account settings or indexing.
-- **Core Web Vitals:** inspect real-user performance in Search Console. Browser layout checks and correct image dimensions do not establish field LCP, INP or CLS.
-- **Bing Webmaster Tools:** inspect sitemap/indexing, search performance and AI Performance citations/grounding queries. Use authenticated URL tools to diagnose genuine crawler access. No account metrics were available for this pass.
-- **GA4:** confirm `page_view`, `service_interest`, `ai_referral_visit` and successful `generate_lead` in the owner property. Mark actual successful enquiry submissions as key events. Browser queue checks verify implementation, not receipt in the GA4 property.
+- **Contact mail:** draft PR #1 prepares the native Cloudflare Worker. Email Sending access and a labelled recipient/Reply-To test remain required before activation. Production retains the existing Formspree endpoint; delivery is unverified. Preserve root iCloud mail routing.
+- **Search Console:** owner property inspected. Web queries/pages, indexing, sitemap, AI inclusion control and Core Web Vitals baseline are saved. AI inclusion is Include; field performance has insufficient usage data. Google AI performance was not captured; do not infer zero. Recrawl and indexing remain engine decisions.
+- **Bing:** Search, AI citations, Keyword Research and sitemap inspected. Baseline saved. The tested Keyword Research seeds returned insufficient data. Follow indexing and new-page citations after recrawl.
+- **Keyword Planner:** no authorized volume/CPC/competition export obtained. The query map labels observations and hypotheses honestly.
+- **GA4:** browser instrumentation does not prove events reached the owner property. Confirm successful mockup enquiries there once the form recipient is verified.
+- **Backlinks:** client-approved case studies and the launch worksheet are relevant editorial link targets. No outreach, purchases or acquired links are claimed.
+- **Development dependency:** braces advisory has no available patch in the registry. Recheck the patch before updating; do not force a Next lint downgrade.
 
-No ads, campaigns, billing setup, external outreach or new accounts are required to publish the site edits. Review actual data before creating extra keyword pages or changing legacy URLs.
+See SEO_PASS_2026-10-03.md and the separate contact activation documentation.

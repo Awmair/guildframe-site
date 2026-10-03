@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const g = launchGuides.find(g => g.slug === slug);
   if (!g) notFound();
-  return pageMetadata({ title: g.seoTitle ?? g.title, description: g.description, path: `/guides/${slug}`, kind: "article", publishedTime: launchGuideDate, modifiedTime: launchGuideDate });
+  return pageMetadata({ title: g.seoTitle ?? g.title, description: g.description, path: `/guides/${slug}`, kind: "article", publishedTime: g.published ?? launchGuideDate, modifiedTime: g.updated ?? launchGuideDate });
 }
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -18,7 +18,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   if (!g) notFound();
   const words = [g.title, g.description, g.answer, ...g.sections.flatMap(s => [s.title, ...s.paragraphs, ...(s.list ?? []), ...(s.table?.headers ?? []), ...(s.table?.rows.flat() ?? [])]), ...g.faqs.flatMap(f => [f.question, f.answer])].join(" ").split(/\s+/).length;
   const related = g.relatedSlugs.map(slug => launchGuides.find(guide => guide.slug === slug)).filter(guide => guide !== undefined);
-  return <SeoArticlePage slug={g.slug} title={g.title} description={g.description} category={g.tag} answer={g.answer} published={launchGuideDate} updated={launchGuideDate} readTime={`${Math.max(1, Math.ceil(words / 200))} min read`} toc={g.sections.map(s => ({ id: s.id, label: s.title }))} faqs={g.faqs} sources={g.sources}>
+  return <SeoArticlePage slug={g.slug} title={g.title} description={g.description} category={g.tag} answer={g.answer} published={g.published ?? launchGuideDate} updated={g.updated ?? launchGuideDate} readTime={`${Math.max(1, Math.ceil(words / 200))} min read`} toc={g.sections.map(s => ({ id: s.id, label: s.title }))} faqs={g.faqs} sources={g.sources}>
     {g.sections.map(s => <section key={s.id}>
       <h2 id={s.id}>{s.title}</h2>
       {s.paragraphs.map(p => <p key={p}>{p}</p>)}

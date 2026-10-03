@@ -1,0 +1,210 @@
+{
+  "captured": "2026-10-03",
+  "property": "sc-domain:guildframe.com",
+  "search": {
+    "type": "Web text",
+    "period": [
+      "2026-07-15",
+      "2026-09-29"
+    ],
+    "clicks": 22,
+    "impressions_display": "1.05K",
+    "impressions_are_rounded": true,
+    "ctr_display": "2.1%",
+    "average_position": 19.8,
+    "query_rows": [
+      {
+        "query_or_page": "card game",
+        "clicks": 1,
+        "impressions": 1,
+        "position": 1.0
+      },
+      {
+        "query_or_page": "game storefront builder",
+        "clicks": 0,
+        "impressions": 30,
+        "position": 72.4
+      },
+      {
+        "query_or_page": "shopify game store",
+        "clicks": 0,
+        "impressions": 11,
+        "position": 12.5
+      },
+      {
+        "query_or_page": "shopify kickstarter",
+        "clicks": 0,
+        "impressions": 7,
+        "position": 36.7
+      },
+      {
+        "query_or_page": "board game fulfillment",
+        "clicks": 0,
+        "impressions": 3,
+        "position": 70.7
+      },
+      {
+        "query_or_page": "kickstarter highest funded projects",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 4.0
+      },
+      {
+        "query_or_page": "\ud0a5\uc2a4\ud0c0\ud130\uc5d0\uc11c \uc1fc\ud53c\ud30c\uc774\ub85c \uc804\ud658",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 7.0
+      },
+      {
+        "query_or_page": "kickstarter migration",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 8.0
+      },
+      {
+        "query_or_page": "kickstarter highest funded",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 10.0
+      },
+      {
+        "query_or_page": "tabletop analytics",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 29.0
+      },
+      {
+        "query_or_page": "tabletop crowdfunding",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 39.0
+      },
+      {
+        "query_or_page": "kickstarter shop",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 41.0
+      },
+      {
+        "query_or_page": "ankh morpork board game",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 42.0
+      },
+      {
+        "query_or_page": "kickstarter tabletop",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 42.0
+      },
+      {
+        "query_or_page": "kickstarter shopify integration",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 44.0
+      },
+      {
+        "query_or_page": "board game dropshipping",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 70.0
+      },
+      {
+        "query_or_page": "shop framework",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 82.0
+      },
+      {
+        "query_or_page": "gamification add-on for ecommerce platforms",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 95.0
+      }
+    ],
+    "page_rows": [
+      {
+        "query_or_page": "https://guildframe.com/guides/best-shopify-themes-for-board-games",
+        "clicks": 12,
+        "impressions": 166,
+        "position": 10.1
+      },
+      {
+        "query_or_page": "https://guildframe.com/",
+        "clicks": 7,
+        "impressions": 121,
+        "position": 10.4
+      },
+      {
+        "query_or_page": "https://guildframe.com/about",
+        "clicks": 2,
+        "impressions": 65,
+        "position": 3.1
+      },
+      {
+        "query_or_page": "https://guildframe.com/kickstarter-to-shopify",
+        "clicks": 1,
+        "impressions": 119,
+        "position": 30.8
+      },
+      {
+        "query_or_page": "https://guildframe.com/resources/kickstarter-tabletop-games-benchmark",
+        "clicks": 0,
+        "impressions": 387,
+        "position": 8.5
+      },
+      {
+        "query_or_page": "https://guildframe.com/shopify-theme-for-board-games",
+        "clicks": 0,
+        "impressions": 137,
+        "position": 27.3
+      },
+      {
+        "query_or_page": "https://guildframe.com/guides",
+        "clicks": 0,
+        "impressions": 87,
+        "position": 53.7
+      },
+      {
+        "query_or_page": "https://guildframe.com/resources",
+        "clicks": 0,
+        "impressions": 59,
+        "position": 43.4
+      },
+      {
+        "query_or_page": "https://guildframe.com/editorial-policy",
+        "clicks": 0,
+        "impressions": 35,
+        "position": 5.2
+      },
+      {
+        "query_or_page": "https://guildframe.com/guides/kickstarter-to-shopify-launch-timeline",
+        "clicks": 0,
+        "impressions": 33,
+        "position": 28.8
+      }
+    ],
+    "page_rows_are_first_10_of_18": true
+  },
+  "indexing": {
+    "report_last_updated": "2026-09-21",
+    "indexed": 16,
+    "not_indexed": 17,
+    "page_with_redirect": 2,
+    "discovered_currently_not_indexed": 15,
+    "predates_rebrand": true
+  },
+  "sitemap": {
+    "status": "Success",
+    "last_read": "2026-09-29",
+    "discovered_pages": 31
+  },
+  "google_search_generative_ai": "Include; verified in property settings",
+  "robots": "All files valid; property settings",
+  "core_web_vitals": {
+    "report_updated": "2026-10-01",
+    "mobile": "Not enough usage data in last 90 days",
+    "desktop": "Not enough usage data in last 90 days"
+  },
+  "google_ai_performance_report": "Not captured; do not infer zero from an unavailable report link"
+}

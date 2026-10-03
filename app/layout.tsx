@@ -1,6 +1,7 @@
 import type {Metadata,Viewport} from "next";
 import "./globals.css";
 import "./campaign.css";
+import "./editorial.css";
 import {JsonLd} from "./components/JsonLd";
 import {Analytics} from "./components/Analytics";
 import {CampaignMotion} from "./components/CampaignMotion";

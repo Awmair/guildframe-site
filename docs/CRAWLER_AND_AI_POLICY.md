@@ -1,10 +1,10 @@
 # Public crawler and AI retrieval policy
 
-Updated 2026-09-30.
+Updated 2026-10-03.
 
 Public HTML permits indexing and search retrieval. Googlebot, Bingbot, OAI-SearchBot, PerplexityBot and Claude-SearchBot have explicit allow rules. ChatGPT-User is allowed for user-requested retrieval. The wildcard also permits ordinary public retrieval.
 
-The existing training opt-outs remain: Amazonbot, Applebot-Extended, Bytespider, CCBot, ClaudeBot, CloudflareBrowserRenderingCrawler, Google-Extended, GPTBot and meta-externalagent. Search retrieval and training policies are separate choices. Google's Search generative AI inclusion control is an owner-account setting, separate from Google-Extended; it was not inspected.
+The existing training opt-outs remain: Amazonbot, Applebot-Extended, Bytespider, CCBot, ClaudeBot, CloudflareBrowserRenderingCrawler, Google-Extended, GPTBot and meta-externalagent. Search retrieval and training policies are separate choices. Google's Search generative AI inclusion control is an owner-account setting, separate from Google-Extended; the Guildframe owner property was inspected on October 3 and shows Include.
 
 Every allowed group excludes static React navigation payloads with `Disallow: /*.txt$` and permits the supplemental `/llms.txt`. The more specific path keeps that summary crawlable. The canonical sitemap is `/sitemap.xml`.
 

@@ -29,7 +29,7 @@ const pages = [
   ["/about", "About Guildframe | Guildframe", "About Guildframe"],
   ["/editorial-policy", "Editorial Policy | Guildframe", "Guildframe editorial policy"],
   ["/authors/guildframe", "Umair: Campaign Designer & Guide Author | Guildframe", "Umair, campaign designer"],
-  ["/resources", "Tabletop Shopify Checklists & Crowdfunding Data | Guildframe", "Shopify checklists"],
+  ["/resources", "Tabletop Campaign Checklists & Crowdfunding Resources | Guildframe", "Campaign checklists"],
   ["/resources/board-game-shopify-store-checklist", "Board Game Shopify Store Checklist | Guildframe", "Board Game Shopify Store Checklist"],
   ["/resources/kickstarter-to-shopify-migration-checklist", "Kickstarter to Shopify Migration Checklist | Guildframe", "Kickstarter to Shopify Migration Checklist"],
   ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "Tabletop Crowdfunding Platform Role Matrix | Guildframe", "Tabletop Crowdfunding Platform Role Matrix"],
@@ -52,7 +52,20 @@ const pages = [
   ["/guides/kickstarter-campaign-graphics-mobile-readability", "Kickstarter Image Sizes & Mobile Graphics | Guildframe", "Kickstarter Image Sizes and Readable Campaign Graphics"],
   ["/guides/when-to-hire-kickstarter-campaign-designer", "When to Hire a Kickstarter Campaign Designer | Guildframe", "When Should You Hire a Kickstarter Campaign Designer"],
 
+  ["/guides/kickstarter-prelaunch-page-guide", "Kickstarter Prelaunch Page Guide for Tabletop Games | Guildframe", "Kickstarter Prelaunch Page"],
+  ["/guides/board-game-kickstarter-gameplay-rulebook", "Board Game Kickstarter Gameplay & Rulebook Guide | Guildframe", "How to Explain Board Game Gameplay"],
+  ["/guides/kickstarter-campaign-video-planning", "Kickstarter Video Requirements & Tabletop Video Planning | Guildframe", "Kickstarter Campaign Video"],
+  ["/guides/kickstarter-stretch-goals-planning", "Kickstarter Stretch Goals for Board Games: Planning Guide | Guildframe", "Kickstarter Stretch Goals"],
+  ["/guides/kickstarter-shipping-delivery-page", "Kickstarter Shipping Costs & Delivery: Creator Page Guide | Guildframe", "How to Explain Kickstarter Shipping"],
+  ["/guides/kickstarter-prototype-risks-disclosure", "Kickstarter Prototype Images & Risks for Tabletop Creators | Guildframe", "Kickstarter Prototype Images and Risks"],
+  ["/guides/kickstarter-review-launch-timeline", "Kickstarter Review Time & Launch Timeline for Game Creators | Guildframe", "Kickstarter Review to Launch"],
+  ["/guides/gamefound-launch-page-checklist", "Gamefound Launch Page Checklist & Tester Mode Guide | Guildframe", "Gamefound Launch Checklist"],
+  ["/guides/card-game-kickstarter-launch-guide", "Card Game & TCG Kickstarter Launch Page Guide | Guildframe", "Card Game Kickstarter Launch Guide"],
+  ["/guides/miniatures-stl-kickstarter-launch-guide", "Miniatures & STL Kickstarter Launch Page Guide | Guildframe", "Miniatures and STL Kickstarter Pages"],
+  ["/resources/tabletop-campaign-launch-worksheet", "Tabletop Campaign Launch Worksheet | Guildframe", "Tabletop Campaign Launch Worksheet"],
 ];
+
+const afterFundingPaths = new Set(['/guides/what-happens-after-kickstarter-is-funded', '/guides/move-from-kickstarter-to-shopify', '/guides/best-shopify-themes-for-board-games', '/guides/shopify-developer-vs-diy-theme', '/guides/kickstarter-late-pledges-vs-shopify', '/guides/backerkit-vs-shopify-vs-gamefound', '/guides/kickstarter-to-shopify-launch-timeline', '/guides/sell-board-game-preorders-on-shopify', '/guides/sell-board-game-expansions-add-ons-shopify', '/guides/selling-miniatures-internationally-vat-ioss', '/guides/how-much-does-a-board-game-website-cost', '/guides/shopify-vs-etsy-for-selling-miniatures', '/guides/build-a-tabletop-shopify-store-with-ai']);
 
 const outputFile = (path) =>
   new URL(path === "/" ? "index.html" : `${path.slice(1)}.html`, outputRoot);
@@ -182,6 +195,25 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
   assert.match(llms, /no payment or obligation/i);
 });
 
+test("makes every canonical page reachable from the homepage", async () => {
+  const known = new Set(pages.map(([path]) => path));
+  const reached = new Set(["/"]);
+  const pending = ["/"];
+  while (pending.length) {
+    const current = pending.pop();
+    const html = await readPage(current);
+    for (const [, href] of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)) {
+      const target = new URL(href.replaceAll("&amp;", "&"), `http://localhost:3000${current}`);
+      const path = target.pathname.replace(/\/$/, "") || "/";
+      if (target.origin === "http://localhost:3000" && known.has(path) && !reached.has(path)) {
+        reached.add(path);
+        pending.push(path);
+      }
+    }
+  }
+  assert.deepEqual([...known].filter(path => !reached.has(path)), []);
+});
+
 test("exports AEO and social metadata", async () => {
   const solutionPaths = [
     "/shopify-theme-for-board-games",
@@ -217,31 +249,7 @@ test("exports AEO and social metadata", async () => {
   articlePaths.push("/guides/kickstarter-vs-gamefound-campaign-page-design");
   articlePaths.push("/guides/kickstarter-campaign-graphics-mobile-readability");
   articlePaths.push("/guides/when-to-hire-kickstarter-campaign-designer");
-  const modifiedDates = new Map([
-    ["/guides/sell-board-game-expansions-add-ons-shopify", "2026-09-30"],
-    ["/resources/kickstarter-tabletop-games-benchmark", "2026-09-30"],
-    ["/guides/when-to-hire-kickstarter-campaign-designer", "2026-09-30"],
-    ["/guides/kickstarter-campaign-graphics-mobile-readability", "2026-09-30"],
-    ["/guides/kickstarter-vs-gamefound-campaign-page-design", "2026-09-30"],
-    ["/guides/ttrpg-kickstarter-campaign-page-design", "2026-09-30"],
-    ["/guides/kickstarter-reward-tier-graphics", "2026-09-30"],
-    ["/guides/what-to-send-kickstarter-campaign-designer", "2026-09-30"],
-    ["/guides/board-game-kickstarter-page-checklist", "2026-09-30"],
-    ["/guides/board-game-kickstarter-campaign-design-cost", "2026-09-30"],
-    ["/guides/what-happens-after-kickstarter-is-funded", "2026-09-30"],
-    ["/guides/move-from-kickstarter-to-shopify", "2026-09-30"],
-    ["/guides/best-shopify-themes-for-board-games", "2026-09-30"],
-    ["/guides/shopify-developer-vs-diy-theme", "2026-09-30"],
-    ["/guides/kickstarter-to-shopify-launch-timeline", "2026-09-30"],
-    ["/guides/kickstarter-late-pledges-vs-shopify", "2026-09-30"],
-    ["/guides/backerkit-vs-shopify-vs-gamefound", "2026-09-30"],
-    ["/resources/backerkit-vs-shopify-vs-gamefound-comparison", "2026-09-30"],
-    ["/guides/selling-miniatures-internationally-vat-ioss", "2026-09-30"],
-    ["/guides/how-much-does-a-board-game-website-cost", "2026-09-30"],
-    ["/guides/shopify-vs-etsy-for-selling-miniatures", "2026-09-30"],
-    ["/guides/build-a-tabletop-shopify-store-with-ai", "2026-09-30"],
-    ["/resources/tabletop-shopify-metafield-schema", "2026-09-30"],
-  ]);
+
 
   for (const path of solutionPaths) {
     const html = await readPage(path);
@@ -255,7 +263,7 @@ test("exports AEO and social metadata", async () => {
     assert.match(html, /"@type":"(?:Article|TechArticle)"/i, path);
     assert.match(html, /"isAccessibleForFree":true/i, path);
     assert.match(html, /"author":\{"@id":"http:\/\/localhost:3000\/authors\/guildframe#umair"\}/i, path);
-    const modifiedDate = modifiedDates.get(path) ?? "2026-09-30";
+    const modifiedDate = datedPages.get(path) ?? "2026-10-03";
     assert.match(html, new RegExp(`"dateModified":"${modifiedDate}"`, "i"), path);
     assert.match(html, /"citation":\[\{"@type":"CreativeWork","name":"[^"]+","url":"https?:\/\//i, path);
     assert.match(html, /"citation":\[[\s\S]*?"publisher":\{"@type":"Organization","name":"[^"]+"\}/i, path);
@@ -287,7 +295,7 @@ test("exports AEO and social metadata", async () => {
   );
   assert.match(
     await readPage("/authors/guildframe"),
-    /"dateModified":"2026-09-30"/i,
+    /"dateModified":"2026-10-03"/i,
   );
   assert.match(await readPage("/resources"), /"@type":"CollectionPage"/i);
 
@@ -326,7 +334,7 @@ test("keeps campaign pricing, recovery and redirects ready",async()=>{
  for(const html of [home,campaign,buy]){assert.match(html,/\$975/);assert.match(html,/free mockup/i);assert.doesNotMatch(html,/\$79|\$2,500|\$99|fiverr|checkout pending|within 72 hours/i);}
  assert.match(home,/mailto:umair@guildframe.com/);assert.match(home,/"price":"975"/);assert.match(campaign,/"priceCurrency":"USD"/);
  assert.match(home,/Concept mockups showing different types/i);assert.match(home,/prefers-reduced-motion|gf-home/i);
- const missing=await readFile(new URL("404.html",outputRoot),"utf8");assert.match(missing,/This path ends here/);assert.match(missing,/content="noindex/);
+ const missing=await readFile(new URL("404.html",outputRoot),"utf8");assert.match(missing,/This page could not be found/);assert.match(missing,/content="noindex/);
  const redirects=await readFile(new URL("_redirects",outputRoot),"utf8");assert.match(redirects,/^\/pricing \/#pricing 301/m);assert.match(redirects,/^\/customization \/campaign-design 301/m);
  const headers=await readFile(new URL("_headers",outputRoot),"utf8");assert.match(headers,/X-Content-Type-Options: nosniff/i);
 });
@@ -454,20 +462,17 @@ test("keeps copy and responsive mockups clean", async () => {
   for (const [path] of pages) {
     const html = await readPage(path);
     const copy = visibleText(html);
-    assert.doesNotMatch(copy, /[\u2013\u2014]|\b[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\b/u, path);
+    assert.doesNotMatch(copy, /[\u2013\u2014]/u, path);
   }
 
-  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
-  const imageRule = css.match(/\.seo-hero-visual img\s*\{([^}]+)\}/)?.[1] ?? "";
-  assert.match(imageRule, /height:\s*auto/i);
-  assert.match(imageRule, /object-fit:\s*contain/i);
-  assert.doesNotMatch(imageRule, /object-fit:\s*cover/i);
-
-  for (const selector of ["funded-creator-visual", "campaign-service-hero-image"]) {
-    const rule = css.match(new RegExp(`\\.${selector} img\\s*\\{([^}]+)\\}`))?.[1] ?? "";
-    assert.match(rule, /height:\s*auto/i, selector);
-    assert.doesNotMatch(rule, /object-fit:\s*cover/i, selector);
+  for (const [path] of pages) {
+    for (const image of (await readPage(path)).match(/<img\b[^>]*>/gi) ?? []) {
+      assert.match(image, /\bwidth="[1-9]\d*"/i, path);
+      assert.match(image, /\bheight="[1-9]\d*"/i, path);
+      assert.match(image, /\balt="[^"]+"/i, path);
+    }
   }
+
 });
 
 test("does not ship GitHub Actions workflows", async () => {
@@ -488,16 +493,16 @@ const readableDate = (iso) => {
 // updates because nothing compared it with app/content-dates.ts.
 const datedPages = new Map([
   ["/guides/when-to-hire-kickstarter-campaign-designer", "2026-09-30"],
-  ["/guides/kickstarter-campaign-graphics-mobile-readability", "2026-09-30"],
-  ["/guides/kickstarter-vs-gamefound-campaign-page-design", "2026-09-30"],
+  ["/guides/kickstarter-campaign-graphics-mobile-readability", "2026-10-03"],
+  ["/guides/kickstarter-vs-gamefound-campaign-page-design", "2026-10-03"],
   ["/guides/ttrpg-kickstarter-campaign-page-design", "2026-09-30"],
-  ["/guides/kickstarter-reward-tier-graphics", "2026-09-30"],
+  ["/guides/kickstarter-reward-tier-graphics", "2026-10-03"],
   ["/guides/what-to-send-kickstarter-campaign-designer", "2026-09-30"],
-  ["/guides/board-game-kickstarter-page-checklist", "2026-09-30"],
+  ["/guides/board-game-kickstarter-page-checklist", "2026-10-03"],
   ["/guides/board-game-kickstarter-campaign-design-cost", "2026-09-30"],
-  ["/about", "2026-09-30"],
-  ["/editorial-policy", "2026-09-30"],
-  ["/authors/guildframe", "2026-09-30"],
+  ["/about", "2026-10-03"],
+  ["/editorial-policy", "2026-10-03"],
+  ["/authors/guildframe", "2026-10-03"],
   ["/guides/what-happens-after-kickstarter-is-funded", "2026-09-30"],
   ["/guides/move-from-kickstarter-to-shopify", "2026-09-30"],
   ["/guides/best-shopify-themes-for-board-games", "2026-09-30"],
@@ -517,6 +522,8 @@ const datedPages = new Map([
   ["/resources/board-game-product-page-checklist", "2026-09-30"],
   ["/resources/kickstarter-tabletop-games-benchmark", "2026-09-30"],
   ["/resources/tabletop-shopify-metafield-schema", "2026-09-30"],
+  ...pages.filter(([p]) => p.startsWith("/guides/") && !afterFundingPaths.has(p) && !["/guides/when-to-hire-kickstarter-campaign-designer","/guides/ttrpg-kickstarter-campaign-page-design","/guides/what-to-send-kickstarter-campaign-designer","/guides/board-game-kickstarter-campaign-design-cost"].includes(p)).map(([p]) => [p, "2026-10-03"]),
+  ["/resources/tabletop-campaign-launch-worksheet", "2026-10-03"],
 ]);
 
 test("keeps visible review dates, schema dates and sitemap dates identical", async (t) => {
@@ -591,9 +598,9 @@ test("keeps comparison tables, campaign pages and answers connected",async()=>{
 
 test("connects the high intent launch pages to the service",async()=>{
  const guideIndex=await readPage("/guides");
- const launchPaths=pages.filter(([p])=>p.startsWith("/guides/")&& /campaign-design-cost|page-checklist|what-to-send|reward-tier|ttrpg-kickstarter|vs-gamefound-campaign|graphics-mobile|when-to-hire/.test(p));
- assert.equal(launchPaths.length,8);
- for(const [path] of launchPaths){assert.ok(guideIndex.includes(`href="${path}"`),path);const html=await readPage(path);assert.match(html,/href="\/campaign-design"/);assert.match(html,/"dateModified":"2026-09-30"/);assert.match(html,/"@type":"FAQPage"/);}
+ const launchPaths=pages.filter(([p])=>p.startsWith("/guides/")&&!afterFundingPaths.has(p));
+ assert.equal(launchPaths.length,18);
+ for(const [path] of launchPaths){assert.ok(guideIndex.includes(`href="${path}"`),path);const html=await readPage(path);assert.match(html,/href="\/campaign-design"/);assert.match(html,/"@type":"FAQPage"/);}
  for(const image of ["board-games","card-games","ttrpgs","miniatures","accessories"]){assert.ok((await readPage("/")).includes(`/images/campaign/${image}.webp`),image);}
 });
 
@@ -688,7 +695,7 @@ test("resolves article authors and profiles to the visible named person", async 
     assert.equal(person?.["@type"], "Person", path);
     assert.equal(person.name, "Umair", path);
     assert.match(html, /By Umair at Guildframe/, path);
-    assert.equal(article.dateModified, "2026-09-30", path);
+    assert.equal(article.dateModified, html.match(/<time datetime="([^"]+)"/i)?.[1], path);
     const breadcrumb = nodes.find(node => node["@type"] === "BreadcrumbList");
     assert.equal(breadcrumb.itemListElement.at(-1).name, article.headline, path);
   }

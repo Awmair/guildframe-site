@@ -155,6 +155,7 @@ export function SeoArticlePage({
             ]}
           />
           <div className="article-hero-inner">
+            <span className="article-category">{category}</span>
             <h1>{title}</h1>
             <p>{description}</p>
             <div className="article-meta">
@@ -185,6 +186,12 @@ export function SeoArticlePage({
             </Link>
           </aside>
 
+          <details className="article-mobile-toc">
+            <summary>{sidebarTitle}<span aria-hidden="true">+</span></summary>
+            <nav aria-label="Article sections">
+              {toc.map((item) => <a href={`#${item.id}`} key={item.id}>{item.label}</a>)}
+            </nav>
+          </details>
           <article className="article-body" id="article-content">
             <div className="article-direct-answer" aria-label="Direct answer">
               <p>{answer}</p>
@@ -193,7 +200,7 @@ export function SeoArticlePage({
             <section className="article-sources" aria-labelledby="article-sources-title">
               <h2 id="article-sources-title">Sources and references</h2>
               <p>
-                The sources below cover platform features, policies and figures used in this article. Check the current documentation before making a decision. Practical recommendations are from Umair at Guildframe.
+                Platform requirements and figures come from the sources below. Layout advice and checklists are Guildframe recommendations.
               </p>
               <ul>
                 {sources.map((source) => (

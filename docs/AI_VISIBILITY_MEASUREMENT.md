@@ -1,6 +1,6 @@
 # Search and AI visibility measurement
 
-Updated 2026-09-30. See [SEO_AEO_RESEARCH_2026-09-30.md](SEO_AEO_RESEARCH_2026-09-30.md) for current official sources and [OPEN_ACTIONS.md](OPEN_ACTIONS.md) for account access limits.
+Updated 2026-10-03. See [SEO_RESEARCH_2026-10-03.md](SEO_RESEARCH_2026-10-03.md) for official sources and [SEO_PASS_2026-10-03.md](SEO_PASS_2026-10-03.md) for the owner baseline and its limits.
 
 ## Website enquiries
 
@@ -14,7 +14,7 @@ In GA4 compare actual enquiries by landing page and organic search/direct/AI-ref
 
 ## Google and Bing
 
-Google Search Console's current Generative AI performance report covers AI Overviews/AI Mode impressions by page, country, device and date. Check the actual Search generative AI inclusion control; the public default is not evidence of Guildframe's setting. Ordinary Search performance and website enquiry records remain necessary.
+Google Search Console's current Generative AI performance report covers AI Overviews/AI Mode impressions by page, country, device and date. Guildframe's owner property was inspected on October 3 and its Search generative AI control is Include. Its AI performance report was not captured; do not infer zero impressions. Ordinary Search performance and website enquiry records remain necessary.
 
 Bing Webmaster Tools AI Performance covers citations, cited pages and sampled grounding queries. Treat citations separately from visitors, enquiries and placement. Record the exact URL and whether the answer described the service accurately.
 

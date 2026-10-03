@@ -47,7 +47,7 @@ export default function GuildframeAuthorPage() {
       <section>
         <h2>Campaign design guides</h2>
         <ul className="trust-link-list">{launchGuides.map(g=><li key={g.slug}><Link href={`/guides/${g.slug}`}>{g.title}</Link></li>)}</ul>
-        <p>Find the after funding articles in <Link href="/guides">all guides</Link> and the reusable <Link href="/resources">Shopify checklists</Link>.</p>
+        <p>Find the after funding articles in <Link href="/guides">all guides</Link> and the reusable <Link href="/resources">campaign worksheets and store checklists</Link>.</p>
       </section>
     </TrustPage>
   </>;

@@ -4,14 +4,15 @@ import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
 
 export const metadata = pageMetadata({
-  title: "Tabletop Shopify Checklists & Crowdfunding Data",
+  title: "Tabletop Campaign Checklists & Crowdfunding Resources",
   description:
-    "Shopify store and product page checklists for tabletop publishers, a Kickstarter migration checklist, platform comparisons and 2024 funding data.",
+    "Plan your tabletop Kickstarter with a campaign worksheet, launch checklists and funding data. Find store and migration references for after funding.",
   path: "/resources",
   keywords: ["Shopify checklist", "board game ecommerce checklist", "Kickstarter to Shopify checklist"],
 });
 
 const resources = [
+  {title:"Tabletop Campaign Launch Worksheet",copy:"A reusable brief for game facts, asset status, rewards, shipping and final launch checks. Download it and fill it in with your team.",href:"/resources/tabletop-campaign-launch-worksheet",tag:"Campaign planning"},
   {
     title: "Tabletop Shopify Metafield Schema",
     copy: "A reusable product data structure for board games, TTRPGs and miniatures, with the type and purpose of every field.",
@@ -59,9 +60,9 @@ export default function ResourcesPage() {
           {
             "@type": "CollectionPage",
             "@id": absoluteUrl("/resources"),
-            name: "Tabletop Shopify Checklists and Crowdfunding Data",
+            name: "Tabletop Campaign Checklists and Crowdfunding Resources",
             url: absoluteUrl("/resources"),
-            description: "Shopify checklists, platform comparisons and Kickstarter funding data for tabletop publishers.",
+            description: "Campaign worksheets, tabletop checklists, platform comparisons and Kickstarter funding data.",
             isPartOf: { "@id": absoluteUrl("/#website") },
             mainEntity: { "@id": absoluteUrl("/resources#reference-list") },
             inLanguage: "en",
@@ -90,14 +91,14 @@ export default function ResourcesPage() {
       <main className="guides-main" id="resources-content">
         <section className="guides-hero resources-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Resources" }]} />
-          <h1>Shopify checklists &amp; <em>crowdfunding data.</em></h1>
+          <h1>Campaign checklists &amp; <em>useful references.</em></h1>
           <p>
-            Check what your Shopify store needs, compare platform roles and review Kickstarter tabletop funding figures. Use these references alongside the longer guides.
+            Use the campaign worksheet to collect your game facts, rewards and launch checks. Compare platform roles and funding data, then plan your store when you reach the after funding stage.
           </p>
         </section>
         <section className="guides-grid resources-grid">
           {resources.map((resource) => (
-            <Link href={resource.href} key={resource.title}>
+            <Link href={resource.href} key={resource.title} data-reveal>
               <div><span>{resource.tag}</span></div>
               <h2>{resource.title}</h2>
               <p>{resource.copy}</p>
@@ -111,6 +112,7 @@ export default function ResourcesPage() {
             <Link href="/guides">Read all guides ↗</Link>
             <Link href="/guides/move-from-kickstarter-to-shopify">Migration guide ↗</Link>
             <Link href="/guides/best-shopify-themes-for-board-games">Theme comparison ↗</Link>
+            <Link href="/shopify-theme-for-ttrpg">RPG store planning ↗</Link>
             <Link href="/editorial-policy">Editorial policy ↗</Link>
           </nav>
         </section>

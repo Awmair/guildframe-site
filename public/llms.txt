@@ -29,7 +29,22 @@ This is a supplemental service summary. It does not replace the HTML pages or si
 - [Miniatures & Terrain Kickstarter Page Design](https://guildframe.com/miniatures-kickstarter-campaign-design)
 - [Tabletop Accessories Kickstarter Page Design](https://guildframe.com/tabletop-accessories-campaign-design)
 
+## Launch planning worksheet
+
+- [Tabletop Campaign Launch Worksheet](https://guildframe.com/resources/tabletop-campaign-launch-worksheet)
+
 ## Launch guides
+
+- [Kickstarter Prelaunch Page Guide](https://guildframe.com/guides/kickstarter-prelaunch-page-guide)
+- [Board Game Gameplay and Rulebook Guide](https://guildframe.com/guides/board-game-kickstarter-gameplay-rulebook)
+- [Kickstarter Campaign Video Planning](https://guildframe.com/guides/kickstarter-campaign-video-planning)
+- [Stretch Goal Planning](https://guildframe.com/guides/kickstarter-stretch-goals-planning)
+- [Shipping and Delivery Presentation](https://guildframe.com/guides/kickstarter-shipping-delivery-page)
+- [Prototype Images and Risks](https://guildframe.com/guides/kickstarter-prototype-risks-disclosure)
+- [Kickstarter Review and Launch Timeline](https://guildframe.com/guides/kickstarter-review-launch-timeline)
+- [Gamefound Launch Checklist](https://guildframe.com/guides/gamefound-launch-page-checklist)
+- [Card Game and TCG Launch Guide](https://guildframe.com/guides/card-game-kickstarter-launch-guide)
+- [Miniatures and STL Launch Guide](https://guildframe.com/guides/miniatures-stl-kickstarter-launch-guide)
 
 - [Kickstarter Page Design Cost: $975 Copy & Graphics](https://guildframe.com/guides/board-game-kickstarter-campaign-design-cost)
 - [Board Game Kickstarter Page Checklist](https://guildframe.com/guides/board-game-kickstarter-page-checklist)
@@ -66,7 +81,7 @@ This is a supplemental service summary. It does not replace the HTML pages or si
 - [About Guildframe](https://guildframe.com/about)
 - [Editorial Policy](https://guildframe.com/editorial-policy)
 - [Umair: Campaign Designer & Guide Author](https://guildframe.com/authors/guildframe)
-- [Tabletop Shopify Checklists & Crowdfunding Data](https://guildframe.com/resources)
+- [Tabletop Campaign Checklists & Crowdfunding Resources](https://guildframe.com/resources)
 - [Board Game Shopify Store Checklist](https://guildframe.com/resources/board-game-shopify-store-checklist)
 - [Kickstarter to Shopify Migration Checklist](https://guildframe.com/resources/kickstarter-to-shopify-migration-checklist)
 - [Tabletop Crowdfunding Platform Role Matrix](https://guildframe.com/resources/backerkit-vs-shopify-vs-gamefound-comparison)

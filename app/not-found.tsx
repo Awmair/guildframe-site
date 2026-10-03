@@ -18,9 +18,9 @@ export default function NotFound() {
       <main className="not-found-page" id="not-found-content">
         <div>
           <span>404</span>
-          <h1>This path ends here.</h1>
+          <h1>This page could not be found.</h1>
           <p>
-            The page may have moved, but your route back to Guildframe is clear.
+            Use the links below to find campaign design or a launch guide.
           </p>
           <div className="not-found-actions">
             <Link className="seo-button" href="/">
