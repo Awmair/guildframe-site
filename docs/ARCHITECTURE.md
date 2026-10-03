@@ -33,3 +33,5 @@ Assets are generated with ImageGen and optimised with Sharp. Manrope is self-hos
 Lint, type checking, actual static output tests, production-origin preflight and browser review. Browser review includes mobile, desktop, image loading, native form validation, intercepted success/error responses, reduced motion and no-JavaScript visibility. The inbox behind Formspree is external configuration and needs separate recipient verification.
 
 - app/launch.css: broader studio layouts, dark hero and process surfaces, stage preview animation and responsive engagement cards.
+
+The native contact Worker and configurable endpoint are prepared in draft PR #1. They include service and launch timing, formatted HTML/text, fixed sender/recipient, Reply-To, validation and rate limits. Activate only after the inbox test passes.
