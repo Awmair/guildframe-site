@@ -1,3 +1,4 @@
+import { LibrarySearch } from "../components/LibrarySearch";
 import Link from "next/link";
 import {launchGuides} from "../launch-guides";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
@@ -145,6 +146,7 @@ export default function GuidesPage() {
             Plan your audience, emails, ads and campaign page before launch. Find practical guidance for board games, card games, RPGs, miniatures and Gamefound projects.
           </p>
         </section>
+        <LibrarySearch count={guides.length} noun="guides"/>
         <nav className="guide-topic-nav" aria-label="Guide topics"><Link href="#launch-guides">Campaign launch guides</Link><Link href="/guides/card-game-kickstarter-launch-guide">Card games &amp; TCGs</Link><Link href="/guides/ttrpg-kickstarter-campaign-page-design">Tabletop RPGs</Link><Link href="/guides/miniatures-stl-kickstarter-launch-guide">Miniatures &amp; STL files</Link><Link href="#after-funding">After funding</Link><Link href="/resources/tabletop-campaign-launch-worksheet">Launch worksheet</Link></nav>
         <section className="guides-grid" id="launch-guides">
           {campaignGuides.map((guide, index) => (

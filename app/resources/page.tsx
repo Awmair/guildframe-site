@@ -1,3 +1,4 @@
+import { LibrarySearch } from "../components/LibrarySearch";
 import Link from "next/link";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { JsonLd } from "../components/JsonLd";
@@ -8,7 +9,7 @@ export const metadata = pageMetadata({
   description:
     "Plan your tabletop Kickstarter with a campaign worksheet, launch checklists and funding data. Find store and migration references for after funding.",
   path: "/resources",
-  keywords: ["Shopify checklist", "board game ecommerce checklist", "Kickstarter to Shopify checklist"],
+  keywords: ["tabletop campaign checklist", "Kickstarter launch worksheet", "crowdfunding resources"],
 });
 
 const resources = [
@@ -96,6 +97,7 @@ export default function ResourcesPage() {
             Use the campaign worksheet to collect your game facts, rewards and launch checks. Compare platform roles and funding data, then plan your store when you reach the after funding stage.
           </p>
         </section>
+        <LibrarySearch count={resources.length} noun="resources"/>
         <section className="guides-grid resources-grid">
           {resources.map((resource) => (
             <Link href={resource.href} key={resource.title} data-reveal>
