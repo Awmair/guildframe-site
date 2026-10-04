@@ -99,7 +99,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
                 {content.title} <em>{content.highlight}</em>
               </h1>
               <p className="seo-answer">{content.answer}</p>
-              <div className="seo-actions"><Link className="seo-button" href="/guides/move-from-kickstarter-to-shopify">Read the migration guide ↗</Link><Link className="seo-text-link" href="/campaign-design">Planning another campaign?</Link></div>
+              <div className="seo-actions"><Link className="seo-button" href="/guides/move-from-kickstarter-to-shopify">Read the migration guide</Link><Link className="seo-text-link" href="/campaign-design">Planning another campaign?</Link></div>
               <div className="seo-proof-strip"><span>After funding reference</span><span>Mobile buying paths</span><span>Clear product information</span></div>
             </div>
             <div className="seo-hero-visual">
@@ -157,7 +157,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               </article>
             ))}
           </div>
-          <div className="seo-offer-note"><strong>Before your next launch</strong><p>Guildframe helps tabletop creators with launch planning, prelaunch, campaign creative, paid advertising and live support.</p><Link href={siteConfig.purchasePath}>Explore launch services ↗</Link></div>
+          <div className="seo-offer-note"><strong>Before your next launch</strong><p>Guildframe helps tabletop creators with launch planning, prelaunch, campaign creative, paid advertising and live support.</p><Link href={siteConfig.purchasePath}>Explore launch services</Link></div>
         </section>
 
         <section className="seo-faq-section">
@@ -185,7 +185,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
           <div className="seo-related-grid">
             {content.related.map((item) => (
               <Link href={item.href} key={item.title}>
-                <span>Read next ↗</span>
+                <span>Read next</span>
                 <h3>{item.title}</h3>
                 <p>{item.copy}</p>
               </Link>

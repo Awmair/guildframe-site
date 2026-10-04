@@ -1,36 +1,42 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ResponsiveImage } from "./ResponsiveImage";
 
 const concepts = [
-  {image: "board-games", name: "Board games", alt: "Original harbour strategy board game and colourful family game concepts", width: 1000, height: 750},
-  {image: "party-cards", name: "Party card games", alt: "Snack Attack, an original colourful fruit themed party card game concept", width: 1200, height: 800},
-  {image: "ttrpgs", name: "Tabletop RPGs", alt: "Original noir RPG hardback and cosmic horror zine with character sheets", width: 1000, height: 750},
-  {image: "miniatures", name: "Miniatures & terrain", alt: "Original science fiction mechs, woodland miniatures and modular lunar terrain concepts", width: 1000, height: 750},
-  {image: "minimal-cards", name: "Indie card games", alt: "Common Ground, an original botanical card game concept with illustrated cards", width: 1200, height: 800},
-  {image: "accessories", name: "Dice & accessories", alt: "Original colourful dice, coral dice tray, petrol card sleeves and mint tokens", width: 1000, height: 750},
+  { image: "party-card-game", name: "Snack Attack", category: "Party card games", alt: "Original Snack Attack party game concept with a coral box, illustrated fruit cards and tokens" },
+  { image: "strategy-board-game", name: "Tidal Harbour", category: "Strategy board games", alt: "Original Tidal Harbour strategy game concept with painted harbour box, hex map and wooden ships" },
+  { image: "trading-card-game", name: "Starbound", category: "Trading card games", alt: "Original Starbound trading card game concept with a celestial deck box and illustrated foil cards" },
+  { image: "rpg-book", name: "Moth & Moon", category: "Tabletop RPGs", alt: "Original Moth and Moon folk horror RPG concept with a green clothbound book, adventure zine and character sheets" },
+  { image: "miniature-terrain", name: "Orbital Outpost", category: "Miniatures & terrain", alt: "Original Orbital Outpost miniature game concept with a lunar box, sculpted mech and modular terrain" },
+  { image: "dice-accessories", name: "Prismatic", category: "Dice & accessories", alt: "Original Prismatic accessories concept with jewel coloured dice, coral suede tray and petrol presentation box" },
 ] as const;
 
-/** A static, labelled deck on the server; motion starts only when permitted. */
+/** One foreground product, with the remaining concepts orbiting behind it. */
 export function HeroGallery() {
   const root = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(true);
   const [visible, setVisible] = useState(true);
   const [interacting, setInteracting] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const syncMotion = () => setReduced(preference.matches);
-    const syncVisibility = () => setVisible(!document.hidden && (!root.current || root.current.getBoundingClientRect().bottom > 0));
+    const syncVisibility = () => {
+      const rect = root.current?.getBoundingClientRect();
+      setVisible(!document.hidden && !!rect && rect.bottom > 0 && rect.top < window.innerHeight);
+    };
     syncMotion();
     preference.addEventListener("change", syncMotion);
     document.addEventListener("visibilitychange", syncVisibility);
-    const observer = new IntersectionObserver(entries => setVisible(entries[0].isIntersecting && !document.hidden));
+    const observer = new IntersectionObserver(syncVisibility);
     if (root.current) observer.observe(root.current);
+    let mounted = true;
+    Promise.all(Array.from(root.current?.querySelectorAll("img") ?? []).map(image => image.decode().catch(() => {})))
+      .then(() => { if (mounted) setReady(true); });
     return () => {
+      mounted = false;
       preference.removeEventListener("change", syncMotion);
       document.removeEventListener("visibilitychange", syncVisibility);
       observer.disconnect();
@@ -38,31 +44,26 @@ export function HeroGallery() {
   }, []);
 
   useEffect(() => {
-    if (paused || reduced || !visible || interacting) return;
-    const timer = window.setInterval(() => setActive(current => (current + 1) % concepts.length), 5000);
+    if (reduced || !visible || interacting || !ready) return;
+    const timer = window.setInterval(() => setActive(current => (current + 1) % concepts.length), 1800);
     return () => window.clearInterval(timer);
-  }, [paused, reduced, visible, interacting]);
+  }, [reduced, visible, interacting, ready]);
 
-  function choose(direction: number) {
-    setPaused(true);
-    setActive(current => (current + direction + concepts.length) % concepts.length);
-  }
-
-  return <div ref={root} className="gf-hero-visual gf-hero-gallery" role="region" aria-roledescription="carousel" aria-label="Gallery of original tabletop campaign concepts"
-    onPointerEnter={event => {if (event.pointerType === "mouse" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) setInteracting(true);}}
-    onPointerLeave={() => setInteracting(false)}
-    onFocusCapture={() => setInteracting(true)}
-    onBlurCapture={event => {if (!event.currentTarget.contains(event.relatedTarget)) setInteracting(false);}}>
-    <span className="gf-sr-only" aria-live="polite">{paused ? concepts[active].name : ""}</span>
-    <span className="gf-gallery-eyebrow">A place for every kind of game</span>
-    <div className="gf-gallery-deck">{concepts.map((concept, index) => {
+  return <div ref={root} className="gf-hero-visual gf-hero-gallery" role="region" aria-label="Gallery of original tabletop campaign concepts"
+    onPointerEnter={event => { if (event.pointerType === "mouse" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) setInteracting(true); }}
+    onPointerLeave={() => setInteracting(false)}>
+    <div className="gf-orbit-ground" aria-hidden="true"/>
+    {concepts.map((concept, index) => {
       const offset = (index - active + concepts.length) % concepts.length;
-      const slot = offset === 0 ? "front" : offset === 1 ? "right" : offset === concepts.length - 1 ? "left" : "back";
-      return <figure className="gf-gallery-card" data-slot={slot} key={concept.image} aria-hidden={index !== active}>
-        <ResponsiveImage src={`/images/campaign/${concept.image}.webp`} alt={concept.alt} sizes="(max-width: 800px) 240px, 410px" width={concept.width} height={concept.height} loading={index === 0 ? "eager" : "lazy"} fetchPriority={index === 0 ? "high" : "low"}/>
-        <figcaption><span>{concept.name}</span><span aria-hidden="true">↗</span></figcaption>
+      const focal = offset === 0;
+      const angle = Math.PI * .22 + (offset - 1) / (concepts.length - 1) * Math.PI * 2;
+      const x = focal ? 50 : 50 + 36 * Math.cos(angle);
+      const y = focal ? 40 : 44 + 33 * Math.sin(angle);
+      return <figure className="gf-orbit-product" data-focal={focal} key={concept.image} style={{ transform: `translate(-50%, -50%) translate(${x.toFixed(3)}cqw, ${y.toFixed(3)}cqh) scale(${focal ? 1.9 : .5})` }}>
+        <img src={`/images/hero/${concept.image}-480w.webp`} srcSet={`/images/hero/${concept.image}-320w.webp 320w, /images/hero/${concept.image}-480w.webp 480w, /images/hero/${concept.image}-640w.webp 640w`} sizes="(max-width: 800px) 180px, 310px" width="640" height="640" alt={concept.alt} loading="eager" fetchPriority={index === 0 ? "high" : "auto"} decoding="async"/>
+        <figcaption className="gf-sr-only">{concept.name}, {concept.category}. Original concept.</figcaption>
       </figure>;
-    })}</div>
-    <div className="gf-gallery-controls"><span className="gf-gallery-note">Original concepts</span><div><button type="button" className="gf-gallery-arrow" aria-label="Previous game concept" onClick={() => choose(-1)}>←</button><button type="button" className="gf-gallery-pause" aria-pressed={paused} disabled={reduced} aria-label={reduced ? "Gallery motion is disabled by your reduced motion preference" : paused ? "Play gallery" : "Pause gallery"} onClick={() => setPaused(current => !current)}><span aria-hidden="true">{reduced || paused ? "▷" : "Ⅱ"}</span>{reduced ? "Motion off" : paused ? "Play" : "Pause"}</button><button type="button" className="gf-gallery-arrow" aria-label="Next game concept" onClick={() => choose(1)}>→</button></div></div>
+    })}
+    <div className="gf-orbit-caption" key={active} aria-hidden="true"><span>{concepts[active].name}</span><strong>{concepts[active].category}</strong><small>Original concept</small></div>
   </div>;
 }

@@ -104,18 +104,18 @@ export default function ResourcesPage() {
               <div><span>{resource.tag}</span></div>
               <h2>{resource.title}</h2>
               <p>{resource.copy}</p>
-              <strong>Open the reference ↗</strong>
+              <strong>Open the reference</strong>
             </Link>
           ))}
         </section>
         <section className="guides-solutions">
           <div><h2>Need the reasoning behind the checklist?</h2></div>
           <nav aria-label="Related Guildframe guides">
-            <Link href="/guides">Read all guides ↗</Link>
-            <Link href="/guides/move-from-kickstarter-to-shopify">Migration guide ↗</Link>
-            <Link href="/guides/best-shopify-themes-for-board-games">Theme comparison ↗</Link>
-            <Link href="/shopify-theme-for-ttrpg">RPG store planning ↗</Link>
-            <Link href="/editorial-policy">Editorial policy ↗</Link>
+            <Link href="/guides">Read all guides</Link>
+            <Link href="/guides/move-from-kickstarter-to-shopify">Migration guide</Link>
+            <Link href="/guides/best-shopify-themes-for-board-games">Theme comparison</Link>
+            <Link href="/shopify-theme-for-ttrpg">RPG store planning</Link>
+            <Link href="/editorial-policy">Editorial policy</Link>
           </nav>
         </section>
       </main>

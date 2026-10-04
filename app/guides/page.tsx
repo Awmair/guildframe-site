@@ -157,24 +157,24 @@ export default function GuidesPage() {
               </div>
               <h2>{guide.title}</h2>
               <p>{guide.copy}</p>
-              <strong>Read the guide ↗</strong>
+              <strong>Read the guide</strong>
             </Link>
           ))}
         </section>
-        <section className="gf-archive-heading" id="after-funding"><h2>After funding</h2><p>Plan fulfilment, a permanent store and ongoing sales once your campaign is funded.</p></section><section className="guides-grid">{afterFundingGuides.map(guide=><Link href={guide.href} key={guide.href}><div><span>{guide.tag}</span></div><h2>{guide.title}</h2><p>{guide.copy}</p><strong>Read the guide ↗</strong></Link>)}</section>
+        <section className="gf-archive-heading" id="after-funding"><h2>After funding</h2><p>Plan fulfilment, a permanent store and ongoing sales once your campaign is funded.</p></section><section className="guides-grid">{afterFundingGuides.map(guide=><Link href={guide.href} key={guide.href}><div><span>{guide.tag}</span></div><h2>{guide.title}</h2><p>{guide.copy}</p><strong>Read the guide</strong></Link>)}</section>
         <section className="guides-solutions">
           <div>
             <h2>Find the service for your project.</h2>
           </div>
           <nav aria-label="Guildframe solutions">
-            <Link href="/board-game-kickstarter-campaign-design">Board games ↗</Link>
-            <Link href="/card-game-kickstarter-campaign-design">Card games &amp; TCGs ↗</Link>
-            <Link href="/gamefound-campaign-design">Gamefound page design ↗</Link>
-            <Link href="/tabletop-accessories-campaign-design">Dice &amp; accessories ↗</Link>
-            <Link href="/ttrpg-kickstarter-campaign-design">TTRPGs ↗</Link>
-            <Link href="/miniatures-kickstarter-campaign-design">Miniatures ↗</Link>
-            <Link href="/kickstarter-to-shopify">Kickstarter to Shopify ↗</Link>
-            <Link href="/resources">Checklists and references ↗</Link>
+            <Link href="/board-game-kickstarter-campaign-design">Board games</Link>
+            <Link href="/card-game-kickstarter-campaign-design">Card games &amp; TCGs</Link>
+            <Link href="/gamefound-campaign-design">Gamefound page design</Link>
+            <Link href="/tabletop-accessories-campaign-design">Dice &amp; accessories</Link>
+            <Link href="/ttrpg-kickstarter-campaign-design">TTRPGs</Link>
+            <Link href="/miniatures-kickstarter-campaign-design">Miniatures</Link>
+            <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
+            <Link href="/resources">Checklists and references</Link>
           </nav>
         </section>
       </main>
