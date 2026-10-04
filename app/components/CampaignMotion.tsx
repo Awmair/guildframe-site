@@ -21,15 +21,24 @@ export function CampaignMotion() {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
           reveals?.unobserve(entry.target);
+          const scene = entry.target.hasAttribute("data-journey-scene");
           const animation = entry.target.animate(
             [{ opacity: .45, transform: "translateY(12px)" }, { opacity: 1, transform: "translateY(0)" }],
-            { duration: 600, easing: "cubic-bezier(.23,1,.32,1)" },
+            { duration: scene ? 300 : 400, easing: "cubic-bezier(.23,1,.32,1)" },
           );
           animations.add(animation);
           animation.onfinish = () => animations.delete(animation);
+          if (scene) entry.target.querySelectorAll("[data-chat-bubble]").forEach((bubble, index) => {
+            const bubbleAnimation = bubble.animate(
+              [{ transform: "translateY(6px)" }, { transform: "translateY(0)" }],
+              { duration: 300, delay: index * 50, easing: "cubic-bezier(.23,1,.32,1)" },
+            );
+            animations.add(bubbleAnimation);
+            bubbleAnimation.onfinish = () => animations.delete(bubbleAnimation);
+          });
         });
       }, { rootMargin: "0px 0px -24px 0px", threshold: 0 });
-      document.querySelectorAll("[data-reveal]").forEach(element => {
+      document.querySelectorAll("[data-reveal], [data-journey-scene]").forEach(element => {
         if (element.getBoundingClientRect().top > window.innerHeight) reveals?.observe(element);
       });
     }

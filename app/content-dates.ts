@@ -13,7 +13,7 @@ export function formatContentDate(value: string) {
 }
 
 export const contentDates = {
-  home: "2026-10-03",
+  home: "2026-10-04",
   buy: "2026-10-03",
   doneForYouShopifyStore: "2026-10-03",
   boardGames: "2026-10-03",
