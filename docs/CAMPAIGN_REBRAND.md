@@ -1,6 +1,6 @@
 # Guildframe positioning
 
-Updated October 3, 2026.
+Updated October 4, 2026.
 
 Guildframe is a tabletop crowdfunding launch studio for Kickstarter and Gamefound. It offers launch planning, prelaunch landing pages and email, campaign creative, paid advertising, live campaign management and post-campaign communication. Umair leads the creative and paid advertising; the owner confirmed Guildframe can offer ad management.
 
@@ -10,7 +10,7 @@ The free mockup covers one opening campaign section using supplied artwork, with
 
 Categories: board games, party and strategy card games, TCGs, TTRPGs, miniatures, STLs, terrain, dice and tabletop accessories. All generated visuals are concepts. Real portfolio evidence is creative work for ScentedRealms, FutureProof Terrain and Quiver Time; their funding totals are not claimed as Guildframe ad results. Verified testimonials remain verbatim.
 
-The site uses the existing cream, petrol, coral and mint identity. The homepage presents a compact dark hero, project proof, four service areas, an interactive four-stage process, categories, client feedback, engagement options and practical answers. The reference informed hierarchy; its branding and results are not copied.
+The site uses the existing cream, petrol, coral and mint identity. The homepage leads with a compact hero and real campaign proof, then follows one fictional card game through five large phone conversations and matching project previews. The connected timeline covers planning, audience preparation, campaign creation, live management and handoff. Three concise engagement options, category links, five FAQs and a resource strip lead to the enquiry. The LaunchBoom reference informed the chronological visual flow; Guildframe uses its own identity and approved evidence. Launch service pages use the matching scene, while genre pages keep large category artwork and guides remain readable.
 
 Manufacturing, freight, physical fulfilment and tax decisions stay with the creator and relevant suppliers. Accounts and consented email contacts stay with the creator. No funding, advertising-return or search-ranking guarantee is made.
 

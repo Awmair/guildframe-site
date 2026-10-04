@@ -1,0 +1,6 @@
+Manrope variable 200–800, Google Fonts, version 20. Retrieved October 4, 2026.
+Licensed under the included SIL Open Font License.
+Font CSS: https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap
+Latin: https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSvfedN4.woff2
+Latin extended: https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggmxSvfedN62Zw.woff2
+Files are hosted locally; the Latin subset is preloaded.

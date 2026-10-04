@@ -344,7 +344,7 @@ test("keeps campaign pricing, recovery and redirects ready",async()=>{
  const home=await readPage("/");const campaign=await readPage("/campaign-design");const buy=await readPage("/buy");
  for(const html of [home,campaign,buy]){assert.match(html,/free mockup/i);assert.doesNotMatch(html,/\$79|\$2,500|\$99|fiverr|checkout pending|within 72 hours/i);}
  assert.match(home,/mailto:umair@guildframe.com/);assert.doesNotMatch(home,/"price":"975"/);assert.match(campaign,/"priceCurrency":"USD"/);
- assert.match(home,/Concept mockups showing different types/i);assert.match(home,/prefers-reduced-motion|gf-home/i);
+ assert.match(home,/Example project conversation/i);assert.match(home,/prefers-reduced-motion|gf-home/i);
  const missing=await readFile(new URL("404.html",outputRoot),"utf8");assert.match(missing,/This page could not be found/);assert.match(missing,/content="noindex/);
  const redirects=await readFile(new URL("_redirects",outputRoot),"utf8");assert.match(redirects,/^\/pricing \/#pricing 301/m);assert.match(redirects,/^\/customization \/campaign-design 301/m);
  const headers=await readFile(new URL("_headers",outputRoot),"utf8");assert.match(headers,/X-Content-Type-Options: nosniff/i);
@@ -612,7 +612,7 @@ test("connects the high intent launch pages to the service",async()=>{
  const launchPaths=pages.filter(([p])=>p.startsWith("/guides/")&&!afterFundingPaths.has(p));
  assert.equal(launchPaths.length,22);
  for(const [path] of launchPaths){assert.ok(guideIndex.includes(`href="${path}"`),path);const html=await readPage(path);assert.match(html,/href="\/campaign-design"/);assert.match(html,/"@type":"FAQPage"/);}
- for(const image of ["board-games","card-games","ttrpgs","miniatures","accessories"]){assert.ok((await readPage("/")).includes(`/images/campaign/${image}.webp`),image);}
+ for(const slug of ["board-game-kickstarter-campaign-design","card-game-kickstarter-campaign-design","ttrpg-kickstarter-campaign-design","miniatures-kickstarter-campaign-design","tabletop-accessories-campaign-design"]){assert.ok((await readPage("/")).includes(`href="/${slug}"`),slug);}
 });
 
 test("ships no unreferenced image asset in the deployable output", async () => {
@@ -659,7 +659,7 @@ test("shows verified client projects separately from concept mockups", async () 
     await access(new URL(`images/work/${asset}.webp`, outputRoot));
   }
   assert.doesNotMatch(work, /SNACK ATTACK|ORBITAL CREW|COMMON GROUND|Concept mockup/);
-  const concepts = html.match(/<section\b[^>]*\bid="mockups"[\s\S]*?<\/section>/)?.[0];
+  const concepts = (await readPage("/card-game-kickstarter-campaign-design")).match(/<section\b[^>]*\bid="mockups"[\s\S]*?<\/section>/)?.[0];
   assert.ok(concepts);
   assert.equal((concepts.match(/Concept mockup/g) ?? []).length, 3);
   for (const asset of ["party-cards", "adventure-cards", "minimal-cards"]) {
@@ -762,4 +762,21 @@ test("keeps breadcrumb and FAQ data consistent with the visible pages", async ()
       assert.ok(visible.includes(normalized(question.acceptedAnswer.text)), `FAQ answer differs from visible text: ${path}: ${question.name}`);
     }
   }
+});
+
+
+test("explains the whole launch with readable, explicitly illustrative project conversations", async () => {
+  const html = await readPage("/");
+  const journey = html.match(/<section\b[^>]*\bid="process"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(journey);
+  assert.equal((journey.match(/data-journey-scene/g) ?? []).length, 5);
+  assert.equal((journey.match(/Example project conversation · Fictional card game/g) ?? []).length, 5);
+  for (const title of ["Plan the launch", "Prepare the audience", "Build the campaign", "Launch and manage", "Prepare the handoff"]) assert.ok(journey.includes(title), title);
+  assert.equal((journey.match(/<dt>You bring<\/dt>/g) ?? []).length, 5);
+  assert.equal((journey.match(/<dt>I prepare<\/dt>/g) ?? []).length, 5);
+  assert.match(journey, /spend limits/);
+  assert.doesNotMatch(journey, /ROAS|funded in|raised \$|guaranteed funding/i);
+  assert.doesNotMatch(html, /id="mockups"/);
+  const faq = html.match(/<section\b[^>]*\bid="faq"[\s\S]*?<\/section>/)?.[0];
+  assert.equal((faq.match(/<details>/g) ?? []).length, 5);
 });
