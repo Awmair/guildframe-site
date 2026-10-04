@@ -1,0 +1,47 @@
+/* A slowly rotating fan of campaign artwork. Only transforms and opacity move. */
+.gf-launch-home .gf-hero-gallery { background: transparent; box-shadow: none; border-radius: 0; overflow: visible; }
+.gf-gallery-eyebrow { position: absolute; left: 0; right: 0; top: 0; text-align: center; font-size: 9px; color: #cce4d5; letter-spacing: .05em; }
+.gf-gallery-deck { position: absolute; inset: 24px 0 45px; isolation: isolate; }
+.gf-gallery-deck::before { content: ""; position: absolute; inset: 4% 9%; border-radius: 50%; background: radial-gradient(ellipse, #96c29530, transparent 65%); pointer-events: none; }
+.gf-gallery-card { position: absolute; left: 50%; top: 50%; margin: 0; width: 66%; height: 88%; display: flex; flex-direction: column; border: 1px solid #fff7ecbd; border-radius: 14px; overflow: hidden; background: #fff7ec; color: #153e40; box-shadow: 0 22px 38px #041c1a40; transform: translate(-50%, -50%) rotate(-4deg); transition: transform 500ms var(--ease-out), opacity 300ms var(--ease-out); will-change: transform; }
+.gf-gallery-card img { width: 100%; height: calc(100% - 37px); min-height: 0; object-fit: cover; }
+.gf-gallery-card figcaption { display: flex; justify-content: space-between; gap: 10px; align-items: center; height: 37px; padding: 0 14px; font-size: 11px; font-weight: 800; }
+.gf-gallery-card figcaption > span:last-child { font-size: 17px; font-weight: 400; }
+.gf-gallery-card[data-slot="front"] { z-index: 5; opacity: 1; transform: translate(-50%, -50%) rotate(-4deg); }
+.gf-gallery-card[data-slot="right"] { z-index: 3; opacity: 1; transform: translate(-28%, -52%) rotate(12deg) scale(.9); }
+.gf-gallery-card[data-slot="left"] { z-index: 2; opacity: 1; transform: translate(-75%, -47%) rotate(-15deg) scale(.9); }
+.gf-gallery-card[data-slot="back"] { z-index: 1; opacity: .7; transform: translate(-47%, -54%) rotate(3deg) scale(.82); }
+.gf-gallery-controls { position: absolute; left: 8px; right: 8px; bottom: 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; color: #d5e7dc; }
+.gf-gallery-note { font-size: 9px; }
+.gf-gallery-controls > div { display: flex; align-items: center; gap: 6px; }
+.gf-gallery-controls button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 10px; min-height: 34px; border: 1px solid #ffffff30; border-radius: 8px; background: #ffffff0c; color: #fff7ec; font: inherit; font-size: 9px; cursor: pointer; transition: background-color 160ms var(--ease-out); }
+.gf-gallery-controls button:disabled { opacity: .65; cursor: default; }
+.gf-gallery-controls .gf-gallery-arrow { width: 34px; font-size: 16px; padding-inline: 0; }
+.gf-gallery-controls button:focus-visible { outline: 2px solid #b9e5c9; outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .gf-gallery-controls button:hover:not(:disabled) { background: #ffffff1f; }
+}
+@media (max-width: 800px) {
+  .gf-launch-home .gf-hero-gallery { height: 180px; aspect-ratio: auto; max-height: none; margin-top: 2px; }
+  .gf-gallery-deck { inset: 18px 0 35px; }
+  .gf-gallery-card { width: 64%; height: 91%; border-radius: 9px; }
+  .gf-gallery-card img { height: calc(100% - 25px); }
+  .gf-gallery-card figcaption { height: 25px; padding-inline: 9px; font-size: 8px; }
+  .gf-gallery-card figcaption > span:last-child { font-size: 13px; }
+  .gf-gallery-eyebrow { font-size: 8px; }
+  .gf-gallery-controls { left: 0; right: 0; }
+  .gf-gallery-controls button { min-height: 30px; padding: 6px 8px; font-size: 8px; }
+  .gf-gallery-controls .gf-gallery-arrow { width: 30px; font-size: 14px; }
+  .gf-gallery-note { font-size: 8px; }
+}
+@media (max-width: 359px) {
+  .gf-launch-home .gf-hero-gallery { height: 170px; }
+  .gf-gallery-card { width: 67%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gf-gallery-card { transition: none; will-change: auto; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .gf-gallery-controls button { background: #153e40; }
+}
+.gf-hero-gallery:focus-within .gf-gallery-card { transition: none; }

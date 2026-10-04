@@ -780,3 +780,18 @@ test("explains the whole launch with readable, explicitly illustrative project c
   const faq = html.match(/<section\b[^>]*\bid="faq"[\s\S]*?<\/section>/)?.[0];
   assert.equal((faq.match(/<details>/g) ?? []).length, 5);
 });
+
+test("shows a diverse, labelled concept gallery in the homepage hero", async () => {
+  const home = await readPage("/");
+  const hero = home.match(/<section\b[^>]*class="gf-hero"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(hero);
+  assert.match(hero, /Gallery of original tabletop campaign concepts/);
+  assert.match(hero, /Original concepts/);
+  for (const image of ["board-games", "party-cards", "ttrpgs", "miniatures", "minimal-cards", "accessories"]) {
+    assert.ok(hero.includes(`/images/campaign/${image}.webp`), image);
+    await access(new URL(`images/campaign/${image}-480w.webp`, outputRoot));
+  }
+  assert.match(hero, /Previous game concept/);
+  assert.match(hero, /Next game concept/);
+  assert.match(hero, /reduced motion preference/);
+});
