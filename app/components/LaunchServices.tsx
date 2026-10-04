@@ -7,7 +7,7 @@ export function LaunchServices() {
       <span className="gf-service-number" aria-hidden="true">{service.number}</span>
       <div><span className="gf-eyebrow">{service.tag}</span><h3>{service.title}</h3></div>
       <p>{service.copy}</p>
-      
+
     </Link>)}
   </div>;
 }

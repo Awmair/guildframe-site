@@ -131,7 +131,7 @@ export default function KickstarterToShopifyPage() {
               </p>
               <div className="campaign-service-actions">
                 <Link className="service-primary-button" href="/guides/move-from-kickstarter-to-shopify">
-                  Read the migration guide 
+                  Read the migration guide
                 </Link>
                 <Link href="/guides/kickstarter-to-shopify-launch-timeline">View the launch timeline</Link>
               </div>
