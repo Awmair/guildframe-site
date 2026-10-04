@@ -1,6 +1,6 @@
 # Guildframe search research and implementation
 
-Reviewed October 4, 2026 using the owner's signed-in Chrome Search Console, Bing Webmaster Tools and Google Ads Keyword Planner tabs, plus official platform documentation and first-party agency pages. Google Ads was used only for attempted keyword research. No ads, budgets or billing settings were changed.
+Reviewed October 4, 2026 using the owner's signed-in Chrome Search Console, Bing Webmaster Tools and Google Ads Keyword Planner tabs, plus official platform documentation and first-party agency pages. Google Ads was used only for keyword research. No ads were activated and no budgets or billing settings were changed.
 
 ## Owner search baseline
 
@@ -37,9 +37,27 @@ Bing Keyword Research was queried with all countries, languages and devices sele
 
 The related-keyword and question tabs were also inspected. Broad suggestions include games, logins and unrelated terms. They were not adopted as creator acquisition targets. The Kickstarter question tab returned no rows, not proof that questions have no demand.
 
-Google Ads Keyword Planner was initially blocked by its “Turn off ad blockers” interstitial after clean rechecks. The owner later reported pausing the blocker and reopening the planner. No Google volume, CPC, bidding competition or forecast has been exported in this pass. Those fields remain unavailable; Ads competition is not organic ranking difficulty.
+Google Ads Keyword Planner returned **1,079 ideas** from ten seeds. Filters were United States, English, Google, September 1, 2025–August 31, 2026, with adult ideas excluded. The account reports bids in PKR. The exported data contains search buckets and advertiser competition; it does not provide precise monthly counts or a forecast for Guildframe.
 
-Priority is based on the purchasing decision and service fit, supported by observed search results and existing owner queries. It is not a fabricated volume score. `SEO_PAGE_MAP_2026-10-04.csv` maps every canonical page to one primary intent; `KEYWORD_RESEARCH_2026-10-04.csv` distinguishes reported data from editorial long-tail targets. Existing autocomplete evidence remains in the October 3 keyword map.
+| Query | Directly observed monthly search range | Advertiser competition | Top-of-page bid range, PKR |
+| --- | --- | --- | --- |
+| kickstarter marketing | 10–100 | Medium | 1,561.66–6,667.68 |
+| kickstarter agency | 10–100 | Medium | 1,309.54–6,098.47 |
+| kickstarter campaign design | 10–100 | High | Unavailable |
+| kickstarter advertising | 100–1K | Low | 1,915.31–30,144.29 |
+| board game marketing | 10–100 | Low | 1,192.64–2,718.12 |
+| kickstarter marketing agency cost | 10–100 | Medium | 2,470.22–5,161.86 |
+| kickstarter prelaunch | 10–100 | Low | 946.79–5,025.07 |
+
+The CSV records `50` for the first three queries where the UI shows `10–100`, and `500` for advertising where it shows `100–1K`. Those export values are retained as raw bucket values, not exact demand. Detailed monthly columns were blank. Missing data for `gamefound marketing` is unavailable, not zero. Close variants overlap; summing their rows would overstate unique demand. Google's competition column measures advertisers, and its bid ranges are historical estimates rather than organic difficulty, an average CPC or Guildframe's fees. [Google's metric definitions](https://support.google.com/google-ads/answer/3022575).
+
+Selected **33 creator queries** and consolidated them across **10 existing destinations**. Agency and service terms go to the homepage and launch-service page; agency-cost and comparison variants go to the hiring guide; creative terms go to campaign design; advertising terms go to paid ads; prelaunch terms go to the service and setup guide. Strategy and checklist questions go to the corresponding guides. Game-shopping, game-title, login and out-of-scope affiliate/PR suggestions were excluded from the acquisition map.
+
+The agency-cost query has a reported advertiser-competition value and bid estimates, supporting the new hiring guide's existing costs and scope sections. It does not justify publishing an invented industry fee or a separate page for every wording variant. Longer niche targets remain editorial phrases unless measured directly; the page map keeps supporting-query evidence separate from each page's exact target.
+
+`GOOGLE_KEYWORD_PLANNER_2026-10-04.json` records filters, seeds and limitations. The delivery artifacts preserve the sanitized 1,079-row export as `GOOGLE_KEYWORD_PLANNER_US_2026-10-04.csv`; the repository keyword map contains the curated creator rows. No account identifiers are retained.
+
+Priority is based on the purchasing decision and service fit, supported by Google and Bing keyword evidence, observed search results and existing owner queries. `SEO_PAGE_MAP_2026-10-04.csv` maps every canonical page to one primary intent and separates measured supporting queries from unmeasured editorial phrases. `KEYWORD_RESEARCH_2026-10-04.csv` distinguishes the two engines' different metrics from editorial long-tail targets. Existing autocomplete evidence remains in the October 3 keyword map.
 
 ## Changes made
 
@@ -68,6 +86,10 @@ Reviewed [Kickstarter's tabletop marketing guide](https://updates.kickstarter.co
 
 Final build, page count, browser checks, sitemap submissions and direct IndexNow response are recorded in `SEO_RELEASE_2026-10-04.json` in the delivery artifacts after deployment. Owner-report evidence is saved separately there with account identifiers omitted.
 
-After a verified production deployment, run `npm run indexnow:submit -- --receipt=/path/to/receipt.json`. It submits only the live sitemap's canonical HTML destinations and rejects other hosts, duplicate URLs and asset URLs. Future releases can use the same command after their production checks. Cloudflare continues its existing automatic hints.
+The live sitemap contains 69 canonical pages. Google accepted its resubmission on October 4 and placed the homepage in its priority crawl queue after an indexing request. Bing accepted the same sitemap for processing on October 4; its displayed discovered count still reflects an older crawl. These are submission receipts, not a claim that all 69 pages are indexed.
+
+The direct IndexNow submission of all 69 URLs returned HTTP 202 at 13:34:41 UTC on October 4: received, with key validation pending. The dashboard still shows Cloudflare asset hints; the new direct page batch has not yet been confirmed there. Its live ownership file was verified before the submission.
+
+For future verified production deployments, run `npm run indexnow:submit -- --receipt=/path/to/receipt.json`. It submits only the live sitemap's canonical HTML destinations and rejects other hosts, duplicate URLs and asset URLs. Future releases can use the same command after their production checks. Cloudflare continues its existing automatic hints.
 
 Field performance still needs enough real traffic. Cold synthetic results are recorded with their conditions; a universal two-second load or a ranking deadline is not claimed. Contact inbox delivery remains the separate provider-activation task. No outreach or backlink acquisition occurred.

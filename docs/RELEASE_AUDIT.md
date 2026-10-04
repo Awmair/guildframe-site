@@ -4,7 +4,7 @@ Reviewed October 4, 2026. Current positioning: tabletop crowdfunding launch serv
 
 The existing Cloudflare Pages integration deploys GitHub main. Build command: npm run build:pages. Static output: out/. Production-origin and analytics checks run before export. There is no custom GitHub Actions deployment.
 
-67 canonical URLs preserve existing content and add six services and four marketing guides. Every indexable page has a unique title, description and canonical, one H1, readable server-rendered content, shared navigation and a project enquiry. Sitemap dates match actual changes. Robots permits search and answer retrieval crawlers under the documented policy. RSC payload text files are excluded while llms.txt remains available. The 404 page stays noindex and returns 404.
+69 canonical URLs preserve existing content and include six launch services, four marketing guides and two new buying/prelaunch decision guides. Every indexable page has a unique title, description and canonical, one H1, readable server-rendered content, shared navigation and a project enquiry. Sitemap dates match actual changes. Robots permits search and answer retrieval crawlers under the documented policy. RSC payload text files are excluded while llms.txt and the public IndexNow verification key remain available. The 404 page stays noindex and returns 404.
 
 Visible FAQs match schema. Guides have direct answers, author identity, source links, related pages and breadcrumbs. After-funding guides retain their original URLs. Commercial summaries do not invent performance guarantees, funding attribution or partner credentials.
 
