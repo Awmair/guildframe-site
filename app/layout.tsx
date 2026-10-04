@@ -5,6 +5,7 @@ import "./editorial.css";
 import "./launch.css";
 import "./studio.css";
 import "./journey.css";
+import "./hero-gallery.css";
 import {JsonLd} from "./components/JsonLd";
 import {Analytics} from "./components/Analytics";
 import {CampaignMotion} from "./components/CampaignMotion";

@@ -1,4 +1,4 @@
-import { ResponsiveImage } from "./components/ResponsiveImage";
+import { HeroGallery } from "./components/HeroGallery";
 import Link from "next/link";
 import {SeoHeader,SeoFooter} from "./components/SeoChrome";
 import {JsonLd} from "./components/JsonLd";
@@ -20,7 +20,7 @@ export default function Home(){return <>
  <a className="skip-link" href="#main-content">Skip to content</a><SeoHeader/>
  <main id="main-content" className="gf-home gf-launch-home">
   <div className="gf-hero-shell"><section className="gf-hero"><div className="gf-hero-copy"><span className="gf-eyebrow"><span className="gf-status-dot"/>Tabletop crowdfunding studio</span><h1>Kickstarter launches{" "}<em>for tabletop games.</em></h1><p>Planning, design, prelaunch marketing and paid ads for board games, card games, RPGs and miniatures.</p><div className="gf-actions"><a className="gf-button" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Plan my launch" data-analytics-location="homepage">Plan my launch <span aria-hidden="true">↗</span></a><a className="gf-text-link" href="#past-work">See the work <span aria-hidden="true">↘</span></a></div><div className="gf-hero-note"><span>Kickstarter &amp; Gamefound</span><span>Work directly with Umair</span></div></div>
-   <div className="gf-hero-visual"><ResponsiveImage className="gf-hero-image" sizes="(max-width: 800px) calc(100vw - 60px), 48vw" src="/images/campaign/launch-studio.webp" alt="Original board game, cheerful party cards, botanical trading cards, RPG books and resin miniatures arranged on a dark tabletop" width="1774" height="887" fetchPriority="high"/><div className="gf-visual-tag glass"><span className="gf-tag-dot"/>A place for every kind of game</div><div className="gf-visual-bottom glass"><span><strong>Your game. Ready for launch.</strong><br/>Original tabletop concepts</span><span className="gf-tag-arrow" aria-hidden="true">↗</span></div></div>
+   <HeroGallery/>
   </section></div>
   <div className="gf-ticker" aria-label="Projects we work on"><span>Board games</span><i aria-hidden="true">✳</i><span>Card games &amp; TCGs</span><i aria-hidden="true">✳</i><span>Tabletop RPGs</span><i aria-hidden="true">✳</i><span>Miniatures &amp; STLs</span><i aria-hidden="true">✳</i><span>Dice &amp; accessories</span></div>
   <PastWork compact/>
