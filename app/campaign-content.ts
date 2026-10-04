@@ -1,4 +1,4 @@
-export const campaignDate = "2026-10-03";
+export const campaignDate = "2026-10-04";
 export const gameCategories = [
  {slug:"board-game-kickstarter-campaign-design",name:"Board games",tag:"Strategy, family & party games",image:"board-games",alt:"Original harbour strategy game beside a colourful abstract family game",copy:"Show a turn, lay out the components and explain what players are trying to do.",focus:"Strategy, family, party, cooperative and solo games",details:["A quick explanation of the main turn and the decisions players make","Component spreads that distinguish the base game from upgrades","Player count, play time, age guidance and language information","Reward comparisons for core games, deluxe editions and expansions"]},
  {slug:"card-game-kickstarter-campaign-design",name:"Card games & TCGs",tag:"Party decks, deckbuilders & TCGs",image:"card-games",alt:"Original space themed trading cards alongside bright food themed party cards",copy:"Show enough cards to explain the game, then make deck sizes and reward contents easy to compare.",focus:"Trading card games, party decks, deckbuilders and collectible games",details:["Legible sample cards with enough scale to understand their layout","A clear explanation of deck size, starter sets and how a round works","Edition and pack contents stated without implying unconfirmed rarity odds","Reward graphics that separate complete decks, bundles and optional extras"]},
@@ -22,6 +22,30 @@ export const campaignFaqs = [
 ] as const;
 
 export const categoryFaqs: Record<string, {question:string;answer:string}[]> = {
+ "kickstarter-launch-services": [
+  {question:"What should I compare in a Kickstarter agency proposal?",answer:"Compare the work included, schedule, relevant projects, support period, account ownership and reporting. Ask for service fees and media spend as separate lines. The total raised by a portfolio project does not establish which results came from the agency's work."},
+  {question:"Do I need the full service if I already have a team?",answer:"You can book the work still missing. Share who owns creative, email, ads and campaign updates so we can define the handoffs without duplicating your team's work."},
+ ],
+ "kickstarter-prelaunch-marketing": [
+  {question:"Do I need a landing page as well as a Kickstarter prelaunch page?",answer:"Kickstarter's page collects platform follows and sends launch notifications. Your own landing page can collect email signups and introduce the game in more detail. We decide which route fits your audience, then test the signup and communication flow."},
+  {question:"How many email subscribers do I need before launching?",answer:"There is no reliable universal number. We review whether the audience understands the game, engages with the emails and fits the offer, alongside your funding needs and reward costs. Subscribers and platform followers are not confirmed pledges."},
+ ],
+ "kickstarter-advertising": [
+  {question:"Can you run ads before the Kickstarter campaign is live?",answer:"Yes. Prelaunch ads can introduce the game and bring visitors to a signup or follow page. Live campaign ads have a different destination and reporting goal. The scope defines both stages, channels and approved spending limits."},
+  {question:"How will I know what the ads contributed?",answer:"We agree reporting sources and attribution windows before running ads, then report spend and attributable actions with their limits. Kickstarter referral reports and advertising-platform reports may differ. We avoid adding overlapping pledge revenue together."},
+ ],
+ "kickstarter-campaign-management": [
+  {question:"Will you publish campaign updates for me?",answer:"We agree who drafts, approves and publishes updates before launch. You confirm reward, production and delivery facts. The support scope lists working dates, response expectations and account access."},
+  {question:"What do I receive when the live support period ends?",answer:"The agreed files and reports, approved copy, recurring questions and outstanding tasks with their owners. Post-campaign updates or pledge-manager work can be included when specified in the proposal."},
+ ],
+ "gamefound-launch-services": [
+  {question:"Does a Gamefound launch include paid advertising?",answer:"It can. The proposal lists prelaunch and live advertising separately from campaign creative, with approved media spend, channels and reporting. Share your project stage and current account setup so the scope matches what is ready."},
+  {question:"Can you help with a Gamefound campaign and late pledges?",answer:"Yes, where included in the brief. Campaign creative and live support follow the project setup; late-pledge and pledge-manager content need their own confirmed products, prices and shipping information."},
+ ],
+ "post-campaign-support": [
+  {question:"Can you help write backer updates after funding?",answer:"Yes. You provide confirmed production and delivery information, and we turn it into clear updates with an agreed schedule. We can also prepare pledge-manager descriptions and reward graphics within the scope."},
+  {question:"Does post-campaign support include a Shopify store?",answer:"Store planning and setup are optional, separately scoped work. We first check your fulfilment plan, product information and which orders should go through the pledge manager or store."},
+ ],
  "board-game-kickstarter-campaign-design": [
   {question:"What board game artwork should I send?",answer:"Send the box art, component images and a short gameplay explanation. Include player count, play time, proposed rewards and any rules or preview links. Mark prototype images so they can be labelled correctly."},
   {question:"Can you compare a standard and deluxe edition?",answer:"Yes. Reward comparisons can show which components change and which expansions are included. You confirm the contents and prices; I use the same names across the copy and graphics."},

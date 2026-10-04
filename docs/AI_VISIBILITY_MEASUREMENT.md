@@ -1,6 +1,6 @@
 # Search and AI visibility measurement
 
-Updated 2026-10-03. See [SEO_RESEARCH_2026-10-03.md](SEO_RESEARCH_2026-10-03.md) for official sources and [SEO_PASS_2026-10-03.md](SEO_PASS_2026-10-03.md) for the owner baseline and its limits.
+Updated 2026-10-04. See [SEO_RESEARCH_2026-10-03.md](SEO_RESEARCH_2026-10-03.md) for official sources and [SEO_PASS_2026-10-03.md](SEO_PASS_2026-10-03.md) for the owner baseline and its limits.
 
 ## Website enquiries
 
@@ -14,9 +14,9 @@ In GA4 compare actual enquiries by landing page and organic search/direct/AI-ref
 
 ## Google and Bing
 
-Google Search Console's current Generative AI performance report covers AI Overviews/AI Mode impressions by page, country, device and date. Guildframe's owner property was inspected on October 3 and its Search generative AI control is Include. Its AI performance report was not captured; do not infer zero impressions. Ordinary Search performance and website enquiry records remain necessary.
+Google Search Console's current Generative AI performance report covers AI Overviews/AI Mode impressions by page, country, device and date. Guildframe's owner property was inspected on October 3 and its Search generative AI control is Include. The October 4 review captured 60 total AI impressions for July 15–September 29, 2026. Its page rows mainly concern existing Shopify content. They are a historical baseline, not results from the new launch-service release. Page-row impressions need not sum to the property total. Ordinary Search performance and website enquiry records remain necessary.
 
-Bing Webmaster Tools AI Performance covers citations, cited pages and sampled grounding queries. Treat citations separately from visitors, enquiries and placement. Record the exact URL and whether the answer described the service accurately.
+Bing Webmaster Tools AI Performance covers citations, cited pages and sampled grounding queries. The October 4 review showed 201 total citations for July 18–October 1, 2026, with a sampled grounding query about Shopify crowdfunding evaluation. These citations do not establish new launch-service visibility. Treat citations separately from visitors, enquiries and placement. Record the exact URL and whether the answer described the service accurately.
 
 ## Fixed accuracy sample
 
@@ -24,7 +24,7 @@ Use these prompts for repeatable manual samples, recording platform, date, exact
 
 1. Who designs Kickstarter pages for board games?
 2. Who can write and design my Gamefound campaign page?
-3. How much does Guildframe Kickstarter page design cost?
+3. What does Guildframe include in a tabletop launch, and how are fees and ad spend quoted?
 4. What should I send a Kickstarter campaign designer?
 5. Can Guildframe design card game, RPG and miniature campaigns?
 6. What is included in the free Guildframe mockup?

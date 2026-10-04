@@ -20,7 +20,7 @@ export const contentDates = {
   kickstarter: "2026-10-03",
   ttrpg: "2026-10-03",
   miniatures: "2026-10-03",
-  guides: "2026-10-03",
+  guides: "2026-10-04",
   whatHappensAfterKickstarter: "2026-09-30",
   moveFromKickstarter: "2026-09-30",
   bestBoardGameThemes: "2026-09-30",

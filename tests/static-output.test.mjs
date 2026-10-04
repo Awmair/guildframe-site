@@ -74,6 +74,8 @@ const pages = [
   ["/guides/kickstarter-prelaunch-email-list", "Kickstarter Prelaunch Email List for Board Games | Guildframe", "Kickstarter Prelaunch Email List"],
   ["/guides/kickstarter-advertising-budget-board-games", "Kickstarter Advertising Budget for Board Games | Guildframe", "Kickstarter Advertising Budget"],
   ["/guides/kickstarter-live-campaign-updates", "Kickstarter Campaign Updates & Live Support Plan | Guildframe", "Kickstarter Campaign Updates"],
+  ["/guides/choose-board-game-kickstarter-marketing-agency", "Board Game Kickstarter Marketing Agency: Costs & Hiring | Guildframe", "How to Choose a Kickstarter Marketing Agency"],
+  ["/guides/kickstarter-prelaunch-page-vs-landing-page", "Kickstarter Prelaunch Page vs Landing Page for Board Games | Guildframe", "Kickstarter Prelaunch Page or Your Own Landing Page"],
 ];
 
 const afterFundingPaths = new Set(['/guides/what-happens-after-kickstarter-is-funded', '/guides/move-from-kickstarter-to-shopify', '/guides/best-shopify-themes-for-board-games', '/guides/shopify-developer-vs-diy-theme', '/guides/kickstarter-late-pledges-vs-shopify', '/guides/backerkit-vs-shopify-vs-gamefound', '/guides/kickstarter-to-shopify-launch-timeline', '/guides/sell-board-game-preorders-on-shopify', '/guides/sell-board-game-expansions-add-ons-shopify', '/guides/selling-miniatures-internationally-vat-ioss', '/guides/how-much-does-a-board-game-website-cost', '/guides/shopify-vs-etsy-for-selling-miniatures', '/guides/build-a-tabletop-shopify-store-with-ai']);
@@ -535,6 +537,8 @@ const datedPages = new Map([
   ["/resources/tabletop-shopify-metafield-schema", "2026-09-30"],
   ...pages.filter(([p]) => p.startsWith("/guides/") && !afterFundingPaths.has(p) && !["/guides/when-to-hire-kickstarter-campaign-designer","/guides/ttrpg-kickstarter-campaign-page-design","/guides/what-to-send-kickstarter-campaign-designer","/guides/board-game-kickstarter-campaign-design-cost"].includes(p)).map(([p]) => [p, "2026-10-03"]),
   ["/resources/tabletop-campaign-launch-worksheet", "2026-10-03"],
+  ["/guides/choose-board-game-kickstarter-marketing-agency", "2026-10-04"],
+  ["/guides/kickstarter-prelaunch-page-vs-landing-page", "2026-10-04"],
 ]);
 
 test("keeps visible review dates, schema dates and sitemap dates identical", async (t) => {
@@ -610,7 +614,7 @@ test("keeps comparison tables, campaign pages and answers connected",async()=>{
 test("connects the high intent launch pages to the service",async()=>{
  const guideIndex=await readPage("/guides");
  const launchPaths=pages.filter(([p])=>p.startsWith("/guides/")&&!afterFundingPaths.has(p));
- assert.equal(launchPaths.length,22);
+ assert.equal(launchPaths.length,24);
  for(const [path] of launchPaths){assert.ok(guideIndex.includes(`href="${path}"`),path);const html=await readPage(path);assert.match(html,/href="\/campaign-design"/);assert.match(html,/"@type":"FAQPage"/);}
  for(const slug of ["board-game-kickstarter-campaign-design","card-game-kickstarter-campaign-design","ttrpg-kickstarter-campaign-design","miniatures-kickstarter-campaign-design","tabletop-accessories-campaign-design"]){assert.ok((await readPage("/")).includes(`href="/${slug}"`),slug);}
 });
