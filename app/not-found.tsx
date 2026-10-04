@@ -24,7 +24,7 @@ export default function NotFound() {
           </p>
           <div className="not-found-actions">
             <Link className="seo-button" href="/">
-              Return home <span aria-hidden="true">↗</span>
+              Return home
             </Link>
             <Link className="seo-text-link" href="/guides">
               Explore the guides

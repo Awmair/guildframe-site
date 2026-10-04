@@ -131,7 +131,7 @@ export default function KickstarterToShopifyPage() {
               </p>
               <div className="campaign-service-actions">
                 <Link className="service-primary-button" href="/guides/move-from-kickstarter-to-shopify">
-                  Read the migration guide <span aria-hidden="true">↗</span>
+                  Read the migration guide
                 </Link>
                 <Link href="/guides/kickstarter-to-shopify-launch-timeline">View the launch timeline</Link>
               </div>
@@ -190,7 +190,7 @@ export default function KickstarterToShopifyPage() {
             <article><span>BackerKit or Gamefound</span><h3>Surveys and fulfillment data</h3><p>Use the selected pledge system for upgrades, addresses, shipping collection and backer order detail.</p></article>
             <article><span>Shopify</span><h3>Permanent ecommerce</h3><p>Run new retail orders, products, inventory, content, customer accounts and future releases from the store.</p></article>
           </div>
-          <Link href="/guides/backerkit-vs-shopify-vs-gamefound">Compare the platform roles ↗</Link>
+          <Link href="/guides/backerkit-vs-shopify-vs-gamefound">Compare the platform roles</Link>
         </section>
 
         <section className="campaign-operations-section">
@@ -200,7 +200,7 @@ export default function KickstarterToShopifyPage() {
               A late pledge belongs to the campaign context. A Shopify preorder is a new store order.
               Set product availability, payments, inventory and delivery text to match that new order.
             </p>
-            <Link href="/guides/sell-board-game-preorders-on-shopify">Read the Shopify preorder guide ↗</Link>
+            <Link href="/guides/sell-board-game-preorders-on-shopify">Read the Shopify preorder guide</Link>
           </div>
           <div>
             <h2>Plan international shipping, VAT and duties</h2>
@@ -208,7 +208,7 @@ export default function KickstarterToShopifyPage() {
               Shipping zones, package weights, duties and tax treatment affect the promise customers see.
               Confirm the tax and customs requirements for your shipping model, then configure Shopify accordingly.
             </p>
-            <Link href="/guides/selling-miniatures-internationally-vat-ioss">Plan VAT and IOSS setup ↗</Link>
+            <Link href="/guides/selling-miniatures-internationally-vat-ioss">Plan VAT and IOSS setup</Link>
           </div>
         </section>
 
@@ -228,7 +228,7 @@ export default function KickstarterToShopifyPage() {
           </ul>
         </section>
 
-        <section className="campaign-offer-section"><div><h2>Preparing another campaign?</h2><p>Guildframe brings planning, prelaunch marketing, campaign creative and paid advertising together. Share your game and the work you need help with.</p></div><div><strong>Your next launch</strong><span>A scope built around your project</span><a className="service-primary-button" href="#start-project">Discuss my launch ↗</a></div></section>
+        <section className="campaign-offer-section"><div><h2>Preparing another campaign?</h2><p>Guildframe brings planning, prelaunch marketing, campaign creative and paid advertising together. Share your game and the work you need help with.</p></div><div><strong>Your next launch</strong><span>A scope built around your project</span><a className="service-primary-button" href="#start-project">Discuss my launch</a></div></section>
 
         <section className="campaign-faq-section" id="faq">
           <div className="campaign-section-heading"><h2>Questions after funding.</h2></div>

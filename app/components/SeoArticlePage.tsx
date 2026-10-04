@@ -182,7 +182,7 @@ export function SeoArticlePage({
               data-analytics-label="Campaign design"
               data-analytics-location="article sidebar"
             >
-              Plan your game launch ↗
+              Plan your game launch
             </Link>
           </aside>
 
@@ -213,7 +213,7 @@ export function SeoArticlePage({
                 ))}
               </ul>
             </section>
-            <aside className="article-author" aria-label="About the author"><span className="gf-author-monogram" aria-hidden="true">U</span><div><strong>Written by Umair</strong><p>Founder, campaign designer and paid advertising specialist at Guildframe.</p><Link href="/authors/guildframe">About the author <span aria-hidden="true">↗</span></Link></div></aside>
+            <aside className="article-author" aria-label="About the author"><span className="gf-author-monogram" aria-hidden="true">U</span><div><strong>Written by Umair</strong><p>Founder, campaign designer and paid advertising specialist at Guildframe.</p><Link href="/authors/guildframe">About the author </Link></div></aside>
             <section className="article-faq" id="faq">
               <h2>Frequently asked questions</h2>
               {faqs.map((faq) => (
@@ -236,7 +236,7 @@ export function SeoArticlePage({
                   data-analytics-label="Campaign design"
                   data-analytics-location="article CTA"
                 >
-                  Explore launch services ↗
+                  Explore launch services
                 </Link>
                 <Link
                   className="seo-button seo-button-outline"
@@ -245,7 +245,7 @@ export function SeoArticlePage({
                   data-analytics-label="Get my free mockup"
                   data-analytics-location="article CTA"
                 >
-                  Get my free mockup ↗
+                  Get my free mockup
                 </Link>
               </div>
             </div>

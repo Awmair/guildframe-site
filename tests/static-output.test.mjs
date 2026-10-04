@@ -786,12 +786,12 @@ test("shows a diverse, labelled concept gallery in the homepage hero", async () 
   const hero = home.match(/<section\b[^>]*class="gf-hero"[\s\S]*?<\/section>/)?.[0];
   assert.ok(hero);
   assert.match(hero, /Gallery of original tabletop campaign concepts/);
-  assert.match(hero, /Original concepts/);
-  for (const image of ["board-games", "party-cards", "ttrpgs", "miniatures", "minimal-cards", "accessories"]) {
-    assert.ok(hero.includes(`/images/campaign/${image}.webp`), image);
-    await access(new URL(`images/campaign/${image}-480w.webp`, outputRoot));
+  assert.match(hero, /Original concept/);
+  for (const image of ["party-card-game", "strategy-board-game", "trading-card-game", "rpg-book", "miniature-terrain", "dice-accessories"]) {
+    assert.ok(hero.includes(`/images/hero/${image}-480w.webp`), image);
+    for (const width of [320, 480, 640]) await access(new URL(`images/hero/${image}-${width}w.webp`, outputRoot));
   }
-  assert.match(hero, /Previous game concept/);
-  assert.match(hero, /Next game concept/);
-  assert.match(hero, /reduced motion preference/);
+  assert.equal((hero.match(/class="gf-orbit-product"/g) ?? []).length, 6);
+  assert.equal((hero.match(/data-focal="true"/g) ?? []).length, 1);
+  assert.doesNotMatch(hero, /<button\b|[←→↗↘]|Pause gallery|Play gallery/);
 });
