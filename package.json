@@ -12,7 +12,9 @@
     "build:pages:local": "npm run build && node scripts/optimize-pages-output.mjs",
     "preflight": "node scripts/launch-preflight.mjs",
     "preflight:strict": "node scripts/launch-preflight.mjs --strict",
-    "test": "NEXT_PUBLIC_SITE_URL=http://localhost:3000 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456 npm run build:pages:local && node --test tests/static-output.test.mjs",
+    "test": "npm run test:contact && NEXT_PUBLIC_SITE_URL=http://localhost:3000 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456 npm run build:pages:local && node --test tests/static-output.test.mjs",
+    "test:contact": "node --experimental-strip-types --test tests/contact-worker.test.mjs",
+    "deploy:contact": "npx wrangler@4.129.0 deploy --config workers/contact/wrangler.jsonc",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "indexnow:submit": "node scripts/submit-indexnow.mjs"
