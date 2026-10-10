@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import {ShaderSurface} from "./ShaderSurface";
 
 const concepts = [
   { image: "party-card-game", name: "Snack Attack", category: "Party card games", alt: "Original Snack Attack party game concept with a coral box, illustrated fruit cards and tokens" },
@@ -52,6 +53,7 @@ export function HeroGallery() {
   return <div ref={root} className="gf-hero-visual gf-hero-gallery" role="region" aria-label="Gallery of original tabletop campaign concepts"
     onPointerEnter={event => { if (event.pointerType === "mouse" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) setInteracting(true); }}
     onPointerLeave={() => setInteracting(false)}>
+    <ShaderSurface kind="mesh"/>
     <div className="gf-orbit-ground" aria-hidden="true"/>
     {concepts.map((concept, index) => {
       const offset = (index - active + concepts.length) % concepts.length;
