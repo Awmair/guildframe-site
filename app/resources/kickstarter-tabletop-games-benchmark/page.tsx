@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { contentDates } from "../../content-dates";
 import {
   ArticleCallout,
@@ -126,6 +127,8 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
         funding activity, not fulfillment quality, profitability or store revenue.
       </ArticleDefinition>
 
+      <ArticleCallout><strong>Source review: October 17, 2026.</strong> These figures cover 2024. Kickstarter published them in February 2025. Its <a href="https://updates.kickstarter.com/a-year-in-review-2025-kickstarter-highlights/">2025 Highlights</a> article does not supply the same annual tabletop totals. We have kept the historical year rather than presenting these numbers as 2025 or 2026 data.</ArticleCallout>
+      <aside className="article-next-step"><h2>Use the benchmark to frame questions, not forecast your funding.</h2><p>The published success rate does not give the probability that your own game will fund. The mean also combines campaigns with very different audiences, rewards and costs. Build your <Link href="/guides/board-game-kickstarter-marketing-plan">launch plan</Link> and <Link href="/guides/kickstarter-advertising-budget-board-games">advertising budget</Link> from your actual offer and economics.</p><p>If you need help preparing those stages, see <Link href="/kickstarter-launch-services">Guildframe&apos;s tabletop launch services</Link> and the <Link href="/work">campaign creative case studies</Link>.</p></aside>
       <h2 id="headline-data">Headline tabletop Kickstarter data</h2>
       <ArticleStatGrid
         stats={[

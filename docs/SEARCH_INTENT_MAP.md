@@ -19,3 +19,14 @@ Updated October 3, 2026. Guildframe is a tabletop crowdfunding launch studio. Qu
 One intent group has one preferred URL. Similar phrases belong on the same page unless actual search data shows a useful separate job. Existing Search Console and Bing baselines predate this broader offer. Recheck them after recrawl rather than describing those old impressions as launch-service demand.
 
 No geographic office pages or false credentials were added. The full keyword and question map is in KEYWORD_MAP_2026-10-03.csv. Primary sources for the four new marketing guides are recorded in SERVICE_PIVOT_2026-10-03.md.
+
+## Campaign evidence published 17 October 2026
+
+| Intent | Canonical destination | Scope |
+| --- | --- | --- |
+| Tabletop campaign design portfolio | /work | Collection of the three real projects |
+| ScentedRealms design case study | /work/scented-realms | Product explanation and fantasy visual direction |
+| FutureProof original terrain campaign design | /work/futureproof-terrain | Modular components and assembled terrain presentation |
+| Quiver Time CITADEL campaign presentation | /work/quiver-time | Card storage accessory features and creator credited photograph |
+
+These are creative case studies. No campaign funding total is claimed as Guildframe advertising performance. Existing service and guide URLs retain their intent ownership.

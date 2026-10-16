@@ -264,6 +264,7 @@ export default function BestThemesGuide() {
         covers what those tools handle well and where they break.
       </ArticleCallout>
 
+      <aside className="article-next-step"><h2>Preparing another game launch?</h2><p>Your store and your crowdfunding campaign have different jobs. Keep the store useful for existing products while the campaign explains the new game, its rewards and delivery plan.</p><p>Use the <Link href="/guides/board-game-kickstarter-marketing-plan">board game Kickstarter marketing plan</Link> to map the next launch. Guildframe can help with <Link href="/kickstarter-prelaunch-marketing">prelaunch pages and email</Link> or a broader <Link href="/kickstarter-launch-services">launch scope</Link>.</p></aside>
       <h2 id="decision">How to choose the right theme</h2>
       <ol>
         <li><strong>List the real catalog.</strong> Count games, editions, expansions, accessories, bundles and languages.</li>

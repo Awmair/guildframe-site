@@ -1,10 +1,11 @@
+import {reviseLaunchGuide} from "./launch-guide-revisions";
 import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
 import {decisionGuides} from "./launch-decision-guides";
 export type LaunchSection={id:string;title:string;paragraphs:string[];list?:string[];table?:{headers:string[];rows:string[][]};source?:number};
 export type LaunchGuide={published?:string;updated?:string;slug:string;title:string;seoTitle?:string;relatedSlugs:string[];servicePath:string;serviceLabel:string;description:string;tag:string;answer:string;sections:LaunchSection[];faqs:{question:string;answer:string}[];sources:{label:string;publisher:string;href:string}[]};
 export const launchGuideDate="2026-09-30";
-export const launchGuides:LaunchGuide[]=[
+const originalLaunchGuides:LaunchGuide[]=[
   ...decisionGuides,
   ...marketingGuides,
   ...newLaunchGuides,
@@ -1029,3 +1030,5 @@ export const launchGuides:LaunchGuide[]=[
   }
 
 ];
+
+export const launchGuides = originalLaunchGuides.map(reviseLaunchGuide);

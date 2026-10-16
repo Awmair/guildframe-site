@@ -5,6 +5,10 @@ import test from "node:test";
 const outputRoot = new URL("../out/", import.meta.url);
 
 const pages = [
+  ["/work", "Tabletop Kickstarter Campaign Design Case Studies | Guildframe", "Tabletop campaigns"],
+  ["/work/scented-realms", "ScentedRealms Kickstarter Campaign Design Case Study | Guildframe", "ScentedRealms: campaign design"],
+  ["/work/futureproof-terrain", "FutureProof Terrain Kickstarter Campaign Design Case Study | Guildframe", "FutureProof Terrain: campaign design"],
+  ["/work/quiver-time", "Quiver Time CITADEL Kickstarter Campaign Design Case Study | Guildframe", "Quiver Time: campaign design"],
   ["/", "Kickstarter Agency for Board Games & Tabletop | Guildframe", "Kickstarter launches"],
   ["/buy", "Start Your Tabletop Launch Project | Guildframe", "Start your tabletop launch project"],
   ["/done-for-you-shopify-store", "Shopify Store Planning After Your Campaign | Guildframe", "Plan a Shopify store after crowdfunding"],
@@ -540,6 +544,10 @@ const datedPages = new Map([
   ["/guides/kickstarter-prelaunch-page-vs-landing-page", "2026-10-04"],
 ]);
 
+for (const [path] of pages) {
+  if ((path.startsWith("/guides/") && !afterFundingPaths.has(path)) || path.startsWith("/work/") || ["/guides/best-shopify-themes-for-board-games", "/resources/kickstarter-tabletop-games-benchmark"].includes(path)) datedPages.set(path, "2026-10-17");
+}
+
 test("keeps visible review dates, schema dates and sitemap dates identical", async (t) => {
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
   const contentDates = await readFile(new URL("../app/content-dates.ts", import.meta.url), "utf8");
@@ -797,4 +805,36 @@ test("shows a diverse, labelled concept gallery in the homepage hero", async () 
   assert.equal((hero.match(/class="gf-orbit-product"/g) ?? []).length, 6);
   assert.equal((hero.match(/data-focal="true"/g) ?? []).length, 1);
   assert.doesNotMatch(hero, /<button\b|[←→↗↘]|Pause gallery|Play gallery/);
+});
+
+
+test("publishes three honest case studies and connects them to service pages", async () => {
+  const work = await readPage("/work");
+  for (const slug of ["scented-realms", "futureproof-terrain", "quiver-time"]) {
+    const html = await readPage(`/work/${slug}`);
+    assert.ok(work.includes(`href="/work/${slug}"`));
+    assert.match(html, /My contribution/);
+    assert.match(html, /www\.kickstarter\.com\/projects\//);
+    assert.match(visibleText(html), /does not attribute the campaign total/i);
+    assert.doesNotMatch(html, /aggregateRating|\"@type\":\"Review\"/);
+  }
+  const quiver = visibleText(await readPage("/work/quiver-time"));
+  assert.match(quiver, /photograph.*Quiver Time|Quiver Time.*photograph/i);
+  for (const path of ["/kickstarter-launch-services", "/campaign-design", "/kickstarter-prelaunch-marketing", "/kickstarter-advertising", "/gamefound-launch-services"]) {
+    const html = await readPage(path);
+    assert.match(html, /What you bring/);
+    assert.match(html, /What the handoff covers/);
+  }
+});
+
+test("uses worked examples and connects established traffic pages to launch help", async () => {
+  const budget = visibleText(await readPage("/guides/kickstarter-advertising-budget-board-games"));
+  assert.match(budget, /invented planning inputs/);
+  assert.match(budget, /\$12/);
+  const plan = await readPage("/guides/board-game-kickstarter-marketing-plan");
+  assert.match(plan, /eight week example/);
+  assert.match(plan, /href=\"\/work\/scented-realms\"/);
+  for (const path of ["/guides/best-shopify-themes-for-board-games", "/resources/kickstarter-tabletop-games-benchmark"]) {
+    assert.match(await readPage(path), /href=\"\/kickstarter-launch-services\"/);
+  }
 });

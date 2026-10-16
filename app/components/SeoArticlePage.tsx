@@ -1,3 +1,4 @@
+import { ArticleNextStep } from "./ArticleNextStep";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { JsonLd } from "./JsonLd";
@@ -179,7 +180,7 @@ export function SeoArticlePage({
             <Link
               href={siteConfig.purchasePath}
               data-analytics-event="service_interest"
-              data-analytics-label="Campaign design"
+              data-analytics-label="Launch services"
               data-analytics-location="article sidebar"
             >
               Plan your game launch
@@ -197,6 +198,7 @@ export function SeoArticlePage({
               <p>{answer}</p>
             </div>
             {children}
+            <ArticleNextStep slug={slug} />
             <section className="article-sources" aria-labelledby="article-sources-title">
               <h2 id="article-sources-title">Sources and references</h2>
               <p>
@@ -233,7 +235,7 @@ export function SeoArticlePage({
                   className="seo-button seo-button-light"
                   href={siteConfig.purchasePath}
                   data-analytics-event="service_interest"
-                  data-analytics-label="Campaign design"
+                  data-analytics-label="Launch services"
                   data-analytics-location="article CTA"
                 >
                   Explore launch services

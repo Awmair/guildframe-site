@@ -110,3 +110,10 @@ This supplemental summary does not replace the HTML pages or sitemap.
 - [Tabletop Shopify Metafield Schema](https://guildframe.com/resources/tabletop-shopify-metafield-schema)
 
 Dataset: https://guildframe.com/data/kickstarter-tabletop-games-benchmark-2024.csv
+
+## Campaign design case studies
+
+- [Past work](https://guildframe.com/work): Real tabletop campaign creative with the contribution explained.
+- [ScentedRealms](https://guildframe.com/work/scented-realms): RPG accessory campaign presentation and visual direction.
+- [FutureProof Terrain](https://guildframe.com/work/futureproof-terrain): The original modular terrain campaign presentation.
+- [Quiver Time](https://guildframe.com/work/quiver-time): CITADEL card storage campaign presentation.

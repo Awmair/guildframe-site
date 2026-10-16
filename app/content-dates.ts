@@ -13,17 +13,20 @@ export function formatContentDate(value: string) {
 }
 
 export const contentDates = {
-  home: "2026-10-04",
+  home: "2026-10-17",
+  work: "2026-10-17",
+  campaignServices: "2026-10-17",
+  launchGuideReview: "2026-10-17",
   buy: "2026-10-03",
   doneForYouShopifyStore: "2026-10-03",
   boardGames: "2026-10-03",
   kickstarter: "2026-10-03",
   ttrpg: "2026-10-03",
   miniatures: "2026-10-03",
-  guides: "2026-10-04",
+  guides: "2026-10-17",
   whatHappensAfterKickstarter: "2026-09-30",
   moveFromKickstarter: "2026-09-30",
-  bestBoardGameThemes: "2026-09-30",
+  bestBoardGameThemes: "2026-10-17",
   shopifyDeveloperVsDiyTheme: "2026-09-30",
   latePledgesVsShopify: "2026-09-30",
   backerkitVsShopifyVsGamefound: "2026-09-30",
@@ -41,7 +44,7 @@ export const contentDates = {
   migrationChecklist: "2026-09-30",
   platformMatrix: "2026-09-30",
   productPageChecklist: "2026-09-30",
-  kickstarterTabletopBenchmark: "2026-09-30",
+  kickstarterTabletopBenchmark: "2026-10-17",
   buildWithAi: "2026-09-30",
   metafieldSchema: "2026-09-30",
 } as const;
