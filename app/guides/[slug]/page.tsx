@@ -1,4 +1,6 @@
 import Link from "next/link";
+import {FundingCalculator} from "../../components/FundingCalculator";
+import {guideWorkbooks} from "../../guide-workbooks";
 import { GuideProjectExample } from "../../components/GuideProjectExample";
 import { notFound } from "next/navigation";
 import { launchGuides, launchGuideDate } from "../../launch-guides";
@@ -17,7 +19,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const g = launchGuides.find(g => g.slug === slug);
   if (!g) notFound();
-  const words = [g.title, g.description, g.answer, ...g.sections.flatMap(s => [s.title, ...s.paragraphs, ...(s.list ?? []), ...(s.table?.headers ?? []), ...(s.table?.rows.flat() ?? [])]), ...g.faqs.flatMap(f => [f.question, f.answer])].join(" ").split(/\s+/).length;
+  const workbook=guideWorkbooks[g.slug];
+  const words = [workbook ? [workbook.goal,...workbook.actions,workbook.example,workbook.check].join(" ") : "",g.title, g.description, g.answer, ...g.sections.flatMap(s => [s.title, ...s.paragraphs, ...(s.list ?? []), ...(s.table?.headers ?? []), ...(s.table?.rows.flat() ?? [])]), ...g.faqs.flatMap(f => [f.question, f.answer])].join(" ").split(/\s+/).length;
   const related = g.relatedSlugs.map(slug => launchGuides.find(guide => guide.slug === slug)).filter(guide => guide !== undefined);
   return <SeoArticlePage slug={g.slug} title={g.title} description={g.description} category={g.tag} answer={g.answer} published={g.published ?? launchGuideDate} updated={g.updated ?? launchGuideDate} readTime={`${Math.max(1, Math.ceil(words / 200))} min read`} toc={g.sections.map(s => ({ id: s.id, label: s.title }))} faqs={g.faqs} sources={g.sources}>
     {g.sections.map(s => <section key={s.id}>
@@ -27,6 +30,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       {s.table && <ArticleTable caption={s.title} headers={s.table.headers} rows={s.table.rows} />}
       {s.source !== undefined && <p className="article-source-note">Source: <a href={g.sources[s.source].href}>{g.sources[s.source].label}</a>.</p>}
     </section>)}
+    {g.slug === "board-game-kickstarter-funding-goal" && <FundingCalculator />}
     <GuideProjectExample slug={g.slug} />
     <aside className="article-callout"><strong>Need help with this part of your launch?</strong><p><Link href={g.servicePath}>{g.serviceLabel}</Link>. Share your project and the work you need help with to agree a scope. You can also request a free opening mockup using your artwork.</p></aside>
     <nav className="gf-service-related" aria-label="Related launch guides">{related.map(guide => <Link key={guide.slug} href={`/guides/${guide.slug}`}>{guide.title}</Link>)}</nav>

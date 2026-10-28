@@ -117,3 +117,11 @@ Dataset: https://guildframe.com/data/kickstarter-tabletop-games-benchmark-2024.c
 - [ScentedRealms](https://guildframe.com/work/scented-realms): RPG accessory campaign presentation and visual direction.
 - [FutureProof Terrain](https://guildframe.com/work/futureproof-terrain): The original modular terrain campaign presentation.
 - [Quiver Time](https://guildframe.com/work/quiver-time): CITADEL card storage campaign presentation.
+
+## Launch planning references
+- [How to Set a Kickstarter Funding Goal for a Board Game](https://guildframe.com/guides/board-game-kickstarter-funding-goal): Calculate a board game Kickstarter funding goal from production costs, reward margins, minimum orders and cash timing, with a worked example.
+- [How to Price Kickstarter Rewards for a Board Game](https://guildframe.com/guides/board-game-kickstarter-reward-pricing): Price board game Kickstarter rewards using real costs, fee allowances and margins. Compare core, deluxe and bundle tiers with a worked example.
+- [Track Kickstarter Marketing with Referral Tags and UTMs](https://guildframe.com/guides/kickstarter-referral-tags-tracking): Track Kickstarter marketing with custom referral tags, consistent UTMs and a reporting sheet that separates clicks, pledges and collected revenue.
+- [Plan Board Game Reviewer Previews Before Kickstarter](https://guildframe.com/guides/board-game-reviewer-outreach): Prepare board game reviewer outreach with a prototype brief, press kit, dispatch plan and clear permissions before your Kickstarter launch.
+- [A Kickstarter Launch-Day Checklist for Board Games](https://guildframe.com/guides/board-game-kickstarter-launch-day-checklist): Run a board game Kickstarter launch with clear owners, mobile and reward checks, tested links and first-day reporting. Includes Gamefound testing notes.
+- [Choose a Pledge Manager for Your Board Game Campaign](https://guildframe.com/guides/board-game-pledge-manager-checklist): Compare pledge managers for a board game Kickstarter by upgrades, shipping, fees, order exports and support. Use a practical selection checklist.

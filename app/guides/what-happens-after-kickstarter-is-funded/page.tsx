@@ -210,6 +210,7 @@ export default function WhatHappensAfterKickstarterPage() {
       <p>
         You can prepare the permanent store while fulfilment continues. Open sales when inventory, delivery timing and the process for new orders are ready.
       </p>
+<h2 id="choose-order-owner">Choose who owns the backer order</h2><p>An eligible project can use Kickstarter&apos;s native Pledge Manager for backer selections and applicable shipping and tax payments. An external manager may suit a different fulfilment workflow. A permanent retail store handles ongoing sales, but it does not automatically reconcile your existing backer obligations.</p><p>Before choosing, test an existing backer, an upgrade and a new buyer. Confirm which system records each payment and which exports reach your fulfilment partner. See <a href="https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager">Kickstarter&apos;s eligibility and setup guidance</a> and our <Link href="/guides/board-game-pledge-manager-checklist">pledge manager checklist</Link>.</p>
     </SeoArticlePage>
   );
 }

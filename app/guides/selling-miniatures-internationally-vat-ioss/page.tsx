@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/selling-miniatures-internationally-vat-ioss",
   kind: "article",
   publishedTime: "2026-07-23",
-  modifiedTime: "2026-09-30",
+  modifiedTime: "2026-10-28",
   keywords: [
     "selling miniatures internationally VAT IOSS",
     "Shopify EU VAT miniatures",
@@ -55,7 +55,7 @@ export default function SellingMiniaturesInternationallyPage() {
       description="Plan international miniature sales by checking destination markets, package data, VAT, customs duties and who pays import charges."
       answer="Before selling miniatures internationally, confirm the markets you can serve and record packed weights, dimensions, HS codes and country of origin. Agree who pays import charges, check VAT and IOSS requirements with an adviser, configure shipping and taxes, then test orders for each region."
       published="2026-07-23"
-      updated="2026-09-30"
+      updated="2026-10-28"
       readTime="9 minute read"
       faqs={faqs}
       sources={[
@@ -181,6 +181,7 @@ export default function SellingMiniaturesInternationallyPage() {
         This guide supports store planning and does not provide tax, customs or legal
         advice. Confirm the live rules for your business and destinations before launch.
       </ArticleCallout>
+<h2 id="november-identifiers">Prepare for the November 2026 identifier requirements</h2><p>European Commission guidance schedules product-identifier requirements for relevant import distance sales from November 1, 2026. Before shipping, ask your carrier or customs declarant which merchant and manufacturer identifiers it needs, how those fields should be transmitted, and how to handle an item without a standardized identifier.</p><p>This depends on the import arrangement. Confirm the current requirements for your shipments using <a href="https://trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments">the Commission&apos;s customs guidance</a> and your customs adviser.</p>
     </SeoArticlePage>
   );
 }

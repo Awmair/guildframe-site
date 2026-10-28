@@ -1,0 +1,10 @@
+"use client";
+import {useState} from "react";
+export function FundingCalculator(){
+ const [cost,setCost]=useState("30000"),[reserve,setReserve]=useState("10"),[fees,setFees]=useState("8"),[committed,setCommitted]=useState("2000");
+ const values=[cost,reserve,fees,committed].map(Number);
+ const valid=[cost,reserve,fees,committed].every(v=>v.trim()!=="")&&values.every(v=>Number.isFinite(v)&&v>=0)&&values[2]<100;
+ const need=valid?Math.max(0,values[0]*(1+values[1]/100)-values[3]):0;
+ const goal=valid?Math.ceil(need/(1-values[2]/100)):0;
+ return <section className="funding-calculator" aria-labelledby="funding-calculator-title"><h2 id="funding-calculator-title">Try your funding assumptions</h2><p>Use one currency throughout. The starting values are a hypothetical example. Enter the fee rate from your own platform and payment terms.</p><div className="funding-fields">{[{label:"Total project cash needed",value:cost,set:setCost},{label:"Contingency (%)",value:reserve,set:setReserve},{label:"Effective fees (%)",value:fees,set:setFees},{label:"Committed funds already available",value:committed,set:setCommitted}].map(field=><label key={field.label}>{field.label}<input type="number" min="0" step="any" value={field.value} onChange={e=>field.set(e.target.value)}/></label>)}</div><div className="funding-result" role="status" aria-live="polite">{valid?<><span>Illustrative gross funding required</span><strong>{goal.toLocaleString("en-US")} in your chosen currency</strong><p>Calculation: (project cash × (1 + contingency) − committed funds) ÷ (1 − effective fees), rounded up. A negative net requirement is shown as zero.</p></>:<p>Enter non-negative values and a fee rate below 100%.</p>}</div><p>This estimate assumes your project cash figure covers the planned production quantity and delivery obligations. Model reward mix, tax, failed payments and changing unit costs separately. It does not predict demand.</p><noscript><p>The displayed result uses the starting example. Enable JavaScript to change the calculation, or use the formula above.</p></noscript></section>;
+}

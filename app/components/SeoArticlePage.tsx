@@ -1,3 +1,5 @@
+import {guideWorkbooks} from "../guide-workbooks";
+import { GuideWorkbookSection, GuideReadingPath } from "./GuideWorkbook";
 import { ArticleNextStep } from "./ArticleNextStep";
 import type { ReactNode } from "react";
 import Link from "next/link";
@@ -52,6 +54,7 @@ export function SeoArticlePage({
   children: ReactNode;
 }) {
   const canonicalPath = path ?? `/guides/${slug}`;
+  const articleToc = collectionHref === "/guides" && guideWorkbooks[slug] ? [...toc.filter(item=>item.id!=="faq"),{id:"put-it-to-work",label:"Put it to work"},...toc.filter(item=>item.id==="faq")] : toc;
 
   return (
     <>
@@ -171,7 +174,7 @@ export function SeoArticlePage({
           <aside className="article-toc">
             <strong>{sidebarTitle}</strong>
             <nav aria-label="Table of contents">
-              {toc.map((item) => (
+              {articleToc.map((item) => (
                 <a href={`#${item.id}`} key={item.id}>
                   {item.label}
                 </a>
@@ -190,7 +193,7 @@ export function SeoArticlePage({
           <details className="article-mobile-toc">
             <summary>{sidebarTitle}<span aria-hidden="true">+</span></summary>
             <nav aria-label="Article sections">
-              {toc.map((item) => <a href={`#${item.id}`} key={item.id}>{item.label}</a>)}
+              {articleToc.map((item) => <a href={`#${item.id}`} key={item.id}>{item.label}</a>)}
             </nav>
           </details>
           <article className="article-body" id="article-content">
@@ -198,7 +201,9 @@ export function SeoArticlePage({
               <p>{answer}</p>
             </div>
             {children}
+            {collectionHref === "/guides" && <GuideWorkbookSection slug={slug} />}
             <ArticleNextStep slug={slug} />
+            {collectionHref === "/guides" && <GuideReadingPath slug={slug} />}
             <section className="article-sources" aria-labelledby="article-sources-title">
               <h2 id="article-sources-title">Sources and references</h2>
               <p>

@@ -91,10 +91,7 @@ export default function BoardGameWebsiteCostPage() {
         ]}
       />
       <p>
-        As of September 30, 2026, Shopify lists Basic at 39 dollars per month when paid monthly
-        and 29 dollars per month when billed yearly in the United States. Pricing,
-        card rates and regional availability can change, so confirm the current plan
-        on Shopify before budgeting.
+        Check Shopify&apos;s pricing page for your business location and billing term. Record the subscription, payment processing, any third-party transaction charges and paid apps separately; a theme purchase does not cover those costs.
       </p>
 
       <h2 id="routes">Compare the three practical build routes</h2>

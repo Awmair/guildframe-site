@@ -1,0 +1,927 @@
+import type {LaunchGuide} from "./launch-guides";
+export const growthGuides: LaunchGuide[] = [
+  {
+    "slug": "board-game-kickstarter-funding-goal",
+    "title": "How to Set a Kickstarter Funding Goal for a Board Game",
+    "description": "Calculate a board game Kickstarter funding goal from production costs, reward margins, minimum orders and cash timing, with a worked example.",
+    "tag": "Funding and production",
+    "answer": "Set your funding goal from the money needed to deliver the promised game, including manufacturing commitments, fees, fulfillment and a reserve. Check what happens if you finish at exactly that goal. A smaller target does not reduce your production bill.",
+    "sections": [
+      {
+        "id": "minimum",
+        "title": "Start with the smallest version you can actually deliver",
+        "paragraphs": [
+          "Write down what the campaign promises before entering a target. For a card game, that might be one finished deck, its box and a printed rules sheet. A miniature game may also need tooling, trays and specialist packing. Keep optional upgrades outside the base promise until their cost is known.",
+          "Kickstarter says the goal should cover completing the project and its associated costs. You cannot change the goal or deadline after launch. Treat the target as a production decision, then check whether your launch plan can realistically reach the required number of backers."
+        ],
+        "source": 0
+      },
+      {
+        "id": "costs",
+        "title": "Separate commitments from costs that grow with each order",
+        "paragraphs": [
+          "A factory quote for 1,000 copies is a commitment even if the campaign attracts 500 backers. Do not multiply the unit price only by pledged copies and forget the remaining stock. Record when deposits and balances fall due, which currency the supplier uses and how long the quote remains valid.",
+          "Use one basis for shipping and taxes throughout the sheet. If you collect shipping separately later, model both the collection and the fulfillment bill. Money collected for postage is not spare production margin."
+        ],
+        "table": {
+          "headers": [
+            "Cost",
+            "Example evidence",
+            "Planning treatment"
+          ],
+          "rows": [
+            [
+              "Fixed work",
+              "Editing, layout, tooling, approved creative scope",
+              "Include the full amount still payable"
+            ],
+            [
+              "Manufacturing",
+              "Quote, minimum order and deposit schedule",
+              "Include the minimum purchase commitment"
+            ],
+            [
+              "Each order",
+              "Packing, handling, shipping obligations and fees",
+              "Apply to the expected reward mix"
+            ],
+            [
+              "Reserve",
+              "Named uncertainty and a stated allowance",
+              "Keep visible rather than hiding it in another line"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "example",
+        "title": "Work through a simple funding model",
+        "paragraphs": [
+          "This invented USD example uses one reward and assumes that all stated costs are complete. It is not a platform fee quote or an industry benchmark. A $60 reward has $30 in variable production and fulfillment costs, an assumed 8% payment/platform allowance of $4.80 and $6 in acquisition costs. That leaves $19.20 toward fixed costs and the reserve.",
+          "If the remaining fixed-cost and reserve requirement is $9,600, the example needs 500 successfully collected pledges: $9,600 divided by $19.20. The corresponding gross pledge total is $30,000. Replace every input with your quotes, actual fee schedule and reward mix. Add any minimum-order stock that the simplified example does not cover."
+        ],
+        "table": {
+          "headers": [
+            "Illustrative line",
+            "Amount"
+          ],
+          "rows": [
+            [
+              "Revenue per reward",
+              "$60.00"
+            ],
+            [
+              "Variable production and fulfillment",
+              "$30.00"
+            ],
+            [
+              "Assumed percentage fee allowance",
+              "$4.80"
+            ],
+            [
+              "Acquisition cost",
+              "$6.00"
+            ],
+            [
+              "Contribution remaining",
+              "$19.20"
+            ],
+            [
+              "Fixed requirement divided by contribution",
+              "500 pledges"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "stress-test",
+        "title": "Test the weak assumptions before choosing the target",
+        "paragraphs": [
+          "Run a second version with fewer deluxe pledges, a more expensive shipping mix and some failed collections. Also test the smallest factory order you can buy. If the goal works only when almost everyone buys the most profitable bundle, it needs another review.",
+          "Cash timing matters too. A campaign can look affordable on paper while a supplier deposit falls due before collected funds arrive. Record the source of any money needed earlier. Do not silently treat an uncertain future preorder window as money already available."
+        ],
+        "list": [
+          "Check the base reward without stretch goals.",
+          "Recalculate for the actual country and currency fee schedule.",
+          "Include quantities bought but not yet sold.",
+          "Record who will fund deposits before payout.",
+          "Stop and revise if the per-reward contribution is zero or negative."
+        ]
+      },
+      {
+        "id": "handoff",
+        "title": "Give the launch team one approved budget",
+        "paragraphs": [
+          "Share the same reward names, prices and contents with the designer, advertising lead and production team. Keep a dated budget version with the approved page brief. If a component, box size or shipping promise changes, recalculate before publishing the new offer.",
+          "Guildframe can help turn the confirmed offer into a launch plan and campaign page. Bring supplier quotes and the decisions still open; a polished page cannot settle missing manufacturing numbers."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Should I set a very low goal so the game funds quickly?",
+        "answer": "Only if you can still fulfill the promised rewards at that amount, using any other committed funding you have recorded. A quick funding announcement does not pay an uncovered factory bill."
+      },
+      {
+        "question": "Is the funding goal the same as my sales target?",
+        "answer": "No. The funding goal is the threshold required for the campaign to succeed. A sales forecast describes what you expect to sell and needs its own assumptions."
+      },
+      {
+        "question": "Can I change the goal after the campaign launches?",
+        "answer": "Kickstarter does not allow the funding goal or deadline to be changed after launch. Resolve the cost model before publishing."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Setting a Kickstarter funding goal",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236709-how-to-set-the-right-funding-goal-for-your-kickstarter-campaign"
+      }
+    ],
+    "relatedSlugs": [
+      "board-game-kickstarter-reward-pricing",
+      "kickstarter-advertising-budget-board-games",
+      "kickstarter-stretch-goals-planning"
+    ],
+    "servicePath": "/kickstarter-launch-services",
+    "serviceLabel": "Plan your tabletop launch",
+    "published": "2026-10-28",
+    "updated": "2026-10-28"
+  },
+  {
+    "slug": "board-game-kickstarter-reward-pricing",
+    "title": "How to Price Kickstarter Rewards for a Board Game",
+    "description": "Price board game Kickstarter rewards using real costs, fee allowances and margins. Compare core, deluxe and bundle tiers with a worked example.",
+    "tag": "Reward pricing",
+    "answer": "Price each reward against its exact contents, production cost, fulfillment obligations, fees and share of fixed work. Check the core game, deluxe edition and add-ons separately. A popular tier still needs enough margin to deliver what it promises.",
+    "sections": [
+      {
+        "id": "contents",
+        "title": "Freeze the contents before comparing prices",
+        "paragraphs": [
+          "A reward name such as Deluxe does not tell your factory or fulfillment partner what to supply. List the game, expansions, upgraded pieces, sleeves, inserts and digital files, including quantities and language. The campaign graphics should use that same list.",
+          "Keep variants distinct from additional items. A choice of English or French rules is different from promising both. Gamefound builds rewards from their included items; its settings also distinguish whether an item can be bought separately. Decide the product structure before designing a comparison chart."
+        ],
+        "source": 1
+      },
+      {
+        "id": "cost-model",
+        "title": "Build the price from costs rather than a competitor screenshot",
+        "paragraphs": [
+          "Another campaign may use a different print quantity, shipping model or retail strategy. Its pledge price is useful context, but it cannot reveal your margin. Start with the supplier quote and the actual work needed to deliver each tier.",
+          "Assign fixed work consistently. If campaign design and tooling appear in a shared project budget, do not count their full cost again in every reward. Use an allocation for planning, then reconcile the whole campaign against the funding-goal model."
+        ],
+        "table": {
+          "headers": [
+            "Pricing input",
+            "What to record"
+          ],
+          "rows": [
+            [
+              "Physical contents",
+              "Cost at the quoted production quantity"
+            ],
+            [
+              "Delivery obligation",
+              "Freight, packing, handling and any shipping you absorb"
+            ],
+            [
+              "Payment and platform costs",
+              "Current percentage and per-transaction charges"
+            ],
+            [
+              "Acquisition",
+              "The amount available to acquire a backer"
+            ],
+            [
+              "Fixed work and reserve",
+              "A consistent allocation and uncertainty allowance"
+            ],
+            [
+              "Remaining margin",
+              "What remains after the costs above"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "example",
+        "title": "Calculate a price floor, then test a practical price",
+        "paragraphs": [
+          "This hypothetical USD example assumes $42 in product and fulfillment costs, $6 for acquisition, $6 allocated to fixed work and a desired $8 remaining contribution. Those amounts total $62. With an assumed 8% percentage fee, the price required is $62 divided by 0.92, or about $67.39.",
+          "At a $69 pledge price, the assumed percentage fee is $5.52. Subtracting that and the $54 in stated costs leaves $9.48. The 8% is a teaching input, not a fee quote. Replace it with the actual fee structure, including any fixed transaction charges, and use consistent shipping and tax treatment."
+        ],
+        "table": {
+          "headers": [
+            "Illustrative calculation",
+            "Result"
+          ],
+          "rows": [
+            [
+              "Costs plus desired contribution",
+              "$42 + $6 + $6 + $8 = $62"
+            ],
+            [
+              "Price before rounding",
+              "$62 ÷ 0.92 = $67.39"
+            ],
+            [
+              "Fee allowance at a $69 price",
+              "$5.52"
+            ],
+            [
+              "Contribution after stated costs",
+              "$69 − $5.52 − $54 = $9.48"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "tiers",
+        "title": "Check whether the upgrade earns its extra cost",
+        "paragraphs": [
+          "A deluxe tier can sell for more while leaving less money per order. Compare the extra revenue with the extra manufacturing, weight, packaging and handling. A larger box may change the delivery bracket even if the component upgrade looks inexpensive.",
+          "Apply the same check to bundles and stretch goals. Discounts can also move demand away from your base reward, so test the expected mix instead of assuming that every tier adds independent sales. Keep retailer terms separate; a crowdfunding pledge price is not automatically a sustainable wholesale price."
+        ],
+        "list": [
+          "Compare the core and deluxe reward side by side.",
+          "Check packed dimensions as well as product weight.",
+          "Test bundles with the actual quantities and discounts.",
+          "Keep stock allocated across rewards and add-ons consistent.",
+          "Recalculate when a stretch goal changes the contents."
+        ]
+      },
+      {
+        "id": "presentation",
+        "title": "Show the offer without making the reader do arithmetic",
+        "paragraphs": [
+          "Once the numbers are approved, prepare a simple reward comparison with exact contents, price, delivery estimate and any later shipping or tax charges. Use one clear explanation for items that require the base game. Make the default language or edition obvious.",
+          "Keep MSRP claims tied to a real retail plan. If a future selling price is still undecided, describe the campaign price without inventing a crossed-out comparison. Guildframe can design the reward graphics after the contents and prices are settled."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Should every reward have the same margin percentage?",
+        "answer": "There is no universal rule. Compare the cash each tier contributes, the work it adds and the expected sales mix. A low-margin tier can become a problem if it dominates orders."
+      },
+      {
+        "question": "Can I use another game’s Kickstarter price as my price?",
+        "answer": "Use it as market context, then calculate your own costs. Different print quantities, contents and shipping terms can produce very different economics."
+      },
+      {
+        "question": "Does a higher deluxe price guarantee more profit?",
+        "answer": "No. Extra components, packing and shipping can consume the difference. Compare the additional revenue with the full additional cost."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Adding rewards to your project",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236688-how-do-i-add-rewards-to-my-project"
+      },
+      {
+        "label": "Creating rewards",
+        "publisher": "Gamefound Knowledge Base",
+        "href": "https://help.gamefound.com/article/127-creating-rewards-in-crowdfunding"
+      },
+      {
+        "label": "Setting a Kickstarter funding goal",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236709-how-to-set-the-right-funding-goal-for-your-kickstarter-campaign"
+      }
+    ],
+    "relatedSlugs": [
+      "board-game-kickstarter-funding-goal",
+      "kickstarter-reward-tier-graphics",
+      "kickstarter-stretch-goals-planning"
+    ],
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Plan your campaign design",
+    "published": "2026-10-28",
+    "updated": "2026-10-28"
+  },
+  {
+    "slug": "kickstarter-referral-tags-tracking",
+    "title": "Track Kickstarter Marketing with Referral Tags and UTMs",
+    "description": "Track Kickstarter marketing with custom referral tags, consistent UTMs and a reporting sheet that separates clicks, pledges and collected revenue.",
+    "tag": "Campaign measurement",
+    "answer": "Use Kickstarter referral tags to report attributed pledges and consistent UTM parameters to identify traffic in Analytics. Keep visits, email signups, pledge value and collected revenue separate. A link click is not a pledge, and pledge revenue is not profit.",
+    "sections": [
+      {
+        "id": "measurements",
+        "title": "Decide what each report is meant to answer",
+        "paragraphs": [
+          "Before launch, write down the decisions you need to make. A landing-page report can tell you which traffic reached the page and signed up. Your email platform can show delivery and clicks. Kickstarter can report pledges attributed to its referral links. These are different stages, so their totals will not necessarily match.",
+          "Define a successful signup as the completed action your form actually records. Do not count a button click as a confirmed subscriber. Record the date range and timezone for every export so the team compares the same period."
+        ]
+      },
+      {
+        "id": "referral-tags",
+        "title": "Create named Kickstarter links before you publish the campaign",
+        "paragraphs": [
+          "Kickstarter now allows custom referral tags to be created before launch in the Promotion tab. After launch, they can also be created through the creator dashboard. Give each link a name that identifies its placement, then keep the generated URL intact.",
+          "The current referral report includes attributed pledges and amounts, and dropped-pledge information after collection. It does not provide backer-specific referral records for dropped pledges. Use the report within those limits rather than promising complete person-by-person attribution."
+        ],
+        "source": 0
+      },
+      {
+        "id": "utm",
+        "title": "Use one naming convention for your traffic links",
+        "paragraphs": [
+          "Google Analytics uses UTM parameters to identify campaign traffic. Source, medium and campaign should be filled consistently. Values are case-sensitive: a newsletter recorded with two spellings can appear as two sources. Keep a small approved naming list and copy from it.",
+          "For an owned landing page, an illustrative query string is ?utm_source=creator_newsletter&utm_medium=email&utm_campaign=orbit_launch&utm_content=rules_preview. This example does not contain a real Kickstarter referral tag. Use the URL generated in your campaign dashboard for that part of the tracking."
+        ],
+        "source": 1,
+        "table": {
+          "headers": [
+            "Field",
+            "Example purpose"
+          ],
+          "rows": [
+            [
+              "utm_source",
+              "The newsletter, advertising platform or referring partner"
+            ],
+            [
+              "utm_medium",
+              "The channel, such as email or paid_social"
+            ],
+            [
+              "utm_campaign",
+              "The agreed campaign name"
+            ],
+            [
+              "utm_content",
+              "The specific creative or link placement"
+            ],
+            [
+              "Kickstarter referral URL",
+              "The real link generated for that placement"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "test",
+        "title": "Test the route someone will actually use",
+        "paragraphs": [
+          "Open each published link on a phone. Check the destination, redirects and parameter spelling. If an email tool rewrites links, test the delivered email rather than only the draft. If you use a shortened link, make sure it reaches the intended page with the required information preserved.",
+          "Then verify the measurement you control. For an owned signup page, complete the form and check the confirmation and email delivery. For a platform campaign link, confirm the correct public project opens. Do not place an unnecessary paid pledge just to make a dashboard number appear."
+        ],
+        "table": {
+          "headers": [
+            "Link record",
+            "Keep alongside the URL"
+          ],
+          "rows": [
+            [
+              "Placement",
+              "Email, partner, advertisement or page"
+            ],
+            [
+              "Owner",
+              "Person responsible for changes"
+            ],
+            [
+              "Destination",
+              "Public page and campaign stage"
+            ],
+            [
+              "Test",
+              "Device, date and observed result"
+            ],
+            [
+              "Reporting",
+              "Which report will contain the expected outcome"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "report",
+        "title": "Report collected results alongside pledge value",
+        "paragraphs": [
+          "Here is a hypothetical USD example: $600 in ad spend and $1,800 in attributed pledges give a pledge-value ROAS of 3.0. If $150 of those pledges drops, the collected attributed amount is $1,650 and the equivalent ratio is 2.75. Production, shipping, fees and service costs still sit outside both ratios.",
+          "Do not add an advertising platform’s attributed revenue to Kickstarter’s attributed revenue as if they were separate sales. Keep each report labelled, explain its limits and reconcile against collected funds when available. A small results table with dates and assumptions is more useful than one impressive ratio.",
+          "Guildframe can help plan the tracking and reporting alongside campaign advertising. Agree the account owner, test budget and decision rules before the first paid traffic arrives."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I create Kickstarter referral tags before launch?",
+        "answer": "Yes. Kickstarter’s current Help Center says you can create them in the Promotion tab before the project launches."
+      },
+      {
+        "question": "Do UTM tags and Kickstarter referral tags measure the same thing?",
+        "answer": "No. UTMs label campaign traffic in Analytics, while Kickstarter referral reports attribute pledges to its generated links. Use both for the questions each can answer."
+      },
+      {
+        "question": "Is a 3x ROAS profitable?",
+        "answer": "The ratio alone cannot answer that. You still need the reward costs, fees, fulfillment obligations, failed collections and other campaign spending."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Custom referral tags and referral statistics",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236548-how-do-i-create-a-custom-referral-tag-and-track-referral-stats"
+      },
+      {
+        "label": "Campaign data with custom URLs",
+        "publisher": "Google Analytics Help",
+        "href": "https://support.google.com/analytics/answer/10917952"
+      }
+    ],
+    "relatedSlugs": [
+      "kickstarter-advertising-budget-board-games",
+      "kickstarter-prelaunch-email-list",
+      "board-game-kickstarter-marketing-plan"
+    ],
+    "servicePath": "/kickstarter-advertising",
+    "serviceLabel": "Plan campaign tracking and ads",
+    "published": "2026-10-28",
+    "updated": "2026-10-28"
+  },
+  {
+    "slug": "board-game-reviewer-outreach",
+    "title": "Plan Board Game Reviewer Previews Before Kickstarter",
+    "description": "Prepare board game reviewer outreach with a prototype brief, press kit, dispatch plan and clear permissions before your Kickstarter launch.",
+    "tag": "Reviewer previews",
+    "answer": "Contact reviewers whose audience fits your game, ask about their availability and coverage terms, then send a complete prototype and clear rules. Agree timing, costs, return arrangements and how you may use their content before relying on it in your campaign.",
+    "sections": [
+      {
+        "id": "fit",
+        "title": "Choose reviewers by the games their audience plays",
+        "paragraphs": [
+          "A long subscriber list is less useful if the channel rarely covers your kind of game. Look at several recent videos or articles. Check player count, complexity, session length and whether the reviewer covers prototypes, finished games or both.",
+          "Build a shortlist with one sentence explaining the fit for each person. A quick party game, a campaign miniature game and a solo RPG need different introductions. Read the reviewer’s submission policy before sending a generic pitch. Some do not accept unsolicited prototypes or paid previews."
+        ]
+      },
+      {
+        "id": "brief",
+        "title": "Give the reviewer enough information to decide",
+        "paragraphs": [
+          "Your first message should identify the game, why it fits their coverage and what you are asking for. Include a short rules overview, player count, estimated play time, the state of the prototype and your target launch window. Link to a tidy folder instead of attaching a large collection of files.",
+          "Kickstarter recommends preparing promotion and communication plans before launch. Use that preparation to settle the public project URL and the facts you can share. A reviewer should not have to guess which date or product image is current."
+        ],
+        "source": 0,
+        "table": {
+          "headers": [
+            "Brief item",
+            "Useful detail"
+          ],
+          "rows": [
+            [
+              "Game summary",
+              "Theme, main action and who it suits"
+            ],
+            [
+              "Prototype status",
+              "What is final and what will change"
+            ],
+            [
+              "Rules",
+              "Readable rules plus a concise setup reference"
+            ],
+            [
+              "Coverage request",
+              "Review, preview, tutorial or another agreed format"
+            ],
+            [
+              "Timing",
+              "Target window and any mutually agreed embargo"
+            ],
+            [
+              "Logistics",
+              "Delivery location, postage and return arrangements"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "outreach",
+        "title": "Make the request short and specific",
+        "paragraphs": [
+          "An example opening: “Hi Sam, I saw your recent coverage of short cooperative games. We are preparing a two-player card game about repairing a research station. Would you consider a prototype preview? The current rules, component photos and play-time details are here. Our target launch is in November, but I would like to check your availability before agreeing a date.”",
+          "The game, reviewer and date in that message are fictional. Replace them with accurate details. Ask about fees and production terms without assuming the answer. Sending a copy does not buy a positive opinion or guarantee that anything will be published."
+        ]
+      },
+      {
+        "id": "schedule",
+        "title": "Work backward from the reviewer’s own lead time",
+        "paragraphs": [
+          "Ask how long they need after receiving a playable copy. Then allow for shipping, customs where relevant, missing parts and questions about the rules. Agree a publication window before adding the content to your campaign schedule.",
+          "For example, a reviewer might ask for four weeks with the game. If shipping may take ten days, dispatching two weeks before launch will not meet that request. That is an illustrative planning problem, not a standard turnaround time. Find a workable date or prepare the campaign without depending on that coverage."
+        ],
+        "table": {
+          "headers": [
+            "Prototype tracker",
+            "Record"
+          ],
+          "rows": [
+            [
+              "Before dispatch",
+              "Inventory, rules version and photographs of the packed set"
+            ],
+            [
+              "In transit",
+              "Tracking, expected arrival and contact details"
+            ],
+            [
+              "After arrival",
+              "Missing parts and rules questions"
+            ],
+            [
+              "Before publication",
+              "Agreed timing, format and disclosure of the arrangement"
+            ],
+            [
+              "After publication",
+              "Live URL and permission for any campaign excerpt"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "use",
+        "title": "Keep reviews, paid previews and your own claims distinct",
+        "paragraphs": [
+          "Ask how the creator labels a paid preview, a supplied copy or another commercial arrangement. Make that context clear wherever you feature the content. A paid walkthrough can still help someone understand the game; it should not be presented as an independent verdict.",
+          "Before putting a quote or thumbnail on the campaign page, agree the permitted excerpt, credit and link. Preserve the reviewer’s meaning and do not turn a qualified observation into an unqualified endorsement. If the prototype has changed since filming, explain the relevant difference.",
+          "Guildframe can organise approved previews within the campaign page and help explain what each one demonstrates. Bring the live links, permissions and confirmed product details with the rest of the campaign assets."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How early should I contact board game reviewers?",
+        "answer": "Ask each reviewer about their lead time, then add delivery and preparation time. There is no single schedule that applies to every channel or game."
+      },
+      {
+        "question": "Does sending a prototype guarantee a review?",
+        "answer": "No. Confirm acceptance and terms first. The reviewer may decline, need more time or choose not to publish after playing."
+      },
+      {
+        "question": "Can I put a reviewer’s quote on my Kickstarter page?",
+        "answer": "Agree how the quote, name and imagery may be used, keep the wording accurate and link to the original coverage. Make any paid or supplied-product arrangement clear."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Planning your promotion strategy",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236407-when-and-how-should-i-start-planning-my-promotion-strategy"
+      },
+      {
+        "label": "Setting up a prelaunch page",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page"
+      }
+    ],
+    "relatedSlugs": [
+      "board-game-kickstarter-gameplay-rulebook",
+      "kickstarter-campaign-video-planning",
+      "what-to-send-kickstarter-campaign-designer"
+    ],
+    "servicePath": "/kickstarter-prelaunch-marketing",
+    "serviceLabel": "Plan your game prelaunch",
+    "published": "2026-10-28",
+    "updated": "2026-10-28"
+  },
+  {
+    "slug": "board-game-kickstarter-launch-day-checklist",
+    "title": "A Kickstarter Launch-Day Checklist for Board Games",
+    "description": "Run a board game Kickstarter launch with clear owners, mobile and reward checks, tested links and first-day reporting. Includes Gamefound testing notes.",
+    "tag": "Launch operations",
+    "answer": "Before launch, confirm approval, reward details, page assets and who will publish. After publishing, verify the public campaign and announcement links before increasing promotion. Keep a short run sheet with owners, evidence and clear reasons to stop.",
+    "sections": [
+      {
+        "id": "ready",
+        "title": "Make the final decision before the announcement goes out",
+        "paragraphs": [
+          "Bring the approved page, reward list and production assumptions into one review. The final check should catch a wrong price, missing component, unreadable graphic or unsupported delivery promise. It should not be the first time the team discusses the reward contents.",
+          "Kickstarter review can take up to three business days, with additional time for revisions or busy periods. A target launch date is a planning aid, not approval. Keep enough buffer to resolve questions before scheduling the public announcement."
+        ],
+        "source": 0
+      },
+      {
+        "id": "owners",
+        "title": "Put one person in charge of publishing",
+        "paragraphs": [
+          "Kickstarter launches are manual. The platform does not automatically publish the project at your chosen target time. Name who will press the launch button and who will confirm the result. Make sure both can reach the correct campaign and communicate if something changes.",
+          "Keep the launch email and paid ads under their own named owners. They need the confirmed live URL before sending traffic. An approved campaign draft and a public live campaign are different states."
+        ],
+        "source": 1,
+        "table": {
+          "headers": [
+            "Work",
+            "Owner must confirm"
+          ],
+          "rows": [
+            [
+              "Campaign publication",
+              "Approved project, correct account and public live URL"
+            ],
+            [
+              "Email",
+              "Delivered test, final links and the intended audience"
+            ],
+            [
+              "Advertising",
+              "Destination, approved spend cap and start decision"
+            ],
+            [
+              "Support",
+              "Where questions arrive and who can answer product facts"
+            ],
+            [
+              "Reporting",
+              "Date range, referral names and the first review time"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "day-before",
+        "title": "Check the page as a backer would see it",
+        "paragraphs": [
+          "Use a phone and a desktop. Read the opening without zooming. Check the gameplay explanation, reward names, language choices, component counts and delivery information. Open the rulebook and video rather than assuming the thumbnail means they work.",
+          "Test the actual email delivered to your inbox, including links rewritten by the email platform. Check that your public project link has not been confused with a private preview link. Keep a copy of the approved page facts so last-minute edits can be checked against it."
+        ],
+        "list": [
+          "Verify each reward price and its contents.",
+          "Check any later shipping or tax explanation.",
+          "Open every download and external media link.",
+          "Confirm the launch time and timezone with the team.",
+          "Record the maximum approved ad spend.",
+          "Prepare a fallback message if publication is delayed."
+        ]
+      },
+      {
+        "id": "first-hour",
+        "title": "Use a short first-hour run sheet",
+        "paragraphs": [
+          "This is an illustrative sequence, not a promise that every campaign launches without interruption. The publication owner confirms the live project. A second person checks it from a normal visitor view. The email owner then checks the destination and sends the approved announcement. The advertising owner verifies the live destination before enabling the agreed traffic.",
+          "If a reward price or essential product claim is wrong, stop the affected promotion while the creator resolves it. Do not keep spending just because the launch calendar says the campaign is live."
+        ],
+        "table": {
+          "headers": [
+            "Point in the sequence",
+            "Evidence to keep"
+          ],
+          "rows": [
+            [
+              "Publication",
+              "Public campaign URL and confirmation"
+            ],
+            [
+              "Visitor check",
+              "Mobile page, reward details and working downloads"
+            ],
+            [
+              "Announcement",
+              "Sent email and correct destination"
+            ],
+            [
+              "Paid traffic",
+              "Active destination and approved budget"
+            ],
+            [
+              "First review",
+              "Spend, attributed pledges and recurring questions"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "gamefound",
+        "title": "Use Gamefound Tester Mode for a Gamefound launch",
+        "paragraphs": [
+          "Gamefound lets invited testers inspect different campaign phases and place test orders. Those orders do not send a payment to the payment operator. Use the tool to inspect options, quantities and order data, then leave Tester Mode before checking the public experience.",
+          "Include a base reward, an add-on, a language choice and representative shipping regions in your test plan. Check the resulting export where relevant. A passing test order demonstrates that test route; it does not prove real payment collection or a later payout."
+        ],
+        "source": 2
+      },
+      {
+        "id": "first-day",
+        "title": "Respond to what the first day reveals",
+        "paragraphs": [
+          "Collect repeated questions about gameplay, editions, shipping and timing. Correct unclear wording after the creator confirms the facts, and record what changed. Compare advertising results with the reward economics before approving more spend. Do not treat a large first-hour pledge total as proof that every part of the launch is working."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Kickstarter launch automatically at my target time?",
+        "answer": "No. Its current Help Center describes a manual launch process. Assign someone to publish and verify the public result."
+      },
+      {
+        "question": "Should ads start before I check the live campaign?",
+        "answer": "Verify the live destination and essential reward details first. The small delay is preferable to paying for traffic to a broken or incorrect offer."
+      },
+      {
+        "question": "Does a Gamefound test order charge a real payment?",
+        "answer": "No. Gamefound says Tester Mode saves the test order without sending it to the payment operator. Check real payment operation separately when appropriate."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Project review and launch timing",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236415-my-project-is-awaiting-review-how-does-this-work"
+      },
+      {
+        "label": "Launching an approved project",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236427-how-do-i-launch-my-project-after-it-s-been-approved"
+      },
+      {
+        "label": "Tester Mode",
+        "publisher": "Gamefound Knowledge Base",
+        "href": "https://help.gamefound.com/article/366-tester-mode"
+      }
+    ],
+    "relatedSlugs": [
+      "kickstarter-review-launch-timeline",
+      "board-game-kickstarter-page-checklist",
+      "gamefound-launch-page-checklist"
+    ],
+    "servicePath": "/kickstarter-launch-services",
+    "serviceLabel": "Plan your tabletop launch",
+    "published": "2026-10-28",
+    "updated": "2026-10-28"
+  },
+  {
+    "slug": "board-game-pledge-manager-checklist",
+    "title": "Choose a Pledge Manager for Your Board Game Campaign",
+    "description": "Compare pledge managers for a board game Kickstarter by upgrades, shipping, fees, order exports and support. Use a practical selection checklist.",
+    "tag": "Pledge management",
+    "answer": "Choose a pledge manager by the work your campaign needs after funding: collecting choices, upgrades, shipping details, applicable payments and reliable fulfillment data. Compare eligible systems against the same sample orders and total fee basis before committing.",
+    "sections": [
+      {
+        "id": "requirements",
+        "title": "Start with the orders you need to fulfill",
+        "paragraphs": [
+          "A campaign with one book and a PDF has different needs from a game with three languages, optional miniatures and regional warehouses. List the choices backers must make and the information the fulfillment partner needs. Then ask which system handles that work without fragile manual corrections.",
+          "Separate mandatory tasks from preferences. A polished survey matters, but a missing language code or inaccurate paid status can stop a shipment. Ask the fulfillment partner to review a sample export before selecting the tool."
+        ],
+        "table": {
+          "headers": [
+            "Requirement",
+            "Question to answer"
+          ],
+          "rows": [
+            [
+              "Choices",
+              "Which edition, language, size or other option must be recorded?"
+            ],
+            [
+              "Changes",
+              "Can backers upgrade or add items, and until when?"
+            ],
+            [
+              "Payments",
+              "Which money was already collected and which charges remain?"
+            ],
+            [
+              "Shipping",
+              "Which origins, destinations and rate rules must be supported?"
+            ],
+            [
+              "Data",
+              "Can the fulfillment team use the exported fields?"
+            ],
+            [
+              "Support",
+              "Who resolves an incomplete survey or unusual order?"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "native",
+        "title": "Include Kickstarter’s own Pledge Manager in the comparison",
+        "paragraphs": [
+          "Eligible Kickstarter projects can use its native Pledge Manager. The current help describes surveys, upgrades, optional new backers and later shipping or applicable tax collection. It becomes available after the campaign launches. Check eligibility before including it in your plan.",
+          "Kickstarter Late Pledges must end before its Pledge Manager launches. New buyers can still be allowed through the manager when configured. That transition should have a clear public message so someone does not follow an outdated instruction."
+        ],
+        "source": 0
+      },
+      {
+        "id": "stages",
+        "title": "Choose the right stage as well as the right tool",
+        "paragraphs": [
+          "Gamefound distinguishes its optional Late Pledge stage from Pledge Manager. Late Pledge can extend the offer before shipping collection; Pledge Manager handles shipping details and fees. If you move directly to its manager after crowdfunding, you cannot later open the earlier Late Pledge stage.",
+          "A permanent Shopify store has another purpose: retail orders and an ongoing catalogue. It may run alongside campaign fulfillment, but decide which system owns each order and how shared stock is allocated. Do not assume that opening a retail checkout transfers campaign obligations automatically."
+        ],
+        "source": 1
+      },
+      {
+        "id": "fees",
+        "title": "Compare the total cost on the same order scenario",
+        "paragraphs": [
+          "Ask each provider to price your expected workflow. A headline percentage means little until you know whether it applies to already raised funds, new money, shipping, taxes or another base. Include payment processing, recurring software, support and any migration or setup work.",
+          "Use a hypothetical comparison sheet with the same original pledges, expected upgrades and shipping collections in every column. Leave unknown charges blank and ask for confirmation. Do not insert another provider’s fee assumption just to make the totals look complete."
+        ],
+        "table": {
+          "headers": [
+            "Quote line",
+            "What to confirm"
+          ],
+          "rows": [
+            [
+              "Already raised funds",
+              "Whether an import or platform charge applies"
+            ],
+            [
+              "New payments",
+              "Which upgrades, late buyers or charges enter the fee base"
+            ],
+            [
+              "Payment processing",
+              "Percentage, fixed charge and currency treatment"
+            ],
+            [
+              "Refunds",
+              "Which charges are returned or retained"
+            ],
+            [
+              "Service period",
+              "Support, renewal and closure terms"
+            ],
+            [
+              "Exit",
+              "Export access and what happens after the agreement ends"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "test",
+        "title": "Run a small order test before inviting every backer",
+        "paragraphs": [
+          "Prepare sample cases that represent real fulfillment problems: a base game, deluxe upgrade, extra expansion, language change, new buyer, changed country and incomplete survey. Include a mixed physical/digital reward if you offer one. These are test cases, not live customer records.",
+          "For each case, compare the selected items with the exported identifiers and quantities. Check what is paid, what remains due and whether the address is ready for fulfillment. Send the test export to the person who will actually import it. A successful download does not prove that their system can use it."
+        ],
+        "list": [
+          "Confirm item and reward identifiers remain distinguishable.",
+          "Check options and quantities after an upgrade.",
+          "Verify shipping and payment states.",
+          "Test address changes before the relevant lock deadline.",
+          "Record the handling of unanswered surveys.",
+          "Keep the accepted export format with the handoff notes."
+        ]
+      },
+      {
+        "id": "handoff",
+        "title": "Give backers one clear next action",
+        "paragraphs": [
+          "Before opening the manager, agree who answers questions and what the message asks backers to do. Explain the choices, any remaining payments and the deadline using confirmed facts. Do not send several competing links for the same task.",
+          "Guildframe can help plan the campaign communications and explain the transition. Bring the chosen platform, order scenarios and fulfillment requirements so the message matches the actual workflow."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do I always need an external pledge manager after Kickstarter?",
+        "answer": "No. Check whether Kickstarter’s native Pledge Manager meets your project’s eligibility and requirements before choosing an external service."
+      },
+      {
+        "question": "Is Late Pledge the same as Pledge Manager?",
+        "answer": "No. The stages have different tasks and platform-specific rules. In particular, shipping collection and backer choices may belong in the manager rather than the earlier late-pledge stage."
+      },
+      {
+        "question": "What should I test before sending the manager to backers?",
+        "answer": "Test representative rewards, options, upgrades, destinations, payment states and the fulfillment export. Ask the person receiving the export to confirm that the fields work."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Using Kickstarter Pledge Manager",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager"
+      },
+      {
+        "label": "Launching Late Pledge and Pledge Manager",
+        "publisher": "Gamefound Knowledge Base",
+        "href": "https://help.gamefound.com/article/270-preparing-late-pledge-and-pledge-manager-for-launch"
+      },
+      {
+        "label": "Gamefound project types and lifecycle",
+        "publisher": "Gamefound Knowledge Base",
+        "href": "https://help.gamefound.com/article/285-getting-started-with-crowdfunding"
+      }
+    ],
+    "relatedSlugs": [
+      "backerkit-vs-shopify-vs-gamefound",
+      "kickstarter-late-pledges-vs-shopify",
+      "what-happens-after-kickstarter-is-funded"
+    ],
+    "servicePath": "/kickstarter-launch-services",
+    "serviceLabel": "Plan your tabletop launch",
+    "published": "2026-10-28",
+    "updated": "2026-10-28"
+  }
+];

@@ -124,7 +124,7 @@ export default function BestThemesGuide() {
       </p>
       <p>
         Theme prices and features can change. The prices below were verified on
-        July 21, 2026. Install a trial and test it with one real product before
+        October 28, 2026, in US dollars. Theme purchase prices exclude the Shopify subscription and paid apps. Install a trial and test it with one real product before
         purchasing. Shopify lets merchants preview and customize paid themes before
         publication.
       </p>
@@ -134,7 +134,7 @@ export default function BestThemesGuide() {
         caption="Shopify themes for board game and tabletop stores"
         headers={["Theme", "Current price", "Best for", "Main tradeoff"]}
         rows={[
-          ["Horizon", "Free", "New stores wanting layout flexibility", "A heavier structure than Dawn, and more to learn"],
+          ["Horizon", "Free", "New stores wanting layout flexibility", "Test navigation, product media and mobile speed with your own catalog"],
           ["Novaplay", "$250", "Larger game, collectible and hobby catalogs", "General retail structure still needs your tabletop story"],
           ["Playtime", "$380", "Trading cards, collectibles and playful stores", "Feature depth comes at a higher theme price"],
           ["Sunrise", "$240", "Bright, straightforward game stores", "A smaller built in feature set than newer premium options"],
@@ -147,7 +147,7 @@ export default function BestThemesGuide() {
 
       <h3>1. Horizon: best free starting point for a new store</h3>
       <p>
-        Horizon is Shopify&apos;s current default free theme for new stores. It
+        Horizon is a free Shopify theme with configurable product and content layouts. It
         uses deeply nested blocks, which lets you assemble complex layouts in
         the theme editor rather than in code. For a tabletop store that means
         edition comparisons and component blocks can be built without a
@@ -156,7 +156,7 @@ export default function BestThemesGuide() {
       <ul>
         <li><strong>Best for:</strong> new stores with no existing design that want layout flexibility</li>
         <li><strong>Strongest advantage:</strong> block depth and editor control at no cost</li>
-        <li><strong>Consider:</strong> a heavier structure than Dawn, with more files and more to learn</li>
+        <li><strong>Consider:</strong> test the layouts and editor with your own products before choosing</li>
       </ul>
 
       <h3>2. Novaplay: best for larger game and collectible catalogs</h3>

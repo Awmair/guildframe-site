@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: "/guides/sell-board-game-preorders-on-shopify",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-09-30",
+  modifiedTime: "2026-10-28",
   keywords: [
     "board game preorders Shopify",
     "sell board game preorders online",
@@ -49,7 +49,7 @@ export default function SellBoardGamePreordersOnShopifyPage() {
       description="Set up board game preorders on Shopify with clear payment timing, expected delivery and stock reserved for existing backers."
       answer="To sell board game preorders on Shopify, choose a compatible preorder app, confirm payment timing and reserve stock for backer rewards. Label each preorder near the price and purchase button. Test checkout, notifications, cancellation and refunds before taking orders."
       published="2026-07-17"
-      updated="2026-09-30"
+      updated="2026-10-28"
       readTime="8 minute read"
       faqs={faqs}
       sources={[

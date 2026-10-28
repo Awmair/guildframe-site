@@ -20,7 +20,7 @@ export default function GuildframeAuthorPage() {
         {
           "@type": "ProfilePage", "@id": absoluteUrl("/authors/guildframe"),
           url: absoluteUrl("/authors/guildframe"), name: "Umair at Guildframe",
-          dateCreated: "2026-07-16T19:00:00Z", dateModified: contentDates.authorGuildframe,
+          dateCreated: "2026-07-16T19:00:00Z", dateModified: `${contentDates.authorGuildframe}T00:00:00Z`,
           mainEntity: { "@id": authorId() }, isPartOf: { "@id": absoluteUrl("/#website") }, inLanguage: "en",
         },
         {
@@ -36,7 +36,7 @@ export default function GuildframeAuthorPage() {
       <section>
         <h2>What I work on</h2>
         <p>I run Guildframe. My work covers campaign planning, copy, graphics and paid advertising for board games, card games, RPGs, miniatures and accessories. Guildframe brings those into a launch scope with prelaunch and campaign support.</p>
-        <p>You can see ScentedRealms, FutureProof Terrain and Quiver Time in <Link href="/#past-work">my past campaign work</Link>. The guides explain the decisions behind a page: what to show first, how to explain the game and how to make rewards easier to compare.</p>
+        <p>You can see ScentedRealms, FutureProof Terrain and Quiver Time in <Link href="/work">my past campaign work</Link>. The guides explain the decisions behind a page: what to show first, how to explain the game and how to make rewards easier to compare.</p>
         <p><Link href="/kickstarter-launch-services">See Guildframe’s launch services</Link>. Send your game and launch plans to discuss the scope, or request a free opening mockup for campaign creative.</p>
       </section>
       <section>

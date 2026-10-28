@@ -1,3 +1,4 @@
+import {growthGuides} from "./launch-growth-guides";
 import {reviseLaunchGuide} from "./launch-guide-revisions";
 import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
@@ -6,6 +7,7 @@ export type LaunchSection={id:string;title:string;paragraphs:string[];list?:stri
 export type LaunchGuide={published?:string;updated?:string;slug:string;title:string;seoTitle?:string;relatedSlugs:string[];servicePath:string;serviceLabel:string;description:string;tag:string;answer:string;sections:LaunchSection[];faqs:{question:string;answer:string}[];sources:{label:string;publisher:string;href:string}[]};
 export const launchGuideDate="2026-09-30";
 const originalLaunchGuides:LaunchGuide[]=[
+  ...growthGuides,
   ...decisionGuides,
   ...marketingGuides,
   ...newLaunchGuides,

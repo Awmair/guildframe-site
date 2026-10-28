@@ -1,0 +1,303 @@
+{
+  "google-faq": {
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/faqpage",
+    "status": "200",
+    "chars": 389018,
+    "title": [
+      "Latest Google Search Documentation Updates | Google Search Central &nbsp;|&nbsp; What&apos;s new &nbsp;|&nbsp; Google for Developers"
+    ],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://developers.google.com/search/updates",
+    "verified_content": true
+  },
+  "google-ai-guide": {
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "status": "200",
+    "chars": 192672,
+    "title": [
+      "Google&apos;s Guide to Optimizing for Generative AI Features on Google Search | Google Search Central &nbsp;|&nbsp; Documentation &nbsp;|&nbsp; Google for Developers"
+    ],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "verified_content": true
+  },
+  "bing-ai": {
+    "url": "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview",
+    "status": "200",
+    "chars": 52144,
+    "title": [
+      "Introducing AI Performance in Bing Webmaster Tools Public Preview |..."
+    ],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+    "verified_content": true
+  },
+  "kickstarter-fees": {
+    "url": "https://www.kickstarter.com/help/fees",
+    "status": "403",
+    "chars": 5404,
+    "title": [
+      "Just a moment..."
+    ],
+    "review_date": "2026-10-28",
+    "verified_content": false
+  },
+  "kickstarter-prelaunch": {
+    "url": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page",
+    "status": "200",
+    "chars": 90124,
+    "title": [],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page",
+    "verified_content": true
+  },
+  "kickstarter-referrals": {
+    "url": "https://help.kickstarter.com/en-us/articles/16236548-how-do-i-create-a-custom-referral-tag-and-track-referral-stats",
+    "status": "200",
+    "chars": 85535,
+    "title": [],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236548-how-do-i-create-a-custom-referral-tag-and-track-referral-stats",
+    "verified_content": true
+  },
+  "kickstarter-rewards": {
+    "url": "https://help.kickstarter.com/en-us/articles/16236688-how-do-i-add-rewards-to-my-project",
+    "status": "200",
+    "chars": 107580,
+    "title": [],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236688-how-do-i-add-rewards-to-my-project",
+    "verified_content": true
+  },
+  "kickstarter-shipping": {
+    "url": "https://help.kickstarter.com/en-us/articles/16236769-what-options-do-i-have-for-charging-shipping-costs",
+    "status": "200",
+    "chars": 86920,
+    "title": [],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236769-what-options-do-i-have-for-charging-shipping-costs",
+    "verified_content": true
+  },
+  "gamefound-start": {
+    "url": "https://help.gamefound.com/article/285-getting-started-with-crowdfunding",
+    "status": "200",
+    "chars": 35832,
+    "title": [
+      "Getting started with crowdfunding - Gamefound Knowledge Base"
+    ],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.gamefound.com/article/285-getting-started-with-crowdfunding",
+    "verified_content": true
+  },
+  "gamefound-rewards": {
+    "url": "https://help.gamefound.com/article/127-creating-rewards-in-crowdfunding",
+    "status": "200",
+    "chars": 24378,
+    "title": [
+      "Creating rewards - Gamefound Knowledge Base"
+    ],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.gamefound.com/article/127-creating-rewards-in-crowdfunding",
+    "verified_content": true
+  },
+  "gamefound-tester": {
+    "url": "https://help.gamefound.com/article/366-tester-mode",
+    "status": "200",
+    "chars": 18868,
+    "title": [
+      "Tester Mode - Gamefound Knowledge Base"
+    ],
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.gamefound.com/article/366-tester-mode",
+    "verified_content": true
+  },
+  "eu-duty": {
+    "url": "https://trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments",
+    "status": "200",
+    "chars": 84473,
+    "title": [
+      "EU applies \u20ac3 customs duty per item on low-value e-commerce consignments | Access2Markets "
+    ],
+    "review_date": "2026-10-28",
+    "verified_content": true
+  },
+  "shopify-pricing": {
+    "url": "https://www.shopify.com/pricing",
+    "status": "200",
+    "chars": 1061814,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://www.shopify.com/pricing",
+    "verified_content": true
+  },
+  "etsy-fees": {
+    "url": "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+    "status": "200",
+    "chars": 61164,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy",
+    "verified_content": true
+  },
+  "kickstarter-late-setup": {
+    "url": "https://help.kickstarter.com/hc/en-us/articles/24875583879067-How-do-I-add-Late-Pledges-to-my-project",
+    "status": "200",
+    "chars": 83254,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236699-how-do-i-add-late-pledges-to-my-project",
+    "verified_content": true
+  },
+  "kickstarter-late-faq": {
+    "url": "https://help.kickstarter.com/hc/en-us/articles/24875599658779-Late-Pledges-Common-Questions",
+    "status": "200",
+    "chars": 96004,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236542-late-pledges-common-questions",
+    "verified_content": true
+  },
+  "shopify-preorders": {
+    "url": "https://help.shopify.com/en/manual/products/purchase-options",
+    "status": "403",
+    "chars": 8763,
+    "review_date": "2026-10-28",
+    "verified_content": false
+  },
+  "theme-horizon": {
+    "url": "https://themes.shopify.com/themes/horizon/presets/horizon",
+    "status": "200",
+    "chars": 187578,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://themes.shopify.com/themes/horizon/presets/horizon",
+    "verified_content": true
+  },
+  "theme-novaplay": {
+    "url": "https://themes.shopify.com/themes/tokyo/presets/novaplay",
+    "status": "200",
+    "chars": 216845,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://themes.shopify.com/themes/tokyo/presets/novaplay",
+    "verified_content": true
+  },
+  "theme-playtime": {
+    "url": "https://themes.shopify.com/themes/ignite/presets/playtime",
+    "status": "200",
+    "chars": 226047,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://themes.shopify.com/themes/ignite/presets/playtime",
+    "verified_content": true
+  },
+  "theme-sunrise": {
+    "url": "https://themes.shopify.com/themes/sunrise/presets/sunrise",
+    "status": "200",
+    "chars": 195419,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://themes.shopify.com/themes/sunrise/presets/sunrise",
+    "verified_content": true
+  },
+  "theme-boost": {
+    "url": "https://themes.shopify.com/themes/boost/presets/boost",
+    "status": "200",
+    "chars": 213630,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://themes.shopify.com/themes/boost/presets/boost",
+    "verified_content": true
+  },
+  "theme-dawn": {
+    "url": "https://themes.shopify.com/themes/dawn/presets/dawn",
+    "status": "200",
+    "chars": 182303,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://themes.shopify.com/themes/dawn/presets/dawn",
+    "verified_content": true
+  },
+  "kickstarter-pledge-manager": {
+    "url": "https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager",
+    "status": "200",
+    "chars": 132320,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager",
+    "verified_content": true
+  },
+  "kickstarter-promotion": {
+    "url": "https://help.kickstarter.com/en-us/articles/16236407-when-and-how-should-i-start-planning-my-promotion-strategy",
+    "status": "200",
+    "chars": 82981,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236407-when-and-how-should-i-start-planning-my-promotion-strategy",
+    "verified_content": true
+  },
+  "kickstarter-review": {
+    "url": "https://help.kickstarter.com/en-us/articles/16236415-my-project-is-awaiting-review-how-does-this-work",
+    "status": "200",
+    "chars": 81631,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236415-my-project-is-awaiting-review-how-does-this-work",
+    "verified_content": true
+  },
+  "kickstarter-launch": {
+    "url": "https://help.kickstarter.com/en-us/articles/16236427-how-do-i-launch-my-project-after-it-s-been-approved",
+    "status": "200",
+    "chars": 81609,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236427-how-do-i-launch-my-project-after-it-s-been-approved",
+    "verified_content": true
+  },
+  "gamefound-fees": {
+    "url": "https://help.gamefound.com/article/284-fees-for-projects-funded-on-gamefound",
+    "status": "200",
+    "chars": 16959,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.gamefound.com/article/284-fees-for-projects-funded-on-gamefound",
+    "verified_content": true
+  },
+  "gamefound-pledge-manager": {
+    "url": "https://help.gamefound.com/article/270-preparing-late-pledge-and-pledge-manager-for-launch",
+    "status": "200",
+    "chars": 18369,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.gamefound.com/article/270-preparing-late-pledge-and-pledge-manager-for-launch",
+    "verified_content": true
+  },
+  "google-utm": {
+    "url": "https://support.google.com/analytics/answer/10917952",
+    "status": "200",
+    "chars": 1657652,
+    "review_date": "2026-10-28",
+    "verified_content": true
+  },
+  "ftc-reviews": {
+    "url": "https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews",
+    "status": "403",
+    "chars": 450,
+    "review_date": "2026-10-28",
+    "verified_content": false
+  },
+  "kickstarter-help-search": {
+    "url": "https://help.kickstarter.com/en-us/?q=funding%20goal",
+    "status": "200",
+    "chars": 82777,
+    "review_date": "2026-10-28",
+    "verified_content": true
+  },
+  "kickstarter-funding": {
+    "url": "https://help.kickstarter.com/en-us/articles/16236709-how-to-set-the-right-funding-goal-for-your-kickstarter-campaign",
+    "status": "200",
+    "chars": 99252,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://help.kickstarter.com/en-us/articles/16236709-how-to-set-the-right-funding-goal-for-your-kickstarter-campaign",
+    "verified_content": true
+  },
+  "gamefound-fees-main": {
+    "url": "https://gamefound.com/info/fees",
+    "status": "403",
+    "chars": 5377,
+    "review_date": "2026-10-28",
+    "verified_content": false
+  },
+  "google-ai-features": {
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "status": "200",
+    "chars": 179973,
+    "review_date": "2026-10-28",
+    "canonical_url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "verified_content": true
+  }
+}

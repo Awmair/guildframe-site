@@ -5,6 +5,13 @@ import test from "node:test";
 const outputRoot = new URL("../out/", import.meta.url);
 
 const pages = [
+  ["/guides/board-game-kickstarter-funding-goal", "How to Set a Kickstarter Funding Goal for a Board Game | Guildframe", "How to Set a Kickstarter Funding Goal for a Board Game"],
+  ["/guides/board-game-kickstarter-reward-pricing", "How to Price Kickstarter Rewards for a Board Game | Guildframe", "How to Price Kickstarter Rewards for a Board Game"],
+  ["/guides/kickstarter-referral-tags-tracking", "Track Kickstarter Marketing with Referral Tags and UTMs | Guildframe", "Track Kickstarter Marketing with Referral Tags and UTMs"],
+  ["/guides/board-game-reviewer-outreach", "Plan Board Game Reviewer Previews Before Kickstarter | Guildframe", "Plan Board Game Reviewer Previews Before Kickstarter"],
+  ["/guides/board-game-kickstarter-launch-day-checklist", "A Kickstarter Launch-Day Checklist for Board Games | Guildframe", "A Kickstarter Launch-Day Checklist for Board Games"],
+  ["/guides/board-game-pledge-manager-checklist", "Choose a Pledge Manager for Your Board Game Campaign | Guildframe", "Choose a Pledge Manager for Your Board Game Campaign"],
+
   ["/work", "Tabletop Kickstarter Campaign Design Case Studies | Guildframe", "Tabletop campaigns"],
   ["/work/scented-realms", "ScentedRealms Kickstarter Campaign Design Case Study | Guildframe", "ScentedRealms: campaign design"],
   ["/work/futureproof-terrain", "FutureProof Terrain Kickstarter Campaign Design Case Study | Guildframe", "FutureProof Terrain: campaign design"],
@@ -311,7 +318,7 @@ test("exports AEO and social metadata", async () => {
   );
   assert.match(
     await readPage("/authors/guildframe"),
-    /"dateModified":"2026-10-03"/i,
+    /"dateModified":"2026-10-28T00:00:00Z"/i,
   );
   assert.match(await readPage("/resources"), /"@type":"CollectionPage"/i);
 
@@ -548,6 +555,8 @@ for (const [path] of pages) {
   if ((path.startsWith("/guides/") && !afterFundingPaths.has(path)) || path.startsWith("/work/") || ["/guides/best-shopify-themes-for-board-games", "/resources/kickstarter-tabletop-games-benchmark"].includes(path)) datedPages.set(path, "2026-10-17");
 }
 
+for (const [path] of pages) { if (path.startsWith("/guides/") || path === "/authors/guildframe") datedPages.set(path, "2026-10-28"); }
+
 test("keeps visible review dates, schema dates and sitemap dates identical", async (t) => {
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
   const contentDates = await readFile(new URL("../app/content-dates.ts", import.meta.url), "utf8");
@@ -565,7 +574,7 @@ test("keeps visible review dates, schema dates and sitemap dates identical", asy
         new RegExp(`<time datetime="${expected}">(?!${readableDate(expected)})`, "i"),
         `visible review date must not be hardcoded away from ${expected}`,
       );
-      assert.match(html, new RegExp(`"dateModified":"${expected}"`), `schema dateModified must be ${expected}`);
+      assert.match(html, new RegExp(`"dateModified":"${expected}${path === "/authors/guildframe" ? "T00:00:00Z" : ""}"`), `schema dateModified must be ${expected}`);
 
       const entry = sitemap.match(
         new RegExp(`<loc>http://localhost:3000${path}</loc>\\s*<lastmod>([^<]+)</lastmod>`),
@@ -621,7 +630,7 @@ test("keeps comparison tables, campaign pages and answers connected",async()=>{
 test("connects the high intent launch pages to the service",async()=>{
  const guideIndex=await readPage("/guides");
  const launchPaths=pages.filter(([p])=>p.startsWith("/guides/")&&!afterFundingPaths.has(p));
- assert.equal(launchPaths.length,24);
+ assert.equal(launchPaths.length,30);
  for(const [path] of launchPaths){assert.ok(guideIndex.includes(`href="${path}"`),path);const html=await readPage(path);assert.match(html,/href="\/campaign-design"/);assert.match(html,/"@type":"FAQPage"/);}
  for(const slug of ["board-game-kickstarter-campaign-design","card-game-kickstarter-campaign-design","ttrpg-kickstarter-campaign-design","miniatures-kickstarter-campaign-design","tabletop-accessories-campaign-design"]){assert.ok((await readPage("/")).includes(`href="/${slug}"`),slug);}
 });
@@ -837,4 +846,21 @@ test("uses worked examples and connects established traffic pages to launch help
   for (const path of ["/guides/best-shopify-themes-for-board-games", "/resources/kickstarter-tabletop-games-benchmark"]) {
     assert.match(await readPage(path), /href=\"\/kickstarter-launch-services\"/);
   }
+});
+
+test("publishes a timezone-qualified profile date and usable guide worksheets", async()=>{
+ const author=await readPage('/authors/guildframe');
+ const graphs=[...author.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>{const j=JSON.parse(m[1]);return j['@graph']??[j];});
+ const profile=graphs.find(e=>e['@type']==='ProfilePage');
+ assert.match(profile.dateModified,/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$/);
+ for(const [path] of pages.filter(([p])=>p.startsWith('/guides/'))){
+  const html=await readPage(path),slug=path.split('/').pop();
+  assert.match(html,/id="put-it-to-work"/);
+  assert.ok(html.includes(`/downloads/guides/${slug}.md`));
+  const worksheet=await readFile(new URL(`downloads/guides/${slug}.md`,outputRoot),'utf8');
+  assert.ok(worksheet.includes('https://guildframe.com'+path));
+  assert.ok(worksheet.includes('Evidence and source links:'));
+ }
+ const funding=await readPage('/guides/board-game-kickstarter-funding-goal');
+ assert.match(funding,/33,696/);assert.match(funding,/hypothetical example/);
 });

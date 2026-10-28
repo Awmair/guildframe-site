@@ -223,6 +223,7 @@ export default function LatePledgesVsShopifyGuide() {
       <p>
         You may use a campaign, a late pledge window, pledge management and a permanent store at different stages. Keep the order types and responsibilities clear as you move between them.
       </p>
+<h2 id="native-pledge-manager">Moving from Late Pledges to Kickstarter Pledge Manager</h2><p>Kickstarter&apos;s Pledge Manager is a separate next stage for eligible projects. End Late Pledges before launching it. You can configure the manager to accept new backers while collecting the choices, shipping details and applicable payments needed for fulfilment. Check eligibility and settings before announcing the transition.</p><p>Source: <a href="https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager">Kickstarter Pledge Manager help</a>. Use the <Link href="/guides/board-game-pledge-manager-checklist">pledge manager requirements checklist</Link> to test the handoff.</p>
     </SeoArticlePage>
   );
 }

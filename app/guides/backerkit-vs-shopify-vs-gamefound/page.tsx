@@ -213,6 +213,7 @@ export default function BackerkitShopifyGamefoundGuide() {
       <ArticleCallout>
         Choose which system will handle each stage. Then check how orders, addresses and fulfilment information move between them.
       </ArticleCallout>
+<h2 id="native-platform-stages">Check the native options and the project stage</h2><p>An eligible Kickstarter project may also use Kickstarter&apos;s own Pledge Manager. Compare that route before choosing an external system. Gamefound distinguishes Late Pledge from Pledge Manager: Late Pledge does not collect shipping details or shipping fees, while Pledge Manager handles that stage and can allow new buyers.</p><p>Test the route your project will actually use. The <Link href="/guides/board-game-pledge-manager-checklist">requirements checklist</Link> covers rewards, shipping, payments and exports. Sources: <a href="https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager">Kickstarter Pledge Manager</a> and <a href="https://help.gamefound.com/article/285-getting-started-with-crowdfunding">Gamefound project stages</a>.</p>
     </SeoArticlePage>
   );
 }

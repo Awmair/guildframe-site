@@ -172,6 +172,7 @@ export default function ShopifyVsEtsyMiniaturesPage() {
         Use the <Link href="/resources/board-game-shopify-store-checklist">Shopify store checklist</Link>
         before directing customers to the new store.
       </p>
+<h2 id="fee-basis">Compare fees using the full order</h2><p>Etsy&apos;s transaction fee applies to its stated order basis, including charged shipping and gift wrapping. Payment processing, applicable advertising charges and other fees are separate. Calculate a representative order using the <a href="https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy">current official fee guidance</a>; the transaction percentage alone is not the total selling cost.</p>
     </SeoArticlePage>
   );
 }
