@@ -46,7 +46,7 @@ function table(s, row, headers, data, widths) {
   if (data.length) { const t=w.tables.add(`A${row}:${end}${row+data.length}`,true, s.replace(/ /g,'')+'Records'+row); t.showFilterButton=true; }
 }
 
-heading('Start', 'GUILDFRAME  Tabletop launch planner', 'WORKED EXAMPLE  All project details, quotes, costs and results are fictional. Save a copy, replace blue inputs and retain formulas. Amounts use the campaign currency.', 'H', 48);
+heading('Start', 'GUILDFRAME  Tabletop Campaign Launch Kit', 'WORKED EXAMPLE  All project details, quotes, costs and results are fictional. Save a copy, replace blue inputs and retain formulas. Amounts use the campaign currency.', 'H', 48);
 const start = [
  ['Project','Harbor Council','Replace with your project'],
  ['Product type','Board game','Physical and digital tiers can coexist'],
@@ -57,8 +57,8 @@ const start = [
  ['Failed payments',null,'Expected uncollected share; estimate, not a benchmark'],
  ['Contingency',null,'Applied to fixed, manufacturing, other and postage costs'],
  ['Opening project cash',2000,'Cash committed and available to this project'],
- ['Platform rate',0.05,'US default; verify country and current fees'],
- ['Processor rate',0.03,'US standard pledge default'],
+ ['Platform rate',0.05,'Kickstarter US example; replace for chosen platform'],
+ ['Processor rate',0.03,'Kickstarter US standard pledge example'],
  ['Processor fixed fee',0.30,'Per collected pledge, not per item'],
  ['Micropledge threshold',10,'US pledges under this amount use the next two rates'],
  ['Micropledge rate',0.05,'US processing on pledges below threshold'],
@@ -70,7 +70,7 @@ const start = [
  ['Refund reserve',0,'Additional cash reserve; do not also deduct as failed payments'],
  ['Cash payout lag days',14,'Planning assumption; confirm actual payment timing'],
  ['Currency','USD','All monetary inputs must use this same currency'],
- ['Country','United States','Fee defaults below apply only to US campaigns'],
+ ['Country','United States','Fee defaults apply only to Kickstarter US campaigns'],
  ['Bank and identity verified','No','Unresolved launch prerequisite'],
  ['Shipping quotes confirmed','No','Demo shipping is illustrative, not a carrier quote'],
  ['Production quote confirmed','No','Demo costs are illustrative, not a manufacturer quote'],
@@ -96,9 +96,9 @@ for(const a of ['B14:B15','B18','B21','E11:G12'])sheets.Start.getRange(a).dataVa
 sheets.Start.getRange('E10:G10').dataValidation={rule:{type:'whole',operator:'between',formula1:0,formula2:10000000}};
 put('Start','D16','INPUT LEGEND'); put('Start','D17','Blue fill / blue text'); put('Start','E17','Replace these inputs');
 put('Start','D18','Black formulas'); put('Start','E18','Same tab calculation'); put('Start','D19','Green formulas'); put('Start','E19','Linked from another tab');
-sheets.Start.getRange('D21:H23').merge();put('Start','D21','US fees checked 29 Oct 2026: kickstarter.com/help/fees?country=US. All other demo costs are invented planning examples. See Examples and Sources PDF for first party links.');sheets.Start.getRange('D21:H23').format.wrapText=true;
+sheets.Start.getRange('D21:H23').merge();put('Start','D21','Rates use a Kickstarter US example checked 29 Oct 2026. For Gamefound, replace fees, the small pledge threshold, payout timing and later collection terms. Confirm the actual project setup. See Examples and Sources for both platforms.');sheets.Start.getRange('D21:H23').format.wrapText=true;
 sheets.Start.getRange('D25:H28').merge();put('Start','D25','First session: enter costs and a confirmed manufacturing MOQ. Replace reward prices and mix. Set shipping timing and zones. Read Funding, then Cash. If either shows a shortfall, revise before choosing a public goal.');sheets.Start.getRange('D25:H28').format.wrapText=true;
-sheets.Start.getRange('A37:H39').merge();put('Start','A37','This model plans one manufactured product SKU used by the physical tiers, plus digital rewards. Cost additional SKUs separately before setting a goal. Demand uses all pledged backers conservatively, while cash deducts expected failed payments. No future sales of remaining inventory are counted as cash.');sheets.Start.getRange('A37:H39').format.wrapText=true;
+sheets.Start.getRange('A37:H39').merge();put('Start','A37','This model plans one manufactured product SKU used by the physical tiers, plus digital rewards. Cost additional SKUs separately before setting a goal. Demand uses all pledged backers conservatively, while cash deducts expected failed payments. No future sales of remaining inventory are counted as cash. Fees assume one collected transaction per pledge. Installments or multiple charges need an expanded fee and cash schedule.');sheets.Start.getRange('A37:H39').format.wrapText=true;
 
 heading('Costs','Costs and supplier assumptions','Replace the demo with dated quotes. Unit cost below must include inbound freight and duties. Do not add those again if your quote already includes them.','H',35);
 sheets.Costs.getRange('A7:C13').values=[['Manufactured SKU','HC-BASE','One physical product shared by the physical tiers'],['Landed cost per unit',14,'Factory price plus inbound freight and duties'],['Minimum order quantity',500,'Supplier minimum'],['Order increment',1,'Supplier quantity step; must be at least 1'],['Spare units',0,'Units held for replacements'],['Quote date',new Date('2026-10-29T00:00:00Z'),'Fictional example date'],['Quote expiry',new Date('2026-11-29T00:00:00Z'),'Replace with supplier terms']];
@@ -256,15 +256,15 @@ for(let r=8;r<=10;r++){formula('Ad tests',`J${r}`,`=IF(F${r}>0,G${r}/F${r},"n.a.
 sheets['Ad tests'].getRange('J8:J10').setNumberFormat('0.0%');sheets['Ad tests'].getRange('K8:L10').setNumberFormat(money);
 table('Ad tests',14,['Test planning field','Your input','Example'],[['Observation period','Enter start and stop dates','Seven days or chosen fixed sample'],['Qualified action definition','Enter meaningful observed action','Rules download plus reply, or test session booked'],['Decision rule','Set before running test','Stop at cap. Compare relevant actions and replies'],['Next change','Change one main variable','Same audience, new gameplay hook']],[32,49,65]);input('Ad tests','B15:B18');
 
-heading('Sources','Marketing source registry','Create unique Kickstarter referral tags in Promotions and paste the resulting links. Record own site UTMs separately. Attribution is platform reported, not proof of causal or cross device tracking.','J',26);
+heading('Sources','Marketing source registry','Use Kickstarter generated referral tags for Kickstarter. On Gamefound, use its available campaign reporting and links. Keep own site UTMs separate. Platform attribution does not prove causal or cross device tracking.','J',26);
 table('Sources',7,['Source ID','Channel and placement','Destination URL or tag','Date live','Spend','Visits','Opt ins','Pledges','Collected amount','Evidence and period'],[
- ['S01','Email launch broadcast','Paste Kickstarter generated referral URL','Not live',0,0,0,0,0,'Record dashboard export and date range'],
+ ['S01','Email launch broadcast','Paste chosen platform campaign tracking URL','Not live',0,0,0,0,0,'Record dashboard export and date range'],
  ['S02','Reviewer video','Paste unique link agreed with reviewer','Not live',0,0,0,0,0,'Record paid or free and publication permission'],
  ['S03','Prelaunch landing page ad','Paste own site UTM URL','Not live',0,0,0,0,0,'Do not combine unrelated reporting windows'],
  ['S04','Unknown or unattributed','Record unattributed platform totals','Not live',0,0,0,0,0,'Keep unknown visible; do not invent a source'],
 ],[15,38,65,21,16,15,15,15,23,60]);input('Sources','A8:J11');
 put('Sources','A15','Primary references');
-const refs=[['Fees','https://www.kickstarter.com/help/fees?country=US'],['Funding and goals','https://www.kickstarter.com/help/handbook/funding'],['Platform rules','https://www.kickstarter.com/rules'],['Marketing tools','https://updates.kickstarter.com/new-tools-to-help-creators-market-their-projects/'],['Pledge manager','https://start.kickstarter.com/pledge-manager-release-notes'],['Terms and data','https://legal.kickstarter.com/']];
+const refs=[['Fees','https://www.kickstarter.com/help/fees?country=US'],['Funding and goals','https://www.kickstarter.com/help/handbook/funding'],['Platform rules','https://www.kickstarter.com/rules'],['Marketing tools','https://updates.kickstarter.com/new-tools-to-help-creators-market-their-projects/'],['Pledge manager','https://start.kickstarter.com/pledge-manager-release-notes'],['Terms and data','https://legal.kickstarter.com/'],['Gamefound fees','https://help.gamefound.com/article/284-fees-for-projects-funded-on-gamefound'],['Gamefound stages','https://help.gamefound.com/article/285-getting-started-with-crowdfunding'],['Gamefound testing','https://help.gamefound.com/article/366-tester-mode'],['Closing rules','https://help.gamefound.com/article/434-endgame'],['Gamefound fees','https://help.gamefound.com/article/284-fees-for-projects-funded-on-gamefound'],['Gamefound stages','https://help.gamefound.com/article/285-getting-started-with-crowdfunding'],['Gamefound testing','https://help.gamefound.com/article/366-tester-mode'],['Closing rules','https://help.gamefound.com/article/434-endgame']];
 for(let i=0;i<refs.length;i++){put('Sources',`A${17+i}`,refs[i][0]);sheets.Sources.getRange(`B${17+i}:F${17+i}`).merge();put('Sources',`B${17+i}`,refs[i][1]);}
 
 heading('Reviewers','Reviewer outreach and prototype log','Use relevant public business contacts and each outlet policy. Obtain permission for quote reuse. A prototype or paid feature does not promise favorable coverage.','J',22);
@@ -334,6 +334,6 @@ await fs.writeFile(path.join(qa,'workbook-funding-inspect.txt'),inspection.ndjso
 await fs.writeFile(path.join(qa,'workbook-tests.json'),JSON.stringify({tests,baseSurplus:base,formulaScan:errors.ndjson},null,2));
 const xlsx=await SpreadsheetFile.exportXlsx(wb);await xlsx.save(path.join(out,'Tabletop-Launch-Planner.xlsx'));
 try{await fs.rename(path.join(out,'Tabletop-Launch-Planner.xlsx.inspect.ndjson'),path.join(qa,'export-inspect.ndjson'));}catch{}
-const lastRows={'Start':39,'Funding':44,'Rewards':21,'Costs':28,'Shipping':22,'Cash':27,'Launch plan':27,'Ad tests':18,'Sources':22,'Reviewers':9,'Live ops':19,'Production':19};
+const lastRows={'Start':39,'Funding':44,'Rewards':21,'Costs':28,'Shipping':22,'Cash':27,'Launch plan':27,'Ad tests':18,'Sources':26,'Reviewers':9,'Live ops':19,'Production':19};
 for(const n of names){const end=n==='Rewards'?'M':n==='Funding'||n==='Shipping'||n==='Sources'||n==='Reviewers'?'J':n==='Ad tests'?'M':n==='Launch plan'||n==='Production'?'I':'H';try{const blob=await wb.render({sheetName:n,range:`A1:${end}${lastRows[n]}`,scale:1.3,format:'png'});await fs.writeFile(path.join(qa,`sheet-${n.replace(/ /g,'-')}.png`),new Uint8Array(await blob.arrayBuffer()));}catch(e){await fs.writeFile(path.join(qa,`render-${n.replace(/ /g,'-')}.txt`),String(e));}}
 console.log(JSON.stringify({output:path.join(out,'Tabletop-Launch-Planner.xlsx'),sheets:names.length,tests:tests.length,baseSurplus:base,formulaScan:errors.ndjson}));

@@ -22,7 +22,7 @@ NAMES = [
     'Examples-and-Sources.pdf',
 ]
 NS = {'s': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
-manifest = {'version': '1.0', 'created': '2026-10-29', 'files': []}
+manifest = {'version': '1.1', 'created': '2026-10-29', 'files': []}
 checks = {}
 
 for name in NAMES:
@@ -32,10 +32,23 @@ for name in NAMES:
     manifest['files'].append({'name': name, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
     if path.suffix == '.pdf':
         reader = PdfReader(path)
-        count = 4 if name == 'START-HERE.pdf' else 7
+        count = 4 if name == 'START-HERE.pdf' else 8
         assert len(reader.pages) == count
         assert all(len(page.extract_text() or '') > 200 for page in reader.pages)
-        checks[name] = {'pages': count, 'textOnEveryPage': True}
+        embedded_fonts = set()
+        for page in reader.pages:
+            current_font = None
+            used_fonts = set()
+            for operands, operator in page.get_contents().operations:
+                if operator == b'Tf':current_font = operands[0]
+                elif operator in (b'Tj', b'TJ', b"'", b'"') and operands:
+                    used_fonts.add(current_font)
+            for font_key in used_fonts:
+                font = page['/Resources']['/Font'][font_key].get_object()
+                descriptor = font.get('/FontDescriptor')
+                assert descriptor and any(x in descriptor.get_object() for x in ('/FontFile', '/FontFile2', '/FontFile3')), f'Unembedded text font: {name} {font_key}'
+                embedded_fonts.add(str(font['/BaseFont']).split('+')[-1])
+        checks[name] = {'pages': count, 'textOnEveryPage': True, 'embeddedTextFonts': sorted(embedded_fonts)}
     else:
         with zipfile.ZipFile(path) as z:
             assert z.testzip() is None

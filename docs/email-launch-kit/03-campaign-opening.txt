@@ -1,5 +1,7 @@
 What is missing from your campaign opening?
 
+Tabletop Campaign Launch Kit
+
 Check what the first screen explains.
 
 Open your campaign draft on a phone. Can a new visitor identify the game, understand what players do and see what they would receive?
@@ -14,7 +16,7 @@ https://guildframe.com/downloads/launch-kit/Campaign-and-Email-Templates.docx
 Umair
 Guildframe
 
-You chose Guildframe's lessons, newsletter and service offers.
+You signed up for the Tabletop Campaign Launch Kit and updates: six launch lessons, a monthly newsletter with tabletop tips and occasional Guildframe service offers.
 Guildframe
 {{ account.address }}
 {{ account.city }} {{ account.zip_code }}

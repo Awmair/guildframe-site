@@ -88,24 +88,24 @@ function PromptOnPage() {
   return <>
     {invite && <aside className="gf-kit-prompt-invite" aria-labelledby="kit-invite-title">
       <img src="/downloads/launch-kit/preview-start-here.webp" width="993" height="1404" alt="" loading="lazy"/>
-      <div><span>FREE · 5 working files</span><h2 id="kit-invite-title">Your tabletop launch kit.</h2><button type="button" onClick={openPrompt}>Get the free kit</button></div>
+      <div><span>FREE · 5 working files</span><h2 id="kit-invite-title">Your campaign launch kit.</h2><button type="button" onClick={openPrompt}>Get the free kit</button></div>
       <button type="button" className="gf-kit-invite-dismiss" aria-label="Dismiss free kit invitation" onClick={() => setInvite(false)}>×</button>
     </aside>}
     <dialog ref={dialog} className="gf-kit-prompt-dialog" aria-labelledby="kit-prompt-title" aria-describedby="kit-prompt-description" onClose={finishClose} onCancel={event => { event.preventDefault(); closePrompt(); }}>
       <div className="gf-kit-prompt-closebar"><button ref={closeButton} className="gf-kit-prompt-close" type="button" aria-label="Close free kit" onClick={closePrompt}>×</button></div>
       <div className="gf-kit-prompt-grid">
         <section className="gf-kit-prompt-value">
-          <span className="gf-kit-prompt-free">FREE TABLETOP LAUNCH KIT</span>
+          <span className="gf-kit-prompt-free">FREE TABLETOP CAMPAIGN LAUNCH KIT</span>
           <h2 id="kit-prompt-title">Five useful files.<br/>One clearer launch plan.</h2>
-          <p id="kit-prompt-description">Plan the numbers, write the campaign and brief the creative. Get the complete editable kit by email.</p>
+          <p id="kit-prompt-description">Plan the numbers, write the campaign and brief the creative for your board game, card game, TTRPG, miniatures or terrain project.</p>
           <div className="gf-kit-prompt-contents"><figure className="gf-kit-prompt-preview"><img src="/downloads/launch-kit/preview-start-here.webp" width="993" height="1404" alt="Actual first page of the launch kit start guide" loading="lazy"/><figcaption>Actual file preview</figcaption></figure>
           <ul>{launchKit.files.map(file => <li key={file.name}><span>{file.format}</span><strong>{file.format === "XLSX" ? "12 tab launch workbook" : file.title}</strong></li>)}</ul></div>
           <Link href={launchKit.path}>See all the kit details</Link>
         </section>
         <section className="gf-kit-prompt-signup" aria-labelledby="kit-prompt-signup-title">
-          <h3 id="kit-prompt-signup-title">Get the free kit.</h3><p>Enter your email, then confirm it to receive all five files.</p>
-          {opened && formUrl ? <iframe src={formUrl} title="Request your free tabletop launch kit" className="gf-kit-prompt-frame" referrerPolicy="strict-origin-when-cross-origin"/> : null}
-          <p className="gf-kit-prompt-permission">The marketing box is optional. Choose it only if you also want six follow up lessons, a monthly newsletter and occasional Guildframe offers. <Link href="/privacy">Privacy notice</Link>.</p>
+          <h3 id="kit-prompt-signup-title">Get the kit and updates.</h3><p>{launchKit.signupCopy}</p>
+          {opened && formUrl ? <iframe src={formUrl} title={`Sign up for the ${launchKit.title} and updates`} className="gf-kit-prompt-frame" referrerPolicy="strict-origin-when-cross-origin"/> : null}
+          <p className="gf-kit-prompt-permission">Confirm your email to receive the kit and start the emails. Unsubscribe at any time. <Link href="/privacy">Privacy notice</Link>.</p>
           {formUrl && <a className="gf-kit-prompt-form-link" href={formUrl} target="_blank" rel="noopener noreferrer">Open the signup form in a new tab</a>}
         </section>
       </div>

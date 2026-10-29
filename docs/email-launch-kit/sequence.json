@@ -1,25 +1,25 @@
 {
   "from_name": "Umair at Guildframe",
   "reply_to": "umair@guildframe.com",
-  "trigger": "Address confirmed for launch kit",
+  "trigger": "Native email confirmation after the combined kit-and-updates signup",
   "timing": "Days since complete-kit delivery; never restart on repeat requests",
-  "marketing_gate": "Explicit optional marketing group membership required for messages 02 to 07 and newsletter",
+  "marketing_gate": "MARKETING group membership remains required for messages 02 to 07 and newsletter. The current form adds new explicit signups to KIT_REQUESTED and MARKETING. Never retroactively add legacy kit-only or enquiry contacts.",
   "send_time_exclusions": [
     "unsubscribed",
     "complaint",
     "hard_bounce",
     "repeated_soft_bounce",
     "active_enquiry",
-    "proposal_sent",
-    "client_active"
+    "proposal",
+    "client"
   ],
   "messages": [
     {
       "id": "01-kit-delivery",
       "day": 0,
-      "subject": "Your tabletop launch kit",
+      "subject": "Your Tabletop Campaign Launch Kit",
       "preview": "Your complete kit, including the editable workbook and documents.",
-      "heading": "Your launch kit is ready.",
+      "heading": "Your Tabletop Campaign Launch Kit is ready.",
       "paragraphs": [
         "Start with the short PDF guide, then choose the part that helps with your next decision. The ZIP contains all five files, including the editable launch planner and Word documents.",
         "The workbook covers funding, rewards, costs, shipping, cash timing and the work around launch. Use the templates to plan your campaign message and emails, then brief the creative assets you need.",
@@ -169,5 +169,8 @@
     "stages": [
       "all"
     ]
-  }
+  },
+  "signup": "One explicit signup for the free Tabletop Campaign Launch Kit, six launch lessons, a monthly newsletter with tabletop tips and occasional Guildframe service offers. No separate marketing checkbox.",
+  "workflow_title": "Tabletop Campaign Launch Kit and updates",
+  "stage_filtering": "Stages below are editorial guidance. The current native form does not collect stage or game type; these are not active workflow conditions."
 }

@@ -1,26 +1,30 @@
 # Sender form handoff
 
-Checked in the native Sender UI on 29 October 2026.
+Checked in the native Sender UI on 29 October 2026 after the user requested a single, explicit kit-and-updates signup.
 
-- Form: **Guildframe tabletop launch kit**, ID `dyPKAg`.
+- Form ID: `dyPKAg`; existing dashboard label **Guildframe tabletop launch kit**.
+- Public title: **Tabletop Campaign Launch Kit**.
 - Builder: https://app.sender.net/forms/builder/dyPKAg
 - Publishing settings: https://app.sender.net/forms/dyPKAg/settings
 - Hosted URL: https://stats.sender.net/forms/dyPKAg/view
-- State: **published**. Native double opt-in is enabled and remained checked after reloading saved settings. Sender states that connected automations trigger only after email confirmation.
-- Confirmation email: **Confirm your Guildframe launch kit request**, from **Umair at Guildframe <umair@guildframe.com>**. Preview: **One click to confirm your address and receive all five files.**
-- The native confirmation email heading and body explain the requested kit. Its footer says lessons, newsletters and offers follow only if chosen separately. The native `{$double-optin-link}` was preserved. Contact and privacy links are included.
-- Base group: `KIT_REQUESTED` (`dB2PEN`).
-- Optional interest group: `MARKETING` (`dJ2NXP`). Label: **Yes, send me Guildframe's six follow up lessons, then a monthly tabletop newsletter and occasional service offers. I can unsubscribe at any time.**
-- Saved routing was read back from the builder. The separate mandatory Confirmation checkbox remains off.
-- Public hosted form readback: email `required=true`; first name `required=false`; MARKETING checkbox `checked=false`, `required=false`. Its visible footer includes a working privacy link to https://guildframe.com/privacy.
-- Submit redirect saved: https://guildframe.com/resources/tabletop-kickstarter-launch-kit/thanks
-- Preview: cream background and green Get the kit button.
-- `app/launch-kit.ts` uses the verified hosted URL by default. Environment overrides remain supported. Set `NEXT_PUBLIC_SENDER_LAUNCH_KIT_FORM_URL` to an empty value and leave the embed URL empty to restore the truthful manual email-request mode.
+- State: **published**. Native double opt-in remained enabled after reloading saved settings. Sender states that connected automations trigger after confirmation.
+- Both base groups: `KIT_REQUESTED` (`dB2PEN`) and `MARKETING` (`dJ2NXP`). Saved builder readback shows both. Optional interest group rows were removed. No existing contacts were edited or moved.
+- Required email and optional first name. No game type or stage field.
+- Button: **Send my kit & updates**.
+- Visible subtitle, before the fields and submit button: **Sign up for the free Tabletop Campaign Launch Kit: all five files, six launch lessons, a monthly newsletter with tabletop tips and occasional Guildframe service offers. Confirm your email to start. Unsubscribe from any email. Privacy notice.** The privacy text links to https://guildframe.com/privacy. The duplicate bottom paragraph is hidden.
+- Separate mandatory Confirmation checkbox remains off. There is no marketing checkbox.
+- Submit redirect: https://guildframe.com/resources/tabletop-kickstarter-launch-kit/thanks
+- Confirmation subject: **Confirm your Tabletop Campaign Launch Kit and updates**, from **Umair at Guildframe <umair@guildframe.com>**. Preview: **Confirm for the kit, six lessons, monthly tips and occasional Guildframe offers.**
+- Confirmation body lists all five files, six lessons, monthly newsletter/tips and occasional Guildframe offers. Native confirmation token was preserved. The requested verification email includes privacy/contact links and the supplied Suite #6291, Edinburgh, Scotland address. Its broken pre-confirmation unsubscribe anchor was removed after the owner receipt exposed an empty href; the footer explains that subsequent emails can be unsubscribed from at any time. See `00-confirmation-copy.md`.
 
-## Finish delivery QA after live assets and workflow readiness
+## Public form readback
 
-1. Root controls workflow activation. Verify all live kit URLs before activation.
-2. Coordinate test submissions with the owner. Use owner-controlled email aliases only: one with marketing unchecked, one checked. Confirm that both require email confirmation; only the checked alias joins MARKETING; neither receives nurture before confirmation; kit-only receives the full kit and no marketing. Verify the redirect and final ZIP link.
-3. Check duplicate entry, unsubscribe suppression and send-time exclusions. Suppress test contacts after QA.
+A fresh isolated headless Chrome checked the final hosted form without submitting. It rendered the title and complete disclosure before Email, Name and the submit button; email was required, name optional, and no checkbox was present. The privacy link was correct. At a 390 x 844 viewport the inner form width and scroll width were both 370 px, with height 578 px: no horizontal overflow. The native rich-text fields needed reopening the saved builder and saving again before Sender compiled them into the public form markup; checking the builder alone was insufficient. Temporary readback: `/private/tmp/guildframe-single-signup/public-readback.json`.
 
-No visitor test submissions, test emails, workflow activation, support messages or plan purchases were performed while preparing and publishing this form. Form publication is verified; inbox delivery and live automation behavior still need end-to-end testing.
+## Workflow readback
+
+Workflow `ejRyxW` is **Tabletop Campaign Launch Kit and updates**. It was briefly deactivated for the seven email copy updates, passed validation with no problems or warnings, and was reactivated. Comparing the entire graph before and after confirmed all 37 nodes, trigger settings, delays and branches unchanged except the intended email subject/preview copy. All six MARKETING gates and eighteen lead-status checks remain. Existing kit-only contacts do not acquire marketing permission through this update.
+
+## Remaining recipient checks
+
+The parent verified an earlier owner-only unsubscribe: both the email and temail channels became unsubscribed, stopping newsletters and automation; groups were preserved. The root agent controls the new single-signup submissions and inbox checks. Verify new signups join both groups, require confirmation and receive no workflow email until confirmed. Check final redirect, duplicate entry, unsubscribe across automation/newsletter channels, bounce suppression and enquiry/client exclusions. Recheck per-template tracking flags after the content save. Publication and readback do not establish inbox placement or unsubscribe scope.

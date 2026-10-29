@@ -1,5 +1,7 @@
 Can someone compare your rewards without asking?
 
+Tabletop Campaign Launch Kit
+
 Put the rewards side by side.
 
 Compare each tier using exact products, quantities and formats. Mark optional extras separately from included contents.
@@ -14,7 +16,7 @@ https://guildframe.com/downloads/launch-kit/Campaign-and-Email-Templates.docx
 Umair
 Guildframe
 
-You chose Guildframe's lessons, newsletter and service offers.
+You signed up for the Tabletop Campaign Launch Kit and updates: six launch lessons, a monthly newsletter with tabletop tips and occasional Guildframe service offers.
 Guildframe
 {{ account.address }}
 {{ account.city }} {{ account.zip_code }}

@@ -2,8 +2,9 @@ export const launchKit = {
   path: "/resources/tabletop-kickstarter-launch-kit",
   thanksPath: "/resources/tabletop-kickstarter-launch-kit/thanks",
   bundlePath: "/downloads/launch-kit/tabletop-kickstarter-launch-kit.zip",
-  title: "Free Tabletop Kickstarter Launch Kit",
-  description: "Plan your tabletop Kickstarter with an editable launch workbook, campaign and email templates, creative briefs and worked examples. Free by email.",
+  title: "Tabletop Campaign Launch Kit",
+  description: "Free planning files for tabletop crowdfunding on Kickstarter or Gamefound, plus six launch lessons, monthly tips and occasional Guildframe service offers.",
+  signupCopy: "Sign up for the free kit, six launch lessons, a monthly newsletter with tabletop tips and occasional Guildframe service offers.",
   files: [
     { title: "Start here", format: "PDF", name: "START-HERE.pdf", copy: "Choose your starting point and work through the kit in a useful order." },
     { title: "Launch planner", format: "XLSX", name: "Tabletop-Launch-Planner.xlsx", copy: "Twelve working tabs for funding, rewards, costs, shipping, cash timing, launch tasks, ad tests, sources, reviewers, live operations and production." },

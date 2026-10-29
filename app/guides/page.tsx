@@ -175,7 +175,7 @@ export default function GuidesPage() {
           <span className="gf-eyebrow">The Guildframe field notes</span>
           <h1>A clearer path<br/><em>to your next launch.</em></h1>
           <p>Practical guides for tabletop creators. Work through the plan, the audience, the page and everything that comes after funding.</p>
-          <Link href="/resources/tabletop-kickstarter-launch-kit" className="gf-library-kit-link"><span>Prefer working files?</span> Get the free tabletop launch kit</Link>
+          <Link href="/resources/tabletop-kickstarter-launch-kit" className="gf-library-kit-link"><span>Prefer working files?</span> Get the free campaign launch kit</Link>
         </section>
         <nav className="guide-start-here" aria-label="Start with your launch stage">
           <Link href="/guides/board-game-kickstarter-marketing-plan"><span>01 / MAKE THE PLAN</span><strong>What needs to happen before launch?</strong><p>Put the product, audience and campaign in a practical order.</p></Link>

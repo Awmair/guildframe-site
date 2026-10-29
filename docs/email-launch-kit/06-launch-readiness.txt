@@ -1,5 +1,7 @@
 What is still missing before launch?
 
+Tabletop Campaign Launch Kit
+
 Turn the checklist into assigned work.
 
 Use the Launch plan and Live ops tabs to list what is still unfinished. Give each item an owner, a due date and a way to confirm it is ready.
@@ -14,7 +16,7 @@ https://guildframe.com/downloads/launch-kit/Tabletop-Launch-Planner.xlsx
 Umair
 Guildframe
 
-You chose Guildframe's lessons, newsletter and service offers.
+You signed up for the Tabletop Campaign Launch Kit and updates: six launch lessons, a monthly newsletter with tabletop tips and occasional Guildframe service offers.
 Guildframe
 {{ account.address }}
 {{ account.city }} {{ account.zip_code }}

@@ -1,6 +1,8 @@
-Your tabletop launch kit
+Your Tabletop Campaign Launch Kit
 
-Your launch kit is ready.
+Tabletop Campaign Launch Kit
+
+Your Tabletop Campaign Launch Kit is ready.
 
 Start with the short PDF guide, then choose the part that helps with your next decision. The ZIP contains all five files, including the editable launch planner and Word documents.
 
@@ -14,7 +16,7 @@ https://guildframe.com/downloads/launch-kit/tabletop-kickstarter-launch-kit.zip
 Umair
 Guildframe
 
-You requested the Guildframe launch kit.
+You requested the Tabletop Campaign Launch Kit. Launch lessons, monthly tips and occasional Guildframe service offers are sent only to people who signed up for updates.
 Guildframe
 {{ account.address }}
 {{ account.city }} {{ account.zip_code }}

@@ -6,7 +6,7 @@ import test from "node:test";
 const outputRoot = new URL("../out/", import.meta.url);
 
 const pages = [
-  ["/resources/tabletop-kickstarter-launch-kit", "Free Tabletop Kickstarter Launch Kit | Guildframe", "Free tabletop"],
+  ["/resources/tabletop-kickstarter-launch-kit", "Tabletop Campaign Launch Kit | Guildframe", "Tabletop Campaign Launch Kit"],
   ["/privacy", "Privacy Policy | Guildframe", "Privacy policy"],
   ["/terms", "Free Kit and Website Terms | Guildframe", "Free kit and website terms"],
   ["/guides/board-game-kickstarter-funding-goal", "How to Set a Kickstarter Funding Goal for a Board Game | Guildframe", "How to Set a Kickstarter Funding Goal for a Board Game"],
@@ -606,27 +606,37 @@ test("keeps visible review dates, schema dates and sitemap dates identical", asy
   }
 });
 
-test("separates the complete launch kit from optional marketing", async () => {
+test("discloses the confirmed kit and email signup without enrolling enquiries", async () => {
   const kit = await readPage("/resources/tabletop-kickstarter-launch-kit");
   const thanks = await readPage("/resources/tabletop-kickstarter-launch-kit/thanks");
   const privacy = await readPage("/privacy");
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
-  assert.match(visibleText(kit), /all five files together/i);
+  const kitText = visibleText(kit);
+  assert.match(kitText, /all five files/i);
+  for (const html of [kit, thanks, privacy]) {
+    const text = visibleText(html);
+    assert.match(text, /six launch lessons/i);
+    assert.match(text, /monthly newsletter/i);
+    assert.match(text, /tabletop tips/i);
+    assert.match(text, /occasional Guildframe (?:service )?offers/i);
+    assert.doesNotMatch(text, /marketing (?:box|checkbox)|receive only the kit|starts unchecked|address confirmation alone does not give marketing permission/i);
+  }
   const automatedSignup = /class="kit-signup-frame"|data-analytics-event="launch_kit_signup_click"/.test(kit);
   if (automatedSignup) {
-    assert.match(visibleText(kit), /Leave the marketing box unchecked to receive only the kit/i);
-    assert.match(visibleText(thanks), /Use the confirmation link in the email/i);
+    assert.match(kitText, /confirm your email/i);
+    assert.match(visibleText(thanks), /confirm your address/i);
+    assert.match(visibleText(privacy), /previously requested only the kit remain kit only contacts/i);
+    assert.match(visibleText(privacy), /do not add those people or project enquirers.*retrospectively/i);
   } else {
-    assert.match(kit, /href="mailto:umair@guildframe\.com\?subject=Tabletop%20launch%20kit%20request"/);
-    assert.match(visibleText(kit), /Email me to request all five files together\. I will reply with the complete kit/i);
-    assert.match(visibleText(kit), /Requesting the free kit does not subscribe you to marketing emails/i);
+    assert.match(kit, /href="mailto:umair@guildframe\.com\?subject=Tabletop%20Campaign%20Launch%20Kit%20and%20updates/);
+    assert.match(kitText, /send your signup request/i);
     assert.match(visibleText(thanks), /send the message to place your request/i);
-    for (const html of [kit, thanks, privacy]) {
-      assert.doesNotMatch(visibleText(html), /confirm(?:ing)? your (?:email|address)|confirmation link|marketing box|kit follows after confirmation/i);
-    }
+    assert.match(visibleText(privacy), /an email request alone does not activate this subscription/i);
   }
-  assert.match(visibleText(kit), /XLSX/);
-  assert.match(visibleText(kit), /DOCX/);
+  for (const html of [kit, thanks]) assert.match(visibleText(html), /unsubscribe at any time/i);
+  assert.match(kitText, /XLSX/);
+  assert.match(kitText, /DOCX/);
+  assert.match(visibleText(privacy), /Sending a project enquiry does not subscribe you to marketing emails/i);
   assert.match(visibleText(privacy), /stay off until you choose to accept analytics/i);
   assert.match(privacy, /data-analytics-preferences/);
   assert.match(thanks, /<meta name="robots" content="noindex, follow"/i);
@@ -658,6 +668,9 @@ test("exports the complete launch kit with accurate claims and download indexing
   assert.match(text, /one manufactured product shared by reward tiers, plus digital rewards/i);
   assert.match(text, /Cost additional physical products separately/);
   assert.match(text, /Five fictional tabletop examples/i);
+  assert.match(text, /Tabletop Campaign Launch Kit/i);
+  assert.match(text, /Gamefound/i);
+  assert.equal(manifest.version, "1.1");
   assert.doesNotMatch(text, /worth \$|\$1[,.]?000|guaranteed funding|[↗↘↙←→↓↑]/u);
   const headers = await readFile(new URL("_headers", outputRoot), "utf8");
   assert.match(headers, /^\/downloads\/launch-kit\/\*\r?\n\s+X-Robots-Tag: noindex\s*$/m);
@@ -677,6 +690,9 @@ test("publishes privacy purposes and concise free kit terms", async () => {
   assert.match(privacyText, /Sender delivers the enquiry/);
   assert.doesNotMatch(privacyText, /Formspree/);
   assert.match(privacy, /href="https:\/\/ico\.org\.uk\/make-a-complaint\/"/);
+  assert.match(termsText, /Tabletop Campaign Launch Kit/);
+  assert.match(termsText, /Kickstarter and Gamefound have different settings, fees and rules/);
+  assert.match(termsText, /Existing kit only contacts and project enquirers are not added/);
   assert.match(termsText, /copy, edit and use/);
   assert.match(termsText, /project team and collaborators/);
   assert.match(termsText, /may not resell.*standalone template/);

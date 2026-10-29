@@ -1,5 +1,7 @@
 Turn your existing artwork into a production brief
 
+Tabletop Campaign Launch Kit
+
 Give each asset a job.
 
 List the artwork, component files and gameplay footage you already have. Then decide which assets still need making.
@@ -14,7 +16,7 @@ https://guildframe.com/downloads/launch-kit/Creative-and-Production-Briefs.docx
 Umair
 Guildframe
 
-You chose Guildframe's lessons, newsletter and service offers.
+You signed up for the Tabletop Campaign Launch Kit and updates: six launch lessons, a monthly newsletter with tabletop tips and occasional Guildframe service offers.
 Guildframe
 {{ account.address }}
 {{ account.city }} {{ account.zip_code }}

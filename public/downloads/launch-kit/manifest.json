@@ -1,36 +1,36 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "created": "2026-10-29",
   "files": [
     {
       "name": "START-HERE.pdf",
-      "bytes": 10267,
-      "sha256": "16c39754f8d16ee9c970da56861ca053eb652324ecf1b48f09a5fe8fc9298a9a"
+      "bytes": 60051,
+      "sha256": "c7c8f8160a5b1bac57cf527478700aeb980867f334acdf1e1f5ee7ecd1b8a30c"
     },
     {
       "name": "Tabletop-Launch-Planner.xlsx",
-      "bytes": 48879,
-      "sha256": "875ba069cdb993744246249f0bb934af83037297502359a203bc39916ac1066a"
+      "bytes": 49198,
+      "sha256": "e5d7f51347e969240705021c8c1d1d6de84d097d603686c8736f4ca106315288"
     },
     {
       "name": "Campaign-and-Email-Templates.docx",
-      "bytes": 45419,
-      "sha256": "3c295a7439d198d7d2d4c4ae0730abfb2b0c56317f12391b5d229f6ff262b77e"
+      "bytes": 45626,
+      "sha256": "10c38faf9e985b01ef4cdb220716080d44ac1223fc1dabbd0d708c238fe8add4"
     },
     {
       "name": "Creative-and-Production-Briefs.docx",
-      "bytes": 42397,
-      "sha256": "a69864e9cc1640cf2bb3b6d0c8f863ab24bb279549254727aaf31982d14fe58a"
+      "bytes": 42445,
+      "sha256": "b8c7b5c06878a154056a8cdbc1ca721cffc1522da030bca790a0488d74ff6e8c"
     },
     {
       "name": "Examples-and-Sources.pdf",
-      "bytes": 15765,
-      "sha256": "ab5fa48b635676e6847a947485dba8f6279263e6e882c9c964fe57b2bdc6ed80"
+      "bytes": 68585,
+      "sha256": "e060d99a88403a6559406d44de3f0e08173f29e338441e3a0ae4b0603d2e2eb2"
     }
   ],
   "bundle": {
     "name": "tabletop-kickstarter-launch-kit.zip",
-    "bytes": 143295,
-    "sha256": "bf60ccf3ad13099e88bee3a19b24026e565e2f94a403591da63e6a4e9ebd5f94"
+    "bytes": 240216,
+    "sha256": "6d69d81b615461dac3aec7f064eae37db6470f97c8f8c3c94002a63bb615b498"
   }
 }
