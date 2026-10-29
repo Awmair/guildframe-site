@@ -1,10 +1,14 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const outputRoot = new URL("../out/", import.meta.url);
 
 const pages = [
+  ["/resources/tabletop-kickstarter-launch-kit", "Free Tabletop Kickstarter Launch Kit | Guildframe", "Free tabletop"],
+  ["/privacy", "Privacy Policy | Guildframe", "Privacy policy"],
+  ["/terms", "Free Kit and Website Terms | Guildframe", "Free kit and website terms"],
   ["/guides/board-game-kickstarter-funding-goal", "How to Set a Kickstarter Funding Goal for a Board Game | Guildframe", "How to Set a Kickstarter Funding Goal for a Board Game"],
   ["/guides/board-game-kickstarter-reward-pricing", "How to Price Kickstarter Rewards for a Board Game | Guildframe", "How to Price Kickstarter Rewards for a Board Game"],
   ["/guides/kickstarter-referral-tags-tracking", "Track Kickstarter Marketing with Referral Tags and UTMs | Guildframe", "Track Kickstarter Marketing with Referral Tags and UTMs"],
@@ -115,10 +119,19 @@ test("exports the project inquiry form on every public page", async (t) => {
     await t.test(path, async () => {
       const html = await readPage(path);
       const form = html.match(
-        /<form\b(?=[^>]*\baction="https:\/\/formspree\.io\/f\/mrewkezq")[^>]*>[\s\S]*?<\/form>/i,
+        /<form\b(?=[^>]*\baction="(?:https:\/\/formspree\.io\/f\/mrewkezq|\/api\/contact)")[^>]*>[\s\S]*?<\/form>/i,
       )?.[0];
 
-      assert.ok(form, `missing Formspree inquiry form: ${path}`);
+      assert.ok(form, `missing project inquiry form: ${path}`);
+      assert.match(form, /\bmethod="POST"/i, `missing native POST method: ${path}`);
+      if (form.includes('action="https://formspree.io/')) {
+        assert.match(form, /<button\b[^>]*>Continue to send<\/button>/i, `missing security-check continuation: ${path}`);
+        assert.match(form, /Next, complete the security check to send your enquiry\./i, `missing next-step explanation: ${path}`);
+      } else {
+        assert.match(form, /<button\b[^>]*>Send my project<\/button>/i, `missing internal send action: ${path}`);
+        assert.doesNotMatch(form, /complete the security check/i, `external security-check wording on internal form: ${path}`);
+      }
+      assert.doesNotMatch(form, /Request received|Thanks for sending your project/i, `unconfirmed delivery claim: ${path}`);
       assert.match(
         form,
         /<input\b(?=[^>]*\bname="name")(?=[^>]*\btype="text")(?=[^>]*\brequired(?:="")?)[^>]*>/i,
@@ -329,7 +342,8 @@ test("exports AEO and social metadata", async () => {
   assert.doesNotMatch(homepage, /"price":"975"/i);
   assert.doesNotMatch(homepage, /"@type":"Audience"/i);
   assert.doesNotMatch(homepage, /OutOfStock/i);
-  assert.match(homepage, /G-TEST123456/i);
+  assert.doesNotMatch(homepage, /<script\b[^>]*\bsrc="https:\/\/(?:www\.googletagmanager\.com|www\.clarity\.ms)\//i);
+  assert.match(visibleText(homepage), /Your analytics choice/);
 
   const homepageImages = homepage.match(/<img\b[^>]*>/gi) ?? [];
   assert.ok(homepageImages.length > 0, "Homepage should contain images");
@@ -492,7 +506,7 @@ test("keeps copy and responsive mockups clean", async () => {
     for (const image of (await readPage(path)).match(/<img\b[^>]*>/gi) ?? []) {
       assert.match(image, /\bwidth="[1-9]\d*"/i, path);
       assert.match(image, /\bheight="[1-9]\d*"/i, path);
-      assert.match(image, /\balt="[^"]+"/i, path);
+      assert.match(image, /\balt="[^"]*"/i, path);
     }
   }
 
@@ -515,6 +529,9 @@ const readableDate = (iso) => {
 // drift apart. A hardcoded visible date previously survived several content
 // updates because nothing compared it with app/content-dates.ts.
 const datedPages = new Map([
+  ["/resources/tabletop-kickstarter-launch-kit", "2026-10-29"],
+  ["/privacy", "2026-10-29"],
+  ["/terms", "2026-10-29"],
   ["/guides/when-to-hire-kickstarter-campaign-designer", "2026-10-03"],
   ["/guides/kickstarter-campaign-graphics-mobile-readability", "2026-10-03"],
   ["/guides/kickstarter-vs-gamefound-campaign-page-design", "2026-10-03"],
@@ -589,6 +606,86 @@ test("keeps visible review dates, schema dates and sitemap dates identical", asy
   }
 });
 
+test("separates the complete launch kit from optional marketing", async () => {
+  const kit = await readPage("/resources/tabletop-kickstarter-launch-kit");
+  const thanks = await readPage("/resources/tabletop-kickstarter-launch-kit/thanks");
+  const privacy = await readPage("/privacy");
+  const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
+  assert.match(visibleText(kit), /all five files together/i);
+  const automatedSignup = /class="kit-signup-frame"|data-analytics-event="launch_kit_signup_click"/.test(kit);
+  if (automatedSignup) {
+    assert.match(visibleText(kit), /Leave the marketing box unchecked to receive only the kit/i);
+    assert.match(visibleText(thanks), /Use the confirmation link in the email/i);
+  } else {
+    assert.match(kit, /href="mailto:umair@guildframe\.com\?subject=Tabletop%20launch%20kit%20request"/);
+    assert.match(visibleText(kit), /Email me to request all five files together\. I will reply with the complete kit/i);
+    assert.match(visibleText(kit), /Requesting the free kit does not subscribe you to marketing emails/i);
+    assert.match(visibleText(thanks), /send the message to place your request/i);
+    for (const html of [kit, thanks, privacy]) {
+      assert.doesNotMatch(visibleText(html), /confirm(?:ing)? your (?:email|address)|confirmation link|marketing box|kit follows after confirmation/i);
+    }
+  }
+  assert.match(visibleText(kit), /XLSX/);
+  assert.match(visibleText(kit), /DOCX/);
+  assert.match(visibleText(privacy), /stay off until you choose to accept analytics/i);
+  assert.match(privacy, /data-analytics-preferences/);
+  assert.match(thanks, /<meta name="robots" content="noindex, follow"/i);
+  assert.doesNotMatch(sitemap, /tabletop-kickstarter-launch-kit\/thanks/);
+  assert.match(kit, /name="heard_about"/);
+  assert.doesNotMatch(kit.match(/<select\b[^>]*name="heard_about"[^>]*>/i)?.[0] ?? "", /required/);
+});
+
+test("exports the complete launch kit with accurate claims and download indexing rules", async () => {
+  const kit = await readPage("/resources/tabletop-kickstarter-launch-kit");
+  const text = visibleText(kit);
+  const base = new URL("downloads/launch-kit/", outputRoot);
+  const manifest = JSON.parse(await readFile(new URL("manifest.json", base), "utf8"));
+  assert.deepEqual(manifest.files.map(file => file.name), [
+    "START-HERE.pdf",
+    "Tabletop-Launch-Planner.xlsx",
+    "Campaign-and-Email-Templates.docx",
+    "Creative-and-Production-Briefs.docx",
+    "Examples-and-Sources.pdf",
+  ]);
+  for (const file of [...manifest.files, manifest.bundle]) {
+    const bytes = await readFile(new URL(file.name, base));
+    assert.equal(bytes.length, file.bytes, file.name);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), file.sha256, file.name);
+    assert.equal(bytes.subarray(0, file.name.endsWith(".pdf") ? 4 : 2).toString(), file.name.endsWith(".pdf") ? "%PDF" : "PK", file.name);
+  }
+  assert.match(text, /5 useful files/);
+  assert.match(text, /Twelve working tabs/);
+  assert.match(text, /one manufactured product shared by reward tiers, plus digital rewards/i);
+  assert.match(text, /Cost additional physical products separately/);
+  assert.match(text, /Five fictional tabletop examples/i);
+  assert.doesNotMatch(text, /worth \$|\$1[,.]?000|guaranteed funding|[↗↘↙←→↓↑]/u);
+  const headers = await readFile(new URL("_headers", outputRoot), "utf8");
+  assert.match(headers, /^\/downloads\/launch-kit\/\*\r?\n\s+X-Robots-Tag: noindex\s*$/m);
+});
+
+test("publishes privacy purposes and concise free kit terms", async () => {
+  const privacy = await readPage("/privacy");
+  const terms = await readPage("/terms");
+  const privacyText = visibleText(privacy);
+  const termsText = visibleText(terms);
+  assert.match(privacyText, /controller responsible/);
+  assert.match(privacyText, /Suite #6291, Edinburgh, Scotland/);
+  assert.match(privacyText, /lawful basis/);
+  assert.match(privacyText, /legitimate interests/);
+  assert.match(privacyText, /How long we keep information/);
+  assert.match(privacyText, /access, correction, deletion, restriction or a portable copy/);
+  assert.match(privacyText, /Sender delivers the enquiry/);
+  assert.doesNotMatch(privacyText, /Formspree/);
+  assert.match(privacy, /href="https:\/\/ico\.org\.uk\/make-a-complaint\/"/);
+  assert.match(termsText, /copy, edit and use/);
+  assert.match(termsText, /project team and collaborators/);
+  assert.match(termsText, /may not resell.*standalone template/);
+  assert.match(termsText, /does not guarantee funding/);
+  assert.match(termsText, /separate agreed proposal or contract/);
+  assert.match(privacy, /href="\/terms"/);
+  assert.match(terms, /href="\/privacy"/);
+});
+
 test("keeps the React payload files out of the search index", async () => {
   const robots = await readFile(new URL("robots.txt", outputRoot), "utf8");
   assert.match(robots, /^Disallow: \/\*\.txt\$$/m, "static export payload files must be disallowed");
@@ -623,7 +720,7 @@ test("keeps every meta description inside the truncation limit", async (t) => {
 test("keeps comparison tables, campaign pages and answers connected",async()=>{
  const benchmark=await readPage("/resources/kickstarter-tabletop-games-benchmark");assert.doesNotMatch(benchmark,/<th(?=[\s>])(?![^>]*\bscope=)/i);assert.match(benchmark,/"@type":"Dataset"/);assert.match(benchmark,/"@type":"DataDownload"/);assert.match(benchmark,/"encodingFormat":"text\/csv"/);
  const buy=await readPage("/buy");assert.match(buy,/href="\/campaign-design"/);assert.match(buy,/class="seo-breadcrumbs"/);
- const home=await readPage("/");assert.match(home,/"@type":"FAQPage"/);assert.match(home,/How much does a full launch cost/);
+ const home=await readPage("/");assert.match(home,/"@type":"FAQPage"/);assert.match(home,/How much will the project cost/);
  const cost=await readPage("/guides/board-game-kickstarter-campaign-design-cost");assert.match(cost,/<caption>/);assert.match(cost,/scope="col"/);assert.match(cost,/Other designers.{0,4} prices depend on their scope/i);
 });
 
@@ -632,7 +729,9 @@ test("connects the high intent launch pages to the service",async()=>{
  const launchPaths=pages.filter(([p])=>p.startsWith("/guides/")&&!afterFundingPaths.has(p));
  assert.equal(launchPaths.length,30);
  for(const [path] of launchPaths){assert.ok(guideIndex.includes(`href="${path}"`),path);const html=await readPage(path);assert.match(html,/href="\/campaign-design"/);assert.match(html,/"@type":"FAQPage"/);}
- for(const slug of ["board-game-kickstarter-campaign-design","card-game-kickstarter-campaign-design","ttrpg-kickstarter-campaign-design","miniatures-kickstarter-campaign-design","tabletop-accessories-campaign-design"]){assert.ok((await readPage("/")).includes(`href="/${slug}"`),slug);}
+ const home=await readPage("/");const design=await readPage("/campaign-design");
+ assert.ok(home.includes('href="/campaign-design#pricing"'));
+ for(const slug of ["board-game-kickstarter-campaign-design","card-game-kickstarter-campaign-design","ttrpg-kickstarter-campaign-design","miniatures-kickstarter-campaign-design","tabletop-accessories-campaign-design"]){assert.ok(design.includes(`href="/${slug}"`),slug);}
 });
 
 test("ships no unreferenced image asset in the deployable output", async () => {
@@ -689,17 +788,30 @@ test("shows verified client projects separately from concept mockups", async () 
 });
 
 test("preserves project matched client excerpts and attribution", async () => {
-  for (const path of ["/", "/campaign-design"]) {
-    const html = await readPage(path);
-    const quotes = html.match(/<section\b[^>]*\bid="testimonials"[\s\S]*?<\/section>/)?.[0];
-    assert.ok(quotes, path);
-    assert.equal((quotes.match(/<blockquote>/g) ?? []).length, 2);
-    assert.match(quotes, /Great communication, fast updates, overall great work!/);
-    assert.match(quotes, /FutureProof Terrain<\/strong><span>Client: <!-- -->mpmeguire/);
-    assert.match(quotes, /Exceptional service with great attention to detail and artistic skills/);
-    assert.match(quotes, /ScentedRealms<\/strong><span>Client: <!-- -->softmobile/);
-    assert.doesNotMatch(quotes, /Quiver Time|aggregateRating|ratingValue/);
+  const home = await readPage("/");
+  const work = home.match(/<section\b[^>]*\bid="past-work"[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert.equal((work.match(/<blockquote>/g) ?? []).length, 2);
+  const panels = [...work.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(([panel]) => panel);
+  for (const [project, client, quote] of [
+    ["FutureProof Terrain", "mpmeguire", "Great communication, fast updates, overall great work!"],
+    ["ScentedRealms", "softmobile", "Exceptional service with great attention to detail and artistic skills"],
+  ]) {
+    const panel = panels.find(panel => visibleText(panel).includes(project));
+    assert.ok(panel, project);
+    assert.ok(visibleText(panel).includes(quote), project);
+    assert.ok(visibleText(panel).includes(client), project);
   }
+  const quiver = panels.find(panel => visibleText(panel).includes("Quiver Time"));
+  assert.ok(quiver);
+  assert.doesNotMatch(quiver, /<blockquote>|aggregateRating|ratingValue/);
+  const campaign = await readPage("/campaign-design");
+  const quotes = campaign.match(/<section\b[^>]*\bid="testimonials"[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert.equal((quotes.match(/<blockquote>/g) ?? []).length, 2);
+  assert.match(quotes, /Great communication, fast updates, overall great work!/);
+  assert.match(quotes, /FutureProof Terrain<\/strong><span>Client: <!-- -->mpmeguire/);
+  assert.match(quotes, /Exceptional service with great attention to detail and artistic skills/);
+  assert.match(quotes, /ScentedRealms<\/strong><span>Client: <!-- -->softmobile/);
+  assert.doesNotMatch(quotes, /Quiver Time|aggregateRating|ratingValue/);
 });
 
 test("keeps the site focused on direct enquiries", async () => {
@@ -717,7 +829,7 @@ const schemaNodes = (html) => [...html.matchAll(/<script type="application\/ld\+
 });
 
 test("resolves article authors and profiles to the visible named person", async () => {
-  for (const [path] of pages.filter(([path]) => path.startsWith("/guides/") || path.startsWith("/resources/"))) {
+  for (const [path] of pages.filter(([path]) => (path.startsWith("/guides/") || path.startsWith("/resources/")) && path !== "/resources/tabletop-kickstarter-launch-kit")) {
     const html = await readPage(path);
     const nodes = schemaNodes(html);
     const article = nodes.find(node => ["Article", "TechArticle"].includes(node["@type"]));
@@ -798,21 +910,21 @@ test("explains the whole launch with readable, explicitly illustrative project c
   assert.doesNotMatch(journey, /ROAS|funded in|raised \$|guaranteed funding/i);
   assert.doesNotMatch(html, /id="mockups"/);
   const faq = html.match(/<section\b[^>]*\bid="faq"[\s\S]*?<\/section>/)?.[0];
-  assert.equal((faq.match(/<details>/g) ?? []).length, 5);
+  assert.equal((faq.match(/<details>/g) ?? []).length, 6);
 });
 
 test("shows a diverse, labelled concept gallery in the homepage hero", async () => {
   const home = await readPage("/");
-  const hero = home.match(/<section\b[^>]*class="gf-hero"[\s\S]*?<\/section>/)?.[0];
+  const hero = home.match(/<section\b[^>]*class="gf-studio-hero"[\s\S]*?<\/section>/)?.[0];
   assert.ok(hero);
-  assert.match(hero, /Gallery of original tabletop campaign concepts/);
+  assert.match(hero, /Original tabletop campaign concepts/);
   assert.match(hero, /Original concept/);
   for (const image of ["party-card-game", "strategy-board-game", "trading-card-game", "rpg-book", "miniature-terrain", "dice-accessories"]) {
     assert.ok(hero.includes(`/images/hero/${image}-480w.webp`), image);
     for (const width of [320, 480, 640]) await access(new URL(`images/hero/${image}-${width}w.webp`, outputRoot));
   }
-  assert.equal((hero.match(/class="gf-orbit-product"/g) ?? []).length, 6);
-  assert.equal((hero.match(/data-focal="true"/g) ?? []).length, 1);
+  assert.equal((hero.match(/class="gf-gallery-product"/g) ?? []).length, 6);
+  assert.equal((hero.match(/data-position="0"/g) ?? []).length, 1);
   assert.doesNotMatch(hero, /<button\b|[←→↗↘]|Pause gallery|Play gallery/);
 });
 

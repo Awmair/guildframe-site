@@ -1,0 +1,23 @@
+Can a new player explain your game?
+
+Write the sentence a new player needs.
+
+Try this sentence: You are [role], trying to [goal], by [the decision that makes this game interesting]. Read it to someone who has not played.
+
+Ask what they think they will actually do. If they describe the theme but cannot describe a choice, revise the sentence around that choice.
+
+Use the campaign template to draft the message. For an RPG, explain the characters and play experience. For miniatures or an accessory, explain what the product lets someone make, use or play.
+
+Open the campaign templates
+https://guildframe.com/downloads/launch-kit/Campaign-and-Email-Templates.docx
+
+Umair
+Guildframe
+
+You chose Guildframe's lessons, newsletter and service offers.
+Guildframe
+{{ account.address }}
+{{ account.city }} {{ account.zip_code }}
+{{ account.state }} {{ account.country }}
+Unsubscribe: {{ unsubscribe_link }}
+Privacy: https://guildframe.com/privacy

@@ -1,0 +1,12 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { SeoFooter, SeoHeader } from "../../../components/SeoChrome";
+import { launchKit, launchKitAutomatedSignup } from "../../../launch-kit";
+import { pageMetadata, siteConfig } from "../../../site-config";
+import "../../../launch-kit.css";
+
+export const metadata: Metadata = { ...pageMetadata({ title: "Your Launch Kit Request", description: launchKitAutomatedSignup ? "Check your email to confirm your tabletop launch kit request. Receive all five files together, with ongoing lessons and offers optional." : "Email Umair to request the free tabletop launch kit. Receive all five files in a reply, without subscribing to marketing emails.", path: launchKit.thanksPath }), robots: { index: false, follow: true, googleBot: { index: false, follow: true } } };
+
+export default function LaunchKitThanksPage() {
+  return <><a className="skip-link" href="#kit-thanks-content">Skip to your kit request</a><SeoHeader /><main className="kit-main kit-thanks" id="kit-thanks-content"><span className="gf-eyebrow">Your launch kit request</span>{launchKitAutomatedSignup ? <><h1>Check your<br /><em>email.</em></h1><p>Use the confirmation link in the email to confirm your address. The complete launch kit follows after confirmation.</p><p>If you already confirmed your address, look for the delivery email with the kit download. Check your spam folder if it has not arrived.</p><p>Ongoing lessons, newsletters and offers are optional. Receiving the kit does not subscribe you to those emails unless you chose them.</p></> : <><h1>Request your<br /><em>launch kit.</em></h1><p>Email Umair to request the complete kit. I will reply with all five files. The link below opens your email app; send the message to place your request.</p><p>If you have already sent your request, look for my reply by email. Requesting the kit does not subscribe you to marketing emails.</p></>}<div className="kit-hero-actions">{!launchKitAutomatedSignup ? <a className="gf-button" href={`mailto:${siteConfig.contactEmail}?subject=Tabletop%20launch%20kit%20request`}>Email Umair for the kit</a> : null}<Link className={launchKitAutomatedSignup ? "gf-button" : "kit-text-link"} href="/guides">Read the launch guides</Link>{launchKitAutomatedSignup ? <a className="kit-text-link" href={`mailto:${siteConfig.contactEmail}?subject=Launch%20kit%20delivery%20help`}>Need help receiving it?</a> : null}</div></main><SeoFooter /></>;
+}

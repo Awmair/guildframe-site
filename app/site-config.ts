@@ -9,7 +9,7 @@ export const siteConfig = {
   serviceInquiryUrl:
     process.env.NEXT_PUBLIC_SERVICE_INQUIRY_URL?.trim() ||
     "/#start-project",
-  formEndpoint: "https://formspree.io/f/mrewkezq",
+  formEndpoint: "/api/contact",
   contactInquiryUrl:
     "/#start-project",
   analyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || null,

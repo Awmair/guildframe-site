@@ -1,0 +1,23 @@
+What would you like help making?
+
+Bring the brief. We can scope the work.
+
+If your launch needs outside help, send me your game link, target date and the work you need produced.
+
+Existing artwork is useful. It lets us discuss the concepts, campaign message, scripts, renders, GIFs, ads or trailer your project needs around material you already have.
+
+I will review the brief and reply with the next steps. We agree the deliverables, fees and timing before work starts. You can ask about a specific production project or a broader campaign scope.
+
+Send my project brief
+https://guildframe.com/buy?utm_source=launch_kit&utm_medium=email&utm_campaign=launch_kit_nurture&utm_content=project_brief#start-project
+
+Umair
+Guildframe
+
+You chose Guildframe's lessons, newsletter and service offers.
+Guildframe
+{{ account.address }}
+{{ account.city }} {{ account.zip_code }}
+{{ account.state }} {{ account.country }}
+Unsubscribe: {{ unsubscribe_link }}
+Privacy: https://guildframe.com/privacy

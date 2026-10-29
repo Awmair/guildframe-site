@@ -1,6 +1,6 @@
 # Guildframe Cloudflare Pages deployment
 
-Last reviewed: 2026-08-13
+Last reviewed: 2026-10-29
 
 Guildframe is a static Next.js export deployed through the existing Cloudflare
 Pages Git integration. GitHub stores the source, Cloudflare builds `main`, and
@@ -123,11 +123,10 @@ After a material route or metadata release:
 - Canonicals, Open Graph URLs, sitemap and robots.txt use
   `https://guildframe.com`.
 - GA4 loads and receives a controlled event.
-- `/buy` keeps the $79 Build Guide checkout closed until the product is ready.
-- The $2,500 service, 50 SKU limit, $99 monthly post-build Care Plan and free
-  tailored preview within 72 hours appear consistently.
-- Guildframe is not presented as a Shopify theme; third-party theme editorial
-  pages remain clearly independent comparisons.
+- `/buy` starts a scoped project enquiry; it has no paid-guide checkout.
+- Campaign design has its dedicated fixed-price section. Wider creative and launch services are quoted after a brief.
+- The free launch kit uses the configured Sender signup URL and verified production downloads.
+- Existing Shopify articles remain clearly independent editorial resources.
 - Mobile, tablet and desktop layouts have no horizontal overflow.
 
 If a bad release reaches production, use **Workers & Pages → Deployments** to

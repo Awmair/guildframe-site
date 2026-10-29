@@ -1,0 +1,23 @@
+What is missing from your campaign opening?
+
+Check what the first screen explains.
+
+Open your campaign draft on a phone. Can a new visitor identify the game, understand what players do and see what they would receive?
+
+Use the page checklist to name the first missing explanation. A short gameplay example or a clear view of the contents may help more than another decorative heading.
+
+Check the actual draft with someone who has not seen it. Record their question and revise the part that should have answered it.
+
+Use the page checklist
+https://guildframe.com/downloads/launch-kit/Campaign-and-Email-Templates.docx
+
+Umair
+Guildframe
+
+You chose Guildframe's lessons, newsletter and service offers.
+Guildframe
+{{ account.address }}
+{{ account.city }} {{ account.zip_code }}
+{{ account.state }} {{ account.country }}
+Unsubscribe: {{ unsubscribe_link }}
+Privacy: https://guildframe.com/privacy

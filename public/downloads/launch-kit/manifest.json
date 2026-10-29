@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "created": "2026-10-29",
+  "files": [
+    {
+      "name": "START-HERE.pdf",
+      "bytes": 10267,
+      "sha256": "16c39754f8d16ee9c970da56861ca053eb652324ecf1b48f09a5fe8fc9298a9a"
+    },
+    {
+      "name": "Tabletop-Launch-Planner.xlsx",
+      "bytes": 48879,
+      "sha256": "875ba069cdb993744246249f0bb934af83037297502359a203bc39916ac1066a"
+    },
+    {
+      "name": "Campaign-and-Email-Templates.docx",
+      "bytes": 45419,
+      "sha256": "3c295a7439d198d7d2d4c4ae0730abfb2b0c56317f12391b5d229f6ff262b77e"
+    },
+    {
+      "name": "Creative-and-Production-Briefs.docx",
+      "bytes": 42397,
+      "sha256": "a69864e9cc1640cf2bb3b6d0c8f863ab24bb279549254727aaf31982d14fe58a"
+    },
+    {
+      "name": "Examples-and-Sources.pdf",
+      "bytes": 15765,
+      "sha256": "ab5fa48b635676e6847a947485dba8f6279263e6e882c9c964fe57b2bdc6ed80"
+    }
+  ],
+  "bundle": {
+    "name": "tabletop-kickstarter-launch-kit.zip",
+    "bytes": 143295,
+    "sha256": "bf60ccf3ad13099e88bee3a19b24026e565e2f94a403591da63e6a4e9ebd5f94"
+  }
+}

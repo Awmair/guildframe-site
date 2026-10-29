@@ -1,0 +1,23 @@
+What is still missing before launch?
+
+Turn the checklist into assigned work.
+
+Use the Launch plan and Live ops tabs to list what is still unfinished. Give each item an owner, a due date and a way to confirm it is ready.
+
+Check the actual mobile campaign, reward settings, public links, email delivery, asset exports and the launch day handoff. A saved draft or an accepted form is not proof that the whole flow works.
+
+The creator still owns the platform review and final launch action. Refresh the plan if the date changes rather than sending an old countdown.
+
+Review the launch planner
+https://guildframe.com/downloads/launch-kit/Tabletop-Launch-Planner.xlsx
+
+Umair
+Guildframe
+
+You chose Guildframe's lessons, newsletter and service offers.
+Guildframe
+{{ account.address }}
+{{ account.city }} {{ account.zip_code }}
+{{ account.state }} {{ account.country }}
+Unsubscribe: {{ unsubscribe_link }}
+Privacy: https://guildframe.com/privacy

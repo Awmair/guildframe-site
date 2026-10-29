@@ -2,33 +2,42 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export function LibrarySearch({ count, noun }: { count: number; noun: "guides" | "resources" }) {
+type Filter = { value: string; label: string };
+
+export function LibrarySearch({ count, noun, filters = [] }: { count: number; noun: "guides" | "resources"; filters?: Filter[] }) {
   const search = useRef<HTMLElement>(null);
   const [matches, setMatches] = useState(count);
+  const [query, setQuery] = useState("");
+  const [stage, setStage] = useState("all");
 
   useEffect(() => {
-    const input = search.current?.querySelector("input");
-    if (input) input.disabled = false;
-    return () => { document.querySelectorAll<HTMLAnchorElement>(".guides-grid > a").forEach(link => { link.hidden = false; }); };
+    const scope = search.current?.closest("main");
+    return () => { scope?.querySelectorAll<HTMLAnchorElement>(".guides-grid > a").forEach(link => { link.hidden = false; }); };
   }, []);
 
-  function filter(value: string) {
+  function filter(value: string, selectedStage: string) {
     const terms = value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-    const links = [...document.querySelectorAll<HTMLAnchorElement>(".guides-grid > a")];
+    const scope = search.current?.closest("main") ?? document;
+    const links = [...scope.querySelectorAll<HTMLAnchorElement>(".guides-grid > a")];
     let found = 0;
     links.forEach(link => {
       const text = link.textContent?.toLocaleLowerCase() ?? "";
-      const match = terms.every(term => text.includes(term));
+      const match = (selectedStage === "all" || link.dataset.guideStage === selectedStage) && terms.every(term => text.includes(term));
       link.hidden = !match;
       if (match) found++;
+    });
+    scope.querySelectorAll<HTMLElement>("[data-guide-heading]").forEach(heading => {
+      const target = document.getElementById(heading.dataset.guideHeading ?? "");
+      heading.hidden = !!target && ![...target.querySelectorAll<HTMLAnchorElement>("a")].some(link => !link.hidden);
     });
     setMatches(found);
   }
 
-  return <search className="gf-library-search" ref={search} aria-label={`Find ${noun}`}>
+  return <search className={`gf-library-search${filters.length ? " gf-library-filters" : ""}`} ref={search} aria-label={`Find ${noun}`}>
     <noscript><style>{`.gf-library-search{display:none!important}`}</style></noscript>
     <label htmlFor="library-search">Find a {noun === "guides" ? "guide" : "resource"}</label>
-    <div><span aria-hidden="true">⌕</span><input id="library-search" type="search" disabled placeholder="Try rewards, email or miniatures" onChange={event => filter(event.target.value)} /></div>
-    <p role="status" aria-live="polite">{matches === 0 ? "No matches. Try a broader word." : `${matches} ${noun}`}</p>
+    <div className="gf-library-search-field"><span aria-hidden="true">⌕</span><input id="library-search" type="search" placeholder="Try rewards, email or miniatures" value={query} onChange={event => { setQuery(event.target.value); filter(event.target.value, stage); }}/></div>
+    {filters.length > 0 && <div className="gf-library-filter-pills" role="group" aria-label="Filter guides by launch stage">{filters.map(option => <button type="button" key={option.value} aria-pressed={stage === option.value} onClick={() => { setStage(option.value); filter(query, option.value); }}>{option.label}</button>)}</div>}
+    <p role="status" aria-live="polite">{matches === 0 ? "No matches. Try another topic or a broader word." : `${matches} ${noun}`}</p>
   </search>;
 }

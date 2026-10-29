@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import {ShaderSurface} from "./ShaderSurface";
+
 
 const concepts = [
   { image: "party-card-game", name: "Snack Attack", category: "Party card games", alt: "Original Snack Attack party game concept with a coral box, illustrated fruit cards and tokens" },
@@ -20,6 +20,7 @@ export function HeroGallery() {
   const [visible, setVisible] = useState(true);
   const [interacting, setInteracting] = useState(false);
   const [ready, setReady] = useState(false);
+  const frames = useRef(0);
 
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -45,27 +46,23 @@ export function HeroGallery() {
   }, []);
 
   useEffect(() => {
-    if (reduced || !visible || interacting || !ready) return;
-    const timer = window.setInterval(() => setActive(current => (current + 1) % concepts.length), 1800);
+    if (reduced || !visible || interacting || !ready || frames.current >= concepts.length) return;
+    const timer = window.setInterval(() => {
+      frames.current += 1;
+      setActive(current => (current + 1) % concepts.length);
+      if (frames.current >= concepts.length) window.clearInterval(timer);
+    }, 640);
     return () => window.clearInterval(timer);
   }, [reduced, visible, interacting, ready]);
 
-  return <div ref={root} className="gf-hero-visual gf-hero-gallery" role="region" aria-label="Gallery of original tabletop campaign concepts"
-    onPointerEnter={event => { if (event.pointerType === "mouse" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) setInteracting(true); }}
-    onPointerLeave={() => setInteracting(false)}>
-    <ShaderSurface kind="mesh"/>
-    <div className="gf-orbit-ground" aria-hidden="true"/>
-    {concepts.map((concept, index) => {
-      const offset = (index - active + concepts.length) % concepts.length;
-      const focal = offset === 0;
-      const angle = Math.PI * .22 + (offset - 1) / (concepts.length - 1) * Math.PI * 2;
-      const x = focal ? 50 : 50 + 36 * Math.cos(angle);
-      const y = focal ? 40 : 44 + 33 * Math.sin(angle);
-      return <figure className="gf-orbit-product" data-focal={focal} key={concept.image} style={{ transform: `translate(-50%, -50%) translate(${x.toFixed(3)}cqw, ${y.toFixed(3)}cqh) scale(${focal ? 1.9 : .5})` }}>
-        <img src={`/images/hero/${concept.image}-480w.webp`} srcSet={`/images/hero/${concept.image}-320w.webp 320w, /images/hero/${concept.image}-480w.webp 480w, /images/hero/${concept.image}-640w.webp 640w`} sizes="(max-width: 800px) 180px, 310px" width="640" height="640" alt={concept.alt} loading="eager" fetchPriority={index === 0 ? "high" : "auto"} decoding="async"/>
-        <figcaption className="gf-sr-only">{concept.name}, {concept.category}. Original concept.</figcaption>
-      </figure>;
-    })}
-    <div className="gf-orbit-caption" key={active} aria-hidden="true"><span>{concepts[active].name}</span><strong>{concepts[active].category}</strong><small>Original concept</small></div>
+  return <div ref={root} className="gf-game-gallery" role="region" aria-label="Original tabletop campaign concepts"
+    onPointerEnter={event => { if (event.pointerType === "mouse") setInteracting(true); }} onPointerLeave={() => setInteracting(false)}>
+    <div className="gf-gallery-note"><span className="gf-gallery-spark" aria-hidden="true">✳</span><span>Different games.<br/><strong>Different ways to play.</strong></span></div>
+    <div className="gf-gallery-stage">{concepts.map((concept, index) => <figure key={concept.image} className="gf-gallery-product" data-position={(index - active + concepts.length) % concepts.length}>
+      <img src={`/images/hero/${concept.image}-480w.webp`} srcSet={`/images/hero/${concept.image}-320w.webp 320w, /images/hero/${concept.image}-480w.webp 480w, /images/hero/${concept.image}-640w.webp 640w`} sizes="(max-width: 650px) 280px, (max-width: 1000px) 350px, 410px" width="640" height="640" alt={concept.alt} loading="eager" fetchPriority={index === 0 ? "high" : "auto"} decoding="async"/>
+      <figcaption className="gf-sr-only">{concept.name}. {concept.category}. Original concept.</figcaption>
+    </figure>)}</div>
+    <div className="gf-gallery-caption" aria-hidden="true"><div><span>On the studio table</span><strong>{concepts[active].name}</strong></div><span className="gf-gallery-category">{concepts[active].category}</span></div>
+    <p className="gf-gallery-disclaimer">Original concepts. Client work below.</p>
   </div>;
 }

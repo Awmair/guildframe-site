@@ -1,0 +1,25 @@
+A clearer first paragraph for your campaign
+
+Does the opening explain the game?
+
+Read the first paragraph of your campaign without looking at the art. Does it explain what players do, or does it mainly describe the setting?
+
+Write one sentence about the player decision. Then show the opening to someone who has not seen the game and ask them to explain the turn back to you. Their first question gives you something concrete to improve.
+
+For a miniature collection or accessory, adapt the exercise: what can someone make, use or play with it, and what exactly is included?
+
+If you want help turning your existing artwork into a clearer campaign message or finished launch assets, send me the game, target date and the work you need. I will review the brief and reply with the next steps.
+
+Send my project brief
+https://guildframe.com/buy?utm_source=newsletter&utm_medium=email&utm_campaign=tabletop_notes&utm_content=campaign_opening#start-project
+
+Umair
+Guildframe
+
+You chose Guildframe's lessons, newsletter and service offers.
+Guildframe
+{{ account.address }}
+{{ account.city }} {{ account.zip_code }}
+{{ account.state }} {{ account.country }}
+Unsubscribe: {{ unsubscribe_link }}
+Privacy: https://guildframe.com/privacy

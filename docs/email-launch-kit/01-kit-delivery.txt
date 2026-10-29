@@ -1,0 +1,23 @@
+Your tabletop launch kit
+
+Your launch kit is ready.
+
+Start with the short PDF guide, then choose the part that helps with your next decision. The ZIP contains all five files, including the editable launch planner and Word documents.
+
+The workbook covers funding, rewards, costs, shipping, cash timing and the work around launch. Use the templates to plan your campaign message and emails, then brief the creative assets you need.
+
+You have the complete kit now. Replace the examples with your own confirmed details and keep an editable copy for your team.
+
+Download the complete kit
+https://guildframe.com/downloads/launch-kit/tabletop-kickstarter-launch-kit.zip
+
+Umair
+Guildframe
+
+You requested the Guildframe launch kit.
+Guildframe
+{{ account.address }}
+{{ account.city }} {{ account.zip_code }}
+{{ account.state }} {{ account.country }}
+Unsubscribe: {{ unsubscribe_link }}
+Privacy: https://guildframe.com/privacy

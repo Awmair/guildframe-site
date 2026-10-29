@@ -1,0 +1,23 @@
+Can someone compare your rewards without asking?
+
+Put the rewards side by side.
+
+Compare each tier using exact products, quantities and formats. Mark optional extras separately from included contents.
+
+For a card game, check deck and card counts. For an RPG, separate PDF and print. For miniatures, separate physical pieces and files. Keep that same inventory in the story, graphics and platform reward settings.
+
+Use the reward comparison template and record how shipping will be explained. Ask the person responsible for costs and fulfilment to confirm the details before publishing.
+
+Check the reward comparison
+https://guildframe.com/downloads/launch-kit/Campaign-and-Email-Templates.docx
+
+Umair
+Guildframe
+
+You chose Guildframe's lessons, newsletter and service offers.
+Guildframe
+{{ account.address }}
+{{ account.city }} {{ account.zip_code }}
+{{ account.state }} {{ account.country }}
+Unsubscribe: {{ unsubscribe_link }}
+Privacy: https://guildframe.com/privacy

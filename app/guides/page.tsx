@@ -1,3 +1,4 @@
+import "./library.css";
 import { LibrarySearch } from "../components/LibrarySearch";
 import Link from "next/link";
 import {launchGuides} from "../launch-guides";
@@ -97,6 +98,36 @@ const afterFundingGuides = [
 const campaignGuides = launchGuides.map(g=>({title:g.title,copy:g.description,href:`/guides/${g.slug}`,tag:g.tag}));
 const guides=[...campaignGuides,...afterFundingGuides];
 
+const guideFilters = [
+  { value: "all", label: "All guides" },
+  { value: "planning", label: "Launch planning" },
+  { value: "audience", label: "Audience & ads" },
+  { value: "campaign", label: "The campaign page" },
+  { value: "formats", label: "Your game format" },
+  { value: "after", label: "After funding" },
+];
+function guideStage(href: string) {
+  if (/marketing-plan|launch-timeline|funding-goal|cash-flow|manufactur/.test(href)) return "planning";
+  if (/email|prelaunch|advertis|meta-ads|roas|cpa|landing|community|facebook|conversion/.test(href)) return "audience";
+  if (/launch-guide|ttrpg|miniatures|card-game|gamefound/.test(href) && !/page|reward/.test(href)) return "formats";
+  if (/page|graphic|reward|video|stretch|story|gameplay|component|shipping|budget/.test(href)) return "campaign";
+  return "planning";
+}
+function guideImage(href: string, index: number) {
+  if (/miniature|terrain/.test(href)) return "miniature-terrain";
+  if (/ttrpg|rpg/.test(href)) return "rpg-book";
+  if (/card-game|tcg/.test(href)) return "trading-card-game";
+  const images = ["strategy-board-game", "party-card-game", "dice-accessories", "rpg-book", "trading-card-game", "miniature-terrain"];
+  return images[index % images.length];
+}
+function GuideCard({ guide, index, stage }: { guide: { title: string; copy: string; href: string; tag: string }; index: number; stage: string }) {
+  const image = guideImage(guide.href, index);
+  return <Link href={guide.href} className="gf-library-card" data-guide-stage={stage} data-tone={index % 6}>
+    <div className="gf-library-card-art" aria-hidden="true"><span className="gf-library-card-type">Guildframe field guide</span><img src={`/images/hero/${image}-480w.webp`} srcSet={`/images/hero/${image}-320w.webp 320w, /images/hero/${image}-480w.webp 480w`} sizes="(max-width: 650px) 70vw, (max-width: 1000px) 40vw, 290px" width="640" height="640" alt="" loading="lazy"/><span className="gf-library-card-number">{String(index + 1).padStart(2, "0")}</span></div>
+    <div className="gf-library-card-copy"><span>{guide.tag}</span><h2>{guide.title}</h2><p>{guide.copy}</p><strong>Read the guide</strong></div>
+  </Link>;
+}
+
 export default function GuidesPage() {
   return (
     <>
@@ -138,35 +169,26 @@ export default function GuidesPage() {
       }} />
       <a className="skip-link" href="#guides-content">Skip to guides</a>
       <SeoHeader />
-      <main className="guides-main" id="guides-content">
+      <main className="guides-main gf-studio-library" id="guides-content">
         <section className="guides-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
-          <h1>Kickstarter marketing <em>&amp; launch guides.</em></h1>
-          <p>
-            Plan your audience, emails, ads and campaign page before launch. Find practical guidance for board games, card games, RPGs, miniatures and Gamefound projects.
-          </p>
+          <span className="gf-eyebrow">The Guildframe field notes</span>
+          <h1>A clearer path<br/><em>to your next launch.</em></h1>
+          <p>Practical guides for tabletop creators. Work through the plan, the audience, the page and everything that comes after funding.</p>
+          <Link href="/resources/tabletop-kickstarter-launch-kit" className="gf-library-kit-link"><span>Prefer working files?</span> Get the free tabletop launch kit</Link>
         </section>
         <nav className="guide-start-here" aria-label="Start with your launch stage">
-          <Link href="/guides/board-game-kickstarter-marketing-plan"><span>01 / PLAN THE LAUNCH</span><strong>What needs to happen before launch?</strong><p>Build a practical schedule for the product, audience and campaign.</p></Link>
-          <Link href="/guides/kickstarter-advertising-budget-board-games"><span>02 / CHECK THE NUMBERS</span><strong>What can you afford to spend?</strong><p>Work out the reward margin and put limits around paid acquisition.</p></Link>
-          <Link href="/guides/board-game-kickstarter-page-checklist"><span>03 / PREPARE THE PAGE</span><strong>Can a new backer understand your game?</strong><p>Review gameplay, rewards and delivery before publishing.</p></Link>
+          <Link href="/guides/board-game-kickstarter-marketing-plan"><span>01 / MAKE THE PLAN</span><strong>What needs to happen before launch?</strong><p>Put the product, audience and campaign in a practical order.</p></Link>
+          <Link href="/guides/kickstarter-advertising-budget-board-games"><span>02 / CHECK THE NUMBERS</span><strong>What can you afford to spend?</strong><p>Check reward margins before choosing an ad budget.</p></Link>
+          <Link href="/guides/board-game-kickstarter-page-checklist"><span>03 / PREPARE THE PAGE</span><strong>Can a new backer understand the game?</strong><p>Review gameplay, rewards and delivery before publishing.</p></Link>
         </nav>
-        <LibrarySearch count={guides.length} noun="guides"/>
-        <nav className="guide-topic-nav" aria-label="Guide topics"><Link href="#launch-guides">Campaign launch guides</Link><Link href="/guides/card-game-kickstarter-launch-guide">Card games &amp; TCGs</Link><Link href="/guides/ttrpg-kickstarter-campaign-page-design">Tabletop RPGs</Link><Link href="/guides/miniatures-stl-kickstarter-launch-guide">Miniatures &amp; STL files</Link><Link href="#after-funding">After funding</Link><Link href="/resources/tabletop-campaign-launch-worksheet">Launch worksheet</Link></nav>
-        <section className="guides-grid" id="launch-guides">
-          {campaignGuides.map((guide, index) => (
-            <Link href={guide.href} key={guide.title} data-reveal>
-              <div>
-                <span>{guide.tag}</span>
-                <b>{String(index + 1).padStart(2, "0")}</b>
-              </div>
-              <h2>{guide.title}</h2>
-              <p>{guide.copy}</p>
-              <strong>Read the guide</strong>
-            </Link>
-          ))}
+        <LibrarySearch count={guides.length} noun="guides" filters={guideFilters}/>
+        <section className="guides-grid" id="launch-guides" aria-label="Campaign launch guides">
+          {campaignGuides.map((guide, index) => <GuideCard guide={guide} index={index} stage={guideStage(guide.href)} key={guide.href}/>)}
         </section>
-        <section className="gf-archive-heading" id="after-funding"><h2>After funding</h2><p>Plan fulfilment, a permanent store and ongoing sales once your campaign is funded.</p></section><section className="guides-grid">{afterFundingGuides.map(guide=><Link href={guide.href} key={guide.href}><div><span>{guide.tag}</span></div><h2>{guide.title}</h2><p>{guide.copy}</p><strong>Read the guide</strong></Link>)}</section>
+        <section className="gf-archive-heading" id="after-funding" data-guide-heading="after-funding-guides"><span className="gf-eyebrow">Keep the next stage in view</span><h2>After funding</h2><p>Plan fulfilment, ongoing orders and a permanent home for the game.</p></section>
+        <section className="guides-grid" id="after-funding-guides" aria-label="After funding guides">{afterFundingGuides.map((guide, index) => <GuideCard guide={guide} index={index + campaignGuides.length} stage="after" key={guide.href}/>)}</section>
+        <p className="gf-library-art-note">Guide illustrations show original fictional game concepts.</p>
         <section className="guides-solutions">
           <div>
             <h2>Find the service for your project.</h2>

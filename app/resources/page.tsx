@@ -13,6 +13,7 @@ export const metadata = pageMetadata({
 });
 
 const resources = [
+  {title:"Free Tabletop Kickstarter Launch Kit",copy:"Get an editable launch planner, campaign and email templates, creative briefs and five fictional examples. Request the complete kit by email.",href:"/resources/tabletop-kickstarter-launch-kit",tag:"Free launch kit"},
   {title:"Tabletop Campaign Launch Worksheet",copy:"A reusable brief for game facts, asset status, rewards, shipping and final launch checks. Download it and fill it in with your team.",href:"/resources/tabletop-campaign-launch-worksheet",tag:"Campaign planning"},
   {
     title: "Tabletop Shopify Metafield Schema",

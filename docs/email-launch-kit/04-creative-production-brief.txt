@@ -1,0 +1,23 @@
+Turn your existing artwork into a production brief
+
+Give each asset a job.
+
+List the artwork, component files and gameplay footage you already have. Then decide which assets still need making.
+
+For each proposed render, GIF, ad variant or trailer, write the message, destination, format and deadline. Add the source files, rights, approval owner and review rounds. A script should say what appears on screen as well as what the viewer hears.
+
+If you already have a publisher team and finished artwork, this brief can focus on concepts, messaging, scripts and production. You do not need to start the whole campaign again.
+
+Complete the creative brief
+https://guildframe.com/downloads/launch-kit/Creative-and-Production-Briefs.docx
+
+Umair
+Guildframe
+
+You chose Guildframe's lessons, newsletter and service offers.
+Guildframe
+{{ account.address }}
+{{ account.city }} {{ account.zip_code }}
+{{ account.state }} {{ account.country }}
+Unsubscribe: {{ unsubscribe_link }}
+Privacy: https://guildframe.com/privacy

@@ -1,0 +1,173 @@
+{
+  "from_name": "Umair at Guildframe",
+  "reply_to": "umair@guildframe.com",
+  "trigger": "Address confirmed for launch kit",
+  "timing": "Days since complete-kit delivery; never restart on repeat requests",
+  "marketing_gate": "Explicit optional marketing group membership required for messages 02 to 07 and newsletter",
+  "send_time_exclusions": [
+    "unsubscribed",
+    "complaint",
+    "hard_bounce",
+    "repeated_soft_bounce",
+    "active_enquiry",
+    "proposal_sent",
+    "client_active"
+  ],
+  "messages": [
+    {
+      "id": "01-kit-delivery",
+      "day": 0,
+      "subject": "Your tabletop launch kit",
+      "preview": "Your complete kit, including the editable workbook and documents.",
+      "heading": "Your launch kit is ready.",
+      "paragraphs": [
+        "Start with the short PDF guide, then choose the part that helps with your next decision. The ZIP contains all five files, including the editable launch planner and Word documents.",
+        "The workbook covers funding, rewards, costs, shipping, cash timing and the work around launch. Use the templates to plan your campaign message and emails, then brief the creative assets you need.",
+        "You have the complete kit now. Replace the examples with your own confirmed details and keep an editable copy for your team."
+      ],
+      "cta": "Download the complete kit",
+      "url": "https://guildframe.com/downloads/launch-kit/tabletop-kickstarter-launch-kit.zip",
+      "marketing": false,
+      "stages": [
+        "all"
+      ]
+    },
+    {
+      "id": "02-one-sentence-pitch",
+      "day": 2,
+      "subject": "Can a new player explain your game?",
+      "preview": "A short exercise for the first sentence of your campaign.",
+      "heading": "Write the sentence a new player needs.",
+      "paragraphs": [
+        "Try this sentence: You are [role], trying to [goal], by [the decision that makes this game interesting]. Read it to someone who has not played.",
+        "Ask what they think they will actually do. If they describe the theme but cannot describe a choice, revise the sentence around that choice.",
+        "Use the campaign template to draft the message. For an RPG, explain the characters and play experience. For miniatures or an accessory, explain what the product lets someone make, use or play."
+      ],
+      "cta": "Open the campaign templates",
+      "url": "https://guildframe.com/downloads/launch-kit/Campaign-and-Email-Templates.docx",
+      "marketing": true,
+      "stages": [
+        "planning",
+        "prelaunch",
+        "live"
+      ]
+    },
+    {
+      "id": "03-campaign-opening",
+      "day": 5,
+      "subject": "What is missing from your campaign opening?",
+      "preview": "Check the first screen on a phone before adding more design.",
+      "heading": "Check what the first screen explains.",
+      "paragraphs": [
+        "Open your campaign draft on a phone. Can a new visitor identify the game, understand what players do and see what they would receive?",
+        "Use the page checklist to name the first missing explanation. A short gameplay example or a clear view of the contents may help more than another decorative heading.",
+        "Check the actual draft with someone who has not seen it. Record their question and revise the part that should have answered it."
+      ],
+      "cta": "Use the page checklist",
+      "url": "https://guildframe.com/downloads/launch-kit/Campaign-and-Email-Templates.docx",
+      "marketing": true,
+      "stages": [
+        "prelaunch",
+        "live"
+      ]
+    },
+    {
+      "id": "04-creative-production-brief",
+      "day": 8,
+      "subject": "Turn your existing artwork into a production brief",
+      "preview": "Give every render, GIF or video a clear job.",
+      "heading": "Give each asset a job.",
+      "paragraphs": [
+        "List the artwork, component files and gameplay footage you already have. Then decide which assets still need making.",
+        "For each proposed render, GIF, ad variant or trailer, write the message, destination, format and deadline. Add the source files, rights, approval owner and review rounds. A script should say what appears on screen as well as what the viewer hears.",
+        "If you already have a publisher team and finished artwork, this brief can focus on concepts, messaging, scripts and production. You do not need to start the whole campaign again."
+      ],
+      "cta": "Complete the creative brief",
+      "url": "https://guildframe.com/downloads/launch-kit/Creative-and-Production-Briefs.docx",
+      "marketing": true,
+      "stages": [
+        "planning",
+        "prelaunch",
+        "live",
+        "after_campaign"
+      ]
+    },
+    {
+      "id": "05-reward-clarity",
+      "day": 12,
+      "subject": "Can someone compare your rewards without asking?",
+      "preview": "One comparison table can expose missing information.",
+      "heading": "Put the rewards side by side.",
+      "paragraphs": [
+        "Compare each tier using exact products, quantities and formats. Mark optional extras separately from included contents.",
+        "For a card game, check deck and card counts. For an RPG, separate PDF and print. For miniatures, separate physical pieces and files. Keep that same inventory in the story, graphics and platform reward settings.",
+        "Use the reward comparison template and record how shipping will be explained. Ask the person responsible for costs and fulfilment to confirm the details before publishing."
+      ],
+      "cta": "Check the reward comparison",
+      "url": "https://guildframe.com/downloads/launch-kit/Campaign-and-Email-Templates.docx",
+      "marketing": true,
+      "stages": [
+        "prelaunch",
+        "live"
+      ]
+    },
+    {
+      "id": "06-launch-readiness",
+      "day": 17,
+      "subject": "What is still missing before launch?",
+      "preview": "Name the owner and evidence for each final check.",
+      "heading": "Turn the checklist into assigned work.",
+      "paragraphs": [
+        "Use the Launch plan and Live ops tabs to list what is still unfinished. Give each item an owner, a due date and a way to confirm it is ready.",
+        "Check the actual mobile campaign, reward settings, public links, email delivery, asset exports and the launch day handoff. A saved draft or an accepted form is not proof that the whole flow works.",
+        "The creator still owns the platform review and final launch action. Refresh the plan if the date changes rather than sending an old countdown."
+      ],
+      "cta": "Review the launch planner",
+      "url": "https://guildframe.com/downloads/launch-kit/Tabletop-Launch-Planner.xlsx",
+      "marketing": true,
+      "stages": [
+        "prelaunch"
+      ]
+    },
+    {
+      "id": "07-project-brief",
+      "day": 21,
+      "subject": "What would you like help making?",
+      "preview": "Share the game, the assets you have and the work you need.",
+      "heading": "Bring the brief. We can scope the work.",
+      "paragraphs": [
+        "If your launch needs outside help, send me your game link, target date and the work you need produced.",
+        "Existing artwork is useful. It lets us discuss the concepts, campaign message, scripts, renders, GIFs, ads or trailer your project needs around material you already have.",
+        "I will review the brief and reply with the next steps. We agree the deliverables, fees and timing before work starts. You can ask about a specific production project or a broader campaign scope."
+      ],
+      "cta": "Send my project brief",
+      "url": "https://guildframe.com/buy?utm_source=launch_kit&utm_medium=email&utm_campaign=launch_kit_nurture&utm_content=project_brief#start-project",
+      "marketing": true,
+      "stages": [
+        "planning",
+        "prelaunch",
+        "live",
+        "after_campaign"
+      ]
+    }
+  ],
+  "monthly_newsletter": {
+    "id": "08-monthly-newsletter-template",
+    "day": null,
+    "subject": "A clearer first paragraph for your campaign",
+    "preview": "One practical check before you commission another graphic.",
+    "heading": "Does the opening explain the game?",
+    "paragraphs": [
+      "Read the first paragraph of your campaign without looking at the art. Does it explain what players do, or does it mainly describe the setting?",
+      "Write one sentence about the player decision. Then show the opening to someone who has not seen the game and ask them to explain the turn back to you. Their first question gives you something concrete to improve.",
+      "For a miniature collection or accessory, adapt the exercise: what can someone make, use or play with it, and what exactly is included?",
+      "If you want help turning your existing artwork into a clearer campaign message or finished launch assets, send me the game, target date and the work you need. I will review the brief and reply with the next steps."
+    ],
+    "cta": "Send my project brief",
+    "url": "https://guildframe.com/buy?utm_source=newsletter&utm_medium=email&utm_campaign=tabletop_notes&utm_content=campaign_opening#start-project",
+    "marketing": true,
+    "stages": [
+      "all"
+    ]
+  }
+}
