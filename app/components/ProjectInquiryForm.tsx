@@ -3,9 +3,12 @@ import {type FormEvent,useState} from "react";
 import Link from "next/link";
 import {siteConfig} from "../site-config";
 import {getLeadAttribution,getObservedAiSource,hasAnalyticsConsent} from "./lead-attribution";
+import {ContactSecurity} from "./ContactSecurity";
 const nativeFormspree = siteConfig.formEndpoint.startsWith("https://formspree.io/");
 export function ProjectInquiryForm({source}:{source:string}) {
  const [status,setStatus]=useState<"idle"|"sending"|"sent"|"error">("idle");
+ const [securityToken,setSecurityToken]=useState("");
+ const [securityReset,setSecurityReset]=useState(0);
  async function submitInquiry(event:FormEvent<HTMLFormElement>) {
   if(status==="sending"){event.preventDefault();return;}const form=event.currentTarget;const data=new FormData(form);data.set("page_url",`${window.location.origin}${window.location.pathname}`);
   const attribution=getLeadAttribution();
@@ -20,12 +23,12 @@ export function ProjectInquiryForm({source}:{source:string}) {
    }
    return;
   }
-  event.preventDefault();setStatus("sending");
+  event.preventDefault();if(!securityToken)return;setStatus("sending");
   try {const response=await fetch(siteConfig.formEndpoint,{method:"POST",body:data,headers:{Accept:"application/json"}});if(!response.ok)throw new Error("Request failed");setStatus("sent");
    try {
     if(hasAnalyticsConsent())window.gtag?.("event","generate_lead",{lead_type:data.get("service_interest"),launch_timing:data.get("launch_timing"),game_category:data.get("game_category"),platform:data.get("platform"),form_location:window.location.pathname,self_reported_source:data.get("heard_about")||undefined,ai_source:getObservedAiSource(attribution),...attribution});
    } catch { /* Form success does not depend on analytics or storage. */ }
-   form.reset();}catch{setStatus("error");}
+   form.reset();}catch{setStatus("error");}finally{setSecurityToken("");setSecurityReset(value=>value+1);}
  }
  return <section className="gf-contact" id="start-project" aria-labelledby="contact-title"><div className="gf-contact-copy"><span className="gf-eyebrow">Tell me about your project</span><h2 id="contact-title">Let’s plan{" "}<br /><em>your game launch.</em></h2><p>Share your game, target date and the work you need help with. I’ll review it and reply with the next steps. Want to see a creative direction first? Choose the free opening mockup.</p><div className="gf-contact-points"><span>No payment to request</span><span>No obligation to book</span></div><a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a><p className="gf-small">Launch services are quoted around your project. We agree the deliverables, fees, ad budget and schedule before work starts. The free mockup covers one opening campaign section using your artwork.</p></div>
  <form action={siteConfig.formEndpoint} method="POST" onSubmit={submitInquiry} className="gf-form glass" data-clarity-mask="true">
@@ -40,7 +43,8 @@ export function ProjectInquiryForm({source}:{source:string}) {
  <label className="gf-form-wide"><span>How did you hear about Guildframe? <small>(optional)</small></span><select name="heard_about" defaultValue=""><option value="">Choose if you remember</option><option>Google or another search engine</option><option>An AI assistant</option><option>A recommendation</option><option>A tabletop community</option><option>Social media</option><option>Something else</option><option>I do not remember</option></select></label>
  <label className="gf-form-wide"><span>Tell me about your game and launch plans</span><textarea name="message" rows={4} placeholder="What is the game, when do you want to launch, and what artwork is ready?" required /></label>
  <label className="project-inquiry-honeypot" aria-hidden="true">Leave this empty<input name="_gotcha" tabIndex={-1} autoComplete="off" /></label>
- <button className="gf-button gf-form-wide" type="submit" disabled={status==="sending"||status==="sent"}>{status==="sending"?"Sending…":status==="sent"?"Request received":nativeFormspree?"Continue to send":"Send my project"}</button>
+ {!nativeFormspree&&<><input type="hidden" name="cf-turnstile-response" value={securityToken}/><ContactSecurity onToken={setSecurityToken} resetKey={securityReset}/></>}
+ <button className="gf-button gf-form-wide" type="submit" disabled={status==="sending"||status==="sent"||(!nativeFormspree&&!securityToken)}>{status==="sending"?"Sending…":status==="sent"?"Request received":nativeFormspree?"Continue to send":"Send my project"}</button>
  <p className="gf-form-wide gf-form-status" role="status" aria-live="polite">{status==="sent"?"Thanks for sending your project. I’ll reply to your email.":status==="error"?<>Your request could not be sent. Please try again or <a href={`mailto:${siteConfig.contactEmail}`}>email {siteConfig.contactEmail}</a>.</>:<>{nativeFormspree&&<>Next, complete the security check to send your enquiry. </>}I’ll use your details to reply about this project. This does not subscribe you to marketing emails. <Link href="/privacy">Privacy notice</Link>.</>}</p>
  </form></section>;
 }

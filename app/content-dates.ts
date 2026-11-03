@@ -14,7 +14,7 @@ export function formatContentDate(value: string) {
 
 export const contentDates = {
   launchKit: "2026-10-29",
-  privacy: "2026-10-29",
+  privacy: "2026-11-03",
   terms: "2026-10-29",
   home: "2026-10-29",
   work: "2026-10-17",

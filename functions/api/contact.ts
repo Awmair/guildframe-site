@@ -159,8 +159,8 @@ async function verifyTurnstile(request: Request, secret: string, token: string, 
     method: "POST", headers: { "Content-Type": "application/json" }, signal: AbortSignal.timeout(8000),
     body: JSON.stringify({ secret, response: token, remoteip: request.headers.get("CF-Connecting-IP") || undefined }),
   });
-  const result = await response.json() as { success?: boolean; hostname?: string };
-  if (!response.ok || !result.success || !result.hostname || ![...origins].some(origin => new URL(origin).hostname === result.hostname)) {
+  const result = await response.json() as { success?: boolean; hostname?: string; action?: string };
+  if (!response.ok || !result.success || result.action !== "contact" || !result.hostname || ![...origins].some(origin => new URL(origin).hostname === result.hostname)) {
     throw new InputError(422, "The security check expired or failed. Please try again.");
   }
 }
@@ -199,11 +199,11 @@ export async function onRequest(context: ContactContext): Promise<Response> {
     const key = env.SENDER_API_KEY?.trim();
     const from = env.SENDER_FROM_EMAIL?.trim();
     const fromName = env.SENDER_FROM_NAME?.trim() || "Guildframe website";
-    if (!key || !from || !emailIsValid(from) || fromName.length > 100 || /[\r\n\u0000]/.test(fromName)) {
+    if (!key || !from || !env.TURNSTILE_SECRET_KEY?.trim() || !emailIsValid(from) || fromName.length > 100 || /[\r\n\u0000]/.test(fromName)) {
       console.error("contact_not_configured", { requestId });
       return reply(request, 503, `The form is temporarily unavailable. Please email ${RECIPIENT}.`, requestId);
     }
-    if (env.TURNSTILE_SECRET_KEY) await verifyTurnstile(request, env.TURNSTILE_SECRET_KEY, fields["cf-turnstile-response"] || "", origins);
+    await verifyTurnstile(request, env.TURNSTILE_SECRET_KEY, fields["cf-turnstile-response"] || "", origins);
     const rows = Object.entries(LABELS).filter(([key]) => fields[key]);
     const [replyLocal, replyDomain] = fields.email.split("@");
     const replyUrl = `mailto:${encodeURIComponent(replyLocal)}@${replyDomain}?subject=${encodeURIComponent("Re: your Guildframe project")}`;

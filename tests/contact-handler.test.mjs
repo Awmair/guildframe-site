@@ -2,17 +2,25 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { onRequest } from "../functions/api/contact.ts";
 
-const environment = { SENDER_API_KEY: "test-server-secret", SENDER_FROM_EMAIL: "umair@guildframe.com" };
-const details = { name: "Test Creator", email: "creator@example.com", game_category: "Board game", service_interest: "Campaign copy and design", message: "Please help with our launch." };
+const environment = { SENDER_API_KEY: "test-server-secret", SENDER_FROM_EMAIL: "umair@guildframe.com", TURNSTILE_SECRET_KEY: "test-turnstile-secret" };
+const details = { name: "Test Creator", email: "creator@example.com", game_category: "Board game", service_interest: "Campaign copy and design", message: "Please help with our launch.", "cf-turnstile-response": "test-browser-token" };
 function request(fields = details, options = {}) {
   return new Request("https://guildframe.com/api/contact", { method: "POST", headers: { Origin: "https://guildframe.com", Accept: "application/json", "Content-Type": "application/json", ...options.headers }, body: options.body ?? JSON.stringify(fields) });
 }
-function mockFetch(t, implementation) {
+function mockFetch(t, implementation, verification = () => Response.json({ success: true, hostname: "guildframe.com", action: "contact" })) {
   const calls = [];
-  t.mock.method(globalThis, "fetch", async (url, options) => { calls.push({ url: String(url), options, body: options?.body ? JSON.parse(options.body) : undefined }); return implementation(url, options, calls.length); });
+  calls.verifications = [];
+  t.mock.method(globalThis, "fetch", async (url, options) => { if(String(url).includes("/turnstile/v0/siteverify")){calls.verifications.push(JSON.parse(options.body));return verification(url,options);} calls.push({ url: String(url), options, body: options?.body ? JSON.parse(options.body) : undefined }); return implementation(url, options, calls.length); });
   return calls;
 }
 const accepted = () => Response.json({ success: true, emailId: "test-email-id" });
+
+test("contact protection cannot silently switch off when its secret is missing", async t => {
+  const calls = mockFetch(t, accepted);
+  const response = await onRequest({ request: request(), env: { ...environment, TURNSTILE_SECRET_KEY: undefined } });
+  assert.equal(response.status, 503);
+  assert.equal(calls.length, 0, "an unverified submission must never reach the mail provider");
+});
 
 test("delivers to a fixed inbox, escapes HTML and keeps the credential server-side", async t => {
   const calls = mockFetch(t, accepted);
@@ -144,13 +152,37 @@ test("an unknown subscriber stays outside marketing and lookup failures do not u
   assert.ok(calls.every(call => call.url.endsWith("/message/send") || call.options.method === undefined));
 });
 
-test("configured Turnstile is required and checked for the trusted hostname", async t => {
-  const calls = mockFetch(t, () => Response.json({ success: true, hostname: "attacker.example" }));
-  const env = { ...environment, TURNSTILE_SECRET_KEY: "test-turnstile-secret" };
-  assert.equal((await onRequest({ request: request(), env })).status, 422);
-  assert.equal((await onRequest({ request: request({ ...details, "cf-turnstile-response": "token" }), env })).status, 422);
-  assert.equal(calls.length, 1);
-  assert.equal(calls[0].url, "https://challenges.cloudflare.com/turnstile/v0/siteverify");
+test("missing, rejected, replayed, wrong-host and wrong-action tokens never reach Sender", async t => {
+  let result = { success: false, "error-codes": ["timeout-or-duplicate"] };
+  const calls = mockFetch(t, accepted, () => Response.json(result));
+  const missing = await onRequest({ request: request({ ...details, "cf-turnstile-response": "" }), env: environment });
+  assert.equal(missing.status, 422);
+  assert.equal(calls.verifications.length, 0);
+  for (const invalid of [result, {success:true, hostname:"attacker.example", action:"contact"}, {success:true, hostname:"guildframe.com", action:"signup"}, {success:true, hostname:"guildframe.com"}]) {
+    result = invalid;
+    assert.equal((await onRequest({request:request(),env:environment})).status,422);
+  }
+  assert.equal(calls.length,0);
+  assert.equal(calls.verifications.length,4);
+  assert.equal(calls.verifications[0].secret,"test-turnstile-secret");
+});
+
+test("verification service failure fails closed without sending email", async t => {
+  const calls = mockFetch(t, accepted, () => {throw new Error("verification unavailable")});
+  assert.equal((await onRequest({request:request(),env:environment})).status,503);
+  assert.equal(calls.length,0);
+});
+
+test("a verified multilingual enquiry is delivered and a reused token is rejected", async t => {
+  let used = false;
+  const calls = mockFetch(t, accepted, () => {
+    const result = used ? {success:false,"error-codes":["timeout-or-duplicate"]} : {success:true,hostname:"guildframe.com",action:"contact"};
+    used = true; return Response.json(result);
+  });
+  const fields = {...details,message:"Здравейте! Разработваме настолна игра. Can you help us launch?"};
+  assert.equal((await onRequest({request:request(fields),env:environment})).status,200);
+  assert.equal((await onRequest({request:request(fields),env:environment})).status,422);
+  assert.equal(calls.length,1);
 });
 
 test("method errors and native no-JavaScript responses are usable", async t => {

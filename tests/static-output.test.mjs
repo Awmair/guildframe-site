@@ -530,7 +530,7 @@ const readableDate = (iso) => {
 // updates because nothing compared it with app/content-dates.ts.
 const datedPages = new Map([
   ["/resources/tabletop-kickstarter-launch-kit", "2026-10-29"],
-  ["/privacy", "2026-10-29"],
+  ["/privacy", "2026-11-03"],
   ["/terms", "2026-10-29"],
   ["/guides/when-to-hire-kickstarter-campaign-designer", "2026-10-03"],
   ["/guides/kickstarter-campaign-graphics-mobile-readability", "2026-10-03"],
