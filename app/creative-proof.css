@@ -152,3 +152,8 @@
 @media (prefers-reduced-motion: reduce) {
   .gf-walkthrough-stage[data-playing="true"] img { transform: none !important; transition: none; }
 }
+.gf-walkthrough-video::cue {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .85);
+  font-size: clamp(14px, 1.25vw, 18px);
+}
