@@ -109,7 +109,9 @@ test("exports every public page with search essentials", async (t) => {
       const html = await readPage(path);
       assert.equal(html.match(/<title>([^<]+)<\/title>/i)?.[1].replaceAll("&amp;", "&"), title);
       assert.match(html, /<meta name="description" content="[^"]+"/i);
-      assert.equal(html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1], `${siteOrigin}${path}`);
+      const canonical = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
+      assert.ok(canonical, `missing canonical: ${path}`);
+      assert.equal(new URL(canonical).href, new URL(`${siteOrigin}${path}`).href);
       assert.match(html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " "), new RegExp(phrase, "i"));
       assert.match(html, /application\/ld\+json/i);
       assert.doesNotMatch(html, /<meta name="robots" content="noindex/i);
