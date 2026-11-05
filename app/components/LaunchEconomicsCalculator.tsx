@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { calculateLaunchEconomics, type LaunchEconomicsInput } from "../launch-economics";
 
 const defaults = { pledge: "60", variableCost: "30", feesPercent: "8", failedPercent: "5", reserve: "5", adSpend: "1000", fixedFees: "500", costPerLead: "2", conversionPercent: "5" };
@@ -45,6 +46,6 @@ export function LaunchEconomicsCalculator() {
       <p>This models one average reward and a paid signup audience. It excludes minimum factory orders, unsold stock, tax, cash timing, other audiences and any costs you have not entered. Do not add email subscribers to platform followers without removing overlap.</p>
     </details>
     <noscript><p>The starting example is shown above. Enable JavaScript to change the values, or use the formulas with the downloadable worksheet.</p></noscript>
-    <p className="economics-next"><a href="/downloads/launch-ad-budget-scenarios.csv" download>Download the worked scenario</a><a href="/resources/tabletop-kickstarter-launch-kit">Get the editable launch kit</a></p>
+    <p className="economics-next"><a href="/downloads/launch-ad-budget-scenarios.csv" download>Download the worked scenario</a><Link href="/resources/tabletop-kickstarter-launch-kit">Get the editable launch kit</Link></p>
   </section>;
 }
