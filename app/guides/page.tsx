@@ -172,15 +172,15 @@ export default function GuidesPage() {
       <main className="guides-main gf-studio-library" id="guides-content">
         <section className="guides-hero">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
-          <span className="gf-eyebrow">The Guildframe field notes</span>
-          <h1>A clearer path<br/><em>to your next launch.</em></h1>
-          <p>Practical guides for tabletop creators. Work through the plan, the audience, the page and everything that comes after funding.</p>
+          <span className="gf-eyebrow">Guides for tabletop creators</span>
+          <h1>Plan your Kickstarter.<br/><em>Prepare what comes next.</em></h1>
+          <p>Work through your launch budget, campaign page and marketing plan. Compare outside help, then prepare a store for ongoing sales.</p>
           <Link href="/resources/tabletop-kickstarter-launch-kit" className="gf-library-kit-link"><span>Prefer working files?</span> Get the free campaign launch kit</Link>
         </section>
-        <nav className="guide-start-here" aria-label="Start with your launch stage">
+        <nav className="guide-start-here" aria-label="Start with the decision you need to make">
           <Link href="/guides/board-game-kickstarter-marketing-plan"><span>01 / MAKE THE PLAN</span><strong>What needs to happen before launch?</strong><p>Put the product, audience and campaign in a practical order.</p></Link>
-          <Link href="/guides/kickstarter-advertising-budget-board-games"><span>02 / CHECK THE NUMBERS</span><strong>What can you afford to spend?</strong><p>Check reward margins before choosing an ad budget.</p></Link>
-          <Link href="/guides/board-game-kickstarter-page-checklist"><span>03 / PREPARE THE PAGE</span><strong>Can a new backer understand the game?</strong><p>Review gameplay, rewards and delivery before publishing.</p></Link>
+          <Link href="/guides/choose-board-game-kickstarter-marketing-agency"><span>02 / COMPARE CAMPAIGN HELP</span><strong>Which work should you hire for?</strong><p>Compare deliverables, fees and responsibilities before choosing an agency.</p></Link>
+          <Link href="/guides/best-shopify-themes-for-board-games"><span>03 / PLAN YOUR STORE</span><strong>Which Shopify theme fits your games?</strong><p>Compare themes against your catalogue, budget and setup work.</p></Link>
         </nav>
         <LibrarySearch count={guides.length} noun="guides" filters={guideFilters}/>
         <section className="guides-grid" id="launch-guides" aria-label="Campaign launch guides">

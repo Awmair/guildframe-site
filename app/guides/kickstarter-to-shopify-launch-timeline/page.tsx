@@ -35,9 +35,9 @@ const faqs = [
       "It can, but only when delivery timing is explicit and the launch will not create a reasonable impression that retail customers are being prioritized over backers. Many creators prepare the store early and control product availability until operations are ready.",
   },
   {
-    question: "How long does Guildframe's done for you store take?",
+    question: "How long does a Shopify store take after Kickstarter?",
     answer:
-      "Timing depends on final asset readiness, catalog complexity and review speed. Agree a delivery plan with your developer after the brief and assets are reviewed.",
+      "There is no fixed interval after campaign close. The build depends on final assets, catalogue complexity, integrations and review speed; the sales opening also depends on inventory and fulfilment readiness. Guildframe scopes optional store planning and setup under a separate brief before agreeing timing.",
   },
 ];
 
@@ -69,12 +69,18 @@ export default function KickstarterToShopifyTimelinePage() {
           publisher: "Kickstarter Support",
           href: "https://help.kickstarter.com/hc/en-us/articles/48619766244251-How-can-I-use-my-project-s-backer-report",
         },
+        {
+          label: "Placing a test order",
+          publisher: "Shopify Help Center",
+          href: "https://help.shopify.com/en/manual/checkout-settings/test-orders",
+        },
       ]}
       toc={[
         { id: "timeline", label: "Recommended timeline" },
         { id: "before-close", label: "Before campaign close" },
-        { id: "week-one", label: "First week after funding" },
+        { id: "week-one", label: "After funding" },
         { id: "build", label: "Store build" },
+        { id: "sales-path", label: "Choose the sales opening" },
         { id: "testing", label: "Testing and review" },
         { id: "launch-gate", label: "Launch gate" },
         { id: "faq", label: "Quick answers" },
@@ -87,22 +93,29 @@ export default function KickstarterToShopifyTimelinePage() {
       </ArticleDefinition>
 
       <h2 id="timeline">Recommended Kickstarter to Shopify timeline</h2>
+      <p>
+        Work backward from the first order you can fulfil. Some preparation can
+        happen during the campaign, but campaign close does not start a universal
+        countdown to retail. These phases can overlap; do not announce a store
+        opening until the required decisions and tests are complete.
+      </p>
       <ArticleTable
         caption="A practical post campaign storefront sequence"
         headers={["Phase", "Primary work", "Exit condition"]}
         rows={[
           ["During campaign", "Reserve domain, inventory assets and draft the catalog", "One owner and one source of truth are named"],
-          ["Days 1 to 3", "Lock products, prices, variants and order boundaries", "New store offers are operationally accurate"],
-          ["Days 3 to 7", "Build products, navigation, policies and campaign story", "Every page points to a real customer task"],
-          ["Days 5 to 10", "Test mobile, checkout, tax, shipping and notifications", "A test order completes without ambiguity"],
+          ["After campaign details are confirmed", "Lock products, prices, variants and order boundaries", "New store offers match the production and fulfilment plan"],
+          ["While production or fulfilment continues", "Build products, navigation, policies and campaign story", "The draft store is ready for review; sales can remain closed"],
+          ["Before accepting public orders", "Test mobile, checkout, tax, shipping and notifications", "Test orders and the order handoff pass; live payment mode is restored"],
           ["Launch", "Open the intended products and communicate clearly", "Backers and new buyers understand what happens next"],
           ["After launch", "Monitor support, search, conversion and inventory", "Issues are documented and corrected quickly"],
         ]}
       />
       <ArticleCallout>
-        <strong>Fast is useful only when the product truth is finished.</strong> A
-        theme can compress design work, but it cannot decide your shipping regions,
-        refund rules or whether a new order will delay a backer reward.
+        Use the free{" "}
+        <Link href="/resources/board-game-shopify-store-checklist">board game Shopify store checklist</Link>{" "}
+        to record each unfinished task and its owner. A theme cannot decide your
+        shipping regions, refund rules or whether a new order will delay a backer reward.
       </ArticleCallout>
 
       <h2 id="before-close">Before the campaign closes</h2>
@@ -120,7 +133,7 @@ export default function KickstarterToShopifyTimelinePage() {
         <li>Prepare a plain language status message for customers and backers.</li>
       </ul>
 
-      <h2 id="week-one">The first week after funding</h2>
+      <h2 id="week-one">After funding: confirm what becomes a store product</h2>
       <p>
         Turn reward logic into retail logic. Shopify products need stable names,
         prices, media, inventory rules and variants. A pledge tier may become one
@@ -143,7 +156,41 @@ export default function KickstarterToShopifyTimelinePage() {
         <li><strong>Operations:</strong> configure payments, taxes, shipping zones, inventory locations and notifications.</li>
       </ol>
       <p>
-        Use the <Link href="/done-for-you-shopify-store">store planning reference</Link> to organise the catalogue and decide who will handle the build, operations and publication.
+        Compare themes with the{" "}
+        <Link href="/guides/best-shopify-themes-for-board-games">board game Shopify theme shortlist</Link>{" "}
+        after the catalogue is clear. Decide who will configure, test and maintain
+        the store using the{" "}
+        <Link href="/guides/shopify-developer-vs-diy-theme">developer versus DIY comparison</Link>.
+      </p>
+
+      <aside className="article-next-step">
+        <h2>Turn the handoff into a written brief</h2>
+        <p>
+          Guildframe can help prepare the product content, artwork and
+          post-campaign communication. Optional Shopify planning and setup are
+          scoped separately after reviewing the catalogue and operating requirements.
+          Send the campaign link, current fulfilment status, product list and target opening date.
+        </p>
+        <p>
+          <Link href="/done-for-you-shopify-store" data-analytics-event="service_interest" data-analytics-label="Plan my store handoff" data-analytics-location="Shopify timeline">Prepare your store brief</Link>{" "}
+          or see <Link href="/post-campaign-support">post-campaign support</Link>.
+        </p>
+      </aside>
+
+      <h2 id="sales-path">Choose what opens before choosing the date</h2>
+      <ArticleTable
+        caption="Sales opening options while a game is still in production"
+        headers={["Current readiness", "Suitable public path", "Confirm before opening"]}
+        rows={[
+          ["Delivery or sellable inventory is unconfirmed", "Product information and an optional email signup", "The page does not take an order or imply immediate availability"],
+          ["Preorder terms and payment setup are ready", "Clearly labelled Shopify preorders", "Delivery estimates, cancellation terms, stock allocation and mixed-order handling are defined"],
+          ["Allocated retail stock can ship", "In-stock retail orders", "The fulfilment team has stock available for these orders without using reserved backer inventory"],
+        ]}
+      />
+      <p>
+        Keep campaign late pledges in the chosen campaign workflow. Compare{" "}
+        <Link href="/guides/kickstarter-late-pledges-vs-shopify">late pledges with Shopify orders</Link>{" "}
+        before directing backers or new buyers to another checkout.
       </p>
 
       <h2 id="testing">Testing and review</h2>
@@ -151,7 +198,8 @@ export default function KickstarterToShopifyTimelinePage() {
         Test the path a buyer will actually follow. Begin on a phone, enter from the
         homepage and a product page, choose each important edition, calculate
         shipping and complete a test checkout. Review the order confirmation and
-        inventory change in Shopify.
+        inventory change in Shopify. If a fulfilment provider handles orders,
+        confirm the order reaches its intended workflow as a separate check.
       </p>
       <ul className="article-checklist">
         <li>Menus and product selectors work with keyboard and touch</li>
@@ -160,6 +208,9 @@ export default function KickstarterToShopifyTimelinePage() {
         <li>Shipping regions, rates and taxes match the plan</li>
         <li>Order and support emails reach the correct inbox</li>
         <li>Campaign only promises are not presented as retail offers</li>
+        <li>A mixed preorder and in-stock cart follows the delivery plan</li>
+        <li>Unsupported shipping addresses cannot complete an unintended order</li>
+        <li>Payment providers leave test mode before public sales open</li>
       </ul>
 
       <h2 id="launch-gate">Checks before opening store orders</h2>

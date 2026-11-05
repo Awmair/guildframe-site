@@ -23,6 +23,9 @@ export const campaignFaqs = [
 ] as const;
 
 export const categoryFaqs: Record<string, {question:string;answer:string}[]> = {
+ "campaign-design": [
+  {question:"Does the design price cover both Kickstarter and Gamefound?",answer:"The published design price covers one Kickstarter or Gamefound campaign page using your supplied artwork. If you need both versions, include both in the brief so the layouts, exports and platform reviews can be agreed."},
+ ],
  "kickstarter-launch-services": [
   {question:"What should I compare in a Kickstarter agency proposal?",answer:"Compare the work included, schedule, relevant projects, support period, account ownership and reporting. Ask for service fees and media spend as separate lines. The total raised by a portfolio project does not establish which results came from the agency's work."},
   {question:"Do I need the full service if I already have a team?",answer:"You can book the work still missing. Share who owns creative, email, ads and campaign updates so we can define the handoffs without duplicating your team's work."},
@@ -32,6 +35,7 @@ export const categoryFaqs: Record<string, {question:string;answer:string}[]> = {
   {question:"How many email subscribers do I need before launching?",answer:"There is no reliable universal number. We review whether the audience understands the game, engages with the emails and fits the offer, alongside your funding needs and reward costs. Subscribers and platform followers are not confirmed pledges."},
  ],
  "kickstarter-advertising": [
+  {question:"What affects the cost of Kickstarter ad management?",answer:"The scope depends on the prelaunch and live dates, advertising channels, creative workload and reporting needs. The proposal names those items and separates the management fee from media spend, software and additional creative production."},
   {question:"Can you run ads before the Kickstarter campaign is live?",answer:"Yes. Prelaunch ads can introduce the game and bring visitors to a signup or follow page. Live campaign ads have a different destination and reporting goal. The scope defines both stages, channels and approved spending limits."},
   {question:"How will I know what the ads contributed?",answer:"We agree reporting sources and attribution windows before running ads, then report spend and attributable actions with their limits. Kickstarter referral reports and advertising-platform reports may differ. We avoid adding overlapping pledge revenue together."},
  ],

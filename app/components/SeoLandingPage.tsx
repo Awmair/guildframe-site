@@ -2,11 +2,13 @@ import { ResponsiveImage } from "./ResponsiveImage";
 import Link from "next/link";
 import { JsonLd } from "./JsonLd";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
-import { absoluteUrl, siteConfig } from "../site-config";
+import { absoluteUrl } from "../site-config";
+import { formatContentDate } from "../content-dates";
 
 
 export type LandingPageContent = {
   slug: string;
+  updated: string;
   eyebrow: string;
   title: string;
   highlight: string;
@@ -57,6 +59,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               name: `${content.title} ${content.highlight}`,
               url: absoluteUrl(`/${content.slug}`),
               description: content.answer,
+              dateModified: content.updated,
               isPartOf: { "@id": absoluteUrl("/#website") },
               breadcrumb: { "@id": absoluteUrl(`/${content.slug}#breadcrumb`) },
               primaryImageOfPage: {
@@ -99,8 +102,11 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
                 {content.title} <em>{content.highlight}</em>
               </h1>
               <p className="seo-answer">{content.answer}</p>
-              <div className="seo-actions"><Link className="seo-button" href="/guides/move-from-kickstarter-to-shopify">Read the migration guide</Link><Link className="seo-text-link" href="/campaign-design">Planning another campaign?</Link></div>
-              <div className="seo-proof-strip"><span>After funding reference</span><span>Mobile buying paths</span><span>Clear product information</span></div>
+              <div className="seo-actions">
+                <Link className="seo-button" href="/done-for-you-shopify-store" data-analytics-event="service_interest" data-analytics-label="Plan my store brief" data-analytics-location={`${content.slug} hero`}>Plan my store brief</Link>
+                <Link className="seo-text-link" href="/resources/board-game-shopify-store-checklist">Use the free store checklist</Link>
+              </div>
+              <div className="seo-proof-strip"><span>Separate store brief</span><span>Clear product information</span><span>Reviewed <time dateTime={content.updated}>{formatContentDate(content.updated)}</time></span></div>
             </div>
             <div className="seo-hero-visual">
               <ResponsiveImage sizes="(max-width: 650px) calc(100vw - 40px), 48vw"
@@ -157,7 +163,11 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               </article>
             ))}
           </div>
-          <div className="seo-offer-note"><strong>Before your next launch</strong><p>Guildframe helps tabletop creators with launch planning, prelaunch, campaign creative, paid advertising and live support.</p><Link href={siteConfig.purchasePath}>Explore launch services</Link></div>
+          <div className="seo-offer-note">
+            <strong>Need help after the campaign?</strong>
+            <p>Guildframe can scope product content and artwork adaptation, with optional Shopify planning and setup under a separate brief. Share your catalogue and operating plan to agree the work, price and timing.</p>
+            <Link href="/post-campaign-support" data-analytics-event="service_interest" data-analytics-label="Discuss post-campaign support" data-analytics-location={`${content.slug} offer`}>Explore post-campaign support</Link>
+          </div>
         </section>
 
         <section className="seo-faq-section">

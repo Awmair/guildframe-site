@@ -1,3 +1,5 @@
+import { safeCampaignValue, safePagePath, safeReferrerHost } from "../../app/components/lead-attribution-values.mjs";
+
 type ContactEnv = {
   SENDER_API_KEY?: string;
   SENDER_FROM_EMAIL?: string;
@@ -135,9 +137,22 @@ function validateFields(fields: Record<string, string>, origins: Set<string>) {
   if (fields.page_url) {
     try {
       const page = new URL(fields.page_url);
-      fields.page_url = origins.has(page.origin) ? `${page.origin}${page.pathname}` : "";
+      const pathname = safePagePath(page.pathname);
+      fields.page_url = origins.has(page.origin) && pathname ? `${page.origin}${pathname}` : "";
     } catch { fields.page_url = ""; }
   }
+  fields.first_touch_path = safePagePath(fields.first_touch_path) ?? "";
+  const referrerHost = safeReferrerHost(fields.first_touch_referrer_host);
+  const internalReferrer = [...origins].some(origin => safeReferrerHost(new URL(origin).hostname) === referrerHost);
+  fields.first_touch_referrer_host = referrerHost && !internalReferrer ? referrerHost : "";
+  let hasCampaignTags = false;
+  for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_content"]) {
+    const value = safeCampaignValue(fields[`first_touch_${key}`]);
+    fields[`first_touch_${key}`] = value ?? "";
+    if (value) hasCampaignTags = true;
+  }
+  // Describe the supplied signals without trusting a caller's source claim.
+  fields.first_touch_evidence = hasCampaignTags ? "campaign_tags" : fields.first_touch_referrer_host ? "external_referrer" : "direct_or_unknown";
 }
 
 function reply(request: Request, status: number, message: string, requestId: string) {

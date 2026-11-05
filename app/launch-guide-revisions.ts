@@ -64,5 +64,10 @@ export function reviseLaunchGuide(guide: LaunchGuide): LaunchGuide {
   });
   const checks = practicalChecks[guide.slug];
   if (checks) sections.push({ id: "working-checklist", title: "Use this in your launch review", paragraphs: ["Put these checks in the project brief and assign an owner to any missing item. Use confirmed game details in the public page; keep unresolved decisions in the working notes until they are approved."], table: { headers: ["Check", "Bring to the review", "Ready when"], rows: checks } });
-  return { ...guide, sections, updated: contentDates.launchGuideReview };
+  const updated = guide.slug === "board-game-kickstarter-marketing-plan"
+    ? contentDates.marketingPlan
+    : guide.slug === "choose-board-game-kickstarter-marketing-agency"
+      ? contentDates.agencySelection
+      : contentDates.launchGuideReview;
+  return { ...guide, sections, updated };
 }

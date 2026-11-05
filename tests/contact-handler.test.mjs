@@ -195,3 +195,76 @@ test("method errors and native no-JavaScript responses are usable", async t => {
   assert.ok(response.headers.get("Content-Type").startsWith("text/html"));
   assert.ok((await response.text()).includes("Return to Guildframe"));
 });
+
+test("owner email includes normalized landing, form page, source and campaign evidence", async t => {
+  const calls = mockFetch(t, accepted);
+  const response = await onRequest({ request: request({
+    ...details, source: "Guide enquiry", heard_about: "An AI assistant",
+    page_url: "https://www.guildframe.com/buy/?email=should-not-leak@example.net#private-fragment",
+    first_touch_path: "/guides/project-plan/?email=should-not-leak@example.net#private-fragment",
+    first_touch_referrer_host: "WWW.ChatGPT.COM.", first_touch_utm_source: " ChatGPT ",
+    first_touch_utm_medium: "referral", first_touch_utm_campaign: "orbit_launch", first_touch_utm_content: "rules_preview",
+    first_touch_evidence: "external_referrer", first_touch_utm_term: "private-search-term", gclid: "private-click-id",
+  }), env: environment });
+  assert.equal(response.status, 200);
+  assert.equal(calls.length, 1, "an enquiry only sends the owner email");
+  const { text, html } = calls[0].body;
+  for (const row of ["Submission page:\nhttps://www.guildframe.com/buy", "First page visited:\n/guides/project-plan", "Referrer host:\nchatgpt.com", "Campaign source:\nChatGPT", "Campaign medium:\nreferral", "Campaign name:\norbit_launch", "Campaign content:\nrules_preview", "Attribution evidence:\ncampaign_tags", "How they heard about Guildframe:\nAn AI assistant"]) {
+    assert.ok(text.includes(row), row);
+  }
+  for (const value of ["should-not-leak@example.net", "private-fragment", "private-search-term", "private-click-id"]) {
+    assert.ok(!text.includes(value), value);
+    assert.ok(!html.includes(value), value);
+  }
+  assert.ok(text.includes("This enquiry does not grant marketing consent."));
+});
+
+test("unsafe attribution is omitted and a caller cannot manufacture evidence", async t => {
+  const calls = mockFetch(t, accepted);
+  const response = await onRequest({ request: request({
+    ...details, page_url: "https://attacker.example/private-page?email=private", first_touch_path: "/private%40example.net",
+    first_touch_referrer_host: "chatgpt.com/private-referrer?email=private", first_touch_utm_source: "private@example.net",
+    first_touch_utm_medium: "https://private.example/medium", first_touch_utm_campaign: "<img src=x onerror=bad()>",
+    first_touch_utm_content: "content?email=private", first_touch_evidence: "campaign_tags",
+  }), env: environment });
+  assert.equal(response.status, 200);
+  const { text, html } = calls[0].body;
+  assert.ok(text.includes("Attribution evidence:\ndirect_or_unknown"));
+  for (const label of ["Submission page:", "First page visited:", "Referrer host:", "Campaign source:", "Campaign medium:", "Campaign name:", "Campaign content:"]) {
+    assert.ok(!text.includes(label), label);
+  }
+  assert.doesNotMatch(text, /private|attacker|campaign_tags|onerror/i);
+  assert.doesNotMatch(html, /private|attacker|campaign_tags|onerror/i);
+});
+
+test("internal or absent source signals stay unknown despite page labels or self reporting", async t => {
+  const calls = mockFetch(t, accepted);
+  for (const first_touch_referrer_host of [undefined, "www.guildframe.com", "127.0.0.1"]) {
+    const response = await onRequest({ request: request({ ...details, first_touch_referrer_host, source: "ChatGPT guide", heard_about: "An AI assistant", page_url: "https://guildframe.com/buy?utm_source=chatgpt", first_touch_evidence: "external_referrer" }), env: environment });
+    assert.equal(response.status, 200);
+    const { text } = calls.at(-1).body;
+    assert.ok(text.includes("Attribution evidence:\ndirect_or_unknown"));
+    assert.ok(!text.includes("First page visited:"), "a missing landing path must not become the home page");
+    assert.ok(!text.includes("Referrer host:"));
+    assert.ok(!text.includes("Campaign source:"));
+  }
+  assert.equal(calls.length, 3);
+});
+
+test("a valid external referrer supplies evidence without a campaign claim", async t => {
+  const calls = mockFetch(t, accepted);
+  const response = await onRequest({ request: request({ ...details, first_touch_referrer_host: "WWW.Google.COM.", first_touch_evidence: "direct_or_unknown" }), env: environment });
+  assert.equal(response.status, 200);
+  assert.ok(calls[0].body.text.includes("Referrer host:\ngoogle.com"));
+  assert.ok(calls[0].body.text.includes("Attribution evidence:\nexternal_referrer"));
+});
+
+test("attribution fields retain length and control character limits before verification", async t => {
+  const calls = mockFetch(t, accepted);
+  for (const fields of [{ first_touch_path: `/${"x".repeat(200)}` }, { first_touch_referrer_host: `${"x".repeat(201)}` }, { first_touch_utm_campaign: "x".repeat(101) }, { first_touch_evidence: "x".repeat(101) }, { first_touch_utm_source: "source\r\nBcc: injected" }, { first_touch_utm_content: "label\u0000private" }]) {
+    const response = await onRequest({ request: request({ ...details, ...fields }), env: environment });
+    assert.equal(response.status, 422);
+  }
+  assert.equal(calls.verifications.length, 0);
+  assert.equal(calls.length, 0);
+});

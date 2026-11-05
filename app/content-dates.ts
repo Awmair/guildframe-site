@@ -14,26 +14,30 @@ export function formatContentDate(value: string) {
 
 export const contentDates = {
   launchKit: "2026-10-29",
-  privacy: "2026-11-03",
+  privacy: "2026-11-05",
   terms: "2026-10-29",
   home: "2026-10-29",
   work: "2026-10-17",
   campaignServices: "2026-10-17",
+  campaignDesign: "2026-11-05",
+  kickstarterAdvertising: "2026-11-05",
+  marketingPlan: "2026-11-05",
+  agencySelection: "2026-11-05",
   launchGuideReview: "2026-10-28",
   buy: "2026-10-03",
-  doneForYouShopifyStore: "2026-10-03",
-  boardGames: "2026-10-03",
-  kickstarter: "2026-10-03",
-  ttrpg: "2026-10-03",
-  miniatures: "2026-10-03",
-  guides: "2026-10-29",
+  doneForYouShopifyStore: "2026-11-05",
+  boardGames: "2026-11-05",
+  kickstarter: "2026-11-05",
+  ttrpg: "2026-11-05",
+  miniatures: "2026-11-05",
+  guides: "2026-11-05",
   whatHappensAfterKickstarter: "2026-10-28",
   moveFromKickstarter: "2026-10-28",
-  bestBoardGameThemes: "2026-10-28",
-  shopifyDeveloperVsDiyTheme: "2026-10-28",
+  bestBoardGameThemes: "2026-11-05",
+  shopifyDeveloperVsDiyTheme: "2026-11-05",
   latePledgesVsShopify: "2026-10-28",
   backerkitVsShopifyVsGamefound: "2026-10-28",
-  kickstarterToShopifyTimeline: "2026-10-28",
+  kickstarterToShopifyTimeline: "2026-11-05",
   boardGamePreorders: "2026-10-28",
   expansionsAndAddons: "2026-10-28",
   internationalVatIoss: "2026-10-28",
@@ -51,3 +55,9 @@ export const contentDates = {
   buildWithAi: "2026-10-28",
   metafieldSchema: "2026-09-30",
 } as const;
+
+export function campaignModifiedDate(slug: string) {
+  if (slug === "campaign-design") return contentDates.campaignDesign;
+  if (slug === "kickstarter-advertising") return contentDates.kickstarterAdvertising;
+  return contentDates.campaignServices;
+}

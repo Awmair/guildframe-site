@@ -2,7 +2,7 @@
 import {type FormEvent,useState} from "react";
 import Link from "next/link";
 import {siteConfig} from "../site-config";
-import {getLeadAttribution,getObservedAiSource,hasAnalyticsConsent} from "./lead-attribution";
+import {getLeadAttribution,getObservedAiSource,hasAnalyticsConsent,safePagePath} from "./lead-attribution";
 import {ContactSecurity} from "./ContactSecurity";
 const nativeFormspree = siteConfig.formEndpoint.startsWith("https://formspree.io/");
 export function ProjectInquiryForm({source}:{source:string}) {
@@ -10,7 +10,7 @@ export function ProjectInquiryForm({source}:{source:string}) {
  const [securityToken,setSecurityToken]=useState("");
  const [securityReset,setSecurityReset]=useState(0);
  async function submitInquiry(event:FormEvent<HTMLFormElement>) {
-  if(status==="sending"){event.preventDefault();return;}const form=event.currentTarget;const data=new FormData(form);data.set("page_url",`${window.location.origin}${window.location.pathname}`);
+  if(status==="sending"){event.preventDefault();return;}const form=event.currentTarget;const data=new FormData(form);const formPath=safePagePath(window.location.pathname);if(formPath)data.set("page_url",`${window.location.origin}${formPath}`);
   const attribution=getLeadAttribution();
   for(const [key,value] of Object.entries(attribution??{}))if(value)data.set(key,value);
   if(nativeFormspree){
@@ -30,18 +30,18 @@ export function ProjectInquiryForm({source}:{source:string}) {
    } catch { /* Form success does not depend on analytics or storage. */ }
    form.reset();}catch{setStatus("error");}finally{setSecurityToken("");setSecurityReset(value=>value+1);}
  }
- return <section className="gf-contact" id="start-project" aria-labelledby="contact-title"><div className="gf-contact-copy"><span className="gf-eyebrow">Tell me about your project</span><h2 id="contact-title">Let’s plan{" "}<br /><em>your game launch.</em></h2><p>Share your game, target date and the work you need help with. I’ll review it and reply with the next steps. Want to see a creative direction first? Choose the free opening mockup.</p><div className="gf-contact-points"><span>No payment to request</span><span>No obligation to book</span></div><a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a><p className="gf-small">Launch services are quoted around your project. We agree the deliverables, fees, ad budget and schedule before work starts. The free mockup covers one opening campaign section using your artwork.</p></div>
+ return <section className="gf-contact" id="start-project" aria-labelledby="contact-title"><div className="gf-contact-copy"><span className="gf-eyebrow">Tell me about your project</span><h2 id="contact-title">Let’s plan{" "}<br /><em>your game launch.</em></h2><p>Share your game, campaign or store link, target date and the work you need help with. I’ll review it and reply with the next steps. Want to see a creative direction first? Choose the free opening mockup.</p><div className="gf-contact-points"><span>No payment to request</span><span>No obligation to book</span></div><a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a><p className="gf-small">Launch services are quoted around your project. We agree the deliverables, fees, ad budget and schedule before work starts. The free mockup covers one opening campaign section using your artwork.</p></div>
  <form action={siteConfig.formEndpoint} method="POST" onSubmit={submitInquiry} className="gf-form glass" data-clarity-mask="true">
  <input type="hidden" name="source" value={source}/><input type="hidden" name="_subject" value="Guildframe: tabletop launch enquiry"/>
  <label><span>Your name</span><input type="text" name="name" autoComplete="name" placeholder="Your name" required /></label>
  <label><span>Your email</span><input type="email" name="email" autoComplete="email" placeholder="you@yourstudio.com" required /></label>
  <label><span>What are you making?</span><select name="game_category" required defaultValue=""><option value="" disabled>Choose your project</option><option>Board game</option><option>Card game or TCG</option><option>Tabletop RPG</option><option>Miniatures or terrain</option><option>Dice or accessories</option><option>Something else for the tabletop</option></select></label>
- <label><span>Campaign platform</span><select name="platform" defaultValue="Not decided"><option>Kickstarter</option><option>Gamefound</option><option>Not decided</option><option>Another platform</option></select></label>
- <label><span>What do you need help with?</span><select name="service_interest" required defaultValue=""><option value="" disabled>Choose a service</option><option>Full launch planning and support</option><option>Prelaunch marketing</option><option>Campaign copy and design</option><option>Creative concepts, scripts and launch assets</option><option>Paid advertising</option><option>Live campaign management</option><option>Post-campaign support</option><option>Free opening mockup</option><option>Help deciding the scope</option></select></label>
+ <label><span>Campaign or store platform</span><select name="platform" defaultValue="Not decided"><option>Kickstarter</option><option>Gamefound</option><option>Shopify</option><option>Not decided</option><option>Another platform</option></select></label>
+ <label><span>What do you need help with?</span><select name="service_interest" required defaultValue=""><option value="" disabled>Choose a service</option><option>Full launch planning and support</option><option>Prelaunch marketing</option><option>Campaign copy and design</option><option>Creative concepts, scripts and launch assets</option><option>Paid advertising</option><option>Live campaign management</option><option>Post-campaign support</option><option>Shopify planning and setup</option><option>Free opening mockup</option><option>Help deciding the scope</option></select></label>
  <label><span>When do you plan to launch?</span><select name="launch_timing" defaultValue="Not decided"><option>Not decided</option><option>Already live</option><option>Within a month</option><option>In 1 to 3 months</option><option>In 3 to 6 months</option><option>Later than 6 months</option></select></label>
  <label className="gf-form-wide"><span>Artwork or project link <small>(optional)</small></span><input name="project_link" type="url" placeholder="https://your-game-or-shared-folder.com" /></label>
  <label className="gf-form-wide"><span>How did you hear about Guildframe? <small>(optional)</small></span><select name="heard_about" defaultValue=""><option value="">Choose if you remember</option><option>Google or another search engine</option><option>An AI assistant</option><option>A recommendation</option><option>A tabletop community</option><option>Social media</option><option>Something else</option><option>I do not remember</option></select></label>
- <label className="gf-form-wide"><span>Tell me about your game and launch plans</span><textarea name="message" rows={4} placeholder="What is the game, when do you want to launch, and what artwork is ready?" required /></label>
+ <label className="gf-form-wide"><span>Tell me about your game and the work you need</span><textarea name="message" rows={4} placeholder="What is your game, what stage is the campaign or store at, and what help do you need?" required /></label>
  <label className="project-inquiry-honeypot" aria-hidden="true">Leave this empty<input name="_gotcha" tabIndex={-1} autoComplete="off" /></label>
  {!nativeFormspree&&<><input type="hidden" name="cf-turnstile-response" value={securityToken}/><ContactSecurity onToken={setSecurityToken} resetKey={securityReset}/></>}
  <button className="gf-button gf-form-wide" type="submit" disabled={status==="sending"||status==="sent"||(!nativeFormspree&&!securityToken)}>{status==="sending"?"Sending…":status==="sent"?"Request received":nativeFormspree?"Continue to send":"Send my project"}</button>

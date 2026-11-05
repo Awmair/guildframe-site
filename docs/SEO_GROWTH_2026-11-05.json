@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-05",
+  "evidence": {
+    "gsc_period": {
+      "start": "2026-10-07",
+      "end": "2026-11-03",
+      "search_type": "Web (text)",
+      "clicks": 15,
+      "impressions": 570,
+      "ctr_percent": 2.6,
+      "average_position": 15.5
+    },
+    "top_pages": [
+      {
+        "path": "/guides/best-shopify-themes-for-board-games",
+        "clicks": 8,
+        "impressions": 108,
+        "ctr_percent": 7.4,
+        "position": 6.9
+      },
+      {
+        "path": "/",
+        "clicks": 3,
+        "impressions": 12,
+        "ctr_percent": 25,
+        "position": 3.0
+      },
+      {
+        "path": "/guides/choose-board-game-kickstarter-marketing-agency",
+        "clicks": 1,
+        "impressions": 51,
+        "ctr_percent": 2,
+        "position": 18.8
+      },
+      {
+        "path": "/campaign-design",
+        "clicks": 1,
+        "impressions": 25,
+        "ctr_percent": 4,
+        "position": 18
+      },
+      {
+        "path": "/kickstarter-advertising",
+        "clicks": 1,
+        "impressions": 18,
+        "ctr_percent": 5.6,
+        "position": 27.9
+      },
+      {
+        "path": "/guides/kickstarter-to-shopify-launch-timeline",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr_percent": 14.3,
+        "position": 6.6
+      },
+      {
+        "path": "/guides/board-game-kickstarter-marketing-plan",
+        "clicks": 0,
+        "impressions": 67,
+        "ctr_percent": 0,
+        "position": 18.4
+      }
+    ],
+    "lead_attribution": "Two SEO leads reported by owner; no individual lead-to-page or query match established.",
+    "baseline_public_audit": {
+      "pages": 82,
+      "http_200": 82,
+      "not_200": [],
+      "bad_h1": [],
+      "missing_description": [],
+      "bad_canonical": [],
+      "noindex": [],
+      "orphans": [],
+      "unreachable": [],
+      "missing_alt": 0,
+      "duplicate_titles": {},
+      "duplicate_descriptions": {}
+    }
+  },
+  "implementation": [
+    "Improve the theme comparison, Shopify launch timeline and developer-versus-DIY guides.",
+    "Clarify optional Shopify setup and handoff scope on five existing service/category pages.",
+    "Strengthen campaign design, advertising and agency-selection pages.",
+    "Add an explicitly hypothetical media budget to the existing marketing plan.",
+    "Feature buyer decision guides near the top of the guide library.",
+    "Give post-campaign/store guides relevant store CTAs and a store checklist.",
+    "Validate limited enquiry attribution at the form endpoint and retain unknown values honestly.",
+    "Offer Shopify explicitly in the shared enquiry form.",
+    "Keep changed page dates aligned across visible text, structured data and sitemap."
+  ],
+  "preserved": [
+    "Established URLs and publication dates",
+    "Existing Sender contact route and failclosed Turnstile",
+    "Marketing consent and email workflow",
+    "No additional subscriptions or paid services"
+  ],
+  "sources": [
+    "https://themes.shopify.com/",
+    "https://help.shopify.com/en/manual/products/purchase-options/pre-orders",
+    "https://help.shopify.com/en/manual/checkout-settings/test-orders",
+    "https://www.kickstarter.com/help/handbook/promotion",
+    "https://www.kickstarter.com/blog/before-you-work-with-a-marketing-service-consider-this",
+    "https://support.google.com/webmasters/answer/17011259?hl=en"
+  ],
+  "gsc_followup": {
+    "status": "Access pending: requested Chrome plugin has no browser controls available in this chat.",
+    "next_checks": [
+      "Reopen page-indexing exclusions and inspect last update/reasons for the 50 excluded URLs.",
+      "Inspect changed priority pages after publication; request indexing if appropriate and within quota.",
+      "Compare nonoverlapping date periods and match future genuine enquiries to available source evidence."
+    ],
+    "limits": [
+      "Crawlability and IndexNow receipt do not prove Google indexing.",
+      "No click or lead lift can be attributed to these changes at publication.",
+      "Memory-only enquiry attribution may reset on refresh or a new tab."
+    ]
+  },
+  "verification": {
+    "static_checks_passed": 339,
+    "contact_handler_checks_passed": 21,
+    "attribution_checks_passed": 10,
+    "browser_cases_passed": 27,
+    "browser_scope": "Local exported site, system Chrome sandbox enabled, 1366px and375px page checks plus390px guide-to-store form fixture. No real email sent.",
+    "lint": "passed",
+    "typecheck": "passed",
+    "contact_worker_bundle": "compiled with pinned installed Wrangler4.129.0"
+  }
+}

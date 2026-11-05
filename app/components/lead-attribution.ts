@@ -1,5 +1,8 @@
+import { safeCampaignValue, safePagePath, safeReferrerHost } from "./lead-attribution-values.mjs";
+export { safeCampaignValue, safePagePath, safeReferrerHost } from "./lead-attribution-values.mjs";
+
 export type LeadAttribution = {
-  first_touch_path: string;
+  first_touch_path?: string;
   first_touch_referrer_host?: string;
   first_touch_utm_source?: string;
   first_touch_utm_medium?: string;
@@ -11,40 +14,36 @@ export type LeadAttribution = {
 const campaignKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content"] as const;
 let firstTouch: LeadAttribution | undefined;
 
-export function safeCampaignValue(value: string | null): string | undefined {
-  const trimmed = value?.trim();
-  return trimmed && /^[a-zA-Z0-9 ._-]{1,100}$/.test(trimmed) ? trimmed : undefined;
-}
-
 // Keep this visit's observed source in memory without a tracking identifier.
 export function getLeadAttribution(): LeadAttribution | undefined {
   if (typeof window === "undefined") return undefined;
-  if (firstTouch) return firstTouch;
-  const pathname = window.location.pathname;
+  if (firstTouch) return { ...firstTouch };
+  const pathname = safePagePath(window.location.pathname);
   firstTouch = {
-    first_touch_path: /^[a-zA-Z0-9/_-]{1,200}$/.test(pathname) ? pathname : "/",
+    ...(pathname ? { first_touch_path: pathname } : {}),
     first_touch_evidence: "direct_or_unknown",
   };
   try {
     if (document.referrer) {
       const referrer = new URL(document.referrer);
-      const ownHost = window.location.hostname.replace(/^www\./, "");
-      const referrerHost = referrer.hostname.toLowerCase().replace(/^www\./, "");
-      if (["http:", "https:"].includes(referrer.protocol) && referrerHost !== ownHost) {
-        firstTouch.first_touch_referrer_host = referrerHost.slice(0, 200);
+      const ownHost = safeReferrerHost(window.location.hostname);
+      const referrerHost = safeReferrerHost(referrer.hostname);
+      if (["http:", "https:"].includes(referrer.protocol) && referrerHost && referrerHost !== ownHost) {
+        firstTouch.first_touch_referrer_host = referrerHost;
         firstTouch.first_touch_evidence = "external_referrer";
       }
     }
   } catch { /* A malformed referrer stays unknown. */ }
   const params = new URLSearchParams(window.location.search);
   for (const key of campaignKeys) {
-    const value = safeCampaignValue(params.get(key));
+    const values = params.getAll(key);
+    const value = values.length === 1 ? safeCampaignValue(values[0]) : undefined;
     if (value) {
       firstTouch[`first_touch_${key}`] = value;
       firstTouch.first_touch_evidence = "campaign_tags";
     }
   }
-  return firstTouch;
+  return { ...firstTouch };
 }
 
 export function getObservedAiSource(attribution = getLeadAttribution()): string | undefined {

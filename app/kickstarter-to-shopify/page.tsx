@@ -3,12 +3,12 @@ import { ResponsiveImage } from "../components/ResponsiveImage";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
-
+import { contentDates, formatContentDate } from "../content-dates";
 
 export const metadata = pageMetadata({
   title: "Kickstarter to Shopify for Funded Tabletop Games",
   description:
-    "Turn a funded tabletop campaign into a permanent Shopify store. Plan late pledges, BackerKit or Gamefound handoff, preorders, shipping, EU VAT and IOSS.",
+    "Plan a Shopify store after Kickstarter. Separate backer rewards from new orders, prepare your catalogue and discuss optional store setup with Guildframe.",
   path: "/kickstarter-to-shopify",
   keywords: [
     "Kickstarter to Shopify",
@@ -41,8 +41,8 @@ const faqs = [
     answer: "Timing depends on your catalogue, assets, operations and review process. Agree a schedule after those requirements are clear.",
   },
   {
-    question: "What does Guildframe offer for a new campaign?",
-    answer: "Guildframe offers campaign creative, prelaunch marketing, paid advertising and live support for Kickstarter and Gamefound. Share the project to agree a scope, or request a free opening mockup for creative work.",
+    question: "Can Guildframe help with the store after my campaign?",
+    answer: "Guildframe offers post-campaign communication, product content and artwork support. Optional Shopify planning and setup are scoped under a separate brief after reviewing the catalogue, required features and operating plan. The proposal confirms price, timing and responsibilities.",
   },
 ];
 
@@ -79,6 +79,7 @@ export default function KickstarterToShopifyPage() {
               url: absoluteUrl("/kickstarter-to-shopify"),
               description:
                 "Store planning guidance for tabletop publishers moving from Kickstarter to Shopify.",
+              dateModified: contentDates.kickstarter,
               about: { "@type": "Thing", name: "Kickstarter to Shopify migration" },
               primaryImageOfPage: {
                 "@type": "ImageObject",
@@ -130,12 +131,12 @@ export default function KickstarterToShopifyPage() {
                 then plan the catalogue, buying path and international selling setup.
               </p>
               <div className="campaign-service-actions">
-                <Link className="service-primary-button" href="/guides/move-from-kickstarter-to-shopify">
-                  Read the migration guide
+                <Link className="service-primary-button" href="/done-for-you-shopify-store" data-analytics-event="service_interest" data-analytics-label="Plan my store handoff" data-analytics-location="Kickstarter to Shopify hero">
+                  Plan my store handoff
                 </Link>
-                <Link href="/guides/kickstarter-to-shopify-launch-timeline">View the launch timeline</Link>
+                <Link href="/resources/board-game-shopify-store-checklist">Use the free store checklist</Link>
               </div>
-              <small>After funding reference. Review your assets and operating requirements first.</small>
+              <small>Optional store setup needs a separate brief. Reviewed <time dateTime={contentDates.kickstarter}>{formatContentDate(contentDates.kickstarter)}</time>.</small>
             </div>
             <div className="campaign-service-hero-image">
               <ResponsiveImage sizes="(max-width: 900px) calc(100vw - 40px), 48vw"
@@ -178,6 +179,7 @@ export default function KickstarterToShopifyPage() {
               </li>
             ))}
           </ol>
+          <p><Link href="/guides/kickstarter-to-shopify-launch-timeline">Follow the detailed launch timeline</Link>{" "}or use the <Link href="/guides/move-from-kickstarter-to-shopify">migration guide</Link> to prepare the handoff.</p>
         </section>
 
         <section className="campaign-handoff-section">
@@ -228,7 +230,18 @@ export default function KickstarterToShopifyPage() {
           </ul>
         </section>
 
-        <section className="campaign-offer-section"><div><h2>Preparing another campaign?</h2><p>Guildframe brings planning, prelaunch marketing, campaign creative and paid advertising together. Share your game and the work you need help with.</p></div><div><strong>Your next launch</strong><span>A scope built around your project</span><a className="service-primary-button" href="#start-project">Discuss my launch</a></div></section>
+        <section className="campaign-offer-section">
+          <div>
+            <h2>Scope the campaign-to-store handoff.</h2>
+            <p>Guildframe can prepare the product content, artwork and communication for the next stage. Optional Shopify planning and setup need a separate brief. Share your campaign link, catalogue, fulfilment status and target opening date.</p>
+            <p><Link href="/post-campaign-support">See post-campaign support</Link>{" "}or <Link href="/guides/shopify-developer-vs-diy-theme">compare a developer with DIY setup</Link>.</p>
+          </div>
+          <div>
+            <strong>Your store brief</strong>
+            <span>Agree tasks, ownership, price and timing first</span>
+            <a className="service-primary-button" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my store handoff" data-analytics-location="Kickstarter to Shopify offer">Discuss my store handoff</a>
+          </div>
+        </section>
 
         <section className="campaign-faq-section" id="faq">
           <div className="campaign-section-heading"><h2>Questions after funding.</h2></div>

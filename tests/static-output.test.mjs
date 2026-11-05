@@ -84,7 +84,7 @@ const pages = [
   ["/kickstarter-campaign-management", "Kickstarter Campaign Management for Tabletop Games | Guildframe", "Kickstarter campaign management"],
   ["/gamefound-launch-services", "Gamefound Launch Services for Tabletop Creators | Guildframe", "Gamefound launch services"],
   ["/post-campaign-support", "Post Campaign Support for Funded Tabletop Games | Guildframe", "After the campaign"],
-  ["/guides/board-game-kickstarter-marketing-plan", "Board Game Kickstarter Marketing Plan & Launch Checklist | Guildframe", "Board Game Kickstarter Marketing Plan"],
+  ["/guides/board-game-kickstarter-marketing-plan", "Board Game Kickstarter Marketing Plan: Timeline & Budget | Guildframe", "Board Game Kickstarter Marketing Plan"],
   ["/guides/kickstarter-prelaunch-email-list", "Kickstarter Prelaunch Email List for Board Games | Guildframe", "Kickstarter Prelaunch Email List"],
   ["/guides/kickstarter-advertising-budget-board-games", "Kickstarter Advertising Budget for Board Games | Guildframe", "Kickstarter Advertising Budget"],
   ["/guides/kickstarter-live-campaign-updates", "Kickstarter Campaign Updates & Live Support Plan | Guildframe", "Kickstarter Campaign Updates"],
@@ -530,7 +530,7 @@ const readableDate = (iso) => {
 // updates because nothing compared it with app/content-dates.ts.
 const datedPages = new Map([
   ["/resources/tabletop-kickstarter-launch-kit", "2026-10-29"],
-  ["/privacy", "2026-11-03"],
+  ["/privacy", "2026-11-05"],
   ["/terms", "2026-10-29"],
   ["/guides/when-to-hire-kickstarter-campaign-designer", "2026-10-03"],
   ["/guides/kickstarter-campaign-graphics-mobile-readability", "2026-10-03"],
@@ -573,6 +573,14 @@ for (const [path] of pages) {
 }
 
 for (const [path] of pages) { if (path.startsWith("/guides/") || path === "/authors/guildframe") datedPages.set(path, "2026-10-28"); }
+
+for (const path of [
+  "/guides/best-shopify-themes-for-board-games",
+  "/guides/kickstarter-to-shopify-launch-timeline",
+  "/guides/shopify-developer-vs-diy-theme",
+  "/guides/board-game-kickstarter-marketing-plan",
+  "/guides/choose-board-game-kickstarter-marketing-agency",
+]) datedPages.set(path, "2026-11-05");
 
 test("keeps visible review dates, schema dates and sitemap dates identical", async (t) => {
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");

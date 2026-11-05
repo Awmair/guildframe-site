@@ -55,6 +55,9 @@ export function SeoArticlePage({
 }) {
   const canonicalPath = path ?? `/guides/${slug}`;
   const articleToc = collectionHref === "/guides" && guideWorkbooks[slug] ? [...toc.filter(item=>item.id!=="faq"),{id:"put-it-to-work",label:"Put it to work"},...toc.filter(item=>item.id==="faq")] : toc;
+  const isStoreGuide = /shopify|board-game-website-cost|kickstarter-is-funded|selling-miniatures-internationally-vat-ioss/.test(slug);
+  const servicePath = isStoreGuide ? "/done-for-you-shopify-store" : siteConfig.purchasePath;
+  const serviceLabel = isStoreGuide ? "Discuss your tabletop store" : "Explore launch services";
 
   return (
     <>
@@ -181,12 +184,12 @@ export function SeoArticlePage({
               ))}
             </nav>
             <Link
-              href={siteConfig.purchasePath}
+              href={servicePath}
               data-analytics-event="service_interest"
-              data-analytics-label="Launch services"
+              data-analytics-label={serviceLabel}
               data-analytics-location="article sidebar"
             >
-              Plan your game launch
+              {isStoreGuide ? "Plan your tabletop store" : "Plan your game launch"}
             </Link>
           </aside>
 
@@ -231,28 +234,30 @@ export function SeoArticlePage({
               ))}
             </section>
             <div className="article-cta">
-              <h2>Need help preparing your launch?</h2>
+              <h2>{isStoreGuide ? "Need help turning the campaign into a store?" : "Need help preparing your launch?"}</h2>
               <p>
-                Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for tabletop projects. Share your game and launch plans to agree a scope. A free opening mockup is available for creative enquiries.
+                {isStoreGuide
+                  ? "Share your campaign, product list and what you need help with. Guildframe can prepare product content and the campaign handoff, with Shopify planning and setup scoped separately. We agree the work and responsibilities before quoting."
+                  : "Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for tabletop projects. Share your game and launch plans to agree a scope. A free opening mockup is available for creative enquiries."}
               </p>
               <div className="article-cta-actions">
                 <Link
                   className="seo-button seo-button-light"
-                  href={siteConfig.purchasePath}
+                  href={servicePath}
                   data-analytics-event="service_interest"
-                  data-analytics-label="Launch services"
+                  data-analytics-label={serviceLabel}
                   data-analytics-location="article CTA"
                 >
-                  Explore launch services
+                  {serviceLabel}
                 </Link>
                 <Link
                   className="seo-button seo-button-outline"
-                  href="#start-project"
+                  href={isStoreGuide ? "/resources/board-game-shopify-store-checklist" : "#start-project"}
                   data-analytics-event="service_interest"
-                  data-analytics-label="Get my free mockup"
+                  data-analytics-label={isStoreGuide ? "Tabletop store checklist" : "Get my free mockup"}
                   data-analytics-location="article CTA"
                 >
-                  Get my free mockup
+                  {isStoreGuide ? "Use the store checklist" : "Get my free mockup"}
                 </Link>
               </div>
             </div>

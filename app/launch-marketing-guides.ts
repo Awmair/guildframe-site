@@ -3,10 +3,10 @@ export const marketingGuides: LaunchGuide[] = [
   {
     "slug": "board-game-kickstarter-marketing-plan",
     "title": "Board Game Kickstarter Marketing Plan: Before Launch to Campaign Close",
-    "seoTitle": "Board Game Kickstarter Marketing Plan & Launch Checklist",
-    "description": "Build a board game Kickstarter marketing plan around your audience, campaign assets, emails, ads and launch date. Use a practical readiness checklist.",
+    "seoTitle": "Board Game Kickstarter Marketing Plan: Timeline & Budget",
+    "description": "Plan your board game Kickstarter with an eight week example, a worked media budget and launch checks. Assign the page, emails, ads and live support to an owner.",
     "tag": "Launch marketing",
-    "answer": "Start with the game and the people it is for. Check the offer, usable assets and campaign economics, then plan your landing page, email sequence, creative tests and live updates. Assign an owner and review date to each task. A launch date should follow readiness, rather than force unfinished work into publication.",
+    "answer": "A board game Kickstarter marketing plan needs a clear offer, a cost model, a prelaunch page and email flow, campaign creative, a promotion budget and live support. Put those jobs on a schedule with an owner and a review date. The eight week timeline and hypothetical budget below show how to release spending after each check, rather than committing the whole budget before you know what works.",
     "servicePath": "/kickstarter-launch-services",
     "serviceLabel": "Tabletop Kickstarter launch services",
     "sources": [
@@ -24,12 +24,18 @@ export const marketingGuides: LaunchGuide[] = [
         "label": "Custom referral tags and pledge reports",
         "publisher": "Kickstarter",
         "href": "https://help.kickstarter.com/en-us/articles/16236548-how-do-i-create-a-custom-referral-tag-and-track-referral-stats"
+      },
+      {
+        "label": "Kickstarter advertising budget and acquisition cost example",
+        "publisher": "Guildframe",
+        "href": "/guides/kickstarter-advertising-budget-board-games"
       }
     ],
     "relatedSlugs": [
       "kickstarter-prelaunch-email-list",
       "kickstarter-advertising-budget-board-games",
-      "board-game-kickstarter-page-checklist"
+      "board-game-kickstarter-page-checklist",
+      "choose-board-game-kickstarter-marketing-agency"
     ],
     "sections": [
       {
@@ -53,6 +59,25 @@ export const marketingGuides: LaunchGuide[] = [
           "Confirm what each reward contains and which countries you can serve. Work out the costs behind it: production, packaging, platform charges, taxes where applicable, delivery, service fees and advertising. An attractive pledge total can still leave too little to deliver the game.",
           "Gather a readable rules sample, gameplay images and an honest product view. If a core component is still changing, decide whether it can be clearly labelled as a prototype or needs to be settled before promotion. These are readiness checks, not a requirement to finish every illustration before talking about the game."
         ]
+      },
+      {
+        "id": "worked-budget",
+        "title": "Worked budget: release spending in stages",
+        "paragraphs": [
+          "Hypothetical example in USD: a publisher sets aside $1,000 for paid media. Campaign design, ad management, email software and production have separate budgets. The amounts below are invented planning inputs, not a Guildframe quote, an industry average or a recommended minimum.",
+          "Suppose the first $250 test produces 50 valid signups. That is $5 per signup and leaves $750 of the media allowance unspent. It does not tell you what a backer will cost. Review whether the welcome email arrived and subscribers used the game material before approving another test. Keep later allocations available to change or cancel."
+        ],
+        "table": {
+          "headers": ["Example allocation", "Media cap", "Release condition"],
+          "rows": [
+            ["First prelaunch test, week 4", "$250", "The page, signup event and welcome email pass a real test."],
+            ["Revised test, week 3", "$250", "Review the first results and fix the specific message or page issue being tested."],
+            ["Live campaign test", "$300", "The campaign is live, reward economics are checked and pledge reporting is ready."],
+            ["Unassigned reserve", "$200", "The publisher approves a defined use; it can remain unspent."],
+            ["Total media allowance", "$1,000", "A ceiling across these stages, separate from service fees and other launch costs."]
+          ]
+        },
+        "source": 3
       },
       {
         "id": "schedule",
