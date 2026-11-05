@@ -1,5 +1,7 @@
 import {growthGuides} from "./launch-growth-guides";
 import {reviseLaunchGuide} from "./launch-guide-revisions";
+import {reviseBuyerGuide} from "./growth-buyer-revisions";
+import {contentDates} from "./content-dates";
 import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
 import {decisionGuides} from "./launch-decision-guides";
@@ -1033,4 +1035,5 @@ const originalLaunchGuides:LaunchGuide[]=[
 
 ];
 
-export const launchGuides = originalLaunchGuides.map(reviseLaunchGuide);
+const growthUpdatedSlugs = new Set(["choose-board-game-kickstarter-marketing-agency", "board-game-kickstarter-campaign-design-cost", "kickstarter-prelaunch-email-list", "kickstarter-campaign-video-planning", "kickstarter-advertising-budget-board-games"]);
+export const launchGuides = originalLaunchGuides.map(reviseLaunchGuide).map(reviseBuyerGuide).map(guide => growthUpdatedSlugs.has(guide.slug) ? {...guide, updated:contentDates.growthReview} : guide);

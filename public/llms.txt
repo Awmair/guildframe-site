@@ -129,3 +129,8 @@ Dataset: https://guildframe.com/data/kickstarter-tabletop-games-benchmark-2024.c
 - [Plan Board Game Reviewer Previews Before Kickstarter](https://guildframe.com/guides/board-game-reviewer-outreach): Prepare board game reviewer outreach with a prototype brief, press kit, dispatch plan and clear permissions before your Kickstarter launch.
 - [A Kickstarter Launch-Day Checklist for Board Games](https://guildframe.com/guides/board-game-kickstarter-launch-day-checklist): Run a board game Kickstarter launch with clear owners, mobile and reward checks, tested links and first-day reporting. Includes Gamefound testing notes.
 - [Choose a Pledge Manager for Your Board Game Campaign](https://guildframe.com/guides/board-game-pledge-manager-checklist): Compare pledge managers for a board game Kickstarter by upgrades, shipping, fees, order exports and support. Use a practical selection checklist.
+
+## Creative production and original research
+- [Campaign creative](https://guildframe.com/campaign-creative): Scoped scripts, product renders, motion and ad variants. Actual campaign work and narrated walkthroughs.
+- [Campaign page study](https://guildframe.com/resources/tabletop-campaign-page-study): 25 public tabletop campaigns, explicit evidence limits and a downloadable comparison.
+- [Advertising calculator](https://guildframe.com/guides/kickstarter-advertising-budget-board-games#advertising-calculator): Reward contribution, advertising and fixed cost scenarios.

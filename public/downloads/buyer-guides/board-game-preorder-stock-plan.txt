@@ -1,0 +1,86 @@
+Board game preorder stock allocation and order review
+Guildframe | https://guildframe.com/guides/sell-board-game-preorders-on-shopify
+
+This is an operational planning form. The quantities below are hypothetical,
+not actual warehouse stock or a recommendation for a replacement reserve.
+You can edit it without joining a mailing list.
+
+PROJECT
+Game, edition, language and SKU:
+Supplier confirmation and date:
+Expected incoming quantity:
+Warehouse receipt and usable quantity, when confirmed:
+Backer commitments:
+Replacement or damage reserve:
+Retailer and other commitments:
+Allocation remaining for new sales:
+Person who reconciles the allocations:
+Review frequency and stop rule:
+
+ILLUSTRATIVE ALLOCATION FOR ONE EDITION
+Planned production quantity                         1,500
+Reserved for existing backers                      1,100
+Replacement and damage reserve                       75
+Existing retailer commitments                       100
+Remaining for new sales                             225
+
+This is a future allocation, not 225 units ready to ship.
+Example channel caps: Shopify preorders 125; late pledges 100.
+After 90 Shopify orders and 60 late pledges, 75 remain across those caps:
+35 for Shopify and 40 for late pledges. Check current commitments before
+moving an unsold allocation between channels.
+
+YOUR CHANNEL LIMITS
+Channel               Opening cap       Orders       Remaining       Date
+Shopify preorders:
+Late pledges:
+Other new commitments:
+
+If systems do not share stock, the counts need an agreed reconciliation.
+Do not let each channel sell the entire remaining production allocation.
+Incoming units and quantities currently available for shipping are different.
+
+CUSTOMER PROMISE
+Preorder label beside the purchase action:
+Payment timing:
+Expected shipping window and known dependencies:
+Whether the window means dispatch or delivery:
+What happens to an order containing an item already in stock:
+Shipping charge and any second shipment charge:
+Update channel:
+Cancellation, refund and address change route:
+Delay notification owner:
+
+ILLUSTRATIVE MIXED CART COPY
+This order contains a card deck available now and an expansion on preorder.
+We will send both together when the expansion is ready. The expected dispatch
+window is [your confirmed window]. [State the actual payment timing.] If you
+want the deck sooner, [explain the separate order or shipment option you
+actually support, including any extra shipping charge].
+
+Replace every bracketed field. Use this wording only if the tested checkout
+and fulfilment process follow it. Do not promise a split shipment by default.
+
+ORDER REVIEW BEFORE OPENING SALES
+Case                         Expected result          Evidence and owner
+Preorder only:
+Item already in stock only:
+Mixed cart:
+Last permitted preorder:
+Next order after cap:
+Cancellation and refund:
+Payment due later, if used:
+Address change:
+Delay notification:
+
+Confirm the customer wording, payment state, allocation, notifications and
+fulfilment status for each case. Protect the backer and replacement reserves
+when the preorder app or staff change inventory settings.
+
+REFERENCE
+Shopify preorder requirements and app/payment considerations:
+https://help.shopify.com/en/manual/products/purchase-options/pre-orders
+Shopify's setting for selling when tracked stock reaches zero:
+https://help.shopify.com/en/manual/inventory-and-locations/setup/selling-when-out-of-stock
+Enabling continued selling alone does not define a payment plan, customer
+promise or a shared cap across campaign and store orders.

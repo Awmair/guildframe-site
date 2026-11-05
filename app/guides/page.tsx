@@ -182,6 +182,7 @@ export default function GuidesPage() {
           <Link href="/guides/choose-board-game-kickstarter-marketing-agency"><span>02 / COMPARE CAMPAIGN HELP</span><strong>Which work should you hire for?</strong><p>Compare deliverables, fees and responsibilities before choosing an agency.</p></Link>
           <Link href="/guides/best-shopify-themes-for-board-games"><span>03 / PLAN YOUR STORE</span><strong>Which Shopify theme fits your games?</strong><p>Compare themes against your catalogue, budget and setup work.</p></Link>
         </nav>
+        <nav className="gf-service-related" aria-label="Tools and real campaign examples"><Link href="/guides/kickstarter-advertising-budget-board-games#advertising-calculator">Try the ad budget calculator</Link><Link href="/resources/tabletop-campaign-page-study">Explore 25 campaign examples</Link><Link href="/campaign-creative#creative-walkthroughs">Watch the creative walkthroughs</Link></nav>
         <LibrarySearch count={guides.length} noun="guides" filters={guideFilters}/>
         <section className="guides-grid" id="launch-guides" aria-label="Campaign launch guides">
           {campaignGuides.map((guide, index) => <GuideCard guide={guide} index={index} stage={guideStage(guide.href)} key={guide.href}/>)}

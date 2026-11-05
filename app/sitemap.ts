@@ -9,6 +9,8 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
+    { path: "/campaign-creative", modified: contentDates.campaignCreative },
+    { path: "/resources/tabletop-campaign-page-study", modified: contentDates.campaignPageStudy },
     { path: "/", modified: contentDates.home },
     { path: "/buy", modified: contentDates.buy },
     { path: "/done-for-you-shopify-store", modified: contentDates.doneForYouShopifyStore },

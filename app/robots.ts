@@ -5,7 +5,7 @@ import indexNow from "../indexnow.config.json";
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  const publicTextFiles = ["/", "/llms.txt", `/${indexNow.key}.txt`];
+  const publicTextFiles = ["/", "/llms.txt", "/downloads/buyer-guides/", `/${indexNow.key}.txt`];
   return {
     rules: [
       // The static export writes a React payload file beside every route

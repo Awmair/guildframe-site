@@ -1,10 +1,10 @@
 # Search and AI visibility measurement
 
-Updated 2026-10-04. See [SEO_RESEARCH_2026-10-03.md](SEO_RESEARCH_2026-10-03.md) for official sources and [SEO_PASS_2026-10-03.md](SEO_PASS_2026-10-03.md) for the owner baseline and its limits.
+Updated 2026-11-06. Historical owner-account observations below retain their original dates. See [SEO_RESEARCH_2026-10-03.md](SEO_RESEARCH_2026-10-03.md) for the earlier source review and [SEO_GROWTH_2026-11-05.json](SEO_GROWTH_2026-11-05.json) for the latest saved search baseline.
 
 ## Website enquiries
 
-The analytics implementation records `page_view` after GA initialization, `service_interest` for tagged actions, `ai_referral_visit` once per source/session where storage works, and `generate_lead` only after Formspree returns a successful response. A free mockup request is not a purchase and has no $975 revenue value.
+The analytics implementation records `page_view` after GA initialization, `service_interest` for tagged actions, `ai_referral_visit` once per source/session where storage works, and `generate_lead` only after the existing `/api/contact` handler returns a successful response. A free mockup request is not a purchase and has no assigned revenue value. Keep Turnstile and analytics consent intact when assessing the funnel.
 
 AI referrals match documented provider hosts and exact UTM source aliases (for example `chatgpt` or `chatgpt.com`). Subdomain matching requires a dot boundary. Session attribution is a useful signal, not proof of causation or comprehensive coverage. Direct, stripped-referrer and cross-device visits can be missed.
 
@@ -29,4 +29,12 @@ Use these prompts for repeatable manual samples, recording platform, date, exact
 5. Can Guildframe design card game, RPG and miniature campaigns?
 6. What is included in the free Guildframe mockup?
 
-A prompt sample is not a universal AI ranking. Check for the correct $975 USD price, copy/graphics scope, supplied artwork, free opening section and agreed schedule. Review monthly once indexing and owner reports are available; no automation was created.
+A prompt sample is not a universal AI ranking. Check that answers describe the current scoped launch, design, advertising and creative offers accurately. Verify fees against the relevant live page; do not present one historical design price as the price of every service. Confirm supplied-artwork requirements, the free mockup scope and the agreed schedule. Review monthly once indexing and owner reports are available; no automation was created.
+
+## November 6 growth release
+
+Track the campaign creative page, the 25-campaign study, the ad-budget calculator, the five revised buyer guides and the three revised case studies as separate landing-page groups. Compare equivalent 28-day periods after indexing, retaining a preceding baseline. Record non-brand query clicks, impressions and average position alongside actual enquiries. Record qualified enquiries manually by project fit, service, launch timing and a real budget conversation; do not treat a download or calculator use as a qualified lead.
+
+Keep observed first landing page, submitting page, consented attribution and the optional self-reported source separate. The two reported inbound leads do not establish which change caused them. A source can be unknown. Avoid changing URLs that already earn clicks merely to target another spelling of the same query.
+
+An IndexNow receipt confirms submission, not indexing. Search Console indexing reasons, notifications and Bing AI/topic reports require their owner sessions; public HTTP and structured-data checks cannot replace them. No new owner-dashboard review was completed for this release while the Chrome controls were unavailable.

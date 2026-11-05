@@ -1,0 +1,79 @@
+Campaign design scope template
+Guildframe | https://guildframe.com/guides/board-game-kickstarter-campaign-design-cost
+
+Use this form to request comparable quotes. It is not Guildframe's standard
+package or a market price. Confirm the final scope in the provider's brief.
+You can save, edit and share it with your project team without signing up.
+
+PROJECT
+Game:
+Platform:
+Preview or project link:
+Target launch date:
+Creator and fact checker:
+Person collecting design feedback:
+Artwork folder and access:
+Reward matrix and version:
+
+PAGE CONTENT
+For each row, record the supplied facts/assets, required output, review
+owner and date. Delete sections your game does not need and add missing ones.
+
+Section                   Supplied input       Required output      Owner/date
+Opening and game premise:
+Player count and time:
+Sample turn or play example:
+Component or content spread:
+Rules or playable sample:
+Core reward:
+Other editions:
+Optional extras:
+Reward comparison:
+Stretch goals, if planned:
+Real previews or reviews:
+Creator and development stage:
+Production, risks and delivery:
+
+VERSIONS TO COUNT
+Named editions and reward differences:
+Languages:
+Physical and digital versions:
+Number of optional extras:
+Platforms needing separate assembly or exports:
+Any assets still marked as prototypes or placeholders:
+
+DELIVERY AND REVIEWS
+Campaign copy included:
+Graphics included:
+Final file formats and dimensions:
+Editable source files:
+Who assembles the platform page:
+Who checks the actual platform preview:
+Included review rounds:
+How feedback is collected:
+What counts as extra work:
+How extra fees and revised dates are approved:
+Dependencies before production starts:
+Handoff date:
+
+SEPARATE WORK, IF NEEDED
+New illustration:
+Photography:
+3D models or renders:
+Video or animation:
+Prelaunch page and email:
+Advertising creative or management:
+Live campaign support:
+
+WORKED EXAMPLE: FICTIONAL HARBOUR COUNCIL
+Inputs: final artwork, draft rules and approved core/deluxe reward matrix.
+Requested work: page outline and copy; a sample turn; core box spread;
+core/deluxe comparison; optional card pack panel; production/delivery copy;
+agreed exports and editable files.
+Acceptance: the sample turn follows the rules; every component count matches
+the approved sheet; deluxe replacements are clear; text is readable in the
+phone preview; final files open and match the approved version.
+
+This example describes a job, not a standard section count or price. If the
+creator adds a language or changes rewards after approval, ask for the scope,
+fee and date effect in writing before that extra work starts.

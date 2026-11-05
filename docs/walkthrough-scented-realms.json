@@ -1,0 +1,46 @@
+{
+  "title": "ScentedRealms campaign presentation walkthrough",
+  "script": "docs/walkthrough-scented-realms.txt",
+  "source": "public/images/work/scented-realms.webp",
+  "sourceWidth": 1400,
+  "sourceHeight": 788,
+  "sourceAspectRatio": "350:197",
+  "targetWidth": 1280,
+  "targetHeight": 720,
+  "estimatedDurationSeconds": 56,
+  "timingStatus": "Aligned to encoded narration sections. Caption cues divide each spoken paragraph into short reading intervals.",
+  "credit": "Campaign presentation and visual direction by Umair. Product imagery and the ScentedRealms identity belong to the project creator.",
+  "campaignUrl": "https://www.kickstarter.com/projects/hans-h-h-hansen/scentedrealms-fantasy-scents-for-immersive-gameplay",
+  "beats": [
+    {
+      "start": 0.0,
+      "end": 14.437,
+      "caption": "Introduce an unfamiliar RPG accessory",
+      "imageView": "full",
+      "transcriptParagraph": 1
+    },
+    {
+      "start": 14.437,
+      "end": 26.826,
+      "caption": "Keep the physical products visible",
+      "imageView": "full",
+      "transcriptParagraph": 2
+    },
+    {
+      "start": 26.826,
+      "end": 38.119,
+      "caption": "Bring the collection into one composition",
+      "imageView": "full",
+      "transcriptParagraph": 3
+    },
+    {
+      "start": 38.119,
+      "end": 54.017,
+      "caption": "Explain the product, its use and the reward",
+      "imageView": "full",
+      "transcriptParagraph": 4
+    }
+  ],
+  "durationSeconds": 54.04,
+  "narration": "macOS Samantha synthetic narration, 150 words per minute"
+}

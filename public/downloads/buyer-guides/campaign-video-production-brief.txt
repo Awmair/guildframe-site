@@ -1,0 +1,87 @@
+Campaign video production brief
+Guildframe | https://guildframe.com/guides/kickstarter-campaign-video-planning
+
+Use this brief to request a scoped quote. It contains no standard price or
+required campaign video duration. You can edit it without an email signup.
+
+PROJECT AND PURPOSE
+Game and platform:
+Preview or rules link:
+Target launch date:
+What the viewer should understand after watching:
+One sentence describing what players do:
+Confirmed development stage and funding purpose:
+Person who approves product facts:
+Person who collects production feedback:
+
+DELIVERABLES TO QUOTE SEPARATELY
+Main campaign introduction: purpose, duration and aspect ratio:
+Gameplay recording: rules version, purpose and level of detail:
+Optional Discovery Mode clip: purpose and vertical shot plan:
+Other social or advertising versions:
+Caption files, languages and burned captions where agreed:
+Thumbnail or poster image:
+Final formats and file list:
+Editable project and source media handoff:
+
+Kickstarter's main project video and Discovery Mode clip are optional.
+Its cited Discovery Mode guidance specifies 9:16 vertical framing and
+recommends 60 to 90 seconds. That recommendation is not a required duration
+for the main campaign video. Recheck current upload guidance before export:
+https://help.kickstarter.com/en-us/articles/16236743-is-a-project-video-required-to-launch
+
+EXISTING INPUTS
+Usable footage and audio, with links:
+Footage or images that use prototypes:
+Approved script or outline:
+Artwork, component images and product dimensions:
+3D models, if any:
+Reward names, quantities and edition differences:
+Music, voice, talent and media permissions:
+Missing material and person supplying it:
+
+PRODUCTION WORK
+Editing supplied footage:
+New filming: location, people, prototype and days to quote:
+Motion graphics or 3D scenes:
+Voice recording or audio cleanup:
+Vertical adaptation and additional shots:
+Caption preparation and checking:
+
+SHOT LIST
+For each shot record:
+  Script point or viewer question:
+  Visible action or product evidence:
+  Required footage, assets and labels:
+  Person who confirms the fact:
+  Capture status and approval:
+
+ILLUSTRATIVE SEQUENCE FOR FICTIONAL HARBOUR COUNCIL
+1. Identify the game: show the full board and player work areas.
+2. Show a decision: use the last timber for a contract or store stone for later.
+3. Show the result: the contract is complete; the timber is unavailable to
+   the next player. Check that this sequence follows the approved rules.
+4. Explain the reward: show core contents separately from deluxe replacements.
+5. Explain the funding purpose: the creator describes the next production step.
+
+This is an invented shot plan, not existing footage or a client case study.
+
+QUOTE AND REVIEWS
+Scope and separate production costs:
+Inputs needed before starting:
+Script approval date:
+Rough cut review and included rounds:
+Who combines feedback:
+Cost and timing of new shots or changes after approval:
+Final delivery date:
+Rights, usage limits and editable file terms:
+
+ACCEPTANCE
+- Every product, reward and funding statement matches the approved facts.
+- Prototype material is identified where needed.
+- The sample turn shows a decision and consequence accurately.
+- The main message is understandable with sound off.
+- Speech is clear with sound on; captions are accurate.
+- Important text and components survive the actual vertical crop.
+- The files play in the intended destination, including embedded videos.
+- The campaign page still explains the offer to someone who skips the video.

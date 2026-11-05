@@ -1,0 +1,4 @@
+Scenario,Pledge,Variable cost,Fee percent,Failed percent,Reserve per reward,Media spend,Fixed fees,Cost per lead,Pledge conversion percent,Signups,Collected backers,Available per collected reward,Remaining after entered costs,Lead cost ceiling before fixed fees,Collected backers needed
+Hypothetical starting example,60,30,8,5,5,1000,500,2,5,500,23.75,20.2,-1020.25,0.9595,75
+Hypothetical weaker conversion,60,30,8,5,5,1000,500,2,2,500,9.5,20.2,-1308.1,0.3838,75
+Hypothetical lower lead cost,60,30,8,5,5,1000,500,0.5,5,2000,95,20.2,419,0.9595,75

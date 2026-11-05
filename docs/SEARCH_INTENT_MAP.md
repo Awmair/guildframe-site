@@ -37,3 +37,12 @@ No geographic office pages or false credentials were added. The full keyword and
 | Quiver Time CITADEL campaign presentation | /work/quiver-time | Card storage accessory features and creator credited photograph |
 
 These are creative case studies. No campaign funding total is claimed as Guildframe advertising performance. Existing service and guide URLs retain their intent ownership.
+
+## Growth additions, 6 November 2026
+
+| Canonical destination | Distinct visitor decision | Related route |
+| --- | --- | --- |
+| `/campaign-creative` | Commission scripts, renders, short motion and ad variants for a tabletop campaign | `/campaign-design` remains complete campaign page copy and layout |
+| `/resources/tabletop-campaign-page-study` | Inspect observable campaign information and source evidence across a declared sample | Existing official statistics benchmark remains separate |
+
+Agency/freelancer and fee-model questions extend the existing agency guide. Video production choices extend the existing video guide. The ad economics calculator lives inside the existing advertising budget guide. These are grouped buyer intents, not a page per keyword variation.

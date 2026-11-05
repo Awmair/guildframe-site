@@ -2,17 +2,26 @@ import { pastWork, clientTestimonials } from "./past-work";
 
 import { contentDates } from "./content-dates";
 export const workDate = contentDates.work;
+export const workPublishedDate = contentDates.workPublished;
 
 const projectNotes = [
   {
     slug: "scented-realms",
+    imageWidth: 1400,
+    imageHeight: 788,
+    proofLabel: "Details from the campaign artwork",
+    contributionSummary: "Visual direction and campaign presentation",
+    proofViews: [
+      { title: "Products before the explanation", copy: "The packaged scents and ScentEngine sit together in the foreground. They give a visitor a physical product to look at while the copy introduces the idea.", alt: "Detail of the packaged ScentedRealms scents and ScentEngine in the campaign artwork", position: "50% 78%", scale: 1.18 },
+      { title: "The product carries the fantasy artwork", copy: "The illustrated packaging carries the setting into the composition. The surrounding dark colour and red frame leave the collection visible as one offer.", alt: "Detail of the fantasy artwork on ScentedRealms packaging", position: "57% 49%", scale: 1.12 },
+    ],
     seoTitle: "ScentedRealms Kickstarter Campaign Design Case Study",
     description: "How Umair presented ScentedRealms on Kickstarter: fantasy art direction, the ScentEngine and a scent collection for tabletop roleplaying sessions.",
     headline: "Explaining a new accessory for the RPG table.",
     brief: "ScentedRealms brings fantasy scents into tabletop roleplaying. Its campaign needed to introduce an unfamiliar product: what the ScentEngine is, what comes in the scent collection and how a group might use it during a session.",
     role: "I developed the visual direction and campaign presentation. The product, packaging and fantasy imagery gave the page its starting point; my work was to bring those pieces into a readable campaign story.",
     decisions: [
-      { title: "Introduce the product and the setting together", copy: "The opening artwork places the ScentEngine and scent products in front of a fantasy scene. A visitor can see a physical product while the surrounding imagery establishes the kind of tabletop experience it belongs to." },
+      { title: "Introduce the product and the setting together", copy: "The opening artwork places the ScentEngine and scent products in the foreground. A visitor can see a physical product while the illustrated packaging establishes the kind of tabletop experience it belongs to." },
       { title: "Keep the collection visible", copy: "The image groups the packaged products and individual scent items. Showing them together gives the collection a physical scale and helps explain an offer that would be difficult to describe with a setting illustration alone." },
       { title: "Give the page a consistent visual direction", copy: "The red frame, dark background and fantasy colour carry the product identity into the campaign presentation. Product labels still need enough space to be read; atmosphere should support the explanation." },
     ],
@@ -24,6 +33,14 @@ const projectNotes = [
   },
   {
     slug: "futureproof-terrain",
+    imageWidth: 1400,
+    imageHeight: 788,
+    proofLabel: "Details from the original campaign artwork",
+    contributionSummary: "Campaign presentation and product explanation",
+    proofViews: [
+      { title: "Separate parts", copy: "The walls and floors appear apart from the assembled building. The graphic connects the product name with the pieces a player will handle.", alt: "Detail of the separate modular wall and floor components in the FutureProof Terrain campaign graphic", position: "100% 19%", scale: 1.15 },
+      { title: "A finished build", copy: "The assembled structure gives those separate pieces a clear use on the table. Showing both views helps explain the modular system.", alt: "Detail of the assembled FutureProof Terrain building in the campaign graphic", position: "48% 100%", scale: 1.18 },
+    ],
     seoTitle: "FutureProof Terrain Kickstarter Campaign Design Case Study",
     description: "A closer look at FutureProof Terrain campaign creative by Umair: modular parts, assembled terrain and a clear product story for wargaming backers.",
     headline: "Showing how modular terrain fits together.",
@@ -42,6 +59,14 @@ const projectNotes = [
   },
   {
     slug: "quiver-time",
+    imageWidth: 1200,
+    imageHeight: 1200,
+    proofLabel: "Details from Quiver Time's product reference",
+    contributionSummary: "Campaign presentation of features and storage options",
+    proofViews: [
+      { title: "The physical product", copy: "Quiver Time's photograph shows the black CITADEL product and its finish. It is the creator's product reference; Umair's contribution was the campaign presentation.", alt: "Detail of Quiver Time's black CITADEL Deck Block in the creator supplied photograph", position: "16% 20%", scale: 1.12 },
+      { title: "Packaging and product identity", copy: "The photograph also shows the retail packaging and CITADEL name. The product, packaging, branding and photography belong to Quiver Time.", alt: "Detail of Quiver Time's CITADEL Deck Block packaging in the creator supplied product photograph", position: "100% 100%", scale: 1.15 },
+    ],
     seoTitle: "Quiver Time CITADEL Kickstarter Campaign Design Case Study",
     description: "Quiver Time CITADEL campaign presentation by Umair: explaining a card storage accessory through its cover, divider, compartments and everyday use.",
     headline: "Making a card storage product easy to understand.",

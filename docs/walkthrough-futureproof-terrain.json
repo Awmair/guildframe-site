@@ -1,0 +1,46 @@
+{
+  "title": "FutureProof Terrain campaign presentation walkthrough",
+  "script": "docs/walkthrough-futureproof-terrain.txt",
+  "source": "public/images/work/futureproof.webp",
+  "sourceWidth": 1400,
+  "sourceHeight": 788,
+  "sourceAspectRatio": "350:197",
+  "targetWidth": 1280,
+  "targetHeight": 720,
+  "estimatedDurationSeconds": 55,
+  "timingStatus": "Aligned to encoded narration sections. Caption cues divide each spoken paragraph into short reading intervals.",
+  "credit": "Campaign presentation by Umair. Terrain design, product imagery and the Snot Goblin identity belong to the creator.",
+  "campaignUrl": "https://www.kickstarter.com/projects/snotgoblingaming/futureproof-wargaming-terrain-by-snot-goblin-gaming",
+  "beats": [
+    {
+      "start": 0.0,
+      "end": 13.25,
+      "caption": "A modular terrain campaign",
+      "imageView": "full",
+      "transcriptParagraph": 1
+    },
+    {
+      "start": 13.25,
+      "end": 25.125,
+      "caption": "Show the components beside the build",
+      "imageView": "full",
+      "transcriptParagraph": 2
+    },
+    {
+      "start": 25.125,
+      "end": 37.154,
+      "caption": "Keep the product and its benefits clear",
+      "imageView": "full",
+      "transcriptParagraph": 3
+    },
+    {
+      "start": 37.154,
+      "end": 55.779,
+      "caption": "Explain contents and reward differences",
+      "imageView": "full",
+      "transcriptParagraph": 4
+    }
+  ],
+  "durationSeconds": 55.802,
+  "narration": "macOS Samantha synthetic narration, 150 words per minute"
+}

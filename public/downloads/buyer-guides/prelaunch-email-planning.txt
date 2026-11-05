@@ -1,0 +1,86 @@
+Prelaunch email audience scenarios and sample welcome email
+Guildframe | https://guildframe.com/guides/kickstarter-prelaunch-email-list
+
+All rates, targets and the Harbour Council game below are hypothetical.
+They are planning examples, not benchmarks, measured client results or a
+funding guarantee. You can edit this file without joining a mailing list.
+
+AUDIENCE TARGET
+Backers you want across the full campaign:
+Backers you want email to contribute:
+How other channels are expected to contribute, with evidence:
+
+Required reachable subscribers = desired email backers divided by assumed
+subscriber to backer rate. Round the result up to a whole subscriber.
+
+Illustration: a creator wants 200 backers overall and plans for 80 from email.
+Assumed rate          Calculation         Required reachable subscribers
+4%                    80 / 0.04           2,000
+8%                    80 / 0.08           1,000
+12%                   80 / 0.12           667, rounded up
+
+These assumptions are invented sensitivity inputs. They do not explain how
+to acquire the subscribers or prove that they will pledge. The remaining
+120 backers in the example still need a plan. Funding and reward economics
+need a separate cost model.
+
+YOUR SCENARIOS
+Assumption            Calculation         Required reachable subscribers
+Lower:
+Working:
+Higher:
+
+Define the email denominator before using it. Count each eligible address
+once and exclude unsubscribed and undeliverable contacts. Replace guessed
+rates with comparable evidence from your own audience when available.
+
+AUDIENCE RECORD
+Review date:
+Unique eligible email addresses:
+Source and definition of that count:
+Kickstarter follower count on the same date:
+Known overlap and how you know it:
+Unknown overlap or measurement gaps:
+
+Do not add email and follower counts as if everyone were a different person.
+A report showing 1,000 email subscribers and 600 platform followers does not
+establish 1,600 unique people. One person may receive both notifications.
+A platform follow is not permission to import someone into your email list.
+
+SAMPLE WELCOME EMAIL FOR FICTIONAL HARBOUR COUNCIL
+Use only after replacing the details and checking the signup promise.
+
+Subject: Your first decision in Harbour Council
+
+Thanks for asking for a look at Harbour Council. It is a strategy game for
+two to four players about running rival harbours. Each turn, you claim cargo
+from a shared market to store or use for a shipping contract. Taking the last
+timber crate can finish your contract while leaving another harbour short.
+
+Read the two page sample round: [link to the promised sample]
+
+It shows the starting board, both choices and what happens next.
+
+I will send development notes and the Kickstarter launch announcement to
+this address. You can reply with a question about the game or leave using
+the unsubscribe link below.
+
+[Creator name]
+[Studio contact details]
+[Working unsubscribe link from your email service]
+
+BEFORE SENDING
+- The form promises these messages and the sample actually exists.
+- The sender and reply address belong to your studio.
+- A test subscriber appears once in the intended list.
+- The sample and unsubscribe links work in the received message.
+- The message remains understandable on a phone and with images hidden.
+- Each product fact has a named approver.
+
+RESPONSIBILITIES AND REVIEW
+Person responsible for the form and delivery test:
+Person who confirms product facts:
+Person who approves and sends messages:
+Campaign dates and launch link check:
+Definition and source of attributed pledges:
+After launch: actual reachable subscribers, attributed backers and limitations:

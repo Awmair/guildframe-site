@@ -13,6 +13,8 @@ export const metadata = pageMetadata({
 });
 
 const resources = [
+  {title:"Tabletop campaign page study",copy:"Inspect 25 public campaign pages with source links, evidence notes and a downloadable comparison. Unknown details stay marked.",href:"/resources/tabletop-campaign-page-study",tag:"Original research"},
+  {title:"Campaign advertising budget calculator",copy:"Change reward margins, signup costs and conversion assumptions to see whether your ad budget covers the costs entered.",href:"/guides/kickstarter-advertising-budget-board-games#advertising-calculator",tag:"Interactive planning"},
   {title:"Tabletop Campaign Launch Kit",copy:"Five free planning files for board games, card games, TTRPGs, miniatures and terrain, plus six launch lessons, monthly tips and occasional Guildframe service offers.",href:"/resources/tabletop-kickstarter-launch-kit",tag:"Free launch kit"},
   {title:"Tabletop Campaign Launch Worksheet",copy:"A reusable brief for game facts, asset status, rewards, shipping and final launch checks. Download it and fill it in with your team.",href:"/resources/tabletop-campaign-launch-worksheet",tag:"Campaign planning"},
   {

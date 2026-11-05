@@ -4,8 +4,12 @@ import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const outputRoot = new URL("../out/", import.meta.url);
+const siteOrigin = (process.env.STATIC_SITE_ORIGIN || "http://localhost:3000").replace(/\/$/, "");
+const originPattern = siteOrigin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const pages = [
+  ["/campaign-creative", "Tabletop Campaign Creative: Scripts, Renders & Motion | Guildframe", "Campaign creative"],
+  ["/resources/tabletop-campaign-page-study", "Tabletop Campaign Page Study: 25 Public Examples | Guildframe", "25"],
   ["/resources/tabletop-kickstarter-launch-kit", "Tabletop Campaign Launch Kit | Guildframe", "Tabletop Campaign Launch Kit"],
   ["/privacy", "Privacy Policy | Guildframe", "Privacy policy"],
   ["/terms", "Free Kit and Website Terms | Guildframe", "Free kit and website terms"],
@@ -16,7 +20,7 @@ const pages = [
   ["/guides/board-game-kickstarter-launch-day-checklist", "A Kickstarter Launch-Day Checklist for Board Games | Guildframe", "A Kickstarter Launch-Day Checklist for Board Games"],
   ["/guides/board-game-pledge-manager-checklist", "Choose a Pledge Manager for Your Board Game Campaign | Guildframe", "Choose a Pledge Manager for Your Board Game Campaign"],
 
-  ["/work", "Tabletop Kickstarter Campaign Design Case Studies | Guildframe", "Tabletop campaigns"],
+  ["/work", "Tabletop Kickstarter Campaign Design Case Studies | Guildframe", "Tabletop campaign design case studies"],
   ["/work/scented-realms", "ScentedRealms Kickstarter Campaign Design Case Study | Guildframe", "ScentedRealms: campaign design"],
   ["/work/futureproof-terrain", "FutureProof Terrain Kickstarter Campaign Design Case Study | Guildframe", "FutureProof Terrain: campaign design"],
   ["/work/quiver-time", "Quiver Time CITADEL Kickstarter Campaign Design Case Study | Guildframe", "Quiver Time: campaign design"],
@@ -105,8 +109,8 @@ test("exports every public page with search essentials", async (t) => {
       const html = await readPage(path);
       assert.equal(html.match(/<title>([^<]+)<\/title>/i)?.[1].replaceAll("&amp;", "&"), title);
       assert.match(html, /<meta name="description" content="[^"]+"/i);
-      assert.match(html, /<link rel="canonical" href="http:\/\/localhost:3000/i);
-      assert.match(html, new RegExp(phrase, "i"));
+      assert.equal(html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1], `${siteOrigin}${path}`);
+      assert.match(html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " "), new RegExp(phrase, "i"));
       assert.match(html, /application\/ld\+json/i);
       assert.doesNotMatch(html, /<meta name="robots" content="noindex/i);
       assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, path);
@@ -179,8 +183,8 @@ test("keeps every internal page link and section anchor valid", async () => {
       .map((match) => match[1].replaceAll("&amp;", "&"));
 
     for (const href of hrefs) {
-      const target = new URL(href, `http://localhost:3000${sourcePath}`);
-      if (target.origin !== "http://localhost:3000") continue;
+      const target = new URL(href, `${siteOrigin}${sourcePath}`);
+      if (target.origin !== siteOrigin) continue;
 
       const targetPath = target.pathname === "/"
         ? "/"
@@ -211,7 +215,7 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
 
   for (const [path] of pages) {
     const escaped = path === "/" ? "/" : path;
-    assert.match(sitemap, new RegExp(`<loc>http:\/\/localhost:3000${escaped}<\\/loc>`));
+    assert.match(sitemap, new RegExp(`<loc>${originPattern}${escaped}<\\/loc>`));
   }
 
   assert.match(robots, /User-agent: \*/i);
@@ -221,7 +225,7 @@ test("exports a complete sitemap and crawlable robots policy", async () => {
   assert.match(robots, /User-agent: GPTBot/i);
   assert.match(robots, /Disallow: \/$/im);
   assert.doesNotMatch(robots, /Content-Signal:/i);
-  assert.match(robots, /Sitemap: http:\/\/localhost:3000\/sitemap\.xml/i);
+  assert.ok(robots.includes(`Sitemap: ${siteOrigin}/sitemap.xml`));
   assert.doesNotMatch(sitemap, /<changefreq>|<priority>/i);
   assert.equal((sitemap.match(/<lastmod>[^<]+<\/lastmod>/g) ?? []).length, pages.length);
   assert.match(sitemap, /<lastmod>2026-09-30T00:00:00.000Z<\/lastmod>/);
@@ -239,9 +243,9 @@ test("makes every canonical page reachable from the homepage", async () => {
     const current = pending.pop();
     const html = await readPage(current);
     for (const [, href] of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)) {
-      const target = new URL(href.replaceAll("&amp;", "&"), `http://localhost:3000${current}`);
+      const target = new URL(href.replaceAll("&amp;", "&"), `${siteOrigin}${current}`);
       const path = target.pathname.replace(/\/$/, "") || "/";
-      if (target.origin === "http://localhost:3000" && known.has(path) && !reached.has(path)) {
+      if (target.origin === siteOrigin && known.has(path) && !reached.has(path)) {
         reached.add(path);
         pending.push(path);
       }
@@ -298,14 +302,14 @@ test("exports AEO and social metadata", async () => {
     assert.match(html, /<meta property="og:type" content="article"/i, path);
     assert.match(html, /"@type":"(?:Article|TechArticle)"/i, path);
     assert.match(html, /"isAccessibleForFree":true/i, path);
-    assert.match(html, /"author":\{"@id":"http:\/\/localhost:3000\/authors\/guildframe#umair"\}/i, path);
+    assert.ok(html.includes(`"author":{"@id":"${siteOrigin}/authors/guildframe#umair"}`), path);
     const modifiedDate = datedPages.get(path) ?? "2026-10-03";
     assert.match(html, new RegExp(`"dateModified":"${modifiedDate}"`, "i"), path);
     assert.match(html, /"citation":\[\{"@type":"CreativeWork","name":"[^"]+","url":"https?:\/\//i, path);
     assert.match(html, /"citation":\[[\s\S]*?"publisher":\{"@type":"Organization","name":"[^"]+"\}/i, path);
     assert.match(html, /Sources and references/i, path);
-    assert.match(html, new RegExp(`"@id":"http://localhost:3000${path}#breadcrumb"`, "i"), path);
-    assert.match(html, new RegExp(`"@id":"http://localhost:3000${path}#article"`, "i"), path);
+    assert.match(html, new RegExp(`"@id":"${originPattern}${path}#breadcrumb"`, "i"), path);
+    assert.match(html, new RegExp(`"@id":"${originPattern}${path}#article"`, "i"), path);
   }
 
   const referencePaths = [
@@ -582,6 +586,20 @@ for (const path of [
   "/guides/choose-board-game-kickstarter-marketing-agency",
 ]) datedPages.set(path, "2026-11-05");
 
+for (const path of [
+  "/campaign-creative",
+  "/resources/tabletop-campaign-page-study",
+  "/work/scented-realms",
+  "/work/futureproof-terrain",
+  "/work/quiver-time",
+  "/guides/choose-board-game-kickstarter-marketing-agency",
+  "/guides/board-game-kickstarter-campaign-design-cost",
+  "/guides/kickstarter-prelaunch-email-list",
+  "/guides/kickstarter-campaign-video-planning",
+  "/guides/kickstarter-advertising-budget-board-games",
+  "/guides/sell-board-game-preorders-on-shopify",
+]) datedPages.set(path, "2026-11-06");
+
 test("keeps visible review dates, schema dates and sitemap dates identical", async (t) => {
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
   const contentDates = await readFile(new URL("../app/content-dates.ts", import.meta.url), "utf8");
@@ -602,7 +620,7 @@ test("keeps visible review dates, schema dates and sitemap dates identical", asy
       assert.match(html, new RegExp(`"dateModified":"${expected}${path === "/authors/guildframe" ? "T00:00:00Z" : ""}"`), `schema dateModified must be ${expected}`);
 
       const entry = sitemap.match(
-        new RegExp(`<loc>http://localhost:3000${path}</loc>\\s*<lastmod>([^<]+)</lastmod>`),
+        new RegExp(`<loc>${originPattern}${path}</loc>\\s*<lastmod>([^<]+)</lastmod>`),
       );
       assert.ok(entry, `sitemap entry missing: ${path}`);
       assert.equal(entry[1], `${expected}T00:00:00.000Z`, `sitemap lastmod must be ${expected}`);

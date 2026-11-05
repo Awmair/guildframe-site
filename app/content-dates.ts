@@ -13,11 +13,15 @@ export function formatContentDate(value: string) {
 }
 
 export const contentDates = {
+  growthReview: "2026-11-06",
+  campaignCreative: "2026-11-06",
+  campaignPageStudy: "2026-11-06",
   launchKit: "2026-10-29",
   privacy: "2026-11-05",
   terms: "2026-10-29",
   home: "2026-10-29",
-  work: "2026-10-17",
+  work: "2026-11-06",
+  workPublished: "2026-10-17",
   campaignServices: "2026-10-17",
   campaignDesign: "2026-11-05",
   kickstarterAdvertising: "2026-11-05",
@@ -30,7 +34,7 @@ export const contentDates = {
   kickstarter: "2026-11-05",
   ttrpg: "2026-11-05",
   miniatures: "2026-11-05",
-  guides: "2026-11-05",
+  guides: "2026-11-06",
   whatHappensAfterKickstarter: "2026-10-28",
   moveFromKickstarter: "2026-10-28",
   bestBoardGameThemes: "2026-11-05",
@@ -38,7 +42,7 @@ export const contentDates = {
   latePledgesVsShopify: "2026-10-28",
   backerkitVsShopifyVsGamefound: "2026-10-28",
   kickstarterToShopifyTimeline: "2026-11-05",
-  boardGamePreorders: "2026-10-28",
+  boardGamePreorders: "2026-11-06",
   expansionsAndAddons: "2026-10-28",
   internationalVatIoss: "2026-10-28",
   boardGameWebsiteCost: "2026-10-28",
@@ -46,7 +50,7 @@ export const contentDates = {
   about: "2026-10-03",
   editorialPolicy: "2026-10-03",
   authorGuildframe: "2026-10-28",
-  resources: "2026-10-29",
+  resources: "2026-11-06",
   storeChecklist: "2026-09-30",
   migrationChecklist: "2026-09-30",
   platformMatrix: "2026-09-30",
@@ -59,5 +63,6 @@ export const contentDates = {
 export function campaignModifiedDate(slug: string) {
   if (slug === "campaign-design") return contentDates.campaignDesign;
   if (slug === "kickstarter-advertising") return contentDates.kickstarterAdvertising;
+  if (slug === "gamefound-launch-services") return contentDates.growthReview;
   return contentDates.campaignServices;
 }

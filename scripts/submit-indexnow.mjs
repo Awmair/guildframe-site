@@ -27,9 +27,16 @@ for (const value of urlList) {
     throw new Error(`Unexpected page URL in sitemap: ${value}`);
   }
 }
-const payload = { ...config, urlList };
+const requestedPaths = process.argv.find(value => value.startsWith("--paths="))?.slice("--paths=".length).split(",");
+const submittedUrls = requestedPaths ? [...new Set(requestedPaths.map(path => {
+  if (!path.startsWith("/") || path.startsWith("//")) throw new Error(`Expected a canonical path: ${path}`);
+  const value = `${origin}${path}`;
+  if (!urlList.includes(value)) throw new Error(`Requested URL is absent from the current sitemap: ${value}`);
+  return value;
+}))] : urlList;
+const payload = { ...config, urlList: submittedUrls };
 if (dryRun) {
-  console.log(JSON.stringify({ dryRun: true, host: config.host, pages: urlList.length, urlList }, null, 2));
+  console.log(JSON.stringify({ dryRun: true, host: config.host, pages: submittedUrls.length, urlList: submittedUrls }, null, 2));
 } else {
   const verifiedKey = (await getText(config.keyLocation)).trim();
   if (verifiedKey !== config.key) throw new Error("The live ownership file does not match the IndexNow key.");
@@ -40,10 +47,10 @@ if (dryRun) {
     signal: AbortSignal.timeout(20000),
   });
   const receipt = {
-    submittedAt: new Date().toISOString(), host: config.host, pages: urlList.length,
+    submittedAt: new Date().toISOString(), host: config.host, pages: submittedUrls.length,
     status: response.status,
     result: response.status === 200 ? "Received" : response.status === 202 ? "Received; key validation pending" : "Rejected",
-    urlList,
+    urlList: submittedUrls,
   };
   const output = process.argv.find(value => value.startsWith("--receipt="))?.slice("--receipt=".length);
   if (output) await writeFile(output, JSON.stringify(receipt, null, 2) + "\n");

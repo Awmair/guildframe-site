@@ -8,16 +8,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
-    "build:pages": "node scripts/launch-preflight.mjs --strict && npm run build && node scripts/optimize-pages-output.mjs",
+    "build:pages": "node scripts/launch-preflight.mjs --strict && npm run lint && npm run build && npm run typecheck && node scripts/optimize-pages-output.mjs && node scripts/check-release-output.mjs && npm run test:contact && npm run test:attribution && npm run test:economics",
     "build:pages:local": "npm run build && node scripts/optimize-pages-output.mjs",
     "preflight": "node scripts/launch-preflight.mjs",
     "preflight:strict": "node scripts/launch-preflight.mjs --strict",
-    "test": "NEXT_PUBLIC_SITE_URL=http://localhost:3000 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456 npm run build:pages:local && node --test tests/static-output.test.mjs && npm run test:contact && npm run test:attribution",
+    "test": "NEXT_PUBLIC_SITE_URL=http://localhost:3000 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TEST123456 npm run build:pages:local && node --test tests/static-output.test.mjs && npm run test:contact && npm run test:attribution && npm run test:economics",
     "test:contact": "node --experimental-strip-types --test tests/contact-handler.test.mjs",
     "test:attribution": "node --experimental-strip-types --test tests/lead-attribution.test.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "indexnow:submit": "node scripts/submit-indexnow.mjs"
+    "indexnow:submit": "node scripts/submit-indexnow.mjs",
+    "test:economics": "node --experimental-strip-types --test tests/launch-economics.test.mjs"
   },
   "dependencies": {
     "next": "16.4.3",
