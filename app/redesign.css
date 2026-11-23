@@ -27,14 +27,13 @@
 .gfr-btn--ink{background:#14302b;color:#f7f5ef}
 .gfr-btn--coral{background:#ef644d;color:#14302b}
 
-/* Hero: one screen tall, headline on the sky, offer and actions on a calm bar. */
+/* Hero: one screen tall. Headline and offer sit on the sky, the scene stays clear below. */
 .gfr-hero-shell{max-width:1328px;margin:0 auto;padding:14px 24px 0}
-.gfr-hero{display:flex;flex-direction:column;justify-content:space-between;gap:32px;height:calc(100svh - 118px);min-height:500px;max-height:780px;padding:clamp(28px,5vh,56px) clamp(24px,3.4vw,48px) clamp(16px,2.4vh,24px);border-radius:24px;background:#fbfaf8 url("/images/guildframe-tabletop-world-hero-v1.jpg") center bottom/cover no-repeat;color:#14302b}
+.gfr-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,380px);align-items:end;align-content:start;gap:24px 48px;height:calc(100svh - 118px);min-height:500px;max-height:780px;padding:clamp(28px,5vh,56px) clamp(24px,3.4vw,48px);border-radius:24px;background:#fbfaf8 url("/images/guildframe-tabletop-world-hero-v1.jpg") center bottom/cover no-repeat;color:#14302b}
 .gfr-hero h1{font-size:clamp(40px,min(7.4vw,13.5vh),112px);line-height:.9}
-.gfr-hero-bar{display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px;padding:18px 20px 18px 24px;border-radius:18px;background:#f7f5eff2}
-.gfr-avatar{flex:none;width:48px;height:48px;border-radius:50%;object-fit:cover}
-.gfr-hero-bar p{flex:1 1 380px;max-width:560px;font-size:16px;line-height:1.5}
-.gfr-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-left:auto}
+.gfr-hero-side{display:flex;flex-direction:column;gap:20px;padding-bottom:6px}
+.gfr-hero-side p{font-size:16px;line-height:1.5}
+.gfr-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
 
 .gfr-work{display:flex;flex-direction:column;gap:clamp(24px,4vh,40px)}
 .gfr-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 24px}
@@ -95,6 +94,8 @@
 .gfr.rv-on .rv.is-in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
 
 @media(max-width:1000px){
+.gfr-hero{grid-template-columns:minmax(0,1fr)}
+.gfr-hero-side{max-width:460px}
 .gfr-pricing{grid-template-columns:repeat(2,minmax(0,1fr))}
 .gfr-pricing-intro{grid-column:1/-1}
 .gfr-projects{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -103,10 +104,6 @@
 .gfr-wrap{padding-inline:16px}
 .gfr-hero-shell{padding:10px 12px 0}
 .gfr-hero{height:auto;min-height:calc(100svh - 96px);max-height:none;border-radius:18px;background-size:230% auto}
-.gfr-hero-bar{padding:16px}
-.gfr-avatar{flex:none;width:48px;height:48px;border-radius:50%;object-fit:cover}
-.gfr-hero-bar p{flex-basis:60%}
-.gfr-actions{margin-left:0}
 .gfr-projects,.gfr-pricing,.gfr-steps,.gfr-faq{grid-template-columns:minmax(0,1fr)}
 .gfr-concept-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .gfr-package{padding-top:8px}
