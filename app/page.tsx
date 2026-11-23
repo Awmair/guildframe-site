@@ -52,11 +52,12 @@ export default function Home() {
       <section className="gfr-hero-shell" data-tone="paper" aria-labelledby="home-title">
         <div className="gfr-hero">
           <h1 id="home-title" className="gfr-d">Kickstarter launches <em>for tabletop games</em></h1>
-          <div className="gfr-hero-row">
+          <div className="gfr-hero-bar">
+            <img className="gfr-avatar" src="/images/guildframe-founder-portrait-v1.webp" width="48" height="48" alt="Umair, founder of Guildframe" loading="eager"/>
             <p>I write, design and launch campaign pages for board games, card games, RPGs and miniatures. You work with me, Umair, from the brief to the final files.</p>
             <div className="gfr-actions">
-              <a className="gfr-link" href="#pricing">See pricing</a>
               <a className="gfr-btn gfr-btn--ink" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my project" data-analytics-location="homepage">Discuss my project<Arrow/></a>
+              <a className="gfr-link" href="#pricing">See pricing</a>
             </div>
           </div>
         </div>
@@ -64,57 +65,58 @@ export default function Home() {
 
       <section className="gfr-wrap gfr-section gfr-work" id="past-work" data-tone="paper" aria-labelledby="past-work-title">
         <div className="gfr-rule"><span className="gfr-label">Client work</span><Link className="gfr-label gfr-link" href="/work">All case studies</Link></div>
-        <h2 id="past-work-title" className="gfr-d rv">Three campaigns, <em>three very different games</em></h2>
-        <div className="gfr-projects">{caseStudies.map((project, index) => <article className={`gfr-project rv${index === 2 ? " gfr-project--wide" : ""}`} key={project.slug}>
-          <Link className="gfr-tile" href={`/work/${project.slug}`}><ResponsiveImage src={`/images/work/${project.image}.webp`} alt={project.alt} width={project.imageWidth} height={project.imageHeight} loading="lazy" sizes="(max-width: 900px) calc(100vw - 48px), 660px"/></Link>
+        <h2 id="past-work-title" className="gfr-d gfr-h2 rv">Three campaigns, <em>three very different games</em></h2>
+        <div className="gfr-projects">{caseStudies.map((project, index) => <article className="gfr-project rv" key={project.slug}>
+          <Link className={`gfr-tile${index === 2 ? " gfr-tile--contain" : ""}`} href={`/work/${project.slug}`}><ResponsiveImage src={`/images/work/${project.image}.webp`} alt={project.alt} width={project.imageWidth} height={project.imageHeight} loading="lazy" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1000px) 46vw, 410px"/></Link>
           <div className="gfr-project-body">
             <div className="gfr-project-head"><h3 className="gfr-d"><Link href={`/work/${project.slug}`}>{project.name}</Link></h3><span className="gfr-label">{project.category}</span></div>
             <p>{projectSummaries[index]}</p>
             {project.testimonial ? <figure><blockquote>“{project.testimonial.quote}”</blockquote><figcaption className="gfr-label">Client feedback from {project.testimonial.client}</figcaption></figure> : null}
-            <div className="gfr-project-links"><Link className="gfr-link" href={`/work/${project.slug}`}>Read the case study<span className="gf-sr-only"> for {project.name}</span></Link><a className="gfr-link" href={project.href} target="_blank" rel="noopener noreferrer">View on Kickstarter<span className="gf-sr-only"> for {project.name}, opens in a new tab</span></a></div>
           </div>
+          <div className="gfr-project-links"><Link className="gfr-link" href={`/work/${project.slug}`}>Read the case study<span className="gf-sr-only"> for {project.name}</span></Link><a className="gfr-link" href={project.href} target="_blank" rel="noopener noreferrer">View on Kickstarter<span className="gf-sr-only"> for {project.name}, opens in a new tab</span></a></div>
         </article>)}</div>
       </section>
 
-      <section className="gfr-wrap gfr-section gfr-concepts" id="concepts" data-tone="paper" aria-label="Original concepts">
+      <section className="gfr-wrap gfr-concepts" id="concepts" data-tone="paper" aria-label="Original concepts">
         <div className="gfr-rule"><span className="gfr-label">Original concepts</span><span className="gfr-label">Made in the studio, not client work</span></div>
         <div className="gfr-concept-grid rv">{concepts.map(concept => <img key={concept.image} src={`/images/hero/${concept.image}-480w.webp`} srcSet={`/images/hero/${concept.image}-320w.webp 320w, /images/hero/${concept.image}-480w.webp 480w, /images/hero/${concept.image}-640w.webp 640w`} sizes="(max-width: 900px) 30vw, 220px" width="640" height="640" alt={concept.alt} loading="lazy"/>)}</div>
       </section>
 
       <section className="gfr-wrap gfr-pricing" id="services" data-tone="dark" aria-labelledby="pricing-title">
         <div className="gfr-rule"><span className="gfr-label">Pricing</span><span className="gfr-label">Ad spend is billed separately</span></div>
-        <h2 id="pricing-title" className="gfr-d rv">Two packages, <em>fixed prices</em></h2>
-        <div className="gfr-packages" id="pricing">
-          <article className="gfr-package rv">
-            <h3>Campaign page</h3>
-            <div className="gfr-d gfr-price">$1,400</div>
-            <p>Your Kickstarter or Gamefound page, from the first line of copy to the published page.</p>
-            <ul>
-              <li>Campaign copy, written for your game</li>
-              <li>Page graphics using your artwork</li>
-              <li>Reward tiers set up</li>
-              <li>Page built on Kickstarter, ready to publish</li>
-            </ul>
-            <div className="gfr-package-actions"><a className="gfr-btn" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Campaign page" data-analytics-location="homepage pricing">Start with the page<Arrow/></a><Link className="gfr-link" href="/campaign-design#pricing">See the full scope</Link></div>
-          </article>
-          <article className="gfr-package rv">
-            <h3>Full campaign support</h3>
-            <div className="gfr-d gfr-price">$4,500</div>
-            <p>The campaign page, plus the launch around it, from prelaunch to the final handoff.</p>
-            <ul>
-              <li>Everything in Campaign page</li>
-              <li>Prelaunch signup page and emails</li>
-              <li>Ad creative and paid advertising</li>
-              <li>Live campaign checks and backer updates</li>
-              <li>Final files and report at handoff</li>
-            </ul>
-            <div className="gfr-package-actions"><a className="gfr-btn gfr-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Full campaign support" data-analytics-location="homepage pricing">Plan the full launch<Arrow/></a><Link className="gfr-link" href="/kickstarter-launch-services">See launch services</Link></div>
-          </article>
+        <div className="gfr-pricing-intro rv">
+          <h2 id="pricing-title" className="gfr-d gfr-h2">Two packages, <em>fixed prices</em></h2>
+          <p>We agree the scope and schedule before work starts. Not sure yet? Send your artwork and I will design one opening section of your page at no cost.</p>
+          <a className="gfr-link" href="#start-project">Request a free mockup</a>
         </div>
-        <p className="gfr-note">Not sure yet? Send your artwork and I will design one opening section of your page at no cost. <a className="gfr-link" href="#start-project">Request a free mockup</a></p>
+        <article className="gfr-package rv" id="pricing">
+          <h3>Campaign page</h3>
+          <div className="gfr-d gfr-price">$1,400</div>
+          <p>Your Kickstarter or Gamefound page, from the first line of copy to the published page.</p>
+          <ul>
+            <li>Campaign copy, written for your game</li>
+            <li>Page graphics using your artwork</li>
+            <li>Reward tiers set up</li>
+            <li>Page built on Kickstarter, ready to publish</li>
+          </ul>
+          <div className="gfr-package-actions"><a className="gfr-btn" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Campaign page" data-analytics-location="homepage pricing">Start with the page<Arrow/></a><Link className="gfr-link" href="/campaign-design#pricing">Full scope</Link></div>
+        </article>
+        <article className="gfr-package rv">
+          <h3>Full campaign support</h3>
+          <div className="gfr-d gfr-price">$4,500</div>
+          <p>The campaign page, plus the launch around it, from prelaunch to the final handoff.</p>
+          <ul>
+            <li>Everything in Campaign page</li>
+            <li>Prelaunch signup page and emails</li>
+            <li>Ad creative and paid advertising</li>
+            <li>Live campaign checks and backer updates</li>
+            <li>Final files and report at handoff</li>
+          </ul>
+          <div className="gfr-package-actions"><a className="gfr-btn gfr-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Full campaign support" data-analytics-location="homepage pricing">Plan the full launch<Arrow/></a><Link className="gfr-link" href="/kickstarter-launch-services">Launch services</Link></div>
+        </article>
       </section>
 
-      <section className="gfr-wrap gfr-process" id="process" data-tone="paper" aria-label="How it works">
+      <section className="gfr-wrap gfr-section gfr-process" id="process" data-tone="paper" aria-label="How it works">
         <div className="gfr-rule"><span className="gfr-label">How it works</span></div>
         <ol className="gfr-steps">
           <li className="rv"><h3 className="gfr-d">Plan</h3><p>Send your game summary, rules, artwork and target date. We agree the scope, schedule and who does what.</p></li>
@@ -130,16 +132,8 @@ export default function Home() {
 
       <section className="gfr-wrap gfr-section gfr-faq" id="faq" data-tone="paper" aria-labelledby="faq-title">
         <div className="gfr-rule"><span className="gfr-label">Questions</span><a className="gfr-label gfr-link" href={`mailto:${siteConfig.contactEmail}`} data-analytics-event="email_click" data-analytics-location="homepage faq">{siteConfig.contactEmail}</a></div>
-        <h2 id="faq-title" className="gfr-d rv">Before <em>you ask</em></h2>
+        <h2 id="faq-title" className="gfr-d gfr-h2 rv">Before <em>you ask</em></h2>
         <div>{homeFaqs.map(f => <details key={f.question}><summary>{f.question}<span aria-hidden="true">+</span></summary><p>{f.answer}</p></details>)}</div>
-      </section>
-
-      <section className="gfr-wrap gfr-cta" data-tone="coral" aria-labelledby="cta-title">
-        <h2 id="cta-title" className="gfr-d rv">Tell me about <em>your game</em></h2>
-        <div className="gfr-cta-row">
-          <a className="gfr-btn" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Start a project" data-analytics-location="homepage closing">Start a project<Arrow/></a>
-          <div className="gfr-person"><img src="/images/guildframe-founder-portrait-v1.webp" width="56" height="56" alt="Umair, founder of Guildframe" loading="lazy"/><span><strong>Umair replies to every project.</strong><a className="gfr-link" href="https://cal.com/guildframe/30min">Or book a 30 minute call</a></span></div>
-        </div>
       </section>
     </main><SeoFooter/>
   </>;
