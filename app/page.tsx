@@ -52,8 +52,7 @@ export default function Home() {
       <section className="gfr-hero-shell" data-tone="paper" aria-labelledby="home-title">
         <div className="gfr-hero">
           <h1 id="home-title" className="gfr-d">Kickstarter launches <em>for tabletop games</em></h1>
-          <div className="gfr-hero-bar">
-            <img className="gfr-avatar" src="/images/guildframe-founder-portrait-v1.webp" width="48" height="48" alt="Umair, founder of Guildframe" loading="eager"/>
+          <div className="gfr-hero-side">
             <p>I write, design and launch campaign pages for board games, card games, RPGs and miniatures. You work with me, Umair, from the brief to the final files.</p>
             <div className="gfr-actions">
               <a className="gfr-btn gfr-btn--ink" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my project" data-analytics-location="homepage">Discuss my project<Arrow/></a>
