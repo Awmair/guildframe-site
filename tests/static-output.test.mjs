@@ -10,7 +10,6 @@ const originPattern = siteOrigin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const pages = [
   ["/campaign-creative", "Tabletop Campaign Creative: Scripts, Renders & Motion | Guildframe", "Campaign creative"],
   ["/resources/tabletop-campaign-page-study", "Tabletop Campaign Page Study: 25 Public Examples | Guildframe", "25"],
-  ["/resources/tabletop-kickstarter-launch-kit", "Tabletop Campaign Launch Kit | Guildframe", "Tabletop Campaign Launch Kit"],
   ["/privacy", "Privacy Policy | Guildframe", "Privacy policy"],
   ["/terms", "Free Kit and Website Terms | Guildframe", "Free kit and website terms"],
   ["/guides/board-game-kickstarter-funding-goal", "How to Set a Kickstarter Funding Goal for a Board Game | Guildframe", "How to Set a Kickstarter Funding Goal for a Board Game"],
@@ -345,7 +344,7 @@ test("exports AEO and social metadata", async () => {
   assert.match(homepage, /og-guildframe-launch\.jpg/i);
   assert.match(homepage, /"@type":"Organization"/i);
   assert.match(homepage, /"@type":"Service"/i);
-  assert.doesNotMatch(homepage, /"price":"975"/i);
+  assert.doesNotMatch(homepage, /"price":"(?:975|1400)"/i);
   assert.doesNotMatch(homepage, /"@type":"Audience"/i);
   assert.doesNotMatch(homepage, /OutOfStock/i);
   assert.doesNotMatch(homepage, /<script\b[^>]*\bsrc="https:\/\/(?:www\.googletagmanager\.com|www\.clarity\.ms)\//i);
@@ -360,7 +359,7 @@ test("exports AEO and social metadata", async () => {
 
   const service = await readPage("/campaign-design");
   assert.match(service, /"@type":"Service"/i);
-  assert.match(service, /"price":"975"/i);
+  assert.match(service, /"price":"1400"/i);
   assert.match(service, /"priceCurrency":"USD"/i);
 
   const campaignService = await readPage("/kickstarter-to-shopify");
@@ -375,8 +374,8 @@ test("exports AEO and social metadata", async () => {
 test("keeps campaign pricing, recovery and redirects ready",async()=>{
  const home=await readPage("/");const campaign=await readPage("/campaign-design");const buy=await readPage("/buy");
  for(const html of [home,campaign,buy]){assert.match(html,/free mockup/i);assert.doesNotMatch(html,/\$79|\$2,500|\$99|fiverr|checkout pending|within 72 hours/i);}
- assert.match(home,/mailto:umair@guildframe.com/);assert.doesNotMatch(home,/"price":"975"/);assert.match(campaign,/"priceCurrency":"USD"/);
- assert.match(home,/Example project conversation/i);assert.match(home,/prefers-reduced-motion|gf-home/i);
+ assert.match(home,/mailto:umair@guildframe.com/);assert.doesNotMatch(home,/"price":"(?:975|1400)"/);assert.match(campaign,/"priceCurrency":"USD"/);
+ assert.match(home,/gfr-home/);assert.match(visibleText(home),/\$1,400/);assert.match(visibleText(home),/\$4,500/);
  const missing=await readFile(new URL("404.html",outputRoot),"utf8");assert.match(missing,/This page could not be found/);assert.match(missing,/content="noindex/);
  const redirects=await readFile(new URL("_redirects",outputRoot),"utf8");assert.match(redirects,/^\/pricing \/#pricing 301/m);assert.match(redirects,/^\/customization \/campaign-design 301/m);
  const headers=await readFile(new URL("_headers",outputRoot),"utf8");assert.match(headers,/X-Content-Type-Options: nosniff/i);
@@ -535,7 +534,6 @@ const readableDate = (iso) => {
 // drift apart. A hardcoded visible date previously survived several content
 // updates because nothing compared it with app/content-dates.ts.
 const datedPages = new Map([
-  ["/resources/tabletop-kickstarter-launch-kit", "2026-10-29"],
   ["/privacy", "2026-11-05"],
   ["/terms", "2026-10-29"],
   ["/guides/when-to-hire-kickstarter-campaign-designer", "2026-10-03"],
@@ -891,15 +889,16 @@ test("resolves article authors and profiles to the visible named person", async 
   assert.ok(nodes.some(node => node["@type"] === "Person" && node["@id"] === profile.mainEntity["@id"]));
 });
 
-test("keeps one visible design price and truthful scoped launch services", async () => {
+test("keeps the package prices consistent and launch services truthful", async () => {
   for (const [path] of pages) {
     const html = await readPage(path);
     const text = visibleText(html);
-    assert.equal((text.match(/\$975/g) ?? []).length, path === "/campaign-design" ? 1 : 0, path);
+    assert.equal((text.match(/\$975/g) ?? []).length, 0, path);
+    if (path === "/campaign-design") assert.equal((text.match(/\$1,400/g) ?? []).length, 1, path);
     const nodes = schemaNodes(html);
     for (const node of nodes.filter(node => node["@type"] === "Service")) {
       if (path === "/campaign-design") {
-        assert.equal(node.offers.price, "975");
+        assert.equal(node.offers.price, "1400");
         assert.equal(node.offers.priceCurrency, "USD");
       } else assert.equal(node.offers, undefined, path);
     }
@@ -941,35 +940,35 @@ test("keeps breadcrumb and FAQ data consistent with the visible pages", async ()
 });
 
 
-test("explains the whole launch with readable, explicitly illustrative project conversations", async () => {
+test("explains the launch in three plain steps", async () => {
   const html = await readPage("/");
-  const journey = html.match(/<section\b[^>]*\bid="process"[\s\S]*?<\/section>/)?.[0];
-  assert.ok(journey);
-  assert.equal((journey.match(/data-journey-scene/g) ?? []).length, 5);
-  assert.equal((journey.match(/Example project conversation · Fictional card game/g) ?? []).length, 5);
-  for (const title of ["Plan the launch", "Prepare the audience", "Build the campaign", "Launch and manage", "Prepare the handoff"]) assert.ok(journey.includes(title), title);
-  assert.equal((journey.match(/<dt>You bring<\/dt>/g) ?? []).length, 5);
-  assert.equal((journey.match(/<dt>I prepare<\/dt>/g) ?? []).length, 5);
-  assert.match(journey, /spend limits/);
-  assert.doesNotMatch(journey, /ROAS|funded in|raised \$|guaranteed funding/i);
+  const steps = html.match(/<section\b[^>]*\bid="process"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(steps);
+  assert.equal((steps.match(/<li\b/g) ?? []).length, 3);
+  for (const title of ["Plan", "Build", "Launch"]) assert.ok(visibleText(steps).includes(title), title);
+  assert.doesNotMatch(steps, /ROAS|funded in|raised \$|guaranteed funding/i);
   assert.doesNotMatch(html, /id="mockups"/);
   const faq = html.match(/<section\b[^>]*\bid="faq"[\s\S]*?<\/section>/)?.[0];
   assert.equal((faq.match(/<details>/g) ?? []).length, 6);
 });
 
-test("shows a diverse, labelled concept gallery in the homepage hero", async () => {
+test("opens the homepage with the offer and keeps concepts labelled apart from client work", async () => {
   const home = await readPage("/");
-  const hero = home.match(/<section\b[^>]*class="gf-studio-hero"[\s\S]*?<\/section>/)?.[0];
+  const hero = home.match(/<section\b[^>]*class="gfr-hero-shell"[\s\S]*?<\/section>/)?.[0];
   assert.ok(hero);
-  assert.match(hero, /Original tabletop campaign concepts/);
-  assert.match(hero, /Original concept/);
+  assert.match(visibleText(hero), /Kickstarter launches for tabletop games/);
+  assert.match(hero, /href="#pricing"/);
+  assert.match(hero, /href="#start-project"/);
+  assert.doesNotMatch(home, /tabletop-kickstarter-launch-kit|Free campaign kit/i);
+  const concepts = home.match(/<section\b[^>]*\bid="concepts"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(concepts);
+  assert.match(visibleText(concepts), /not client work/);
   for (const image of ["party-card-game", "strategy-board-game", "trading-card-game", "rpg-book", "miniature-terrain", "dice-accessories"]) {
-    assert.ok(hero.includes(`/images/hero/${image}-480w.webp`), image);
+    assert.ok(concepts.includes(`/images/hero/${image}-480w.webp`), image);
     for (const width of [320, 480, 640]) await access(new URL(`images/hero/${image}-${width}w.webp`, outputRoot));
   }
-  assert.equal((hero.match(/class="gf-gallery-product"/g) ?? []).length, 6);
-  assert.equal((hero.match(/data-position="0"/g) ?? []).length, 1);
-  assert.doesNotMatch(hero, /<button\b|[←→↗↘]|Pause gallery|Play gallery/);
+  const redirects = await readFile(new URL("_redirects", outputRoot), "utf8");
+  assert.match(redirects, /^\/resources\/tabletop-kickstarter-launch-kit \/guides 302$/m);
 });
 
 

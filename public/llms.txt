@@ -8,7 +8,7 @@ This supplemental summary does not replace the HTML pages or sitemap.
 
 - Services: launch planning, campaign creative, prelaunch landing pages and email, paid advertising, live campaign management and post-campaign communication.
 - Paid advertising: managed by Umair at Guildframe. Channels, access, spend limits and reporting are agreed in the project scope.
-- Pricing: broader launch work is quoted after a project review. Media spend, software, platform fees and external production are separate costs. The fixed design-only fee is published at https://guildframe.com/campaign-design#pricing.
+- Pricing: two fixed packages. The campaign page package is 1,400 US dollars and full campaign support is 4,500 US dollars. Media spend, software, platform fees and external production are separate costs. The campaign page scope is published at https://guildframe.com/campaign-design#pricing.
 - Free mockup: one opening campaign section using supplied artwork, with no payment or obligation to book.
 - Deliverables, fees, payment schedule, support dates and revisions: agreed in writing before work starts.
 - Contact: umair@guildframe.com.
@@ -51,7 +51,6 @@ This supplemental summary does not replace the HTML pages or sitemap.
 
 ## Launch planning worksheet
 
-- [Tabletop Campaign Launch Kit](https://guildframe.com/resources/tabletop-kickstarter-launch-kit): five files for planning a Kickstarter or Gamefound campaign, with an editable launch planner, campaign and email templates, creative briefs and fictional examples. Signup includes the kit, six launch lessons, a monthly newsletter with tabletop tips and occasional Guildframe service offers. Address confirmation and an unsubscribe link are included. Existing kit only contacts and project enquirers are not added automatically.
 - [Privacy Policy](https://guildframe.com/privacy): how project enquiries, kit and email subscriptions, and analytics choices are handled, including retention criteria and privacy rights.
 - [Free Kit and Website Terms](https://guildframe.com/terms): permission to edit and use the kit with your project team, the standalone resale restriction, planning assumptions and separate client service agreements.
 

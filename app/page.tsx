@@ -1,27 +1,43 @@
 import Link from "next/link";
-import { HeroGallery } from "./components/HeroGallery";
 import { SeoHeader, SeoFooter } from "./components/SeoChrome";
 import { JsonLd } from "./components/JsonLd";
+import { ResponsiveImage } from "./components/ResponsiveImage";
+import { HomeScroll } from "./components/HomeScroll";
+import { caseStudies } from "./case-studies";
 import { contentDates } from "./content-dates";
 import { absoluteUrl, siteConfig } from "./site-config";
 import { launchService } from "./seo-entities";
-import { PastWork } from "./components/PastWork";
-import { CampaignProcess } from "./components/CampaignProcess";
-import { LaunchKitTeaser } from "./components/LaunchKitTeaser";
 
 const homeFaqs = [
-  { question: "We already have artwork. Can you work with it?", answer: "Yes. Bring the artwork, game details and existing brand direction. I can develop campaign concepts, messaging, scripts and finished creative around those assets. We confirm any illustration, 3D or video work separately in the brief." },
-  { question: "Can I book one part of the launch?", answer: "Yes. Book campaign design, a set of creative assets or a broader launch. The proposal lists the deliverables, review rounds and where your team takes over." },
-  { question: "How much will the project cost?", answer: "Campaign design has a fixed price on the design page. For creative production and wider launch support, I quote after reviewing your assets, timing and scope. Ad spend and other costs appear separately." },
+  { question: "How much will the project cost?", answer: "The campaign page package is $1,400. Full campaign support is $4,500. Ad spend and other third party costs are billed separately. We agree the scope and schedule before work starts." },
+  { question: "We already have artwork. Can you work with it?", answer: "Yes. Bring the artwork, game details and existing brand direction. I write the copy and design the campaign graphics around those assets. We confirm any new illustration, 3D or video work separately in the brief." },
+  { question: "Can I book only the campaign page?", answer: "Yes. The campaign page package stands on its own. If you later want prelaunch, paid advertising or live campaign support, you can move to full campaign support." },
   { question: "How does the free opening mockup work?", answer: "Send a short game description and usable artwork. I will design one opening campaign section so you can see a direction before booking. There is no payment or obligation." },
   { question: "Do I keep my accounts, contacts and files?", answer: "Yes. Your campaign and marketing accounts stay yours. The brief lists the final files and editable sources I will hand over." },
   { question: "Can you guarantee the campaign will fund?", answer: "I cannot guarantee funding. The product, audience, pricing and fulfilment plan all affect the result. We agree the work, budget and measures of progress before the project starts." },
 ];
-const featuredGuides = [
-  { href: "/guides/board-game-kickstarter-marketing-plan", topic: "Planning", title: "Put the launch in the right order.", image: "strategy-board-game", alt: "Tidal Harbour fictional strategy game concept" },
-  { href: "/guides/kickstarter-advertising-budget-board-games", topic: "Budgets & ads", title: "Know what you can afford to spend.", image: "dice-accessories", alt: "Prismatic fictional dice and accessories concept" },
-  { href: "/guides/board-game-kickstarter-page-checklist", topic: "Campaign design", title: "See the page through a new backer's eyes.", image: "party-card-game", alt: "Snack Attack fictional party game concept" },
+const projectSummaries = [
+  "Visual direction and campaign presentation for an unfamiliar RPG accessory.",
+  "A campaign story around modular parts, table use and storage.",
+  "A clear presentation of the cover, divider and card storage options. Product photography courtesy of Quiver Time.",
 ];
+const concepts = [
+  { image: "party-card-game", alt: "Original Snack Attack party game concept with a coral box, illustrated fruit cards and tokens" },
+  { image: "strategy-board-game", alt: "Original Tidal Harbour strategy game concept with painted harbour box, hex map and wooden ships" },
+  { image: "trading-card-game", alt: "Original Starbound trading card game concept with a celestial deck box and illustrated foil cards" },
+  { image: "rpg-book", alt: "Original Moth and Moon folk horror RPG concept with a green clothbound book, adventure zine and character sheets" },
+  { image: "miniature-terrain", alt: "Original Orbital Outpost miniature game concept with a lunar box, sculpted mech and modular terrain" },
+  { image: "dice-accessories", alt: "Original Prismatic accessories concept with jewel coloured dice, coral suede tray and petrol presentation box" },
+];
+const featuredGuides = [
+  { href: "/guides/board-game-kickstarter-marketing-plan", topic: "Planning", title: "Board game Kickstarter marketing plan" },
+  { href: "/guides/kickstarter-advertising-budget-board-games", topic: "Budgets and ads", title: "Kickstarter advertising budget for board games" },
+  { href: "/guides/board-game-kickstarter-page-checklist", topic: "Campaign design", title: "Board game Kickstarter page checklist" },
+];
+
+function Arrow() {
+  return <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>;
+}
 
 export default function Home() {
   return <>
@@ -31,26 +47,100 @@ export default function Home() {
       { "@type": "FAQPage", mainEntity: homeFaqs.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })) },
     ] }}/>
     <a className="skip-link" href="#main-content">Skip to content</a><SeoHeader/>
-    <main id="main-content" className="gf-home gf-launch-home gf-redesign-home">
-      <section className="gf-studio-hero" aria-labelledby="home-title">
-        <div className="gf-studio-hero-copy"><span className="gf-eyebrow"><span className="gf-studio-dot"/>An independent tabletop studio</span><h1 id="home-title">Kickstarter launches<br/><em>for tabletop games.</em></h1><p>Campaign pages, ads and launch support for board games, card games, RPGs and miniatures. Work directly with Umair, from the brief to the final files.</p><div className="gf-actions"><a className="gf-button" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my project" data-analytics-location="homepage">Discuss my project</a><Link className="gf-studio-secondary" href="/resources/tabletop-kickstarter-launch-kit" data-launch-kit-prompt data-analytics-event="lead_kit_interest" data-analytics-location="homepage hero">Get the free campaign kit</Link></div><div className="gf-studio-hero-person"><img src="/images/guildframe-founder-portrait-v1.webp" width="64" height="64" alt="Umair, founder of Guildframe" loading="eager"/><div><strong>Work directly with Umair.</strong><span>For your first campaign, or your next one.</span></div></div></div>
-        <HeroGallery/>
-      </section>
-      <div className="gf-studio-categories" aria-label="Tabletop projects"><span>Board games</span><span>Card games &amp; TCGs</span><span>Tabletop RPGs</span><span>Miniatures &amp; STLs</span><span>Dice &amp; accessories</span></div>
-      <PastWork compact/>
-      <section className="gf-section gf-studio-services" id="services" aria-labelledby="services-title">
-        <div className="gf-section-heading"><div><span className="gf-eyebrow">A page. A creative brief. A whole launch.</span><h2 id="services-title">What does your<br/><em>game need next?</em></h2></div><p>Choose the part you need. We agree the scope, price and handoff before work begins.</p></div>
-        <div className="gf-studio-service-grid" id="pricing">
-          <article className="gf-studio-service-card"><div className="gf-service-visual gf-service-page" aria-hidden="true"><div className="gf-mini-campaign"><span>SNACK ATTACK</span><img src="/images/hero/party-card-game-320w.webp" width="320" height="320" alt="" loading="lazy"/><b>A little chaos.<br/>A lot of fruit.</b><i/><i/><i/></div><span className="gf-service-visual-label">The campaign page</span></div><div className="gf-studio-service-copy"><span className="gf-eyebrow">01 / Make the game clear</span><h3>Campaign design</h3><p>The story, copy, graphics and reward presentation for your Kickstarter or Gamefound page.</p><Link className="gf-text-link" href="/campaign-design#pricing">See the scope &amp; fixed price</Link></div></article>
-          <article className="gf-studio-service-card"><div className="gf-service-visual gf-service-creative" aria-hidden="true"><div className="gf-mini-ad"><span>YOUR NEXT<br/>GAME NIGHT.</span><img src="/images/hero/party-card-game-320w.webp" width="320" height="320" alt="" loading="lazy"/></div><div className="gf-mini-brief"><small>CREATIVE DIRECTION</small><b>01 / The hook<br/>02 / The story<br/>03 / The assets</b></div><span className="gf-service-visual-label">The creative campaign</span></div><div className="gf-studio-service-copy"><span className="gf-eyebrow">02 / Give the artwork a job</span><h3>Creative production</h3><p>Concepts, messaging, scripts, graphics and animated ads. We scope renders and video around your assets.</p><a className="gf-text-link" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Creative production" data-analytics-location="homepage services">Discuss a creative brief</a></div></article>
-          <article className="gf-studio-service-card"><div className="gf-service-visual gf-service-launch" aria-hidden="true"><div className="gf-mini-launch"><span>THE LAUNCH PLAN</span><div><b>Brief &amp; direction</b><i>Agreed</i></div><div><b>Audience &amp; creative</b><i>Preparing</i></div><div><b>Campaign &amp; ads</b><i>Next</i></div><div><b>Updates &amp; handoff</b><i>Next</i></div></div><span className="gf-service-visual-label">The wider launch</span></div><div className="gf-studio-service-copy"><span className="gf-eyebrow">03 / Bring the launch together</span><h3>Launch support</h3><p>Prelaunch pages and emails, paid advertising and agreed campaign support, with clear responsibilities.</p><Link className="gf-text-link" href="/kickstarter-launch-services">Explore launch services</Link></div></article>
+    <main id="main-content" className="gfr gfr-home" data-tone="paper">
+      <HomeScroll/>
+      <section className="gfr-hero-shell" data-tone="paper" aria-labelledby="home-title">
+        <div className="gfr-hero">
+          <h1 id="home-title" className="gfr-d">Kickstarter launches <em>for tabletop games</em></h1>
+          <div className="gfr-hero-row">
+            <p>I write, design and launch campaign pages for board games, card games, RPGs and miniatures. You work with me, Umair, from the brief to the final files.</p>
+            <div className="gfr-actions">
+              <a className="gfr-link" href="#pricing">See pricing</a>
+              <a className="gfr-btn gfr-btn--ink" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my project" data-analytics-location="homepage">Discuss my project<Arrow/></a>
+            </div>
+          </div>
         </div>
-        <div className="gf-returning-publishers"><span aria-hidden="true">✳</span><p><strong>Already have artwork and more games in the pipeline?</strong> Bring an existing title, a new campaign or a batch of creative briefs.</p><a href="#start-project">Tell me what is coming up</a></div><p className="gf-service-example-note">Service previews use the fictional Snack Attack concept.</p>
       </section>
-      <CampaignProcess/>
-      <LaunchKitTeaser/>
-      <section className="gf-section gf-home-library" aria-labelledby="home-guides-title"><div className="gf-section-heading"><div><span className="gf-eyebrow">The open notebook</span><h2 id="home-guides-title">A useful place<br/><em>to start thinking.</em></h2></div><Link className="gf-text-link" href="/guides">Browse the launch guides</Link></div><div className="gf-home-guide-grid">{featuredGuides.map(guide => <Link href={guide.href} className="gf-home-guide" key={guide.href}><div className="gf-home-guide-image"><img src={`/images/hero/${guide.image}-480w.webp`} srcSet={`/images/hero/${guide.image}-320w.webp 320w, /images/hero/${guide.image}-480w.webp 480w`} sizes="(max-width: 700px) 70vw, 300px" width="640" height="640" alt={guide.alt} loading="lazy"/></div><div><span className="gf-eyebrow">{guide.topic}</span><h3>{guide.title}</h3><span className="gf-guide-read">Read the guide</span></div></Link>)}</div></section>
-      <section className="gf-section gf-faq gf-studio-faq" id="faq" aria-labelledby="faq-title"><div><span className="gf-eyebrow">Before you send the brief</span><h2 id="faq-title">A few things<br/><em>worth clearing up.</em></h2><p>Still have a question?<br/><a href={`mailto:${siteConfig.contactEmail}`} data-analytics-event="email_click" data-analytics-location="homepage faq">{siteConfig.contactEmail}</a></p></div><div>{homeFaqs.map(f => <details key={f.question}><summary>{f.question}<span aria-hidden="true">+</span></summary><p>{f.answer}</p></details>)}</div></section>
+
+      <section className="gfr-wrap gfr-section gfr-work" id="past-work" data-tone="paper" aria-labelledby="past-work-title">
+        <div className="gfr-rule"><span className="gfr-label">Client work</span><Link className="gfr-label gfr-link" href="/work">All case studies</Link></div>
+        <h2 id="past-work-title" className="gfr-d rv">Three campaigns, <em>three very different games</em></h2>
+        <div className="gfr-projects">{caseStudies.map((project, index) => <article className={`gfr-project rv${index === 2 ? " gfr-project--wide" : ""}`} key={project.slug}>
+          <Link className="gfr-tile" href={`/work/${project.slug}`}><ResponsiveImage src={`/images/work/${project.image}.webp`} alt={project.alt} width={project.imageWidth} height={project.imageHeight} loading="lazy" sizes="(max-width: 900px) calc(100vw - 48px), 660px"/></Link>
+          <div className="gfr-project-body">
+            <div className="gfr-project-head"><h3 className="gfr-d"><Link href={`/work/${project.slug}`}>{project.name}</Link></h3><span className="gfr-label">{project.category}</span></div>
+            <p>{projectSummaries[index]}</p>
+            {project.testimonial ? <figure><blockquote>“{project.testimonial.quote}”</blockquote><figcaption className="gfr-label">Client feedback from {project.testimonial.client}</figcaption></figure> : null}
+            <div className="gfr-project-links"><Link className="gfr-link" href={`/work/${project.slug}`}>Read the case study<span className="gf-sr-only"> for {project.name}</span></Link><a className="gfr-link" href={project.href} target="_blank" rel="noopener noreferrer">View on Kickstarter<span className="gf-sr-only"> for {project.name}, opens in a new tab</span></a></div>
+          </div>
+        </article>)}</div>
+      </section>
+
+      <section className="gfr-wrap gfr-section gfr-concepts" id="concepts" data-tone="paper" aria-label="Original concepts">
+        <div className="gfr-rule"><span className="gfr-label">Original concepts</span><span className="gfr-label">Made in the studio, not client work</span></div>
+        <div className="gfr-concept-grid rv">{concepts.map(concept => <img key={concept.image} src={`/images/hero/${concept.image}-480w.webp`} srcSet={`/images/hero/${concept.image}-320w.webp 320w, /images/hero/${concept.image}-480w.webp 480w, /images/hero/${concept.image}-640w.webp 640w`} sizes="(max-width: 900px) 30vw, 220px" width="640" height="640" alt={concept.alt} loading="lazy"/>)}</div>
+      </section>
+
+      <section className="gfr-wrap gfr-pricing" id="services" data-tone="dark" aria-labelledby="pricing-title">
+        <div className="gfr-rule"><span className="gfr-label">Pricing</span><span className="gfr-label">Ad spend is billed separately</span></div>
+        <h2 id="pricing-title" className="gfr-d rv">Two packages, <em>fixed prices</em></h2>
+        <div className="gfr-packages" id="pricing">
+          <article className="gfr-package rv">
+            <h3>Campaign page</h3>
+            <div className="gfr-d gfr-price">$1,400</div>
+            <p>Your Kickstarter or Gamefound page, from the first line of copy to the published page.</p>
+            <ul>
+              <li>Campaign copy, written for your game</li>
+              <li>Page graphics using your artwork</li>
+              <li>Reward tiers set up</li>
+              <li>Page built on Kickstarter, ready to publish</li>
+            </ul>
+            <div className="gfr-package-actions"><a className="gfr-btn" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Campaign page" data-analytics-location="homepage pricing">Start with the page<Arrow/></a><Link className="gfr-link" href="/campaign-design#pricing">See the full scope</Link></div>
+          </article>
+          <article className="gfr-package rv">
+            <h3>Full campaign support</h3>
+            <div className="gfr-d gfr-price">$4,500</div>
+            <p>The campaign page, plus the launch around it, from prelaunch to the final handoff.</p>
+            <ul>
+              <li>Everything in Campaign page</li>
+              <li>Prelaunch signup page and emails</li>
+              <li>Ad creative and paid advertising</li>
+              <li>Live campaign checks and backer updates</li>
+              <li>Final files and report at handoff</li>
+            </ul>
+            <div className="gfr-package-actions"><a className="gfr-btn gfr-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Full campaign support" data-analytics-location="homepage pricing">Plan the full launch<Arrow/></a><Link className="gfr-link" href="/kickstarter-launch-services">See launch services</Link></div>
+          </article>
+        </div>
+        <p className="gfr-note">Not sure yet? Send your artwork and I will design one opening section of your page at no cost. <a className="gfr-link" href="#start-project">Request a free mockup</a></p>
+      </section>
+
+      <section className="gfr-wrap gfr-process" id="process" data-tone="paper" aria-label="How it works">
+        <div className="gfr-rule"><span className="gfr-label">How it works</span></div>
+        <ol className="gfr-steps">
+          <li className="rv"><h3 className="gfr-d">Plan</h3><p>Send your game summary, rules, artwork and target date. We agree the scope, schedule and who does what.</p></li>
+          <li className="rv"><h3 className="gfr-d">Build</h3><p>I write the copy and design the graphics around your confirmed rewards and game facts. You review each round.</p></li>
+          <li className="rv"><h3 className="gfr-d">Launch</h3><p>The page goes live. On full support I run the agreed ads, check the page and draft backer updates for your approval.</p></li>
+        </ol>
+      </section>
+
+      <section className="gfr-wrap gfr-section gfr-guides" data-tone="paper" aria-label="Guides">
+        <div className="gfr-rule"><span className="gfr-label">Guides</span><Link className="gfr-label gfr-link" href="/guides">All guides</Link></div>
+        {featuredGuides.map(guide => <Link className="gfr-guide rv" href={guide.href} key={guide.href}><span className="gfr-d">{guide.title}</span><span className="gfr-label">{guide.topic}</span></Link>)}
+      </section>
+
+      <section className="gfr-wrap gfr-section gfr-faq" id="faq" data-tone="paper" aria-labelledby="faq-title">
+        <div className="gfr-rule"><span className="gfr-label">Questions</span><a className="gfr-label gfr-link" href={`mailto:${siteConfig.contactEmail}`} data-analytics-event="email_click" data-analytics-location="homepage faq">{siteConfig.contactEmail}</a></div>
+        <h2 id="faq-title" className="gfr-d rv">Before <em>you ask</em></h2>
+        <div>{homeFaqs.map(f => <details key={f.question}><summary>{f.question}<span aria-hidden="true">+</span></summary><p>{f.answer}</p></details>)}</div>
+      </section>
+
+      <section className="gfr-wrap gfr-cta" data-tone="coral" aria-labelledby="cta-title">
+        <h2 id="cta-title" className="gfr-d rv">Tell me about <em>your game</em></h2>
+        <div className="gfr-cta-row">
+          <a className="gfr-btn" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Start a project" data-analytics-location="homepage closing">Start a project<Arrow/></a>
+          <div className="gfr-person"><img src="/images/guildframe-founder-portrait-v1.webp" width="56" height="56" alt="Umair, founder of Guildframe" loading="lazy"/><span><strong>Umair replies to every project.</strong><a className="gfr-link" href="https://cal.com/guildframe/30min">Or book a 30 minute call</a></span></div>
+        </div>
+      </section>
     </main><SeoFooter/>
   </>;
 }

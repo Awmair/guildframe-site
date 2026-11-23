@@ -36,7 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/editorial-policy", modified: contentDates.editorialPolicy },
     { path: "/authors/guildframe", modified: contentDates.authorGuildframe },
     { path: "/resources", modified: contentDates.resources },
-    { path: "/resources/tabletop-kickstarter-launch-kit", modified: contentDates.launchKit },
     { path: "/privacy", modified: contentDates.privacy },
     { path: "/terms", modified: contentDates.terms },
     { path: "/resources/tabletop-campaign-launch-worksheet", modified: "2026-10-03" },
