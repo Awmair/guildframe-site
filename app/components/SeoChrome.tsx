@@ -1,13 +1,61 @@
 import Link from "next/link";
 import { ProjectInquiryForm } from "./ProjectInquiryForm";
+import { SiteHeader } from "./chrome/SiteHeader";
 import { siteConfig } from "../site-config";
-const nav = [["/#services", "Services"], ["/work", "Work"], ["/guides", "Guides"], ["/about", "The studio"]];
+
 export function SeoHeader() {
- return <header className="gf-header glass"><Link className="gf-brand" href="/" aria-label="Guildframe home"><img src="/brand/guildframe-campaign-logo-400.webp" alt="Guildframe" width="1000" height="202" /></Link><nav className="gf-desktop-nav" aria-label="Primary navigation">{nav.map(([href,label])=><Link key={href} href={href}>{label}</Link>)}</nav><a className="gf-button gf-button-small" href="https://cal.com/guildframe/30min" data-analytics-event="service_interest" data-analytics-label="Discuss my project" data-analytics-location="header">Let&apos;s talk</a><details className="gf-mobile-menu"><summary aria-label="Navigation menu"><span>Menu</span><span className="gf-menu-icon" aria-hidden="true"><i/><i/></span></summary><nav className="glass" aria-label="Mobile navigation"><span className="gf-eyebrow">Explore Guildframe</span>{nav.map(([href,label])=><Link key={href} href={href}>{label}</Link>)}<Link href="/#process">The process</Link><Link href="/#faq">FAQs</Link></nav></details></header>;
+  return <SiteHeader />;
 }
+
+const word = "Guildframe".split("");
+
 export function SeoFooter() {
- return <><ProjectInquiryForm source="tabletop launch enquiry"/><footer className="gf-footer"><div className="gf-footer-top"><div><Link className="gf-brand" href="/"><img src="/brand/guildframe-campaign-logo-400.webp" alt="Guildframe" width="1000" height="202"/></Link><p>Tabletop crowdfunding, from the first brief<br/>to launch day and the updates after it.</p><a href={`mailto:${siteConfig.contactEmail}`} data-analytics-event="email_click" data-analytics-location="footer">{siteConfig.contactEmail}</a></div><nav aria-label="Campaign services"><strong>Launch services</strong><Link href="/kickstarter-launch-services">Kickstarter launches</Link><Link href="/kickstarter-prelaunch-marketing">Prelaunch marketing</Link><Link href="/campaign-design">Campaign page &amp; pricing</Link><Link href="/campaign-creative">Scripts, renders &amp; motion</Link><Link href="/kickstarter-advertising">Paid advertising</Link><Link href="/kickstarter-campaign-management">Campaign management</Link><Link href="/gamefound-launch-services">Gamefound launches</Link><Link href="/post-campaign-support">After the campaign</Link></nav><nav aria-label="Guildframe resources"><strong>Guides &amp; studio</strong><Link href="/guides">Launch guides</Link><Link href="/resources">Checklists &amp; references</Link><Link href="/work">Campaign case studies</Link><Link href="/about">About Guildframe</Link><Link href="/authors/guildframe">Meet Umair</Link><Link href="/editorial-policy">Editorial policy</Link><Link href="/buy">Before you book</Link><Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link><a href="#start-project">Request a free mockup</a></nav></div><div className="gf-footer-bottom"><span>© 2026 Guildframe. Led by Umair.</span><span className="gf-footer-legal"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/privacy#analytics" data-analytics-preferences>Analytics choices</Link></span></div></footer></>;
+  return <>
+    <ProjectInquiryForm source="tabletop launch enquiry" />
+    <footer className="w-footer">
+      <div className="w-footer-grid">
+        <div className="w-footer-lead">
+          <Link className="w-brand" href="/" data-title="Home"><img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="150" height="33" /></Link>
+          <p>Tabletop crowdfunding, from the first brief to launch day and the updates after it.</p>
+          <a className="w-link" href={`mailto:${siteConfig.contactEmail}`} data-analytics-event="email_click" data-analytics-location="footer">{siteConfig.contactEmail}</a>
+        </div>
+        <nav aria-label="Campaign services">
+          <strong>Launch services</strong>
+          <Link href="/kickstarter-launch-services">Kickstarter launches</Link>
+          <Link href="/kickstarter-prelaunch-marketing">Prelaunch marketing</Link>
+          <Link href="/campaign-design">Campaign page and pricing</Link>
+          <Link href="/campaign-creative">Scripts, renders and motion</Link>
+          <Link href="/kickstarter-advertising">Paid advertising</Link>
+          <Link href="/kickstarter-campaign-management">Campaign management</Link>
+          <Link href="/gamefound-launch-services">Gamefound launches</Link>
+          <Link href="/post-campaign-support">After the campaign</Link>
+        </nav>
+        <nav aria-label="Guildframe resources">
+          <strong>Guides and studio</strong>
+          <Link href="/guides">Launch guides</Link>
+          <Link href="/resources">Checklists and references</Link>
+          <Link href="/work">Campaign case studies</Link>
+          <Link href="/about">About Guildframe</Link>
+          <Link href="/authors/guildframe">Meet Umair</Link>
+          <Link href="/editorial-policy">Editorial policy</Link>
+          <Link href="/buy">Before you book</Link>
+          <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
+          <a href="#start-project">Request a free mockup</a>
+        </nav>
+      </div>
+      <div className="w-footer-word" aria-hidden="true">{word.map((letter, index) => <span key={index}>{letter}</span>)}</div>
+      <div className="w-footer-bottom">
+        <span>© 2026 Guildframe. Led by Umair.</span>
+        <nav aria-label="Legal">
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
+          <Link href="/privacy#analytics" data-analytics-preferences>Analytics choices</Link>
+        </nav>
+      </div>
+    </footer>
+  </>;
 }
-export function Breadcrumbs({items}:{items:{label:string;href?:string}[]}) {
- return <nav className="seo-breadcrumbs" aria-label="Breadcrumb"><ol>{items.map((item,index)=><li key={`${item.label}-${index}`}>{item.href?<Link href={item.href}>{item.label}</Link>:item.label}</li>)}</ol></nav>;
+
+export function Breadcrumbs({ items }: { items: { label: string; href?: string }[] }) {
+  return <nav className="seo-breadcrumbs" aria-label="Breadcrumb"><ol>{items.map((item, index) => <li key={`${item.label}-${index}`}>{item.href ? <Link href={item.href}>{item.label}</Link> : item.label}</li>)}</ol></nav>;
 }

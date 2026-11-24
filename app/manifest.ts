@@ -10,8 +10,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Kickstarter and Gamefound launch services for tabletop creators.",
     start_url: "/",
     display: "standalone",
-    background_color: "#FFF5E7",
-    theme_color: "#153E40",
+    background_color: "#133033",
+    theme_color: "#133033",
     icons: [
       {
         src: "/favicon-192x192.png",
