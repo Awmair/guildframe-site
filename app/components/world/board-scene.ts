@@ -185,7 +185,7 @@ export function mountBoard({ host, labels, onReady, onHover, onOverview }: Optio
 
   // Pawn, dice and cards.
   const pawn = makePawn();
-  const pawnHome = toWorld(pawnStart.u, pawnStart.v).add(new THREE.Vector3(0.32, 0, -0.08));
+  const pawnHome = toWorld(pawnStart.u, pawnStart.v);
   pawn.position.copy(pawnHome);
   world.add(pawn);
 
