@@ -175,7 +175,6 @@ export default function GuidesPage() {
           <span className="gf-eyebrow">Guides for tabletop creators</span>
           <h1>Plan your Kickstarter.<br/><em>Prepare what comes next.</em></h1>
           <p>Work through your launch budget, campaign page and marketing plan. Compare outside help, then prepare a store for ongoing sales.</p>
-          <Link href="/resources/tabletop-kickstarter-launch-kit" className="gf-library-kit-link"><span>Prefer working files?</span> Get the free campaign launch kit</Link>
         </section>
         <nav className="guide-start-here" aria-label="Start with the decision you need to make">
           <Link href="/guides/board-game-kickstarter-marketing-plan"><span>01 / MAKE THE PLAN</span><strong>What needs to happen before launch?</strong><p>Put the product, audience and campaign in a practical order.</p></Link>

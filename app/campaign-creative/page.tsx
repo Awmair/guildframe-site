@@ -60,7 +60,7 @@ export default function CampaignCreativePage() {
       <section className="gf-creative-section gf-creative-proof-links" aria-labelledby="creative-projects-title"><div className="gf-creative-section-heading"><div><span className="gf-eyebrow">More about the work</span><h2 id="creative-projects-title">Three projects.<br />Each contribution explained.</h2></div><p>Campaign artwork and client product photography are credited on their case pages. The cases describe the creative work and design choices.</p></div><div>{caseStudies.map(project => <Link href={`/work/${project.slug}`} key={project.slug}><span>{project.category}</span><strong>{project.name}</strong><span>Read the case study</span></Link>)}</div></section>
 
       <section className="gf-creative-section gf-faq" id="creative-questions"><div><span className="gf-eyebrow">Before you book</span><h2>Questions about<br /><em>creative production.</em></h2></div><div>{faqs.map(faq => <details key={faq.question}><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></section>
-      <nav className="gf-service-related" aria-label="Related launch services"><Link href="/campaign-design">Campaign page design</Link><Link href="/kickstarter-advertising">Paid advertising</Link><Link href="/kickstarter-launch-services">Full launch services</Link><Link href="/resources/tabletop-kickstarter-launch-kit">Free campaign kit</Link></nav>
+      <nav className="gf-service-related" aria-label="Related launch services"><Link href="/campaign-design">Campaign page design</Link><Link href="/kickstarter-advertising">Paid advertising</Link><Link href="/kickstarter-launch-services">Full launch services</Link></nav>
     </main><SeoFooter />
   </>;
 }

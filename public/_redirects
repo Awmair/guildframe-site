@@ -6,4 +6,6 @@
 /articles /guides 301
 /shopify-theme-for-tabletop-games /shopify-theme-for-board-games 301
 /kickstarter-shopify-theme /kickstarter-to-shopify 301
-/resources/tabletop-kickstarter-launch-kit /guides 302
+/resources/tabletop-kickstarter-launch-kit/thanks /guides 301
+/resources/tabletop-kickstarter-launch-kit /guides 301
+/downloads/launch-kit/* /guides 301

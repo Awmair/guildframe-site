@@ -125,7 +125,7 @@ After a material route or metadata release:
 - GA4 loads and receives a controlled event.
 - `/buy` starts a scoped project enquiry; it has no paid-guide checkout.
 - Campaign design has its dedicated fixed-price section. Wider creative and launch services are quoted after a brief.
-- The free launch kit uses the configured Sender signup URL and verified production downloads.
+- The retired launch kit URLs redirect to `/guides`.
 - Existing Shopify articles remain clearly independent editorial resources.
 - Mobile, tablet and desktop layouts have no horizontal overflow.
 

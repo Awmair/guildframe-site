@@ -21,6 +21,3 @@
 
 /downloads/guides/*
   X-Robots-Tag: noindex
-
-/downloads/launch-kit/*
-  X-Robots-Tag: noindex

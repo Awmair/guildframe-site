@@ -51,8 +51,8 @@ This supplemental summary does not replace the HTML pages or sitemap.
 
 ## Launch planning worksheet
 
-- [Privacy Policy](https://guildframe.com/privacy): how project enquiries, kit and email subscriptions, and analytics choices are handled, including retention criteria and privacy rights.
-- [Free Kit and Website Terms](https://guildframe.com/terms): permission to edit and use the kit with your project team, the standalone resale restriction, planning assumptions and separate client service agreements.
+- [Privacy Policy](https://guildframe.com/privacy): how project enquiries, earlier email subscriptions and analytics choices are handled, including retention criteria and privacy rights.
+- [Website Terms](https://guildframe.com/terms): use of the guides and downloads with your project team, the standalone resale restriction, planning assumptions and separate client service agreements.
 
 - [Tabletop Campaign Launch Worksheet](https://guildframe.com/resources/tabletop-campaign-launch-worksheet)
 

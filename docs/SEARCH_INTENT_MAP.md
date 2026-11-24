@@ -20,7 +20,11 @@ One intent group has one preferred URL. Similar phrases belong on the same page 
 
 No geographic office pages or false credentials were added. The full keyword and question map is in KEYWORD_MAP_2026-10-03.csv. Primary sources for the four new marketing guides are recorded in SERVICE_PIVOT_2026-10-03.md.
 
-## Launch kit published 29 October 2026
+## Launch kit retired 25 November 2026
+
+The kit page, its thanks page and `/downloads/launch-kit/*` now return 301 redirects to `/guides`. `/privacy` and `/terms` remain and were rewritten for earlier subscribers and website use.
+
+## Launch kit published 29 October 2026 (historical)
 
 - `/resources/tabletop-kickstarter-launch-kit`: the complete free editable campaign kit, file contents and email request. Existing individual guides and the plain launch worksheet retain their own scope.
 - `/privacy`: enquiry and kit information, lawful purposes, email and analytics choices, retention criteria and privacy rights.

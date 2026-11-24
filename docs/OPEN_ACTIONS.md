@@ -11,4 +11,4 @@ Updated 29 October 2026.
 - **Content:** the launch planner models one manufactured product shared by physical reward tiers, plus digital rewards. Additional products need separate costing. Monthly newsletters need current useful content before sending. Never import existing enquiries into marketing without their permission.
 - **Dependencies:** Next 16.4.3 and the current lockfile passed the release audit with no reported vulnerabilities. Re-run normal checks on future changes.
 
-See `docs/LAUNCH_KIT_QA.md`, `docs/CONTACT_DELIVERY.md` and `docs/email-launch-kit/` for implementation, content and activation details.
+Update 25 November 2026: the launch kit is retired. Its pages and downloads redirect to `/guides`, and the kit QA notes and email drafts were removed from the repo (they remain in git history). The Sender form `dyPKAg` and workflow `ejRyxW` still need to be closed in the Sender account by the owner. See `docs/CONTACT_DELIVERY.md` for contact delivery.

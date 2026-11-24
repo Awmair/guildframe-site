@@ -12,10 +12,8 @@ The sitemap lists the current canonical pages, including 43 practical guides, se
 
 Generated raster mockups use ImageGen and are converted to WebP. Real project images and verified client excerpts remain separate from concept imagery. Motion uses CSS and progressive enhancement, with no-JavaScript and reduced-motion support.
 
-## Launch kit and email
+## Retired launch kit
 
-The free Tabletop Kickstarter Launch Kit lives at `/resources/tabletop-kickstarter-launch-kit`. Five editable/downloadable files and the ZIP live in `public/downloads/launch-kit`; rebuild scripts are in `scripts/kit`. The workbook is a one-manufactured-SKU planning model with digital rewards, not a guarantee or a tax calculation. See `docs/LAUNCH_KIT_QA.md`.
-
-Sender hosts the signup form and confirmation. Kit requests and optional marketing are separate groups. The welcome workflow delivers the complete kit, then checks marketing permission before each lesson. `docs/email-launch-kit` contains the editable email content and operating instructions. No paid feature is required.
+The free launch kit was retired on 25 November 2026. Its page, thanks page and download folder now redirect to `/guides` (see `public/_redirects`). Earlier subscribers are covered by the privacy policy; their Sender records and unsubscribe handling stay in Sender. The kit source, build scripts and email drafts remain in git history before that date.
 
 Optional Google Analytics and Clarity scripts load only after analytics consent. First observed source information stays in memory during the visit and is submitted with the enquiry; an unknown source remains unknown.

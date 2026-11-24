@@ -107,7 +107,7 @@ Check the deployed HTML, not only the source tree:
 2. Canonicals, Open Graph URLs, schema identifiers, the sitemap and robots file
    use `https://guildframe.com`.
 3. GA4 loads and a controlled page view reaches Realtime or DebugView.
-4. Campaign design pricing appears once on its dedicated pricing section; creative production and broader launch support use scoped quotes. The homepage leads with the work and the free launch kit.
+4. Campaign design pricing appears once on its dedicated pricing section; creative production and broader launch support use scoped quotes. The homepage leads with the work.
 5. Past work links to the three verified Kickstarter campaigns. Concept mockups stay labelled separately.
 6. Client quotes match the verified delivery reviews and are preserved verbatim.
 7. The project form uses the configured endpoint. Recipient delivery needs verification in the owner’s account.
@@ -124,8 +124,6 @@ If production is broken, use the Cloudflare Pages deployment history to roll
 back to the previous successful deployment, then fix forward through this same
 runbook.
 
-## Launch kit checks
+## Retired launch kit
 
-Before activating email, verify Sender authentication, native address confirmation, separate optional marketing permission, the complete ZIP response and its manifest hash. Read back all seven email bodies and the workflow; check duplicate-entry prevention and unsubscribe suppression. Use only owner-controlled test addresses. Existing enquiries are never imported as newsletter subscribers.
-
-Do not advertise draft sending as live. Record provider activation and real inbox delivery separately. Monthly newsletter content is an editable campaign draft; each edition requires fresh content and a deliberate send.
+The launch kit page, thanks page and downloads redirect to `/guides`. Check those three redirects after a release.

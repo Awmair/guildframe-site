@@ -1,5 +1,4 @@
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
 import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
@@ -11,7 +10,7 @@ const pages = [
   ["/campaign-creative", "Tabletop Campaign Creative: Scripts, Renders & Motion | Guildframe", "Campaign creative"],
   ["/resources/tabletop-campaign-page-study", "Tabletop Campaign Page Study: 25 Public Examples | Guildframe", "25"],
   ["/privacy", "Privacy Policy | Guildframe", "Privacy policy"],
-  ["/terms", "Free Kit and Website Terms | Guildframe", "Free kit and website terms"],
+  ["/terms", "Website Terms | Guildframe", "Website terms"],
   ["/guides/board-game-kickstarter-funding-goal", "How to Set a Kickstarter Funding Goal for a Board Game | Guildframe", "How to Set a Kickstarter Funding Goal for a Board Game"],
   ["/guides/board-game-kickstarter-reward-pricing", "How to Price Kickstarter Rewards for a Board Game | Guildframe", "How to Price Kickstarter Rewards for a Board Game"],
   ["/guides/kickstarter-referral-tags-tracking", "Track Kickstarter Marketing with Referral Tags and UTMs | Guildframe", "Track Kickstarter Marketing with Referral Tags and UTMs"],
@@ -534,8 +533,8 @@ const readableDate = (iso) => {
 // drift apart. A hardcoded visible date previously survived several content
 // updates because nothing compared it with app/content-dates.ts.
 const datedPages = new Map([
-  ["/privacy", "2026-11-05"],
-  ["/terms", "2026-10-29"],
+  ["/privacy", "2026-11-25"],
+  ["/terms", "2026-11-25"],
   ["/guides/when-to-hire-kickstarter-campaign-designer", "2026-10-03"],
   ["/guides/kickstarter-campaign-graphics-mobile-readability", "2026-10-03"],
   ["/guides/kickstarter-vs-gamefound-campaign-page-design", "2026-10-03"],
@@ -632,77 +631,7 @@ test("keeps visible review dates, schema dates and sitemap dates identical", asy
   }
 });
 
-test("discloses the confirmed kit and email signup without enrolling enquiries", async () => {
-  const kit = await readPage("/resources/tabletop-kickstarter-launch-kit");
-  const thanks = await readPage("/resources/tabletop-kickstarter-launch-kit/thanks");
-  const privacy = await readPage("/privacy");
-  const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
-  const kitText = visibleText(kit);
-  assert.match(kitText, /all five files/i);
-  for (const html of [kit, thanks, privacy]) {
-    const text = visibleText(html);
-    assert.match(text, /six launch lessons/i);
-    assert.match(text, /monthly newsletter/i);
-    assert.match(text, /tabletop tips/i);
-    assert.match(text, /occasional Guildframe (?:service )?offers/i);
-    assert.doesNotMatch(text, /marketing (?:box|checkbox)|receive only the kit|starts unchecked|address confirmation alone does not give marketing permission/i);
-  }
-  const automatedSignup = /class="kit-signup-frame"|data-analytics-event="launch_kit_signup_click"/.test(kit);
-  if (automatedSignup) {
-    assert.match(kitText, /confirm your email/i);
-    assert.match(visibleText(thanks), /confirm your address/i);
-    assert.match(visibleText(privacy), /previously requested only the kit remain kit only contacts/i);
-    assert.match(visibleText(privacy), /do not add those people or project enquirers.*retrospectively/i);
-  } else {
-    assert.match(kit, /href="mailto:umair@guildframe\.com\?subject=Tabletop%20Campaign%20Launch%20Kit%20and%20updates/);
-    assert.match(kitText, /send your signup request/i);
-    assert.match(visibleText(thanks), /send the message to place your request/i);
-    assert.match(visibleText(privacy), /an email request alone does not activate this subscription/i);
-  }
-  for (const html of [kit, thanks]) assert.match(visibleText(html), /unsubscribe at any time/i);
-  assert.match(kitText, /XLSX/);
-  assert.match(kitText, /DOCX/);
-  assert.match(visibleText(privacy), /Sending a project enquiry does not subscribe you to marketing emails/i);
-  assert.match(visibleText(privacy), /stay off until you choose to accept analytics/i);
-  assert.match(privacy, /data-analytics-preferences/);
-  assert.match(thanks, /<meta name="robots" content="noindex, follow"/i);
-  assert.doesNotMatch(sitemap, /tabletop-kickstarter-launch-kit\/thanks/);
-  assert.match(kit, /name="heard_about"/);
-  assert.doesNotMatch(kit.match(/<select\b[^>]*name="heard_about"[^>]*>/i)?.[0] ?? "", /required/);
-});
-
-test("exports the complete launch kit with accurate claims and download indexing rules", async () => {
-  const kit = await readPage("/resources/tabletop-kickstarter-launch-kit");
-  const text = visibleText(kit);
-  const base = new URL("downloads/launch-kit/", outputRoot);
-  const manifest = JSON.parse(await readFile(new URL("manifest.json", base), "utf8"));
-  assert.deepEqual(manifest.files.map(file => file.name), [
-    "START-HERE.pdf",
-    "Tabletop-Launch-Planner.xlsx",
-    "Campaign-and-Email-Templates.docx",
-    "Creative-and-Production-Briefs.docx",
-    "Examples-and-Sources.pdf",
-  ]);
-  for (const file of [...manifest.files, manifest.bundle]) {
-    const bytes = await readFile(new URL(file.name, base));
-    assert.equal(bytes.length, file.bytes, file.name);
-    assert.equal(createHash("sha256").update(bytes).digest("hex"), file.sha256, file.name);
-    assert.equal(bytes.subarray(0, file.name.endsWith(".pdf") ? 4 : 2).toString(), file.name.endsWith(".pdf") ? "%PDF" : "PK", file.name);
-  }
-  assert.match(text, /5 useful files/);
-  assert.match(text, /Twelve working tabs/);
-  assert.match(text, /one manufactured product shared by reward tiers, plus digital rewards/i);
-  assert.match(text, /Cost additional physical products separately/);
-  assert.match(text, /Five fictional tabletop examples/i);
-  assert.match(text, /Tabletop Campaign Launch Kit/i);
-  assert.match(text, /Gamefound/i);
-  assert.equal(manifest.version, "1.1");
-  assert.doesNotMatch(text, /worth \$|\$1[,.]?000|guaranteed funding|[↗↘↙←→↓↑]/u);
-  const headers = await readFile(new URL("_headers", outputRoot), "utf8");
-  assert.match(headers, /^\/downloads\/launch-kit\/\*\r?\n\s+X-Robots-Tag: noindex\s*$/m);
-});
-
-test("publishes privacy purposes and concise free kit terms", async () => {
+test("publishes privacy purposes, earlier subscriber handling and website terms", async () => {
   const privacy = await readPage("/privacy");
   const terms = await readPage("/terms");
   const privacyText = visibleText(privacy);
@@ -717,8 +646,13 @@ test("publishes privacy purposes and concise free kit terms", async () => {
   assert.doesNotMatch(privacyText, /Formspree/);
   assert.match(privacy, /href="https:\/\/ico\.org\.uk\/make-a-complaint\/"/);
   assert.match(termsText, /Tabletop Campaign Launch Kit/);
+  assert.match(termsText, /no longer offers the free kit/);
+  assert.match(privacyText, /no longer offers the free launch kit/);
+  assert.match(privacyText, /Sending a project enquiry does not subscribe you to marketing emails/i);
+  assert.match(privacyText, /stay off until you choose to accept analytics/i);
+  assert.match(privacy, /data-analytics-preferences/);
+  assert.doesNotMatch(privacy + terms, /href="\/resources\/tabletop-kickstarter-launch-kit/);
   assert.match(termsText, /Kickstarter and Gamefound have different settings, fees and rules/);
-  assert.match(termsText, /Existing kit only contacts and project enquirers are not added/);
   assert.match(termsText, /copy, edit and use/);
   assert.match(termsText, /project team and collaborators/);
   assert.match(termsText, /may not resell.*standalone template/);
@@ -871,7 +805,7 @@ const schemaNodes = (html) => [...html.matchAll(/<script type="application\/ld\+
 });
 
 test("resolves article authors and profiles to the visible named person", async () => {
-  for (const [path] of pages.filter(([path]) => (path.startsWith("/guides/") || path.startsWith("/resources/")) && path !== "/resources/tabletop-kickstarter-launch-kit")) {
+  for (const [path] of pages.filter(([path]) => (path.startsWith("/guides/") || path.startsWith("/resources/")))) {
     const html = await readPage(path);
     const nodes = schemaNodes(html);
     const article = nodes.find(node => ["Article", "TechArticle"].includes(node["@type"]));
@@ -968,7 +902,9 @@ test("opens the homepage with the offer and keeps concepts labelled apart from c
     for (const width of [320, 480, 640]) await access(new URL(`images/hero/${image}-${width}w.webp`, outputRoot));
   }
   const redirects = await readFile(new URL("_redirects", outputRoot), "utf8");
-  assert.match(redirects, /^\/resources\/tabletop-kickstarter-launch-kit \/guides 302$/m);
+  assert.match(redirects, /^\/resources\/tabletop-kickstarter-launch-kit \/guides 301$/m);
+  assert.match(redirects, /^\/resources\/tabletop-kickstarter-launch-kit\/thanks \/guides 301$/m);
+  assert.match(redirects, /^\/downloads\/launch-kit\/\* \/guides 301$/m);
 });
 
 
