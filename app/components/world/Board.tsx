@@ -25,10 +25,11 @@ export function Board() {
         dispose = mountBoard({ host: element, labels, onReady: () => setLive(true), onHover: setHovered, onOverview: setOverview });
       }).catch(() => { /* keep the still board */ });
     };
-    const idle = "requestIdleCallback" in window ? window.requestIdleCallback(start, { timeout: 900 }) : window.setTimeout(start, 200);
+    const ric = (window as { requestIdleCallback?: Window["requestIdleCallback"] }).requestIdleCallback;
+    const idle: number = ric ? ric.call(window, start, { timeout: 900 }) : window.setTimeout(start, 200);
     return () => {
       cancelled = true;
-      if ("cancelIdleCallback" in window) window.cancelIdleCallback(idle as number); else window.clearTimeout(idle as number);
+      if (ric) window.cancelIdleCallback(idle); else window.clearTimeout(idle);
       dispose?.();
     };
   }, []);

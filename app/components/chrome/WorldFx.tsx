@@ -229,7 +229,7 @@ export function WorldFx() {
     const over = (event: PointerEvent) => {
       const hot = (event.target as HTMLElement | null)?.closest("a,button,summary");
       if (hot && hot !== lastHover) playSound("flick");
-      lastHover = hot;
+      lastHover = hot ?? null;
     };
     const down = () => element.classList.add("is-hold");
     const up = () => element.classList.remove("is-hold");

@@ -48,7 +48,7 @@ export default function WorkPage() {
       <section className="wk-deck" aria-label="Client case studies">
         {caseStudies.map((project, index) => <article className="wk-card" aria-labelledby={`project-${project.slug}`} key={project.slug} style={{ "--tone": caseTones[project.slug] ?? caseTones["scented-realms"], "--stack": index } as React.CSSProperties}>
           <figure className="wk-card-figure">
-            <Link href={`/work/${project.slug}`} className="wk-card-media" data-format={project.imageWidth === project.imageHeight ? "square" : "landscape"} data-title={project.name} data-cursor-label="Read the case study" data-reveal="media" data-wk-tilt="" tabIndex={-1} aria-hidden="true">
+            <Link href={`/work/${project.slug}`} className="wk-card-media" data-format={Number(project.imageWidth) === Number(project.imageHeight) ? "square" : "landscape"} data-title={project.name} data-cursor-label="Read the case study" data-reveal="media" data-wk-tilt="" tabIndex={-1} aria-hidden="true">
               <ResponsiveImage src={`/images/work/${project.image}.webp`} alt={project.alt} width={project.imageWidth} height={project.imageHeight} loading={index === 0 ? undefined : "lazy"} fetchPriority={index === 0 ? "high" : undefined} sizes="(max-width: 900px) calc(100vw - 32px), 58vw" />
             </Link>
             <figcaption>{project.imageNote}</figcaption>

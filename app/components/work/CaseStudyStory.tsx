@@ -30,7 +30,7 @@ export function CaseStudyStory({ project: p, path, title, published, updated, re
   const next = caseStudies[(index + 1) % caseStudies.length];
   const others = caseStudies.filter(other => other.slug !== p.slug && other.slug !== next.slug);
   const hasWalkthrough = p.slug === "scented-realms" || p.slug === "futureproof-terrain";
-  const square = p.imageWidth === p.imageHeight;
+  const square = Number(p.imageWidth) === Number(p.imageHeight);
   const toc = [{ id: "role", label: "My contribution" }, { id: "visual-details", label: "Visual details" }, ...(hasWalkthrough ? [{ id: "walkthrough", label: "Campaign walkthrough" }] : []), { id: "presentation", label: "The campaign presentation" }, { id: "takeaway", label: "For your own launch" }];
   const servicePath = siteConfig.purchasePath;
   const serviceLabel = "Explore launch services";
@@ -161,7 +161,7 @@ export function CaseStudyStory({ project: p, path, title, published, updated, re
           <span className="wk-next-word" aria-hidden="true">Next</span>
           <span className="wk-next-name"><span className="gf-sr-only">Next case study: </span>{next.name}</span>
           <span className="wk-next-meta">{next.category}</span>
-          <span className="wk-next-media" data-format={next.imageWidth === next.imageHeight ? "square" : "landscape"} aria-hidden="true"><ResponsiveImage src={`/images/work/${next.image}.webp`} alt="" width={next.imageWidth} height={next.imageHeight} loading="lazy" sizes="(max-width: 900px) 70vw, 34vw" /></span>
+          <span className="wk-next-media" data-format={Number(next.imageWidth) === Number(next.imageHeight) ? "square" : "landscape"} aria-hidden="true"><ResponsiveImage src={`/images/work/${next.image}.webp`} alt="" width={next.imageWidth} height={next.imageHeight} loading="lazy" sizes="(max-width: 900px) 70vw, 34vw" /></span>
           <span className="wk-next-line" aria-hidden="true"><i /></span>
         </Link>
         <div className="wk-wrap wk-next-more">
