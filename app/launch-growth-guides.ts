@@ -3,16 +3,36 @@ export const growthGuides: LaunchGuide[] = [
   {
     "slug": "board-game-kickstarter-funding-goal",
     "title": "How to Set a Kickstarter Funding Goal for a Board Game",
-    "description": "Calculate a board game Kickstarter funding goal from production costs, reward margins, minimum orders and cash timing, with a worked example.",
+    "seoTitle": "Kickstarter Funding Goal Calculator for Board Games",
+    "description": "Set a board game Kickstarter funding goal from factory minimums, fees, fulfillment and a reserve. Includes a calculator and a worked example.",
     "tag": "Funding and production",
-    "answer": "Set your funding goal from the money needed to deliver the promised game, including manufacturing commitments, fees, fulfillment and a reserve. Check what happens if you finish at exactly that goal. A smaller target does not reduce your production bill.",
+    "answer": "Set your Kickstarter funding goal at the amount you need to deliver the promised game if the campaign ends exactly on target, covering the factory order, fulfillment, fixed work and a reserve, minus money you already hold. Then divide that cash need by the share of pledges left after fees, because Kickstarter takes a 5% platform fee plus US payment processing of 3% and $0.20 per pledge from a funded project.",
     "sections": [
+      {
+        "id": "formula",
+        "title": "Work the goal out in four steps",
+        "paragraphs": [
+          "We work out a funding goal the same way for every tabletop project. Add up the cash needed to deliver the base promise, add a contingency, take away money you already hold, then divide by the share of pledges left after fees.",
+          "The calculator further down this page uses exactly those steps, so you can swap in your own numbers. The example below uses its default inputs. The goal ends up higher than the cash need because fees come off every pledge, including the ones that only just get you over the line."
+        ],
+        "visual": {
+          "kind": "steps",
+          "title": "Example: a $30,000 plan needs a goal of about $33,696",
+          "steps": [
+            { "label": "Cash needed: $30,000", "detail": "Factory order, freight, fulfillment and fixed work" },
+            { "label": "Add 10% contingency", "detail": "$33,000 to cover named risks" },
+            { "label": "Subtract $2,000 you hold", "detail": "$31,000 still to raise" },
+            { "label": "Divide by 0.92", "detail": "An 8% fee allowance gives a goal of $33,696" }
+          ],
+          "caption": "Illustrative example using the calculator's default inputs. It is not a quote, a benchmark or Kickstarter's exact fee for your pledges."
+        }
+      },
       {
         "id": "minimum",
         "title": "Start with the smallest version you can actually deliver",
         "paragraphs": [
-          "Write down what the campaign promises before entering a target. For a card game, that might be one finished deck, its box and a printed rules sheet. A miniature game may also need tooling, trays and specialist packing. Keep optional upgrades outside the base promise until their cost is known.",
-          "Kickstarter says the goal should cover completing the project and its associated costs. You cannot change the goal or deadline after launch. Treat the target as a production decision, then check whether your launch plan can realistically reach the required number of backers."
+          "Write down what the campaign promises before entering a target. For a card game, that might be one finished deck, its box and a printed rules sheet. A miniature game may also need tooling, trays and specialist packing. Keep optional upgrades outside the base promise until their cost is known, then price them with the [reward pricing guide](/guides/board-game-kickstarter-reward-pricing).",
+          "Kickstarter says the goal should cover completing the project and its associated costs. You cannot change the goal or deadline after launch. So treat the target as a production decision first, then check whether your launch plan can realistically reach the number of backers it needs."
         ],
         "source": 0
       },
@@ -20,8 +40,8 @@ export const growthGuides: LaunchGuide[] = [
         "id": "costs",
         "title": "Separate commitments from costs that grow with each order",
         "paragraphs": [
-          "A factory quote for 1,000 copies is a commitment even if the campaign attracts 500 backers. Do not multiply the unit price only by pledged copies and forget the remaining stock. Record when deposits and balances fall due, which currency the supplier uses and how long the quote remains valid.",
-          "Use one basis for shipping and taxes throughout the sheet. If you collect shipping separately later, model both the collection and the fulfillment bill. Money collected for postage is not spare production margin."
+          "A factory quote for 1,000 copies is a commitment even if the campaign attracts 500 backers. Do not multiply the unit price only by pledged copies and forget the remaining stock. Record when deposits and balances fall due, which currency the supplier uses and how long the quote stays valid.",
+          "Use one basis for shipping and taxes throughout the sheet. If you collect shipping separately later, model both the collection and the fulfillment bill. Money collected for postage is not spare production margin, and keeping it on its own line stops it being counted twice."
         ],
         "table": {
           "headers": [
@@ -54,12 +74,33 @@ export const growthGuides: LaunchGuide[] = [
         }
       },
       {
+        "id": "fees",
+        "title": "Budget for Kickstarter fees before you pick the number",
+        "paragraphs": [
+          "Fees are an easy line to add too late. Kickstarter's fee page lists a 5% platform fee on total funds raised, plus US payment processing of 3% and $0.20 per pledge, with a discounted rate for pledges under $10. Fees apply only when a project funds.",
+          "Because the fees come off the total raised, we divide the cash need by what remains instead of adding fees as one flat line. If postage is charged inside the pledge, it is part of that total too. So a goal that exactly equals your costs leaves you short."
+        ],
+        "source": 1
+      },
+      {
         "id": "example",
         "title": "Work through a simple funding model",
         "paragraphs": [
-          "This invented USD example uses one reward and assumes that all stated costs are complete. It is not a platform fee quote or an industry benchmark. A $60 reward has $30 in variable production and fulfillment costs, an assumed 8% payment/platform allowance of $4.80 and $6 in acquisition costs. That leaves $19.20 toward fixed costs and the reserve.",
-          "If the remaining fixed-cost and reserve requirement is $9,600, the example needs 500 successfully collected pledges: $9,600 divided by $19.20. The corresponding gross pledge total is $30,000. Replace every input with your quotes, actual fee schedule and reward mix. Add any minimum-order stock that the simplified example does not cover."
+          "This invented USD example uses one reward and assumes that all stated costs are complete. It is not a platform fee quote or an industry benchmark. A $60 reward has $30 in variable production and fulfillment costs, an assumed 8% payment and platform allowance of $4.80 and $6 in acquisition costs. That leaves $19.20 toward fixed costs and the reserve.",
+          "If the remaining fixed cost and reserve requirement is $9,600, the example needs 500 successfully collected pledges, because $9,600 divided by $19.20 is 500. The matching gross pledge total is $30,000. Replace every input with your quotes, actual fee schedule and reward mix, then add any minimum order stock the simplified example leaves out. The $6 acquisition line comes from your ad plan, which the [advertising budget guide](/guides/kickstarter-advertising-budget-board-games) walks through."
         ],
+        "visual": {
+          "kind": "split",
+          "title": "Example: only $19.20 of a $60 pledge pays for fixed costs",
+          "total": "Example: one $60 reward",
+          "parts": [
+            { "label": "Production and fulfillment", "share": 30, "display": "$30.00" },
+            { "label": "Fee allowance (8%)", "share": 4.8, "display": "$4.80" },
+            { "label": "Acquisition", "share": 6, "display": "$6.00" },
+            { "label": "Toward fixed costs and reserve", "share": 19.2, "display": "$19.20" }
+          ],
+          "caption": "Illustrative numbers from the worked example on this page, not an industry average."
+        },
         "table": {
           "headers": [
             "Illustrative line",
@@ -97,23 +138,23 @@ export const growthGuides: LaunchGuide[] = [
         "id": "stress-test",
         "title": "Test the weak assumptions before choosing the target",
         "paragraphs": [
-          "Run a second version with fewer deluxe pledges, a more expensive shipping mix and some failed collections. Also test the smallest factory order you can buy. If the goal works only when almost everyone buys the most profitable bundle, it needs another review.",
-          "Cash timing matters too. A campaign can look affordable on paper while a supplier deposit falls due before collected funds arrive. Record the source of any money needed earlier. Do not silently treat an uncertain future preorder window as money already available."
+          "We always run a second version before a goal is final. Use fewer deluxe pledges, a more expensive shipping mix and some failed collections. Also test the smallest factory order you can buy. If the goal works only when almost everyone buys the most profitable bundle, it needs another review.",
+          "Cash timing matters too. A campaign can look affordable on paper while a supplier deposit falls due before collected funds arrive. Record where any earlier money comes from, and do not treat an uncertain future preorder window as money already available."
         ],
         "list": [
           "Check the base reward without stretch goals.",
           "Recalculate for the actual country and currency fee schedule.",
           "Include quantities bought but not yet sold.",
           "Record who will fund deposits before payout.",
-          "Stop and revise if the per-reward contribution is zero or negative."
+          "Stop and revise if the contribution per reward is zero or negative."
         ]
       },
       {
         "id": "handoff",
         "title": "Give the launch team one approved budget",
         "paragraphs": [
-          "Share the same reward names, prices and contents with the designer, advertising lead and production team. Keep a dated budget version with the approved page brief. If a component, box size or shipping promise changes, recalculate before publishing the new offer.",
-          "Guildframe can help turn the confirmed offer into a launch plan and campaign page. Bring supplier quotes and the decisions still open; a polished page cannot settle missing manufacturing numbers."
+          "Once the goal is set, everyone working on the launch needs the same numbers. Share the same reward names, prices and contents with the designer, advertising lead and production team. Keep a dated budget version with the approved page brief, and recalculate before publishing if a component, box size or shipping promise changes.",
+          "This is where we come in. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) turn a confirmed offer into a launch plan, prelaunch and campaign page, and the [campaign design cost guide](/guides/board-game-kickstarter-campaign-design-cost) shows how the creative fee fits your budget. Bring supplier quotes and the decisions still open, because a polished page cannot settle missing manufacturing numbers."
         ]
       }
     ],
@@ -121,6 +162,14 @@ export const growthGuides: LaunchGuide[] = [
       {
         "question": "Should I set a very low goal so the game funds quickly?",
         "answer": "Only if you can still fulfill the promised rewards at that amount, using any other committed funding you have recorded. A quick funding announcement does not pay an uncovered factory bill."
+      },
+      {
+        "question": "How much does Kickstarter take from a funded project?",
+        "answer": "Kickstarter's fee page lists a 5% platform fee on total funds raised, plus US payment processing of 3% and $0.20 per pledge. Pledges under $10 have a discounted rate. Fees apply only if the project funds."
+      },
+      {
+        "question": "Should the funding goal include shipping?",
+        "answer": "Include any shipping the pledge money has to pay for. If you collect shipping later in a pledge manager, model that collection and the delivery bill as their own lines, so postage money is never counted as production margin."
       },
       {
         "question": "Is the funding goal the same as my sales target?",
@@ -136,17 +185,23 @@ export const growthGuides: LaunchGuide[] = [
         "label": "Setting a Kickstarter funding goal",
         "publisher": "Kickstarter Help Center",
         "href": "https://help.kickstarter.com/en-us/articles/16236709-how-to-set-the-right-funding-goal-for-your-kickstarter-campaign"
+      },
+      {
+        "label": "Kickstarter fees",
+        "publisher": "Kickstarter",
+        "href": "https://www.kickstarter.com/help/fees"
       }
     ],
     "relatedSlugs": [
       "board-game-kickstarter-reward-pricing",
+      "kickstarter-agency-cost",
       "kickstarter-advertising-budget-board-games",
       "kickstarter-stretch-goals-planning"
     ],
     "servicePath": "/kickstarter-launch-services",
-    "serviceLabel": "Plan your tabletop launch",
+    "serviceLabel": "Kickstarter launch services for tabletop games",
     "published": "2026-10-28",
-    "updated": "2026-10-28"
+    "updated": "2026-11-25"
   },
   {
     "slug": "board-game-kickstarter-reward-pricing",

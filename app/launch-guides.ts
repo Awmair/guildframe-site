@@ -630,9 +630,9 @@ const originalLaunchGuides:LaunchGuide[]=[
   {
     "slug": "kickstarter-vs-gamefound-campaign-page-design",
     "title": "Kickstarter vs Gamefound: Campaign Page Design Differences",
-    "description": "Compare Kickstarter and Gamefound story sections, reward layouts and preview tools. Prepare campaign copy and graphics for the platform you choose.",
+    "description": "How campaign page design differs on Kickstarter and Gamefound, from story sections and reward layouts to stages and previews, for creators who have picked one.",
     "tag": "Platform planning",
-    "answer": "Both platforms need a clear game introduction, product images and rewards. Prepare the assets for the editor you’ll use. Gamefound has separate story and reward sections with visibility by stage. On Kickstarter, check the prelaunch page and campaign preview separately.",
+    "answer": "Kickstarter and Gamefound pages need the same core content, a clear game introduction, product images and reward comparisons, but each platform builds the page differently. Gamefound splits the page into story and reward sections with visibility by stage, while on Kickstarter you check the prelaunch page and the campaign preview separately.",
     "sources": [
       {
         "label": "Adding images and media to a Kickstarter project",
@@ -653,16 +653,57 @@ const originalLaunchGuides:LaunchGuide[]=[
         "label": "Launching an approved Kickstarter project",
         "publisher": "Kickstarter",
         "href": "https://help.kickstarter.com/en-us/articles/16236427-how-do-i-launch-my-project-after-it-s-been-approved"
+      },
+      {
+        "label": "Tester Mode",
+        "publisher": "Gamefound",
+        "href": "https://help.gamefound.com/article/366-tester-mode"
       }
     ],
     "sections": [
       {
+        "id": "platform-choice",
+        "title": "Still choosing a platform? Start with the comparison",
+        "paragraphs": [
+          "This guide is about how the campaign page is built once you have picked a platform. If you are still deciding where to launch, read our [Kickstarter vs Gamefound comparison](/guides/kickstarter-vs-gamefound) first, because fees, audience, pledge manager tools and add ons usually matter more than the page editor.",
+          "Once the platform is settled, come back here. The rest of this guide covers what changes in the story, the rewards and the checks before launch, so the page you design fits the editor you will actually use."
+        ]
+      },
+      {
         "id": "common",
         "title": "Start with the shared content, then adapt the page",
         "paragraphs": [
-          "Start with one list of content: the premise, gameplay, components and production facts. Those details stay the same when the platform changes. Then decide where each belongs in the chosen editor.",
-          "Review eligibility, payments, project type, fees and operating requirements before choosing a platform. A preferred layout is only one consideration. This guide covers page preparation; it doesn’t predict which platform will raise more money."
+          "Most of the work is the same on both platforms. Start with one list of content: the premise, gameplay, components and production facts. Those details stay the same when the platform changes, so decide where each belongs in the chosen editor only after the list is approved.",
+          "The difference is in how each platform assembles and reveals that content. The comparison below sums it up, and the sections after it explain each point. This guide covers page preparation, so it doesn't predict which platform will raise more money."
         ],
+        "visual": {
+          "kind": "compare",
+          "title": "The same content, built two different ways",
+          "columns": [
+            {
+              "name": "Kickstarter",
+              "points": [
+                "One project story for the campaign",
+                "A separate public prelaunch page",
+                "A preview link for draft feedback",
+                "Manual launch after approval"
+              ],
+              "verdict": "Check the prelaunch page and preview separately"
+            },
+            {
+              "name": "Gamefound",
+              "points": [
+                "Story and reward sections you can rearrange",
+                "Sections unpublished by default",
+                "Visibility that changes by stage",
+                "Tester Mode for stages and checkout"
+              ],
+              "verdict": "Check every section in the stage you will promote"
+            }
+          ],
+          "caption": "Summary of the Kickstarter and Gamefound help articles listed in the sources below.",
+          "source": "Kickstarter Help Center and Gamefound Help Center"
+        },
         "table": {
           "headers": [
             "Design job",
@@ -692,8 +733,8 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "kickstarter",
         "title": "Review Kickstarter’s prelaunch page separately",
         "paragraphs": [
-          "Kickstarter’s public prelaunch page lets people follow an upcoming project. Its guidance lists the title, subtitle, image and creator information, with an editable description on desktop. The app doesn’t show that description, so check whether the title and image explain the idea on their own.",
-          "The preview and prelaunch page have separate URLs and audiences. Use the preview for detailed feedback. Review the public page as the short introduction people will see before launch."
+          "On Kickstarter, the first thing many people see is the prelaunch page, not the campaign. Its guidance lists the title, subtitle, image and creator information, with an editable description on desktop. The app doesn’t show that description, so check whether the title and image explain the idea on their own.",
+          "The preview and prelaunch page have separate URLs and audiences. Use the preview for detailed feedback, and review the public page as the short introduction people will see before launch."
         ],
         "source": 2
       },
@@ -701,8 +742,8 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "gamefound",
         "title": "Plan Gamefound’s sections and their visibility",
         "paragraphs": [
-          "Gamefound’s description guidance lists story and reward sections in preview, with more sections for crowdfunding and pledge management. Creators can add and rearrange them. A published section only becomes visible when its relevant stage begins.",
-          "Plan which content belongs in preview and which belongs in the live campaign. Check the actual page and visibility settings with the creator after upload."
+          "Gamefound asks you to think in stages from the start. Its description guidance lists story and reward sections in preview, with more sections for crowdfunding and pledge management. Creators can add and rearrange them, and a published section only becomes visible when its relevant stage begins.",
+          "Plan which content belongs in preview and which belongs in the live campaign, then check the actual page and visibility settings with the creator after upload. The [Gamefound launch checklist](/guides/gamefound-launch-page-checklist) walks through those checks, including Tester Mode."
         ],
         "source": 1
       },
@@ -710,8 +751,8 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "assets",
         "title": "Export for the editor, then check the uploaded result",
         "paragraphs": [
-          "Keep editable source files and export images using the platform’s current media guidance. Break the page into sections so a phone reader can read the main information. A single tall image can make every label too small.",
-          "After upload, check spacing, compression, labels and reward names on the actual page. Guildframe designs for either platform. Confirm the platform before agreeing the files and deliverables."
+          "Files that look right on a design canvas can break once uploaded. Keep editable source files and export images using the platform’s current media guidance. Break the page into sections so a phone reader can read the main information, because a single tall image can make every label too small. The [mobile graphics guide](/guides/kickstarter-campaign-graphics-mobile-readability) covers sizes and readability.",
+          "After upload, check spacing, compression, labels and reward names on the actual page. We design for either platform as part of our [Kickstarter campaign design](/campaign-design) service, with a separate [Gamefound page design](/gamefound-campaign-design) option, and we confirm the platform before agreeing the files and deliverables."
         ],
         "source": 0
       },
@@ -719,8 +760,8 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "stage-checks",
         "title": "Check launch behaviour and stage visibility",
         "paragraphs": [
-          "Kickstarter launch is manual after approval; setting a Target Launch Date does not publish the project. Gamefound descriptions and reward visibility depend on the stage and publication settings. Do not treat a finished draft in one stage as proof that the next public stage is complete.",
-          "Use the dedicated launch guides to review the selected platform. Keep the factual reward plan consistent across either platform and adapt the layout to its actual editor."
+          "The last difference shows up on launch day. Kickstarter launch is manual after approval, and setting a Target Launch Date does not publish the project. Gamefound descriptions and reward visibility depend on the stage and publication settings, so a finished draft in one stage is not proof that the next public stage is complete.",
+          "Use the dedicated launch guides to review the selected platform. Keep the factual reward plan consistent across either platform and adapt the layout to its actual editor, and the page will read the same wherever backers find it."
         ],
         "source": 3
       }
@@ -731,6 +772,14 @@ const originalLaunchGuides:LaunchGuide[]=[
         "answer": "Some artwork and copy can be reused, but page structure, media exports and reward presentation should be checked in the destination editor."
       },
       {
+        "question": "Should I launch on Kickstarter or Gamefound?",
+        "answer": "That choice depends on fees, audience, pledge manager tools and add ons more than on page design. Our Kickstarter vs Gamefound comparison covers the platform decision, and this guide covers the page once you have chosen."
+      },
+      {
+        "question": "Do Gamefound pages need separate preview and live content?",
+        "answer": "Plan for it. Gamefound's description guidance lists story and reward sections in preview, with more sections for crowdfunding and pledge management, and a published section only becomes visible when its stage begins."
+      },
+      {
         "question": "Is Gamefound always better for board games?",
         "answer": "There is no funding comparison in this guide. Choose a platform after checking your audience, eligibility, fees and operating requirements as well as its page editor."
       },
@@ -739,15 +788,16 @@ const originalLaunchGuides:LaunchGuide[]=[
         "answer": "The fixed campaign design price is listed on the service page. The chosen platform, files and scope are confirmed in the brief. Broader launch services are quoted separately."
       }
     ],
-    "seoTitle": "Kickstarter vs Gamefound: Page Design",
+    "seoTitle": "Campaign Page Design on Kickstarter vs Gamefound",
     "relatedSlugs": [
+      "kickstarter-vs-gamefound",
       "gamefound-launch-page-checklist",
-      "kickstarter-review-launch-timeline",
+      "kickstarter-campaign-graphics-mobile-readability",
       "kickstarter-prelaunch-page-guide"
     ],
-    "servicePath": "/gamefound-campaign-design",
-    "serviceLabel": "Gamefound page design",
-    "updated": "2026-10-03"
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter and Gamefound campaign page design",
+    "updated": "2026-11-25"
   },
   {
     "slug": "kickstarter-campaign-graphics-mobile-readability",
@@ -1037,4 +1087,4 @@ const originalLaunchGuides:LaunchGuide[]=[
 ];
 
 const growthUpdatedSlugs = new Set(["choose-board-game-kickstarter-marketing-agency", "board-game-kickstarter-campaign-design-cost", "kickstarter-prelaunch-email-list", "kickstarter-campaign-video-planning", "kickstarter-advertising-budget-board-games"]);
-export const launchGuides = originalLaunchGuides.map(reviseLaunchGuide).map(reviseBuyerGuide).map(guide => growthUpdatedSlugs.has(guide.slug) ? {...guide, updated:contentDates.growthReview} : guide);
+export const launchGuides = originalLaunchGuides.map(reviseLaunchGuide).map(reviseBuyerGuide).map(guide => growthUpdatedSlugs.has(guide.slug) && !(guide.updated && guide.updated > contentDates.growthReview) ? {...guide, updated:contentDates.growthReview} : guide);

@@ -445,10 +445,10 @@ export const marketingGuides: LaunchGuide[] = [
   {
     "slug": "kickstarter-live-campaign-updates",
     "title": "Kickstarter Campaign Updates: A Practical Plan for Tabletop Creators",
-    "seoTitle": "Kickstarter Campaign Updates & Live Support Plan",
-    "description": "Plan tabletop Kickstarter launch updates, recurring backer questions, approved reward changes and the handoff after funding. Use a practical support checklist.",
+    "seoTitle": "Kickstarter Campaign Updates: How Often and What to Post",
+    "description": "How often to post Kickstarter campaign updates, a 30 day update rhythm, a delay update template and the monthly minimum Kickstarter expects after funding.",
     "tag": "Campaign management",
-    "answer": "Prepare a launch update, a place to collect recurring questions and an approval process for new product promises. Publish useful progress, gameplay and reward information during the campaign, then explain the next steps after it closes. Agree who drafts, approves and publishes each message, and how quickly the team can respond.",
+    "answer": "During a 30 day Kickstarter campaign, we recommend a useful update every three to five days, plus posts at launch, on funding and in the final two days. After funding, post at least once a month, because that is the minimum Kickstarter says it expects from creators.",
     "servicePath": "/kickstarter-campaign-management",
     "serviceLabel": "Kickstarter campaign management",
     "sources": [
@@ -461,28 +461,66 @@ export const marketingGuides: LaunchGuide[] = [
         "label": "Planning Kickstarter promotion",
         "publisher": "Kickstarter",
         "href": "https://www.kickstarter.com/help/handbook/promotion"
+      },
+      {
+        "label": "What should I post an update about, and how often?",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236488-what-should-i-post-an-update-about-and-how-often"
+      },
+      {
+        "label": "What is a Project Update Request?",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236555-what-is-a-project-update-request"
       }
     ],
     "relatedSlugs": [
-      "board-game-kickstarter-marketing-plan",
       "kickstarter-stretch-goals-planning",
-      "kickstarter-shipping-delivery-page"
+      "board-game-pledge-manager-checklist",
+      "board-game-kickstarter-launch-day-checklist",
+      "board-game-kickstarter-marketing-plan"
     ],
     "sections": [
+      {
+        "id": "how-often",
+        "title": "How often to post Kickstarter updates",
+        "paragraphs": [
+          "Kickstarter does not set a required frequency during the campaign. Its help center says some creators post every day and some post more sporadically. After funding, it expects at least one new update a month until rewards are delivered.",
+          "There is also a backstop. Once a project goes more than four weeks without an update and rewards are not yet fulfilled, backers can send an anonymous update request, and Kickstarter emails the creator. So the monthly rhythm after funding is the floor, not a target.",
+          "During the campaign we plan one useful update every three to five days, with extra posts around the moments backers care about. The timeline below is the rhythm we use for a 30 day campaign. Skip a slot rather than post filler, because an update that says nothing teaches backers to stop opening them."
+        ],
+        "source": 2,
+        "visual": {
+          "kind": "timeline",
+          "title": "Guildframe's recommended update rhythm for a 30 day campaign",
+          "events": [
+            { "when": "Day 1", "label": "We're live", "detail": "The live link, a reward overview and any early backer offer", "highlight": true },
+            { "when": "Day 2 or 3", "label": "Thank you and first answers", "detail": "The top questions from the comments, answered once" },
+            { "when": "Funding day", "label": "We funded", "detail": "What it means for production and the next stretch goal", "highlight": true },
+            { "when": "Days 5 to 10", "label": "Show the game", "detail": "A sample turn, a component close up or a rules preview" },
+            { "when": "Days 11 to 24", "label": "Every 3 to 5 days", "detail": "A stretch goal, a review, a production note or a recurring question" },
+            { "when": "Days 25 to 28", "label": "Last week plan", "detail": "Add ons, the pledge manager plan and what is still unlocked" },
+            { "when": "Final 2 days", "label": "Final call", "detail": "What backers get, what closes and when the campaign ends" },
+            { "when": "Close", "label": "Thank you and next steps", "detail": "The result, the survey plan and the next update date", "highlight": true },
+            { "when": "After funding", "label": "At least monthly", "detail": "Kickstarter's minimum until rewards are delivered" }
+          ],
+          "caption": "Guildframe's recommendation, not a Kickstarter rule. The monthly minimum after funding comes from Kickstarter's help center.",
+          "source": "Kickstarter Help Center"
+        }
+      },
       {
         "id": "owners",
         "title": "Agree the support period and who can publish",
         "paragraphs": [
-          "Before launch, name the person who checks comments, the person who confirms product facts and the person who publishes updates. In a small project they may be the same person, but the responsibilities still need to be clear.",
-          "If you hire campaign support, write down the live dates, working hours, approval route and response expectations. An agency cannot accurately answer a manufacturing or shipping question unless the creator supplies the current facts."
+          "A rhythm only works if someone owns it. Before launch, name the person who checks comments, the person who confirms product facts and the person who publishes updates. In a small project they may be the same person, but the responsibilities still need to be clear.",
+          "If you hire campaign support, write down the live dates, working hours, approval route and response expectations. An agency cannot accurately answer a manufacturing or shipping question unless the creator supplies the current facts, so the approval route matters more than the drafting."
         ]
       },
       {
         "id": "calendar",
         "title": "Prepare useful messages before the campaign is busy",
         "paragraphs": [
-          "Draft the launch announcement and collect material for a gameplay example, a reward explanation and a project-progress note. The table below is a Guildframe planning example. Choose messages that answer a real question rather than posting only to fill the calendar.",
-          "Kickstarter treats updates as a way to show progress and the work behind a project. Its handbook also recommends checking messages and comments and addressing frequent questions in updates."
+          "Launch week leaves little time for writing, so we draft early. Prepare the launch announcement and collect material for a gameplay example, a reward explanation and a project progress note. The table below is a Guildframe planning example, and each message should answer a real question rather than fill the calendar.",
+          "Kickstarter treats updates as a way to show progress and the work behind a project. Its handbook also recommends checking messages and comments and addressing frequent questions in updates. If a stretch goal is coming, plan its graphic and wording with the [stretch goals guide](/guides/kickstarter-stretch-goals-planning) before it unlocks."
         ],
         "table": {
           "headers": [
@@ -514,17 +552,34 @@ export const marketingGuides: LaunchGuide[] = [
             [
               "Campaign close",
               "Current outcome, next communication and planned handoff.",
-              "Campaign owner and post-campaign lead."
+              "Campaign owner and post campaign lead."
             ]
           ]
         },
         "source": 0
       },
       {
+        "id": "delay-template",
+        "title": "Use this template when something is late",
+        "paragraphs": [
+          "Delay updates are the hardest to write, and silence is what worries backers most. Kickstarter's handbook says backers worry when they don't hear from you, and it encourages creators to share delays or changes to the plan. We use the same six part structure for every delay update so nothing important is left out.",
+          "Here is a short example for a card game. \"Our card proofs came back with a colour shift on the night deck, so the printer is running a second proof. That moves our delivery estimate from March to April or May. Everything else is on schedule. We'll post photos of the new proofs next Friday, even if the fix isn't final.\" Send it as soon as the facts are confirmed, then keep the promise about when backers will hear next."
+        ],
+        "list": [
+          "What happened, in one sentence, and which rewards it affects",
+          "Why, using the confirmed cause in plain words",
+          "What it changes, with the new estimate given as a range",
+          "What stays the same, so backers know the rest is on track",
+          "What happens next and who is handling it",
+          "The date of the next update, even if nothing has changed by then"
+        ],
+        "source": 0
+      },
+      {
         "id": "questions",
         "title": "Keep one record of recurring questions",
         "paragraphs": [
-          "Save the question, the current answer and the person who confirmed it. A question about sleeved-card storage needs checked dimensions; a question about an RPG supplement needs the correct system requirements. A generic answer can create a new problem.",
+          "Most mid campaign updates start as a comment someone asked twice. Save the question, the current answer and the person who confirmed it. A question about sleeved card storage needs checked dimensions, and a question about an RPG supplement needs the correct system requirements. A generic answer can create a new problem.",
           "When several people ask the same thing, improve the campaign page or publish an update so the answer is easier to find. Use consistent reward names and product descriptions across comments, emails and the page."
         ]
       },
@@ -548,15 +603,23 @@ export const marketingGuides: LaunchGuide[] = [
         "id": "close",
         "title": "Hand over communication after the campaign",
         "paragraphs": [
-          "At close, prepare an update explaining what is known and what comes next. Keep manufacturing, surveys, shipping charges and delivery dates tied to the facts confirmed by the creator and suppliers.",
-          "Hand over approved assets, the FAQ record, reports and the next update schedule. If pledge-manager or storefront work is needed, define that scope separately. Backers should know where to find the next message even while some production details are still being confirmed."
+          "The close is where the monthly rhythm begins. Prepare an update explaining what is known and what comes next, and keep manufacturing, surveys, shipping charges and delivery dates tied to the facts confirmed by the creator and suppliers. The [pledge manager checklist](/guides/board-game-pledge-manager-checklist) covers the survey side.",
+          "Hand over approved assets, the FAQ record, reports and the next update schedule. We run live updates as part of [Kickstarter campaign management](/kickstarter-campaign-management), and the monthly updates after funding sit with [post campaign support](/post-campaign-support). Either way, backers should know where to find the next message while production details are still being confirmed."
         ]
       }
     ],
     "faqs": [
       {
         "question": "How often should I post Kickstarter updates?",
-        "answer": "Use a schedule that fits the project and publish meaningful progress or answers. There is no universal frequency that suits every campaign."
+        "answer": "During a 30 day campaign, we recommend a useful update every three to five days, plus posts at launch, on funding and in the final two days. After funding, Kickstarter expects at least one update a month until rewards are delivered."
+      },
+      {
+        "question": "What should a Kickstarter delay update say?",
+        "answer": "Say what happened and which rewards it affects, the confirmed cause, the new estimate as a range, what stays the same, what happens next and the date of the next update."
+      },
+      {
+        "question": "What happens if I stop posting updates after funding?",
+        "answer": "Once a project goes more than four weeks without an update and rewards are not fulfilled, backers can send an anonymous update request. Kickstarter then emails the creator to say backers want a new update."
       },
       {
         "question": "Should I wait until I have good news to update backers?",
@@ -572,6 +635,7 @@ export const marketingGuides: LaunchGuide[] = [
       }
     ],
     "published": "2026-10-03",
-    "updated": "2026-10-03"
+    "updated": "2026-11-25"
   }
+
 ];
