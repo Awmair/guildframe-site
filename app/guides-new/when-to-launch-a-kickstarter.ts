@@ -1,0 +1,163 @@
+import type { LaunchGuide } from "../launch-guides";
+
+export const guide: LaunchGuide = {
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  slug: "when-to-launch-a-kickstarter",
+  title: "When Should You Launch Your Kickstarter, and How Long Does It Take to Prepare?",
+  seoTitle: "When to Launch a Kickstarter: Prep Time and Best Dates",
+  description: "How long it takes to prepare a board game Kickstarter and how to pick a launch date. Readiness signs, best days and dates to avoid.",
+  tag: "Launch timing",
+  answer: "Most first board games need several months of preparation, and the right time to launch is when three things are true: enough followers for a strong first day, a page strangers understand and numbers that work. Then pick a weekday, avoid the end of year rush and plan around the big conventions.",
+  relatedSlugs: ["kickstarter-review-launch-timeline", "kickstarter-followers-before-launch", "board-game-kickstarter-launch-day-checklist", "board-game-kickstarter-marketing-plan"],
+  servicePath: "/kickstarter-launch-services",
+  serviceLabel: "Kickstarter launch services for tabletop games",
+  sources: [
+    { label: "From concept to fulfillment: the complete Kickstarter journey (9 September 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/from-concept-to-fulfillment-the-complete-kickstarter-journey/" },
+    { label: "Best time to launch (18 February 2026, updated 25 August 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/best-time-to-launch/" },
+    { label: "My project is awaiting review. How does this work?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236415-my-project-is-awaiting-review-how-does-this-work" },
+    { label: "What is the maximum project duration?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236742-what-is-the-maximum-project-duration" },
+    { label: "Board game Kickstarter marketing 101 (14 October 2020)", publisher: "Meeple Mountain", href: "https://www.meeplemountain.com/articles/board-game-kickstarter-marketing-101/" },
+    { label: "PAX Unplugged 2026 news", publisher: "PAX", href: "https://unplugged.paxsite.com/en-us/info/news.html" },
+    { label: "Zinetopia 2027", publisher: "BackerKit", href: "https://www.backerkit.com/c/events/zinetopia-2027" },
+    { label: "Exhibit at UK Games Expo 2027", publisher: "UK Games Expo", href: "https://www.ukgamesexpo.co.uk/exhibit/" },
+    { label: "When is Gen Con?", publisher: "Gen Con", href: "https://gencon.zendesk.com/hc/en-us/articles/360053945412-When-is-Gen-Con" },
+    { label: "SPIEL Essen", publisher: "SPIEL Essen", href: "https://spiel-essen.de/en" },
+  ],
+  sections: [
+    {
+      id: "short-answer",
+      title: "The short answer: get ready first, then pick the date",
+      paragraphs: [
+        "Most first board games need several months of preparation, and the right launch date is the first good one after you're actually ready. Ready means three things: people waiting for day one, a page strangers understand and numbers that work.",
+        "We've seen more campaigns hurt by launching early than by waiting a month. A date picked for a birthday or a convention feels fixed, but backers never see why you chose it. They only see whether the page and the community were ready.",
+        "This guide covers how long each piece takes, how to tell you're ready and which dates to think about. For the whole journey from prototype to delivery, read [how to launch a board game on Kickstarter](/guides/how-to-launch-a-board-game-on-kickstarter). The takeaway is to decide readiness first and let the calendar follow.",
+      ],
+    },
+    {
+      id: "prep-time",
+      title: "How long it takes to prepare",
+      paragraphs: [
+        "Preparation takes longer than most first timers expect, because several jobs have to overlap. Kickstarter's own September 2026 plan runs 50 days from the first kickoff meeting to launch, with setup, creative work and five weeks of paid testing happening side by side.",
+        "That plan is built for a finished product with a team behind it. A first board game usually isn't there yet, so we plan a longer runway. The timeline below is a Guildframe planning example for a first board game, working back from launch day. It is not a Kickstarter rule.",
+        "Two points on it come straight from Kickstarter. It suggests allowing up to a month between sending a sample and seeing a post, so reviewer copies go out early. And review can take up to three business days, plus another three if Kickstarter asks for changes. So count backwards from the slowest job, not forwards from today.",
+      ],
+      source: 0,
+      visual: {
+        kind: "timeline",
+        title: "Guildframe example: the last eight weeks hold most of the launch work",
+        events: [
+          { when: "6 to 12 months before", label: "Finish the game", detail: "Playtest with strangers, start final art, ask for quotes" },
+          { when: "3 to 4 months before", label: "Open the prelaunch page", detail: "Email signup live, show the game every week" },
+          { when: "8 weeks before", label: "Page draft and video", detail: "Reviewer copies out, since posts can take a month" },
+          { when: "6 weeks before", label: "Share a preview", detail: "Show strangers the page, test ads if you use them" },
+          { when: "4 weeks before", label: "Fix what readers missed", detail: "Draft every launch email" },
+          { when: "2 weeks before", label: "Submit for review", detail: "Up to three business days, more if changes are asked" },
+          { when: "1 week before", label: "Final checks", detail: "Read the page on a phone, schedule the emails" },
+          { when: "Launch day", label: "Press launch yourself", detail: "A target date does not launch the project for you", highlight: true },
+        ],
+        caption: "Guildframe planning example for a first board game, not a Kickstarter rule. Kickstarter's own plan runs 50 days from kickoff to launch for a finished product.",
+        source: "Kickstarter blog (9 Sep 2026) and Kickstarter help on project review, checked 25 Nov 2026",
+      },
+    },
+    {
+      id: "signals",
+      title: "Three signals that say you're ready",
+      paragraphs: [
+        "A launch date is only as good as the readiness behind it, so we check three signals before we agree one. Each can be checked without guessing.",
+        "The audience comes first. An old rule of thumb, which Meeple Mountain described in 2020 as the 30% rule, says you're ready when your email list alone could raise at least 30% of your goal in the first 24 hours. Treat it as a guide, not a law, and use our guide to [Kickstarter followers before launch](/guides/kickstarter-followers-before-launch) to read your own numbers.",
+        "Next is the page. Show the preview to someone who hasn't played the game and ask them to explain it back to you. If they can't, the page needs work, and our guide on [how to design a Kickstarter page](/guides/how-to-design-a-kickstarter-page) can help.",
+        "Last are the numbers: a manufacturer quote, a shipping estimate and a goal that covers fees and a reserve. Our guide to [what it costs to launch a board game](/guides/board-game-kickstarter-cost) adds those up, and if the game itself still feels unfinished, start with [whether your game is ready](/guides/is-my-game-ready-for-kickstarter). When all three signals are true, you're ready to pick a date.",
+      ],
+      source: 4,
+      visual: {
+        kind: "checklist",
+        title: "Launch when all three signals are true, not just one",
+        groups: [
+          { name: "Audience", items: ["Followers and emails grow every week", "Your list could cover about 30% of the goal on day one", "You know where your first backers will come from"] },
+          { name: "Page", items: ["A stranger can explain the game after one read", "Rewards and prices are easy to compare", "Every image reads on a phone"] },
+          { name: "Numbers", items: ["Manufacturer quote in hand", "Shipping estimate for each region", "Goal covers fees and a reserve"] },
+        ],
+        caption: "The 30% figure is a 2020 rule of thumb, not a Kickstarter rule.",
+        source: "Meeple Mountain (14 Oct 2020), checked 25 Nov 2026",
+      },
+    },
+    {
+      id: "day-and-time",
+      title: "The best day and time to launch",
+      paragraphs: [
+        "Day and time matter a little, and far less than readiness. Kickstarter's 2026 post on launch timing says campaigns launched on a Tuesday consistently see higher success rates, and that weekends see less engagement.",
+        "The same post says backers are most active from late afternoon into early evening, with a spike around 4 PM Eastern. Kickstarter's September 2026 plan launches at 11 am Eastern instead, so even its own advice varies. Neither post shares sample sizes, so treat both as tendencies.",
+        "What matters more is that you're online and your launch email reaches your list when they can act on it. If most of your followers are in Europe, a late US launch lands in their night. So pick a weekday hour when your list is awake, then stay at your desk for the first few hours.",
+      ],
+      source: 1,
+    },
+    {
+      id: "months-and-events",
+      title: "Months and dates to think about",
+      paragraphs: [
+        "The calendar matters more than the hour, because it decides what else is competing for your backers' attention and money. Kickstarter's launch timing post says the first week of a month tends to do well, with the 1st a top performer.",
+        "On holidays, the same post says the holiday season isn't a no go, but it advises launching early enough to avoid the end of year rush. We'd add one more check: look at what's launching in your niche that month, because a huge campaign in your genre takes attention for weeks.",
+        "Conventions are the other big date. Showing your game at a show before launch is a great way to collect emails, but launching during one you're attending is hard, because you can't answer comments from a booth all day. So show the game at an event, then launch a few weeks later while new followers still remember you. These are the big tabletop dates we're planning around, each checked on the organizer's own site:",
+      ],
+      source: 1,
+      visual: {
+        kind: "timeline",
+        title: "The big shows fall in June, August and October, so plan a 2027 launch around them",
+        events: [
+          { when: "Dec 4 to 6, 2026", label: "PAX Unplugged", detail: "Philadelphia" },
+          { when: "Feb 2 to 19, 2027", label: "Zinetopia on BackerKit", detail: "Zine campaigns, applications open through Jan 4, 2027" },
+          { when: "Jun 4 to 6, 2027", label: "UK Games Expo", detail: "NEC, Birmingham", highlight: true },
+          { when: "Aug 5 to 8, 2027", label: "Gen Con", highlight: true },
+          { when: "Oct 21 to 24, 2027", label: "SPIEL Essen", detail: "Essen, Germany", highlight: true },
+        ],
+        caption: "Dates checked on each organizer's site on 25 Nov 2026. Zinetopia is BackerKit's zine event, worth knowing if you make a TTRPG zine.",
+        source: "PAX, BackerKit, UK Games Expo, Gen Con and SPIEL websites",
+      },
+    },
+    {
+      id: "campaign-length",
+      title: "How long the campaign should run",
+      paragraphs: [
+        "Campaign length is a quick decision once the date is set. Kickstarter allows anywhere from 1 to 60 days and recommends 30 days or less, while its own September 2026 plan runs a live campaign of around 45 days.",
+        "For a first board game we usually lean shorter, because a long middle is hard to fill with news when your audience is small. Our guide to [Kickstarter review and launch timing](/guides/kickstarter-review-launch-timeline) covers the duration rules and the final checks. Pick the length that fits the news you can share, not the longest one allowed.",
+      ],
+      source: 3,
+    },
+    {
+      id: "work-back",
+      title: "Working back from a date",
+      paragraphs: [
+        "Once the signals look close, a backward plan turns a hoped for date into a real one. Take the timeline above, put your launch day at the end and write a real date next to each step.",
+        "If any step lands in the past, the date is too early, and it's cheaper to move it now than to launch thin. If every step fits with a week to spare, you have a date you can keep. The full schedule for the weeks around launch lives in our [board game Kickstarter marketing plan](/guides/board-game-kickstarter-marketing-plan), and the day itself has its own [launch day checklist](/guides/board-game-kickstarter-launch-day-checklist).",
+      ],
+    },
+    {
+      id: "delay",
+      title: "When to delay, and how to tell your followers",
+      paragraphs: [
+        "Moving a launch date feels like failing, but it rarely is. Kickstarter's Target Launch Date is a planning aid and won't launch your project automatically, so the final click is always yours.",
+        "We'd delay if any of the three signals is clearly short, if review comes back with big changes, or if a manufacturer quote moves enough to change the goal. A short, honest email to your followers works best: what changed, the new date and something new to look at.",
+        "In our experience, followers rarely mind waiting for a better campaign. They mind silence. So tell them early, and give them a reason to stay excited.",
+      ],
+      source: 2,
+    },
+    {
+      id: "plan-with-us",
+      title: "Planning the date with us",
+      paragraphs: [
+        "You can plan all of this yourself with a calendar and the three signals. The honest limit is that a first timer has no feel yet for how long each job really takes, so the runway often comes up short.",
+        "When we plan a launch with you, we set the date from readiness, build the backward plan and keep it updated as the work moves. That's part of our [Kickstarter launch services for tabletop games](/kickstarter-launch-services), and full campaign support at $5,900 covers the prelaunch page and emails, the campaign page, ads and the live campaign. If you're not sure you're ready, [tell us where you are](/buy#start-project) and we'll give you an honest read.",
+      ],
+    },
+  ],
+  faqs: [
+    { question: "How long does it take to prepare a Kickstarter for a board game?", answer: "Most first board games need several months. Kickstarter's own plan runs 50 days from kickoff to launch, but it is built for a finished product with a team. Our planning example for a first game starts six to twelve months before launch." },
+    { question: "What is the best day of the week to launch a Kickstarter?", answer: "Kickstarter's launch timing post says Tuesday launches consistently see higher success rates and weekends see less engagement. The day matters far less than being ready." },
+    { question: "What is the best month to launch a board game Kickstarter?", answer: "Kickstarter says the first week of a month tends to do well. The holiday season isn't a no go, but it advises launching early enough to avoid the end of year rush. Check for big launches in your niche that month too." },
+    { question: "Should I launch my Kickstarter before or after a convention?", answer: "Usually after. Show the game at the convention to collect emails, then launch a few weeks later while those people still remember you. Launching during a show you're attending is hard, because you can't answer comments from a booth all day." },
+    { question: "How long should my Kickstarter campaign last?", answer: "Kickstarter allows 1 to 60 days and recommends 30 days or less. For a first board game we usually lean shorter, because a long middle is hard to fill with news when your audience is small." },
+    { question: "Is it bad to push my launch date back?", answer: "Rarely. It's cheaper to move the date than to launch thin. Tell followers early with a short, honest email: what changed, the new date and something new to look at." },
+    { question: "How do I know I'm ready to launch?", answer: "Check three signals: people waiting for day one, a page a stranger can explain back to you, and numbers that cover manufacturing, shipping, fees and a reserve. When all three are true, pick the date." },
+  ],
+};
