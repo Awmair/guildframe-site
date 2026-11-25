@@ -39,3 +39,25 @@ html body main:not(.gfr-home) details summary{cursor:pointer}
 .gf-header,.gf-contact{display:none}
 
 @media(max-width:640px){html body main:not(.gfr-home){margin-inline:8px;border-radius:20px 20px 0 0}}
+
+/* ---------- spacing pass ---------- */
+/* Templates whose content ran to the sheet edge get the same inner margin as the rest. */
+html body main:not(.gfr-home){width:auto!important;max-width:none!important}
+html body main:is(.gf-service,.gf-creative-page,.gf-studio-library,.gf-work-page){padding-inline:max(clamp(20px,4.5vw,72px),calc((100% - 1280px) / 2))}
+/* Body copy that only inherits a small size from its container reads at 17px; any rule that sets a size still wins. */
+:where(html body main:not(.gfr-home)) :where(p,li){font-size:17px;line-height:1.7}
+html body main:not(.gfr-home){padding-top:clamp(20px,3vw,40px)}
+html body main:not(.gfr-home)>.seo-breadcrumbs{margin-bottom:clamp(20px,3vw,40px)}
+/* Reading rhythm: paragraphs separate, headings sit closer to what follows than to what came before. */
+html body main:not(.gfr-home) p+p{margin-top:.95em}
+html body main:not(.gfr-home) :is(article,section) h2{margin-top:clamp(1.4em,4vw,2.2em);margin-bottom:.45em}
+html body main:not(.gfr-home) :is(article,section) h2:first-child{margin-top:0}
+html body main:not(.gfr-home) :is(article,section) h3{margin-bottom:.4em}
+html body main:not(.gfr-home) :is(ul,ol):not([class]) li+li{margin-top:.5em}
+html body main:not(.gfr-home) :is(ul,ol):not([class]){padding-left:1.25em}
+html body main:not(.gfr-home) :is(ul):not([class]) li::marker{color:var(--coral-700)}
+html body main:not(.gfr-home) h1{margin-bottom:.35em}
+html body main:not(.gfr-home) :is(h1,h2){text-wrap:balance}
+html body main:not(.gfr-home) :is(p,li){text-wrap:pretty}
+/* Sections get more air between them. */
+html body main:not(.gfr-home)>:is(section,aside,article,div,header,nav)+:is(section,aside,article,div){margin-top:clamp(40px,6vw,96px)}

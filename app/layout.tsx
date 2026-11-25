@@ -14,6 +14,7 @@ import "./creative-proof.css";
 import "@fontsource-variable/host-grotesk";
 import "./world/world.css";
 import "./world/legacy.css";
+import "./world/legacy-type.css";
 import "./world/home.css";
 import {JsonLd} from "./components/JsonLd";
 import {Analytics} from "./components/Analytics";

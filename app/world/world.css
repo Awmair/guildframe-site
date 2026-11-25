@@ -247,3 +247,6 @@ html.w-gate-up .analytics-consent,html.w-menu-open .analytics-consent{display:no
 @media(max-width:520px){html body .analytics-consent{inset:auto 10px 10px 10px;justify-content:space-between}html body .analytics-consent p{white-space:normal}}
 .w-header::before{content:"";position:absolute;inset:0 0 -48px;z-index:-1;background:linear-gradient(rgb(10 27 29 / .78),rgb(10 27 29 / 0));opacity:0;transition:opacity 500ms var(--ease-out);pointer-events:none}
 .w-header.is-scrolled::before{opacity:1}
+.w-corner--left .w-pill-promo,html body .analytics-consent{transition:opacity .3s var(--ease-out,ease),transform .3s var(--ease-out,ease)}
+html.w-at-form .w-corner--left .w-pill-promo{opacity:0;transform:translateY(8px);pointer-events:none}
+html.w-at-form body .analytics-consent{opacity:0;transform:translateY(8px);pointer-events:none}

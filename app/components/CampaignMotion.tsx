@@ -38,7 +38,7 @@ export function CampaignMotion() {
           });
         });
       }, { rootMargin: "0px 0px -24px 0px", threshold: 0 });
-      document.querySelectorAll("[data-reveal], [data-journey-scene]").forEach(element => {
+      document.querySelectorAll("[data-reveal=''], [data-journey-scene]").forEach(element => {
         if (element.getBoundingClientRect().top > window.innerHeight) reveals?.observe(element);
       });
     }

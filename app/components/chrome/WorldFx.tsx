@@ -123,6 +123,69 @@ export function WorldFx() {
     return () => observer.disconnect();
   }, [pathname]);
 
+  // While the enquiry form is on screen, the corner promo and cookie note step aside so nothing sits over the fields.
+  useEffect(() => {
+    const form = document.getElementById("start-project");
+    if (!form || !("IntersectionObserver" in window)) return;
+    const root = document.documentElement;
+    const observer = new IntersectionObserver(([entry]) => root.classList.toggle("w-at-form", entry.isIntersecting), { threshold: 0.15 });
+    observer.observe(form);
+    return () => { observer.disconnect(); root.classList.remove("w-at-form"); };
+  }, [pathname]);
+
+  // Smooth wheel scrolling on desktop: eases the page toward where the wheel asked for.
+  useEffect(() => {
+    if (!finePointer() || reduced()) return;
+    const root = document.documentElement;
+    let target = window.scrollY, current = window.scrollY, frame = 0, running = false;
+    const max = () => root.scrollHeight - window.innerHeight;
+    const jump = (y: number) => window.scrollTo({ top: y, behavior: "instant" as ScrollBehavior });
+    const innerCanScroll = (start: Element | null, dy: number) => {
+      for (let el = start; el && el !== document.body && el !== root; el = el.parentElement) {
+        const style = getComputedStyle(el);
+        if (!/(auto|scroll)/.test(style.overflowY) || el.scrollHeight <= el.clientHeight + 1) continue;
+        if (dy > 0 && el.scrollTop + el.clientHeight < el.scrollHeight - 1) return true;
+        if (dy < 0 && el.scrollTop > 0) return true;
+      }
+      return false;
+    };
+    const tick = () => {
+      current += (target - current) * 0.1;
+      if (Math.abs(target - current) < 0.4) { current = target; jump(current); running = false; return; }
+      jump(current);
+      frame = requestAnimationFrame(tick);
+    };
+    const stop = () => { cancelAnimationFrame(frame); running = false; target = current = window.scrollY; };
+    const onWheel = (event: WheelEvent) => {
+      if (event.ctrlKey || event.defaultPrevented || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+      if (root.classList.contains("w-menu-open") || root.classList.contains("w-gate-up")) return;
+      const el = event.target as Element | null;
+      const dy = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1);
+      // Hand over to the browser only where something inside really scrolls (a long textarea, an open list, an embed).
+      // Stop the easing first so the two never pull against each other.
+      if (el?.closest("iframe,[data-native-scroll]") || innerCanScroll(el, dy)) { if (running) stop(); return; }
+      event.preventDefault();
+      if (!running) target = current = window.scrollY;
+      target = Math.min(max(), Math.max(0, target + dy));
+      if (!running) { running = true; frame = requestAnimationFrame(tick); }
+    };
+    // Keyboard, scrollbar and anchor jumps move the page directly; follow them.
+    const onScroll = () => { if (!running) target = current = window.scrollY; };
+    window.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("keydown", stop);
+    window.addEventListener("pointerdown", stop);
+    root.classList.add("w-smooth");
+    return () => {
+      cancelAnimationFrame(frame);
+      root.classList.remove("w-smooth");
+      window.removeEventListener("wheel", onWheel);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("keydown", stop);
+      window.removeEventListener("pointerdown", stop);
+    };
+  }, []);
+
   // Cursor token.
   useEffect(() => {
     const element = cursor.current;
