@@ -81,7 +81,7 @@ export const guide: LaunchGuide = {
       title: "Pledge manager and late pledge fees",
       paragraphs: [
         "Fees don't stop when the campaign clock reaches zero. Money you collect afterwards through late pledges or a pledge manager carries fees too, and tabletop projects often collect a lot there.",
-        "Kickstarter says the fees on late pledges are the same as on original campaign pledges: a 5% fee plus payment processing of roughly 3 to 5%. Late pledges have to be switched on while the project is in draft or still live, and they can't be turned on after the campaign ends, so decide before launch.",
+        "Kickstarter says the fees on late pledges are the same as on original campaign pledges: a 5% fee plus payment processing, which in the US is 3% and $0.20 per pledge. Late pledges have to be switched on while the project is in draft or still live, and they can't be turned on after the campaign ends, so decide before launch.",
         "Kickstarter's own pledge manager has no upfront cost, but Kickstarter deducts its usual fees from payments made inside it. That puts shipping, upgrades and extra items bought in the pledge manager inside the fee base. If you choose a third party pledge manager instead, read its current pricing page and add its charges on top.",
         "Shipping you collect during the campaign counts towards your funding goal. That helps you fund, and it also means the shipping money is part of the funding total the fees come from. Either way, price shipping with the fees already included.",
       ],

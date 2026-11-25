@@ -70,7 +70,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "Numbers sink campaigns quietly, because a goal that looks fine on the page can hide a price backers will not pay or a budget that cannot deliver.",
         "Backers pay months before they receive anything, so Stegmaier notes the price has to feel justified by what they get. A first game often feels expensive next to established titles, because a small print run costs more per copy. The goal has the opposite problem. Set it too low and you fund without enough money to make the game, and set it too high and you scare off people who would otherwise back.",
-        "Work the goal up from your smallest real print run, plus freight, fulfillment, fees and a buffer. Kickstarter takes a 5% fee from a funded project, and its payment processor takes roughly 3 to 5% on top. Our guides to the [board game Kickstarter funding goal](/guides/board-game-kickstarter-funding-goal) and [reward pricing](/guides/board-game-kickstarter-reward-pricing) take you through both. The takeaway is that a goal is the least you need to deliver, never a sales target.",
+        "Work the goal up from your smallest real print run, plus freight, fulfillment, fees and a buffer. Kickstarter takes a 5% fee from a funded project, and its payment processor takes 3% and $0.20 per pledge in the US on top. Our guides to the [board game Kickstarter funding goal](/guides/board-game-kickstarter-funding-goal) and [reward pricing](/guides/board-game-kickstarter-reward-pricing) take you through both. The takeaway is that a goal is the least you need to deliver, never a sales target.",
       ],
       source: 2,
     },

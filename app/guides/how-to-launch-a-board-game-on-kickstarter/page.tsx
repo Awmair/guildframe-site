@@ -164,15 +164,15 @@ const budget: GuideVisualData = {
   title: "Example: where the money goes on a $30,000 board game campaign",
   total: "Illustrative example: $30,000 raised",
   parts: [
-    { label: "Manufacturing", share: 12000, display: "$12,000" },
-    { label: "Shipping and fulfillment", share: 6000, display: "$6,000" },
-    { label: "Reserve for surprises (20% of making and shipping)", share: 3600, display: "$3,600" },
-    { label: "Marketing and ads", share: 3000, display: "$3,000" },
-    { label: "Kickstarter and payment fees (about 9%)", share: 2700, display: "$2,700" },
-    { label: "Art, page and reviewer samples", share: 2700, display: "$2,700" },
+    { label: "Manufacturing", share: 11000, display: "$11,000" },
+    { label: "Reserve for surprises (20% of the raise)", share: 6000, display: "$6,000" },
+    { label: "Shipping and fulfillment", share: 5450, display: "$5,450" },
+    { label: "Kickstarter and payment fees (750 pledges at $40)", share: 2550, display: "$2,550" },
+    { label: "Marketing and ads", share: 2500, display: "$2,500" },
+    { label: "Art, page and reviewer samples", share: 2500, display: "$2,500" },
   ],
   caption:
-    "Illustrative example, not an average. Only two figures come from a source. Kickstarter says it and its payment partners take 8 to 10 percent of funds, and it suggests a buffer of 20 to 30 percent on your fulfillment estimate. Every other share is a Guildframe example.",
+    "Illustrative example, not an average. Only two figures come from a source. Kickstarter says it and its payment partners take 8 to 10 percent of funds, and it suggests a buffer of 20 to 30 percent on your fulfillment estimate. The fees use the US rates (5% plus 3% and $0.20 per pledge), and our 20% reserve of the raise covers that buffer. Every other share is a Guildframe example, the same one used in our board game cost guide.",
   source: "Kickstarter blog, June 2026, checked 25 Nov 2026",
 };
 

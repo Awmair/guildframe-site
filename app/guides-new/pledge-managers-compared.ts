@@ -45,7 +45,7 @@ export const guide: LaunchGuide = {
       title: "Kickstarter's own Pledge Manager",
       paragraphs: [
         "Kickstarter's built in option arrived in 2025, and it changed quickly through 2026. It opened to all creators on May 8, 2025, with a backer survey, upgrades and add ons, order exports and post campaign shipping.",
-        "The launch also covered US sales tax and EU and UK VAT collection, plus a Tariff Manager for extra charges on US backers. There is no upfront cost. Kickstarter takes 5% on all funds collected through it except taxes, and card processing of roughly 3 to 5% applies to the full payment, tax included.",
+        "The launch also covered US sales tax and EU and UK VAT collection, plus a Tariff Manager for extra charges on US backers. There is no upfront cost. Kickstarter takes 5% on all funds collected through it except taxes, and card processing applies, which in the US is 3% and $0.20 per pledge, to the full payment, tax included.",
         "The 2026 release notes added much of the flexibility a tabletop campaign needs after funding. Since August 20, backers can change their own orders after submitting, if you allow it. Since October 13, dropped pledges appear in the Backer Source data on your dashboard. Since October 28, you can edit a backer's order yourself.",
         "For a Kickstarter campaign with straightforward rewards, that makes it the easiest route, because there is no second platform to explain to backers. The limit is that it only serves Kickstarter projects.",
       ],
@@ -111,7 +111,7 @@ export const guide: LaunchGuide = {
         kind: "compare",
         title: "Each pledge manager charges on a different base",
         columns: [
-          { name: "Kickstarter", points: ["Kickstarter projects only", "No upfront cost", "5% on funds collected through it, except taxes", "Processing of roughly 3 to 5%"] },
+          { name: "Kickstarter", points: ["Kickstarter projects only", "No upfront cost", "5% on funds collected through it, except taxes", "US processing: 3% + $0.20 per pledge"] },
           { name: "BackerKit", points: ["Campaigns from other platforms, or its own", "Campaign fee of 2% or less", "3.5% on post campaign sales", "DriveThruRPG delivery since October 2026"] },
           { name: "Gamefound", points: ["Gamefound campaigns, and external ones after review", "No fee for managing pledges on Gamefound projects", "5% on new payments plus 3% and 0.20 processing", "Optional Late Pledge stage"] },
           { name: "PledgeBox", points: ["Kickstarter and Indiegogo campaigns", "0% on funds already raised", "3% on survey payments, 5% on its preorder store", "Processing billed separately"] },
@@ -143,7 +143,7 @@ export const guide: LaunchGuide = {
   faqs: [
     { question: "Do I need a pledge manager for a small campaign?", answer: "Not always a separate one. If you have one reward, shipping charged at pledge and no add ons, a simple survey may be enough. Once you sell extras, collect shipping later or offer several editions, a pledge manager saves you from fixing orders by hand." },
     { question: "What is a pledge manager?", answer: "A pledge manager is the system you use after funding to survey backers, sell add ons and upgrades, collect shipping and tax, lock addresses and export orders to fulfilment." },
-    { question: "Is Kickstarter's Pledge Manager free?", answer: "There is no upfront cost. Kickstarter takes 5% on all funds collected through it except taxes, and card processing of roughly 3 to 5% applies to the full payment." },
+    { question: "Is Kickstarter's Pledge Manager free?", answer: "There is no upfront cost. Kickstarter takes 5% on all funds collected through it except taxes, and card processing applies, which in the US is 3% and $0.20 per pledge, to the full payment." },
     { question: "How much does BackerKit charge?", answer: "BackerKit publishes a campaign fee of 2% or less, lower as you raise more, plus a 3.5% transaction fee on post campaign sales such as add ons and preorders. The campaign fee is waived if you launched on BackerKit." },
     { question: "Can I use Gamefound's pledge manager after a Kickstarter campaign?", answer: "Yes. Gamefound accepts campaigns funded elsewhere after a review. You enter your funding, backer count and currency, then launch the pledge manager once shipping is set up." },
     { question: "Can backers change their order after the Kickstarter survey?", answer: "Yes, if you allow it. Since August 20, 2026, backers can change their own orders after submitting, and since October 28, 2026, creators can edit backer orders directly." },

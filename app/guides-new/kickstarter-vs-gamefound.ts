@@ -34,7 +34,7 @@ export const guide: LaunchGuide = {
       id: "fees",
       title: "Fees are almost the same, so look at the extras",
       paragraphs: [
-        "Fees are the first thing most creators compare, and the headline numbers are nearly identical. Kickstarter collects a 5% fee on the funds you raise, and its payment processor charges roughly 3 to 5% on top.",
+        "Fees are the first thing most creators compare, and the headline numbers are nearly identical. Kickstarter collects a 5% fee on the funds you raise, and its payment processor charges 3% and $0.20 per pledge on top in the US.",
         "Gamefound also takes 5% of the collected amount, plus a payment processing fee on each transaction. Its pledge manager charges nothing for managing pledges you already raised. On new payments collected there, it takes 5% plus processing of 3% and 0.20 per transaction in your project currency.",
         "Kickstarter's own Pledge Manager uses the same fees as a successful project. That means 5% on all funds except taxes, with card processing charged on the full payment, tax included.",
         "So the real money differences sit elsewhere, in ad service fees and in how much you sell after the campaign. Model those with your own reward prices before you call either platform cheaper.",
@@ -43,7 +43,7 @@ export const guide: LaunchGuide = {
         kind: "stats",
         title: "Both platforms take the same 5% platform fee",
         stats: [
-          { value: "5%", label: "Kickstarter platform fee", note: "On funds collected, plus roughly 3 to 5% processing" },
+          { value: "5%", label: "Kickstarter platform fee", note: "On funds collected, plus US processing of 3% + $0.20 per pledge" },
           { value: "5%", label: "Gamefound platform fee", note: "On the collected amount, plus processing per transaction" },
           { value: "5%", label: "Kickstarter Pledge Manager", note: "On all funds except taxes, plus processing" },
           { value: "5% + 3%", label: "Gamefound pledge manager", note: "On new payments only, plus 0.20 per transaction" },
