@@ -2,18 +2,294 @@ import type { LaunchGuide } from "./launch-guides";
 export const marketingGuides: LaunchGuide[] = [
   {
     "slug": "board-game-kickstarter-marketing-plan",
-    "title": "Board Game Kickstarter Marketing Plan: Before Launch to Campaign Close",
-    "seoTitle": "Board Game Kickstarter Marketing Plan: Timeline & Budget",
-    "description": "Plan your board game Kickstarter with an eight week example, a worked media budget and launch checks. Assign the page, emails, ads and live support to an owner.",
+    "title": "How to Market a Board Game on Kickstarter: A Phased Plan",
+    "seoTitle": "How to Market a Board Game on Kickstarter in 2026",
+    "description": "How to market a board game on Kickstarter, phase by phase: the pitch, a prelaunch audience, ad tests, reviewer previews, launch week and the live campaign.",
     "tag": "Launch marketing",
-    "answer": "A board game Kickstarter marketing plan needs a clear offer, a cost model, a prelaunch page and email flow, campaign creative, a promotion budget and live support. Put those jobs on a schedule with an owner and a review date. The eight week timeline and hypothetical budget below show how to release spending after each check, rather than committing the whole budget before you know what works.",
-    "servicePath": "/kickstarter-launch-services",
-    "serviceLabel": "Tabletop Kickstarter launch services",
+    "answer": "To market a board game on Kickstarter, settle a clear pitch and priced rewards first. Then spend six to eight weeks building an email list and Kickstarter followers, testing ads on a capped budget and lining up reviewer previews. Launch to that warm audience, and keep updates, ads and community posts going until the campaign closes.",
+    "sections": [
+      {
+        "id": "positioning",
+        "title": "Start with a one sentence pitch for the game",
+        "paragraphs": [
+          "Every board game marketing channel repeats the same pitch, so we write it before choosing any channel. A new visitor needs to know what players do, how long a game takes and why they would pick this one.",
+          "Playtest feedback is the best source, because players already use words for what they enjoyed. A quick party deck, a solo strategy game and a miniatures campaign ask for very different attention. Your landing page and ads should make that difference obvious in the first line.",
+          "These four notes are enough to brief every channel that follows."
+        ],
+        "list": [
+          "The player count, session length and confirmed reward contents.",
+          "The strongest gameplay hook you can show on video or in a photo.",
+          "The art and prototype parts that are still unfinished.",
+          "The audiences that already know your work and the ones that need an introduction."
+        ]
+      },
+      {
+        "id": "readiness",
+        "title": "Check the offer and the numbers before buying traffic",
+        "paragraphs": [
+          "Tabletop game marketing only pays when the offer underneath it works. So before any money goes into ads, confirm what each reward contains and which countries you can ship to.",
+          "Then work out the costs behind each tier, including production, packaging, platform fees, delivery and advertising. Our guides to [pricing Kickstarter rewards](/guides/board-game-kickstarter-reward-pricing) and [setting a funding goal](/guides/board-game-kickstarter-funding-goal) walk through the sums. An attractive pledge total can still leave too little to deliver the game.",
+          "If a core component is still changing, label it clearly as a prototype or settle it before promotion starts."
+        ]
+      },
+      {
+        "id": "phases",
+        "title": "The plan in five phases",
+        "paragraphs": [
+          "We run board game marketing in five phases, and each one has a check before the next begins. This eight week example assumes you already have a playable prototype, usable artwork and reward cost estimates. If those inputs are missing, move the dates instead of skipping the checks.",
+          "Give each row an owner and a review date. You can do the work in house or bring in help for single stages. The useful question at each review is whether the next phase has what it needs.",
+          "Kickstarter's own advice is to start planning promotion as soon as you decide to run a project, beginning with the community you already have."
+        ],
+        "visual": {
+          "kind": "steps",
+          "title": "Each marketing phase ends with a check before money moves to the next",
+          "steps": [
+            {
+              "label": "Foundation",
+              "detail": "Pitch, rewards and costs settled before week 8"
+            },
+            {
+              "label": "Audience",
+              "detail": "Weeks 8 to 5: landing page, email list and followers"
+            },
+            {
+              "label": "Proof",
+              "detail": "Weeks 4 to 1: capped ad tests, previews and the final page"
+            },
+            {
+              "label": "Launch",
+              "detail": "Warm audience first, then ads to the checked live page"
+            },
+            {
+              "label": "Momentum",
+              "detail": "Updates, add ons and a final days push until close"
+            }
+          ],
+          "caption": "Guildframe's working plan. The week numbers are an example, not a required lead time."
+        },
+        "table": {
+          "headers": [
+            "Example period",
+            "Work to finish",
+            "Check before moving on"
+          ],
+          "rows": [
+            [
+              "Weeks 8 to 7",
+              "Confirm the pitch, rewards, costs, artwork and missing assets",
+              "Can someone new explain the game and the offer?"
+            ],
+            [
+              "Weeks 6 to 5",
+              "Build the landing page, signup route and welcome email",
+              "Does a real test signup receive the promised material?"
+            ],
+            [
+              "Weeks 4 to 3",
+              "Run capped creative tests and finish page copy and reward graphics",
+              "Do visitors engage, and are the campaign facts settled?"
+            ],
+            [
+              "Weeks 2 to 1",
+              "Review the platform preview, launch email, spending rules and support plan",
+              "Are publishing, budget and open risks approved?"
+            ],
+            [
+              "Launch to close",
+              "Check the live page, report spend and prepare approved updates",
+              "What needs changing, and who approves it?"
+            ]
+          ]
+        },
+        "source": 0
+      },
+      {
+        "id": "channels",
+        "title": "Which board game marketing channels do what",
+        "paragraphs": [
+          "No single channel carries a board game launch, so we plan four side by side. Each one does a different job, and each one needs a different check.",
+          "Your own email list is the channel you control. Kickstarter followers get a launch notification email when you go live, but you cannot message them directly, only through prelaunch updates. Paid social ads reach players who have never heard of you, and reviewers and communities show the game being played.",
+          "The comparison below is how we decide what each channel is for before we spend on it."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "Each channel does a different job, so plan all four rather than picking one",
+          "columns": [
+            {
+              "name": "Your email list",
+              "points": [
+                "You can message it any time",
+                "Needs consent, a welcome email and testing",
+                "Your most direct launch day reach"
+              ],
+              "verdict": "Build it first",
+              "highlight": true
+            },
+            {
+              "name": "Kickstarter followers",
+              "points": [
+                "Kickstarter emails them at launch",
+                "No direct messages, only prelaunch updates",
+                "Count shows once 10 people follow"
+              ],
+              "verdict": "Collect alongside email"
+            },
+            {
+              "name": "Paid social ads",
+              "points": [
+                "Reach players new to your game",
+                "Need a spending cap and tracking",
+                "Only as good as the page they land on"
+              ],
+              "verdict": "Test small, then scale on margin"
+            },
+            {
+              "name": "Reviewers and communities",
+              "points": [
+                "Show the game being played",
+                "Ask about fees and dates early",
+                "Forums, Discord and conventions take time"
+              ],
+              "verdict": "Book months ahead"
+            }
+          ],
+          "caption": "Guildframe's channel plan. Follower rules come from the Kickstarter Help Center.",
+          "source": "Kickstarter Help Center, prelaunch page"
+        },
+        "source": 1
+      },
+      {
+        "id": "worked-budget",
+        "title": "Worked budget: release ad spend in stages",
+        "paragraphs": [
+          "A board game marketing strategy needs a spending rule as much as a channel list. In this hypothetical USD example, a publisher sets aside $1,000 for paid media. Campaign design, ad management, email software and production have separate budgets. The amounts are invented planning inputs, not a Guildframe quote, an industry average or a recommended minimum.",
+          "Suppose the first $250 test produces 50 valid signups. That is $5 per signup and leaves $750 unspent. It does not tell you what a backer will cost, so we check that the welcome email arrived and subscribers used the game material before approving another test. The [advertising budget guide](/guides/kickstarter-advertising-budget-board-games) shows how to set the ceiling from your reward margin."
+        ],
+        "table": {
+          "headers": [
+            "Example allocation",
+            "Media cap",
+            "Release condition"
+          ],
+          "rows": [
+            [
+              "First prelaunch test, week 4",
+              "$250",
+              "The page, signup event and welcome email pass a real test."
+            ],
+            [
+              "Revised test, week 3",
+              "$250",
+              "The first results are reviewed and the specific issue is fixed."
+            ],
+            [
+              "Live campaign test",
+              "$300",
+              "The campaign is live, reward economics are checked and pledge reporting works."
+            ],
+            [
+              "Unassigned reserve",
+              "$200",
+              "The publisher approves a defined use, or it stays unspent."
+            ],
+            [
+              "Total media allowance",
+              "$1,000",
+              "A ceiling across these stages, separate from service fees and other launch costs."
+            ]
+          ]
+        },
+        "source": 3
+      },
+      {
+        "id": "audience",
+        "title": "Give people something to play or read",
+        "paragraphs": [
+          "People sign up for a game they can picture at their table, so we lead with something useful. A gameplay video, a downloadable rulebook or a print and play sample gives a visitor a reason to stay.",
+          "Ask permission to email, then use each message to explain one part of the game or share a real change. The [prelaunch email list guide](/guides/kickstarter-prelaunch-email-list) has a five message sequence you can adapt. A subscriber who has played a sample round is far easier to convert on launch day than one who only saw a box render."
+        ]
+      },
+      {
+        "id": "measure",
+        "title": "Measure the actions that decide the next step",
+        "paragraphs": [
+          "Measurement is there to answer one question at each review, which is whether to spend more. So we record traffic, signups, email clicks, campaign visits and attributable pledges where the tools can show them.",
+          "Give every link a consistent name so you know which email or ad it came from. Kickstarter referral reports show attributed pledges and amounts rather than clicks, which our [referral tags guide](/guides/kickstarter-referral-tags-tracking) explains. A signup count is useful for testing interest, but it is not a promise of a future pledge."
+        ],
+        "source": 2
+      },
+      {
+        "id": "launch",
+        "title": "Decide to launch, revise or wait",
+        "paragraphs": [
+          "Before you announce a fixed date, we put the rules, reward contents, manufacturing assumptions, shipping approach, campaign page and signup test in one review. Unresolved issues get an owner. A large follower count cannot fix an unfinished reward or a delivery plan you cannot afford.",
+          "When the answer is launch, the [launch checklist](/guides/board-game-kickstarter-launch-day-checklist) covers the final week and the first hour. Check the live campaign link, email links and ad destinations before promoting, and keep a draft update ready for the first common backer questions."
+        ],
+        "table": {
+          "headers": [
+            "Decision",
+            "Reason",
+            "Next action"
+          ],
+          "rows": [
+            [
+              "Launch",
+              "The product facts, page, budget and support owners are approved",
+              "Publish using the checklist and verify the live links"
+            ],
+            [
+              "Revise",
+              "A specific page, offer or tracking problem can be fixed",
+              "Name the fix and review it before more promotion"
+            ],
+            [
+              "Wait",
+              "Costs, assets or delivery assumptions are still open",
+              "Reset the date and finish the missing work"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "help",
+        "title": "Marketing your board game with us",
+        "paragraphs": [
+          "We plan and run tabletop game marketing for a living, from the first landing page to the last day of the campaign. You can run every phase above yourself. The honest limit is that the audience, the ads and the page all peak in the same weeks, and one person rarely has the hours for all three.",
+          "Our full campaign support covers the campaign page, the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff. See [Kickstarter launch services for tabletop games](/kickstarter-launch-services) for the scope, or [prelaunch marketing](/kickstarter-prelaunch-marketing) if the audience phase is the gap."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long should I market a board game before Kickstarter?",
+        "answer": "We plan six to eight weeks of audience building once the pitch, rewards and costs are settled, so about 90 days in total for a first game. Existing audience, assets and testing needs change that, so set review checks before committing to a public date."
+      },
+      {
+        "question": "What is the best way to market a board game on Kickstarter?",
+        "answer": "Use several channels with different jobs. Build your own email list first, collect Kickstarter followers alongside it, test paid ads on a capped budget and line up reviewer previews. Then launch to the warm audience before switching ads on."
+      },
+      {
+        "question": "Are Facebook ads worth it for a board game Kickstarter?",
+        "answer": "They can be, when the page works and the reward margin can carry the cost. Test small with a written cap, track signups and attributed pledges, and scale only when the numbers fit your pricing."
+      },
+      {
+        "question": "Can a good campaign page replace prelaunch marketing?",
+        "answer": "No. The page explains the offer, but people still need a way to find it. Plan the audience, emails and promotion alongside the creative."
+      },
+      {
+        "question": "Do I need a large email list to launch?",
+        "answer": "List size alone does not answer that. Check whether contacts asked to hear from you, engage with the game and understand the offer. Use a cautious budget rather than assuming a fixed percentage will pledge."
+      },
+      {
+        "question": "Can I message my Kickstarter followers before launch?",
+        "answer": "Not directly. Kickstarter does not let you message prelaunch followers, but they are notified when you post a prelaunch update and they get a launch email when the project goes live."
+      }
+    ],
     "sources": [
       {
-        "label": "Planning Kickstarter promotion",
-        "publisher": "Kickstarter",
-        "href": "https://www.kickstarter.com/help/handbook/promotion"
+        "label": "When and how to start planning your promotion strategy",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236407-when-and-how-should-i-start-planning-my-promotion-strategy"
       },
       {
         "label": "Setting up a Kickstarter prelaunch page",
@@ -34,137 +310,13 @@ export const marketingGuides: LaunchGuide[] = [
     "relatedSlugs": [
       "kickstarter-prelaunch-email-list",
       "kickstarter-advertising-budget-board-games",
-      "board-game-kickstarter-page-checklist",
+      "board-game-kickstarter-launch-day-checklist",
       "choose-board-game-kickstarter-marketing-agency"
     ],
-    "sections": [
-      {
-        "id": "positioning",
-        "title": "Describe the game before choosing the channels",
-        "paragraphs": [
-          "Write a short explanation of what players do, how long a session takes and why someone would choose this game. A setting name and a beautiful box are useful, but a new visitor still needs to understand the play experience.",
-          "Use playtest feedback to find language players already use. A quick party deck, a solo strategy game and a campaign-based miniatures system ask for different levels of attention. Your landing page and ads should make that difference clear."
-        ],
-        "list": [
-          "State the player count, session length and confirmed reward contents.",
-          "Name the strongest gameplay hook you can demonstrate.",
-          "List unfinished art and prototype parts.",
-          "Check which audiences already know your work and which need an introduction."
-        ]
-      },
-      {
-        "id": "readiness",
-        "title": "Check the offer and economics before paying for traffic",
-        "paragraphs": [
-          "Confirm what each reward contains and which countries you can serve. Work out the costs behind it: production, packaging, platform charges, taxes where applicable, delivery, service fees and advertising. An attractive pledge total can still leave too little to deliver the game.",
-          "Gather a readable rules sample, gameplay images and an honest product view. If a core component is still changing, decide whether it can be clearly labelled as a prototype or needs to be settled before promotion. These are readiness checks, not a requirement to finish every illustration before talking about the game."
-        ]
-      },
-      {
-        "id": "worked-budget",
-        "title": "Worked budget: release spending in stages",
-        "paragraphs": [
-          "Hypothetical example in USD: a publisher sets aside $1,000 for paid media. Campaign design, ad management, email software and production have separate budgets. The amounts below are invented planning inputs, not a Guildframe quote, an industry average or a recommended minimum.",
-          "Suppose the first $250 test produces 50 valid signups. That is $5 per signup and leaves $750 of the media allowance unspent. It does not tell you what a backer will cost. Review whether the welcome email arrived and subscribers used the game material before approving another test. Keep later allocations available to change or cancel."
-        ],
-        "table": {
-          "headers": ["Example allocation", "Media cap", "Release condition"],
-          "rows": [
-            ["First prelaunch test, week 4", "$250", "The page, signup event and welcome email pass a real test."],
-            ["Revised test, week 3", "$250", "Review the first results and fix the specific message or page issue being tested."],
-            ["Live campaign test", "$300", "The campaign is live, reward economics are checked and pledge reporting is ready."],
-            ["Unassigned reserve", "$200", "The publisher approves a defined use; it can remain unspent."],
-            ["Total media allowance", "$1,000", "A ceiling across these stages, separate from service fees and other launch costs."]
-          ]
-        },
-        "source": 3
-      },
-      {
-        "id": "schedule",
-        "title": "Use a schedule with owners and dependencies",
-        "paragraphs": [
-          "Kickstarter recommends planning promotion before the campaign is live. Its handbook covers advance preparation, launch announcements and continued communication. The schedule below is a Guildframe planning template; the duration depends on your existing audience and how much work remains.",
-          "Put the deadline for each asset ahead of the work that uses it. A sample-turn video cannot be reviewed while its cards are still being redesigned. Leave time for feedback, page checks and platform review before announcing a firm date."
-        ],
-        "table": {
-          "headers": [
-            "Stage",
-            "Work to complete",
-            "Readiness check"
-          ],
-          "rows": [
-            [
-              "Planning",
-              "Offer, audience brief, reward contents and cost model",
-              "A new player understands the game; the numbers support the rewards."
-            ],
-            [
-              "Prelaunch setup",
-              "Landing page, email signup, tracking and useful sample material",
-              "A test signup receives the right email; links open on mobile."
-            ],
-            [
-              "Creative testing",
-              "Message and image variants with a capped test budget",
-              "You can explain the results and identify what needs changing."
-            ],
-            [
-              "Campaign review",
-              "Story, rewards, shipping, risks and launch emails",
-              "Facts match across every surface and the publisher is named."
-            ],
-            [
-              "Live campaign",
-              "Emails, updates, advertising reviews and recurring questions",
-              "Owners, approval rules and support dates are agreed."
-            ]
-          ]
-        },
-        "source": 0
-      },
-      {
-        "id": "audience",
-        "title": "Build interest through something people can use",
-        "paragraphs": [
-          "A gameplay example, downloadable rulebook or sample adventure gives a visitor a reason to spend time with the project. Ask permission to send further messages, then use those messages to explain a part of the game or share a meaningful change.",
-          "Keep platform followers and your own email list separate in your planning. Kickstarter sends launch notifications to followers, but does not let creators directly message them. Its prelaunch updates provide another way to share news. An external email signup needs its own working flow and permission to email."
-        ],
-        "source": 1
-      },
-      {
-        "id": "measure",
-        "title": "Measure the actions that matter to your next decision",
-        "paragraphs": [
-          "Record traffic, successful signups, email clicks, campaign visits and attributable pledges where the tools can show them. Give links consistent names so you know which email or creative they came from.",
-          "Kickstarter referral reports show attributed pledges and amounts rather than link clicks. Compare reports with that limitation in mind. A signup count is useful for testing interest; it is not a promise of a future pledge."
-        ],
-        "source": 2
-      },
-      {
-        "id": "launch",
-        "title": "Make a decision to launch, revise or wait",
-        "paragraphs": [
-          "Before publishing, review the product facts, rewards, audience engagement, spending and outstanding risks together. Decide who has authority to launch and who can approve changes during the campaign.",
-          "If the game is unclear or a crucial asset is missing, fix that issue before increasing spend. If the setup is ready, prepare the launch email, check the live URL and follow the agreed support schedule. Keep a draft update ready for the first recurring backer questions."
-        ]
-      }
-    ],
-    "faqs": [
-      {
-        "question": "How long should I market a board game before Kickstarter?",
-        "answer": "There is no universal duration. Existing audience, assets, reward readiness and the amount of testing needed determine the schedule. Set review checkpoints before committing to a public date."
-      },
-      {
-        "question": "Can a good campaign page replace prelaunch marketing?",
-        "answer": "The page explains the offer, but interested people still need a way to discover it. Plan audience preparation, emails and promotion alongside the creative."
-      },
-      {
-        "question": "Do I need a large email list to launch?",
-        "answer": "List size alone does not answer that. Check whether contacts asked to hear from you, engage with the game and understand the offer. Use a cautious budget rather than assuming a fixed percentage will pledge."
-      }
-    ],
+    "servicePath": "/kickstarter-launch-services",
+    "serviceLabel": "Kickstarter launch services for tabletop games",
     "published": "2026-10-03",
-    "updated": "2026-10-03"
+    "updated": "2026-11-25"
   },
   {
     "slug": "kickstarter-prelaunch-email-list",
