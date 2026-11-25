@@ -11,6 +11,7 @@ import { contentDates } from "./content-dates";
 import { absoluteUrl, siteConfig } from "./site-config";
 import { launchService } from "./seo-entities";
 import { Testimonials } from "./components/home/Testimonials";
+import { BeyondTabletop } from "./components/home/BeyondTabletop";
 
 const homeFaqs = [
   { question: "How much will the project cost?", answer: "The campaign page package is $1,800. Full campaign support is $5,900. Ad spend and other third party costs are billed separately. We agree the scope and schedule before work starts." },
@@ -73,6 +74,7 @@ export default function Home() {
       </div>
 
       <Testimonials />
+      <BeyondTabletop />
       <section className="h-work" id="past-work" aria-labelledby="past-work-title" data-tone-shift="">
         <div className="w-wrap-wide h-work-head">
           <h2 id="past-work-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Four campaigns,</span></span> <span className="w-line"><span><em>four very different games</em></span></span></h2>

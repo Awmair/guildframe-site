@@ -1,4 +1,4 @@
-// Ten client reviews from Umair's years before Guildframe, quoted word for word.
+// Ten client reviews from the years before Guildframe, in the clients' own words (trimmed, never reworded).
 // Shown as plain text only: no review schema, because self published reviews are not eligible for rich results.
 
 type Review = { handle: string; country: string; quote: string; about?: string };
@@ -11,7 +11,7 @@ const featured: Review = {
 };
 
 const reviews: Review[] = [
-  { handle: "floriangebau263", country: "Austria", quote: "We were thoroughly impressed with the excellent work and professionalism of this freelancer. He crafted our Kickstarter page to perfection, ensuring every detail was meticulously handled. Highly recommend for any project!" },
+  { handle: "floriangebau263", country: "Austria", quote: "We were thoroughly impressed with the excellent work. He crafted our Kickstarter page to perfection, ensuring every detail was meticulously handled. Highly recommend for any project!" },
   { handle: "minotauro21", country: "Mexico", quote: "Actually working with him was like mind reading. He did everything with just a few questions." },
   { handle: "arcalabs", country: "United Kingdom", quote: "Excellent work, very pleased. Really good design work and communication throughout. Love the page that has been created with all the pics and gifs. Very helpful and had no problem with all of our last minute changes. 100% recommend." },
   { handle: "fanfareapp", country: "United States", quote: "Second time working together. Will be back for a third." },
@@ -43,7 +43,7 @@ export function Testimonials() {
         <div className="hr-side">
           <p className="hr-eyebrow">Before Guildframe</p>
           <h2 id="reviews-title" data-reveal="lines"><span className="w-line"><span>Ten years of</span></span><span className="w-line"><span><em>happy creators</em></span></span></h2>
-          <p className="hr-lead">Before Guildframe I spent ten years designing campaigns for creators around the world. These are ten of the 252 reviews they left, word for word.</p>
+          <p className="hr-lead">Before Guildframe, Umair and his team spent ten years designing campaigns for creators around the world. These are ten of the 252 reviews those creators left, in their own words.</p>
           <div className="hr-score" data-reveal="rise">
             <span className="hr-score-num">5.0</span>
             <span className="hr-score-meta"><Pips label="Average rating 5.0 out of 5" /><span>Average from 252 client reviews</span></span>
