@@ -5,59 +5,59 @@ html:root:root{
   --gf-cream:#DDD3BF;--gf-ink:#142426;--gf-petrol:#142426;--gf-muted:#3D5152;--gf-border:rgb(20 36 38 / .16);
   --gf-coral:#9C3220;--gf-coral-text:#9C3220;--gf-mint:#E8DFCC;
 }
-html body main:not(.gfr-home){position:relative;z-index:1;margin:clamp(84px,10vw,104px) var(--page-pad) 0;padding-bottom:clamp(48px,6vw,88px);border-radius:28px 28px 0 0;background:var(--greyboard-200);color:var(--ink-900);box-shadow:0 -30px 80px -40px rgb(0 0 0 / .6);overflow:clip}
-html body main:not(.gfr-home) :where(*){font-family:var(--font-sans)!important}
-html body main:not(.gfr-home) :where(h1,h2) em,html body main:not(.gfr-home) .gfr-d em{font-family:var(--font-serif)!important;font-style:italic}
-html body main:not(.gfr-home) :where(h1){font-weight:400!important;letter-spacing:-.03em!important;line-height:1!important}
-html body main:not(.gfr-home) :where(h2){font-weight:400!important;letter-spacing:-.025em!important}
-html body main:not(.gfr-home) :where(h3){font-weight:500!important;letter-spacing:-.01em!important}
-html body main:not(.gfr-home) :where(p,li,td){color:var(--ink-700)}
-html body main:not(.gfr-home) :where(a:not([class])){color:var(--coral-700);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
-html body main:not(.gfr-home) :where(code,kbd){font-family:ui-monospace,SFMono-Regular,Menlo,monospace!important}
-html body main:not(.gfr-home) ::selection{background:var(--saffron-500);color:var(--ink-900)}
+html body main:not(.gfr-home):not(.w-page){position:relative;z-index:1;margin:clamp(84px,10vw,104px) var(--page-pad) 0;padding-bottom:clamp(48px,6vw,88px);border-radius:28px 28px 0 0;background:var(--greyboard-200);color:var(--ink-900);box-shadow:0 -30px 80px -40px rgb(0 0 0 / .6);overflow:clip}
+html body main:not(.gfr-home):not(.w-page) :where(*){font-family:var(--font-sans)!important}
+html body main:not(.gfr-home):not(.w-page) :where(h1,h2) em,html body main:not(.gfr-home):not(.w-page) .gfr-d em{font-family:var(--font-serif)!important;font-style:italic}
+html body main:not(.gfr-home):not(.w-page) :where(h1){font-weight:400!important;letter-spacing:-.03em!important;line-height:1!important}
+html body main:not(.gfr-home):not(.w-page) :where(h2){font-weight:400!important;letter-spacing:-.025em!important}
+html body main:not(.gfr-home):not(.w-page) :where(h3){font-weight:500!important;letter-spacing:-.01em!important}
+html body main:not(.gfr-home):not(.w-page) :where(p,li,td){color:var(--ink-700)}
+html body main:not(.gfr-home):not(.w-page) :where(a:not([class])){color:var(--coral-700);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+html body main:not(.gfr-home):not(.w-page) :where(code,kbd){font-family:ui-monospace,SFMono-Regular,Menlo,monospace!important}
+html body main:not(.gfr-home):not(.w-page) ::selection{background:var(--saffron-500);color:var(--ink-900)}
 
 /* Hero bands of the older templates become the dark top of the sheet. */
-html body main:not(.gfr-home) :is(.article-hero,.trust-hero,.guides-hero,.seo-hero){background:transparent}
-html body main:not(.gfr-home) .seo-breadcrumbs a{color:var(--ink-700)}
+html body main:not(.gfr-home):not(.w-page) :is(.article-hero,.trust-hero,.guides-hero,.seo-hero){background:transparent}
+html body main:not(.gfr-home):not(.w-page) .seo-breadcrumbs a{color:var(--ink-700)}
 
 /* Small labels above headings: kept for now, set quietly. */
-html body main:not(.gfr-home) .gf-eyebrow{font-size:var(--t-small)!important;letter-spacing:0!important;text-transform:none!important;font-weight:500!important;color:var(--ink-500)!important}
+html body main:not(.gfr-home):not(.w-page) .gf-eyebrow{font-size:var(--t-small)!important;letter-spacing:0!important;text-transform:none!important;font-weight:500!important;color:var(--ink-500)!important}
 
 /* Buttons. */
-html body main:not(.gfr-home) :is(.gf-button,.seo-button){display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:0 22px!important;border-radius:var(--r-pill)!important;border:0!important;background:var(--ink-900)!important;color:var(--board-100)!important;font:500 var(--t-ui)/1 var(--font-sans)!important;letter-spacing:0!important;text-transform:none!important;box-shadow:none!important;transition:background-color var(--d-state),color var(--d-state),transform var(--d-feedback)}
-html body main:not(.gfr-home) :is(.gf-button,.seo-button):hover{background:var(--saffron-500)!important;color:var(--ink-900)!important}
-html body main:not(.gfr-home) :is(.gf-button,.seo-button):active{transform:scale(.97)}
-html body main:not(.gfr-home) :is(.seo-button-outline,.seo-button-light){background:transparent!important;color:var(--ink-900)!important;box-shadow:inset 0 0 0 1px var(--line-board)!important}
+html body main:not(.gfr-home):not(.w-page) :is(.gf-button,.seo-button){display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:0 22px!important;border-radius:var(--r-pill)!important;border:0!important;background:var(--ink-900)!important;color:var(--board-100)!important;font:500 var(--t-ui)/1 var(--font-sans)!important;letter-spacing:0!important;text-transform:none!important;box-shadow:none!important;transition:background-color var(--d-state),color var(--d-state),transform var(--d-feedback)}
+html body main:not(.gfr-home):not(.w-page) :is(.gf-button,.seo-button):hover{background:var(--saffron-500)!important;color:var(--ink-900)!important}
+html body main:not(.gfr-home):not(.w-page) :is(.gf-button,.seo-button):active{transform:scale(.97)}
+html body main:not(.gfr-home):not(.w-page) :is(.seo-button-outline,.seo-button-light){background:transparent!important;color:var(--ink-900)!important;box-shadow:inset 0 0 0 1px var(--line-board)!important}
 
 /* Cards and panels: one elevation, greyboard raised. */
-html body main:not(.gfr-home) :is(.glass){background:var(--greyboard-100)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
-html body main:not(.gfr-home) :is(table){font-variant-numeric:tabular-nums}
-html body main:not(.gfr-home) :is(th){color:var(--ink-900)}
-html body main:not(.gfr-home) details summary{cursor:pointer}
+html body main:not(.gfr-home):not(.w-page) :is(.glass){background:var(--greyboard-100)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+html body main:not(.gfr-home):not(.w-page) :is(table){font-variant-numeric:tabular-nums}
+html body main:not(.gfr-home):not(.w-page) :is(th){color:var(--ink-900)}
+html body main:not(.gfr-home):not(.w-page) details summary{cursor:pointer}
 
 /* The old header and contact styles are no longer rendered. */
 .gf-header,.gf-contact{display:none}
 
-@media(max-width:640px){html body main:not(.gfr-home){margin-inline:8px;border-radius:20px 20px 0 0}}
+@media(max-width:640px){html body main:not(.gfr-home):not(.w-page){margin-inline:8px;border-radius:20px 20px 0 0}}
 
 /* ---------- spacing pass ---------- */
 /* Templates whose content ran to the sheet edge get the same inner margin as the rest. */
-html body main:not(.gfr-home){width:auto!important;max-width:none!important}
+html body main:not(.gfr-home):not(.w-page){width:auto!important;max-width:none!important}
 html body main:is(.gf-service,.gf-creative-page,.gf-studio-library,.gf-work-page){padding-inline:max(clamp(20px,4.5vw,72px),calc((100% - 1280px) / 2))}
 /* Body copy that only inherits a small size from its container reads at 17px; any rule that sets a size still wins. */
-:where(html body main:not(.gfr-home)) :where(p,li){font-size:17px;line-height:1.7}
-html body main:not(.gfr-home){padding-top:clamp(20px,3vw,40px)}
-html body main:not(.gfr-home)>.seo-breadcrumbs{margin-bottom:clamp(20px,3vw,40px)}
+:where(html body main:not(.gfr-home):not(.w-page)) :where(p,li){font-size:17px;line-height:1.7}
+html body main:not(.gfr-home):not(.w-page){padding-top:clamp(20px,3vw,40px)}
+html body main:not(.gfr-home):not(.w-page)>.seo-breadcrumbs{margin-bottom:clamp(20px,3vw,40px)}
 /* Reading rhythm: paragraphs separate, headings sit closer to what follows than to what came before. */
-html body main:not(.gfr-home) p+p{margin-top:.95em}
-html body main:not(.gfr-home) :is(article,section) h2{margin-top:clamp(1.4em,4vw,2.2em);margin-bottom:.45em}
-html body main:not(.gfr-home) :is(article,section) h2:first-child{margin-top:0}
-html body main:not(.gfr-home) :is(article,section) h3{margin-bottom:.4em}
-html body main:not(.gfr-home) :is(ul,ol):not([class]) li+li{margin-top:.5em}
-html body main:not(.gfr-home) :is(ul,ol):not([class]){padding-left:1.25em}
-html body main:not(.gfr-home) :is(ul):not([class]) li::marker{color:var(--coral-700)}
-html body main:not(.gfr-home) h1{margin-bottom:.35em}
-html body main:not(.gfr-home) :is(h1,h2){text-wrap:balance}
-html body main:not(.gfr-home) :is(p,li){text-wrap:pretty}
+html body main:not(.gfr-home):not(.w-page) p+p{margin-top:.95em}
+html body main:not(.gfr-home):not(.w-page) :is(article,section) h2{margin-top:clamp(1.4em,4vw,2.2em);margin-bottom:.45em}
+html body main:not(.gfr-home):not(.w-page) :is(article,section) h2:first-child{margin-top:0}
+html body main:not(.gfr-home):not(.w-page) :is(article,section) h3{margin-bottom:.4em}
+html body main:not(.gfr-home):not(.w-page) :is(ul,ol):not([class]) li+li{margin-top:.5em}
+html body main:not(.gfr-home):not(.w-page) :is(ul,ol):not([class]){padding-left:1.25em}
+html body main:not(.gfr-home):not(.w-page) :is(ul):not([class]) li::marker{color:var(--coral-700)}
+html body main:not(.gfr-home):not(.w-page) h1{margin-bottom:.35em}
+html body main:not(.gfr-home):not(.w-page) :is(h1,h2){text-wrap:balance}
+html body main:not(.gfr-home):not(.w-page) :is(p,li){text-wrap:pretty}
 /* Sections get more air between them. */
-html body main:not(.gfr-home)>:is(section,aside,article,div,header,nav)+:is(section,aside,article,div){margin-top:clamp(40px,6vw,96px)}
+html body main:not(.gfr-home):not(.w-page)>:is(section,aside,article,div,header,nav)+:is(section,aside,article,div){margin-top:clamp(40px,6vw,96px)}
