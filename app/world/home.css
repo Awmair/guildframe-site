@@ -176,7 +176,7 @@ html.w-gate-up .w-gate{position:fixed;inset:0;z-index:var(--z-gate);display:bloc
 .w-gate-lid{position:absolute;inset:0;background:var(--coral-500);color:var(--ink-900);display:grid;place-items:center;transform-origin:50% 0;box-shadow:0 40px 80px rgb(0 0 0 / .45);background-image:radial-gradient(120% 80% at 20% 0%,rgb(255 255 255 / .18),transparent 55%),radial-gradient(100% 100% at 100% 100%,rgb(0 0 0 / .14),transparent 60%)}
 .w-gate-lid::before{content:"";position:absolute;inset:14px;border:1.5px solid rgb(20 36 38 / .25);border-radius:14px;pointer-events:none}
 .w-gate-inner{display:grid;justify-items:center;gap:28px;text-align:center;padding:24px}
-.w-gate-logo{width:min(260px,60vw);height:auto}
+.w-gate-logo{display:block;width:min(260px,60vw);height:auto;overflow:visible}
 .w-gate-line{font-size:clamp(1.25rem,2.4vw,1.75rem);max-width:22ch;line-height:1.2;letter-spacing:-.01em}
 .w-gate-line em{font-family:var(--font-serif)}
 .w-gate-dice{display:flex;gap:14px}

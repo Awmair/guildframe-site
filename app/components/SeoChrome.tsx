@@ -2,12 +2,12 @@ import Link from "next/link";
 import { ProjectInquiryForm } from "./ProjectInquiryForm";
 import { SiteHeader } from "./chrome/SiteHeader";
 import { siteConfig } from "../site-config";
+import { BrandLockup } from "./chrome/Huddle";
 
 export function SeoHeader() {
   return <SiteHeader />;
 }
 
-const word = "Guildframe".split("");
 
 export function SeoFooter() {
   return <>
@@ -15,7 +15,7 @@ export function SeoFooter() {
     <footer className="w-footer">
       <div className="w-footer-grid">
         <div className="w-footer-lead">
-          <Link className="w-brand" href="/" data-title="Home"><img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="150" height="33" /></Link>
+          <Link className="w-brand" href="/" data-title="Home"><BrandLockup /></Link>
           <p>Tabletop crowdfunding, from the first brief to launch day and the updates after it.</p>
           <a className="w-link" href={`mailto:${siteConfig.contactEmail}`} data-analytics-event="email_click" data-analytics-location="footer">{siteConfig.contactEmail}</a>
         </div>
@@ -43,7 +43,7 @@ export function SeoFooter() {
           <a href="#start-project">Request a free mockup</a>
         </nav>
       </div>
-      <div className="w-footer-word" aria-hidden="true">{word.map((letter, index) => <span key={index}>{letter}</span>)}</div>
+      <div className="w-footer-word" aria-hidden="true" data-reveal="huddle"><BrandLockup className="w-footer-lockup" label="Guildframe" /></div>
       <div className="w-footer-bottom">
         <span>© 2026 Guildframe. Led by Umair.</span>
         <nav aria-label="Legal">

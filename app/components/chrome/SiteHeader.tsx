@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { siteConfig } from "../../site-config";
 import { PawnMark, Roll } from "./Icon";
 import { playSound } from "./sound";
+import { BrandLockup } from "./Huddle";
 
 const nav = [
   { href: "/kickstarter-launch-services", label: "Services" },
@@ -96,7 +97,7 @@ export function SiteHeader() {
   return (
     <header className="w-header">
       <Link className="w-brand" href="/" aria-label="Guildframe home" data-title="Home">
-        <img src="/brand/guildframe-logo-reverse.svg" alt="Guildframe" width="132" height="29" />
+        <BrandLockup />
       </Link>
       <div className="w-header-right">
         <nav className="w-nav" aria-label="Primary navigation">

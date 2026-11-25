@@ -78,7 +78,8 @@ a:hover>.w-roll>span+span,button:hover>.w-roll>span+span,.w-roll-host:hover .w-r
 /* The menu lives inside the header, so the header must not carry a transform while it is open. */
 .w-menu-open .w-header,.w-menu-open .w-header.is-hidden{transform:none;transition:none}
 .w-brand{display:inline-flex;align-items:center;gap:10px;color:inherit;font:500 1.0625rem/1 var(--font-sans);letter-spacing:-.01em}
-.w-brand img{width:132px;height:auto}
+.w-brand .hl{display:block;width:132px;height:auto;overflow:visible}
+.w-footer-lead .w-brand .hl{width:150px}
 .w-brand .w-brand-mark{display:block;width:34px;height:34px}
 .w-header-right{display:flex;align-items:center;gap:10px}
 .w-nav{display:flex;align-items:center;gap:4px;padding:5px;border-radius:var(--r-pill);background:rgb(14 35 37 / .62);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);box-shadow:inset 0 0 0 1px var(--line-dusk)}
@@ -165,9 +166,11 @@ html.w-has-cursor input,html.w-has-cursor textarea,html.w-has-cursor select{curs
 .w-footer nav strong{font-weight:500;font-size:var(--t-small);color:var(--mist-500);margin-bottom:6px}
 .w-footer nav a{color:var(--board-100);width:fit-content;font-size:.9375rem;transition:color var(--d-feedback)}
 .w-footer nav a:hover{color:var(--saffron-500)}
-.w-footer-word{width:var(--wrap-wide);margin:clamp(56px,9vw,110px) auto 0;font:400 clamp(4.5rem,19vw,19rem)/.8 var(--font-sans);letter-spacing:-.05em;color:var(--baize-700);user-select:none;white-space:nowrap;display:flex;justify-content:space-between}
-.w-footer-word span{display:inline-block;transition:transform 700ms var(--ease-spring),color 400ms}
-.w-footer-word span:hover{transform:translateY(-12%) rotate(-4deg);color:var(--coral-500)}
+.w-footer-word{width:var(--wrap-wide);margin:clamp(56px,9vw,110px) auto 0;user-select:none}
+.w-footer-lockup{display:block;width:100%;height:auto;overflow:visible;color:var(--board-100)}
+.w-footer-lockup .hl-word{color:var(--baize-700)}
+.w-footer-lockup .hl-letter{transform-box:fill-box;transform-origin:50% 100%;transition:transform 700ms var(--ease-spring),color 400ms}
+.w-footer-lockup .hl-letter:hover{transform:translateY(-12%) rotate(-4deg);color:var(--coral-500)}
 .w-footer-bottom{width:var(--wrap-wide);margin:28px auto 0;padding-top:20px;border-top:1px solid var(--line-dusk);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:var(--t-small);color:var(--mist-500)}
 .w-footer-bottom nav{display:flex;gap:18px}
 .w-footer-bottom a{color:var(--mist-300)}
@@ -261,3 +264,44 @@ html.w-menu-open{overflow:hidden}
 .w-menu-panel{overflow-y:auto;overscroll-behavior:contain;padding-top:max(72px,min(96px,14svh))}
 html.w-menu-open .w-corner{opacity:0;pointer-events:none}
 .w-corner{transition:opacity .3s}
+
+/* ---------- The huddle mark ---------- */
+.hd-side,.hd-head{fill:currentColor;stroke:currentColor}
+.hd-head{stroke:none}
+.hd-pawn--b .hd-side,.hd-pawn--b .hd-head{fill:var(--hd-accent,var(--coral-500));stroke:var(--hd-accent,var(--coral-500))}
+.hd-pawn--b .hd-head{stroke:none}
+.hd-pawn,.hd-side,.hd-head,.hl-letter{transform-box:fill-box}
+.hd-side,.hd-head{transform-origin:center}
+/* Hover: the lead pawn's side lifts like a lid and its head hops. */
+.hd-pawn--b .hd-side{transform-origin:0% 50%;transition:transform 600ms var(--ease-spring)}
+.hd-pawn--b .hd-head{transition:transform 500ms var(--ease-spring)}
+:is(.w-brand,.w-footer-word,.w-gate-logo):hover .hd-pawn--b .hd-side{transform:translate(0,5px) rotate(5deg)}
+:is(.w-brand,.w-footer-word,.w-gate-logo):hover .hd-pawn--b .hd-head{transform:translate(0,-6px)}
+/* Assembly: the four sides slide in from the table edges and lock, then the heads drop in like pips. */
+@keyframes hd-in-t{from{transform:translate(0,-46px);opacity:0}}
+@keyframes hd-in-r{from{transform:translate(46px,0);opacity:0}}
+@keyframes hd-in-b{from{transform:translate(0,46px);opacity:0}}
+@keyframes hd-in-l{from{transform:translate(-46px,0);opacity:0}}
+@keyframes hd-drop{0%{transform:translate(0,-30px) scale(.3);opacity:0}55%{transform:translate(0,3px) scale(1.12);opacity:1}78%{transform:translate(0,-2px) scale(.97)}}
+@keyframes hd-rise{from{transform:translateY(60%);opacity:0}}
+@keyframes hd-lid{0%,78%,100%{transform:none}84%{transform:translate(0,6px) rotate(6deg)}90%{transform:translate(0,-1px)}}
+@keyframes hd-hop{0%,80%,100%{transform:none}86%{transform:translate(0,-9px)}92%{transform:translate(0,1px)}}
+:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--t .hd-side{animation:hd-in-t 950ms var(--ease-spring) backwards}
+:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--r .hd-side{animation:hd-in-r 950ms 90ms var(--ease-spring) backwards}
+:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--b .hd-side{animation:hd-in-b 950ms 180ms var(--ease-spring) backwards}
+:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--l .hd-side{animation:hd-in-l 950ms 270ms var(--ease-spring) backwards}
+:is(.w-footer-word.is-in,.w-gate-logo) .hd-head{animation:hd-drop 760ms var(--ease-out) backwards}
+:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--t .hd-head{animation-delay:720ms}
+:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--r .hd-head{animation-delay:830ms}
+:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--l .hd-head{animation-delay:940ms}
+:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--b .hd-head{animation-delay:1100ms}
+:is(.w-footer-word.is-in,.w-gate-logo) .hl-letter{animation:hd-rise 900ms var(--ease-out) backwards;animation-delay:calc(320ms + var(--i) * 45ms)}
+/* Once settled, the lead pawn keeps playing: every few seconds its side lifts and its head hops. */
+.w-footer-word.is-in .hd-pawn--b{transform-origin:0% 50%;animation:hd-lid 6.5s 2.6s ease-in-out infinite}
+.w-footer-word.is-in .hd-pawn--b .hd-head{animation:hd-drop 760ms 1100ms var(--ease-out) backwards,hd-hop 6.5s 2.6s ease-in-out infinite}
+html.w-js .w-footer-word:not(.is-in) :is(.hd-side,.hd-head,.hl-letter){opacity:0}
+.w-gate-logo{color:var(--ink-900);--hd-accent:var(--board-100)}
+@media (prefers-reduced-motion:reduce){
+  .hd-pawn,.hd-side,.hd-head,.hl-letter{animation:none!important;transition:none!important}
+  html.w-js .w-footer-word:not(.is-in) :is(.hd-side,.hd-head,.hl-letter){opacity:1}
+}

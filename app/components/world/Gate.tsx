@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { playSound, setSound } from "../chrome/sound";
+import { BrandLockup } from "../chrome/Huddle";
 
 /** Runs before the lid is parsed, so returning visitors never see it flash. */
 export const gateBootScript = `try{var d=document.documentElement;if(!sessionStorage.getItem("gf-lid")&&!location.hash&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("w-gate-up")}}catch(e){}`;
@@ -57,7 +58,7 @@ export function Gate() {
     <div className="w-gate" ref={lid} role="dialog" aria-modal="true" aria-label="Welcome to Guildframe">
       <div className="w-gate-lid">
         <div className="w-gate-inner">
-          <img className="w-gate-logo" src="/brand/guildframe-logo.svg" alt="Guildframe" width="260" height="57" />
+          <BrandLockup className="w-gate-logo" />
           <p className="w-gate-line">Kickstarter and Gamefound launches <em>for tabletop games</em></p>
           <div className="w-gate-dice" aria-hidden="true">
             {[0, 1].map(die => <span key={die} className="w-die" data-face={die ? Math.max(1, step - 1) : step}>{Array.from({ length: 9 }, (_, i) => <i key={i} />)}</span>)}
