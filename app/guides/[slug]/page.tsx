@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { launchGuides, launchGuideDate } from "../../launch-guides";
 import { pageMetadata } from "../../site-config";
 import { SeoArticlePage, ArticleTable } from "../../components/SeoArticlePage";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return launchGuides.map(g => ({ slug: g.slug })); }
@@ -30,6 +31,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <h2 id={s.id}>{s.title}</h2>
       {s.paragraphs.map(p => <p key={p}>{p}</p>)}
       {s.list && <ul>{s.list.map(x => <li key={x}>{x}</li>)}</ul>}
+      {s.visual && <GuideVisual data={s.visual} />}
       {s.table && <ArticleTable caption={s.title} headers={s.table.headers} rows={s.table.rows} />}
       {s.source !== undefined && <p className="article-source-note">Source: <a href={g.sources[s.source].href}>{g.sources[s.source].label}</a>.</p>}
     </section>)}

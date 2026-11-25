@@ -1,0 +1,7 @@
+# Bing Webmaster (guildframe.com, pulled 2026-11-24)
+- Verified. Search perf (since ~Aug 24 2026): 5 clicks, 461 impressions, CTR 1.08%, 257 keywords.
+- Recommendation flagged: not enough inbound links from high-quality domains.
+- AI Performance (Copilot and partners, beta): 348 total citations, avg 1 cited page/day; grounding queries shown: "boardgames funding complete for modern living 2024" (23), "Shopify crowdfunding evaluation" (16).
+- Top Bing keywords: boardgames funding complete for modern living 2024 (32 impr, pos 7), "powered by shopify" board games (21, 3.5), best shopify theme for traditional board games (6, 2), is kickstarter the same as shopify, ioss guild, kickstarter marketing checklist (2.3), board game kickstarter marketing (3.0), tabletop game kickstarter launch checklist (4.7), storefront guild / storefrontguild.co (old brand?), ttrpg double page spread, kickstarter late pledge shopify after campaign (2), gamefound creator handbook pre-launch page checklist (2.5), gamefound campaign launch checklist (3), sync backings kickstarter to shopify, IOSS shipping board game to France, kickstarter reward image size.
+- Sitemaps: https://www.guildframe.com/sitemap.xml (discovered, crawled 11/19, 84 URLs) and https://guildframe.com/sitemap.xml (submitted 10/4, last crawl 10/4, 69 URLs; stale crawl).
+- IndexNow: active, source = Cloudflare (Crawler Hints). ~3.8K URLs submitted since Jul 18. Recent submissions are mostly assets (images, fonts, robots.txt, CSVs) rather than pages: noisy.
