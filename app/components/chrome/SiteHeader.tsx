@@ -33,11 +33,12 @@ export function SiteHeader() {
   const setOpen = useCallback((open: boolean) => {
     const html = document.documentElement;
     if (html.classList.contains("w-menu-open") === open) return;
+    // Closing leaves the header in place, so the panel slides out without being dragged up with it.
+    if (!open) document.querySelector(".w-header")?.classList.remove("is-hidden");
     html.classList.toggle("w-menu-open", open);
     button.current?.setAttribute("aria-expanded", String(open));
     const main = document.querySelector("main");
     if (main) main.inert = open;
-    document.body.style.overflow = open ? "hidden" : "";
     playSound("slide");
     if (open) window.setTimeout(() => panel.current?.querySelector<HTMLElement>("a")?.focus({ preventScroll: true }), 80);
     else button.current?.focus({ preventScroll: true });
@@ -74,14 +75,19 @@ export function SiteHeader() {
   useEffect(() => { setOpen(false); }, [pathname, setOpen]);
 
   useEffect(() => {
-    let last = window.scrollY;
+    // Hide after 60px of travel down, show after 60px back up. Small easing steps never flip it, so it cannot flicker.
+    let anchor = window.scrollY, hidden = false;
     const header = document.querySelector(".w-header");
     const onScroll = () => {
       const y = window.scrollY;
-      header?.classList.toggle("is-hidden", y > 240 && y > last + 4);
-      if (y < last - 4 || y < 240) header?.classList.remove("is-hidden");
+      hidden = header?.classList.contains("is-hidden") ?? false;
+      if (document.documentElement.classList.contains("w-menu-open")) { anchor = y; return; }
+      if (y < 240) { hidden = false; anchor = y; }
+      else if (y > anchor + 60) { hidden = true; anchor = y; }
+      else if (y < anchor - 60) { hidden = false; anchor = y; }
+      else if (hidden ? y > anchor : y < anchor) anchor = y;
+      header?.classList.toggle("is-hidden", hidden);
       header?.classList.toggle("is-scrolled", y > 40);
-      last = y;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
