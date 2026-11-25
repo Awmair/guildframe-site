@@ -493,25 +493,106 @@ export const growthGuides: LaunchGuide[] = [
   },
   {
     "slug": "kickstarter-referral-tags-tracking",
-    "title": "Track Kickstarter Marketing with Referral Tags and UTMs",
-    "description": "Track Kickstarter marketing with custom referral tags, consistent UTMs and a reporting sheet that separates clicks, pledges and collected revenue.",
+    "title": "How to Track Kickstarter Traffic with Referral Tags and UTMs",
+    "seoTitle": "How to Track Kickstarter Traffic: Referral Tags and UTMs",
+    "description": "How to track Kickstarter traffic with referral tags, GA4 and Meta Pixel IDs, UTMs on your landing page, and a report that keeps clicks and pledges apart.",
     "tag": "Campaign measurement",
-    "answer": "Use Kickstarter referral tags to report attributed pledges and consistent UTM parameters to identify traffic in Analytics. Keep visits, email signups, pledge value and collected revenue separate. A link click is not a pledge, and pledge revenue is not profit.",
+    "answer": "To track Kickstarter traffic, create a custom referral tag in the Promotion tab for every link you share, add your GA4 measurement ID and Meta Pixel ID in the same tab, and put UTM parameters on links to your own landing page. Kickstarter's built in tracker then reports pledges and pledged amounts for each tag, and lists dropped pledges per tag once the campaign ends.",
     "sections": [
+      {
+        "id": "tracker",
+        "title": "Set up Kickstarter's built in tracker before launch",
+        "paragraphs": [
+          "Kickstarter already has a tracker, so you rarely need a third party tool to see where pledges come from. You create custom referral tags in the Promotion tab of the project editor before launch, or from the creator dashboard once the campaign is live. Each tag gives you a link, and the dashboard reports the pledges, share of funds and amount pledged through it.",
+          "The same Promotion tab takes your Google Analytics 4 measurement ID and your Meta Pixel ID. Add both before launch, because neither can be added once the project has ended, and Google data can take up to 24 hours to appear. Kickstarter also says a collaborator can't add the Analytics ID, so the creator account has to do it."
+        ],
+        "visual": {
+          "kind": "steps",
+          "title": "Five steps track a Kickstarter campaign from first click to pledge",
+          "steps": [
+            {
+              "label": "Name each placement",
+              "detail": "One referral tag per email, partner, ad set or post"
+            },
+            {
+              "label": "Create the tags",
+              "detail": "Promotion tab before launch, creator dashboard after"
+            },
+            {
+              "label": "Connect GA4 and Meta Pixel",
+              "detail": "Same Promotion tab, before the project ends"
+            },
+            {
+              "label": "Tag your own pages",
+              "detail": "UTMs on landing page and email links"
+            },
+            {
+              "label": "Read the dashboard",
+              "detail": "Pledges and amount per tag, dropped pledges after close"
+            }
+          ],
+          "source": "Kickstarter Help Center, checked November 25, 2026"
+        },
+        "source": 2
+      },
       {
         "id": "measurements",
         "title": "Decide what each report is meant to answer",
         "paragraphs": [
-          "Before launch, write down the decisions you need to make. A landing-page report can tell you which traffic reached the page and signed up. Your email platform can show delivery and clicks. Kickstarter can report pledges attributed to its referral links. These are different stages, so their totals will not necessarily match.",
-          "Define a successful signup as the completed action your form actually records. Do not count a button click as a confirmed subscriber. Record the date range and timezone for every export so the team compares the same period."
-        ]
+          "Before launch, we write down the decisions the numbers need to support. A landing page report tells you which traffic reached the page and signed up. Your email platform shows delivery and clicks. Kickstarter reports pledges attributed to its referral links. These are different stages, so their totals won't match, and that's expected.",
+          "Define a successful signup as the completed action your form actually records, not a button click. Record the date range and time zone for every export, so the team compares the same period. That habit saves a lot of confusion once the campaign is live."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "Each tracker answers a different question",
+          "columns": [
+            {
+              "name": "Kickstarter referral tags",
+              "points": [
+                "Pledges and amount per tag",
+                "Dropped pledges per tag after close",
+                "No backer level referral records"
+              ],
+              "verdict": "Which link brought pledges",
+              "highlight": true
+            },
+            {
+              "name": "GA4 on the campaign",
+              "points": [
+                "Traffic and referrer breakdown",
+                "Add the ID before the project ends",
+                "Data can take 24 hours to appear"
+              ],
+              "verdict": "Where visitors came from"
+            },
+            {
+              "name": "UTMs on your own page",
+              "points": [
+                "Source, medium and campaign per link",
+                "Case sensitive, so keep one naming list",
+                "Measures signups you control"
+              ],
+              "verdict": "Which prelaunch links earn signups"
+            },
+            {
+              "name": "Ad platform reports",
+              "points": [
+                "Spend, delivery and clicks",
+                "Its own attribution model",
+                "Never added to Kickstarter's total"
+              ],
+              "verdict": "What each result cost"
+            }
+          ],
+          "source": "Kickstarter Help Center and Google Analytics Help, checked November 25, 2026"
+        }
       },
       {
         "id": "referral-tags",
         "title": "Create named Kickstarter links before you publish the campaign",
         "paragraphs": [
-          "Kickstarter now allows custom referral tags to be created before launch in the Promotion tab. After launch, they can also be created through the creator dashboard. Give each link a name that identifies its placement, then keep the generated URL intact.",
-          "The current referral report includes attributed pledges and amounts, and dropped-pledge information after collection. It does not provide backer-specific referral records for dropped pledges. Use the report within those limits rather than promising complete person-by-person attribution."
+          "Give each referral tag a name that identifies its placement, such as the newsletter, one partner or one ad set, then keep the generated URL intact. Kickstarter allows up to 20,000 tags, so there's no reason to share one link everywhere.",
+          "The referral report shows attributed pledges and amounts. Since October 13, 2026, the dashboard's Backer Source data also lists dropped pledges for each tag, which gives a truer picture of what a placement actually collected. Kickstarter still doesn't provide backer level referral records, so use the report within that limit."
         ],
         "source": 0
       },
@@ -519,8 +600,8 @@ export const growthGuides: LaunchGuide[] = [
         "id": "utm",
         "title": "Use one naming convention for your traffic links",
         "paragraphs": [
-          "Google Analytics uses UTM parameters to identify campaign traffic. Source, medium and campaign should be filled consistently. Values are case-sensitive: a newsletter recorded with two spellings can appear as two sources. Keep a small approved naming list and copy from it.",
-          "For an owned landing page, an illustrative query string is ?utm_source=creator_newsletter&utm_medium=email&utm_campaign=orbit_launch&utm_content=rules_preview. This example does not contain a real Kickstarter referral tag. Use the URL generated in your campaign dashboard for that part of the tracking."
+          "Google Analytics uses UTM parameters to identify campaign traffic. Fill source, medium and campaign the same way every time. Values are case sensitive, so a newsletter recorded with two spellings appears as two sources. We keep a small approved naming list and copy from it.",
+          "For an owned landing page, an illustrative query string is ?utm_source=creator_newsletter&utm_medium=email&utm_campaign=orbit_launch&utm_content=rules_preview. This example does not contain a real Kickstarter referral tag, so use the URL generated in your dashboard for that part. Links in your [prelaunch email list](/guides/kickstarter-prelaunch-email-list) are the first place this naming list pays off."
         ],
         "source": 1,
         "table": {
@@ -556,8 +637,8 @@ export const growthGuides: LaunchGuide[] = [
         "id": "test",
         "title": "Test the route someone will actually use",
         "paragraphs": [
-          "Open each published link on a phone. Check the destination, redirects and parameter spelling. If an email tool rewrites links, test the delivered email rather than only the draft. If you use a shortened link, make sure it reaches the intended page with the required information preserved.",
-          "Then verify the measurement you control. For an owned signup page, complete the form and check the confirmation and email delivery. For a platform campaign link, confirm the correct public project opens. Do not place an unnecessary paid pledge just to make a dashboard number appear."
+          "Open each published link on a phone. Check the destination, redirects and parameter spelling. If an email tool rewrites links, test the delivered email rather than only the draft. If you use a shortened link, make sure it reaches the intended page with the tracking preserved.",
+          "Then verify the measurement you control. For an owned signup page, complete the form and check the confirmation and email delivery. For a platform campaign link, confirm the correct public project opens. Don't place a paid pledge just to make a dashboard number appear."
         ],
         "table": {
           "headers": [
@@ -592,16 +673,58 @@ export const growthGuides: LaunchGuide[] = [
         "id": "report",
         "title": "Report collected results alongside pledge value",
         "paragraphs": [
-          "Here is a hypothetical USD example: $600 in ad spend and $1,800 in attributed pledges give a pledge-value ROAS of 3.0. If $150 of those pledges drops, the collected attributed amount is $1,650 and the equivalent ratio is 2.75. Production, shipping, fees and service costs still sit outside both ratios.",
-          "Do not add an advertising platform’s attributed revenue to Kickstarter’s attributed revenue as if they were separate sales. Keep each report labelled, explain its limits and reconcile against collected funds when available. A small results table with dates and assumptions is more useful than one impressive ratio.",
-          "Guildframe can help plan the tracking and reporting alongside campaign advertising. Agree the account owner, test budget and decision rules before the first paid traffic arrives."
+          "Here is a hypothetical USD example: $600 in ad spend and $1,800 in attributed pledges give a ROAS of 3.0 on pledge value. If $150 of those pledges drops, the collected attributed amount is $1,650 and the ratio falls to 2.75. Production, shipping, fees and service costs still sit outside both ratios.",
+          "Don't add an advertising platform's attributed revenue to Kickstarter's attributed revenue as if they were separate sales. Keep each report labelled, explain its limits and reconcile against collected funds when available. Our [advertising budget guide](/guides/kickstarter-advertising-budget-board-games) shows how to set the spending ceiling before you read any ratio."
+        ],
+        "visual": {
+          "kind": "bars",
+          "title": "Dropped pledges cut the example ROAS from 3.0 to 2.75",
+          "bars": [
+            {
+              "label": "Attributed pledges",
+              "value": 1800,
+              "display": "$1,800"
+            },
+            {
+              "label": "Collected after drops",
+              "value": 1650,
+              "display": "$1,650",
+              "highlight": true
+            },
+            {
+              "label": "Ad spend",
+              "value": 600,
+              "display": "$600"
+            }
+          ],
+          "caption": "Hypothetical example in USD, not a client result."
+        }
+      },
+      {
+        "id": "help",
+        "title": "How we set up tracking for a tabletop campaign",
+        "paragraphs": [
+          "We set up tracking as part of our paid advertising and live campaign management, because ad decisions are only as good as the links behind them. Before the first paid click, we build the referral tag list, connect GA4 and the Meta Pixel, test every link on a phone and agree who reads which report.",
+          "You can run this yourself with a spreadsheet and an afternoon. The honest limit is keeping it clean once the campaign is live and links multiply. If you'd rather hand that over, see our [Kickstarter advertising for board games](/kickstarter-advertising) service, or start earlier with [Kickstarter prelaunch marketing for board games](/kickstarter-prelaunch-marketing)."
         ]
       }
     ],
     "faqs": [
       {
+        "question": "How do I track Kickstarter traffic?",
+        "answer": "Create a custom referral tag for each link in the Promotion tab, add your GA4 and Meta Pixel IDs in the same tab before launch, and use UTMs on links to your own landing page. The creator dashboard then shows pledges and amounts for each tag."
+      },
+      {
+        "question": "Does Kickstarter have a built in tracker?",
+        "answer": "Yes. Custom referral tags work as Kickstarter's tracker. The dashboard reports pledges, share of funds and amount pledged per tag, and the Backer Source data lists dropped pledges per tag after the campaign ends."
+      },
+      {
         "question": "Can I create Kickstarter referral tags before launch?",
-        "answer": "Yes. Kickstarter’s current Help Center says you can create them in the Promotion tab before the project launches."
+        "answer": "Yes. Kickstarter's Help Center says you can create them in the Promotion tab before the project launches, and from the creator dashboard after launch."
+      },
+      {
+        "question": "Can I add Google Analytics to a Kickstarter page?",
+        "answer": "Yes. Paste your GA4 measurement ID in the Promotion tab. Add it before the project ends, because it can't be added afterwards, and allow up to 24 hours for data to appear."
       },
       {
         "question": "Do UTM tags and Kickstarter referral tags measure the same thing?",
@@ -609,7 +732,7 @@ export const growthGuides: LaunchGuide[] = [
       },
       {
         "question": "Is a 3x ROAS profitable?",
-        "answer": "The ratio alone cannot answer that. You still need the reward costs, fees, fulfillment obligations, failed collections and other campaign spending."
+        "answer": "The ratio alone cannot answer that. You still need the reward costs, fees, fulfillment obligations, dropped pledges and other campaign spending."
       }
     ],
     "sources": [
@@ -622,6 +745,21 @@ export const growthGuides: LaunchGuide[] = [
         "label": "Campaign data with custom URLs",
         "publisher": "Google Analytics Help",
         "href": "https://support.google.com/analytics/answer/10917952"
+      },
+      {
+        "label": "What is Google Analytics and how do I set it up?",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236686-what-is-google-analytics-and-how-do-i-set-it-up"
+      },
+      {
+        "label": "What is Meta Pixel and how do I set it up on my project?",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236735-what-is-meta-pixel-and-how-do-i-set-it-up-on-my-project"
+      },
+      {
+        "label": "Kickstarter release notes: dropped pledges in Backer Source data, October 13, 2026",
+        "publisher": "Kickstarter",
+        "href": "https://start.kickstarter.com/kickstarter-release-notes"
       }
     ],
     "relatedSlugs": [
@@ -630,9 +768,9 @@ export const growthGuides: LaunchGuide[] = [
       "board-game-kickstarter-marketing-plan"
     ],
     "servicePath": "/kickstarter-advertising",
-    "serviceLabel": "Plan campaign tracking and ads",
+    "serviceLabel": "Kickstarter advertising for board games",
     "published": "2026-10-28",
-    "updated": "2026-10-28"
+    "updated": "2026-11-25"
   },
   {
     "slug": "board-game-reviewer-outreach",

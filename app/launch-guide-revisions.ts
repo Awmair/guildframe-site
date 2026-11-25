@@ -24,9 +24,72 @@ const revisions: Record<string, LaunchSection[]> = {
   "board-game-kickstarter-campaign-design-cost": [
     { id: "scope-sheet", title: "Get a quote you can compare line by line", paragraphs: ["Count the actual work: campaign copy, gameplay explanations, component images, reward comparisons, platform preparation and revisions. A page that uses final artwork needs a different production plan from one waiting for illustrations or product photography.", "Our campaign page package is a fixed $1,800, and full campaign support is $5,900. For any broader launch, ask every provider for creative, prelaunch, ad management and media spend on separate lines, because a design fee is never a complete marketing budget."], table: { headers: ["Before accepting a quote", "Confirm"], rows: [["Inputs", "Which artwork and facts you supply, and which still need producing"], ["Output", "The campaign sections, graphics and copy being delivered"], ["Reviews", "Revision rounds, approval owner and the cost of new scope"], ["Platform", "Who prepares the files, assembles the page and checks the preview"], ["Handoff", "Final exports, editable sources and any usage limits"], ["Timing", "Dependencies, review dates and what happens if your assets arrive late"]] } },
   ],
+  "kickstarter-campaign-graphics-mobile-readability": [
+    { id: "specifications", title: "Kickstarter image sizes at a glance", paragraphs: [
+      "Here is the short version of the sizes we export to, because a graphic can only read well if it survives the upload. Kickstarter limits story images to 50 MB, recommends JPEG, PNG or GIF, and suggests scaling them to 700 pixels wide or more. Reward and add on images need a 3:2 ratio and at least 348 × 232 pixels.",
+      "Gamefound converts description images to WebP and recommends 840 to 1200 pixels wide, with a 20 MB cap. For every field, the cover image and the video specs in one place, use our [Kickstarter image sizes guide](/guides/kickstarter-image-sizes). The size is the easy part, so most of this guide is about readability.",
+    ], visual: { kind: "stats", title: "Four numbers cover most campaign image exports", stats: [
+      { value: "700 px+", label: "Story image width", note: "Kickstarter's suggested minimum" },
+      { value: "50 MB", label: "Largest story or reward image", note: "Kickstarter limit per file" },
+      { value: "3:2", label: "Reward image ratio", note: "At least 348 × 232 pixels" },
+      { value: "840 to 1200 px", label: "Gamefound description width", note: "Converted to WebP, 20 MB cap" },
+    ], source: "Kickstarter Help Center and Gamefound Help Center, checked November 25, 2026" }, table: { headers: ["Destination", "Current guidance", "Source"], rows: [
+      ["Kickstarter story image", "At most 50 MB; JPEG, PNG or GIF; scale to 700 pixels or more", "Kickstarter media guidance"],
+      ["Kickstarter reward image", "3:2 ratio; at least 348 × 232 pixels; at most 50 MB; JPG, PNG or GIF", "Kickstarter reward guidance"],
+      ["Kickstarter main video", "Optional; up to 5120 MB in the Basics tab", "Kickstarter video guidance"],
+      ["Discovery Mode clip", "Optional; 9:16 vertical; 60 to 90 seconds recommended", "Kickstarter video guidance"],
+      ["Gamefound description image", "840 pixels or more, 1200 pixels at most; converted to WebP", "Gamefound description guidance"],
+    ] }, source: 0 },
+    { id: "simplify", title: "Give each graphic one main job", paragraphs: [
+      "We decide what each graphic has to explain before we lay it out. The component spread shows the box contents, a sample turn explains play, and a reward comparison shows which pledge includes the expansion. Put all three together and the labels shrink until nobody can read them on a phone.",
+      "So we move details to the section where a reader needs them, shorten captions and leave space around the main item. If two rewards differ by only a few components, a compact comparison does the job. Our [reward tier graphics guide](/guides/kickstarter-reward-tier-graphics) covers that comparison in detail.",
+    ], visual: { kind: "steps", title: "Split one crowded reward graphic into three readable ones", steps: [
+      { label: "Contents", detail: "What is in the core box, grouped and labelled" },
+      { label: "Difference", detail: "Only what the deluxe pledge adds" },
+      { label: "Choice", detail: "Price, contents and delivery side by side" },
+    ], caption: "Example workflow. Each image keeps one job, so labels stay large enough for a phone." }, table: { headers: ["Problem", "Useful correction"], rows: [
+      ["Tiny contents list", "Use a short comparison or separate text"],
+      ["Crowded component spread", "Group related pieces and label the groups"],
+      ["Dense gameplay diagram", "Show a few actions in sequence"],
+      ["Tall decorative section", "Break it into focused sections"],
+    ] } },
+    { id: "media", title: "Export for compression, not for your monitor", paragraphs: [
+      "Kickstarter compresses every uploaded image, so a backer sees a lower resolution than your original file. That's why we export one section, upload it and check it on a phone before preparing the rest. A larger source file won't rescue a label that was too small to begin with.",
+      "Kickstarter also notes that some animated GIFs show as static images in its current editor, and suggests converting the animation to WEBP under the 50 MB limit. Keep a still frame that explains the point on its own, because motion should add to the story rather than carry it.",
+    ], source: 0 },
+    { id: "review", title: "Ask a fresh reader to find a reward", paragraphs: [
+      "We ask someone who hasn't seen the game to find a specific reward, such as the base game with an expansion or the print book with its PDF. Then we watch where they hesitate. If they have to search several graphics, the comparison needs to be easier to find and read.",
+      "Check contrast, heading order, links and essential text in the same pass. The [Kickstarter page checklist](/guides/board-game-kickstarter-page-checklist) lists the facts every page should make visible, so the fresh reader test has something to measure against.",
+    ], source: 0 },
+    { id: "help", title: "How we build campaign graphics that read on a phone", paragraphs: [
+      "Readable graphics come from decisions made before the artwork is laid out: what each image explains, which facts stay in text and which reward differences matter. We make those calls on every page we design, then test the uploaded sections on a phone before the creator approves them.",
+      "You can do this yourself if you have time to export, upload and retest each section. The honest limit is that a dense page takes several rounds to get right. Our [Kickstarter campaign design](/campaign-design) service covers the copy, the graphics and the phone check, and a free opening mockup shows the type and layout on your own artwork first.",
+    ] },
+  ],
   "kickstarter-live-campaign-updates": [
     { id: "approval-sheet", title: "Keep a short approval record for each update", paragraphs: ["Separate a draft from an approved message. Before publication, the person who owns the product facts should confirm any reward, cost, production or delivery change. Keep the approved wording with the publication link so the team can find it later."], table: { headers: ["Update field", "Record"], rows: [["Reason for the message", "What changed or which recurring question it answers"], ["Confirmed facts", "The source and person who checked them"], ["Affected rewards", "Which backers need the information"], ["Approval and publication", "Approver, publisher, date and final URL"], ["Follow up", "Any promise to report again, with an owner"]] } },
   ],
+};
+
+// Metadata and FAQ updates for guides whose content lives in the shared array.
+const guideOverrides: Record<string, Partial<Omit<LaunchGuide, "slug" | "sections">>> = {
+  "kickstarter-campaign-graphics-mobile-readability": {
+    title: "Kickstarter Campaign Graphics That Read on a Phone",
+    seoTitle: "Kickstarter Campaign Graphics: Mobile Readability Guide",
+    description: "Make Kickstarter campaign graphics readable on a phone: one job per graphic, labels that survive compression, and a quick image size reference.",
+    answer: "Design every Kickstarter campaign graphic for a phone first: one job per image, labels a reader can see without zooming, and essential facts repeated in page text. Kickstarter compresses uploads, so we export story images at 700 pixels or wider, stay under its 50 MB limit and check the uploaded section on a real phone before building the rest.",
+    relatedSlugs: ["kickstarter-image-sizes", "kickstarter-reward-tier-graphics", "board-game-kickstarter-page-checklist", "kickstarter-campaign-video-planning"],
+    servicePath: "/campaign-design",
+    serviceLabel: "Kickstarter campaign design for tabletop games",
+    updated: "2026-11-25",
+    faqs: [
+      { question: "What size should Kickstarter campaign images be?", answer: "Kickstarter suggests scaling story images to 700 pixels or more and limits each file to 50 MB, in JPEG, PNG or GIF. Reward images need a 3:2 ratio and at least 348 × 232 pixels. Check the uploaded image on a phone because the platform compresses every file." },
+      { question: "Why do my Kickstarter images look blurry after upload?", answer: "Kickstarter compresses uploaded images, so the displayed file has a lower resolution than your original. Export one section, upload it and check it on a phone. Small labels suffer most, so enlarge the text rather than the file." },
+      { question: "How do I make reward graphics readable on mobile?", answer: "Give each graphic one job. Show the core contents, then only what the upgraded pledge adds, then the choice with price and delivery side by side. A single graphic that does all three usually forces labels too small to read." },
+      { question: "Should all campaign text be baked into images?", answer: "No. Keep essential information available as readable page text where practical. Graphics can support the story without carrying every sentence." },
+      { question: "Can animated graphics help?", answer: "Sometimes, when movement explains play or shows a product function. Kickstarter notes that some animated GIFs show as static images, so keep a still frame and a readable explanation as well." },
+    ],
+  },
 };
 
 const practicalChecks: Record<string, [string, string, string][]> = {
@@ -48,7 +111,8 @@ const practicalChecks: Record<string, [string, string, string][]> = {
   "miniatures-stl-kickstarter-launch-guide": [["Format", "Physical models, digital files or both", "The reward type is explicit"], ["Product view", "Scale, assembly and a contents view", "The buyer can judge size and included parts"], ["Files", "Actual formats, support status and licence", "The digital reward matches what will be supplied"]],
 };
 
-export function reviseLaunchGuide(guide: LaunchGuide): LaunchGuide {
+export function reviseLaunchGuide(original: LaunchGuide): LaunchGuide {
+  const guide: LaunchGuide = { ...original, ...(guideOverrides[original.slug] ?? {}) };
   const changes = revisions[guide.slug] ?? [];
   const replaced = new Set(changes.map(section => section.id));
   const sections = [...guide.sections.filter(section => !replaced.has(section.id)), ...changes];
