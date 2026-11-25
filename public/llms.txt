@@ -23,6 +23,7 @@ This supplemental summary does not replace the HTML pages or sitemap.
 
 
 
+
 ## Start here: launching a tabletop Kickstarter
 
 - [How to Launch a Board Game on Kickstarter](https://guildframe.com/guides/how-to-launch-a-board-game-on-kickstarter)
@@ -52,7 +53,6 @@ This supplemental summary does not replace the HTML pages or sitemap.
 - [Tabletop Accessories Kickstarter Campaign Design](https://guildframe.com/tabletop-accessories-campaign-design)
 - [Kickstarter Campaign Design for New Products](https://guildframe.com/kickstarter-product-campaign-design)
 - [Kickstarter Campaign Creative: Tabletop Games](https://guildframe.com/campaign-creative)
-- [Kickstarter Campaign Design for New Products](https://guildframe.com/kickstarter-product-campaign-design)
 
 Current design price: https://guildframe.com/campaign-design#pricing
 
