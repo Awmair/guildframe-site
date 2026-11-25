@@ -14,7 +14,7 @@ export function formatContentDate(value: string) {
 
 export const contentDates = {
   growthReview: "2026-11-06",
-  campaignCreative: "2026-11-06",
+  campaignCreative: "2026-11-25",
   campaignPageStudy: "2026-11-06",
   privacy: "2026-11-25",
   terms: "2026-11-25",
@@ -22,6 +22,7 @@ export const contentDates = {
   work: "2026-11-06",
   workPublished: "2026-10-17",
   campaignServices: "2026-10-17",
+  serviceHubs: "2026-11-25",
   campaignDesign: "2026-11-05",
   kickstarterAdvertising: "2026-11-05",
   marketingPlan: "2026-11-05",
@@ -61,7 +62,5 @@ export const contentDates = {
 
 export function campaignModifiedDate(slug: string) {
   if (slug === "campaign-design") return contentDates.campaignDesign;
-  if (slug === "kickstarter-advertising") return contentDates.kickstarterAdvertising;
-  if (slug === "gamefound-launch-services") return contentDates.growthReview;
-  return contentDates.campaignServices;
+  return contentDates.serviceHubs;
 }
