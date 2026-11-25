@@ -234,7 +234,7 @@ html:not(.w-js) .w-menu-root[open] .w-menu-scrim{opacity:1}
 .w-menu-root[open]>summary{position:relative;z-index:calc(var(--z-menu) + 1)}
 
 /* ---------- analytics choice, restyled as a small card in the corner ---------- */
-html body .analytics-consent{inset:auto var(--page-pad) var(--page-pad) auto;z-index:var(--z-consent);display:grid;gap:16px;max-width:420px;padding:22px;border:0;border-radius:var(--r-panel);background:var(--board-100);color:var(--ink-900);box-shadow:0 30px 60px -20px rgb(0 0 0 / .55);font-family:var(--font-sans);animation:w-consent-in 900ms var(--ease-out) both}
+html body .analytics-consent{inset:auto auto calc(var(--page-pad) + 56px) var(--page-pad);z-index:var(--z-consent);display:grid;gap:16px;max-width:420px;padding:22px;border:0;border-radius:var(--r-panel);background:var(--board-100);color:var(--ink-900);box-shadow:0 30px 60px -20px rgb(0 0 0 / .55);font-family:var(--font-sans);animation:w-consent-in 900ms var(--ease-out) both}
 html body .analytics-consent h2{font:500 1.0625rem/1.2 var(--font-sans);letter-spacing:-.01em}
 html body .analytics-consent p{font-size:var(--t-small);line-height:1.55;color:var(--ink-700)}
 html body .analytics-consent-actions{gap:8px}

@@ -108,7 +108,7 @@ export function mountBoard({ host, labels, onReady, onHover, onOverview }: Optio
   // Lights: one warm lamp, a cool fill, a soft sky.
   scene.add(new THREE.HemisphereLight("#a9d4c7", "#08191a", 0.55));
   const lamp = new THREE.SpotLight("#ffd8a1", 95, 24, 0.62, 0.75, 1.6);
-  lamp.position.set(-3.6, 6.4, -2.6);
+  lamp.position.set(-3.8, 6.6, 3.4);
   lamp.castShadow = true;
   lamp.shadow.mapSize.set(coarse ? 1024 : 2048, coarse ? 1024 : 2048);
   lamp.shadow.bias = -0.0004;
@@ -153,24 +153,19 @@ export function mountBoard({ host, labels, onReady, onHover, onOverview }: Optio
   type Piece = { slug: string; group: THREE.Group; card: THREE.Mesh; lift: number; liftTarget: number; base: THREE.Vector3; label?: HTMLElement };
   const pieces: Piece[] = [];
   const hitTargets: THREE.Object3D[] = [];
-  const acrylic = new THREE.MeshStandardMaterial({ color: "#d8eee8", roughness: 0.15, metalness: 0, transparent: true, opacity: 0.38 });
   landmarks.forEach(mark => {
     const group = new THREE.Group();
     const base = toWorld(mark.u, mark.v);
     group.position.copy(base);
     const width = STANDEE_H * (mark.w / mark.h);
     const geometry = new THREE.PlaneGeometry(width, STANDEE_H);
-    geometry.translate(0, STANDEE_H / 2 + 0.025, 0);
+    geometry.translate(0, STANDEE_H / 2 - 0.01, 0);
     const material = new THREE.MeshStandardMaterial({ transparent: false, alphaTest: 0.45, side: THREE.DoubleSide, roughness: 0.88 });
     const card = new THREE.Mesh(geometry, material);
     card.castShadow = true;
     card.customDepthMaterial = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking, alphaTest: 0.45 });
     card.userData.slug = mark.slug;
-    const stand = new THREE.Mesh(new THREE.CylinderGeometry(width * 0.22, width * 0.24, 0.035, 32), acrylic);
-    stand.position.y = 0.017;
-    stand.scale.set(1, 1, 0.55);
-    stand.castShadow = true;
-    group.add(card, stand);
+    group.add(card);
     group.rotation.y = -0.12;
     world.add(group);
     hitTargets.push(card);
@@ -228,8 +223,11 @@ export function mountBoard({ host, labels, onReady, onHover, onOverview }: Optio
     width = host.clientWidth; height = host.clientHeight;
     renderer.setSize(width, height, false);
     camera.aspect = width / height;
-    // Fit the board: wider screens can come closer.
-    rig.radius = width < 700 ? 9.6 : width / height > 1.9 ? 6.9 : 7.6;
+    // Fit the board: short, wide screens pull back and slide the board right of the headline.
+    const aspect = width / height;
+    rig.radius = width < 700 ? 10.8 : 7.4 + Math.max(0, aspect - 1.6) * 2.4;
+    rig.target.x = width < 700 ? 0 : -0.3 - Math.min(1, Math.max(0, aspect - 1.2)) * 0.8;
+    rig.target.z = width < 700 ? 0.4 : 0.15;
     camera.updateProjectionMatrix();
   };
   resize();
@@ -306,7 +304,7 @@ export function mountBoard({ host, labels, onReady, onHover, onOverview }: Optio
 
     // The lamp leans toward the pointer.
     lamp.target.position.set(pointer.sx * 1.6 + rig.pan, 0, -pointer.sy * 1.1);
-    lamp.position.x = -3.6 + pointer.sx * 0.8;
+    lamp.position.x = -3.8 + pointer.sx * 0.8;
 
     // Hover.
     if (pointer.inside && !dragging && rig.overview < 0.1) {
