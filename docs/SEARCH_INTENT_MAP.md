@@ -50,3 +50,30 @@ These are creative case studies. No campaign funding total is claimed as Guildfr
 | `/resources/tabletop-campaign-page-study` | Inspect observable campaign information and source evidence across a declared sample | Existing official statistics benchmark remains separate |
 
 Agency/freelancer and fee-model questions extend the existing agency guide. Video production choices extend the existing video guide. The ad economics calculator lives inside the existing advertising budget guide. These are grouped buyer intents, not a page per keyword variation.
+
+## SEO and AEO pass, 25 November 2026
+
+Full plan: docs/seo-pass-2026-11-25/ (BRIEF, beginner-plan, manifests). Existing pages keep their intents; new pages own these:
+
+| Canonical destination | Owns |
+| --- | --- |
+| /guides/how-to-launch-a-board-game-on-kickstarter | Cornerstone: how to launch a board game on Kickstarter, A to Z; links every stage to its owner |
+| /guides/kickstarter-for-beginners | Plain answers to first time creator questions, routed to owners |
+| /guides/how-to-market-a-kickstarter | Beginner phrasing of Kickstarter marketing (marketing plan keeps the plan intent) |
+| /guides/how-to-get-kickstarter-backers | First backers and audience building for first timers |
+| /guides/how-to-design-a-kickstarter-page | Beginner phrasing of good Kickstarter page design (page checklist keeps the checklist intent) |
+| /guides/is-my-game-ready-for-kickstarter | Readiness before launch |
+| /guides/board-game-kickstarter-cost | Whole budget overview for a first launch (fees, agency and design cost keep their own pages) |
+| /guides/when-to-launch-a-kickstarter | Timing and preparation length |
+| /guides/why-kickstarter-campaigns-fail | Failure causes and fixes |
+| /guides/kickstarter-fees | Kickstarter fees, pricing, costs and charges |
+| /guides/kickstarter-agency-cost | Kickstarter agency pricing and models (agency guide keeps the how to choose intent) |
+| /guides/kickstarter-vs-gamefound | Platform choice (page design guide keeps the design comparison) |
+| /guides/pledge-managers-compared | Pledge manager comparison and BackerKit queries |
+| /guides/kickstarter-image-sizes | Image sizes and video specs (graphics guide now owns mobile readability) |
+| /guides/board-game-tariffs-shipping-us | Tariffs, de minimis and US shipping |
+| /guides/kickstarter-followers-before-launch | Followers needed before launch |
+| /guides/ttrpg-kickstarter-launch-guide | TTRPG launch and promotion |
+| /guides/terrain-and-dice-kickstarter-launch-guide | Terrain, dice and accessory launches |
+| /guides/tcg-kickstarter-launch-guide | TCG print runs, boosters and scalpers |
+| /kickstarter-product-campaign-design | Campaigns outside tabletop (one separate service page, option B) |
