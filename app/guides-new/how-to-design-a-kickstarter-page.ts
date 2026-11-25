@@ -1,0 +1,183 @@
+import type { LaunchGuide } from "../launch-guides";
+
+export const guide: LaunchGuide = {
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  slug: "how-to-design-a-kickstarter-page",
+  title: "How to Design a Good Kickstarter Page for Your Board Game",
+  seoTitle: "How to Design a Kickstarter Page for a Board Game",
+  description: "How to design a good Kickstarter page for a board game. What goes first, what backers look for and how to make it look professional yourself.",
+  tag: "New to Kickstarter",
+  servicePath: "/campaign-design",
+  serviceLabel: "Kickstarter campaign design for tabletop games",
+  answer: "A good Kickstarter page answers four questions in the order a backer asks them. What is this game, how does it play, what do I get, and can I trust you? Put the answer to the first one at the very top, keep each section short, and check that the whole page reads easily on a phone.",
+  relatedSlugs: ["board-game-kickstarter-page-checklist", "board-game-kickstarter-gameplay-rulebook", "kickstarter-reward-tier-graphics", "when-to-hire-kickstarter-campaign-designer"],
+  sources: [
+    { label: "What information should I share on my project page?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236738-what-information-should-i-share-on-my-project-page" },
+    { label: "How to tell your campaign story (9 Feb 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-lessons/how-to-tell-your-campaign-story/" },
+    { label: "Guide to the Kickstarter campaign page (9 Feb 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-lessons/guide-to-kickstarter-campaign-page/" },
+    { label: "How to make a great project image", publisher: "Kickstarter", href: "https://www.kickstarter.com/help/images" },
+    { label: "12 things you must do before launching on Kickstarter (13 Feb 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/12-things-you-must-do-before-launching-on-kickstarter/" },
+    { label: "Cryptic Explorers campaign case study", publisher: "Guildframe", href: "https://guildframe.com/work/cryptic-explorers" },
+    { label: "FutureProof Terrain campaign case study", publisher: "Guildframe", href: "https://guildframe.com/work/futureproof-terrain" },
+    { label: "Quiver Time campaign case study", publisher: "Guildframe", href: "https://guildframe.com/work/quiver-time" },
+  ],
+  sections: [
+    {
+      id: "what-a-good-page-does",
+      title: "What a good Kickstarter page does",
+      paragraphs: [
+        "A good Kickstarter page lets a stranger understand your game, trust you and choose a reward without needing you beside them. That's the whole job, and every design choice on the page either helps it or gets in the way.",
+        "Kickstarter's own help centre says a page should show what you're making, how you plan to make it happen, the progress so far, your budget and your story. For a board game, that becomes four questions a backer asks in order. Treat the page as an explanation first, and let your artwork make it look good.",
+        "If you're earlier than the page stage, the whole process is in our guide on [how to launch a board game on Kickstarter](/guides/how-to-launch-a-board-game-on-kickstarter). Come back here once you have art and rules to work with.",
+      ],
+      source: 0,
+    },
+    {
+      id: "reading-order",
+      title: "The order a backer reads your page in",
+      paragraphs: [
+        "Backers read from the top, and many decide early whether to keep scrolling. That's why the order of your sections matters more than any single graphic.",
+        "Kickstarter's story guide says to put the most important information at the top and organise the rest into short sections with clear headings. We build every campaign page around the same five steps, because they match the questions people actually ask.",
+        "If a section doesn't answer one of these questions, it probably belongs lower down or nowhere at all.",
+      ],
+      visual: {
+        kind: "steps",
+        title: "A backer reads your page in this order",
+        steps: [
+          { label: "What is it?", detail: "Project image, title, subtitle, opening section" },
+          { label: "How does it play?", detail: "One sample turn and a short video" },
+          { label: "What do I get?", detail: "Labelled components and a reward comparison" },
+          { label: "Can I trust you?", detail: "Who you are, playtest proof, honest risks" },
+          { label: "How do I pledge?", detail: "Rewards with prices and the shipping plan" },
+        ],
+        caption: "Guildframe's page order for a board game, based on Kickstarter's advice to put the most important information first.",
+      },
+      source: 1,
+    },
+    {
+      id: "top-of-page",
+      title: "What goes at the top of your Kickstarter page",
+      paragraphs: [
+        "The top of the page is where a visitor decides whether your game is for them. It has four parts, and each one has a single job.",
+        "The project image shows the game. Kickstarter recommends 1024 × 576 pixels at 16:9 and advises against adding banners, badges or extra text to it. The full list of sizes lives in our [Kickstarter image sizes guide](/guides/kickstarter-image-sizes).",
+        "The title is your game's name, and the subtitle says what kind of game it is and who it's for. Kickstarter's page guide says the subtitle should sum up the campaign briefly, so write it for someone who has never heard of you.",
+        "Then the opening section repeats the essentials in a form people can scan. On the [Cryptic Explorers campaign](/work/cryptic-explorers) we designed, the header pairs the game box with the logo and the line \"Asymmetrical squad tactics and survival horror\". Underneath sit the table facts of 2 to 4 players, 1 to 3 hours and ages 13 and up.",
+        "A video is optional, and Kickstarter advises keeping it clear and under two minutes. Our guide to [planning a Kickstarter campaign video](/guides/kickstarter-campaign-video-planning) covers the script and shot list. Get these four parts right and most visitors will give the rest of the page a fair read.",
+      ],
+      source: 3,
+    },
+    {
+      id: "how-it-plays",
+      title: "Show how the game plays with one turn",
+      paragraphs: [
+        "First time creators often paste the rulebook into the page, then wonder why nobody understands the game. A backer wants to picture playing it, and one well explained turn does that faster than twenty rules.",
+        "Show what a player sees, what they choose and what happens next, then link the full rules. On Cryptic Explorers, the page introduces the characters before the details of play, because an asymmetrical game is easier to follow once you've met both sides.",
+        "Our guide to [explaining gameplay and the rulebook on your page](/guides/board-game-kickstarter-gameplay-rulebook) goes deeper on sample turns. So teach one turn well and let curious readers find the rest.",
+      ],
+      source: 5,
+    },
+    {
+      id: "what-backers-get",
+      title: "Show exactly what backers get",
+      paragraphs: [
+        "Once someone wants to play, their next question is what arrives in the box. Vague answers here cost pledges, because nobody wants to guess between two tiers.",
+        "Lay out the components with labels and counts, then compare the rewards side by side using the same names. For [FutureProof Terrain](/work/futureproof-terrain), the artwork puts an assembled building in the foreground and the separate walls and floors above it, so players connect the pieces with what they build. For [Quiver Time](/work/quiver-time), fit and capacity details sit beside the product, because card players check those before they choose.",
+        "Kickstarter also warns that a reward tier can't be changed after someone pledges to it, so confirm contents and prices before launch. Our guide to [reward tier graphics](/guides/kickstarter-reward-tier-graphics) shows how to make tiers easy to compare. Clear contents turn interest into a pledge.",
+      ],
+      source: 4,
+    },
+    {
+      id: "trust",
+      title: "Give backers reasons to trust you",
+      paragraphs: [
+        "A first time creator has no track record, so the page has to do the work a reputation would normally do. Small, honest details do more here than big claims.",
+        "Say who you are in a few sentences, show the game being played and add a playtester or previewer quote if you have one. Then write a real risks section, which Kickstarter describes as the place to explain possible obstacles and how you plan to handle them, adding that transparency builds trust with backers.",
+        "If your images show a prototype, label them as a prototype. Our guide to [labelling prototypes and writing the risks section](/guides/kickstarter-prototype-risks-disclosure) covers the wording. Honesty about what's unfinished reads as confidence, and backers notice.",
+      ],
+      source: 2,
+    },
+    {
+      id: "look-professional",
+      title: "How to make your page look professional without a designer",
+      paragraphs: [
+        "You don't need expensive software to make a page look professional. You need consistency, and that comes from a few rules you set once and keep.",
+        "Kickstarter's story guide says to make sure the page reads well across devices and that your text carries the key information for people using screen readers. So type the facts that matter into the page itself, and let graphics support them. Our guide to [readable campaign graphics on mobile](/guides/kickstarter-campaign-graphics-mobile-readability) has the phone checks.",
+        "The tool matters less than the habits, so use whatever layout or image app you already know. These are the five rules we'd give any creator designing their own page.",
+      ],
+      list: [
+        "Pick two fonts at most and use them the same way in every header.",
+        "Take your colours from the box art so every section feels like the same game.",
+        "Use real photos of your prototype, well lit, with a plain background.",
+        "Keep text inside images large enough to read on a phone without zooming.",
+        "Type prices, contents and player counts as page text as well as showing them in graphics.",
+      ],
+      visual: {
+        kind: "checklist",
+        title: "A page looks professional when these stay the same everywhere",
+        groups: [
+          { name: "Type", items: ["Two fonts at most", "Same header style in every section", "Readable on a phone"] },
+          { name: "Images", items: ["Colours from the box art", "Real photos, well lit", "Prototypes labelled"] },
+          { name: "Facts", items: ["Prices typed as text", "Same product names everywhere", "Counts match the rewards"] },
+        ],
+        caption: "Guildframe's design habits for creators building their own page.",
+      },
+      source: 1,
+    },
+    {
+      id: "mistakes",
+      title: "Common first time mistakes we see",
+      paragraphs: [
+        "Most weak pages fail in the same few ways, and every one of them is easy to fix once you spot it. Length is the worry we hear first, so start there.",
+        "There's no set page length, and Kickstarter's own guides don't give one. A page is long enough when a stranger can answer the four questions, and every section past that should earn its place.",
+        "Beyond length, these are the mistakes we see most often when creators send us a draft, and each one costs a reader's attention.",
+      ],
+      list: [
+        "A long story before the game appears on screen.",
+        "Walls of text with no headings to scan.",
+        "Tiny type inside graphics that blurs on a phone.",
+        "Every stretch goal shown before the base game is explained.",
+        "Rewards described in one place and priced somewhere else.",
+      ],
+    },
+    {
+      id: "check-before-launch",
+      title: "Check your page before you launch",
+      paragraphs: [
+        "You can't judge your own page fairly, because you already know the game. Fresh eyes find the gaps in minutes.",
+        "Kickstarter suggests sharing the preview link with a few trusted people and asking for feedback on clarity, pricing and messaging. We go one step further and hand a phone to someone who hasn't played the game, then ask them to explain a turn and pick a reward.",
+        "When you're close, run the full [board game Kickstarter page checklist](/guides/board-game-kickstarter-page-checklist) before you submit. A page that passes a stranger's test is ready for your audience.",
+      ],
+      source: 4,
+    },
+    {
+      id: "diy-or-help",
+      title: "Doing it yourself or getting help",
+      paragraphs: [
+        "Plenty of creators design a good first page themselves using everything above. The honest limit is time and distance, because layout, copy and reward graphics take weeks, and it's hard to see your own page the way a stranger does.",
+        "This is the work Umair has done for ten years. Our campaign page package is $1,800. It covers your Kickstarter or Gamefound page from the first line of copy to the published page, including page structure, campaign copy, section graphics and reward presentation using your artwork. Full campaign support is $5,900 and adds the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff. Ad spend, software and platform fees are separate.",
+        "If you're unsure, our guides on [when to hire a campaign designer](/guides/when-to-hire-kickstarter-campaign-designer) and [what campaign design costs](/guides/board-game-kickstarter-campaign-design-cost) help you decide. You can also see the four [campaigns in our case studies](/work).",
+        "The lowest risk first step is a free opening mockup. We design one opening section of your page using your own artwork, with no payment and no obligation. Request it through our [Kickstarter campaign design](/campaign-design) page.",
+      ],
+      visual: {
+        kind: "compare",
+        title: "What changes when you hire help for the page",
+        columns: [
+          { name: "Do it yourself", points: ["You write the copy", "You make every graphic", "Weeks of your own time", "Free apart from tools"], verdict: "Works with time and fresh eyes" },
+          { name: "Campaign page package", points: ["We write the copy", "We build the graphics from your art", "You confirm facts and review", "Built ready for you to publish"], verdict: "$1,800 fixed price", highlight: true },
+          { name: "Full campaign support", points: ["The page, plus prelaunch emails", "Ad creative and paid advertising", "Live campaign checks", "Ad spend paid separately"], verdict: "$5,900 fixed price" },
+        ],
+        caption: "Prices are Guildframe's current fixed prices. Ad spend, software and platform fees sit outside both.",
+      },
+    },
+  ],
+  faqs: [
+    { question: "How do I design a Kickstarter page with no design experience?", answer: "Answer four questions in order: what the game is, how it plays, what backers get and why they can trust you. Use two fonts at most, take colours from your box art, use real labelled photos and check every graphic on a phone." },
+    { question: "What should I put at the top of my Kickstarter page?", answer: "A clean project image of the game, your game's name as the title and a one line subtitle saying what kind of game it is. Then an opening section with player count, play time and age." },
+    { question: "How long should a Kickstarter page be?", answer: "There's no set length, and Kickstarter's guides don't give one. A page is long enough when a stranger can say what the game is, how it plays, what they get and why to trust you." },
+    { question: "What program do people use to make Kickstarter graphics?", answer: "Use whatever layout or image app you already know. The tool matters less than consistent fonts, colours and labels, and text large enough to read on a phone." },
+    { question: "Should the text be in images or typed into the page?", answer: "Both, for the facts that matter. Kickstarter advises that your text carries the key information for people using screen readers, so type prices, contents and player counts into the page and let graphics support them." },
+    { question: "Can I use photos of my prototype on the page?", answer: "Yes. Use real, well lit photos on a plain background and label them as a prototype. Honesty about what's unfinished builds trust with backers." },
+    { question: "How much does it cost to have someone design my Kickstarter page?", answer: "Guildframe's campaign page package is a fixed $1,800 and full campaign support is $5,900. Ad spend, software and platform fees are separate, and you can start with a free opening mockup that has no payment or obligation." },
+  ],
+};
