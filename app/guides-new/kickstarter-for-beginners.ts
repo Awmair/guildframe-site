@@ -22,15 +22,15 @@ export const guide: LaunchGuide = {
     { label: "My project is awaiting review. How does this work?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236415-my-project-is-awaiting-review-how-does-this-work" },
     { label: "What is the maximum project duration?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236742-what-is-the-maximum-project-duration" },
     { label: "If I am unable to complete my project as promised, what should I do?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236654-if-i-am-unable-to-complete-my-project-as-promised-what-should-i-do" },
-    { label: "Kickstarter is the biggest platform for games (2024 tabletop figures, 5 February 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/" },
-    { label: "Why Kickstarter campaigns fail after funding, and how to avoid it (3 June 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/why-kickstarter-campaigns-fail-after-funding-and-how-to-avoid-it/" },
+    { label: "Kickstarter is the biggest platform for games (2024 tabletop figures, February 5, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/" },
+    { label: "Why Kickstarter campaigns fail after funding, and how to avoid it (June 3, 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/why-kickstarter-campaigns-fail-after-funding-and-how-to-avoid-it/" },
   ],
   sections: [
     {
       id: "start-here",
       title: "Kickstarter for beginners, start here",
       paragraphs: [
-        "Kickstarter is all or nothing. You set a goal and a deadline, backers pledge for rewards, and they are only charged if you reach the goal, after which you make and deliver what you promised.",
+        "Kickstarter lets you take orders for a game before you print it. Backers pledge toward a goal you set, nobody pays unless you reach it by your deadline, and once you fund, you owe every backer the reward you described.",
         "If you have backed games before but never run a campaign yourself, the creator side can feel like a wall of unfamiliar words. These are the questions first time creators ask us most, so this page collects them in one place. Each answer is short and points to the guide that goes deeper.",
         "This page explains how the platform works. For the whole journey in order, from prototype to delivery, read our guide on [how to launch a board game on Kickstarter](/guides/how-to-launch-a-board-game-on-kickstarter). Start wherever your worry is biggest, because nobody needs to read everything at once.",
       ],
@@ -46,7 +46,7 @@ export const guide: LaunchGuide = {
           { label: "Pledges are collected", detail: "Only if you reach the goal, over 14 days after the end" },
           { label: "You make and deliver", detail: "Overseas manufacturing usually takes about twelve months" },
         ],
-        source: "Kickstarter help and Kickstarter blog, checked 25 Nov 2026",
+        source: "Kickstarter help and Kickstarter blog, checked November 25, 2026",
       },
     },
     {
@@ -56,7 +56,7 @@ export const guide: LaunchGuide = {
         "The mechanics are simpler than they look, and three or four rules explain most of what happens.",
         "How does Kickstarter work? You build a project page with rewards, set a funding goal and a deadline, and launch. Once the campaign is live, the goal and the deadline are locked. People pledge money for the rewards, and if the total reaches the goal by the deadline, their pledges are collected.",
         "What happens if I don't hit my goal? No money changes hands. Backers are not charged, you receive nothing, and Kickstarter takes no fee. Kickstarter says there is no platform consequence for starting over, and our guide on [why Kickstarter campaigns fail](/guides/why-kickstarter-campaigns-fail) covers how to relaunch stronger.",
-        "What is a pledge, and what does a backer expect? A pledge is a promise to pay for a reward if the project funds, and backers can cancel it at any time before the campaign ends. After a successful campaign it is collected and can no longer be cancelled. Backers then expect the reward you described, and under Kickstarter's rules you are responsible for delivering it.",
+        "What is a pledge, and what does a backer expect? A pledge is a promise to pay for a reward if the project funds, and backers can cancel it at any time before the campaign ends. After a successful campaign it is collected and can no longer be canceled. Backers then expect the reward you described, and under Kickstarter's rules you are responsible for delivering it.",
         "How long does a campaign run? You choose a length from 1 to 60 days, and Kickstarter recommends 30 days or less. Our guide to [Kickstarter review and launch timing](/guides/kickstarter-review-launch-timeline) covers the rules around it. The takeaway from this group is that nobody pays anything unless you fund, and once you fund you owe the rewards.",
       ],
       source: 0,
@@ -67,7 +67,7 @@ export const guide: LaunchGuide = {
           {
             name: "You reach the goal",
             points: [
-              "Pledges are collected and can no longer be cancelled",
+              "Pledges are collected and can no longer be canceled",
               "Kickstarter takes 5% plus payment processing",
               "Payout starts after a 14 day collection window",
               "You owe backers the rewards you promised",
@@ -84,7 +84,7 @@ export const guide: LaunchGuide = {
             ],
           },
         ],
-        source: "Kickstarter help on all or nothing funding, fees and payouts, checked 25 Nov 2026",
+        source: "Kickstarter help on all or nothing funding, fees and payouts, checked November 25, 2026",
       },
     },
     {
@@ -111,7 +111,7 @@ export const guide: LaunchGuide = {
           { name: "Your bank account", items: ["In the same country as the project", "In your name or your company's name", "Accepts direct deposits in your funding currency"] },
           { name: "If you launch as a company", items: ["Registered in the country you launch from", "ID and tax documents for the company"] },
         ],
-        source: "Kickstarter, Who can use Kickstarter, checked 25 Nov 2026",
+        source: "Kickstarter, Who can use Kickstarter, checked November 25, 2026",
       },
     },
     {
@@ -132,8 +132,8 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "Most of what decides a campaign happens before you press launch, so these are the questions worth answering early.",
         "Can I launch with a prototype? Yes, as long as the page shows it honestly and labels what is not final. Our guide [is my game ready for Kickstarter](/guides/is-my-game-ready-for-kickstarter) covers how finished the game, art and numbers should be.",
-        "Do I need an audience first? Yes, because on the campaigns we work on, the first day comes mostly from people who already knew about the game. A prelaunch page and an email list are how you gather them. Our guide on [how to get Kickstarter backers](/guides/how-to-get-kickstarter-backers) covers where the first hundred come from.",
-        "How long does it take to prepare? Kickstarter's own review takes up to three business days, but the preparation before it usually takes months for a first game. Our guide on [when to launch a Kickstarter](/guides/when-to-launch-a-kickstarter) helps you work back from a date.",
+        "Do I need an audience first? Yes, because on the campaigns we work on, the first day comes mostly from people who already knew about the game. A prelaunch page and an email list are how you gather them. In our own planning, the email list starts 3 months or more before launch and the Kickstarter prelaunch page opens 6 to 12 weeks out. Our guide on [how to get Kickstarter backers](/guides/how-to-get-kickstarter-backers) covers where the first hundred come from.",
+        "How long does it take to prepare? Kickstarter's own review takes up to three business days, plus up to three more after changes, so we submit at least two weeks before the launch date. The preparation before that usually takes months for a first game. Our guide on [when to launch a Kickstarter](/guides/when-to-launch-a-kickstarter) helps you work back from a date.",
         "Do I need to know marketing and design? You need to learn the basics, and both can be learned. Start with [how to market a Kickstarter](/guides/how-to-market-a-kickstarter) and [how to design a Kickstarter page](/guides/how-to-design-a-kickstarter-page). If you only do one thing early, start gathering followers.",
       ],
       source: 6,

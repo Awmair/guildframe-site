@@ -47,7 +47,7 @@ export const guide: LaunchGuide = {
         kind: "compare",
         title: "Small zines can join a February event, while bigger books pick their own date",
         columns: [
-          { name: "Zine Quest", points: ["Kickstarter's open call each February", "2026: launch in February, then submit a form", "Featured in a curated collection", "2027 details not posted as of Nov 25, 2026"], verdict: "Suits a zine that should live on Kickstarter" },
+          { name: "Zine Quest", points: ["Kickstarter's open call each February", "2026: launch in February, then submit a form", "Featured in a curated collection", "2027 details not posted as of November 25, 2026"], verdict: "Suits a zine that should live on Kickstarter" },
           { name: "Zinetopia 2027", points: ["February 2 to 19, 2027, on BackerKit only", "Apply by January 4, 2027", "New products only, no reprints", "Banner projects offer a limited freebie"], verdict: "Suits a zine you will run and fulfill on BackerKit", highlight: true },
           { name: "Your own date", points: ["Any month that suits your schedule", "No shared event promotion", "Fits core books and large supplements", "Your own audience carries the first day"], verdict: "Suits bigger books and returning creators" },
         ],
@@ -60,7 +60,7 @@ export const guide: LaunchGuide = {
       title: "Plan PDF delivery before you set reward tiers",
       paragraphs: [
         "Most RPG campaigns sell a PDF, a print book or both, so digital delivery shapes your rewards. We decide how backers will get their files before we design a single reward tier graphic.",
-        "BackerKit and DriveThruRPG now connect directly. Since June 2026, projects on BackerKit's crowdfunding platform can offer instant access rewards, where a backer clicks through to their DriveThruRPG library straight after pledging. BackerKit's pledge manager can also send digital rewards into backers' DriveThruRPG libraries after a campaign, which matters if you run your Kickstarter pledge manager on BackerKit.",
+        "BackerKit and DriveThruRPG now connect directly. Since June 2026, projects on BackerKit's crowdfunding platform can offer instant access rewards, where a backer clicks through to their DriveThruRPG library straight after pledging. BackerKit's pledge manager can also send digital rewards into backers' DriveThruRPG libraries after a campaign, which matters if you run your Kickstarter pledge manager on BackerKit. Our [pledge manager comparison](/guides/pledge-managers-compared) sets BackerKit beside the other options.",
         "The setup has a few requirements you should sort out early. You need a DriveThruRPG publisher account and an application key with distribution switched on, and each title is linked by its DriveThruRPG product ID. Files are not sent automatically, so someone has to start the distribution and send the notification email. Backers without a DriveThruRPG account get one created from the email on their order.",
         "If you plan to use another tool, write down who sends the files, when, and what a backer sees. Then put that same wording in your rewards and FAQ, so a PDF reward reads as a clear promise.",
       ],
@@ -71,7 +71,7 @@ export const guide: LaunchGuide = {
       title: "Where RPG players find new games before launch",
       paragraphs: [
         "TTRPG marketing works best when people can read or play part of the game before they are asked to pledge. Roleplayers buy on tone, system and how a session feels, so a sample does more selling than any trailer.",
-        "Kickstarter reports that 32% of prelaunch followers pledge on average once a campaign goes live, compared with 17% of people who follow after launch. That's why every channel below should point to your prelaunch page or your own email signup. We usually build the plan from these channels, in roughly this order of warmth.",
+        "Kickstarter reports that 32% of prelaunch followers pledge on average once a campaign goes live, compared with 17% of people who follow after launch. That's why every channel below should point to your prelaunch page or your own email signup, and our guide to [Kickstarter followers before launch](/guides/kickstarter-followers-before-launch) shows how many you need. We usually build the plan from these channels, in roughly this order of warmth.",
       ],
       list: [
         "Your mailing list, past backers and anyone who bought your earlier work",
@@ -89,14 +89,14 @@ export const guide: LaunchGuide = {
       title: "What the campaign page needs for an RPG",
       paragraphs: [
         "A roleplaying game page has to answer questions a board game page doesn't. Backers want to know what system it uses, what other books they need and what a session looks like at the table.",
-        "Our guide to designing a TTRPG Kickstarter campaign page covers this in depth. In short, we introduce the play experience before the lore, show readable sample pages, and separate PDF, print and bundle rewards so each tier says exactly what arrives. The checklist below is the version we run before every RPG launch.",
+        "Our guide to [designing a TTRPG Kickstarter campaign page](/guides/ttrpg-kickstarter-campaign-page-design) covers this in depth. In short, we introduce the play experience before the lore, show readable sample pages, and separate PDF, print and bundle rewards so each tier says exactly what arrives. The checklist below is the version we run before every RPG launch.",
       ],
       visual: {
         kind: "checklist",
         title: "An RPG page is ready when a stranger can tell what they would play",
         groups: [
           { name: "Explain the game", items: ["What players do in a session", "System and any required books", "Tone, setting and player count", "Standalone, adventure or supplement"] },
-          { name: "Show the book", items: ["Readable sample spreads", "A character sheet or usable table", "Links to a free sample or quickstart", "Draft layouts clearly labelled"] },
+          { name: "Show the book", items: ["Readable sample spreads", "A character sheet or usable table", "Links to a free sample or quickstart", "Draft layouts clearly labeled"] },
           { name: "Rewards and delivery", items: ["PDF, print and bundle tiers kept separate", "Format, page count and binding confirmed", "How and when PDFs are delivered", "Shipping regions and when shipping is charged"] },
           { name: "Launch readiness", items: ["Tabletop roleplaying subcategory selected", "Prelaunch page shared and growing", "Email list ready for launch day", "Preview checked on a phone"] },
         ],
@@ -106,23 +106,23 @@ export const guide: LaunchGuide = {
       id: "timeline",
       title: "A launch timeline for a first RPG Kickstarter",
       paragraphs: [
-        "A first RPG launch needs more lead time than most creators expect, mostly because audience building is slow. Kickstarter recommends sharing the prelaunch page at least one week before launch. First time creators only get that page after project approval, so we plan review well ahead of the date.",
-        "The schedule below is an example for a first launch. A returning creator with a mailing list can compress it, and a large core book usually needs longer. If you are aiming for Zinetopia, add the January 4, 2027 application deadline to the top.",
+        "A first RPG launch needs more lead time than most creators expect, mostly because audience building is slow. Kickstarter recommends sharing the prelaunch page at least one week before launch. First time creators only get that page after project approval. So in our planning, the email list starts 3 months or more before launch, review comes early enough for the prelaunch page to open 6 to 12 weeks out, and nobody submits later than two weeks before the date.",
+        "The schedule below is an example for a first launch. A returning creator with a mailing list can compress it, and a large core book usually needs longer. If you are aiming for Zinetopia, add the application deadline of January 4, 2027, to the top.",
       ],
       visual: {
         kind: "timeline",
         title: "Most of a first RPG launch happens before the campaign opens",
         events: [
-          { when: "12 weeks out", label: "Choose format, platform and event", detail: "Confirm system license terms and your funding goal." },
-          { when: "10 weeks out", label: "Publish a free sample", detail: "Open an email signup beside it." },
-          { when: "8 weeks out", label: "Submit the project for review", detail: "First time creators get the prelaunch page after approval." },
-          { when: "6 weeks out", label: "Share the prelaunch page", detail: "Start community posts and actual play outreach." },
+          { when: "4 months out", label: "Choose format, platform and event", detail: "Confirm system license terms and your funding goal." },
+          { when: "3 months or more out", label: "Start the email list", detail: "Publish a free sample with a signup beside it." },
+          { when: "12 weeks out", label: "Submit the project for review", detail: "First time creators get the prelaunch page after approval." },
+          { when: "6 to 12 weeks out", label: "Open the Kickstarter prelaunch page", detail: "Start community posts and actual play outreach." },
           { when: "4 weeks out", label: "Test ads and lock rewards", detail: "Settle PDF delivery and shipping wording." },
           { when: "2 weeks out", label: "Check followers against your goal", detail: "Confirm the date or move it." },
           { when: "Launch day", label: "Email, prelaunch update and community posts", detail: "Followers also get Kickstarter's launch email.", highlight: true },
           { when: "After funding", label: "Pledge manager and PDF delivery", detail: "Send files and keep backers updated." },
         ],
-        caption: "Example schedule for a first RPG launch, not a platform requirement.",
+        caption: "Guildframe planning example for a first RPG launch, not a platform requirement.",
         source: "Kickstarter Help Center for prelaunch timing; schedule is a Guildframe example",
       },
       source: 7,
@@ -131,8 +131,8 @@ export const guide: LaunchGuide = {
       id: "help",
       title: "Where Guildframe fits in your RPG launch",
       paragraphs: [
-        "We design and run tabletop launches for a living, and TTRPGs are one of our core categories. Our ScentedRealms campaign, for example, introduced a new accessory for the RPG table. You can run a small zine launch yourself with this guide, a free sample and a few weeks of steady posting. The honest limit is time, because writing, layout and audience building all land in the same months.",
-        "Our TTRPG campaign page design covers page structure, copy and section graphics built from your artwork, with sample spreads and reward tiers laid out for print and PDF. For a full launch, our Kickstarter launch services for tabletop games add prelaunch, paid advertising and live campaign support. Send us your premise and a sample spread, and we'll start with a free opening mockup.",
+        "We design and run tabletop launches for a living, and TTRPGs are one of our core categories. Our [ScentedRealms campaign](/work/scented-realms), for example, introduced a new accessory for the RPG table. You can run a small zine launch yourself with this guide, a free sample and steady weekly posting. The catch is that writing, layout and audience building all want your evenings at once, and the audience work is the part that slips.",
+        "Our [TTRPG campaign page design](/ttrpg-kickstarter-campaign-design) covers page structure, copy and section graphics built from your artwork, with sample spreads and reward tiers laid out for print and PDF. For a full launch, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) add prelaunch, paid advertising and live campaign support. Send us your premise and a sample spread, and we'll start with a free opening mockup.",
       ],
       source: 8,
     },
@@ -160,7 +160,7 @@ export const guide: LaunchGuide = {
     },
     {
       question: "How long before launch should I start marketing a TTRPG?",
-      answer: "Kickstarter recommends sharing the prelaunch page at least one week before launch, but a first RPG launch usually needs far longer. Our example schedule starts audience work about ten weeks out.",
+      answer: "Kickstarter recommends sharing the prelaunch page at least one week before launch, but a first RPG launch usually needs far longer. Our planning example starts the email list 3 months or more before launch and opens the Kickstarter prelaunch page 6 to 12 weeks out.",
     },
   ],
 };

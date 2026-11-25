@@ -16,7 +16,7 @@ export const guide: LaunchGuide = {
     { label: "Kickstarter fees for creators", publisher: "Kickstarter", href: "https://www.kickstarter.com/help/fees" },
     { label: "How do I add late pledges to my project?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236699-how-do-i-add-late-pledges-to-my-project" },
     { label: "How do I use Kickstarter's Pledge Manager?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager" },
-    { label: "VAT Flexibility in Pledge Manager (release note, 13 April 2026)", publisher: "Kickstarter", href: "https://start.kickstarter.com/kickstarter-release-notes/vat-flexibility-in-pledge-manager" },
+    { label: "VAT Flexibility in Pledge Manager (release note, April 13, 2026)", publisher: "Kickstarter", href: "https://start.kickstarter.com/kickstarter-release-notes/vat-flexibility-in-pledge-manager" },
     { label: "Can I charge a tariff surcharge through the pledge manager?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236621-can-i-charge-a-tariff-surcharge-through-the-pledge-manager" },
     { label: "Options for charging shipping costs", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236769-what-options-do-i-have-for-charging-shipping-costs" },
   ],
@@ -51,7 +51,7 @@ export const guide: LaunchGuide = {
           { label: "$100 pledge", value: 8.2, display: "8.2% ($8.20)" },
         ],
         caption: "Illustrative math using Kickstarter's published US rates. Your country's processing rate may differ.",
-        source: "Kickstarter fee page, checked 25 Nov 2026",
+        source: "Kickstarter fee page, checked November 25, 2026",
       },
     },
     {
@@ -73,7 +73,7 @@ export const guide: LaunchGuide = {
           { label: "Payment processing (3% + $0.20 a pledge)", share: 1400, display: "$1,400" },
         ],
         caption: "Illustrative example on Kickstarter's US fee schedule. It assumes every pledge collects and shipping is charged later.",
-        source: "Kickstarter fee page, checked 25 Nov 2026",
+        source: "Kickstarter fee page, checked November 25, 2026",
       },
     },
     {
@@ -83,7 +83,7 @@ export const guide: LaunchGuide = {
         "Fees don't stop when the campaign clock reaches zero. Money you collect afterwards through late pledges or a pledge manager carries fees too, and tabletop projects often collect a lot there.",
         "Kickstarter says the fees on late pledges are the same as on original campaign pledges: a 5% fee plus payment processing, which in the US is 3% and $0.20 per pledge. Late pledges have to be switched on while the project is in draft or still live, and they can't be turned on after the campaign ends, so decide before launch.",
         "Kickstarter's own pledge manager has no upfront cost, but Kickstarter deducts its usual fees from payments made inside it. That puts shipping, upgrades and extra items bought in the pledge manager inside the fee base. If you choose a third party pledge manager instead, read its current pricing page and add its charges on top.",
-        "Shipping you collect during the campaign counts towards your funding goal. That helps you fund, and it also means the shipping money is part of the funding total the fees come from. Either way, price shipping with the fees already included.",
+        "Shipping you collect during the campaign counts toward your funding goal. That helps you fund, and it also means the shipping money is part of the funding total the fees come from. Either way, price shipping with the fees already included.",
       ],
       source: 1,
     },
@@ -92,7 +92,7 @@ export const guide: LaunchGuide = {
       title: "VAT flexibility in the pledge manager",
       paragraphs: [
         "Tax is not a Kickstarter fee, but it changes what you keep from each pledge, so it belongs in the same budget.",
-        "Since 13 April 2026, creators choose how VAT is handled in Kickstarter's pledge manager. You can let Kickstarter collect and remit VAT for you, or handle VAT yourself with your own systems. If you go independent, VAT setup requirements such as tax IDs are removed, and projects with VAT inclusive pricing can now use the pledge manager.",
+        "Since April 13, 2026, creators choose how VAT is handled in Kickstarter's pledge manager. You can let Kickstarter collect and remit VAT for you, or handle VAT yourself with your own systems. If you go independent, VAT setup requirements such as tax IDs are removed, and projects with VAT inclusive pricing can now use the pledge manager.",
         "Kickstarter still collects and remits applicable taxes for the US and Canada where required. Which VAT route suits you depends on where you are registered and where you ship, and that is a question for your accountant. What we make sure of is that the reward prices on the page say clearly whether VAT is included, so backers in the UK and EU are not surprised at checkout.",
       ],
       source: 3,
@@ -113,7 +113,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "The funding goal is where fees bite hardest, because Kickstarter takes them from the total you raise, not from the amount you need.",
         "So work backwards. Start with the money you need after fees, then divide by the share of each dollar you keep. On the US schedule with an average pledge of $40, you keep 91.5 cents of every dollar, so an illustrative $30,000 need becomes a goal of about $32,800.",
-        "That covers the fee step only. Some pledges fail to collect at the end of a campaign, and your average pledge may land lower than you hope, so leave room for both. Our funding goal guide walks through the rest of the sheet, and our reward pricing guide shows how to price tiers with fees already inside them.",
+        "That covers the fee step only. Some pledges fail to collect at the end of a campaign, and your average pledge may land lower than you hope, so leave room for both. Our [funding goal guide](/guides/board-game-kickstarter-funding-goal) walks through the rest of the sheet, and our [reward pricing guide](/guides/board-game-kickstarter-reward-pricing) shows how to price tiers with fees already inside them.",
       ],
       source: 0,
       visual: {
@@ -126,7 +126,7 @@ export const guide: LaunchGuide = {
           { label: "Leave room for failed pledges", detail: "Then check the goal against your realistic backer count" },
         ],
         caption: "Illustrative example using Kickstarter's published US rates.",
-        source: "Kickstarter fee page, checked 25 Nov 2026",
+        source: "Kickstarter fee page, checked November 25, 2026",
       },
     },
     {
@@ -134,8 +134,8 @@ export const guide: LaunchGuide = {
       title: "Putting fees into your launch budget",
       paragraphs: [
         "Fees are the easiest cost in a launch to calculate, which is exactly why they shouldn't be the one that surprises you. For every other line in a first launch budget, from art to shipping, see [how much it costs to launch a board game on Kickstarter](/guides/board-game-kickstarter-cost).",
-        "When we plan a launch, one sheet holds the goal, the reward prices, the fees and the ad budget together, so a change to one shows up in the others. You can do this yourself with the rates above and a spreadsheet. The honest limit is time, because checking country rates, pledge manager costs, VAT and tariff options takes hours you may want to spend on the game.",
-        "If you'd like that work done with you, our Kickstarter launch services for tabletop games cover the budget, the funding goal and the campaign page around them. Ad spend is a separate line again, and our advertising budget guide shows how to size it. Whichever way you plan it, check these lines are in the sheet before you set the goal:",
+        "When we plan a launch, one sheet holds the goal, the reward prices, the fees and the ad budget together, so a change to one shows up in the others. You can do this yourself with the rates above and a spreadsheet. What it really costs you is time, because checking country rates, pledge manager costs, VAT and tariff options takes hours you may want to spend on the game.",
+        "If you'd like that work done with you, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) cover the budget, the funding goal and the campaign page around them. Ad spend is a separate line again, and our [advertising budget guide](/guides/kickstarter-advertising-budget-board-games) shows how to size it. Whichever way you plan it, check these lines are in the sheet before you set the goal:",
       ],
       list: [
         "The 5% platform fee on everything you raise",
@@ -150,7 +150,7 @@ export const guide: LaunchGuide = {
     { question: "How much does Kickstarter take from a successful project?", answer: "On a US project, Kickstarter takes a 5% platform fee plus payment processing of 3% plus $0.20 per pledge. On a $40 pledge that comes to $3.40 in total." },
     { question: "Does Kickstarter charge anything if my project doesn't fund?", answer: "No. Kickstarter says there are no fees if funding isn't successful." },
     { question: "Are there fees on late pledges and the pledge manager?", answer: "Yes. Late pledges carry the same fees as campaign pledges. Kickstarter's pledge manager has no upfront cost, but Kickstarter deducts its usual fees from payments made inside it." },
-    { question: "Do fees apply to shipping?", answer: "Shipping collected during the campaign counts towards your goal, so it is part of the funding total the fees come from. Shipping paid later in Kickstarter's pledge manager is a payment made there, so the usual fees apply too." },
+    { question: "Do fees apply to shipping?", answer: "Shipping collected during the campaign counts toward your goal, so it is part of the funding total the fees come from. Shipping paid later in Kickstarter's pledge manager is a payment made there, so the usual fees apply too." },
     { question: "Can I charge US backers for tariffs after the campaign?", answer: "If Kickstarter accepts your project for the Tariff Manager, you can add a surcharge to each item in its pledge manager for backers with a US shipping address. Backers see the total at checkout." },
     { question: "Should I raise my funding goal to cover fees?", answer: "Yes. Set the goal from what you need after fees, then divide by the share you keep. With a $40 average pledge on the US schedule, an illustrative $30,000 need becomes a goal of about $32,800." },
   ],

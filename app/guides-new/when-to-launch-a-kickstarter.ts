@@ -13,11 +13,11 @@ export const guide: LaunchGuide = {
   servicePath: "/kickstarter-launch-services",
   serviceLabel: "Kickstarter launch services for tabletop games",
   sources: [
-    { label: "From concept to fulfillment: the complete Kickstarter journey (9 September 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/from-concept-to-fulfillment-the-complete-kickstarter-journey/" },
-    { label: "Best time to launch (18 February 2026, updated 25 August 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/best-time-to-launch/" },
+    { label: "From concept to fulfillment: the complete Kickstarter journey (September 9, 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/from-concept-to-fulfillment-the-complete-kickstarter-journey/" },
+    { label: "Best time to launch (February 18, 2026, updated August 25, 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/best-time-to-launch/" },
     { label: "My project is awaiting review. How does this work?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236415-my-project-is-awaiting-review-how-does-this-work" },
     { label: "What is the maximum project duration?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236742-what-is-the-maximum-project-duration" },
-    { label: "Board game Kickstarter marketing 101 (14 October 2020)", publisher: "Meeple Mountain", href: "https://www.meeplemountain.com/articles/board-game-kickstarter-marketing-101/" },
+    { label: "Board game Kickstarter marketing 101 (October 14, 2020)", publisher: "Meeple Mountain", href: "https://www.meeplemountain.com/articles/board-game-kickstarter-marketing-101/" },
     { label: "PAX Unplugged 2026 news", publisher: "PAX", href: "https://unplugged.paxsite.com/en-us/info/news.html" },
     { label: "Zinetopia 2027", publisher: "BackerKit", href: "https://www.backerkit.com/c/events/zinetopia-2027" },
     { label: "Exhibit at UK Games Expo 2027", publisher: "UK Games Expo", href: "https://www.ukgamesexpo.co.uk/exhibit/" },
@@ -27,7 +27,7 @@ export const guide: LaunchGuide = {
   sections: [
     {
       id: "short-answer",
-      title: "The short answer: get ready first, then pick the date",
+      title: "Get ready first, then pick the date",
       paragraphs: [
         "Most first board games need several months of preparation, and the right launch date is the first good one after you're actually ready. Ready means three things: people waiting for day one, a page strangers understand and numbers that work.",
         "We've seen more campaigns hurt by launching early than by waiting a month. A date picked for a birthday or a convention feels fixed, but backers never see why you chose it. They only see whether the page and the community were ready.",
@@ -40,7 +40,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "Preparation takes longer than most first timers expect, because several jobs have to overlap. Kickstarter's own September 2026 plan runs 50 days from the first kickoff meeting to launch, with setup, creative work and five weeks of paid testing happening side by side.",
         "That plan is built for a finished product with a team behind it. A first board game usually isn't there yet, so we plan a longer runway. The timeline below is a Guildframe planning example for a first board game, working back from launch day. It is not a Kickstarter rule.",
-        "Two points on it come straight from Kickstarter. It suggests allowing up to a month between sending a sample and seeing a post, so reviewer copies go out early. And review can take up to three business days, plus another three if Kickstarter asks for changes. So count backwards from the slowest job, not forwards from today.",
+        "Two points on it come straight from Kickstarter. It suggests allowing up to a month between sending a sample and seeing a post, so reviewer copies go out early. And review can take up to three business days, plus up to three more if Kickstarter asks for changes, so we submit at least two weeks before the launch date. Count backwards from the slowest job, not forwards from today.",
       ],
       source: 0,
       visual: {
@@ -48,16 +48,17 @@ export const guide: LaunchGuide = {
         title: "Guildframe example: the last eight weeks hold most of the launch work",
         events: [
           { when: "6 to 12 months before", label: "Finish the game", detail: "Playtest with strangers, start final art, ask for quotes" },
-          { when: "3 to 4 months before", label: "Open the prelaunch page", detail: "Email signup live, show the game every week" },
+          { when: "3 months or more before", label: "Start the email list", detail: "Signup page live, show the game every week" },
+          { when: "6 to 12 weeks before", label: "Open the Kickstarter prelaunch page", detail: "First time creators need review approval before it goes live" },
           { when: "8 weeks before", label: "Page draft and video", detail: "Reviewer copies out, since posts can take a month" },
           { when: "6 weeks before", label: "Share a preview", detail: "Show strangers the page, test ads if you use them" },
           { when: "4 weeks before", label: "Fix what readers missed", detail: "Draft every launch email" },
-          { when: "2 weeks before", label: "Submit for review", detail: "Up to three business days, more if changes are asked" },
+          { when: "2 weeks before", label: "Latest date to submit for review", detail: "Up to 3 business days, plus up to 3 more after changes" },
           { when: "1 week before", label: "Final checks", detail: "Read the page on a phone, schedule the emails" },
           { when: "Launch day", label: "Press launch yourself", detail: "A target date does not launch the project for you", highlight: true },
         ],
         caption: "Guildframe planning example for a first board game, not a Kickstarter rule. Kickstarter's own plan runs 50 days from kickoff to launch for a finished product.",
-        source: "Kickstarter blog (9 Sep 2026) and Kickstarter help on project review, checked 25 Nov 2026",
+        source: "Kickstarter blog (September 9, 2026) and Kickstarter help on project review and the prelaunch page, checked November 25, 2026",
       },
     },
     {
@@ -79,7 +80,7 @@ export const guide: LaunchGuide = {
           { name: "Numbers", items: ["Manufacturer quote in hand", "Shipping estimate for each region", "Goal covers fees and a reserve"] },
         ],
         caption: "The 30% figure is a 2020 rule of thumb, not a Kickstarter rule.",
-        source: "Meeple Mountain (14 Oct 2020), checked 25 Nov 2026",
+        source: "Meeple Mountain (October 14, 2020), checked November 25, 2026",
       },
     },
     {
@@ -111,7 +112,7 @@ export const guide: LaunchGuide = {
           { when: "Aug 5 to 8, 2027", label: "Gen Con", highlight: true },
           { when: "Oct 21 to 24, 2027", label: "SPIEL Essen", detail: "Essen, Germany", highlight: true },
         ],
-        caption: "Dates checked on each organizer's site on 25 Nov 2026. Zinetopia is BackerKit's zine event, worth knowing if you make a TTRPG zine.",
+        caption: "Dates checked on each organizer's site on November 25, 2026. Zinetopia is BackerKit's zine event, worth knowing if you make a TTRPG zine.",
         source: "PAX, BackerKit, UK Games Expo, Gen Con and SPIEL websites",
       },
     },
@@ -146,7 +147,7 @@ export const guide: LaunchGuide = {
       id: "plan-with-us",
       title: "Planning the date with us",
       paragraphs: [
-        "You can plan all of this yourself with a calendar and the three signals. The honest limit is that a first timer has no feel yet for how long each job really takes, so the runway often comes up short.",
+        "You can plan all of this yourself with a calendar and the three signals. What a first timer can't plan for yet is how long each job really takes, so the runway often comes up short.",
         "When we plan a launch with you, we set the date from readiness, build the backward plan and keep it updated as the work moves. That's part of our [Kickstarter launch services for tabletop games](/kickstarter-launch-services), and full campaign support at $5,900 covers the prelaunch page and emails, the campaign page, ads and the live campaign. If you're not sure you're ready, [tell us where you are](/buy#start-project) and we'll give you an honest read.",
       ],
     },

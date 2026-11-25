@@ -139,7 +139,7 @@ export const guide: LaunchGuide = {
       id: "rhythm",
       title: "A simple weekly rhythm until launch",
       paragraphs: [
-        "Marketing works best as a small, steady habit. Kickstarter's launch journey guide plans about 50 days of setup, creative work and paid testing before launch, and we like to start the community work earlier than that when the game is ready to show.",
+        "Marketing works best as a small, steady habit. Kickstarter's launch journey guide plans about 50 days of setup, creative work and paid testing before launch, and we like to start the community work earlier than that when the game is ready to show. In our planning example, the email list starts 3 months or more before launch, the Kickstarter prelaunch page opens 6 to 12 weeks out, and the project goes to review at least two weeks before the date.",
         "A good week for a first timer is simple. Post one thing that shows the game, answer every comment, invite new people to the prelaunch page and email list, and note where each new follower came from.",
         "To know when you have enough people, our guide to [how many followers you need before launch](/guides/kickstarter-followers-before-launch) turns your goal into a target. For the full schedule with weeks and budget lines, our [board game Kickstarter marketing plan](/guides/board-game-kickstarter-marketing-plan) lays it out. This page stays with the basics, so you know what each part of that plan is for.",
       ],
@@ -147,9 +147,9 @@ export const guide: LaunchGuide = {
     },
     {
       id: "help",
-      title: "Doing it yourself or getting help",
+      title: "Running the marketing yourself, or with us",
       paragraphs: [
-        "You can do all of this yourself, and plenty of creators do. The honest limit is time, because weekly posts, community replies, email, ad tests and finishing the game all land on the same person in the same months.",
+        "You can do all of this yourself, and plenty of creators do. The pressure point is that weekly posts, community replies, email, ad tests and finishing the game all fall to one person, often while the game itself still needs work.",
         "We plan and run prelaunch marketing for tabletop creators for a living. We write an audience brief from your game and playtest feedback, build the landing page and signup flow in your own accounts, and write the welcome email and prelaunch sequence. Then we set up tracking and run paid creative tests with spend limits you approve. You keep the game, the community voice and the final say, and ad spend and email software sit outside our fee.",
         "If you'd rather hand over the whole campaign, read our guide to [choosing a board game Kickstarter marketing agency](/guides/choose-board-game-kickstarter-marketing-agency) first. When you're ready, tell us about your game through [Kickstarter prelaunch marketing](/kickstarter-prelaunch-marketing), or see the full range of [Kickstarter launch services for tabletop games](/kickstarter-launch-services).",
       ],
@@ -166,7 +166,7 @@ export const guide: LaunchGuide = {
     },
     {
       question: "How early should I start marketing my Kickstarter?",
-      answer: "Kickstarter's launch journey guide plans about 50 days of prelaunch work before launch. We like to start community posting earlier, as soon as the game looks good on a table, and to set the launch date once followers are growing steadily.",
+      answer: "Kickstarter's launch journey guide plans about 50 days of prelaunch work before launch. We like to start community posting earlier, as soon as the game looks good on a table. Our planning example starts the email list 3 months or more before launch and opens the Kickstarter prelaunch page 6 to 12 weeks out.",
     },
     {
       question: "Do I have to run ads for a board game Kickstarter?",

@@ -8,7 +8,7 @@ export const guide: LaunchGuide = {
   seoTitle: "Kickstarter Agency Cost: Real Prices and Models",
   description: "Kickstarter agency cost depends on the model: fixed fee, retainer or a share of pledges. See published prices, what is never included and red flags.",
   tag: "Budget planning",
-  answer: "A Kickstarter agency usually charges a fixed fee per campaign, a monthly retainer or a share of the pledges it brings in, and ad spend and platform fees sit on top of all three. The flat prices we could find published today run from $1,800 for our campaign page package to $6,997 for BoostYourCampaign's largest package.",
+  answer: "A Kickstarter agency usually charges a fixed fee per campaign, a monthly retainer or a share of the pledges it brings in, and ad spend and platform fees sit on top of all three. For done for you launch work, BoostYourCampaign publishes flat prices of $3,499 to $6,997, and our full campaign support is a fixed $5,900.",
   relatedSlugs: ["choose-board-game-kickstarter-marketing-agency", "board-game-kickstarter-campaign-design-cost", "when-to-hire-kickstarter-campaign-designer"],
   servicePath: "/buy",
   serviceLabel: "See Guildframe's fixed price packages and book a launch",
@@ -41,7 +41,7 @@ export const guide: LaunchGuide = {
           { name: "Commission", points: ["Share of pledges the agency brings in", "Little or nothing up front", "BoostYourCampaign cites 5 to 15% of pledges"], verdict: "Costs most when you do well" },
         ],
         caption: "Market ranges are BoostYourCampaign's observations of other agencies, not quotes.",
-        source: "BoostYourCampaign agency pricing guide, January 2026, checked 25 Nov 2026",
+        source: "BoostYourCampaign agency pricing guide, January 2026, checked November 25, 2026",
       },
     },
     {
@@ -70,7 +70,7 @@ export const guide: LaunchGuide = {
       title: "What an agency fee never includes",
       paragraphs: [
         "Whichever model you pick, several large costs sit outside the agency's price, and a proposal that blurs them is hard to compare. BoostYourCampaign says it plainly about its own packages: the ad spend is yours and sits alongside the flat package price. We work the same way.",
-        "A fair comparison adds the same ad budget and the same platform fees to every proposal, then looks at what is left. Our advertising budget guide helps with the first number. Budget these separately from any agency fee:",
+        "A fair comparison adds the same ad budget and the same platform fees to every proposal, then looks at what is left. Our [Kickstarter advertising budget guide](/guides/kickstarter-advertising-budget-board-games) helps with the first number, and our breakdown of [Kickstarter fees](/guides/kickstarter-fees) covers the second. Budget these separately from any agency fee:",
       ],
       list: [
         "Ad spend on Meta, Google or other networks, paid to the ad platform",
@@ -85,29 +85,28 @@ export const guide: LaunchGuide = {
       id: "published-prices",
       title: "Published prices you can check today",
       paragraphs: [
-        "Very few agencies publish prices, so the numbers that are public are worth seeing side by side. We checked each of these on 25 November 2026.",
-        "BoostYourCampaign lists flat, done for you marketing packages from $3,499 to $6,997. Hero Time's consultant list puts independent crowdfunding consultants at about $20 to $75 an hour, usually for advice and calls while you do the work. Our own prices are $1,800 for the campaign page package and $5,900 for full campaign support.",
-        "These are not like for like. A consultant advises, a page package covers the page, and a full launch package covers prelaunch, ads and the live campaign too. So compare the scope list first and the headline price second.",
+        "Very few agencies publish prices, so the numbers that are public are worth seeing side by side. We checked each of these on November 25, 2026, and we only compare offers that cover the same kind of work.",
+        "For full launch work, BoostYourCampaign lists flat, done for you marketing from $3,499 to $6,997. It describes that range as strategy, a prelaunch funnel, the page and live campaign management, with the entry tier covering the prelaunch funnel only. Our full campaign support is $5,900 and covers the page, prelaunch, ads and the live campaign.",
+        "Smaller scopes sit on their own line. Hero Time's consultant list puts independent crowdfunding consultants at about $20 to $75 an hour, usually for advice and calls while you do the work. Our campaign page package is $1,800 and covers the page only, so set it beside other page quotes, as our guide to [board game Kickstarter campaign design cost](/guides/board-game-kickstarter-campaign-design-cost) does. So compare the scope list first and the headline price second.",
       ],
       source: 2,
       visual: {
-        kind: "bars",
-        title: "Published flat prices run from $1,800 to $6,997",
-        bars: [
-          { label: "Guildframe campaign page", value: 1800, display: "$1,800", highlight: true },
-          { label: "BoostYourCampaign, lowest package", value: 3499, display: "$3,499" },
-          { label: "Guildframe full campaign support", value: 5900, display: "$5,900", highlight: true },
-          { label: "BoostYourCampaign, highest package", value: 6997, display: "$6,997" },
+        kind: "compare",
+        title: "On a full launch scope, published flat prices run from $3,499 to $6,997",
+        columns: [
+          { name: "Guildframe full campaign support", points: ["Campaign page, copy and reward graphics", "Prelaunch signup page and emails", "Ad creative and paid advertising", "Live campaign checks and final handoff"], verdict: "$5,900 fixed", highlight: true },
+          { name: "BoostYourCampaign done for you", points: ["Entry tier: prelaunch funnel and emails", "Middle tier adds live ad management", "Top tier adds strategy, video and paid ads", "Range covers the page and live management"], verdict: "$3,499 to $6,997 flat" },
+          { name: "Market full service flat fee", points: ["Strategy, creative and launch management", "BoostYourCampaign's estimate for other agencies", "Not a quote from any one agency"], verdict: "$10,000 to $30,000" },
         ],
-        caption: "Scopes differ between packages. Ad spend is billed separately in all four.",
-        source: "BoostYourCampaign 2026 pricing guide and Guildframe packages, checked 25 Nov 2026",
+        caption: "Ad spend is billed separately in every column. Page only packages, such as our $1,800 campaign page package, are left out because they cover less work.",
+        source: "BoostYourCampaign 2026 pricing guide and Guildframe packages, checked November 25, 2026",
       },
     },
     {
       id: "scope",
       title: "What the price should buy",
       paragraphs: [
-        "A price only means something next to a written scope, so ask every agency for the same list. Our guide to choosing a board game Kickstarter marketing agency goes deeper on the questions, but these five do most of the work:",
+        "A price only means something next to a written scope, so ask every agency for the same list. Our guide to [choosing a board game Kickstarter marketing agency](/guides/choose-board-game-kickstarter-marketing-agency) goes deeper on the questions, but these five do most of the work:",
       ],
       list: [
         "Which pages, emails, graphics and ads are included, and how many revisions",
@@ -133,18 +132,18 @@ export const guide: LaunchGuide = {
     },
     {
       id: "guildframe-prices",
-      title: "What Guildframe charges, and the honest limit",
+      title: "What Guildframe charges, and what a fixed price leaves to you",
       paragraphs: [
         "We publish our prices because a creator should know the cost before the first call.",
         "The campaign page package is $1,800. It covers your Kickstarter or Gamefound page from the first line of copy to the published page, including page structure, campaign copy, section graphics and reward presentation using your artwork. Full campaign support is $5,900. It covers the campaign page, the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff.",
         "Both are fixed prices, and we agree the scope and schedule before work starts, so the fee does not change with your pledge total. Ad spend, software, platform fees and external production are separate. Before you pay anything, you can ask for a free opening mockup: one opening campaign section built from your artwork, with no payment or obligation.",
-        "The honest limit of a fixed price is that you carry the ad spend yourself. If you would rather pay only from results, a commission agency may suit you better, and that is a fair choice. If a fixed price fits, our Kickstarter launch services for tabletop games page explains the full launch, and the buy page has both packages and the booking form.",
+        "A fixed price does leave the ad spend with you. If you would rather pay only from results, a commission agency may suit you better, and that is a fair choice. If a fixed price fits, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) page explains the full launch, and [the buy page](/buy) has both packages and the booking form.",
       ],
       source: 4,
     },
   ],
   faqs: [
-    { question: "How much does a Kickstarter marketing agency cost?", answer: "It depends on the model and the scope. The flat packages we found published run from $1,800 for our campaign page package to $6,997 for BoostYourCampaign's largest package. BoostYourCampaign's guide puts market retainers at about $3,000 to $15,000 or more a month and commissions at 5 to 15% of pledges." },
+    { question: "How much does a Kickstarter marketing agency cost?", answer: "It depends on the model and the scope. For full launch work, BoostYourCampaign publishes flat prices of $3,499 to $6,997 and our full campaign support is $5,900. BoostYourCampaign's guide puts market retainers at about $3,000 to $15,000 or more a month and commissions at 5 to 15% of pledges." },
     { question: "Is ad spend included in an agency's price?", answer: "Usually not. BoostYourCampaign and Guildframe both bill ad spend separately from the package price, so add the same ad budget to every proposal you compare." },
     { question: "Is a commission agency cheaper than a fixed fee?", answer: "Only if the campaign raises less than you expect. A percentage grows with your total, so on a strong campaign it can cost more than a fixed fee. Ask how the agency decides which pledges it brought in." },
     { question: "What is the difference between a consultant and an agency?", answer: "A consultant advises and you do the work. Hero Time's list puts consultants at about $20 to $75 an hour. An agency does the work for you, for a fee or a share of the money raised." },
