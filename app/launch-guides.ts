@@ -6,6 +6,14 @@ import {contentDates} from "./content-dates";
 import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
 import {decisionGuides} from "./launch-decision-guides";
+import {guide as ngBoardGameTariffsShippingUs} from "./guides-new/board-game-tariffs-shipping-us";
+import {guide as ngKickstarterAgencyCost} from "./guides-new/kickstarter-agency-cost";
+import {guide as ngKickstarterFees} from "./guides-new/kickstarter-fees";
+import {guide as ngKickstarterFollowersBeforeLaunch} from "./guides-new/kickstarter-followers-before-launch";
+import {guide as ngKickstarterImageSizes} from "./guides-new/kickstarter-image-sizes";
+import {guide as ngTcgKickstarterLaunchGuide} from "./guides-new/tcg-kickstarter-launch-guide";
+import {guide as ngTerrainAndDiceKickstarterLaunchGuide} from "./guides-new/terrain-and-dice-kickstarter-launch-guide";
+import {guide as ngTtrpgKickstarterLaunchGuide} from "./guides-new/ttrpg-kickstarter-launch-guide";
 export type LaunchSection={id:string;title:string;paragraphs:string[];list?:string[];table?:{headers:string[];rows:string[][]};source?:number;visual?:GuideVisualData};
 export type LaunchGuide={published?:string;updated?:string;slug:string;title:string;seoTitle?:string;relatedSlugs:string[];servicePath:string;serviceLabel:string;description:string;tag:string;answer:string;sections:LaunchSection[];faqs:{question:string;answer:string}[];sources:{label:string;publisher:string;href:string}[]};
 export const launchGuideDate="2026-09-30";
@@ -14,6 +22,15 @@ const originalLaunchGuides:LaunchGuide[]=[
   ...decisionGuides,
   ...marketingGuides,
   ...newLaunchGuides,
+  // seo-pass-2026-11-25 new guides
+  ngBoardGameTariffsShippingUs,
+  ngKickstarterAgencyCost,
+  ngKickstarterFees,
+  ngKickstarterFollowersBeforeLaunch,
+  ngKickstarterImageSizes,
+  ngTcgKickstarterLaunchGuide,
+  ngTerrainAndDiceKickstarterLaunchGuide,
+  ngTtrpgKickstarterLaunchGuide,
 
 
   {

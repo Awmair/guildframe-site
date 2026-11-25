@@ -10,7 +10,6 @@ import { absoluteUrl, siteConfig } from "../site-config";
 import { campaignService, launchService } from "../seo-entities";
 import { campaignFaqs, categoryFaqs, gameCategories } from "../campaign-content";
 import { campaignModifiedDate, formatContentDate } from "../content-dates";
-import { GuideVisual } from "./GuideVisual";
 import { BoardDiorama, LaunchTrack, StandeeTile, trackLines } from "./LaunchServices";
 import { landmarks } from "./world/board-data";
 import { Icon, Roll } from "./chrome/Icon";
