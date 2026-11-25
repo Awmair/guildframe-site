@@ -23,6 +23,7 @@ export const contentDates = {
   workPublished: "2026-10-17",
   campaignServices: "2026-10-17",
   serviceHubs: "2026-11-25",
+  productCampaigns: "2026-11-25",
   campaignDesign: "2026-11-25",
   kickstarterAdvertising: "2026-11-05",
   marketingPlan: "2026-11-05",
@@ -63,5 +64,6 @@ export const contentDates = {
 
 export function campaignModifiedDate(slug: string) {
   if (slug === "campaign-design") return contentDates.campaignDesign;
+  if (slug === "kickstarter-product-campaign-design") return contentDates.productCampaigns;
   return contentDates.serviceHubs;
 }

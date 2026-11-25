@@ -72,7 +72,7 @@ export default function WorkPage() {
         <div className="wk-wrap">
           <div className="wk-beyond-head">
             <h2 className="wk-h2" id="beyond-title" data-reveal="lines"><span className="w-line"><span>Beyond <em>tabletop</em></span></span></h2>
-            <p>Client campaigns outside games. The totals are public Kickstarter figures and are my clients’ results.</p>
+            <p>Client campaigns outside games. The totals are public Kickstarter figures and are my clients’ results. Planning a product of your own? See <Link className="w-link" href="/kickstarter-product-campaign-design">Kickstarter campaign design for product launches</Link>.</p>
           </div>
           <ul className="wk-beyond-list">{beyondTabletop.map(item => <li className="wk-mini" key={item.name}>
             <a className="wk-mini-media" href={item.href} target="_blank" rel="noopener noreferrer" tabIndex={-1} aria-hidden="true" data-cursor-label="View on Kickstarter" data-reveal="media">
