@@ -59,7 +59,7 @@ export default function SellExpansionsAddonsShopifyPage() {
       slug="sell-board-game-expansions-add-ons-shopify"
       category="Tabletop catalog structure"
       title="How to Sell Board Game Expansions, Add ons and Bundles on Shopify"
-      description="Decide which items are separate products, which are variants and which are bundles, then turn old pledge tiers into a catalogue a new buyer can follow."
+      description="Decide which items are separate products, which are variants and which are bundles, then turn old pledge tiers into a catalog a new buyer can follow."
       answer="Sell each board game expansion as its own Shopify product with the required base game named beside the price. Use variants only for versions of the same box, use bundles for fixed sets such as core plus expansion, and break pledge tiers into those products instead of copying a tier as a product."
       published="2026-07-17"
       updated={contentDates.expansionsAndAddons}
@@ -103,7 +103,7 @@ export default function SellExpansionsAddonsShopifyPage() {
         { id: "pledge-tiers", label: "Break up the pledge tiers" },
         { id: "compatibility", label: "The compatibility line" },
         { id: "collections", label: "Collections and cross links" },
-        { id: "catalogue-test", label: "Test the catalog" },
+        { id: "catalog-test", label: "Test the catalog" },
         { id: "faq", label: "Quick answers" },
       ]}
     >
@@ -247,7 +247,7 @@ export default function SellExpansionsAddonsShopifyPage() {
         checks.
       </p>
 
-      <h2 id="catalogue-test">Test the catalog, not just the checkout</h2>
+      <h2 id="catalog-test">Test the catalog, not just the checkout</h2>
       <p>
         Catalog mistakes hide until stock runs out. So we test the structure with
         a few deliberate edge cases before the store opens.

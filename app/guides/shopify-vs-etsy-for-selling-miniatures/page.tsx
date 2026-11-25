@@ -48,7 +48,7 @@ export default function ShopifyVsEtsyMiniaturesPage() {
       slug="shopify-vs-etsy-for-selling-miniatures"
       category="Miniature store platform comparison"
       title="Shopify vs Etsy for Selling Miniatures and Terrain"
-      description="Compare Etsy’s marketplace with a Shopify store for miniature products, customer discovery, fees and catalogue control."
+      description="Compare Etsy’s marketplace with a Shopify store for miniature products, customer discovery, fees and catalog control."
       answer="Etsy offers marketplace search and a listing based setup. Shopify gives you a dedicated store with control over product pages, collections and customer checkout. Choose based on how customers find you and how you want to manage the catalog. If you use both, keep stock and delivery information consistent."
       published="2026-07-23"
       updated={contentDates.shopifyVsEtsyMiniatures}

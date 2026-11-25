@@ -54,7 +54,7 @@ export default function BestThemesGuide() {
       slug="best-shopify-themes-for-board-games"
       category="Board game Shopify themes"
       title="6 Best Shopify Themes for Board Games and Tabletop Stores in 2026"
-      description="Compare six Shopify themes for board game stores by catalogue size, product information and the setup work they need."
+      description="Compare six Shopify themes for board game stores by catalog size, product information and the setup work they need."
       answer="This comparison covers Horizon and Dawn for free starting points, Novaplay for larger game catalogs, Playtime for cards and collectibles, Sunrise for a bright storefront and Boost for promotional layouts. Test a real game product in a theme trial before choosing."
       published="2026-07-16"
       updated={contentDates.bestBoardGameThemes}

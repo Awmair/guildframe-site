@@ -35,7 +35,7 @@ const afterFundingGuides = [
   },
   {
     title: "Best Shopify Themes for Board Games and Tabletop Creators",
-    copy: "Compare Shopify themes by catalogue fit, features and the work needed to set them up.",
+    copy: "Compare Shopify themes by catalog fit, features and the work needed to set them up.",
     href: "/guides/best-shopify-themes-for-board-games",
     tag: "Theme comparison",
   },
@@ -192,7 +192,7 @@ export default function GuidesPage() {
           <nav className="guide-start-here gd-deal" aria-label="Start with the decision you need to make" data-reveal="rise">
             <Link href="/guides/board-game-kickstarter-marketing-plan" data-title="Marketing plan"><span>Make the plan</span><strong>What needs to happen before launch?</strong><p>Put the product, audience and campaign in a practical order.</p><Icon name="arrow" size={20}/></Link>
             <Link href="/guides/choose-board-game-kickstarter-marketing-agency" data-title="Compare campaign help"><span>Compare campaign help</span><strong>Which work should you hire for?</strong><p>Compare deliverables, fees and responsibilities before choosing an agency.</p><Icon name="arrow" size={20}/></Link>
-            <Link href="/guides/best-shopify-themes-for-board-games" data-title="Shopify themes"><span>Plan your store</span><strong>Which Shopify theme fits your games?</strong><p>Compare themes against your catalogue, budget and setup work.</p><Icon name="arrow" size={20}/></Link>
+            <Link href="/guides/best-shopify-themes-for-board-games" data-title="Shopify themes"><span>Plan your store</span><strong>Which Shopify theme fits your games?</strong><p>Compare themes against your catalog, budget and setup work.</p><Icon name="arrow" size={20}/></Link>
           </nav>
         </header>
 
@@ -208,7 +208,7 @@ export default function GuidesPage() {
               </section>)}
             </div>
             <section className="gd-group gd-group--after" id="after-funding" aria-labelledby="after-funding-title" data-guide-heading="after-funding-guides">
-              <div className="gd-group-head"><h2 className="gd-group-title" id="after-funding-title">After funding</h2><p>Plan fulfilment, ongoing orders and a permanent home for the game.</p></div>
+              <div className="gd-group-head"><h2 className="gd-group-title" id="after-funding-title">After funding</h2><p>Plan fulfillment, ongoing orders and a permanent home for the game.</p></div>
               <div className="guides-grid gd-rows" id="after-funding-guides" aria-label="After funding guides">{afterFundingGuides.map((guide, index) => <GuideRow guide={guide} index={index + campaignGuides.length} stage="after" key={guide.href}/>)}</div>
             </section>
             <p className="gf-library-art-note">Guide illustrations show original fictional game concepts.</p>
