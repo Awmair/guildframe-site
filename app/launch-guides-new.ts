@@ -11,26 +11,166 @@ const guide = (content: Omit<LaunchGuide, "published" | "updated" | "servicePath
 
 export const newLaunchGuides: LaunchGuide[] = [
   guide({
-    slug: "kickstarter-prelaunch-page-guide",
-    title: "Kickstarter Prelaunch Page: What to Show Before Your Game Launches",
-    seoTitle: "Kickstarter Prelaunch Page Guide for Tabletop Games",
-    description: "Plan your tabletop Kickstarter prelaunch page, understand how it differs from a preview link and check what followers see on mobile.",
-    tag: "Prelaunch",
-    answer: "Use the public prelaunch page to introduce your game and let people request a launch notification. Use the preview link to get feedback on the full draft campaign. Keep the game's premise clear in the title, subtitle and image: the Kickstarter app does not show the extra prelaunch description available on desktop.",
-    relatedSlugs: ["kickstarter-review-launch-timeline", "board-game-kickstarter-gameplay-rulebook", "when-to-hire-kickstarter-campaign-designer"],
-    sources: [source("Setting up your project's prelaunch page", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page"), project],
-    sections: [
-      { id: "two-links", title: "Choose the right link for the job", paragraphs: ["A prelaunch page introduces the project before funding opens. A preview link lets someone inspect your draft campaign, including the story and rewards. They are different URLs, so label them when you share them.", "For example, send the preview to a playtester who needs to check the reward contents. Share the public prelaunch link with someone who wants to know when the game launches. Neither action proves that the person will pledge."], source: 0 },
-      { id: "opening", title: "Make the game understandable without the long description", paragraphs: ["Use a title people can remember, a short subtitle about what players do and an image that shows the actual product. A setting name on its own gives a new visitor little to go on.", "A cooperative card game might say that players build a rescue team and try to bring everyone home. An RPG supplement should name its supported system, where applicable. A terrain project should make clear whether it offers printed pieces, files or both.", "Kickstarter's desktop prelaunch page can include an editable description, but its app omits that added text. Check the title, subtitle and image as a complete introduction before relying on the longer copy."], source: 0 },
-      { id: "feedback", title: "Ask for feedback that you can use", paragraphs: ["Give preview readers a few specific tasks. Ask them to explain the game in one sentence, choose a reward and find the shipping information. If they need your help, record where they got stuck.", "Keep a list of confirmed fixes rather than collecting scattered comments across messages. Reward names, component quantities and delivery wording deserve a final check by the person responsible for those facts."], list: ["Can a new reader tell whether this is a board game, card game, book or accessory?", "Does the opening image show the reward rather than decorative artwork alone?", "Are draft art and prototype components labelled?", "Do the preview's reward details match the story?"] },
-      { id: "timing", title: "Leave time for review and sharing", paragraphs: ["First-time Kickstarter creators get access to the Promotion tab after project approval. Repeat creators can access it earlier. Kickstarter recommends sharing the prelaunch page at least one week before the intended launch; treat that as a platform recommendation, not a guaranteed audience-building period.", "A planned date does not launch the campaign automatically. Assign the launch action to a named person and check the approved campaign again before publishing."], source: 0 },
-      { id: "followers", title: "Use updates to keep followers informed", paragraphs: ["Kickstarter does not let you directly message prelaunch followers. Its prelaunch updates can notify them by email. Use those updates for useful changes: the confirmed date, a playable preview or an explanation of what comes in the box.", "Keep your public message current if the schedule changes. A working page and an honest date are more useful than a countdown you can no longer meet."], source: 0 },
+    "slug": "kickstarter-prelaunch-page-guide",
+    "title": "Kickstarter Prelaunch Page: What to Show Before Your Game Launches",
+    "seoTitle": "Kickstarter Prelaunch Page Guide for Tabletop Games",
+    "description": "What a tabletop Kickstarter prelaunch page should show, how it differs from the preview link, when to share it and what followers see in the app.",
+    "tag": "Prelaunch",
+    "updated": "2026-11-25",
+    "servicePath": "/kickstarter-prelaunch-marketing",
+    "serviceLabel": "Kickstarter prelaunch marketing for tabletop games",
+    "answer": "A Kickstarter prelaunch page is the public page where people tap Notify me on launch and get an email when your campaign goes live. Its title, subtitle and image have to explain the game on their own, because the Kickstarter app leaves out the longer prelaunch description.",
+    "relatedSlugs": [
+      "kickstarter-followers-before-launch",
+      "kickstarter-prelaunch-page-vs-landing-page",
+      "kickstarter-prelaunch-email-list",
+      "kickstarter-review-launch-timeline"
     ],
-    faqs: [
-      { question: "Is a preview page the same as a prelaunch page?", answer: "No. The preview shows the draft campaign for feedback. The public prelaunch page introduces the project and lets people request a launch notification. They use different URLs." },
-      { question: "Can I message everyone who follows my prelaunch page?", answer: "You cannot directly message those followers through Kickstarter. You can publish prelaunch updates, which can notify followers by email." },
-      { question: "Does Guildframe's free mockup cover a full prelaunch campaign?", answer: "The free mockup covers an opening campaign section using your supplied artwork. The campaign design project and additional prelaunch assets are agreed in the written brief." },
+    "sources": [
+      {
+        "label": "Setting up your project's prelaunch page",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page"
+      },
+      {
+        "label": "What to share on a Kickstarter project page",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236738-what-information-should-i-share-on-my-project-page"
+      }
     ],
+    "sections": [
+      {
+        "id": "two-links",
+        "title": "Use the prelaunch link and the preview link for different jobs",
+        "paragraphs": [
+          "Kickstarter gives you two different links before launch, so we label them every time we share one. The public prelaunch page introduces the project and collects followers. The preview link shows the full draft campaign, including the story and rewards.",
+          "Send the preview to a playtester who needs to check reward contents, and the prelaunch link to someone who wants to know when the game goes live. Both pages carry the Notify me on launch button, but neither click is a pledge."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "The prelaunch page gathers followers; the preview link gathers feedback",
+          "columns": [
+            {
+              "name": "Public prelaunch page",
+              "points": [
+                "Introduces the game before funding opens",
+                "Collects followers through Notify me on launch",
+                "The link for posts, ads and emails"
+              ],
+              "verdict": "Promote this one",
+              "highlight": true
+            },
+            {
+              "name": "Preview link",
+              "points": [
+                "Shows the full draft story and rewards",
+                "Works while preview sharing is turned on",
+                "The link for playtesters and reviewers"
+              ],
+              "verdict": "Use it for feedback"
+            }
+          ],
+          "source": "Kickstarter Help Center, prelaunch page setup"
+        },
+        "source": 0
+      },
+      {
+        "id": "opening",
+        "title": "Make the game clear without the long description",
+        "paragraphs": [
+          "The first view does most of the work, so we write it before anything else. You need a title people can remember, a subtitle that says what players do and an image of the actual product. A setting name on its own gives a new visitor very little.",
+          "For example, a cooperative card game might say players build a rescue team and try to bring everyone home. An RPG supplement should name the system it supports. A terrain project should say whether it offers printed pieces, files or both.",
+          "Kickstarter's desktop prelaunch page can carry an extra description, but the app leaves that text out. That's why we check the title, subtitle and image as a complete introduction before relying on longer copy."
+        ],
+        "source": 0
+      },
+      {
+        "id": "feedback",
+        "title": "Ask preview readers for feedback you can use",
+        "paragraphs": [
+          "Vague praise doesn't fix a page, so we give preview readers a few small tasks. Ask them to explain the game in one sentence, pick a reward and find the shipping information. If they need your help, note exactly where they got stuck.",
+          "Then keep one list of confirmed fixes instead of comments scattered across messages. Reward names, component counts and delivery wording deserve a final check from whoever owns those facts. These four questions are a good place to start."
+        ],
+        "list": [
+          "Can a new reader tell whether this is a board game, card game, book or accessory?",
+          "Does the opening image show the reward, not only decorative art?",
+          "Are draft art and prototype components labelled?",
+          "Do the reward details in the preview match the story?"
+        ]
+      },
+      {
+        "id": "timing",
+        "title": "Leave time to share the page before launch",
+        "paragraphs": [
+          "When you can start depends on whether you have launched before. First time creators get the Promotion tab after the project is submitted and approved, while repeat creators can open it ahead of review.",
+          "Kickstarter recommends sharing the prelaunch page at least one week before your intended launch date. We treat that as a floor, not a promise of followers. A planned date also doesn't launch the campaign by itself, so name the person who presses launch and have them check the approved campaign first."
+        ],
+        "visual": {
+          "kind": "timeline",
+          "title": "Kickstarter suggests sharing the prelaunch page at least a week before launch",
+          "events": [
+            {
+              "when": "After approval",
+              "label": "Promotion tab opens",
+              "detail": "Earlier for repeat creators"
+            },
+            {
+              "when": "A week or more out",
+              "label": "Share the prelaunch page",
+              "detail": "Kickstarter's recommended minimum",
+              "highlight": true
+            },
+            {
+              "when": "Before launch",
+              "label": "Post prelaunch updates",
+              "detail": "Followers get an email for each one"
+            },
+            {
+              "when": "Launch day",
+              "label": "Followers get a launch email",
+              "detail": "Sent when the project goes live"
+            }
+          ],
+          "source": "Kickstarter Help Center, prelaunch page setup"
+        },
+        "source": 0
+      },
+      {
+        "id": "followers",
+        "title": "Keep followers informed, then send them to launch",
+        "paragraphs": [
+          "Followers are an audience you reach only through the platform. Kickstarter doesn't let you message them directly, but a prelaunch update notifies current followers and stays visible on the page. Use updates for real news, such as the confirmed date, a playable preview or what comes in the box.",
+          "If the schedule moves, update the public message, because an honest date beats a countdown you can't meet. Our prelaunch marketing service covers this whole stretch for tabletop games: the prelaunch page, your own landing page, the email route and the updates in between."
+        ],
+        "source": 0
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is a preview page the same as a prelaunch page?",
+        "answer": "No. The preview shows the full draft campaign for feedback, while the public prelaunch page introduces the project and collects followers. They have different URLs, so label each one when you share it."
+      },
+      {
+        "question": "When should I share my Kickstarter prelaunch page?",
+        "answer": "Kickstarter recommends sharing it at least one week before your intended launch date. First time creators can set it up once the project is approved; repeat creators get access before review."
+      },
+      {
+        "question": "Can I message everyone who follows my prelaunch page?",
+        "answer": "Not directly. You can post a prelaunch update, which notifies current followers by email and stays visible to anyone who visits the page."
+      },
+      {
+        "question": "How many followers should I have before launching?",
+        "answer": "Kickstarter doesn't set a minimum. A follow is a request for a launch email, not a pledge, so we read the count next to your email list and your funding goal. Our guide to Kickstarter followers before launch explains how to judge it."
+      },
+      {
+        "question": "Does the Kickstarter app show my full prelaunch page?",
+        "answer": "No. Kickstarter says prelaunch pages viewed in its app leave out the project description section. The title, subtitle and image need to explain the game on their own."
+      },
+      {
+        "question": "Does Guildframe's free mockup cover a prelaunch campaign?",
+        "answer": "The free mockup covers one opening campaign section using your artwork, with no payment or obligation. Prelaunch pages and email are scoped in writing as part of our prelaunch marketing work."
+      }
+    ]
   }),
   guide({
     slug: "board-game-kickstarter-gameplay-rulebook",
@@ -100,48 +240,389 @@ export const newLaunchGuides: LaunchGuide[] = [
     ],
   }),
   guide({
-    slug: "kickstarter-shipping-delivery-page",
-    title: "How to Explain Kickstarter Shipping Costs and Delivery",
-    seoTitle: "Kickstarter Shipping Costs & Delivery: Creator Page Guide",
-    description: "Write a clear shipping section for a tabletop campaign: collection timing, regional estimates, reward delivery dates and the information backers need.",
-    tag: "Shipping & delivery",
-    answer: "Tell backers where you ship, whether shipping is included, when it will be charged and how the estimate was calculated. Separate production, shipment and expected arrival in the timeline. Use confirmed fulfilment information and label estimates; page design cannot turn an unconfirmed rate into a delivery promise.",
-    relatedSlugs: ["kickstarter-reward-tier-graphics", "kickstarter-stretch-goals-planning", "kickstarter-prototype-risks-disclosure"],
-    sources: [source("Options for collecting shipping costs", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236769-what-options-do-i-have-for-charging-shipping-costs"), source("Estimated delivery dates", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236744-what-does-estimated-delivery-date-mean"), source("Planning reward shipping", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236521-how-do-i-charge-shipping-on-my-rewards")],
-    sections: [
-      { id: "collection", title: "State when the shipping charge is collected", paragraphs: ["Kickstarter distinguishes shipping collected during the pledge from shipping collected later through a pledge manager. Shipping collected at pledge counts towards the funding goal. Set your actual collection method first, then make the story and reward fields agree with it.", "If a third-party service will collect shipping later, Kickstarter recommends explaining that in the story with the timing, method and an estimate where possible. A label saying 'shipping later' still leaves a reader wondering what they need to budget."], source: 0 },
-      { id: "estimates", title: "Build a regional table from real quotes", paragraphs: ["Get the package size, weight, fulfilment origin and destination coverage from whoever owns the delivery plan. Include the effect of likely bundles and add-ons before asking for rates.", "Use the table below as a worksheet. It intentionally contains no sample prices. Replace the fields with approved figures, date the estimate and explain any exclusions close to the table."], table: { headers: ["Field", "Creator-supplied information"], rows: [["Destination", "Supported country or region"], ["Reward or package", "Named tier and any combined extras"], ["Estimated charge", "Currency and approved range or amount"], ["Collection", "At pledge or later, through the chosen system"], ["Quote date", "Date and conditions of the fulfilment estimate"], ["Exclusions", "Remote areas, unavailable destinations or other confirmed limits"]] } },
-      { id: "dates", title: "Separate production from delivery", paragraphs: ["A timeline can show file approval, manufacturing, freight, warehouse intake and final dispatch as separate stages. Do not label the factory completion date as the date a backer will receive the game.", "Kickstarter requires an estimated delivery date for each reward tier. For a bundle, its guidance says that estimate should reflect when all the contents are expected to arrive. Match the native tier field to the timeline and explain known uncertainties."], source: 1 },
-      { id: "wording", title: "Give the page designer approved wording", paragraphs: ["Send the collection method, supported destinations, approved estimates and timeline in the brief. If tax or duty wording is needed, have the person responsible for those obligations approve it before it appears in a graphic.", "A useful sentence names the actual plan: 'Shipping will be collected through [system] after the campaign. The current estimate for [region and reward] is [approved amount], based on [date].' Replace every bracket before publishing. Do not leave a plausible-looking placeholder price on the page." ] },
-      { id: "changes", title: "Plan how you will communicate changes", paragraphs: ["Name who will update backers if production or rates change. Kickstarter expects updates explaining delivery delays. Keep the current situation, the next step and the revised estimate visible in those updates.", "Run a final consistency check across the story, native rewards, FAQ and any pledge-manager explanation. A careful shipping section loses its value if another part of the page says the charge is included."], source: 1 },
+    "slug": "kickstarter-shipping-delivery-page",
+    "title": "How to Explain Kickstarter Shipping Costs and Delivery",
+    "seoTitle": "Kickstarter Shipping: Explain Costs and Delivery",
+    "description": "Write the shipping section of a tabletop Kickstarter: when shipping is charged, regional estimates, delivery dates per tier and what backers should budget.",
+    "tag": "Shipping & delivery",
+    "updated": "2026-11-25",
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign design for tabletop games",
+    "answer": "On a Kickstarter page, say where you ship, whether shipping is charged at pledge or later through a pledge manager, and what each region is likely to pay, with the date of that estimate. Then show production, freight and delivery as separate stages, so backers can budget and know the arrival date is an estimate.",
+    "relatedSlugs": [
+      "board-game-tariffs-shipping-us",
+      "kickstarter-reward-tier-graphics",
+      "kickstarter-prototype-risks-disclosure",
+      "kickstarter-stretch-goals-planning"
     ],
-    faqs: [
-      { question: "Does shipping collected during a pledge count towards the Kickstarter goal?", answer: "Yes. Kickstarter's cited shipping guidance says shipping collected at pledge counts towards the funding goal. Plan that with the actual project budget." },
-      { question: "Can I show estimated shipping prices?", answer: "Label them as estimates, state their date and assumptions, and use approved fulfilment information. Explain collection timing and exclusions beside the figures." },
-      { question: "Which delivery date should a bundle show?", answer: "Kickstarter says the estimated date should reflect when all items in the bundle are expected to arrive. Keep the reward field and campaign timeline consistent." },
+    "sources": [
+      {
+        "label": "Options for collecting shipping costs",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236769-what-options-do-i-have-for-charging-shipping-costs"
+      },
+      {
+        "label": "Estimated delivery dates",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236744-what-does-estimated-delivery-date-mean"
+      },
+      {
+        "label": "Planning reward shipping",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236521-how-do-i-charge-shipping-on-my-rewards"
+      }
     ],
+    "sections": [
+      {
+        "id": "collection",
+        "title": "State when the shipping charge is collected",
+        "paragraphs": [
+          "The first decision is when you collect shipping, and Kickstarter asks you to set it in the project's Preferences tab. You can charge it during the campaign, per reward tier and add on, or collect it later through a pledge manager. Shipping collected at pledge counts toward your funding goal.",
+          "If a third party service will collect shipping after the campaign, Kickstarter recommends a section on the page that says so, explains how you will collect it and gives an estimated cost where possible. A label that just says shipping later still leaves backers guessing what to budget."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "Shipping charged at pledge counts toward your goal; charging later needs a clear note",
+          "columns": [
+            {
+              "name": "Collect at pledge",
+              "points": [
+                "Set per reward tier and add on",
+                "Counts toward the funding goal",
+                "Needs rates you can stand behind today"
+              ]
+            },
+            {
+              "name": "Collect later",
+              "points": [
+                "Through a pledge manager after funding",
+                "Page says when, how and roughly how much",
+                "Lets you use firmer quotes"
+              ]
+            }
+          ],
+          "source": "Kickstarter Help Center, shipping options"
+        },
+        "source": 0
+      },
+      {
+        "id": "estimates",
+        "title": "Build a regional table from real quotes",
+        "paragraphs": [
+          "Real quotes make a credible table, so we ask whoever owns the delivery plan for package size, weight, fulfilment origin and destinations. Include likely bundles and add ons before asking for rates.",
+          "Use the table below as a worksheet. It has no sample prices on purpose, so fill it with approved figures, date the estimate and explain any exclusions right beside it.",
+          "If you ship games made abroad into the United States, import duty belongs in this conversation too. Our guide to board game tariffs and US shipping covers the current rules, and only wording your fulfilment partner confirms should go on the page."
+        ],
+        "table": {
+          "headers": [
+            "Field",
+            "What you supply"
+          ],
+          "rows": [
+            [
+              "Destination",
+              "Supported country or region"
+            ],
+            [
+              "Reward or package",
+              "Named tier and any combined extras"
+            ],
+            [
+              "Estimated charge",
+              "Currency and approved range or amount"
+            ],
+            [
+              "Collection",
+              "At pledge or later, through the chosen system"
+            ],
+            [
+              "Quote date",
+              "Date and conditions of the fulfilment estimate"
+            ],
+            [
+              "Exclusions",
+              "Remote areas, unavailable destinations or other confirmed limits"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "dates",
+        "title": "Separate production from delivery",
+        "paragraphs": [
+          "Backers read your timeline as a promise, so we split it into stages. File approval, manufacturing, freight, warehouse intake and final dispatch each get their own line, and the factory finish date is never labelled as the day a backer receives the game.",
+          "Kickstarter requires an estimated delivery date on each reward tier. For a bundle, it says the estimate should reflect when all the contents are expected to arrive. Match the tier field to the timeline and explain the known uncertainties."
+        ],
+        "visual": {
+          "kind": "timeline",
+          "title": "The delivery date on a reward is the last stage, not the factory date",
+          "events": [
+            {
+              "when": "Stage 1",
+              "label": "File approval"
+            },
+            {
+              "when": "Stage 2",
+              "label": "Manufacturing"
+            },
+            {
+              "when": "Stage 3",
+              "label": "Freight"
+            },
+            {
+              "when": "Stage 4",
+              "label": "Warehouse intake"
+            },
+            {
+              "when": "Stage 5",
+              "label": "Delivery to backers",
+              "detail": "The date to use on each reward tier",
+              "highlight": true
+            }
+          ],
+          "caption": "Example stages. Your fulfilment plan sets the real ones.",
+          "source": "Kickstarter Help Center, estimated delivery dates"
+        },
+        "source": 1
+      },
+      {
+        "id": "wording",
+        "title": "Give the page designer approved wording",
+        "paragraphs": [
+          "Send the collection method, supported destinations, approved estimates and timeline in the brief. If tax or duty wording is needed, have the person responsible for those obligations approve it before it appears in a graphic.",
+          "A useful sentence names the collection system, the region, the reward, the approved amount and the date of the quote. Write it with every detail filled in, and never leave a plausible looking placeholder price on the page."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Plan how you will communicate changes",
+        "paragraphs": [
+          "Name who will update backers if production or rates change. Kickstarter expects updates that explain delivery delays, so keep the current situation, the next step and the revised estimate in each one.",
+          "Finally, check the story, native rewards, FAQ and any pledge manager note against each other. A careful shipping section loses its value if another part of the page says shipping is included, which is why we run that cross check in our campaign design work before you launch."
+        ],
+        "source": 1
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does shipping collected during a pledge count toward the Kickstarter goal?",
+        "answer": "Yes. Kickstarter says funds pledged toward shipping count toward the project's goal, so plan for that in your budget."
+      },
+      {
+        "question": "Should I charge shipping at pledge or later?",
+        "answer": "Kickstarter supports both. Charging at pledge needs rates you can stand behind now, while collecting later lets you use firmer quotes, as long as the page says when, how and roughly how much."
+      },
+      {
+        "question": "Can I show estimated shipping prices?",
+        "answer": "Yes, if you label them as estimates, give their date and assumptions and use approved fulfilment information. Explain collection timing and exclusions beside the figures."
+      },
+      {
+        "question": "Which delivery date should a bundle show?",
+        "answer": "Kickstarter says the estimated date should reflect when all items in the bundle are expected to arrive. Keep the reward field and the campaign timeline consistent."
+      },
+      {
+        "question": "How do tariffs affect shipping a board game to the US?",
+        "answer": "Import duty depends on where the game is made and the rules in force when it arrives. Our guide to board game tariffs and US shipping covers the current position. Put only wording your fulfilment partner confirms on the page."
+      }
+    ]
   }),
   guide({
-    slug: "kickstarter-prototype-risks-disclosure",
-    title: "Kickstarter Prototype Images and Risks: Show What Is Ready",
-    seoTitle: "Kickstarter Prototype Images & Risks for Tabletop Creators",
-    description: "Label tabletop prototypes, renders and production samples accurately. Write specific risks and check the rules for your actual Kickstarter category.",
-    tag: "Prototypes & risks",
-    answer: "Label each image according to what it shows: prototype, render, production sample or final artwork. Explain what has been tested and what still needs to happen. Check your actual project category before deciding which visuals are permitted; Kickstarter's hardware and product-design prototype rules are not a blanket rule for every Games campaign.",
-    relatedSlugs: ["what-to-send-kickstarter-campaign-designer", "miniatures-stl-kickstarter-launch-guide", "kickstarter-shipping-delivery-page"],
-    sources: [project, source("Hardware and product-design project rules", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236428-what-are-the-rules-for-hardware-and-product-design-projects"), source("Description sections and crowdfunding risks", "Gamefound", "https://help.gamefound.com/article/214-project-detailed-description")],
-    sections: [
-      { id: "inventory", title: "Record what each asset actually shows", paragraphs: ["Sort the supplied images before assembling a campaign page. A render, a hand-built prototype and a factory sample support different claims. Give each file a status and record any known changes still planned.", "For a card game, note whether the art, layout and card stock are final. For miniatures, identify renders, test prints and painted samples. For an RPG book, distinguish a sample spread from an approved print proof."], table: { headers: ["Asset", "Useful label", "What to confirm"], rows: [["Development copy", "Prototype; components may change", "Which parts are still provisional"], ["Digital product image", "Render", "Whether it depicts an approved specification"], ["Factory or print sample", "Production sample", "Which production version it represents"], ["Finished illustration", "Final artwork", "Whether layout, language or finish can still change"]] } },
-      { id: "category", title: "Check the rules for the actual category", paragraphs: ["Kickstarter's hardware and product-design guidance requires a working prototype and prohibits photorealistic renders for those projects. That source has a specific category scope. Do not apply it to every Games project without checking, or assume a tabletop accessory is exempt because it is sold to gamers.", "Review the applicable platform rules with the creator before designing the image list. If the category or permitted presentation is unclear, settle that before the campaign assets are exported."], source: 1 },
-      { id: "progress", title: "Describe progress in terms a backer can check", paragraphs: ["Replace a phrase such as 'almost ready' with the work that is complete and the steps that remain. For example, explain whether the rules have been tested, the files have been approved or the production sample is still pending. Use only facts the creator can confirm.", "Link to a rules sample, playtest account or available product demonstration where it helps. Do not describe an untested mode or planned component as already delivered."], source: 0 },
-      { id: "risks", title: "Write about the real dependencies", paragraphs: ["List the project's specific uncertainties. Depending on the product, those might involve tooling approval, final editing, translated files, manufacturing or freight. Explain what you are doing about each issue and who will communicate a change.", "A risk section should agree with the timeline. If an approval is still pending, show that dependency instead of giving every later milestone a fixed date. Gamefound supports a crowdfunding-risk section in its stage descriptions."], source: 2 },
-      { id: "signoff", title: "Check captions and claims before launch", paragraphs: ["Put status labels where readers see the assets, not only in a distant footer. Check the same labels in component spreads, reward graphics and video captions.", "Have the creator approve the final factual claims. Keep the approved asset list with the design brief so a replacement image does not quietly change what the page implies."], list: ["Every non-final product image has a clear status.", "The component list reflects the actual reward.", "Planned work is described as planned.", "Risks, reward dates and the timeline agree."] },
+    "slug": "kickstarter-prototype-risks-disclosure",
+    "title": "Kickstarter Risks and Challenges: Show What Is Ready",
+    "seoTitle": "Kickstarter Risks and Challenges for Tabletop Games",
+    "description": "Write the Kickstarter risks and challenges section for a tabletop game, label prototypes and renders honestly and check the rules for your category.",
+    "tag": "Prototypes & risks",
+    "updated": "2026-11-25",
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign design for tabletop games",
+    "answer": "The Kickstarter risks and challenges section should name the real obstacles between today and delivery, such as factory samples, final editing or freight, and say what you will do about each one. Pair it with honest image labels, so a backer can tell a prototype or render from a production sample.",
+    "relatedSlugs": [
+      "kickstarter-shipping-delivery-page",
+      "miniatures-stl-kickstarter-launch-guide",
+      "what-to-send-kickstarter-campaign-designer",
+      "board-game-kickstarter-page-checklist"
     ],
-    faqs: [
-      { question: "Are renders banned in every Kickstarter board game campaign?", answer: "The cited ban applies to hardware and product-design projects. Check the actual category and its rules rather than treating that source as a universal Games rule." },
-      { question: "Where should I label a prototype?", answer: "Place the label beside the image or in its immediate caption. Repeat it in reward or component images where a reader could otherwise mistake it for a final product." },
-      { question: "Can my designer write the risks section without production information?", answer: "The designer needs creator-approved facts about unfinished work, dependencies and the update plan. Artwork alone does not establish production readiness." },
+    "sources": [
+      {
+        "label": "What to share on a Kickstarter project page",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236738-what-information-should-i-share-on-my-project-page"
+      },
+      {
+        "label": "Hardware and product design project rules",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236428-what-are-the-rules-for-hardware-and-product-design-projects"
+      },
+      {
+        "label": "Description sections and crowdfunding risks",
+        "publisher": "Gamefound",
+        "href": "https://help.gamefound.com/article/214-project-detailed-description"
+      },
+      {
+        "label": "Guide to the Kickstarter campaign page",
+        "publisher": "Kickstarter",
+        "href": "https://updates.kickstarter.com/kickstarter-lessons/guide-to-kickstarter-campaign-page/"
+      }
     ],
+    "sections": [
+      {
+        "id": "purpose",
+        "title": "What the risks and challenges section is for",
+        "paragraphs": [
+          "Kickstarter describes the Risks and Challenges section as the place to outline potential obstacles that could affect your campaign and how you plan to address them. Its campaign page guide adds that transparency builds trust and confidence with backers.",
+          "So we treat it as a short, specific plan rather than a disclaimer. Name what could slow delivery, say where it stands today and explain what happens if it goes wrong. A backer should finish reading it knowing you have already thought it through."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "A specific risk with a plan says more than a blanket reassurance",
+          "columns": [
+            {
+              "name": "Vague",
+              "points": [
+                "We have years of experience",
+                "We don't expect any delays",
+                "Shipping may vary"
+              ],
+              "verdict": "Nothing a backer can check"
+            },
+            {
+              "name": "Specific",
+              "points": [
+                "Factory samples for the miniatures are not approved yet",
+                "If a sample fails, we post an update with the new date",
+                "Freight is quoted, and the shipping section dates the quote"
+              ],
+              "verdict": "Names the dependency, plan and owner",
+              "highlight": true
+            }
+          ],
+          "caption": "Illustrative wording, not taken from a real campaign."
+        },
+        "source": 3
+      },
+      {
+        "id": "inventory",
+        "title": "Record what each image actually shows",
+        "paragraphs": [
+          "Before we place a single image, we sort the supplied files by what they show. A render, a hand built prototype and a factory sample support different claims, so each file gets a status and a note of any planned changes.",
+          "For a card game, note whether the art, layout and card stock are final. For miniatures, identify renders, test prints and painted samples. For an RPG book, tell a sample spread apart from an approved print proof."
+        ],
+        "table": {
+          "headers": [
+            "Asset",
+            "Useful label",
+            "What to confirm"
+          ],
+          "rows": [
+            [
+              "Development copy",
+              "Prototype; components may change",
+              "Which parts are still provisional"
+            ],
+            [
+              "Digital product image",
+              "Render",
+              "Whether it depicts an approved specification"
+            ],
+            [
+              "Factory or print sample",
+              "Production sample",
+              "Which production version it represents"
+            ],
+            [
+              "Finished illustration",
+              "Final artwork",
+              "Whether layout, language or finish can still change"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "category",
+        "title": "Check the rules for your actual category",
+        "paragraphs": [
+          "Kickstarter's rules for hardware and product design projects require a working prototype and ban photorealistic renders for those projects. That rule has a specific category scope, so don't apply it to every Games project without checking. Equally, don't assume a tabletop accessory is exempt because it's sold to gamers.",
+          "We review the rules that apply with you before planning the image list. If the category or the allowed presentation is unclear, we settle it before any campaign assets are exported."
+        ],
+        "source": 1
+      },
+      {
+        "id": "progress",
+        "title": "Describe progress in terms a backer can check",
+        "paragraphs": [
+          "Replace a phrase like 'almost ready' with the work that is done and the steps that remain. For example, say whether the rules have been tested, the files approved or the production sample is still pending. Use only facts you can confirm.",
+          "Link to a rules sample, a playtest account or a product demonstration where it helps. Don't describe an untested mode or a planned component as if it were already finished."
+        ],
+        "source": 0
+      },
+      {
+        "id": "risks",
+        "title": "Write about the real dependencies",
+        "paragraphs": [
+          "List the uncertainties specific to your project. Depending on the product, those might be tooling approval, final editing, translated files, manufacturing or freight. For each one, explain what you are doing about it and who will tell backers if it changes.",
+          "The risks section also has to agree with the timeline. If an approval is still pending, show that dependency instead of giving every later milestone a fixed date. Gamefound supports a crowdfunding risk section in its stage descriptions too."
+        ],
+        "visual": {
+          "kind": "steps",
+          "title": "Each risk needs four parts: dependency, status, plan and owner",
+          "steps": [
+            {
+              "label": "Name the dependency",
+              "detail": "Tooling, editing, translation or freight"
+            },
+            {
+              "label": "Say where it stands",
+              "detail": "Done, in progress or waiting"
+            },
+            {
+              "label": "Give the plan",
+              "detail": "What happens if it slips"
+            },
+            {
+              "label": "Name the owner",
+              "detail": "Who posts the update"
+            }
+          ]
+        },
+        "source": 2
+      },
+      {
+        "id": "signoff",
+        "title": "Check captions and claims before launch",
+        "paragraphs": [
+          "Status labels belong where readers see the images, not in a distant footer. We check the same labels in component spreads, reward graphics and video captions.",
+          "You approve the final factual claims, and we keep the approved asset list with the design brief, so a replacement image can't quietly change what the page implies. When we design a campaign page, this labelling pass is part of the work, and these four checks close it out."
+        ],
+        "list": [
+          "Every image that isn't final has a clear status.",
+          "The component list reflects the actual reward.",
+          "Planned work is described as planned.",
+          "Risks, reward dates and the timeline agree."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What should I write in the Kickstarter risks and challenges section?",
+        "answer": "Name the specific obstacles between now and delivery, such as factory samples, final editing or freight. For each one, say where it stands, what you will do if it slips and who will update backers."
+      },
+      {
+        "question": "Is it bad to admit risks on a Kickstarter page?",
+        "answer": "No. Kickstarter's own campaign page guide says transparency builds trust and confidence with backers. A specific risk with a plan is easier to believe than a promise that nothing will go wrong."
+      },
+      {
+        "question": "Are renders banned in every Kickstarter board game campaign?",
+        "answer": "No. The ban we cite applies to hardware and product design projects. Check your actual category and its rules rather than treating it as a rule for every Games project."
+      },
+      {
+        "question": "Where should I label a prototype?",
+        "answer": "Beside the image or in its caption. Repeat the label in reward and component images wherever a reader could mistake it for the final product."
+      },
+      {
+        "question": "Can my designer write the risks section without production information?",
+        "answer": "Not well. We need your approved facts about unfinished work, dependencies and the update plan, because artwork alone doesn't show production readiness."
+      }
+    ]
   }),
   guide({
     slug: "kickstarter-review-launch-timeline",
@@ -215,25 +696,190 @@ export const newLaunchGuides: LaunchGuide[] = [
     ],
   }),
   guide({
-    slug: "miniatures-stl-kickstarter-launch-guide",
-    title: "Miniatures and STL Kickstarter Pages: Make the Reward Format Clear",
-    seoTitle: "Miniatures & STL Kickstarter Launch Page Guide",
-    description: "Present physical miniatures, terrain and STL rewards clearly. Label renders and test prints, explain scale and separate file delivery from shipping.",
-    tag: "Miniatures & STL files", servicePath: "/miniatures-kickstarter-campaign-design", serviceLabel: "Miniatures and terrain campaign design",
-    answer: "Say whether each reward contains physical models, digital files or both. Show approved dimensions or scale, label renders and test prints, and explain any required base pieces. Physical rewards need a shipping plan; file rewards need a clear delivery method and approved usage terms. Keep those promises separate in the comparison.",
-    relatedSlugs: ["kickstarter-prototype-risks-disclosure", "kickstarter-shipping-delivery-page", "kickstarter-reward-tier-graphics"],
-    sources: [project, rewards, source("Hardware and product-design category rules", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236428-what-are-the-rules-for-hardware-and-product-design-projects")],
-    sections: [
-      { id: "formats", title: "Put the reward format in the name", paragraphs: ["A painted model in a hero image can make a file-only reward look like a shipped product. Use names that state the format, such as physical terrain set or digital STL pack, and repeat it in the reward summary.", "List quantities and versions separately. If bases, magnets, paint or tools are not included, make that clear near the product image. Do not let a display scene imply extra items are part of the pledge."], table: { headers: ["Format", "Information to prepare"], rows: [["Physical models", "Quantity, material, assembly state, dimensions and shipping"], ["Digital files", "File formats, supported versions, delivery method and usage terms"], ["Mixed bundle", "Separate physical contents and digital contents"], ["Terrain system", "Scale, connection method and compatible pieces"]] } },
-      { id: "visuals", title: "Identify renders, prints and painted examples", paragraphs: ["Show a render for shape, a test print for an available physical example and close-ups for details. Label each accurately. If an image is painted, explain whether the reward arrives painted, unpainted or in another approved state.", "Kickstarter's working-prototype and no-photorealistic-render rules cited here apply to hardware and product-design projects. Check the actual campaign category rather than assuming every miniature project has the same rule or every accessory is exempt."], source: 2 },
-      { id: "scale", title: "Give dimensions and compatibility enough context", paragraphs: ["Use approved measurements and show a scale reference where it helps. State whether a measurement includes the base. For terrain, show footprint, height and the connection system rather than relying only on a scenic photograph.", "Name compatibility carefully. A miniature that fits a visual style is not automatically licensed for another publisher's setting. Use only the system and product references the creator has approved." ] },
-      { id: "files", title: "Explain what file backers will receive", paragraphs: ["Tell file backers which formats and versions are included, how they will receive them and which usage terms apply. State whether supported or unsupported versions are included only if that has been confirmed.", "Use the creator's approved licence text and tested print information. Do not write a universal printer-success promise from a render. If a particular process or setup has been tested, state its actual scope." ] },
-      { id: "rewards", title: "Keep digital delivery and physical shipping separate", paragraphs: ["Build the reward comparison around format and contents. A digital tier should not look as if it includes shipped models, and a physical tier should say whether file access is also included.", "Check the platform's reward and add-on rules before publishing a mixed offer. Kickstarter's guidance says a digital main tier cannot accept shippable add-ons. Align the design with the actual reward controls instead of promising a combination the chosen configuration does not support."], source: 1 },
+    "slug": "miniatures-stl-kickstarter-launch-guide",
+    "title": "Miniatures and STL Kickstarter Pages: Make the Reward Format Clear",
+    "seoTitle": "Miniatures and STL Kickstarter Launch Guide",
+    "description": "Present physical miniatures, terrain and STL rewards clearly. Label renders and test prints, explain scale and separate file delivery from shipping.",
+    "tag": "Miniatures & STL files",
+    "updated": "2026-11-25",
+    "servicePath": "/miniatures-kickstarter-campaign-design",
+    "serviceLabel": "Miniatures and terrain Kickstarter campaign design",
+    "answer": "A miniatures or STL Kickstarter page has to say, for every reward, whether the backer gets physical models, digital files or both. We put that format in the reward name, show scale with approved measurements and keep shipping for models separate from file delivery and licence terms.",
+    "relatedSlugs": [
+      "terrain-and-dice-kickstarter-launch-guide",
+      "kickstarter-prototype-risks-disclosure",
+      "kickstarter-shipping-delivery-page",
+      "kickstarter-reward-tier-graphics"
     ],
-    faqs: [
-      { question: "How should I label an STL-only reward?", answer: "State digital files or STL pack in the reward name and summary. Explain the file formats, delivery method and approved usage terms. Avoid imagery or wording that implies a physical model will ship." },
-      { question: "Can a digital Kickstarter tier accept physical add-ons?", answer: "Kickstarter's cited reward guidance says a digital main tier cannot accept shippable add-ons. Check the actual configuration before designing a mixed reward offer." },
-      { question: "Should I include a painted example?", answer: "A painted example can help show detail, but label it and state the actual supplied condition. Confirm whether the backer receives painted models, unpainted models or files." },
+    "sources": [
+      {
+        "label": "What to share on a Kickstarter project page",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236738-what-information-should-i-share-on-my-project-page"
+      },
+      {
+        "label": "Adding rewards and reward images",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236688-how-do-i-add-rewards-to-my-project"
+      },
+      {
+        "label": "Hardware and product design category rules",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236428-what-are-the-rules-for-hardware-and-product-design-projects"
+      },
+      {
+        "label": "New Games and Publishing subcategories: TTRPG and STL",
+        "publisher": "Kickstarter",
+        "href": "https://start.kickstarter.com/kickstarter-release-notes/new-games-publishing-subcategories-ttrpg-stl-and-audiobooks"
+      }
     ],
+    "sections": [
+      {
+        "id": "formats",
+        "title": "Put the reward format in the name",
+        "paragraphs": [
+          "A painted model in a hero image can make a file only reward look like a shipped product. So we put the format in the reward name, such as physical terrain set or digital STL pack, and repeat it in the reward summary.",
+          "List quantities and versions separately. If bases, magnets, paint or tools aren't included, say so near the product image, and don't let a display scene imply that extras come with the pledge.",
+          "Kickstarter announced new TTRPG and STL subcategories across Games and Publishing on May 8, 2026. If your project is mostly files, check whether the STL subcategory fits it better when you set up the project basics."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "Every miniatures reward is physical, digital or both, and its name should say which",
+          "columns": [
+            {
+              "name": "Physical models",
+              "points": [
+                "Quantity, material and assembly state",
+                "Dimensions or scale",
+                "A shipping plan"
+              ]
+            },
+            {
+              "name": "Digital STL files",
+              "points": [
+                "File formats and versions",
+                "Delivery method",
+                "Usage and licence terms"
+              ]
+            },
+            {
+              "name": "Mixed bundle",
+              "points": [
+                "Physical contents listed",
+                "Digital contents listed separately",
+                "Shippable add ons need a physical main tier"
+              ]
+            }
+          ],
+          "source": "Kickstarter Help Center, adding rewards"
+        },
+        "table": {
+          "headers": [
+            "Format",
+            "Information to prepare"
+          ],
+          "rows": [
+            [
+              "Physical models",
+              "Quantity, material, assembly state, dimensions and shipping"
+            ],
+            [
+              "Digital files",
+              "File formats, supported versions, delivery method and usage terms"
+            ],
+            [
+              "Mixed bundle",
+              "Separate physical contents and digital contents"
+            ],
+            [
+              "Terrain system",
+              "Scale, connection method and compatible pieces"
+            ]
+          ]
+        },
+        "source": 3
+      },
+      {
+        "id": "visuals",
+        "title": "Identify renders, prints and painted examples",
+        "paragraphs": [
+          "Show a render for shape, a test print for a real physical example and close ups for detail, and label each one accurately. If an image is painted, say whether the reward arrives painted, unpainted or in another approved state.",
+          "Kickstarter's rules requiring a working prototype and banning photorealistic renders apply to hardware and product design projects. Check your actual campaign category rather than assuming every miniatures project has the same rule, or that every accessory is exempt."
+        ],
+        "source": 2
+      },
+      {
+        "id": "scale",
+        "title": "Give dimensions and compatibility enough context",
+        "paragraphs": [
+          "Use approved measurements and show a scale reference where it helps, stating whether a measurement includes the base. For terrain, show footprint, height and the connection system rather than relying on a scenic photo alone.",
+          "Name compatibility carefully, because a miniature that fits a visual style isn't automatically licensed for another publisher's setting. Use only the system and product references you have approved. If your line is mostly terrain or dice, our terrain and dice Kickstarter guide goes deeper on those products."
+        ]
+      },
+      {
+        "id": "files",
+        "title": "Explain what file backers will receive",
+        "paragraphs": [
+          "Tell file backers which formats and versions are included, how they will receive them and which usage terms apply. Mention supported or unsupported versions only once that has been confirmed.",
+          "We use your approved licence text and tested print information. A render can't support a promise that every printer will succeed, so if you tested a particular process or setup, we state exactly what was tested."
+        ],
+        "visual": {
+          "kind": "checklist",
+          "title": "File rewards and physical rewards need different facts before anyone pledges",
+          "groups": [
+            {
+              "name": "File rewards",
+              "items": [
+                "Formats included",
+                "Supported versions, if confirmed",
+                "How files are delivered",
+                "Usage and licence terms",
+                "Which print setup was tested"
+              ]
+            },
+            {
+              "name": "Physical rewards",
+              "items": [
+                "Material and assembly state",
+                "Scale with an approved measurement",
+                "Painted or unpainted",
+                "Shipping plan and regions"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "rewards",
+        "title": "Keep digital delivery and physical shipping separate",
+        "paragraphs": [
+          "Build the reward comparison around format and contents. A digital tier shouldn't look as if it includes shipped models, and a physical tier should say whether file access is included too.",
+          "Check the platform's reward and add on rules before publishing a mixed offer. Kickstarter's guidance says a digital main tier can't accept shippable add ons, so the design has to follow the real reward controls. When we design a miniatures page, this format split runs through the reward graphics, the story and the native reward fields."
+        ],
+        "source": 1
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How should I label an STL only reward?",
+        "answer": "Put digital files or STL pack in the reward name and summary. Explain the file formats, delivery method and approved usage terms, and avoid images or wording that suggest a physical model will ship."
+      },
+      {
+        "question": "Can a digital Kickstarter tier accept physical add ons?",
+        "answer": "No. Kickstarter's reward guidance says a digital main tier can't accept shippable add ons. Check the actual configuration before designing a mixed reward offer."
+      },
+      {
+        "question": "Should I include a painted example?",
+        "answer": "A painted example can show detail, but label it and state the condition the backer actually receives: painted models, unpainted models or files."
+      },
+      {
+        "question": "Is there an STL category on Kickstarter?",
+        "answer": "Kickstarter announced TTRPG and STL subcategories across Games and Publishing on May 8, 2026. Check the subcategory list in your project basics and pick the one that matches what backers mostly receive."
+      },
+      {
+        "question": "Should I say whether my STL files are presupported?",
+        "answer": "Yes, once it is confirmed. State which versions are included and how they were tested, and avoid promising that every printer will succeed."
+      }
+    ]
   }),
 ];
