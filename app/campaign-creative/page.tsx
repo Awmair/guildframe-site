@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 import { Icon, Roll } from "../components/chrome/Icon";
 import { DragStrip } from "../components/DragStrip";
 import { CreativeWalkthrough } from "../components/CreativeWalkthrough";
+import { GuideVisual, type GuideVisualData } from "../components/GuideVisual";
 import { JsonLd } from "../components/JsonLd";
 import { ResponsiveImage } from "../components/ResponsiveImage";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
@@ -11,13 +12,14 @@ import { caseStudies } from "../case-studies";
 import { gameCategories } from "../campaign-content";
 import { absoluteUrl, pageMetadata, siteConfig } from "../site-config";
 
-const title = "Tabletop Campaign Creative: Scripts, Renders & Motion";
-const description = "Creative production for tabletop Kickstarter and Gamefound launches: scripts, product renders, motion graphics and ad variants, with an agreed scope.";
+const title = "Kickstarter Campaign Creative for Tabletop Games";
+const description = "Kickstarter campaign creative for tabletop games: scripts, product renders, motion graphics and ad variants from your artwork, quoted per brief.";
 const faqs = [
   { question: "What can creative production include?", answer: "Scripts and storyboards, product renders, motion graphics, short video edits and still or motion ad variants. The brief names the assets, lengths, formats, review rounds and source files included. Product renders depend on the models and reference material available." },
   { question: "How is this different from campaign page design?", answer: "Creative production covers a defined set of assets for your campaign, prelaunch or ads. Campaign page design covers the copy, section layout, graphics and reward comparisons for a complete Kickstarter or Gamefound page. You can book either service or agree a combined scope." },
   { question: "Can the creative match a bright or playful game?", answer: "Yes. The game's artwork and audience set the direction. A party game, family game, card game, RPG book and terrain range can each need a different approach to colour, type, pacing and explanation. Share your existing art and a few references with the brief." },
   { question: "How much does creative production cost?", answer: "Creative production is quoted after reviewing the assets and delivery needs. A set of still ad variants needs a different scope from a scripted product video or new renders. The proposal lists production fees, any outside costs and the work you receive. Ad management and media spend are agreed separately." },
+  { question: "Can you make a product render before the game is manufactured?", answer: "Yes, if you have 3D models or clear reference photos and confirmed dimensions. We label renders and prototype images as such on the page, so backers can tell them apart from photos of the finished product." },
   { question: "What should I send to start?", answer: "Send a short project summary, your artwork or product photos, any usable models or footage, the proposed rewards and the places the creative will appear. Include your target date and identify anything still in development. We can then agree the deliverables and review schedule." },
 ];
 
@@ -27,6 +29,30 @@ const assets = [
   { face: "The explanation", title: "Motion and video", copy: "Motion graphics, product sequences and edits of your usable footage. We plan the duration, text, narration, music permissions and captions together.", output: "Agreed edits, exports and captions", tone: "#2B2E3A", r: -1 },
   { face: "The test", title: "Creative variants for ads", copy: "Different hooks, product views or messages, adapted to the placements in your ad plan. Each variant has a clear question for the test to answer.", output: "Agreed concepts, versions and placement sizes", tone: "#1B4144", r: 2.5 },
 ];
+const visuals: GuideVisualData[] = [
+  { kind: "steps", title: "A creative brief runs in five steps, with files agreed up front", steps: [
+    { label: "Send the material", detail: "Game summary, art, photos, models or footage and the target date." },
+    { label: "Agree the asset list", detail: "Scripts, renders, edits and ad sizes, with review rounds." },
+    { label: "Review the direction", detail: "Script, storyboard or a first frame before full production." },
+    { label: "Revise and confirm", detail: "Changes within the agreed rounds, product facts checked by you." },
+    { label: "Receive the files", detail: "Approved exports, captions and editable sources." },
+  ] },
+  { kind: "checklist", title: "Each creative asset needs different material from you", groups: [
+    { name: "Scripts", items: ["A short game summary", "The gameplay moment to show", "Where the video will run"] },
+    { name: "Renders", items: ["3D models or reference photos", "Dimensions and finishes", "Which details are still prototype"] },
+    { name: "Motion", items: ["Usable footage or layered art", "Music and narration permissions", "Caption text"] },
+    { name: "Ad variants", items: ["Placement sizes", "The question each test answers", "Confirmed rewards and prices"] },
+  ] },
+];
+const guides = [
+  { slug: "kickstarter-campaign-video-planning", label: "Plan the main video and gameplay preview" },
+  { slug: "kickstarter-image-sizes", label: "Kickstarter image sizes" },
+  { slug: "kickstarter-campaign-graphics-mobile-readability", label: "Readable campaign graphics on a phone" },
+  { slug: "kickstarter-reward-tier-graphics", label: "Reward tier graphics that compare clearly" },
+  { slug: "kickstarter-prototype-risks-disclosure", label: "Label renders, prototypes and finished products" },
+  { slug: "kickstarter-advertising-budget-board-games", label: "Set a Kickstarter ad test budget" },
+];
+
 const steps = [
   { title: "Send the source material", copy: "Your game summary, usable art, photos, models or footage, planned placements and target date. Flag prototypes and details that may change." },
   { title: "Review the direction", copy: "Agree the script or visual plan, asset list, durations and sizes. The brief sets the review rounds and the facts you need to confirm." },
@@ -49,9 +75,9 @@ export default function CampaignCreativePage() {
         <div className="cc-hero-inner">
           <div className="cc-hero-copy">
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Campaign creative" }]} />
-            <h1 id="creative-title" className="cc-title" data-reveal="lines"><span className="w-line"><span>Campaign creative</span></span> <span className="w-line"><span><em>for tabletop launches</em></span></span></h1>
+            <h1 id="creative-title" className="cc-title" data-reveal="lines"><span className="w-line"><span>Kickstarter campaign creative</span></span> <span className="w-line"><span><em>for tabletop games</em></span></span></h1>
             <div className="cc-hero-side" data-reveal="rise">
-              <p className="cc-lead">Scripts, renders, motion and ad variants for your Kickstarter or Gamefound launch. Work directly with Umair on the assets your campaign needs, with the formats, reviews and final files agreed before production.</p>
+              <p className="cc-lead">Kickstarter campaign creative is the visual material around your page, from scripts and product renders to motion graphics and ad variants. Guildframe produces those assets from your artwork, with Umair working on them directly and the formats, reviews and final files agreed before production starts.</p>
               <div className="cc-actions">
                 <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss creative production" data-analytics-location="campaign-creative"><Roll>Discuss your creative brief</Roll><Icon name="arrow" /></a>
                 <a className="w-link" href="#creative-walkthroughs">See the work explained</a>
@@ -120,10 +146,11 @@ export default function CampaignCreativePage() {
             <h2 id="creative-process-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Agree the work,</span></span> <span className="w-line"><span><em>know what you receive</em></span></span></h2>
             <div className="cc-price" data-reveal="rise">
               <p className="cc-price-figure">Scoped quote</p>
-              <p>Creative production is quoted per brief. The proposal lists production fees and any outside costs. Paid ad management and media spend have their own agreed budgets.</p>
+              <p>Creative production is quoted per brief. The proposal lists production fees and any outside costs. Full campaign support at $5,900 already includes ad creative, and the $1,800 campaign page package covers the page graphics. Ad spend is always separate.</p>
             </div>
           </div>
           <ol className="cc-steps">{steps.map((step, index) => <li key={step.title}><span className="cc-space" aria-hidden="true">{index + 1}</span><h3>{step.title}</h3><p>{step.copy}</p></li>)}</ol>
+          {visuals.map(visual => <GuideVisual key={visual.title} data={visual} />)}
         </div>
       </section>
 
@@ -149,6 +176,23 @@ export default function CampaignCreativePage() {
             <a className="w-link" href={`mailto:${siteConfig.contactEmail}`} data-analytics-event="email_click" data-analytics-location="campaign-creative faq">{siteConfig.contactEmail}</a>
           </div>
           <div className="cc-faq-list">{faqs.map(faq => <details key={faq.question}><summary>{faq.question}<Icon name="plus" size={20} /></summary><p>{faq.answer}</p></details>)}</div>
+        </div>
+      </section>
+      <section className="cc-faq" id="creative-guides" aria-labelledby="creative-guides-title">
+        <div className="w-wrap-wide cc-faq-inner">
+          <div className="cc-faq-side">
+            <h2 id="creative-guides-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Guides for</span></span> <span className="w-line"><span><em>this stage</em></span></span></h2>
+          </div>
+          <div className="cc-faq-side">
+            <p>These guides cover the creative questions creators ask before briefing a video, a render or an ad set. Each one links back to the campaign page work it supports.</p>
+            <nav className="sv-inline-links" aria-label="Guides for this stage">{guides.map(guide => <Link className="w-link" key={guide.slug} href={`/guides/${guide.slug}`}>{guide.label}</Link>)}</nav>
+            <p>Creative sits inside our <Link className="w-link" href="/kickstarter-launch-services">Kickstarter launch services for tabletop games</Link>.</p>
+          </div>
+        </div>
+      </section>
+      <section className="cc-scope" aria-labelledby="creative-book-title">
+        <div className="w-wrap-wide">
+          <aside className="cc-note"><div><h3 id="creative-book-title">Tell us what your campaign needs</h3><p>Send your artwork, the assets you have in mind and your launch date through the booking page. We reply with an asset list, a price and a schedule before anything is billed.</p></div><Link className="w-btn w-btn--coral" href="/buy" data-title="Start your project"><Roll>Start your project</Roll><Icon name="arrow" /></Link></aside>
         </div>
       </section>
       <nav className="cc-related" aria-label="Related launch services"><div className="w-wrap-wide"><Link href="/campaign-design" data-title="Campaign page design">Campaign page design<Icon name="arrow" /></Link><Link href="/kickstarter-advertising" data-title="Paid advertising">Paid advertising<Icon name="arrow" /></Link><Link href="/kickstarter-launch-services" data-title="Full launch services">Full launch services<Icon name="arrow" /></Link></div></nav>
