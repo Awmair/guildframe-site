@@ -22,9 +22,10 @@ This supplemental summary does not replace the HTML pages or sitemap.
 - No guarantee of funding, advertising returns or search rankings.
 
 
+
 ## Start here: launching a tabletop Kickstarter
 
-- [How to Launch a Board Game on Kickstarter: A to Z Guide](https://guildframe.com/guides/how-to-launch-a-board-game-on-kickstarter)
+- [How to Launch a Board Game on Kickstarter](https://guildframe.com/guides/how-to-launch-a-board-game-on-kickstarter)
 - [Kickstarter for Beginners: Questions First Time Tabletop Creators Ask](https://guildframe.com/guides/kickstarter-for-beginners): Kickstarter for beginners: plain answers to the questions first time tabletop creators ask about how it works, money, rules and where to start.
 - [How to Market a Kickstarter Campaign: A Beginner's Guide for Tabletop Creators](https://guildframe.com/guides/how-to-market-a-kickstarter): How to market a Kickstarter when you have never done marketing before. What to do first, which channels suit a board game and what can wait.
 - [How to Get Your First Kickstarter Backers When Nobody Knows Your Game](https://guildframe.com/guides/how-to-get-kickstarter-backers): How to get backers on Kickstarter when you have no audience. Where the first 100 people come from for a board game and what to ask them to do.
@@ -39,9 +40,9 @@ This supplemental summary does not replace the HTML pages or sitemap.
 - [Kickstarter Campaign Designer: Copy & Graphics](https://guildframe.com/campaign-design)
 - [Gamefound Campaign Design for Tabletop Games](https://guildframe.com/gamefound-campaign-design)
 - [Kickstarter Launch Services for Tabletop Games](https://guildframe.com/kickstarter-launch-services)
-- [Kickstarter Prelaunch Marketing for Tabletop Games](https://guildframe.com/kickstarter-prelaunch-marketing)
-- [Kickstarter Advertising Agency for Tabletop Games](https://guildframe.com/kickstarter-advertising)
-- [Kickstarter Campaign Management for Tabletop Games](https://guildframe.com/kickstarter-campaign-management)
+- [Kickstarter Prelaunch Marketing: Tabletop Games](https://guildframe.com/kickstarter-prelaunch-marketing)
+- [Kickstarter Advertising Agency: Tabletop Games](https://guildframe.com/kickstarter-advertising)
+- [Kickstarter Campaign Management: Tabletop Games](https://guildframe.com/kickstarter-campaign-management)
 - [Gamefound Launch Services for Tabletop Games](https://guildframe.com/gamefound-launch-services)
 - [Post Campaign Support for Funded Tabletop Games](https://guildframe.com/post-campaign-support)
 - [Board Game Kickstarter Campaign Design](https://guildframe.com/board-game-kickstarter-campaign-design)
@@ -49,9 +50,9 @@ This supplemental summary does not replace the HTML pages or sitemap.
 - [TTRPG Kickstarter Campaign Design](https://guildframe.com/ttrpg-kickstarter-campaign-design)
 - [Miniatures & Terrain Kickstarter Campaign Design](https://guildframe.com/miniatures-kickstarter-campaign-design)
 - [Tabletop Accessories Kickstarter Campaign Design](https://guildframe.com/tabletop-accessories-campaign-design)
-- [Kickstarter Campaign Design for Product Launches](https://guildframe.com/kickstarter-product-campaign-design)
-- [Kickstarter Campaign Creative for Tabletop Games](https://guildframe.com/campaign-creative)
-- [Kickstarter Campaign Design for Product Launches](https://guildframe.com/kickstarter-product-campaign-design)
+- [Kickstarter Campaign Design for New Products](https://guildframe.com/kickstarter-product-campaign-design)
+- [Kickstarter Campaign Creative: Tabletop Games](https://guildframe.com/campaign-creative)
+- [Kickstarter Campaign Design for New Products](https://guildframe.com/kickstarter-product-campaign-design)
 
 Current design price: https://guildframe.com/campaign-design#pricing
 
@@ -91,7 +92,7 @@ Current design price: https://guildframe.com/campaign-design#pricing
 - [How Much Does a Kickstarter Agency Cost?](https://guildframe.com/guides/kickstarter-agency-cost): Kickstarter agency cost depends on the model: fixed fee, retainer or a share of pledges. See published prices, what is never included and red flags.
 - [Kickstarter Fees Explained for Tabletop Creators (2026)](https://guildframe.com/guides/kickstarter-fees): Kickstarter takes 5% plus payment processing from a funded project. See the cost on a $40 game, plus late pledges, VAT and tariff surcharges.
 - [How Many Kickstarter Followers Do You Need Before Launch?](https://guildframe.com/guides/kickstarter-followers-before-launch): How many Kickstarter followers you need before launch, using published conversion figures, three scenarios and a worked funding goal example.
-- [Kickstarter Image Sizes and Video Specs (2026 Cheat Sheet)](https://guildframe.com/guides/kickstarter-image-sizes): Kickstarter and Gamefound image sizes, reward image ratios and video limits in one table, taken from both help centres, plus the export sizes we use.
+- [Kickstarter Image Sizes and Video Specs (2026 Cheat Sheet)](https://guildframe.com/guides/kickstarter-image-sizes): Kickstarter and Gamefound image sizes, reward image ratios and video limits in one table, taken from both Help Centers, plus the export sizes we use.
 - [Kickstarter vs Gamefound for Board Games in 2026](https://guildframe.com/guides/kickstarter-vs-gamefound): Kickstarter vs Gamefound for board games in 2026: fees, audience, pledge managers, Adfound and Jellop ads, the Indiegogo deal and which one fits your game.
 - [Pledge Managers Compared: Kickstarter, BackerKit, Gamefound, PledgeBox](https://guildframe.com/guides/pledge-managers-compared): Compare pledge managers for tabletop campaigns: the Kickstarter Pledge Manager, BackerKit, Gamefound and PledgeBox, with published fees and 2026 features.
 - [Trading Card Game Kickstarter Guide: Print Runs, Boosters and Scalpers](https://guildframe.com/guides/tcg-kickstarter-launch-guide): Plan a trading card game Kickstarter: booster randomization at the printer, print run size, starter decks, scalper proof rewards and organized play.
@@ -109,12 +110,12 @@ Current design price: https://guildframe.com/campaign-design#pricing
 - [Kickstarter to Shopify Migration Guide](https://guildframe.com/guides/move-from-kickstarter-to-shopify)
 - [6 Best Shopify Themes for Board Games in 2026](https://guildframe.com/guides/best-shopify-themes-for-board-games)
 - [Shopify Developer vs DIY Theme](https://guildframe.com/guides/shopify-developer-vs-diy-theme)
-- [Selling After Kickstarter: Late Pledges vs Shopify](https://guildframe.com/guides/kickstarter-late-pledges-vs-shopify)
-- [BackerKit vs Shopify vs Gamefound in 2026](https://guildframe.com/guides/backerkit-vs-shopify-vs-gamefound)
+- [Kickstarter Late Pledges vs a Shopify Store](https://guildframe.com/guides/kickstarter-late-pledges-vs-shopify)
+- [BackerKit vs Shopify vs Gamefound After Funding](https://guildframe.com/guides/backerkit-vs-shopify-vs-gamefound)
 - [Kickstarter to Shopify Launch Timeline](https://guildframe.com/guides/kickstarter-to-shopify-launch-timeline)
 - [How to Sell Board Game Preorders on Shopify](https://guildframe.com/guides/sell-board-game-preorders-on-shopify)
 - [Board Game Expansions & Bundles on Shopify](https://guildframe.com/guides/sell-board-game-expansions-add-ons-shopify)
-- [Selling Miniatures Internationally: VAT and IOSS](https://guildframe.com/guides/selling-miniatures-internationally-vat-ioss)
+- [Selling Miniatures Internationally: VAT & IOSS](https://guildframe.com/guides/selling-miniatures-internationally-vat-ioss)
 - [How Much Does a Board Game Website Cost?](https://guildframe.com/guides/how-much-does-a-board-game-website-cost)
 - [Shopify vs Etsy for Selling Miniatures](https://guildframe.com/guides/shopify-vs-etsy-for-selling-miniatures)
 - [Build a Tabletop Shopify Store With AI](https://guildframe.com/guides/build-a-tabletop-shopify-store-with-ai)
@@ -125,7 +126,7 @@ Current design price: https://guildframe.com/campaign-design#pricing
 
 ## Resources and original research
 
-- [Tabletop Campaign Page Study: 25 Public Examples](https://guildframe.com/resources/tabletop-campaign-page-study)
+- [Tabletop Campaign Page Study: 25 Examples](https://guildframe.com/resources/tabletop-campaign-page-study)
 - [Board Game Shopify Product Page Checklist](https://guildframe.com/resources/board-game-product-page-checklist)
 - [Highest Funded Tabletop Kickstarters of 2024](https://guildframe.com/resources/kickstarter-tabletop-games-benchmark)
 - [Tabletop Campaign Launch Worksheet](https://guildframe.com/resources/tabletop-campaign-launch-worksheet)
