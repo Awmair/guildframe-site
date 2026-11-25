@@ -1,5 +1,6 @@
 import { LibrarySearch } from "../components/LibrarySearch";
 import Link from "next/link";
+import { Icon } from "../components/chrome/Icon";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
@@ -91,27 +92,31 @@ export default function ResourcesPage() {
       }} />
       <a className="skip-link" href="#resources-content">Skip to resources</a>
       <SeoHeader />
-      <main className="guides-main" id="resources-content">
-        <section className="guides-hero resources-hero">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Resources" }]} />
-          <h1>Campaign checklists &amp; <em>useful references.</em></h1>
-          <p>
-            Use the campaign worksheet to collect your game facts, rewards and launch checks. Compare platform roles and funding data, then plan your store when you reach the after funding stage.
-          </p>
+      <main className="guides-main w-page gd gd-index gd-index--resources" id="resources-content">
+        <header className="gd-hero guides-hero resources-hero">
+          <div className="gd-hero-copy">
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Resources" }]} />
+            <h1 className="gd-title" data-reveal="lines"><span className="w-line"><span>Campaign checklists &amp;</span></span> <span className="w-line"><span><em>useful references.</em></span></span></h1>
+            <p className="gd-lead">
+              Use the campaign worksheet to collect your game facts, rewards and launch checks. Compare platform roles and funding data, then plan your store when you reach the after funding stage.
+            </p>
+          </div>
+        </header>
+        <section className="gd-library tone-board" aria-label="Resource library">
+          <div className="gd-library-inner">
+            <LibrarySearch count={resources.length} noun="resources"/>
+            <div className="guides-grid resources-grid gd-rows" id="reference-list">
+              {resources.map((resource) => (
+                <Link href={resource.href} key={resource.title} className="gd-row gd-row--plain" data-title={resource.title} data-cursor-label="Open">
+                  <div className="gd-row-copy"><h2 className="gd-row-title">{resource.title}</h2><span className="gd-row-summary">{resource.copy}</span><span className="gd-row-tag">{resource.tag}</span></div>
+                  <Icon name="arrow" size={20} className="gd-row-arrow"/>
+                </Link>
+              ))}
+            </div>
+          </div>
         </section>
-        <LibrarySearch count={resources.length} noun="resources"/>
-        <section className="guides-grid resources-grid">
-          {resources.map((resource) => (
-            <Link href={resource.href} key={resource.title} data-reveal>
-              <div><span>{resource.tag}</span></div>
-              <h2>{resource.title}</h2>
-              <p>{resource.copy}</p>
-              <strong>Open the reference</strong>
-            </Link>
-          ))}
-        </section>
-        <section className="guides-solutions">
-          <div><h2>Need the reasoning behind the checklist?</h2></div>
+        <section className="guides-solutions gd-solutions" aria-labelledby="resources-solutions-title">
+          <h2 id="resources-solutions-title" className="w-h2">Need the reasoning <em>behind the checklist?</em></h2>
           <nav aria-label="Related Guildframe guides">
             <Link href="/guides">Read all guides</Link>
             <Link href="/guides/move-from-kickstarter-to-shopify">Migration guide</Link>

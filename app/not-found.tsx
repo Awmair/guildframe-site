@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SeoFooter, SeoHeader } from "./components/SeoChrome";
+import { HuddleMark } from "./components/chrome/Huddle";
+import { Icon, Roll } from "./components/chrome/Icon";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -15,20 +17,29 @@ export default function NotFound() {
         Skip to content
       </a>
       <SeoHeader />
-      <main className="not-found-page" id="not-found-content">
-        <div>
-          <span>404</span>
-          <h1>This page could not be found.</h1>
-          <p>
-            Use the links below to find launch services or a practical guide.
-          </p>
-          <div className="not-found-actions">
-            <Link className="seo-button" href="/">
-              Return home
-            </Link>
-            <Link className="seo-text-link" href="/guides">
-              Explore the guides
-            </Link>
+      <main className="w-page nf" id="not-found-content" tabIndex={-1}>
+        <div className="nf-inner">
+          <div className="nf-copy">
+            <HuddleMark className="nf-mark" />
+            {/* One unbroken string: the 404 test looks for this exact phrase in the exported HTML. */}
+            <h1 className="nf-title">This page could not be found</h1>
+            <p className="nf-body">
+              That link is out of date or mistyped. The home page, the guides and the case studies are all still here.
+            </p>
+            <div className="nf-actions">
+              <Link className="w-btn w-btn--coral" href="/" data-title="Home">
+                <Roll>Back to the board</Roll>
+                <Icon name="arrow" />
+              </Link>
+              <Link className="w-link" href="/guides" data-title="Guides">Guides</Link>
+              <Link className="w-link" href="/work" data-title="Work">Work</Link>
+            </div>
+          </div>
+          <div className="nf-scene" aria-hidden="true">
+            <div className="nf-board">
+              <img className="nf-board-art" src="/images/world/board-base-v1.webp" width="1536" height="1024" alt="" />
+            </div>
+            <img className="nf-pawn" src="/images/world/pawn-v1.webp" width="239" height="411" alt="" />
           </div>
         </div>
       </main>

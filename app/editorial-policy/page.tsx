@@ -44,8 +44,9 @@ export default function EditorialPolicyPage() {
         title="Guildframe editorial policy"
         description="The guides explain campaign design and launch preparation, with sources for platform facts and clear labels for design advice."
         updated={contentDates.editorialPolicy}
+        contents={[{ id: "purpose", label: "Editorial purpose" }, { id: "research", label: "Research and sourcing" }, { id: "commercial-transparency", label: "Commercial transparency" }, { id: "corrections", label: "Review, updates and corrections" }, { id: "checking", label: "How to check the advice" }]}
       >
-        <section>
+        <section id="purpose">
           <h2>Editorial purpose</h2>
           <p>
             Guildframe publishes guidance for tabletop creators preparing
@@ -53,7 +54,7 @@ export default function EditorialPolicyPage() {
             Each page answers a practical question, such as what to send a designer or how to compare rewards.
           </p>
         </section>
-        <section>
+        <section id="research">
           <h2>Research and sourcing</h2>
           <ol>
             <li><strong>Primary sources first.</strong> Platform help centers, product documentation and official policy pages are preferred.</li>
@@ -62,11 +63,11 @@ export default function EditorialPolicyPage() {
             <li><strong>Clear inference.</strong> Guildframe recommendations are presented as analysis, not as platform policy.</li>
           </ol>
         </section>
-        <section>
+        <section id="commercial-transparency">
           <h2>Commercial transparency</h2>
           <p>
             Guildframe offers Kickstarter and Gamefound launch services, including campaign creative, prelaunch, paid advertising and live support.
-            Broader projects use a scoped quote. The design-only price is listed on its service page.
+            Broader projects use a scoped quote. The design only price is listed on its service page.
             A free mockup explores an opening campaign section. Concept mockups are labelled separately from the client campaigns in Past work. Client quotes are short, verbatim excerpts matched to their projects.
             We do not claim funding results or guaranteed search rankings.
           </p>
@@ -76,7 +77,7 @@ export default function EditorialPolicyPage() {
             Kickstarter, BackerKit or Gamefound.
           </p>
         </section>
-        <section>
+        <section id="corrections">
           <h2>Review, updates and corrections</h2>
           <ul className="trust-checklist">
             <li>Every guide displays its most recent review date.</li>
@@ -89,7 +90,7 @@ export default function EditorialPolicyPage() {
             Product and company details are documented on the <Link href="/about">About page</Link>.
           </p>
         </section>
-        <section>
+        <section id="checking">
           <h2>How to check the advice</h2>
           <p>
             Use the source links to check platform requirements. Where I recommend a layout, a checklist or a workflow, I explain why it helps. If you find an error, email umair@guildframe.com with the page link and the detail to correct.

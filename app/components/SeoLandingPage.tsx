@@ -1,10 +1,11 @@
 import { ResponsiveImage } from "./ResponsiveImage";
 import Link from "next/link";
 import { JsonLd } from "./JsonLd";
-import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
+import { SeoFooter, SeoHeader } from "./SeoChrome";
+import { Icon, Roll } from "./chrome/Icon";
+import { ShopFaq, ShopFrame, ShopHero, ShopRows, ShopTrack } from "./shopify/ShopWorld";
 import { absoluteUrl } from "../site-config";
 import { formatContentDate } from "../content-dates";
-
 
 export type LandingPageContent = {
   slug: string;
@@ -16,6 +17,7 @@ export type LandingPageContent = {
   image: string;
   imageAlt: string;
   audience: string;
+  store: { src: string; width: number; height: number; alt: string };
   benefits: { title: string; copy: string }[];
   proofTitle: string;
   proofCopy: string;
@@ -26,6 +28,7 @@ export type LandingPageContent = {
 };
 
 export function SeoLandingPage({ content }: { content: LandingPageContent }) {
+  const heading = content.highlight.replace(/\.$/, "");
   const breadcrumbData = {
     "@type": "BreadcrumbList",
     "@id": absoluteUrl(`/${content.slug}#breadcrumb`),
@@ -44,8 +47,6 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
       },
     ],
   };
-
-
 
   return (
     <>
@@ -69,7 +70,6 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
               about: { "@id": absoluteUrl("/#organization") },
               inLanguage: "en",
             },
-
             breadcrumbData,
             {
               "@type": "FAQPage",
@@ -91,115 +91,81 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
         Skip to content
       </a>
       <SeoHeader />
-      <main className="seo-main" id="main-content">
-        <section className="seo-hero">
-          <Breadcrumbs
-            items={[{ label: "Home", href: "/" }, { label: `${content.title} ${content.highlight}` }]}
-          />
-          <div className="seo-hero-grid">
-            <div className="seo-hero-copy">
-              <h1>
-                {content.title} <em>{content.highlight}</em>
-              </h1>
-              <p className="seo-answer">{content.answer}</p>
-              <div className="seo-actions">
-                <Link className="seo-button" href="/done-for-you-shopify-store" data-analytics-event="service_interest" data-analytics-label="Plan my store brief" data-analytics-location={`${content.slug} hero`}>Plan my store brief</Link>
-                <Link className="seo-text-link" href="/resources/board-game-shopify-store-checklist">Use the free store checklist</Link>
-              </div>
-              <div className="seo-proof-strip"><span>Separate store brief</span><span>Clear product information</span><span>Reviewed <time dateTime={content.updated}>{formatContentDate(content.updated)}</time></span></div>
+      <main className="w-page sh sh-theme" id="main-content" tabIndex={-1}>
+        <ShopHero
+          crumbs={[{ label: "Home", href: "/" }, { label: `${content.title} ${heading}` }]}
+          title={<><span className="w-line"><span>{content.title}</span></span> <span className="w-line"><span><em>{heading}</em></span></span></>}
+        >
+          <p className="sh-lead">{content.answer}</p>
+          <div className="sh-actions">
+            <Link className="w-btn w-btn--coral" href="/done-for-you-shopify-store" data-title="Shopify store planning" data-analytics-event="service_interest" data-analytics-label="Plan my store brief" data-analytics-location={`${content.slug} hero`}><Roll>Plan my store brief</Roll><Icon name="arrow" /></Link>
+            <Link className="w-link" href="/resources/board-game-shopify-store-checklist">Use the free store checklist</Link>
+          </div>
+          <ul className="sh-meta">
+            <li>Separate store brief</li>
+            <li>Clear product information</li>
+            <li>Reviewed <time dateTime={content.updated}>{formatContentDate(content.updated)}</time></li>
+          </ul>
+        </ShopHero>
+
+        <section className="sh-board tone-board sh-board--lead" aria-label="Before you build">
+          <div className="w-wrap-wide">
+            <ShopFrame src={content.store.src} width={content.store.width} height={content.store.height} alt={content.store.alt} caption={content.audience} />
+            <div className="sh-benefits">
+              {content.benefits.map((benefit) => (
+                <article key={benefit.title}>
+                  <h2>{benefit.title}</h2>
+                  <p>{benefit.copy}</p>
+                </article>
+              ))}
             </div>
-            <div className="seo-hero-visual">
-              <ResponsiveImage sizes="(max-width: 650px) calc(100vw - 40px), 48vw"
-                src={content.image}
-                alt={content.imageAlt}
-                width="1000"
-                height="750"
-                fetchPriority="high"
-                decoding="async"
-              />
+          </div>
+        </section>
+
+        <section className="sh-board tone-board sh-explain" aria-labelledby="shop-explain-title">
+          <div className="w-wrap-wide sh-explain-inner">
+            <div className="sh-explain-head">
+              <h2 id="shop-explain-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>{content.proofTitle}</span></span></h2>
+              <p>{content.proofCopy}</p>
+              <figure className="sh-cut" data-reveal="media">
+                <ResponsiveImage sizes="(max-width: 900px) calc(100vw - 32px), 40vw" src={content.image} alt={content.imageAlt} width="1000" height="750" loading="lazy" decoding="async" />
+                <figcaption><span className="w-dot w-dot--concept">Studio concept, not client work</span></figcaption>
+              </figure>
+            </div>
+            <ul className="sh-needs">
+              {content.capabilities.map((item) => (
+                <li key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.copy}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="sh-dusk sh-steps" aria-labelledby="shop-steps-title">
+          <div className="w-wrap-wide">
+            <h2 id="shop-steps-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Three steps to prepare</span></span> <span className="w-line"><span><em>your Shopify store</em></span></span></h2>
+            <ShopTrack steps={content.steps} />
+            <div className="sh-note">
               <div>
-                <strong>{content.audience}</strong>
+                <h3>Need help after the campaign?</h3>
+                <p>Guildframe can scope product content and artwork adaptation, with optional Shopify planning and setup under a separate brief. Share your catalogue and operating plan to agree the work, price and timing.</p>
+              </div>
+              <div className="sh-note-links">
+                <Link className="w-btn" href="/post-campaign-support" data-title="After the campaign" data-analytics-event="service_interest" data-analytics-label="Discuss post-campaign support" data-analytics-location={`${content.slug} offer`}><Roll>Explore post campaign support</Roll><Icon name="arrow" /></Link>
+                <Link className="w-link" href="/kickstarter-launch-services" data-title="Launch services">Back to the campaign services</Link>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="seo-benefit-band">
-          {content.benefits.map((benefit, index) => (
-            <article key={benefit.title}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <h2>{benefit.title}</h2>
-              <p>{benefit.copy}</p>
-            </article>
-          ))}
-        </section>
+        <ShopFaq title={<span className="w-line"><span>Shopify store <em>planning questions</em></span></span>} faqs={content.faqs} location={content.slug} />
 
-        <section className="seo-proof-section">
-          <div className="seo-section-heading">
-            <h2>{content.proofTitle}</h2>
-            <p>{content.proofCopy}</p>
-          </div>
-          <div className="seo-capability-grid">
-            {content.capabilities.map((item) => (
-              <article key={item.title}>
-                <i aria-hidden="true" />
-                <h3>{item.title}</h3>
-                <p>{item.copy}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="seo-how-section">
-          <div className="seo-section-heading seo-section-heading-light">
-            <h2>Three steps to prepare your Shopify store</h2>
-          </div>
-          <div className="seo-steps">
-            {content.steps.map((step, index) => (
-              <article key={step.title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{step.title}</h3>
-                <p>{step.copy}</p>
-              </article>
-            ))}
-          </div>
-          <div className="seo-offer-note">
-            <strong>Need help after the campaign?</strong>
-            <p>Guildframe can scope product content and artwork adaptation, with optional Shopify planning and setup under a separate brief. Share your catalogue and operating plan to agree the work, price and timing.</p>
-            <Link href="/post-campaign-support" data-analytics-event="service_interest" data-analytics-label="Discuss post-campaign support" data-analytics-location={`${content.slug} offer`}>Explore post-campaign support</Link>
-          </div>
-        </section>
-
-        <section className="seo-faq-section">
-          <div className="seo-section-heading">
-            <h2>Shopify store planning questions</h2>
-          </div>
-          <div className="seo-faq-list">
-            {content.faqs.map((faq, index) => (
-              <details key={faq.question} open={index === 0}>
-                <summary>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  {faq.question}
-                  <i aria-hidden="true">+</i>
-                </summary>
-                <p>{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-
-        <section className="seo-related-section">
-          <div className="seo-section-heading">
-            <h2>Shopify setup and migration guides</h2>
-          </div>
-          <div className="seo-related-grid">
-            {content.related.map((item) => (
-              <Link href={item.href} key={item.title}>
-                <span>Read next</span>
-                <h3>{item.title}</h3>
-                <p>{item.copy}</p>
-              </Link>
-            ))}
+        <section className="sh-board tone-board sh-related" aria-labelledby="shop-related-title">
+          <div className="w-wrap-wide">
+            <h2 id="shop-related-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Shopify setup and <em>migration guides</em></span></span></h2>
+            <ShopRows items={content.related} />
           </div>
         </section>
       </main>

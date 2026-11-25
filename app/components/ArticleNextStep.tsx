@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Icon, PawnMark } from "./chrome/Icon";
 
 const nextSteps: Record<string, { title: string; copy: string; path: string; label: string; guide: string; guideLabel: string }> = {
   "what-happens-after-kickstarter-is-funded": { title: "Prepare the next backer update", copy: "List what is confirmed, what remains undecided and when you expect the next useful production update. Put a named owner on the survey, product information and communication work.", path: "/post-campaign-support", label: "Help with the campaign handoff", guide: "kickstarter-live-campaign-updates", guideLabel: "Planning campaign updates" },
@@ -18,5 +19,13 @@ const nextSteps: Record<string, { title: string; copy: string; path: string; lab
 export function ArticleNextStep({ slug }: { slug: string }) {
   const step = nextSteps[slug];
   if (!step) return null;
-  return <aside className="article-next-step"><h2>{step.title}</h2><p>{step.copy}</p><p><Link href={step.path}>{step.label}</Link> · <Link href={`/guides/${step.guide}`}>{step.guideLabel}</Link></p></aside>;
+  return <aside className="article-next-step" aria-labelledby="article-next-step-title">
+    <PawnMark className="gd-next-pawn" />
+    <h2 id="article-next-step-title">{step.title}</h2>
+    <p>{step.copy}</p>
+    <div className="article-next-links">
+      <Link className="w-btn w-btn--coral" href={step.path}>{step.label}<Icon name="arrow" size={18} /></Link>
+      <Link className="w-link" href={`/guides/${step.guide}`}>{step.guideLabel}</Link>
+    </div>
+  </aside>;
 }

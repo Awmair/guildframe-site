@@ -251,20 +251,31 @@ export function mountBoard({ host, labels, onReady, onHover, onOverview }: Optio
       lastX = event.clientX;
     }
   };
+  // Taps on the label links (and the label row on touch screens) belong to the links, not the board.
+  const onLabel = (event: PointerEvent) => event.target instanceof Element && event.target.closest(".w-board-labels") !== null;
+  // Touch has no hover, so a tap picks the piece under the finger when it lifts.
+  const pick = (event: PointerEvent) => {
+    setPointer(event);
+    ndc.set(pointer.x, pointer.y);
+    ray.setFromCamera(ndc, camera);
+    const hit = ray.intersectObjects(hitTargets, false)[0];
+    return hit ? pieces.find(p => p.card === hit.object) ?? null : null;
+  };
   const onDown = (event: PointerEvent) => {
-    if (event.button !== 0) return;
+    if (event.button !== 0 || onLabel(event)) return;
     setPointer(event);
     downAt = performance.now(); downX = lastX = event.clientX; dragging = false;
     if (!coarse) holdTimer = window.setTimeout(() => { if (!dragging) { gsap.to(rig, { overview: 1, duration: 1.1, ease: "expo.out" }); onOverview(true); playSound("slide"); } }, 520);
   };
-  const onUp = () => {
+  const onUp = (event: PointerEvent) => {
     window.clearTimeout(holdTimer);
     const wasOverview = rig.overview > 0.05;
     if (wasOverview) { gsap.to(rig, { overview: 0, duration: 0.9, ease: "expo.out" }); onOverview(false); }
-    if (!dragging && !wasOverview && hovered && performance.now() - downAt < 500) {
+    const target = event.pointerType === "mouse" ? hovered : downAt !== 0 && !dragging ? pick(event) : null;
+    if (downAt !== 0 && !dragging && !wasOverview && target && performance.now() - downAt < 500) {
       playSound("tock");
-      gsap.to(hovered.group.scale, { x: 0.9, y: 1.12, z: 1, duration: 0.12, yoyo: true, repeat: 1, ease: "power2.out" });
-      const link = hovered.label;
+      gsap.to(target.group.scale, { x: 0.9, y: 1.12, z: 1, duration: 0.12, yoyo: true, repeat: 1, ease: "power2.out" });
+      const link = target.label;
       window.setTimeout(() => link?.click(), 140);
     }
     downAt = 0; dragging = false;

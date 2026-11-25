@@ -10,9 +10,10 @@ import { caseStudies } from "./case-studies";
 import { contentDates } from "./content-dates";
 import { absoluteUrl, siteConfig } from "./site-config";
 import { launchService } from "./seo-entities";
+import { Testimonials } from "./components/home/Testimonials";
 
 const homeFaqs = [
-  { question: "How much will the project cost?", answer: "The campaign page package is $1,400. Full campaign support is $4,500. Ad spend and other third party costs are billed separately. We agree the scope and schedule before work starts." },
+  { question: "How much will the project cost?", answer: "The campaign page package is $1,800. Full campaign support is $5,900. Ad spend and other third party costs are billed separately. We agree the scope and schedule before work starts." },
   { question: "We already have artwork. Can you work with it?", answer: "Yes. Bring the artwork, game details and existing brand direction. I write the copy and design the campaign graphics around those assets. We confirm any new illustration, 3D or video work separately in the brief." },
   { question: "Can I book only the campaign page?", answer: "Yes. The campaign page package stands on its own. If you later want prelaunch, paid advertising or live campaign support, you can move to full campaign support." },
   { question: "How does the free opening mockup work?", answer: "Send a short game description and usable artwork. I will design one opening campaign section so you can see a direction before booking. There is no payment or obligation." },
@@ -70,6 +71,7 @@ export default function Home() {
         <div className="h-marquee-track">{[0, 1].map(copy => <div className="h-marquee-row" key={copy}>{marquee.map(item => <span key={item}>{item}<i/></span>)}</div>)}</div>
       </div>
 
+      <Testimonials />
       <section className="h-work" id="past-work" aria-labelledby="past-work-title" data-tone-shift="">
         <div className="w-wrap-wide h-work-head">
           <h2 id="past-work-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Three campaigns,</span></span> <span className="w-line"><span><em>three very different games</em></span></span></h2>
@@ -117,7 +119,7 @@ export default function Home() {
           <div className="h-tiers">
             <article className="h-tier" id="pricing" data-reveal="rise">
               <h3>Campaign page</h3>
-              <div className="h-price">$1,400</div>
+              <div className="h-price">$1,800</div>
               <p>Your Kickstarter or Gamefound page, from the first line of copy to the published page.</p>
               <ul>
                 <li>Campaign copy, written for your game</li>
@@ -129,7 +131,7 @@ export default function Home() {
             </article>
             <article className="h-tier h-tier--wide" data-reveal="rise">
               <h3>Full campaign support</h3>
-              <div className="h-price">$4,500</div>
+              <div className="h-price">$5,900</div>
               <p>The campaign page, plus the launch around it, from prelaunch to the final handoff.</p>
               <ul>
                 <li>Everything in Campaign page</li>

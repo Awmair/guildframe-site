@@ -8,6 +8,7 @@ import { Breadcrumbs, SeoFooter, SeoHeader } from "./SeoChrome";
 import { absoluteUrl, siteConfig } from "../site-config";
 import { authorId } from "../seo-entities";
 import { formatContentDate } from "../content-dates";
+import { Icon, Roll } from "./chrome/Icon";
 
 export type ArticleFaq = { question: string; answer: string };
 export type ArticleSource = {
@@ -33,6 +34,7 @@ export function SeoArticlePage({
   toc,
   faqs,
   sources,
+  related,
   children,
 }: {
   slug: string;
@@ -51,6 +53,8 @@ export function SeoArticlePage({
   toc: { id: string; label: string }[];
   faqs: ArticleFaq[];
   sources: ArticleSource[];
+  /** Optional links shown with the next step at the end of the article. */
+  related?: { href: string; label: string }[];
   children: ReactNode;
 }) {
   const canonicalPath = path ?? `/guides/${slug}`;
@@ -152,117 +156,134 @@ export function SeoArticlePage({
         Skip to article
       </a>
       <SeoHeader />
-      <main className={`article-main${schemaType === "TechArticle" ? " reference-main" : ""}`}>
+      <main className={`article-main w-page gd gd-article${schemaType === "TechArticle" ? " reference-main" : ""}`}>
+        <div className="gd-progress" aria-hidden="true" />
         <header className="article-hero">
-          <Breadcrumbs
-            items={[
-              { label: "Home", href: "/" },
-              { label: collectionLabel, href: collectionHref },
-              { label: title },
-            ]}
-          />
-          <div className="article-hero-inner">
-            <span className="article-category">{category}</span>
-            <h1>{title}</h1>
-            <p>{description}</p>
-            <div className="article-meta">
-              <span>Updated <time dateTime={updated}>{formatContentDate(updated)}</time></span>
-              <span>{readTime}</span>
-              <Link href="/authors/guildframe">By Umair at Guildframe</Link>
+          <div className="gd-article-grid">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: collectionLabel, href: collectionHref },
+                { label: title },
+              ]}
+            />
+            <div className="article-hero-inner">
+              <span className="article-category">{category}</span>
+              <h1>{title}</h1>
+              <p>{description}</p>
+              <div className="article-meta">
+                <span>Updated <time dateTime={updated}>{formatContentDate(updated)}</time></span>
+                {published !== updated && <span>First published <time dateTime={published}>{formatContentDate(published)}</time></span>}
+                <span>{readTime}</span>
+                <Link href="/authors/guildframe" data-title="Umair">By Umair at Guildframe</Link>
+              </div>
             </div>
           </div>
         </header>
 
-        <div className="article-layout">
-          <aside className="article-toc">
-            <strong>{sidebarTitle}</strong>
-            <nav aria-label="Table of contents">
-              {articleToc.map((item) => (
-                <a href={`#${item.id}`} key={item.id}>
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-            <Link
-              href={servicePath}
-              data-analytics-event="service_interest"
-              data-analytics-label={serviceLabel}
-              data-analytics-location="article sidebar"
-            >
-              {isStoreGuide ? "Plan your tabletop store" : "Plan your game launch"}
-            </Link>
-          </aside>
-
-          <details className="article-mobile-toc">
-            <summary>{sidebarTitle}<span aria-hidden="true">+</span></summary>
-            <nav aria-label="Article sections">
-              {articleToc.map((item) => <a href={`#${item.id}`} key={item.id}>{item.label}</a>)}
-            </nav>
-          </details>
-          <article className="article-body" id="article-content">
-            <div className="article-direct-answer" aria-label="Direct answer">
-              <p>{answer}</p>
-            </div>
-            {children}
-            {collectionHref === "/guides" && <GuideWorkbookSection slug={slug} />}
-            <ArticleNextStep slug={slug} />
-            {collectionHref === "/guides" && <GuideReadingPath slug={slug} />}
-            <section className="article-sources" aria-labelledby="article-sources-title">
-              <h2 id="article-sources-title">Sources and references</h2>
-              <p>
-                Platform requirements and figures come from the sources below. Layout advice and checklists are Guildframe recommendations.
-              </p>
-              <ul>
-                {sources.map((source) => (
-                  <li key={source.href}>
-                    <a href={source.href} target="_blank" rel="noreferrer">
-                      {source.label}
-                    </a>
-                    <span>{source.publisher}</span>
-                  </li>
+        <div className="gd-sheet tone-board">
+          <div className="article-layout gd-article-grid">
+            <aside className="article-toc">
+              <strong>{sidebarTitle}</strong>
+              <nav aria-label="Table of contents">
+                {articleToc.map((item) => (
+                  <a href={`#${item.id}`} key={item.id}>
+                    {item.label}
+                  </a>
                 ))}
-              </ul>
-            </section>
-            <aside className="article-author" aria-label="About the author"><span className="gf-author-monogram" aria-hidden="true">U</span><div><strong>Written by Umair</strong><p>Founder, campaign designer and paid advertising specialist at Guildframe.</p><Link href="/authors/guildframe">About the author </Link></div></aside>
-            <section className="article-faq" id="faq">
-              <h2>Frequently asked questions</h2>
-              {faqs.map((faq) => (
-                <details key={faq.question}>
-                  <summary>{faq.question}<i aria-hidden="true">+</i></summary>
-                  <p>{faq.answer}</p>
-                </details>
-              ))}
-            </section>
-            <div className="article-cta">
-              <h2>{isStoreGuide ? "Need help turning the campaign into a store?" : "Need help preparing your launch?"}</h2>
-              <p>
-                {isStoreGuide
-                  ? "Share your campaign, product list and what you need help with. Guildframe can prepare product content and the campaign handoff, with Shopify planning and setup scoped separately. We agree the work and responsibilities before quoting."
-                  : "Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for tabletop projects. Share your game and launch plans to agree a scope. A free opening mockup is available for creative enquiries."}
-              </p>
-              <div className="article-cta-actions">
-                <Link
-                  className="seo-button seo-button-light"
-                  href={servicePath}
-                  data-analytics-event="service_interest"
-                  data-analytics-label={serviceLabel}
-                  data-analytics-location="article CTA"
-                >
-                  {serviceLabel}
-                </Link>
-                <Link
-                  className="seo-button seo-button-outline"
-                  href={isStoreGuide ? "/resources/board-game-shopify-store-checklist" : "#start-project"}
-                  data-analytics-event="service_interest"
-                  data-analytics-label={isStoreGuide ? "Tabletop store checklist" : "Get my free mockup"}
-                  data-analytics-location="article CTA"
-                >
-                  {isStoreGuide ? "Use the store checklist" : "Get my free mockup"}
-                </Link>
+              </nav>
+              <Link
+                href={servicePath}
+                data-analytics-event="service_interest"
+                data-analytics-label={serviceLabel}
+                data-analytics-location="article sidebar"
+              >
+                {isStoreGuide ? "Plan your tabletop store" : "Plan your game launch"}
+                <Icon name="arrow" size={16} />
+              </Link>
+            </aside>
+
+            <details className="article-mobile-toc">
+              <summary>{sidebarTitle}<Icon name="plus" size={18} /></summary>
+              <nav aria-label="Article sections">
+                {articleToc.map((item) => <a href={`#${item.id}`} key={item.id}>{item.label}</a>)}
+              </nav>
+            </details>
+            <article className="article-body" id="article-content">
+              <div className="article-direct-answer" aria-label="Direct answer">
+                <p>{answer}</p>
               </div>
-            </div>
-          </article>
+              {children}
+              {collectionHref === "/guides" && <GuideWorkbookSection slug={slug} />}
+              <section className="article-faq" id="faq">
+                <h2>Frequently asked questions</h2>
+                {faqs.map((faq) => (
+                  <details key={faq.question}>
+                    <summary>{faq.question}<Icon name="plus" size={20} /></summary>
+                    <p>{faq.answer}</p>
+                  </details>
+                ))}
+              </section>
+              <section className="article-sources" aria-labelledby="article-sources-title">
+                <h2 id="article-sources-title">Sources and references</h2>
+                <p>
+                  Platform requirements and figures come from the sources below. Layout advice and checklists are Guildframe recommendations.
+                </p>
+                <ul>
+                  {sources.map((source) => (
+                    <li key={source.href}>
+                      <a href={source.href} target="_blank" rel="noreferrer">
+                        {source.label}
+                        <Icon name="arrow-up-right" size={14} />
+                      </a>
+                      <span>{source.publisher}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+              <aside className="article-author" aria-label="About the author"><span className="gf-author-monogram" aria-hidden="true">U</span><div><strong>Written by Umair</strong><p>Founder, campaign designer and paid advertising specialist at Guildframe.</p><Link href="/authors/guildframe">About the author</Link></div></aside>
+              <div className="gd-end">
+                <ArticleNextStep slug={slug} />
+                {collectionHref === "/guides" && <GuideReadingPath slug={slug} />}
+                {related && related.length > 0 && <nav className="gf-service-related gd-related" aria-label="Related launch guides">
+                  <h2>Related guides</h2>
+                  <div>{related.map((item) => <Link key={item.href} href={item.href} data-title={item.label}><strong>{item.label}</strong><Icon name="arrow" size={18} /></Link>)}</div>
+                </nav>}
+              </div>
+            </article>
+          </div>
         </div>
+        <section className="article-cta" aria-labelledby="article-cta-title">
+          <div className="article-cta-inner">
+            <h2 id="article-cta-title">{isStoreGuide ? "Need help turning the campaign into a store?" : "Need help preparing your launch?"}</h2>
+            <p>
+              {isStoreGuide
+                ? "Share your campaign, product list and what you need help with. Guildframe can prepare product content and the campaign handoff, with Shopify planning and setup scoped separately. We agree the work and responsibilities before quoting."
+                : "Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for tabletop projects. Share your game and launch plans to agree a scope. A free opening mockup is available for creative enquiries."}
+            </p>
+            <div className="article-cta-actions">
+              <Link
+                className="w-btn w-btn--coral"
+                href={servicePath}
+                data-analytics-event="service_interest"
+                data-analytics-label={serviceLabel}
+                data-analytics-location="article CTA"
+              >
+                <Roll>{serviceLabel}</Roll>
+                <Icon name="arrow" size={18} />
+              </Link>
+              <Link
+                className="w-btn w-btn--ghost"
+                href={isStoreGuide ? "/resources/board-game-shopify-store-checklist" : "#start-project"}
+                data-analytics-event="service_interest"
+                data-analytics-label={isStoreGuide ? "Tabletop store checklist" : "Get my free mockup"}
+                data-analytics-location="article CTA"
+              >
+                <Roll>{isStoreGuide ? "Use the store checklist" : "Get my free mockup"}</Roll>
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       <SeoFooter />
     </>

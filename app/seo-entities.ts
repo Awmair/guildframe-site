@@ -11,7 +11,7 @@ export const campaignService = (includePrice = false) => ({
   url: absoluteUrl("/campaign-design"),
   ...(includePrice ? { offers: {
     "@type": "Offer",
-    price: "1400",
+    price: "1800",
     priceCurrency: "USD",
     url: absoluteUrl("/campaign-design#pricing"),
   } } : {}),

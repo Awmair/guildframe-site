@@ -196,3 +196,85 @@ html.w-gate-up .w-gate{position:fixed;inset:0;z-index:var(--z-gate);display:bloc
 .w-gate.is-opening .w-gate-inner{animation:w-lid-fade 400ms ease-in forwards}
 @keyframes w-lid-open{0%{transform:none}22%{transform:translateY(-3%) rotateX(9deg) scale(1.02)}100%{transform:translateY(-115%) rotateX(38deg) scale(1.08);box-shadow:0 120px 120px rgb(0 0 0 / 0)}}
 @keyframes w-lid-fade{to{opacity:0;transform:translateY(-20px)}}
+
+/* ---------- responsive pass ---------- */
+/* The still board's landmarks: one row that scrolls sideways instead of wrapping up into the hero copy. */
+.w-board:not(.is-live) .w-board-labels{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y}
+.w-board-labels::-webkit-scrollbar{display:none}
+.w-board:not(.is-live) .w-board-label{flex:none}
+.w-board:not(.is-live) .w-board-label:first-child{margin-left:auto}
+.w-board:not(.is-live) .w-board-label:last-child{margin-right:auto}
+
+/* Touch screens and narrow windows: no hover to reveal the floating labels, so the landmarks stay a visible, tappable row. */
+@media (hover:none),(max-width:900px){
+  .w-board:not(.is-live) .w-board-labels,.w-board.is-live .w-board-labels{position:absolute;inset:auto 0 22px;z-index:3;display:flex;flex-wrap:nowrap;justify-content:flex-start;gap:8px;padding:0 var(--page-pad);overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y;scroll-padding-inline:var(--page-pad);pointer-events:auto}
+  .w-board.is-live .w-board-label{position:relative;left:auto;top:auto;flex:none;opacity:1;scale:1;transform:none!important;will-change:auto}
+  .w-board.is-live .w-board-label:first-child{margin-left:auto}
+  .w-board.is-live .w-board-label:last-child{margin-right:auto}
+  .w-board-label{height:40px}
+  .w-board-hint{display:none}
+  .h-concepts-strip{cursor:auto}
+}
+@media (hover:none){
+  .h-concept:hover{transform:rotate(var(--r))}
+  .h-tier:hover{transform:none}
+  .h-project-media:hover img{transform:none}
+}
+
+@media(max-width:900px){
+  .h-hero{padding-bottom:96px}
+  .h-hero-side{margin-top:40svh;max-width:520px}
+  .w-board-still{top:50%}
+  .w-board-labels{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent)}
+}
+@media(max-width:600px){
+  .h-hero-side{padding:18px;gap:18px}
+  .h-hero-side p{font-size:1rem}
+  .h-project{border-radius:20px;padding:12px;gap:20px}
+  .h-project-media{border-radius:12px}
+  .h-project-body{padding:0 6px 10px}
+  .h-concepts-head{margin-bottom:24px}
+  .h-concepts-strip{padding-block:20px 28px}
+  .h-concept{flex-basis:64vw}
+}
+/* Phones with the cookie bar showing: make room so it never sits on the landmark row. */
+@media(max-width:640px){
+  html:has(.analytics-consent) .h-hero{padding-bottom:156px}
+  html:has(.analytics-consent) .w-board .w-board-labels{bottom:84px}
+}
+
+/* Short laptop screens: the hero fits the window and the case study deck stops sticking, so nothing is hidden under the next card. */
+@media(min-width:901px) and (max-height:620px){
+  .gfr-hero-shell{min-height:520px}
+  .h-hero{padding:88px 0 64px}
+  .h-title{font-size:clamp(3rem,min(8.4vw,16svh),7.5rem)}
+  .h-hero-side{padding:18px;gap:16px}
+  .h-project{position:relative;top:auto;min-height:0}
+}
+
+/* Process on phones: a short vertical track instead of three tall centred stops. */
+@media(max-width:700px){
+  .h-process-title{margin-bottom:36px}
+  .h-steps{gap:0}
+  .h-steps li{grid-template-columns:52px minmax(0,1fr);justify-items:start;align-items:start;text-align:left;column-gap:18px;row-gap:6px;padding-bottom:32px}
+  .h-steps li:last-child{padding-bottom:0}
+  .h-steps li:not(:last-child)::before{content:"";position:absolute;left:24px;top:66px;bottom:10px;width:4px;background-image:radial-gradient(circle,var(--board-100) 1.4px,transparent 1.8px);background-size:4px 10px;opacity:.45}
+  .h-step-space{grid-row:1/span 2;width:52px;margin:0;box-shadow:0 5px 0 #b8a988,0 14px 16px -6px rgb(0 0 0 / .5)}
+  .h-steps li.is-here .h-step-space{transform:translateY(3px);box-shadow:0 2px 0 #b8a988,0 0 0 6px rgb(242 179 61 / .35),0 10px 14px -6px rgb(0 0 0 / .5)}
+  .h-steps h3{grid-column:2;margin-top:4px;font-size:1.875rem}
+  .h-steps p{grid-column:2;max-width:none}
+}
+
+@media(max-width:640px){
+  .h-row-head{margin-bottom:20px}
+  .h-guide{padding:20px 4px;gap:14px}
+  .h-faq-list summary{padding:18px 0;min-height:44px}
+}
+
+/* The lid on short screens, such as a phone held sideways. */
+@media(max-height:520px){
+  .w-gate-inner{gap:16px;padding:16px}
+  .w-gate-logo{width:min(200px,50vw)}
+  .w-gate-dice{display:none}
+  .w-gate-lid::before{inset:8px}
+}

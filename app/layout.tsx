@@ -21,6 +21,7 @@ import "./world/pages/guides.css";
 import "./world/pages/studio.css";
 import "./world/pages/creative.css";
 import "./world/pages/shopify.css";
+import "./world/pages/testimonials.css";
 import "./world/home.css";
 import {JsonLd} from "./components/JsonLd";
 import {Analytics} from "./components/Analytics";

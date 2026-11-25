@@ -25,7 +25,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const related = g.relatedSlugs.map(slug => launchGuides.find(guide => guide.slug === slug)).filter(guide => guide !== undefined);
   const showEconomics = g.slug === "kickstarter-advertising-budget-board-games";
   const toc = [...g.sections.map(s => ({ id: s.id, label: s.title })), ...(showEconomics ? [{id:"advertising-calculator",label:"Try the ad budget calculator"}] : [])];
-  return <SeoArticlePage slug={g.slug} title={g.title} description={g.description} category={g.tag} answer={g.answer} published={g.published ?? launchGuideDate} updated={g.updated ?? launchGuideDate} readTime={`${Math.max(1, Math.ceil(words / 200))} min read`} toc={toc} faqs={g.faqs} sources={g.sources}>
+  return <SeoArticlePage slug={g.slug} title={g.title} description={g.description} category={g.tag} answer={g.answer} published={g.published ?? launchGuideDate} updated={g.updated ?? launchGuideDate} readTime={`${Math.max(1, Math.ceil(words / 200))} min read`} toc={toc} faqs={g.faqs} sources={g.sources} related={related.map(guide => ({ href: `/guides/${guide.slug}`, label: guide.title }))}>
     {g.sections.map(s => <section key={s.id}>
       <h2 id={s.id}>{s.title}</h2>
       {s.paragraphs.map(p => <p key={p}>{p}</p>)}
@@ -37,7 +37,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     {showEconomics && <LaunchEconomicsCalculator />}
     {g.slug === "kickstarter-prelaunch-email-list" && <p>Check whether the audience you can afford supports your rewards with the <Link href="/guides/kickstarter-advertising-budget-board-games#advertising-calculator">advertising budget calculator</Link>.</p>}
     <GuideProjectExample slug={g.slug} />
-    <aside className="article-callout"><strong>Need help with this part of your launch?</strong><p><Link href={g.servicePath}>{g.serviceLabel}</Link>. Share your project and the work you need help with to agree a scope. You can also request a free opening mockup using your artwork.</p></aside>
-    <nav className="gf-service-related" aria-label="Related launch guides">{related.map(guide => <Link key={guide.slug} href={`/guides/${guide.slug}`}>{guide.title}</Link>)}</nav>
+    <aside className="article-callout article-callout--service"><strong>Need help with this part of your launch?</strong><p><Link href={g.servicePath}>{g.serviceLabel}</Link>. Share your project and the work you need help with to agree a scope. You can also request a free opening mockup using your artwork.</p></aside>
   </SeoArticlePage>;
 }

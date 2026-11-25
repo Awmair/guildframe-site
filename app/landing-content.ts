@@ -8,6 +8,7 @@ function storeContent(
   products: string,
   updated: string,
   capabilities: LandingPageContent["capabilities"],
+  store: LandingPageContent["store"],
 ): LandingPageContent {
   return {
     slug,
@@ -19,12 +20,13 @@ function storeContent(
     image: `/images/campaign/${image}.webp`,
     imageAlt: `Original concept products for a ${kind} store`,
     audience: "Store planning after crowdfunding",
+    store,
     benefits: [
       { title: "Start with the catalogue", copy: `Map ${products}, editions and optional extras before designing navigation.` },
       { title: "Agree who handles the work", copy: "Name the owners of product content, theme setup, apps, testing and routine updates." },
       { title: "Check the buying path", copy: "Review mobile pages, product choices, delivery messages and checkout before opening sales." },
     ],
-    proofTitle: `What your ${kind} store needs to explain.`,
+    proofTitle: `What your ${kind} store needs to explain`,
     proofCopy: "Campaign visitors arrive with context. Store customers may be seeing the product for the first time. Reuse the approved artwork and facts, then build the product page around the choice they need to make.",
     capabilities,
     steps: [
@@ -35,7 +37,7 @@ function storeContent(
     faqs: [
       { question: "Does a store replace campaign fulfilment?", answer: "No. Keep original backer rewards, reserved stock and delivery communication in their own workflow. Your production and fulfilment providers confirm the facts the new store needs." },
       { question: "Do I need a custom theme?", answer: "Not always. Try a suitable Shopify theme with your real products first. Record any content, app or layout gaps before commissioning custom development." },
-      { question: "Can Guildframe help with the store?", answer: "Guildframe can help adapt campaign artwork and product content and organise the post-campaign handoff. Optional Shopify planning and setup require a separate brief. Price, timing, software costs and responsibilities are agreed after reviewing the requirements." },
+      { question: "Can Guildframe help with the store?", answer: "Guildframe can help adapt campaign artwork and product content and organise the post campaign handoff. Optional Shopify planning and setup require a separate brief. Price, timing, software costs and responsibilities are agreed after reviewing the requirements." },
     ],
     related: [
       { title: "Prepare your store brief", copy: "Choose the help you need and gather the inputs for a separate store project.", href: "/done-for-you-shopify-store" },
@@ -54,6 +56,7 @@ export const boardGameContent = storeContent(
     { title: "Gameplay and contents", copy: "Make player count, play time, rules and component images easy to find." },
     { title: "Availability", copy: "Separate stock ready to ship from preorders and explain what happens to mixed orders." },
   ],
+  { src: "/images/pdp-board-game-store-responsive-v2.jpg", width: 1586, height: 992, alt: "Studio concept Shopify product page for a fictional board game on desktop and phone, with an edition choice, stock status and delivery line" },
 );
 
 export const ttrpgContent = storeContent(
@@ -65,6 +68,7 @@ export const ttrpgContent = storeContent(
     { title: "Readable samples", copy: "Use interior spreads and an example of play to show what the buyer will use at the table." },
     { title: "Format and delivery", copy: "Confirm binding, page count, file formats and the separate delivery terms for physical and digital items." },
   ],
+  { src: "/images/pdp-ttrpg-store-responsive-v2.jpg", width: 1536, height: 1024, alt: "Studio concept Shopify product page for a fictional dark fantasy tabletop release on desktop and phone, with standard and collector editions" },
 );
 
 export const miniaturesContent = storeContent(
@@ -76,4 +80,5 @@ export const miniaturesContent = storeContent(
     { title: "Preparation required", copy: "Explain assembly for physical kits and the supplied support options for printable files." },
     { title: "Licence and fulfilment", copy: "Use the actual file licence terms. State delivery estimates separately for physical stock and preorders." },
   ],
+  { src: "/images/pdp-miniatures-store-responsive-v2.jpg", width: 1536, height: 1024, alt: "Studio concept Shopify product page for a fictional collector set on desktop and phone, with set options, quantity and stock status" },
 );

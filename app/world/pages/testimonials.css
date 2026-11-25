@@ -1,0 +1,54 @@
+/* Home: client reviews from Fiverr, shown as a hand of cards above the past work. */
+.h-reviews{position:relative;background:var(--baize-900);color:var(--board-100);padding:var(--section) 0;overflow:hidden}
+.h-reviews::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 85% 30%,rgb(239 100 77 / .08),transparent 70%),radial-gradient(50% 60% at 10% 90%,rgb(92 192 164 / .06),transparent 70%);pointer-events:none}
+.hr-inner{position:relative;width:var(--wrap-wide);margin:0 auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:clamp(32px,5vw,88px);align-items:start}
+.hr-side{display:grid;gap:22px;align-content:start}
+@media (min-width:1001px) and (min-height:760px){.hr-side{position:sticky;top:110px}}
+.hr-eyebrow{margin:0;font-size:var(--t-small);letter-spacing:.08em;text-transform:uppercase;color:var(--mist-500)}
+.h-reviews h2{margin:0;font:400 var(--t-display-l)/1 var(--font-sans);letter-spacing:-.03em}
+.h-reviews h2 em{font-family:var(--font-serif);font-style:italic;color:var(--saffron-500)}
+.hr-lead{margin:0;max-width:44ch;color:var(--mist-300);font-size:var(--t-lead);line-height:1.5}
+.hr-score{display:flex;align-items:center;gap:18px}
+.hr-score-num{font:400 var(--t-figure)/.9 var(--font-sans);letter-spacing:-.04em;color:var(--board-100)}
+.hr-score-meta{display:grid;gap:8px;font-size:var(--t-small);color:var(--mist-300)}
+.hr-all{justify-self:start}
+/* Five pips, like a die face rolled to five: the rating mark. */
+.hr-pips{display:inline-flex;gap:5px;align-items:center}
+.hr-pips i{width:8px;height:8px;border-radius:50%;background:var(--coral-500)}
+.hr-pips i:nth-child(2n){transform:translateY(-3px)}
+/* Featured quote: a big card in the side column. */
+.hr-feature{margin:8px 0 0;padding:clamp(22px,2.6vw,34px);border-radius:var(--r-card,22px);background:var(--coral-500);color:var(--ink-900);box-shadow:0 30px 60px -30px rgb(0 0 0 / .6);transform:rotate(-1.2deg);transition:transform 700ms var(--ease-spring)}
+.hr-feature:hover{transform:rotate(0) translateY(-4px)}
+.hr-feature-tag{display:inline-block;margin-bottom:14px;padding:5px 12px;border-radius:var(--r-pill);background:rgb(20 36 38 / .12);font-size:var(--t-count);letter-spacing:.06em;text-transform:uppercase}
+.hr-feature blockquote{margin:0}
+.hr-feature blockquote p{margin:0;font:400 clamp(1.25rem,1.8vw,1.6rem)/1.35 var(--font-serif);font-style:italic}
+.hr-feature figcaption{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:18px;font-size:var(--t-small)}
+.hr-feature figcaption strong{font-weight:500}
+.hr-feature .hr-pips i{background:var(--ink-900)}
+/* The deck: cream cards, slightly askew, straightening when picked up. */
+.hr-deck{columns:2 280px;column-gap:18px}
+.hr-card{break-inside:avoid;margin:0 0 18px;padding:22px 22px 20px;border-radius:18px;background:var(--board-100);color:var(--ink-900);box-shadow:0 1px 0 rgb(255 255 255 / .5) inset,0 22px 40px -26px rgb(0 0 0 / .65);display:grid;gap:14px;transform:rotate(var(--tilt,0deg));transition:transform 650ms var(--ease-spring),box-shadow 400ms var(--ease-out)}
+.hr-card:nth-child(4n+1){--tilt:-1.1deg}.hr-card:nth-child(4n+2){--tilt:.8deg}.hr-card:nth-child(4n+3){--tilt:-.5deg}.hr-card:nth-child(4n){--tilt:1.2deg}
+.hr-card:nth-child(3n){background:var(--greyboard-100,#E6DDCA)}
+.hr-card:nth-child(5){background:var(--saffron-500)}
+.hr-card blockquote{margin:0}
+.hr-card blockquote p{margin:0;font-size:1.0625rem;line-height:1.55;color:var(--ink-900)}
+.hr-card figcaption{display:flex;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid var(--line-board);font-size:var(--t-small);color:var(--ink-700)}
+.hr-card figcaption strong{font-weight:500;color:var(--ink-900)}
+@media (hover:hover) and (pointer:fine){
+  .hr-card:hover{transform:rotate(0) translateY(-6px) scale(1.015);box-shadow:0 1px 0 rgb(255 255 255 / .5) inset,0 34px 60px -28px rgb(0 0 0 / .75)}
+}
+html.w-js .hr-card[data-reveal="rise"]{transition-delay:calc(var(--i,0) * 60ms)}
+html.w-js .hr-card[data-reveal="rise"].is-in{transform:rotate(var(--tilt,0deg))}
+@media (hover:hover) and (pointer:fine){html.w-js .hr-card[data-reveal="rise"].is-in:hover{transform:rotate(0) translateY(-6px) scale(1.015);transition-delay:0s}}
+@media (max-width:1000px){
+  .hr-inner{grid-template-columns:1fr}
+}
+/* Phones: the deck becomes a swipeable hand. */
+@media (max-width:640px){
+  .hr-deck{columns:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--page-pad) * -1);padding:8px var(--page-pad) 18px;scrollbar-width:none}
+  .hr-deck::-webkit-scrollbar{display:none}
+  .hr-card{flex:0 0 82vw;margin:0;scroll-snap-align:center}
+  .hr-score-num{font-size:3rem}
+}
+@media (prefers-reduced-motion:reduce){.hr-card,.hr-feature{transition:none}}

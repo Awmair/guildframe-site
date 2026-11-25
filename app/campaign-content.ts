@@ -9,7 +9,7 @@ export const gameCategories = [
 ] as const;
 export const campaignFaqs = [
  {question:"What does Guildframe help with?",answer:"Planning, prelaunch pages and email, campaign copy and graphics, paid advertising and live campaign support. You can book a defined stage or a broader launch engagement. The proposal lists the work, owners, schedule and costs."},
- {question:"How much does a full launch cost?",answer:"Full campaign support is $4,500. It covers the campaign page, the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff. Ad spend, software and other provider costs are separate. The campaign page is also available on its own; its fixed price is listed on the campaign design page."},
+ {question:"How much does a full launch cost?",answer:"Full campaign support is $5,900. It covers the campaign page, the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff. Ad spend, software and other provider costs are separate. The campaign page is also available on its own; its fixed price is listed on the campaign design page."},
  {question:"Can I hire you just for design or ads?",answer:"Yes. You can book campaign creative, prelaunch preparation, paid advertising or live support separately. We agree where your existing team takes over and what Guildframe will deliver."},
  {question:"Do you work on Kickstarter and Gamefound?",answer:"Yes. Tell me which platform you plan to use, or ask for help comparing the work involved. The campaign is prepared for your chosen platform and checked there before launch."},
  {question:"Who manages the paid advertising?",answer:"Umair manages paid advertising at Guildframe. We agree the advertising channels, account access, test plan, spend limits and reporting before ads run. The media budget is separate from the service fee."},
@@ -18,7 +18,7 @@ export const campaignFaqs = [
  {question:"What if my launch date is close?",answer:"Send the date, current page, assets and the work still missing. I’ll review what fits the time available before accepting the scope. A smaller, realistic brief is better than a schedule that leaves no time to check the campaign."},
  {question:"Do I keep my accounts, contacts and files?",answer:"Yes. The campaign and marketing accounts stay yours. We agree access and list the final files and editable sources in the brief. Email contacts are collected through your signup flow with clear permission to contact them."},
  {question:"Will you guarantee funding or a return on ads?",answer:"No. The game, price, audience, production costs and launch preparation all affect the outcome. We set a test plan and budget, report what the tracking can show and agree when to adjust or stop spending."},
- {question:"Do you handle manufacturing and shipping?",answer:"The launch service covers creative, marketing and the agreed campaign operations. You and your suppliers own manufacturing, freight, taxes and delivery. We can prepare backer updates and pledge-manager content around the facts you confirm."},
+ {question:"Do you handle manufacturing and shipping?",answer:"The launch service covers creative, marketing and the agreed campaign operations. You and your suppliers own manufacturing, freight, taxes and delivery. We can prepare backer updates and pledge manager content around the facts you confirm."},
  {question:"What happens before I pay?",answer:"We review your project and agree the deliverables, fees, payment schedule, support period and revision process in writing. If you want a creative preview, request the free opening mockup first."},
 ] as const;
 
@@ -37,19 +37,19 @@ export const categoryFaqs: Record<string, {question:string;answer:string}[]> = {
  "kickstarter-advertising": [
   {question:"What affects the cost of Kickstarter ad management?",answer:"The scope depends on the prelaunch and live dates, advertising channels, creative workload and reporting needs. The proposal names those items and separates the management fee from media spend, software and additional creative production."},
   {question:"Can you run ads before the Kickstarter campaign is live?",answer:"Yes. Prelaunch ads can introduce the game and bring visitors to a signup or follow page. Live campaign ads have a different destination and reporting goal. The scope defines both stages, channels and approved spending limits."},
-  {question:"How will I know what the ads contributed?",answer:"We agree reporting sources and attribution windows before running ads, then report spend and attributable actions with their limits. Kickstarter referral reports and advertising-platform reports may differ. We avoid adding overlapping pledge revenue together."},
+  {question:"How will I know what the ads contributed?",answer:"We agree reporting sources and attribution windows before running ads, then report spend and attributable actions with their limits. Kickstarter referral reports and advertising platform reports may differ. We avoid adding overlapping pledge revenue together."},
  ],
  "kickstarter-campaign-management": [
   {question:"Will you publish campaign updates for me?",answer:"We agree who drafts, approves and publishes updates before launch. You confirm reward, production and delivery facts. The support scope lists working dates, response expectations and account access."},
-  {question:"What do I receive when the live support period ends?",answer:"The agreed files and reports, approved copy, recurring questions and outstanding tasks with their owners. Post-campaign updates or pledge-manager work can be included when specified in the proposal."},
+  {question:"What do I receive when the live support period ends?",answer:"The agreed files and reports, approved copy, recurring questions and outstanding tasks with their owners. Post campaign updates or pledge manager work can be included when specified in the proposal."},
  ],
  "gamefound-launch-services": [
   {question:"Does a Gamefound launch include paid advertising?",answer:"It can. The proposal lists prelaunch and live advertising separately from campaign creative, with approved media spend, channels and reporting. Share your project stage and current account setup so the scope matches what is ready."},
-  {question:"Can you help with a Gamefound campaign and late pledges?",answer:"Yes, where included in the brief. Campaign creative and live support follow the project setup; late-pledge and pledge-manager content need their own confirmed products, prices and shipping information."},
+  {question:"Can you help with a Gamefound campaign and late pledges?",answer:"Yes, where included in the brief. Campaign creative and live support follow the project setup; late pledge and pledge manager content need their own confirmed products, prices and shipping information."},
  ],
  "post-campaign-support": [
-  {question:"Can you help write backer updates after funding?",answer:"Yes. You provide confirmed production and delivery information, and we turn it into clear updates with an agreed schedule. We can also prepare pledge-manager descriptions and reward graphics within the scope."},
-  {question:"Does post-campaign support include a Shopify store?",answer:"Store planning and setup are optional, separately scoped work. We first check your fulfilment plan, product information and which orders should go through the pledge manager or store."},
+  {question:"Can you help write backer updates after funding?",answer:"Yes. You provide confirmed production and delivery information, and we turn it into clear updates with an agreed schedule. We can also prepare pledge manager descriptions and reward graphics within the scope."},
+  {question:"Does post campaign support include a Shopify store?",answer:"Store planning and setup are optional, separately scoped work. We first check your fulfilment plan, product information and which orders should go through the pledge manager or store."},
  ],
  "board-game-kickstarter-campaign-design": [
   {question:"What board game artwork should I send?",answer:"Send the box art, component images and a short gameplay explanation. Include player count, play time, proposed rewards and any rules or preview links. Mark prototype images so they can be labelled correctly."},

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { guideWorkbooks } from "../guide-workbooks";
+import { Icon } from "./chrome/Icon";
 
 export function GuideWorkbookSection({slug}:{slug:string}) {
   const workbook=guideWorkbooks[slug];
@@ -9,7 +10,7 @@ export function GuideWorkbookSection({slug}:{slug:string}) {
     <ol className="guide-action-list">{workbook.actions.map((action,index)=><li key={action}><span aria-hidden="true">{String(index+1).padStart(2,"0")}</span><p>{action}</p></li>)}</ol>
     <div className="guide-workbook-example"><h3>A planning example</h3><p>{workbook.example}</p></div>
     <div className="guide-workbook-check"><h3>How to check your work</h3><p>{workbook.check}</p></div>
-    <a className="guide-download" href={`/downloads/guides/${slug}.md`} download>Download the working checklist</a>
+    <a className="guide-download" href={`/downloads/guides/${slug}.md`} download><Icon name="arrow" size={18} className="guide-download-icon" />Download the working checklist</a>
   </section>;
 }
 const paths=[
@@ -27,5 +28,5 @@ const paths=[
 export function GuideReadingPath({slug}:{slug:string}) {
  const match = /budget|cost|pricing|funding|stretch|reward/.test(slug) ? [0,1,2,7] : /email|marketing|agency|prelaunch|tracking/.test(slug) ? [2,3,4,6] : /shopify|pledge|funded|international/.test(slug) ? [5,1,8,9] : [3,4,8,9];
  const selected = match.map(i=>paths[i]).filter(p=>p.href!==`/guides/${slug}`);
- return <nav className="guide-reading-path" aria-label="Continue planning your launch"><h2>Keep planning your launch</h2><div>{selected.map(p=><Link key={p.href} href={p.href}><strong>{p.label}</strong><span>{p.description}</span></Link>)}</div></nav>;
+ return <nav className="guide-reading-path" aria-label="Continue planning your launch"><h2>Keep planning your launch</h2><div>{selected.map(p=><Link key={p.href} href={p.href} data-title={p.label}><strong>{p.label}</strong><span>{p.description}</span><Icon name="arrow" size={18} /></Link>)}</div></nav>;
 }

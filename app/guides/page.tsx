@@ -1,6 +1,6 @@
-import "./library.css";
 import { LibrarySearch } from "../components/LibrarySearch";
 import Link from "next/link";
+import { Icon } from "../components/chrome/Icon";
 import {launchGuides} from "../launch-guides";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { JsonLd } from "../components/JsonLd";
@@ -120,11 +120,17 @@ function guideImage(href: string, index: number) {
   const images = ["strategy-board-game", "party-card-game", "dice-accessories", "rpg-book", "trading-card-game", "miniature-terrain"];
   return images[index % images.length];
 }
-function GuideCard({ guide, index, stage }: { guide: { title: string; copy: string; href: string; tag: string }; index: number; stage: string }) {
+type Guide = { title: string; copy: string; href: string; tag: string };
+const stagedGuides = campaignGuides.map((guide, index) => ({ guide, index, stage: guideStage(guide.href) }));
+const campaignGroups = guideFilters.filter(option => option.value !== "all" && option.value !== "after").map(option => ({ ...option, items: stagedGuides.filter(item => item.stage === option.value) })).filter(group => group.items.length > 0);
+const filtersWithCounts = guideFilters.map(option => ({ ...option, count: option.value === "all" ? guides.length : option.value === "after" ? afterFundingGuides.length : stagedGuides.filter(item => item.stage === option.value).length }));
+
+function GuideRow({ guide, index, stage }: { guide: Guide; index: number; stage: string }) {
   const image = guideImage(guide.href, index);
-  return <Link href={guide.href} className="gf-library-card" data-guide-stage={stage} data-tone={index % 6}>
-    <div className="gf-library-card-art" aria-hidden="true"><span className="gf-library-card-type">Guildframe field guide</span><img src={`/images/hero/${image}-480w.webp`} srcSet={`/images/hero/${image}-320w.webp 320w, /images/hero/${image}-480w.webp 480w`} sizes="(max-width: 650px) 70vw, (max-width: 1000px) 40vw, 290px" width="640" height="640" alt="" loading="lazy"/><span className="gf-library-card-number">{String(index + 1).padStart(2, "0")}</span></div>
-    <div className="gf-library-card-copy"><span>{guide.tag}</span><h2>{guide.title}</h2><p>{guide.copy}</p><strong>Read the guide</strong></div>
+  return <Link href={guide.href} className="gd-row" data-guide-stage={stage} data-tone={index % 6} data-title={guide.title} data-cursor-label="Read">
+    <span className="gd-row-art" aria-hidden="true"><img src={`/images/hero/${image}-320w.webp`} width="320" height="320" alt="" loading="lazy" decoding="async"/></span>
+    <div className="gd-row-copy"><h3 className="gd-row-title">{guide.title}</h3><span className="gd-row-summary">{guide.copy}</span><span className="gd-row-tag">{guide.tag}</span></div>
+    <Icon name="arrow" size={20} className="gd-row-arrow"/>
   </Link>;
 }
 
@@ -169,30 +175,46 @@ export default function GuidesPage() {
       }} />
       <a className="skip-link" href="#guides-content">Skip to guides</a>
       <SeoHeader />
-      <main className="guides-main gf-studio-library" id="guides-content">
-        <section className="guides-hero">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
-          <span className="gf-eyebrow">Guides for tabletop creators</span>
-          <h1>Plan your Kickstarter.<br/><em>Prepare what comes next.</em></h1>
-          <p>Work through your launch budget, campaign page and marketing plan. Compare outside help, then prepare a store for ongoing sales.</p>
-        </section>
-        <nav className="guide-start-here" aria-label="Start with the decision you need to make">
-          <Link href="/guides/board-game-kickstarter-marketing-plan"><span>01 / MAKE THE PLAN</span><strong>What needs to happen before launch?</strong><p>Put the product, audience and campaign in a practical order.</p></Link>
-          <Link href="/guides/choose-board-game-kickstarter-marketing-agency"><span>02 / COMPARE CAMPAIGN HELP</span><strong>Which work should you hire for?</strong><p>Compare deliverables, fees and responsibilities before choosing an agency.</p></Link>
-          <Link href="/guides/best-shopify-themes-for-board-games"><span>03 / PLAN YOUR STORE</span><strong>Which Shopify theme fits your games?</strong><p>Compare themes against your catalogue, budget and setup work.</p></Link>
-        </nav>
-        <nav className="gf-service-related" aria-label="Tools and real campaign examples"><Link href="/guides/kickstarter-advertising-budget-board-games#advertising-calculator">Try the ad budget calculator</Link><Link href="/resources/tabletop-campaign-page-study">Explore 25 campaign examples</Link><Link href="/campaign-creative#creative-walkthroughs">Watch the creative walkthroughs</Link></nav>
-        <LibrarySearch count={guides.length} noun="guides" filters={guideFilters}/>
-        <section className="guides-grid" id="launch-guides" aria-label="Campaign launch guides">
-          {campaignGuides.map((guide, index) => <GuideCard guide={guide} index={index} stage={guideStage(guide.href)} key={guide.href}/>)}
-        </section>
-        <section className="gf-archive-heading" id="after-funding" data-guide-heading="after-funding-guides"><span className="gf-eyebrow">Keep the next stage in view</span><h2>After funding</h2><p>Plan fulfilment, ongoing orders and a permanent home for the game.</p></section>
-        <section className="guides-grid" id="after-funding-guides" aria-label="After funding guides">{afterFundingGuides.map((guide, index) => <GuideCard guide={guide} index={index + campaignGuides.length} stage="after" key={guide.href}/>)}</section>
-        <p className="gf-library-art-note">Guide illustrations show original fictional game concepts.</p>
-        <section className="guides-solutions">
-          <div>
-            <h2>Find the service for your project.</h2>
+      <main className="guides-main w-page gd gd-index" id="guides-content">
+        <header className="gd-hero guides-hero">
+          <div className="gd-hero-copy">
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Guides" }]} />
+            <h1 className="gd-title" data-reveal="lines"><span className="w-line"><span>Plan your Kickstarter.</span></span> <span className="w-line"><span><em>Prepare what comes next.</em></span></span></h1>
+            <p className="gd-lead">Work through your launch budget, campaign page and marketing plan. Compare outside help, then prepare a store for ongoing sales.</p>
+            <nav className="gf-service-related gd-tools" aria-label="Tools and real campaign examples">
+              <Link href="/guides/kickstarter-advertising-budget-board-games#advertising-calculator" data-title="Ad budget calculator">Try the ad budget calculator<Icon name="arrow-up-right" size={16}/></Link>
+              <Link href="/resources/tabletop-campaign-page-study" data-title="Campaign page study">Explore 25 campaign examples<Icon name="arrow-up-right" size={16}/></Link>
+              <Link href="/campaign-creative#creative-walkthroughs" data-title="Creative walkthroughs">Watch the creative walkthroughs<Icon name="arrow-up-right" size={16}/></Link>
+            </nav>
           </div>
+          <nav className="guide-start-here gd-deal" aria-label="Start with the decision you need to make" data-reveal="rise">
+            <Link href="/guides/board-game-kickstarter-marketing-plan" data-title="Marketing plan"><span>Make the plan</span><strong>What needs to happen before launch?</strong><p>Put the product, audience and campaign in a practical order.</p><Icon name="arrow" size={20}/></Link>
+            <Link href="/guides/choose-board-game-kickstarter-marketing-agency" data-title="Compare campaign help"><span>Compare campaign help</span><strong>Which work should you hire for?</strong><p>Compare deliverables, fees and responsibilities before choosing an agency.</p><Icon name="arrow" size={20}/></Link>
+            <Link href="/guides/best-shopify-themes-for-board-games" data-title="Shopify themes"><span>Plan your store</span><strong>Which Shopify theme fits your games?</strong><p>Compare themes against your catalogue, budget and setup work.</p><Icon name="arrow" size={20}/></Link>
+          </nav>
+        </header>
+
+        <section className="gd-library tone-board" aria-label="Guide library">
+          <div className="gd-library-inner">
+            <LibrarySearch count={guides.length} noun="guides" filters={filtersWithCounts}/>
+            <div id="launch-guides">
+              {campaignGroups.map(group => <section className="gd-group" key={group.value} aria-labelledby={`group-${group.value}`} data-guide-heading={`guides-${group.value}`}>
+                <h2 className="gd-group-title" id={`group-${group.value}`}>{group.label}</h2>
+                <div className="guides-grid gd-rows" id={`guides-${group.value}`}>
+                  {group.items.map(item => <GuideRow guide={item.guide} index={item.index} stage={item.stage} key={item.guide.href}/>)}
+                </div>
+              </section>)}
+            </div>
+            <section className="gd-group gd-group--after" id="after-funding" aria-labelledby="after-funding-title" data-guide-heading="after-funding-guides">
+              <div className="gd-group-head"><h2 className="gd-group-title" id="after-funding-title">After funding</h2><p>Plan fulfilment, ongoing orders and a permanent home for the game.</p></div>
+              <div className="guides-grid gd-rows" id="after-funding-guides" aria-label="After funding guides">{afterFundingGuides.map((guide, index) => <GuideRow guide={guide} index={index + campaignGuides.length} stage="after" key={guide.href}/>)}</div>
+            </section>
+            <p className="gf-library-art-note">Guide illustrations show original fictional game concepts.</p>
+          </div>
+        </section>
+
+        <section className="guides-solutions gd-solutions" aria-labelledby="guides-solutions-title">
+          <h2 id="guides-solutions-title" className="w-h2">Find the service <em>for your project.</em></h2>
           <nav aria-label="Guildframe solutions">
             <Link href="/board-game-kickstarter-campaign-design">Board games</Link>
             <Link href="/card-game-kickstarter-campaign-design">Card games &amp; TCGs</Link>

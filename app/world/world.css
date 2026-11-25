@@ -305,3 +305,74 @@ html.w-js .w-footer-word:not(.is-in) :is(.hd-side,.hd-head,.hl-letter){opacity:0
   .hd-pawn,.hd-side,.hd-head,.hl-letter{animation:none!important;transition:none!important}
   html.w-js .w-footer-word:not(.is-in) :is(.hd-side,.hd-head,.hl-letter){opacity:1}
 }
+
+/* ---------- responsive pass: chrome ---------- */
+.w-header{padding-top:max(var(--page-pad),env(safe-area-inset-top));padding-left:max(var(--page-pad),env(safe-area-inset-left));padding-right:max(var(--page-pad),env(safe-area-inset-right))}
+@media(max-width:420px){
+  .w-header{gap:12px}
+  .w-header .w-brand .hl{width:112px}
+  .w-header-right{gap:8px}
+  .w-header .w-btn--small{height:40px;padding:0 14px}
+  .w-pips{width:44px;height:44px}
+}
+@media(max-width:380px){
+  .w-header .w-brand .hl{width:100px}
+  .w-header .w-btn--small{padding:0 12px;font-size:.875rem}
+}
+/* Phones: the menu fills the screen. */
+@media(max-width:600px){
+  .w-menu-panel{inset:0;width:100%;border-radius:0;box-shadow:none;padding:max(88px,calc(env(safe-area-inset-top) + 80px)) max(24px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left));transform:translate3d(100%,0,0)}
+  .w-menu-list{gap:4px}
+  .w-menu-list a{font-size:min(10vw,3.25rem,9svh);padding:6px 0}
+  .w-menu-foot{flex-direction:column;align-items:flex-start;gap:14px;padding-top:24px}
+  .w-menu-foot nav{flex-wrap:wrap;gap:8px 18px}
+  .w-menu-foot a{display:inline-block;padding-block:4px}
+}
+/* Form: one column, full width send button, and 16px text so phones do not zoom into fields. */
+html body .w-form :is(input,select,textarea){font-size:16px}
+@media(max-width:560px){
+  .w-form{padding:20px 16px;gap:16px}
+  .w-form button[type="submit"]{justify-self:stretch;justify-content:center}
+  .w-contact-tile{width:104px;margin-top:28px}
+  .w-contact-points{margin:20px 0}
+}
+@media(max-width:520px){
+  .w-footer nav{gap:0}
+  .w-footer nav a{padding-block:7px}
+  .w-footer nav strong{margin-bottom:2px}
+  .w-footer-bottom{flex-direction:column;gap:14px;padding-bottom:env(safe-area-inset-bottom)}
+}
+/* Phones: the cookie note becomes a short bar on the bottom edge, and the footer leaves room for it. */
+@media(max-width:640px){
+  html body .analytics-consent{inset:auto 0 0 0;justify-content:space-between;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom)) 16px;border-radius:16px 16px 0 0;box-shadow:0 -12px 32px -16px rgb(0 0 0 / .5)}
+  html body .analytics-consent p{white-space:normal;font-size:.75rem}
+  html body .analytics-consent-actions button{min-height:36px;padding:0 12px}
+  html:has(.analytics-consent) .w-footer{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+}
+
+/* ---------- 404: the lead pawn has wandered off the board ---------- */
+.nf{position:relative;display:grid;align-items:center;min-height:max(620px,92svh);padding:clamp(112px,16vh,160px) 0 clamp(64px,10vh,112px);overflow:hidden;outline:none;background:radial-gradient(110% 90% at 20% 10%,#1d4a4b 0%,var(--baize-800) 48%,var(--baize-900) 100%);color:var(--board-100);font-family:var(--font-sans)}
+.nf :where(h1,p){margin:0}
+.nf-inner{width:var(--wrap-wide);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.nf-copy{display:grid;justify-items:start}
+.nf-mark{display:block;width:64px;height:64px;overflow:visible;color:var(--board-100)}
+.nf-mark .hd-pawn--b{animation:nf-wander 1100ms 500ms var(--ease-spring) both}
+@keyframes nf-wander{from{transform:none}to{transform:translate(16px,28px) rotate(22deg)}}
+.nf-title{margin:32px 0 24px;max-width:12ch;font:400 var(--t-display-xl)/.95 var(--font-sans);letter-spacing:-.03em;color:var(--board-100)}
+.nf-body{max-width:40ch;font-size:var(--t-lead);line-height:1.45;color:var(--mist-300)}
+.nf-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:40px}
+.nf-actions .w-link{font-size:var(--t-ui)}
+.nf-scene{position:relative;aspect-ratio:5/4;width:100%;max-width:640px;justify-self:end}
+.nf-board{position:absolute;left:8%;top:8%;width:70%;aspect-ratio:3/2;border-radius:10px;overflow:hidden;transform:perspective(1400px) rotateX(54deg) rotateZ(16deg);transform-origin:50% 50%;box-shadow:0 12px 0 -2px var(--baize-950),0 50px 70px -30px rgb(0 0 0 / .75)}
+.nf-board-art{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.95) brightness(.92)}
+.nf-pawn{position:absolute;right:12%;bottom:14%;width:18%;height:auto;filter:drop-shadow(0 22px 16px rgb(0 0 0 / .5));transform:rotate(-5deg);transform-origin:50% 100%;animation:nf-hop 5.5s 2s ease-in-out infinite}
+@keyframes nf-hop{0%,82%,100%{transform:rotate(-5deg)}88%{transform:translateY(-14%) rotate(-12deg)}94%{transform:translateY(1%) rotate(-4deg)}}
+@media(max-width:860px){
+  .nf{min-height:0}
+  .nf-inner{grid-template-columns:1fr}
+  .nf-scene{justify-self:center;max-width:520px}
+}
+@media(max-width:520px){
+  .nf-actions{gap:14px 24px;margin-top:32px}
+  .nf-actions .w-btn{width:100%;justify-content:center}
+}

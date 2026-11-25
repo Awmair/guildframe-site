@@ -2,11 +2,20 @@ import Link from "next/link";
 import { ResponsiveImage } from "../components/ResponsiveImage";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { JsonLd } from "../components/JsonLd";
+import { Icon } from "../components/chrome/Icon";
+import { WorkFx } from "../components/work/WorkFx";
+import { caseTones } from "../components/work/tones";
 import { absoluteUrl, pageMetadata } from "../site-config";
 import { caseStudies, workDate } from "../case-studies";
 import { formatContentDate } from "../content-dates";
 
 export const metadata = pageMetadata({ title: "Tabletop Kickstarter Campaign Design Case Studies", description: "Explore campaign design for ScentedRealms, FutureProof Terrain and Quiver Time. See Umair's contribution, design choices and published Kickstarter pages.", path: "/work" });
+
+const nextLinks = [
+  { href: "/campaign-creative", label: "Discuss creative production" },
+  { href: "/campaign-design", label: "Explore campaign page design" },
+  { href: "/kickstarter-launch-services", label: "Explore full launch support" },
+];
 
 export default function WorkPage() {
   return <>
@@ -16,14 +25,54 @@ export default function WorkPage() {
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") }, { "@type": "ListItem", position: 2, name: "Past work", item: absoluteUrl("/work") }] },
     ] }} />
     <a className="skip-link" href="#work-content">Skip to content</a><SeoHeader />
-    <main className="gf-work-page" id="work-content">
-      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Past work" }]} />
-      <header className="gf-work-intro"><span className="gf-eyebrow">Campaign design by Umair</span><h1>Tabletop campaign<br /><em>design case studies.</em></h1><p>RPG accessories, modular terrain and card storage. Each case study shows the project, my contribution and the design choices behind the campaign presentation.</p><p className="gf-work-updated">Updated <time dateTime={workDate}>{formatContentDate(workDate)}</time></p></header>
-      <div className="gf-work-project-list">{caseStudies.map((project, index) => <article className="gf-work-project" aria-labelledby={`project-${project.slug}`} key={project.slug}>
-        <figure><Link href={`/work/${project.slug}`} className="gf-work-project-image"><ResponsiveImage src={`/images/work/${project.image}.webp`} alt={project.alt} width={project.imageWidth} height={project.imageHeight} loading={index === 0 ? undefined : "lazy"} fetchPriority={index === 0 ? "high" : undefined} sizes="(max-width: 760px) calc(100vw - 40px), 56vw" /></Link><figcaption>{project.imageNote}</figcaption></figure>
-        <div><span className="gf-eyebrow">{project.category}</span><h2 id={`project-${project.slug}`}><Link href={`/work/${project.slug}`}>{project.name}</Link></h2><p>{project.brief}</p><dl><dt>My contribution</dt><dd>{project.contributionSummary}</dd></dl>{project.testimonial && <blockquote><p>{project.testimonial.quote}</p><footer>Client feedback · {project.testimonial.client}</footer></blockquote>}<nav aria-label={`${project.name} links`}><Link className="gf-text-link" href={`/work/${project.slug}`}>Read the case study</Link><a className="gf-text-link" href={project.href} target="_blank" rel="noopener noreferrer">View the published campaign<span className="gf-sr-only"> in a new tab</span></a></nav></div>
-      </article>)}</div>
-      <aside className="gf-work-note"><p>These projects demonstrate campaign creative. Their funding totals are not presented as Guildframe advertising results.</p><div><Link className="gf-text-link" href="/campaign-creative">Discuss creative production</Link><Link className="gf-text-link" href="/campaign-design">Explore campaign page design</Link><Link className="gf-text-link" href="/kickstarter-launch-services">Explore full launch support</Link></div></aside>
+    <main className="w-page wk wk-index" id="work-content" tabIndex={-1}>
+      <header className="wk-hero">
+        <div className="wk-wrap">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Past work" }]} />
+          <h1 className="wk-title" data-reveal="lines"><span className="w-line"><span>Tabletop campaign</span></span> <span className="w-line"><span><em>design case studies.</em></span></span></h1>
+          <div className="wk-hero-foot">
+            <div className="wk-hero-lead" data-reveal="rise">
+              <p>RPG accessories, modular terrain and card storage. Each case study shows the project, my contribution and the design choices behind the campaign presentation.</p>
+              <p className="wk-updated">Updated <time dateTime={workDate}>{formatContentDate(workDate)}</time></p>
+            </div>
+            <div className="wk-total" data-reveal="rise">
+              <strong className="wk-figure">$5M<sup>+</sup></strong>
+              <p className="wk-total-label"><span className="w-dot">Client results</span></p>
+              <p>Raised on Kickstarter by the campaigns I have worked on. These are my clients’ results, and they include campaigns not shown here.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section className="wk-deck" aria-label="Client case studies">
+        {caseStudies.map((project, index) => <article className="wk-card" aria-labelledby={`project-${project.slug}`} key={project.slug} style={{ "--tone": caseTones[project.slug] ?? caseTones["scented-realms"], "--stack": index } as React.CSSProperties}>
+          <figure className="wk-card-figure">
+            <Link href={`/work/${project.slug}`} className="wk-card-media" data-format={project.imageWidth === project.imageHeight ? "square" : "landscape"} data-title={project.name} data-cursor-label="Read the case study" data-reveal="media" data-wk-tilt="" tabIndex={-1} aria-hidden="true">
+              <ResponsiveImage src={`/images/work/${project.image}.webp`} alt={project.alt} width={project.imageWidth} height={project.imageHeight} loading={index === 0 ? undefined : "lazy"} fetchPriority={index === 0 ? "high" : undefined} sizes="(max-width: 900px) calc(100vw - 32px), 58vw" />
+            </Link>
+            <figcaption>{project.imageNote}</figcaption>
+          </figure>
+          <div className="wk-card-body">
+            <h2 className="wk-card-name" id={`project-${project.slug}`}><Link href={`/work/${project.slug}`} data-title={project.name}>{project.name}</Link></h2>
+            <p className="wk-tags"><span className="w-dot">Client work</span><span>{project.category}</span></p>
+            <p className="wk-card-brief">{project.brief}</p>
+            <dl className="wk-card-role"><dt>My contribution</dt><dd>{project.contributionSummary}</dd></dl>
+            {project.testimonial && <blockquote className="wk-card-quote"><p>“{project.testimonial.quote}”</p><footer>Client feedback from {project.testimonial.client}</footer></blockquote>}
+            <nav className="wk-card-links" aria-label={`${project.name} links`}>
+              <Link className="w-btn w-btn--small" href={`/work/${project.slug}`} data-title={project.name}>Read the case study<span className="gf-sr-only"> for {project.name}</span><Icon name="arrow" /></Link>
+              <a className="w-link" href={project.href} target="_blank" rel="noopener noreferrer">View the published campaign<span className="gf-sr-only"> for {project.name}, opens in a new tab</span></a>
+            </nav>
+          </div>
+        </article>)}
+      </section>
+
+      <aside className="wk-note" aria-labelledby="work-note-title">
+        <div className="wk-wrap wk-note-inner">
+          <p className="wk-note-text" id="work-note-title">These projects demonstrate campaign creative. Their funding totals are not presented as Guildframe advertising results.</p>
+          <div className="wk-rows">{nextLinks.map(link => <Link className="wk-row" href={link.href} key={link.href} data-title={link.label}><span>{link.label}</span><Icon name="arrow" size={22} /></Link>)}</div>
+        </div>
+      </aside>
+      <WorkFx />
     </main><SeoFooter />
   </>;
 }

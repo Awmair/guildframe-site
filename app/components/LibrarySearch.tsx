@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Icon } from "./chrome/Icon";
 
-type Filter = { value: string; label: string };
+type Filter = { value: string; label: string; count?: number };
 
 export function LibrarySearch({ count, noun, filters = [] }: { count: number; noun: "guides" | "resources"; filters?: Filter[] }) {
   const search = useRef<HTMLElement>(null);
@@ -33,11 +34,16 @@ export function LibrarySearch({ count, noun, filters = [] }: { count: number; no
     setMatches(found);
   }
 
+  const single = noun === "guides" ? "guide" : "resource";
   return <search className={`gf-library-search${filters.length ? " gf-library-filters" : ""}`} ref={search} aria-label={`Find ${noun}`}>
     <noscript><style>{`.gf-library-search{display:none!important}`}</style></noscript>
-    <label htmlFor="library-search">Find a {noun === "guides" ? "guide" : "resource"}</label>
-    <div className="gf-library-search-field"><span aria-hidden="true">⌕</span><input id="library-search" type="search" placeholder="Try rewards, email or miniatures" value={query} onChange={event => { setQuery(event.target.value); filter(event.target.value, stage); }}/></div>
-    {filters.length > 0 && <div className="gf-library-filter-pills" role="group" aria-label="Filter guides by launch stage">{filters.map(option => <button type="button" key={option.value} aria-pressed={stage === option.value} onClick={() => { setStage(option.value); filter(query, option.value); }}>{option.label}</button>)}</div>}
-    <p role="status" aria-live="polite">{matches === 0 ? "No matches. Try another topic or a broader word." : `${matches} ${noun}`}</p>
+    <label htmlFor="library-search">Find a {single}</label>
+    <div className="gf-library-search-field">
+      <Icon name="search" size={20} />
+      <input id="library-search" type="search" placeholder="Try rewards, email or miniatures" autoComplete="off" value={query} onChange={event => { setQuery(event.target.value); filter(event.target.value, stage); }}/>
+      {query && <button type="button" className="gf-library-clear" aria-label="Clear the search" onClick={() => { setQuery(""); filter("", stage); }}><Icon name="close" size={16} /></button>}
+    </div>
+    {filters.length > 0 && <div className="gf-library-filter-pills" role="group" aria-label="Filter guides by launch stage">{filters.map(option => <button type="button" key={option.value} aria-pressed={stage === option.value} onClick={() => { setStage(option.value); filter(query, option.value); }}><span>{option.label}</span>{option.count !== undefined && <span className="gf-library-pill-count"><span className="sr-only">, </span>{option.count}<span className="sr-only"> {noun}</span></span>}</button>)}</div>}
+    <p role="status" aria-live="polite">{matches === 0 ? "No matches. Try another topic or a broader word." : `${matches} ${matches === 1 ? single : noun}`}</p>
   </search>;
 }

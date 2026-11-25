@@ -27,7 +27,6 @@ export function LaunchEconomicsCalculator() {
     <small id={`economics-${field.key}-help`}>{field.help}</small>
   </label>;
   return <section className="funding-calculator launch-economics" aria-labelledby="launch-economics-title" id="advertising-calculator">
-    <span className="economics-eyebrow">Use your own numbers</span>
     <h2 id="launch-economics-title">Can your rewards support the ad budget?</h2>
     <p>Change the assumptions to see what remains after reward costs, advertising and fixed fees. Use one currency throughout. The starting values are an invented example, not typical campaign results.</p>
     <div className="funding-fields">{fields.slice(0, 6).map(renderField)}</div>

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { TrustPage } from "../components/TrustPage";
+import { OfferArt } from "../components/studio/OfferArt";
+import { Icon, Roll } from "../components/chrome/Icon";
 import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
 import { contentDates } from "../content-dates";
@@ -31,9 +33,16 @@ export default function Page() {
         ],
       }} />
       <TrustPage
+        variant="offer"
         label="After your campaign"
         title="Plan a Shopify store after crowdfunding"
-        description="Turn campaign artwork and rewards into a clear store brief. Guildframe can help with post-campaign content and scope optional Shopify planning and setup as a separate project."
+        heading={<><span className="w-line"><span>Plan a Shopify store</span></span> <span className="w-line"><span><em>after crowdfunding</em></span></span></>}
+        art={<OfferArt kind="shop" />}
+        actions={<>
+          <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my Shopify store" data-analytics-location="store planning hero"><Roll>Discuss my store handoff</Roll><Icon name="arrow" /></a>
+          <Link className="w-link" href="/resources/board-game-shopify-store-checklist">Store checklist</Link>
+        </>}
+        description="Turn campaign artwork and rewards into a clear store brief. Guildframe can help with post campaign content and scope optional Shopify planning and setup as a separate project."
         updated={contentDates.doneForYouShopifyStore}
       >
         <section>
@@ -105,7 +114,7 @@ export default function Page() {
         <section>
           <h2>Need the wider campaign handoff?</h2>
           <p>
-            <Link href="/post-campaign-support">Post-campaign support</Link>{" "}
+            <Link href="/post-campaign-support">Post campaign support</Link>{" "}
             can cover backer communication, pledge manager content and late pledge
             assets alongside a separately scoped store project. Share the campaign
             link and outstanding task list through the enquiry form below.
