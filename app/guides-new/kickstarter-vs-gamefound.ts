@@ -112,6 +112,7 @@ export const guide: LaunchGuide = {
         "Kickstarter tends to fit games with crossover appeal, such as party and family card games, TTRPG books and zines, and licensed worlds whose fans live outside hobby gaming. It also fits creators who already run their own ads or who qualify for Jellop.",
         "Gamefound tends to fit hobby board games, miniatures heavy campaigns and publishers whose backers already have Gamefound accounts. It suits creators who want native stretch goals, Late Pledge and a pledge manager without joining separate tools together.",
         "If this is your first game and your list is small, either can work. Pick the one where you can already point to some of your future backers, then put the saved effort into your page and prelaunch.",
+        "For a complete beginner, the easier platform is the one with fewer moving parts for your game. Gamefound keeps stretch goals, Late Pledge and the pledge manager under one login, while Kickstarter's wider site can bring in people who came for something else. If Kickstarter itself is new to you, [Kickstarter for beginners](/guides/kickstarter-for-beginners) explains how a campaign works from the creator's side.",
       ],
       visual: {
         kind: "compare",
@@ -155,6 +156,7 @@ export const guide: LaunchGuide = {
     { question: "Are Gamefound fees lower than Kickstarter fees?", answer: "Not in any meaningful way. Both take a 5% platform fee plus payment processing. The bigger differences come from ad service fees and pledge manager fees on money raised after the campaign." },
     { question: "Can I fund on Kickstarter and use Gamefound's pledge manager?", answer: "Yes. Gamefound accepts campaigns funded on other platforms into its pledge manager and Late Pledge stages after a review. Ask Gamefound for the fees on your project before you commit." },
     { question: "How much does Adfound cost?", answer: "Adfound charges a share of revenue attributed to your ads. A dedicated campaign is free in the Upcoming phase and 5% during crowdfunding, Late Pledge and pledge manager. Catalog campaigns cost 15%." },
+    { question: "Which is easier for a complete beginner?", answer: "The easier platform is the one with fewer moving parts for your game. Gamefound keeps stretch goals, Late Pledge and the pledge manager under one login, while Kickstarter's wider site can bring in people browsing for something else. On either one, launch day still depends on the followers and email subscribers you bring with you." },
     { question: "Did Gamefound buy Indiegogo?", answer: "Yes. Gamefound announced the purchase on July 24, 2025. It said Gamefound continues as a dedicated tabletop platform and that Gamefound campaigns will be featured on Indiegogo for extra exposure." },
     { question: "Can Guildframe run my campaign on either platform?", answer: "Yes. We plan launches, design campaign pages, run prelaunch email and paid ads, and manage live campaigns on Kickstarter and Gamefound. You keep control of your project settings, prices, shipping and publication." },
   ],

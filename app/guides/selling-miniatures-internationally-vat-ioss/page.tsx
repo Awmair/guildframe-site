@@ -46,6 +46,11 @@ const faqs = [
     answer:
       "Yes. EU guidance states that the previous customs duty exemption for low value imports ended on July 1, 2026, with a temporary €3 duty for qualifying B2C consignments valued at €150 or less. The declared item or line grouping affects the charge; it is not automatically €3 for each miniature. Confirm current treatment with official sources and a customs specialist before shipping.",
   },
+  {
+    question: "Do I have to charge VAT on my Kickstarter?",
+    answer:
+      "It depends on where your business is registered and where you ship, so that part is a question for your tax adviser, and this guide is not tax advice. What changed on April 13, 2026 is the route. In Kickstarter's pledge manager you choose whether Kickstarter collects and remits VAT for you or you handle it with your own systems, and Kickstarter still collects applicable US and Canadian taxes where required.",
+  },
 ];
 
 export default function SellingMiniaturesInternationallyPage() {
@@ -81,11 +86,17 @@ export default function SellingMiniaturesInternationallyPage() {
           publisher: "Your Europe",
           href: "https://europa.eu/youreurope/business/taxation/vat/one-stop-shop/index_en.htm",
         },
+        {
+          label: "VAT Flexibility in Pledge Manager (release note, April 13, 2026)",
+          publisher: "Kickstarter",
+          href: "https://start.kickstarter.com/kickstarter-release-notes/vat-flexibility-in-pledge-manager",
+        },
       ]}
       toc={[
         { id: "decisions", label: "Make the decisions first" },
         { id: "data", label: "Prepare product data" },
         { id: "vat", label: "Understand VAT and IOSS" },
+        { id: "kickstarter-vat", label: "VAT on a Kickstarter" },
         { id: "shipping", label: "Configure shipping" },
         { id: "customer", label: "Write customer promises" },
         { id: "test", label: "Test international orders" },
@@ -160,6 +171,24 @@ export default function SellingMiniaturesInternationallyPage() {
         This can materially affect orders containing several miniature packs or add
         ons. Do not publish a blanket duties included promise until a tax and customs
         specialist confirms the model, registrations and carrier support.
+      </p>
+
+      <h2 id="kickstarter-vat">VAT when the miniatures come from a Kickstarter</h2>
+      <p>
+        Creators often ask whether they have to charge VAT on the campaign itself.
+        That depends on where your business is registered and where you ship, so
+        it is a question for your tax adviser, and this guide is not tax advice.
+        What changed on April 13, 2026 is the route. In Kickstarter&apos;s pledge
+        manager you choose whether Kickstarter collects and remits VAT for you or
+        you handle it with your own systems, and Kickstarter still collects
+        applicable US and Canadian taxes where required.
+      </p>
+      <p>
+        Whichever route you pick, we make sure the reward prices say clearly
+        whether VAT is included, so backers in the UK and EU are not surprised at
+        checkout. Our{" "}
+        <Link href="/guides/kickstarter-fees">Kickstarter fees guide</Link> shows
+        how that choice sits next to the platform fees in your budget.
       </p>
 
       <h2 id="shipping">Configure markets, shipping and duties together</h2>

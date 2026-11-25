@@ -149,6 +149,7 @@ export const decisionGuides: LaunchGuide[] = [
         "title": "Use your own page when the game needs a fuller introduction",
         "paragraphs": [
           "A party card game might need a short sample round and a clear photo of the deck. A strategy board game may need a turn example and a component spread, and an RPG can offer readable sample pages. Choose the smallest amount of material that helps a visitor decide whether the project is for them.",
+          "This page does not need to be a full website. Before launch, one signup page with a clear promise is enough, and a full site with a shop, blog and press kit can wait until after the campaign.",
           "Tell visitors what signing up means. For example, say you will send a rules preview and the launch announcement, if that is your actual plan. Before sending any traffic, run through these five checks."
         ],
         "list": [
@@ -260,6 +261,10 @@ export const decisionGuides: LaunchGuide[] = [
       {
         "question": "Should I send paid ads to the Kickstarter prelaunch page or my landing page?",
         "answer": "Either can work. A landing page lets you measure signups and the welcome email in your own tools, while followers are counted by Kickstarter. If you test both, use separate links and compare them over the same dates."
+      },
+      {
+        "question": "Do I need a website before my Kickstarter?",
+        "answer": "No. One signup page that explains the game and says what people will receive is enough, alongside the Kickstarter prelaunch page. A full website with a shop, blog and press kit can wait until after the campaign, when you know what you are selling and to whom."
       }
     ]
   },
