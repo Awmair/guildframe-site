@@ -3,6 +3,7 @@ import { JsonLd } from "../components/JsonLd";
 import { TrustPage } from "../components/TrustPage";
 import { absoluteUrl, pageMetadata } from "../site-config";
 import { contentDates } from "../content-dates";
+import { Icon, Roll } from "../components/chrome/Icon";
 
 export const metadata = pageMetadata({
   title: "Editorial Policy",
@@ -44,7 +45,7 @@ export default function EditorialPolicyPage() {
         title="Guildframe editorial policy"
         description="The guides explain campaign design and launch preparation, with sources for platform facts and clear labels for design advice."
         updated={contentDates.editorialPolicy}
-        contents={[{ id: "purpose", label: "Editorial purpose" }, { id: "research", label: "Research and sourcing" }, { id: "commercial-transparency", label: "Commercial transparency" }, { id: "corrections", label: "Review, updates and corrections" }, { id: "checking", label: "How to check the advice" }]}
+        contents={[{ id: "purpose", label: "Editorial purpose" }, { id: "research", label: "Research and sourcing" }, { id: "commercial-transparency", label: "Commercial transparency" }, { id: "corrections", label: "Review, updates and corrections" }, { id: "checking", label: "How to check the advice" }, { id: "work-with-guildframe", label: "Help with your launch" }]}
       >
         <section id="purpose">
           <h2>Editorial purpose</h2>
@@ -95,6 +96,13 @@ export default function EditorialPolicyPage() {
           <p>
             Use the source links to check platform requirements. Where I recommend a layout, a checklist or a workflow, I explain why it helps. If you find an error, email umair@guildframe.com with the page link and the detail to correct.
           </p>
+        </section>
+        <section id="work-with-guildframe">
+          <h2>Want help with your own launch?</h2>
+          <p>
+            You can use every guide without booking anything. If you would like us to do the work, see how to <Link href="/buy">start your tabletop launch project</Link> or read about our <Link href="/kickstarter-launch-services">Kickstarter launch services for tabletop games</Link>.
+          </p>
+          <div className="st-actions"><a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my project" data-analytics-location="editorial policy closing"><Roll>Discuss my project</Roll><Icon name="arrow" /></a></div>
         </section>
       </TrustPage>
     </>

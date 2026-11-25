@@ -16,6 +16,7 @@ const nextLinks = [
   { href: "/campaign-creative", label: "Discuss creative production" },
   { href: "/campaign-design", label: "Explore campaign page design" },
   { href: "/kickstarter-launch-services", label: "Explore full launch support" },
+  { href: "/buy", label: "Start your launch project" },
 ];
 
 export default function WorkPage() {

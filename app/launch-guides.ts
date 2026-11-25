@@ -19,9 +19,9 @@ const originalLaunchGuides:LaunchGuide[]=[
   {
     "slug": "board-game-kickstarter-campaign-design-cost",
     "title": "How Much Does Board Game Kickstarter Campaign Design Cost?",
-    "description": "Budget your tabletop Kickstarter page by scope: copy, graphics, artwork, video and launch support. Compare quotes and see Guildframe’s design-only option.",
+    "description": "Budget your tabletop Kickstarter page by scope: copy, graphics, artwork, video and launch support. Compare quotes and see Guildframe’s fixed page price.",
     "tag": "Budget planning",
-    "answer": "Campaign design cost depends on the copy, graphics, artwork and review work included. Compare quotes against a written file list and schedule. Guildframe lists its fixed design-only price on the campaign design page; prelaunch, advertising and live management are scoped separately. Other designers’ prices depend on their scope, so one published fee is not an industry average.",
+    "answer": "Kickstarter campaign design cost depends on how many page sections, reward comparisons and graphics the quote covers, and on whether your artwork is final. Guildframe charges a fixed $1,800 for the campaign page package and $5,900 for full campaign support, with ad spend, software and platform fees billed separately.",
     "sources": [
       {
         "label": "Guildframe campaign design scope and price",
@@ -39,9 +39,19 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "scope",
         "title": "Check what the quote includes",
         "paragraphs": [
-          "Check what a design quote includes. A single opening image is a different job from planning the whole page, editing the copy and designing reward comparisons. Both may be listed as Kickstarter design.",
-          "Write down the sections you need: the introduction, gameplay, components, editions, rewards, stretch goals, reviews and production plan. Note which images and facts you’ll provide and what the designer will put together."
+          "Two quotes can both say Kickstarter design and cover very different jobs. A single opening image is a small task. Planning the whole page, editing the copy and designing reward comparisons is a much bigger one.",
+          "So write down the sections you need first: the introduction, gameplay, components, editions, rewards, stretch goals, reviews and production plan. Note which images and facts you’ll provide and what the designer will put together. Then ask each designer these questions, so the quotes describe the same job."
         ],
+        "visual": {
+          "kind": "checklist",
+          "title": "A fair quote names every section, reward graphic and review round",
+          "caption": "Ask every designer to price the same list. A lower total often means fewer items on it.",
+          "groups": [
+            { "name": "Page content", "items": ["Opening and campaign copy", "Sample turn graphic", "Component spread"] },
+            { "name": "Rewards", "items": ["Edition comparison", "Add on panels", "Stretch goal graphics"] },
+            { "name": "Process", "items": ["Revision rounds", "Platform assembly", "Final and editable files"] }
+          ]
+        },
         "list": [
           "Is campaign copy included, and who confirms the facts?",
           "Which page sections and graphics are included?",
@@ -54,9 +64,19 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "price",
         "title": "Separate campaign creative from the full launch budget",
         "paragraphs": [
-          "Guildframe’s design-only option covers page structure, campaign copy, section graphics and reward presentation using supplied artwork. The current fee is shown on the campaign design page. We agree the file list, review process and schedule before starting.",
-          "Prelaunch pages and email, paid advertising and live campaign management are additional services. A full launch proposal should list service fees separately from media spend, software, platform fees and any external production work."
+          "A design fee and a launch budget are different numbers, so keep them apart from the start. Our campaign page package is a fixed $1,800. It covers page structure, campaign copy, section graphics and reward presentation using your supplied artwork, and we agree the file list, review process and schedule before starting.",
+          "Full campaign support is $5,900 and adds the prelaunch signup page and emails, ad creative, paid advertising, live campaign checks and the final handoff. Either way, ad spend, software, platform fees and any outside production stay on their own lines. Other designers’ prices depend on their scope, so one published fee is not an industry average. Separate lines are the honest way to compare our quote with anyone else’s."
         ],
+        "visual": {
+          "kind": "compare",
+          "title": "The service fee is fixed; ad spend and platform fees sit outside it",
+          "source": "Guildframe campaign design and launch pricing, November 2026",
+          "columns": [
+            { "name": "Campaign page package", "points": ["Page outline and campaign copy", "Gameplay, component and reward graphics", "Built from your supplied artwork"], "verdict": "$1,800 fixed" },
+            { "name": "Full campaign support", "points": ["Everything in the page package", "Prelaunch signup page and emails", "Ad creative and paid advertising", "Live campaign checks and handoff"], "verdict": "$5,900 fixed", "highlight": true },
+            { "name": "Budgeted separately", "points": ["Ad spend", "Software and platform fees", "New illustration or video", "Manufacturing and shipping"], "verdict": "Paid to the provider" }
+          ]
+        },
         "table": {
           "headers": [
             "Budget item",
@@ -100,11 +120,15 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Book against a written brief",
         "paragraphs": [
           "Get the sections, output files, review process and timing in writing. Someone who knows the reward prices and production details should check the finished content before launch.",
-          "To start with Guildframe, send the game summary, artwork link, platform and planned launch date. You can request a free opening mockup for creative work, or discuss a broader launch. Ask for the deliverables, fees and review dates in writing before committing."
+          "To start with us, send the game summary, artwork link, platform and planned launch date. You can request a free opening mockup for creative work, or ask about full campaign support. Either way, we put the deliverables, fees and review dates in writing before you commit."
         ]
       }
     ],
     "faqs": [
+      {
+        "question": "How much does Guildframe charge to design a Kickstarter page?",
+        "answer": "The campaign page package is a fixed $1,800 and full campaign support is $5,900. Ad spend, software, platform fees and outside production are billed separately, and the free opening mockup carries no payment or obligation."
+      },
       {
         "question": "Is one studio’s design fee an industry average?",
         "answer": "No. A published fee applies to that studio’s stated scope. Compare the work, files, revisions and schedule rather than treating one price as the market average."
@@ -118,22 +142,24 @@ const originalLaunchGuides:LaunchGuide[]=[
         "answer": "Yes. Send your project and artwork through the free mockup form. There is no obligation to book the full campaign."
       }
     ],
-    "seoTitle": "Kickstarter Campaign Design Cost & Budget Guide",
+    "seoTitle": "Kickstarter Campaign Design Cost for Board Games",
     "relatedSlugs": [
-      "when-to-hire-kickstarter-campaign-designer",
+      "kickstarter-fees",
+      "kickstarter-agency-cost",
       "what-to-send-kickstarter-campaign-designer",
+      "when-to-hire-kickstarter-campaign-designer",
       "board-game-kickstarter-page-checklist"
     ],
     "servicePath": "/campaign-design",
-    "serviceLabel": "Kickstarter campaign copy and graphics",
-    "updated": "2026-10-03"
+    "serviceLabel": "Kickstarter campaign design for tabletop games",
+    "updated": "2026-11-25"
   },
   {
     "slug": "board-game-kickstarter-page-checklist",
     "title": "Board Game Kickstarter Page Checklist Before Launch",
     "description": "Check your board game Kickstarter page before launch: gameplay, box contents, rewards, shipping information and mobile readability.",
     "tag": "Launch preparation",
-    "answer": "Check whether a new reader can explain your game, name what comes in the box, compare the rewards and find the delivery plan. Then review the Kickstarter preview on a phone with someone who hasn’t played the game. Their questions will show you what still needs work.",
+    "answer": "A board game Kickstarter page is ready when a new reader can explain a turn, name what comes in the box, compare the rewards and find the shipping plan. Check it by handing the preview, on a phone, to someone who hasn’t played the game, then fix every question they had to ask you.",
     "sources": [
       {
         "label": "Adding images and media to a Kickstarter project",
@@ -152,8 +178,19 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Introduce the game in the opening",
         "paragraphs": [
           "Start with the name, a clear game image and a short explanation of what players do. A box render helps show the product, but the reader still needs to know who they’ll play with and why they might enjoy it.",
-          "Put the confirmed player count, play time and age guidance near the gameplay section. Mention solo play or a required companion app there too. Those details help someone decide whether the game fits their group."
+          "Put the confirmed player count, play time and age guidance near the gameplay section. Mention solo play or a required companion app there too. Those details help someone decide whether the game fits their group, so the opening should include the points below."
         ],
+        "visual": {
+          "kind": "checklist",
+          "title": "A board game page needs four blocks before any stretch goal art",
+          "caption": "Our working order for a board game campaign page. Reviews, stretch goals and risks follow these blocks.",
+          "groups": [
+            { "name": "Opening", "items": ["Name and logo", "Real product image", "One line on what players do"] },
+            { "name": "Game facts", "items": ["Player count", "Play time", "Age guidance and modes"] },
+            { "name": "Gameplay", "items": ["Sample turn", "Labelled rules link", "Component list"] },
+            { "name": "Rewards and delivery", "items": ["Edition comparison", "Optional extras labelled", "Shipping timing"] }
+          ]
+        },
         "list": [
           "A readable logo and strong opening image",
           "A premise that works without knowing your setting",
@@ -206,9 +243,20 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "review",
         "title": "Read the page like a new backer",
         "paragraphs": [
-          "Ask someone unfamiliar with the game to read the preview and describe the game, reward options and delivery plan. Let them read it before explaining it yourself. Use their unanswered questions to revise the page.",
-          "On a phone, check key labels without zooming. Review links, image loading, spelling, product names and production details. Check the public prelaunch page separately; it serves a different purpose, and Kickstarter’s website and app may show different details."
+          "The fastest test we know is a reader who has never seen the game. Ask them to read the preview and describe the game, reward options and delivery plan. Let them read it before explaining it yourself, then use their unanswered questions to revise the page.",
+          "On a phone, check key labels without zooming. Review links, image loading, spelling, product names and production details. Check the public prelaunch page separately, because it serves a different purpose and Kickstarter’s website and app may show different details. Every question the reader asks is a fix you can make before launch day."
         ],
+        "visual": {
+          "kind": "steps",
+          "title": "A stranger with a phone finds the gaps faster than another proofread",
+          "steps": [
+            { "label": "Hand over the preview", "detail": "On a phone, with no explanation from you" },
+            { "label": "Ask them to explain a turn", "detail": "Note where they scroll back or guess" },
+            { "label": "Ask them to pick a reward", "detail": "Check they can say what is in it" },
+            { "label": "Ask where shipping is covered", "detail": "Timing, regions and how it is charged" },
+            { "label": "Fix, then test again", "detail": "Use a new reader for the second round" }
+          ]
+        },
         "source": 1
       },
       {
@@ -237,19 +285,25 @@ const originalLaunchGuides:LaunchGuide[]=[
         "answer": "The opening, card labels, reward comparisons, image loading, video framing and any link needed to understand or select a reward."
       },
       {
+        "question": "What should a board game Kickstarter page include?",
+        "answer": "An opening with the name, a real product image and one line on what players do, then player count, play time and age guidance. Follow with a sample turn, a labelled rules link, the component list, an edition comparison and the shipping plan."
+      },
+      {
         "question": "Can I get help before the page is finished?",
         "answer": "Yes. A free Guildframe mockup can explore the opening and identify the assets needed for the full campaign."
       }
     ],
-    "seoTitle": "Board Game Kickstarter Page Checklist",
+    "seoTitle": "Board Game Kickstarter Page Checklist Before Launch",
     "relatedSlugs": [
-      "kickstarter-review-launch-timeline",
       "board-game-kickstarter-gameplay-rulebook",
+      "kickstarter-image-sizes",
+      "kickstarter-campaign-video-planning",
+      "kickstarter-review-launch-timeline",
       "kickstarter-shipping-delivery-page"
     ],
-    "servicePath": "/board-game-kickstarter-campaign-design",
-    "serviceLabel": "Board game Kickstarter page design",
-    "updated": "2026-10-03"
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign design for tabletop games",
+    "updated": "2026-11-25"
   },
   {
     "slug": "what-to-send-kickstarter-campaign-designer",
