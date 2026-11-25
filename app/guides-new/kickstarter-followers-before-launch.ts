@@ -113,6 +113,7 @@ export const guide: LaunchGuide = {
       title: "How we grow followers before launch",
       paragraphs: [
         "Growing followers is steady weekly work rather than one big push. Kickstarter recommends sharing the prelaunch page at least one week before launch, and first time creators only get the Promotion tab after project approval. LaunchBoom suggests a standard prelaunch of two to four months for a product launch.",
+        "If you are starting from almost nothing, the first followers are the people who have already played the game, such as playtesters and friends from your game nights. Send them the prelaunch page and ask them to click Notify me on launch. Our guide on [how to get Kickstarter backers](/guides/how-to-get-kickstarter-backers) covers where the next ones come from, one source at a time.",
         "We usually plan the prelaunch around the steps below. Each one gives people a reason to follow that goes beyond a countdown, and each one can be measured.",
       ],
       visual: {
@@ -173,6 +174,10 @@ export const guide: LaunchGuide = {
     {
       question: "Are Kickstarter followers the same as an email list?",
       answer: "No. Followers receive Kickstarter's notifications, while your own email list lets you write when you choose. We build both and count them together in the low case.",
+    },
+    {
+      question: "I have almost no followers. Where do I get the first ones?",
+      answer: "Start with the people who have already played the game, such as playtesters and friends from your game nights. Send them the prelaunch page and ask them to click Notify me on launch, then give new people a reason to follow with a sample turn or rules preview. Our guide on how to get Kickstarter backers covers where the next ones come from.",
     },
   ],
 };

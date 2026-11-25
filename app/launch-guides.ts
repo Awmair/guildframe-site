@@ -1332,6 +1332,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Doing it yourself or hiring a designer",
         "paragraphs": [
           "Building your own page is a fair choice when someone on the team has the time and the design skills. The honest limit is hours, because layout, graphics, exports and phone checks compete with production, community and prelaunch work in the same weeks.",
+          "You can also do both in order. Draft the page yourself with our guide on [how to design a Kickstarter page](/guides/how-to-design-a-kickstarter-page), then bring in a designer for the graphics and final layout. A designer is worth it when the draft is close but does not read well on a phone, or when those hours are needed elsewhere. Either way, your draft makes a better brief.",
           "When you hire us, you still own the facts: rules, rewards, prices and delivery. We plan the page, write the copy and build the graphics from your artwork, and the campaign page package has a fixed price on our campaign design page. If you're weighing a full agency instead, our guide to Kickstarter agency cost covers that decision."
         ],
         "visual": {
@@ -1385,6 +1386,10 @@ const originalLaunchGuides:LaunchGuide[]=[
       {
         "question": "Is it cheaper to design my own Kickstarter page?",
         "answer": "It saves the design fee, but the hours move to you: layout, graphics, exports and phone checks. Weigh that time against the fixed price of our campaign page package and the rest of your launch work."
+      },
+      {
+        "question": "Can I design the page myself first and get help later?",
+        "answer": "Yes. Draft the story, rewards and sections yourself, then bring in a designer for the graphics and final layout. A designer is worth it when the draft is close but does not read well on a phone, or when the hours are needed for production and prelaunch. Your draft also makes a better brief, because the facts are already written down."
       },
       {
         "question": "Can design replace building a prelaunch audience?",

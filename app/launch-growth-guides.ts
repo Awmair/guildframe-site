@@ -32,7 +32,8 @@ export const growthGuides: LaunchGuide[] = [
         "title": "Start with the smallest version you can actually deliver",
         "paragraphs": [
           "Write down what the campaign promises before entering a target. For a card game, that might be one finished deck, its box and a printed rules sheet. A miniature game may also need tooling, trays and specialist packing. Keep optional upgrades outside the base promise until their cost is known, then price them with the [reward pricing guide](/guides/board-game-kickstarter-reward-pricing).",
-          "Kickstarter says the goal should cover completing the project and its associated costs. You cannot change the goal or deadline after launch. So treat the target as a production decision first, then check whether your launch plan can realistically reach the number of backers it needs."
+          "Kickstarter says the goal should cover completing the project and its associated costs. You cannot change the goal or deadline after launch. So treat the target as a production decision first, then check whether your launch plan can realistically reach the number of backers it needs.",
+          "That is also why there is no universal realistic goal for a first board game. Yours comes from the smallest print run quote you can actually buy, plus shipping, fees and a reserve. For every other line in a first launch budget, from art to ads, see [how much it costs to launch a board game on Kickstarter](/guides/board-game-kickstarter-cost)."
         ],
         "source": 0
       },
@@ -178,6 +179,10 @@ export const growthGuides: LaunchGuide[] = [
       {
         "question": "Can I change the goal after the campaign launches?",
         "answer": "Kickstarter does not allow the funding goal or deadline to be changed after launch. Resolve the cost model before publishing."
+      },
+      {
+        "question": "What is a realistic funding goal for a first board game?",
+        "answer": "There is no universal figure, because a realistic goal is the one that still delivers your game if the campaign ends exactly on target. Start from the smallest print run quote you can actually buy, then add shipping, fees and a reserve. If that number looks too high for your audience, shrink the base promise rather than the goal."
       }
     ],
     "sources": [
@@ -355,6 +360,7 @@ export const growthGuides: LaunchGuide[] = [
         "paragraphs": [
           "A deluxe tier can sell for more and still leave less money per box. So we compare the extra revenue with the extra manufacturing, weight, packaging and handling, tier by tier.",
           "A larger box can move the whole parcel into a higher shipping bracket, even when the component upgrade looks cheap. Bundles and stretch goals need the same check, because a discount can pull backers away from the core box. Keep retailer terms separate too, since a pledge price is not automatically a workable wholesale price.",
+          "For a first campaign we usually suggest few tiers, often just a base game and one deluxe version, because every extra tier is another set of contents, graphics and costs to check. An early bird price needs the same check. It gives people a reason to back on day one, but later backers can feel penalised, and the discounted price still has to clear your floor.",
           "Run these five checks on every tier, then use the comparison below to decide what stays."
         ],
         "visual": {
@@ -451,6 +457,14 @@ export const growthGuides: LaunchGuide[] = [
       {
         "question": "Should shipping be included in the pledge price?",
         "answer": "Kickstarter supports charging shipping at the pledge or collecting it later in its Pledge Manager. Charging at the pledge makes the total clear on day one. Collecting later protects you from rate changes but needs a clear explanation on the page."
+      },
+      {
+        "question": "How many reward tiers should a first Kickstarter have?",
+        "answer": "Fewer than you might think. A base game and one deluxe version is enough for most first games, as long as each tier has a clear reason to exist and earns its extra cost. Every extra tier adds contents, graphics and costs to check, so add one only when backers would genuinely choose it."
+      },
+      {
+        "question": "Should I offer early bird rewards?",
+        "answer": "It is a trade, so it is your call. An early bird price gives people a reason to back on day one, but backers who arrive later can feel penalised for paying more for the same game. If you use one, price it from the same cost sheet so the discount still clears your floor."
       }
     ],
     "sources": [
@@ -785,7 +799,8 @@ export const growthGuides: LaunchGuide[] = [
         "title": "Choose reviewers by the games their audience plays",
         "paragraphs": [
           "A long subscriber list is less useful if the channel rarely covers your kind of game. Look at several recent videos or articles. Check player count, complexity, session length and whether the reviewer covers prototypes, finished games or both.",
-          "Build a shortlist with one sentence explaining the fit for each person. A quick party game, a campaign miniature game and a solo RPG need different introductions. Read the reviewer’s submission policy before sending a generic pitch. Some do not accept unsolicited prototypes or paid previews."
+          "Build a shortlist with one sentence explaining the fit for each person. A quick party game, a campaign miniature game and a solo RPG need different introductions. Read the reviewer’s submission policy before sending a generic pitch. Some do not accept unsolicited prototypes or paid previews.",
+          "Reviews are not required to launch, but for a new creator an outside voice is the cheapest trust you can add. A backer who has never heard of you gets to see someone else play the game. That is why one well matched preview is worth more than a long list of channels that may never reply."
         ]
       },
       {
@@ -920,6 +935,10 @@ export const growthGuides: LaunchGuide[] = [
       {
         "question": "Should I pay for a board game preview?",
         "answer": "Some reviewers charge for previews and some do not accept prototypes at all, so read their policy first. A paid walkthrough can still help someone understand the game, as long as you label it as paid and never present it as an independent verdict."
+      },
+      {
+        "question": "Do I need reviews before I launch my Kickstarter?",
+        "answer": "No, reviews are not required to launch. But for a new creator an outside voice is the cheapest trust you can add, because a backer who has never heard of you gets to see someone else play the game. One well matched preview, clearly labelled, does more than a page of your own claims."
       }
     ],
     "sources": [
@@ -958,6 +977,7 @@ export const growthGuides: LaunchGuide[] = [
         "title": "The checklist at a glance, from 90 days out to day three",
         "paragraphs": [
           "We run first board game launches on a schedule of about 90 days, because the offer, the audience and the page all need time to settle. Most of the work happens well before launch day. Launch day itself is short, if the weeks before it went to plan.",
+          "This checklist starts once the game itself is settled. If you are earlier than that, with a prototype that is still changing, our guide on [how to launch a board game on Kickstarter](/guides/how-to-launch-a-board-game-on-kickstarter) covers the whole journey from prototype to delivery.",
           "Treat the dates as a working order rather than a rule. If your rewards or artwork arrive late, move every later date with them. Skipping a check to hold a date is how a wrong price or a broken link reaches backers.",
           "So the timeline below is the shape of the whole project, and the sections after it explain each phase in turn."
         ],
@@ -1273,6 +1293,10 @@ export const growthGuides: LaunchGuide[] = [
       {
         "question": "Does a Gamefound test order charge a real payment?",
         "answer": "No. Gamefound says Tester Mode saves the test order without sending it to the payment operator. Check real payment collection separately."
+      },
+      {
+        "question": "Is there a checklist for the whole launch, not just the day?",
+        "answer": "Yes. This checklist already runs from 90 days out to the first three days of the campaign, with every check on one page near the end. For the steps before that, from a playable prototype to choosing a platform, our guide on how to launch a board game on Kickstarter covers the whole journey in order."
       }
     ],
     "sources": [

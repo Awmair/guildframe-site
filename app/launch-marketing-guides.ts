@@ -13,6 +13,7 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Start with a one sentence pitch for the game",
         "paragraphs": [
           "Every board game marketing channel repeats the same pitch, so we write it before choosing any channel. A new visitor needs to know what players do, how long a game takes and why they would pick this one.",
+          "New to Kickstarter marketing? If you have never promoted a campaign before, start with [how to market a Kickstarter](/guides/how-to-market-a-kickstarter), which explains the channels in plain terms. This page is the schedule for when you are ready to commit to a date.",
           "Playtest feedback is the best source, because players already use words for what they enjoyed. A quick party deck, a solo strategy game and a miniatures campaign ask for very different attention. Your landing page and ads should make that difference obvious in the first line.",
           "These four notes are enough to brief every channel that follows."
         ],
@@ -222,7 +223,7 @@ export const marketingGuides: LaunchGuide[] = [
         "id": "launch",
         "title": "Decide to launch, revise or wait",
         "paragraphs": [
-          "Before you announce a fixed date, we put the rules, reward contents, manufacturing assumptions, shipping approach, campaign page and signup test in one review. Unresolved issues get an owner. A large follower count cannot fix an unfinished reward or a delivery plan you cannot afford.",
+          "Before you announce a fixed date, we put the rules, reward contents, manufacturing assumptions, shipping approach, campaign page and signup test in one review. Unresolved issues get an owner. A large follower count cannot fix an unfinished reward or a delivery plan you cannot afford. A short runway is a common reason to wait too, because a month can finish the page but cannot build a new audience, so moving the date is usually cheaper than a weak launch.",
           "When the answer is launch, the [launch checklist](/guides/board-game-kickstarter-launch-day-checklist) covers the final week and the first hour. Check the live campaign link, email links and ad destinations before promoting, and keep a draft update ready for the first common backer questions."
         ],
         "table": {
@@ -283,6 +284,10 @@ export const marketingGuides: LaunchGuide[] = [
       {
         "question": "Can I message my Kickstarter followers before launch?",
         "answer": "Not directly. Kickstarter does not let you message prelaunch followers, but they are notified when you post a prelaunch update and they get a launch email when the project goes live."
+      },
+      {
+        "question": "What if I only have a month before launch?",
+        "answer": "A month is enough to finish the page, run one capped ad test and tell the people who already know your game. It is not enough to build a new audience from nothing, because we plan six to eight weeks for that alone. If your list and followers are still small, moving the date is usually cheaper than a weak launch."
       }
     ],
     "sources": [
@@ -356,7 +361,9 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Make the reason to sign up clear",
         "paragraphs": [
           "Explain the game in a few lines and show a product image or a readable sample. Say what people will receive: gameplay previews, progress notes and the launch announcement. Keep the form short enough to use on a phone.",
-          "For a card game, show a few cards and a sample round. For an RPG, offer a sample spread or a short playable scene. A miniatures project can show scale and exactly which physical products or files are planned. Match the signup promise to material you can actually provide."
+          "For a card game, show a few cards and a sample round. For an RPG, offer a sample spread or a short playable scene. A miniatures project can show scale and exactly which physical products or files are planned. Match the signup promise to material you can actually provide.",
+          "If you are building the list from nothing, start with the people who have already played the game, such as playtesters and anyone who asked about it at a game night. Send them all to this one signup page, and give them a reason to join, like a sample round or a print and play file. Our guide on [how to get Kickstarter backers](/guides/how-to-get-kickstarter-backers) covers where the next people come from, one source at a time.",
+          "Any mainstream email tool will do if it can run a signup form, send the welcome email automatically and export your contacts. We do not name one best tool, because the list matters more than the software. What matters is that the account is in your name, so the list stays yours after the campaign."
         ]
       },
       {
@@ -464,6 +471,14 @@ export const marketingGuides: LaunchGuide[] = [
       {
         "question": "How many prelaunch emails should I send?",
         "answer": "Use the messages needed to explain the game and the offer. The right frequency depends on the schedule and audience response; there is no required universal sequence."
+      },
+      {
+        "question": "How do I build an email list from nothing?",
+        "answer": "Start with the people who have already played the game, such as playtesters and anyone who asked about it at a game night. Send them to one signup page with a clear reason to join, like a sample round or a print and play file. Then add new sources one at a time, so you can see which ones actually bring signups."
+      },
+      {
+        "question": "What email tool should I use for my Kickstarter list?",
+        "answer": "Any mainstream email tool will do if it can run a signup form, send the welcome email automatically and export your contacts. We do not name one best tool, because the list matters more than the software. Make sure the account is in your name, so the list stays yours after the campaign."
       }
     ],
     "published": "2026-10-03",
@@ -507,7 +522,8 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Put each cost in its own budget line",
         "paragraphs": [
           "A quote for ad management is not the same as the amount spent on ads. List the management fee, creative production, media spend and any software separately. Decide who pays the advertising platform and who can change the spending limit.",
-          "Keep reward production, packaging, delivery obligations, platform fees and relevant taxes in the campaign cost model. Check the platform fee schedule for your creator country instead of using one payment processing figure for every country."
+          "Keep reward production, packaging, delivery obligations, platform fees and relevant taxes in the campaign cost model. Check the platform fee schedule for your creator country instead of using one payment processing figure for every country.",
+          "Ads are optional, so the first budget question is whether you need them at all. A small goal with a real community behind it, such as an email list, a Discord or a group of playtesters, can fund without paid traffic. The honest ceiling is that without ads you mostly reach people who already know you, so the goal has to fit that audience."
         ],
         "source": 2
       },
@@ -614,6 +630,10 @@ export const marketingGuides: LaunchGuide[] = [
       {
         "question": "Can Guildframe manage the ads?",
         "answer": "Yes. Umair manages paid advertising at Guildframe. The scope defines channels, creative, account access, spend limits and reporting, with media spend separate from the service fee."
+      },
+      {
+        "question": "Can I run a Kickstarter without ads?",
+        "answer": "Yes, if the goal is small and a real community already wants the game, such as an email list, a Discord or a group of playtesters. The honest ceiling is that without ads you mostly reach people who already know you. If the numbers only work once strangers back the game, plan a capped ad test instead."
       }
     ],
     "published": "2026-10-03",
@@ -648,6 +668,11 @@ export const marketingGuides: LaunchGuide[] = [
         "label": "What is a Project Update Request?",
         "publisher": "Kickstarter Help Center",
         "href": "https://help.kickstarter.com/en-us/articles/16236555-what-is-a-project-update-request"
+      },
+      {
+        "label": "How to overcome the mid campaign slump (February 4, 2025)",
+        "publisher": "Kickstarter",
+        "href": "https://updates.kickstarter.com/overcome-the-mid-campaign-slump/"
       }
     ],
     "relatedSlugs": [
@@ -736,6 +761,15 @@ export const marketingGuides: LaunchGuide[] = [
         "source": 0
       },
       {
+        "id": "quiet-middle",
+        "title": "Expect the middle weeks to go quiet",
+        "paragraphs": [
+          "A quiet stretch can feel like failure on a first campaign, so it helps to know what normal looks like. Kickstarter says pledges come rolling in during the first few days, then momentum slows into a mid campaign plateau, and it calls that plateau completely normal.",
+          "So we plan the quiet weeks instead of waiting them out. Use the slots in the rhythm above for a sample turn, a review, a recurring question answered or a stretch goal, and ask early backers to share the project with friends who play. If the first days were slow as well, our guide on [why Kickstarter campaigns fail](/guides/why-kickstarter-campaigns-fail) walks through whether to push on or relaunch."
+        ],
+        "source": 4
+      },
+      {
         "id": "delay-template",
         "title": "Use this template when something is late",
         "paragraphs": [
@@ -809,6 +843,10 @@ export const marketingGuides: LaunchGuide[] = [
       {
         "question": "What should be handed over when live support ends?",
         "answer": "The agreed files, approved copy, reporting definitions, FAQ answers, outstanding tasks and next communication dates, with owners for each remaining job."
+      },
+      {
+        "question": "My campaign has gone quiet in the middle. Is that normal?",
+        "answer": "Yes. Kickstarter says pledges come rolling in during the first few days, then momentum slows into a mid campaign plateau that is completely normal. Use the quiet weeks for useful updates, such as a sample turn, a review or a stretch goal, and ask early backers to share the project."
       }
     ],
     "published": "2026-10-03",

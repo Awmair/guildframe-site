@@ -133,7 +133,7 @@ export const guide: LaunchGuide = {
       id: "budget",
       title: "Putting fees into your launch budget",
       paragraphs: [
-        "Fees are the easiest cost in a launch to calculate, which is exactly why they shouldn't be the one that surprises you.",
+        "Fees are the easiest cost in a launch to calculate, which is exactly why they shouldn't be the one that surprises you. For every other line in a first launch budget, from art to shipping, see [how much it costs to launch a board game on Kickstarter](/guides/board-game-kickstarter-cost).",
         "When we plan a launch, one sheet holds the goal, the reward prices, the fees and the ad budget together, so a change to one shows up in the others. You can do this yourself with the rates above and a spreadsheet. The honest limit is time, because checking country rates, pledge manager costs, VAT and tariff options takes hours you may want to spend on the game.",
         "If you'd like that work done with you, our Kickstarter launch services for tabletop games cover the budget, the funding goal and the campaign page around them. Ad spend is a separate line again, and our advertising budget guide shows how to size it. Whichever way you plan it, check these lines are in the sheet before you set the goal:",
       ],
