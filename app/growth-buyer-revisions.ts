@@ -174,6 +174,16 @@ const buyerRevisions: Record<string, BuyerRevision> = {
               ["12% eventually pledge", "80 divided by 0.12, rounded up", "667"],
             ],
           },
+          visual: {
+            kind: "bars",
+            title: "At a 4% rate you need three times the list you need at 12%",
+            caption: "Reachable subscribers needed for 80 email backers. Hypothetical rates, not benchmarks.",
+            bars: [
+              { label: "4% pledge", value: 2000, display: "2,000" },
+              { label: "8% pledge", value: 1000, display: "1,000", highlight: true },
+              { label: "12% pledge", value: 667, display: "667" },
+            ],
+          },
         },
       },
       {
@@ -210,6 +220,7 @@ const buyerRevisions: Record<string, BuyerRevision> = {
           title: "Download the target worksheet and welcome draft",
           paragraphs: [
             "The plain text worksheet includes the audience calculation, a place to record overlap and the complete sample email. It also asks you to name the person who checks the sample, sends the emails and reviews actual pledges after launch. Download it without an email signup and replace the fictional details with your own game.",
+            "If you would rather hand the signup page, welcome email and launch sequence to someone else, that is the core of our prelaunch marketing work. We build and test the route, and you keep the list and the email account.",
           ],
         },
       },

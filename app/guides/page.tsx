@@ -224,6 +224,8 @@ export default function GuidesPage() {
             <Link href="/miniatures-kickstarter-campaign-design">Miniatures</Link>
             <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
             <Link href="/resources">Checklists and references</Link>
+            <Link href="/kickstarter-launch-services">Kickstarter launch services</Link>
+            <Link href="/buy">Start your launch project</Link>
           </nav>
         </section>
       </main>

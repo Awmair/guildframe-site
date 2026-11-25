@@ -172,9 +172,9 @@ export const marketingGuides: LaunchGuide[] = [
     "seoTitle": "Kickstarter Prelaunch Email List for Board Games",
     "description": "Plan a tabletop Kickstarter email signup page, welcome email and prelaunch sequence. Test delivery and explain how your list differs from platform followers.",
     "tag": "Email & prelaunch",
-    "answer": "Use a page that explains the game and tells visitors what emails they are signing up for. Test the form, contact record, welcome message and unsubscribe link. Send useful game information before announcing the launch. Kickstarter followers receive platform notifications; your own email list needs separate consent, software and delivery checks.",
+    "answer": "Build a Kickstarter prelaunch email list with a signup page that explains the game and says exactly what subscribers will receive, then test the form, welcome email and unsubscribe link before you promote it. Kickstarter followers only get platform notifications, so your own list needs its own consent and software, and you should count the two audiences separately.",
     "servicePath": "/kickstarter-prelaunch-marketing",
-    "serviceLabel": "Kickstarter prelaunch marketing",
+    "serviceLabel": "Kickstarter prelaunch marketing for board games",
     "sources": [
       {
         "label": "Setting up a Kickstarter prelaunch page",
@@ -193,8 +193,9 @@ export const marketingGuides: LaunchGuide[] = [
       }
     ],
     "relatedSlugs": [
-      "board-game-kickstarter-marketing-plan",
+      "kickstarter-followers-before-launch",
       "kickstarter-prelaunch-page-guide",
+      "board-game-kickstarter-marketing-plan",
       "kickstarter-live-campaign-updates"
     ],
     "sections": [
@@ -211,8 +212,17 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Plan platform followers and email contacts separately",
         "paragraphs": [
           "The Kickstarter prelaunch page lets people request a launch notification. Kickstarter sends that message and provides prelaunch updates; creators cannot directly message followers through that follower list.",
-          "Your own signup page creates a different relationship. You choose the email software, explain the messages and confirm permission through the flow you use. Do not assume a platform follow automatically adds someone to your external mailing list."
+          "Your own signup page creates a different relationship. You choose the email software, explain the messages and confirm permission through the flow you use. A platform follow never adds someone to your external mailing list, so plan the two audiences as separate channels."
         ],
+        "visual": {
+          "kind": "compare",
+          "title": "Kickstarter followers and your email list are two separate audiences",
+          "source": "Kickstarter Help Center, prelaunch pages",
+          "columns": [
+            { "name": "Kickstarter followers", "points": ["Kickstarter sends the launch notification", "Prelaunch updates can reach them by email", "You cannot message them directly"], "verdict": "Platform owned" },
+            { "name": "Your email list", "points": ["You choose the software and messages", "Needs its own signup and consent", "Gameplay, reward and launch emails"], "verdict": "Creator owned", "highlight": true }
+          ]
+        },
         "source": 0
       },
       {
@@ -286,7 +296,7 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Keep the accounts and messages organised",
         "paragraphs": [
           "The creator should own the landing page, contact list and email account. Agree who drafts messages, who confirms product facts and who presses send. Store the approved sequence and reporting definitions with the launch brief.",
-          "At campaign close, review what the contacts expected to receive before changing the email plan. Backer updates, new-project announcements and store promotions may need different audiences and expectations."
+          "At campaign close, review what the contacts expected to receive before changing the email plan. Backer updates, new project announcements and store promotions may need different audiences and expectations."
         ]
       }
     ],
@@ -305,7 +315,7 @@ export const marketingGuides: LaunchGuide[] = [
       }
     ],
     "published": "2026-10-03",
-    "updated": "2026-10-03"
+    "updated": "2026-11-25"
   },
   {
     "slug": "kickstarter-advertising-budget-board-games",
@@ -313,9 +323,9 @@ export const marketingGuides: LaunchGuide[] = [
     "seoTitle": "Kickstarter Advertising Budget for Board Games",
     "description": "Set a board game Kickstarter ad budget using campaign costs, a capped test and clear reporting. Understand lead cost, attribution and why ROAS is not profit.",
     "tag": "Paid advertising",
-    "answer": "Separate the advertising management fee from media spend. Estimate what a reward leaves after non-ad costs, set a capped test budget and define what would make you change or stop the test. Measure prelaunch leads and live pledges separately. Attributed revenue divided by ad spend is ROAS; it does not measure campaign profit.",
+    "answer": "Set a Kickstarter ad budget from what one reward leaves after production, delivery and fees, then cap a small test and decide in advance what would make you stop or scale it. Keep the management fee, media spend and platform fees on separate lines, because ROAS measures attributed revenue, not campaign profit.",
     "servicePath": "/kickstarter-advertising",
-    "serviceLabel": "Guildframe Kickstarter advertising",
+    "serviceLabel": "Kickstarter advertising for board games and TTRPGs",
     "sources": [
       {
         "label": "Custom referral tags and pledge reports",
@@ -334,6 +344,7 @@ export const marketingGuides: LaunchGuide[] = [
       }
     ],
     "relatedSlugs": [
+      "kickstarter-fees",
       "board-game-kickstarter-marketing-plan",
       "kickstarter-prelaunch-email-list",
       "board-game-kickstarter-campaign-design-cost"
@@ -344,7 +355,7 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Put each cost in its own budget line",
         "paragraphs": [
           "A quote for ad management is not the same as the amount spent on ads. List the management fee, creative production, media spend and any software separately. Decide who pays the advertising platform and who can change the spending limit.",
-          "Keep reward production, packaging, delivery obligations, platform fees and relevant taxes in the campaign cost model. Check the platform fee schedule for your creator country instead of using one payment-processing figure for every country."
+          "Keep reward production, packaging, delivery obligations, platform fees and relevant taxes in the campaign cost model. Check the platform fee schedule for your creator country instead of using one payment processing figure for every country."
         ],
         "source": 2
       },
@@ -400,7 +411,7 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Keep prelaunch lead cost separate from backing behaviour",
         "paragraphs": [
           "If an illustrative test spends $500 and records 100 valid signups, its cost per signup is $5. That does not establish a cost per backer. Some contacts will never pledge, some may arrive through other channels and some may choose different rewards.",
-          "Review consent, delivery, engagement and campaign visits alongside cost. A large list with little interest can be less useful than a smaller group that understands the game. Avoid applying an assumed lead-to-backer conversion rate as though it were measured evidence."
+          "Review consent, delivery, engagement and campaign visits alongside cost. A large list with little interest can be less useful than a smaller group that understands the game. Avoid applying an assumed lead to backer conversion rate as though it were measured evidence."
         ]
       },
       {
@@ -417,8 +428,18 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Read ROAS as revenue, then check the costs",
         "paragraphs": [
           "Illustrative example: $2,000 of attributed pledge revenue on $1,000 of media spend is a ROAS of 2.0. Production, delivery, platform fees, taxes, refunds where relevant and service fees still need to be paid. The ratio alone cannot tell you whether the campaign is profitable.",
-          "During the live campaign, review spend, reward mix and attributable pledges against the cost model. Increase, change or pause spend under the approval rules you agreed. When results are unclear, state the uncertainty instead of treating the highest report as the answer."
-        ]
+          "During the live campaign, review spend, reward mix and attributable pledges against the cost model. Increase, change or pause spend under the approval rules you agreed. When results are unclear, state the uncertainty instead of treating the highest report as the answer. That's how we report on every campaign we run ads for, with media spend kept apart from our fee."
+        ],
+        "visual": {
+          "kind": "stats",
+          "title": "A 2.0 ROAS doubles the ad spend in revenue, not in profit",
+          "caption": "Illustrative example from the paragraph above. Replace every figure with your own campaign numbers.",
+          "stats": [
+            { "value": "$1,000", "label": "Media spend", "note": "Example figure" },
+            { "value": "$2,000", "label": "Attributed pledges", "note": "Revenue, before any costs" },
+            { "value": "2.0", "label": "ROAS", "note": "Still owes production, delivery, platform fees and service fees" }
+          ]
+        }
       }
     ],
     "faqs": [
@@ -432,7 +453,11 @@ export const marketingGuides: LaunchGuide[] = [
       },
       {
         "question": "Does ROAS include the agency fee or production costs?",
-        "answer": "The usual revenue-to-ad-spend ratio does not include those costs. State the calculation used and evaluate campaign profit separately."
+        "answer": "The usual revenue to ad spend ratio does not include those costs. State the calculation used and evaluate campaign profit separately."
+      },
+      {
+        "question": "Are Facebook ads worth it for a board game Kickstarter?",
+        "answer": "They can be, when one reward leaves enough room after production, delivery and fees to pay for a backer. Run a capped test with a clear stop rule first, and judge it on signups and attributable pledges rather than clicks."
       },
       {
         "question": "Can Guildframe manage the ads?",
@@ -440,7 +465,7 @@ export const marketingGuides: LaunchGuide[] = [
       }
     ],
     "published": "2026-10-03",
-    "updated": "2026-10-03"
+    "updated": "2026-11-25"
   },
   {
     "slug": "kickstarter-live-campaign-updates",

@@ -504,7 +504,8 @@ export const growthGuides: LaunchGuide[] = [
     "title": "Plan Board Game Reviewer Previews Before Kickstarter",
     "description": "Prepare board game reviewer outreach with a prototype brief, press kit, dispatch plan and clear permissions before your Kickstarter launch.",
     "tag": "Reviewer previews",
-    "answer": "Contact reviewers whose audience fits your game, ask about their availability and coverage terms, then send a complete prototype and clear rules. Agree timing, costs, return arrangements and how you may use their content before relying on it in your campaign.",
+    "seoTitle": "Board Game Reviewer Outreach Before Kickstarter",
+    "answer": "Contact board game reviewers whose audience plays games like yours, ask about their lead time and terms first, then send a complete prototype with clear rules. Agree the timing, any fee, return arrangements and how you may quote them before you build their coverage into the campaign page.",
     "sections": [
       {
         "id": "fit",
@@ -559,7 +560,7 @@ export const growthGuides: LaunchGuide[] = [
         "id": "outreach",
         "title": "Make the request short and specific",
         "paragraphs": [
-          "An example opening: “Hi Sam, I saw your recent coverage of short cooperative games. We are preparing a two-player card game about repairing a research station. Would you consider a prototype preview? The current rules, component photos and play-time details are here. Our target launch is in November, but I would like to check your availability before agreeing a date.”",
+          "An example opening: “Hi Sam, I saw your recent coverage of short cooperative games. We are preparing a two player card game about repairing a research station. Would you consider a prototype preview? The current rules, component photos and play time details are here. Our target launch is in November, but I would like to check your availability before agreeing a date.”",
           "The game, reviewer and date in that message are fictional. Replace them with accurate details. Ask about fees and production terms without assuming the answer. Sending a copy does not buy a positive opinion or guarantee that anything will be published."
         ]
       },
@@ -570,6 +571,18 @@ export const growthGuides: LaunchGuide[] = [
           "Ask how long they need after receiving a playable copy. Then allow for shipping, customs where relevant, missing parts and questions about the rules. Agree a publication window before adding the content to your campaign schedule.",
           "For example, a reviewer might ask for four weeks with the game. If shipping may take ten days, dispatching two weeks before launch will not meet that request. That is an illustrative planning problem, not a standard turnaround time. Find a workable date or prepare the campaign without depending on that coverage."
         ],
+        "visual": {
+          "kind": "timeline",
+          "title": "Four weeks of play plus ten days of shipping means pitching about two months out",
+          "caption": "Illustrative schedule built from the four week and ten day example above. Ask each reviewer for their own lead time.",
+          "events": [
+            { "when": "8 weeks out", "label": "Pitch and ask", "detail": "Lead time, fee, format and submission policy" },
+            { "when": "7 weeks out", "label": "Confirm terms", "detail": "Acceptance, publication window and returns" },
+            { "when": "6 weeks out", "label": "Dispatch the prototype", "detail": "Packed set photographed, tracking shared" },
+            { "when": "4 to 5 weeks out", "label": "Prototype arrives", "detail": "Fix missing parts and answer rules questions" },
+            { "when": "Launch window", "label": "Coverage goes live", "detail": "Add approved excerpts with credit and a link", "highlight": true }
+          ]
+        },
         "table": {
           "headers": [
             "Prototype tracker",
@@ -605,8 +618,17 @@ export const growthGuides: LaunchGuide[] = [
         "paragraphs": [
           "Ask how the creator labels a paid preview, a supplied copy or another commercial arrangement. Make that context clear wherever you feature the content. A paid walkthrough can still help someone understand the game; it should not be presented as an independent verdict.",
           "Before putting a quote or thumbnail on the campaign page, agree the permitted excerpt, credit and link. Preserve the reviewer’s meaning and do not turn a qualified observation into an unqualified endorsement. If the prototype has changed since filming, explain the relevant difference.",
-          "Guildframe can organise approved previews within the campaign page and help explain what each one demonstrates. Bring the live links, permissions and confirmed product details with the rest of the campaign assets."
-        ]
+          "We can place approved previews on the campaign page and explain what each one shows, as part of the prelaunch and page work. Bring the live links, permissions and confirmed product details with the rest of the campaign assets."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "Paid previews can help backers, as long as they are labelled as paid",
+          "columns": [
+            { "name": "Independent review", "points": ["The reviewer chooses the verdict", "They may decline or publish nothing", "Quote with permission and a link"] },
+            { "name": "Paid preview", "points": ["Shows how the game plays", "Labelled as paid wherever you use it", "Never presented as a verdict"], "highlight": true },
+            { "name": "Your own claims", "points": ["Kept apart from reviewer words", "Checked against the current prototype"] }
+          ]
+        }
       }
     ],
     "faqs": [
@@ -620,7 +642,11 @@ export const growthGuides: LaunchGuide[] = [
       },
       {
         "question": "Can I put a reviewer’s quote on my Kickstarter page?",
-        "answer": "Agree how the quote, name and imagery may be used, keep the wording accurate and link to the original coverage. Make any paid or supplied-product arrangement clear."
+        "answer": "Agree how the quote, name and imagery may be used, keep the wording accurate and link to the original coverage. Make any paid or supplied product arrangement clear."
+      },
+      {
+        "question": "Should I pay for a board game preview?",
+        "answer": "Some reviewers charge for previews and some do not accept prototypes at all, so read their policy first. A paid walkthrough can still help someone understand the game, as long as you label it as paid and never present it as an independent verdict."
       }
     ],
     "sources": [
@@ -636,14 +662,15 @@ export const growthGuides: LaunchGuide[] = [
       }
     ],
     "relatedSlugs": [
+      "board-game-kickstarter-marketing-plan",
+      "kickstarter-prelaunch-email-list",
       "board-game-kickstarter-gameplay-rulebook",
-      "kickstarter-campaign-video-planning",
-      "what-to-send-kickstarter-campaign-designer"
+      "kickstarter-campaign-video-planning"
     ],
     "servicePath": "/kickstarter-prelaunch-marketing",
-    "serviceLabel": "Plan your game prelaunch",
+    "serviceLabel": "Kickstarter prelaunch marketing for board games",
     "published": "2026-10-28",
-    "updated": "2026-10-28"
+    "updated": "2026-11-25"
   },
   {
     "slug": "board-game-kickstarter-launch-day-checklist",
@@ -813,7 +840,8 @@ export const growthGuides: LaunchGuide[] = [
     "title": "Choose a Pledge Manager for Your Board Game Campaign",
     "description": "Compare pledge managers for a board game Kickstarter by upgrades, shipping, fees, order exports and support. Use a practical selection checklist.",
     "tag": "Pledge management",
-    "answer": "Choose a pledge manager by the work your campaign needs after funding: collecting choices, upgrades, shipping details, applicable payments and reliable fulfillment data. Compare eligible systems against the same sample orders and total fee basis before committing.",
+    "seoTitle": "Pledge Manager Checklist for Board Game Campaigns",
+    "answer": "Choose a pledge manager by the work your campaign needs after funding, which means surveys, upgrades, shipping collection, remaining payments and an export your fulfillment partner can import. Compare Kickstarter's own Pledge Manager and outside systems against the same test orders and the full fee basis before you commit.",
     "sections": [
       {
         "id": "requirements",
@@ -869,8 +897,21 @@ export const growthGuides: LaunchGuide[] = [
         "title": "Choose the right stage as well as the right tool",
         "paragraphs": [
           "Gamefound distinguishes its optional Late Pledge stage from Pledge Manager. Late Pledge can extend the offer before shipping collection; Pledge Manager handles shipping details and fees. If you move directly to its manager after crowdfunding, you cannot later open the earlier Late Pledge stage.",
-          "A permanent Shopify store has another purpose: retail orders and an ongoing catalogue. It may run alongside campaign fulfillment, but decide which system owns each order and how shared stock is allocated. Do not assume that opening a retail checkout transfers campaign obligations automatically."
+          "A permanent Shopify store has another purpose, which is retail orders and an ongoing catalogue. It may run alongside campaign fulfillment, but decide which system owns each order and how shared stock is allocated. Opening a retail checkout never transfers campaign obligations by itself."
         ],
+        "visual": {
+          "kind": "timeline",
+          "title": "Each stage after funding has one job, and the order matters",
+          "caption": "Platform rules differ. On Kickstarter, Late Pledges end before its Pledge Manager opens; on Gamefound, skipping Late Pledge means you cannot open it later.",
+          "source": "Kickstarter Help Center and Gamefound Knowledge Base",
+          "events": [
+            { "when": "Campaign closes", "label": "Pledges are collected", "detail": "Rewards and add ons chosen during the campaign" },
+            { "when": "Optional", "label": "Late pledges", "detail": "Extends the offer before shipping collection" },
+            { "when": "Pledge manager", "label": "Surveys and upgrades", "detail": "Choices, shipping charges and remaining payments", "highlight": true },
+            { "when": "Order lock", "label": "Addresses and choices freeze", "detail": "Announced deadline, tested before it arrives" },
+            { "when": "Fulfillment", "label": "Export to the warehouse", "detail": "Fields the partner has already accepted" }
+          ]
+        },
         "source": 1
       },
       {
@@ -917,9 +958,18 @@ export const growthGuides: LaunchGuide[] = [
         "id": "test",
         "title": "Run a small order test before inviting every backer",
         "paragraphs": [
-          "Prepare sample cases that represent real fulfillment problems: a base game, deluxe upgrade, extra expansion, language change, new buyer, changed country and incomplete survey. Include a mixed physical/digital reward if you offer one. These are test cases, not live customer records.",
-          "For each case, compare the selected items with the exported identifiers and quantities. Check what is paid, what remains due and whether the address is ready for fulfillment. Send the test export to the person who will actually import it. A successful download does not prove that their system can use it."
+          "We start every pledge manager setup with test orders that represent real fulfillment problems, such as a base game, deluxe upgrade, extra expansion, language change, new buyer, changed country and incomplete survey. Include a reward that mixes physical and digital items if you offer one. These are test cases, not live customer records.",
+          "For each case, compare the selected items with the exported identifiers and quantities. Check what is paid, what remains due and whether the address is ready for fulfillment. Send the test export to the person who will actually import it, because a successful download does not prove that their system can use it."
         ],
+        "visual": {
+          "kind": "checklist",
+          "title": "Seven test orders catch export problems before any backer sees the survey",
+          "caption": "Test cases, not live customer records. Send the export to whoever imports it.",
+          "groups": [
+            { "name": "Test orders", "items": ["Base game only", "Deluxe upgrade", "Extra expansion", "Language change", "New buyer", "Changed country", "Incomplete survey"] },
+            { "name": "Check in the export", "items": ["Item identifiers", "Quantities after upgrades", "Paid and due amounts", "Address ready to ship"] }
+          ]
+        },
         "list": [
           "Confirm item and reward identifiers remain distinguishable.",
           "Check options and quantities after an upgrade.",
@@ -934,7 +984,7 @@ export const growthGuides: LaunchGuide[] = [
         "title": "Give backers one clear next action",
         "paragraphs": [
           "Before opening the manager, agree who answers questions and what the message asks backers to do. Explain the choices, any remaining payments and the deadline using confirmed facts. Do not send several competing links for the same task.",
-          "Guildframe can help plan the campaign communications and explain the transition. Bring the chosen platform, order scenarios and fulfillment requirements so the message matches the actual workflow."
+          "We help funded creators plan those messages and the move from campaign to pledge manager as part of our post campaign support. Bring the chosen platform, order scenarios and fulfillment requirements so the message matches the actual workflow."
         ]
       }
     ],
@@ -945,7 +995,15 @@ export const growthGuides: LaunchGuide[] = [
       },
       {
         "question": "Is Late Pledge the same as Pledge Manager?",
-        "answer": "No. The stages have different tasks and platform-specific rules. In particular, shipping collection and backer choices may belong in the manager rather than the earlier late-pledge stage."
+        "answer": "No. The stages have different tasks and platform specific rules. In particular, shipping collection and backer choices may belong in the manager rather than the earlier late pledge stage."
+      },
+      {
+        "question": "When should I open the pledge manager?",
+        "answer": "After the campaign, once your test orders export cleanly. Kickstarter's Pledge Manager becomes available after launch and its Late Pledges must end before it opens. On Gamefound, moving straight to Pledge Manager means you cannot open Late Pledge afterwards."
+      },
+      {
+        "question": "Which pledge manager is best for a board game?",
+        "answer": "The one that handles your real orders with the fewest manual fixes. Price every option against the same test orders and fee basis, and let your fulfillment partner confirm the export before you choose."
       },
       {
         "question": "What should I test before sending the manager to backers?",
@@ -970,13 +1028,14 @@ export const growthGuides: LaunchGuide[] = [
       }
     ],
     "relatedSlugs": [
+      "pledge-managers-compared",
       "backerkit-vs-shopify-vs-gamefound",
       "kickstarter-late-pledges-vs-shopify",
       "what-happens-after-kickstarter-is-funded"
     ],
-    "servicePath": "/kickstarter-launch-services",
-    "serviceLabel": "Plan your tabletop launch",
+    "servicePath": "/post-campaign-support",
+    "serviceLabel": "Post campaign support for funded tabletop games",
     "published": "2026-10-28",
-    "updated": "2026-10-28"
+    "updated": "2026-11-25"
   }
 ];
