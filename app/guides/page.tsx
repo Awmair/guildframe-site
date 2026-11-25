@@ -95,7 +95,9 @@ const afterFundingGuides = [
   },
 ];
 
-const campaignGuides = launchGuides.map(g=>({title:g.title,copy:g.description,href:`/guides/${g.slug}`,tag:g.tag}));
+// The A to Z guide is pinned first as the starting point for new creators.
+const startHere = { title: "The Complete Guide to Launching a Tabletop Kickstarter, A to Z", copy: "Every stage of a tabletop Kickstarter in order, from a tested prototype to delivery, with a plain answer for each and the guide that goes deeper.", href: "/guides/how-to-launch-a-board-game-on-kickstarter", tag: "Start here" };
+const campaignGuides = [startHere, ...launchGuides.map(g=>({title:g.title,copy:g.description,href:`/guides/${g.slug}`,tag:g.tag}))];
 const guides=[...campaignGuides,...afterFundingGuides];
 
 const guideFilters = [
