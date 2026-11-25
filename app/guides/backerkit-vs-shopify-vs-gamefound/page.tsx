@@ -12,7 +12,7 @@ import { GuideVisual } from "../../components/GuideVisual";
 export const metadata = pageMetadata({
   title: "BackerKit vs Shopify vs Gamefound in 2026",
   description:
-    "BackerKit vs Shopify vs Gamefound in 2026, plus Kickstarter's own Pledge Manager: what each handles after funding, what changed this year and how to choose.",
+    "BackerKit vs Shopify vs Gamefound in 2026, plus the Kickstarter Pledge Manager: what each handles after funding, what changed this year and how to choose.",
   path: "/guides/backerkit-vs-shopify-vs-gamefound",
   kind: "article",
   publishedTime: "2026-07-16",

@@ -17,7 +17,7 @@ const benchmarkCsvPath = "/data/kickstarter-tabletop-games-benchmark-2024.csv";
 export const metadata = pageMetadata({
   title: "Highest Funded Tabletop Kickstarters of 2024",
   description:
-    "The ten highest funded tabletop Kickstarters of 2024, with funding and backers, plus Kickstarter's 6,646 launches and 80% success rate in one sourced table.",
+    "The ten highest funded tabletop Kickstarters of 2024 with funding and backers, plus 6,646 launches and an 80% success rate in one sourced table.",
   path: "/resources/kickstarter-tabletop-games-benchmark",
   kind: "article",
   publishedTime: "2026-07-17",

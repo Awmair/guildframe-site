@@ -6,7 +6,7 @@ export const guide: LaunchGuide = {
   slug: "pledge-managers-compared",
   title: "Pledge Managers Compared: Kickstarter, BackerKit, Gamefound, PledgeBox",
   seoTitle: "Pledge Managers Compared: BackerKit, Kickstarter, PledgeBox",
-  description: "Compare pledge managers for tabletop campaigns: Kickstarter's own, BackerKit, Gamefound and PledgeBox, with published fees, 2026 features and which one fits.",
+  description: "Compare pledge managers for tabletop campaigns: the Kickstarter Pledge Manager, BackerKit, Gamefound and PledgeBox, with published fees and 2026 features.",
   tag: "Pledge management",
   servicePath: "/post-campaign-support",
   serviceLabel: "Post campaign support for funded tabletop games",

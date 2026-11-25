@@ -10,7 +10,7 @@ import { GuideVisual, type GuideVisualData } from "../components/GuideVisual";
 export const metadata = pageMetadata({
   title: "Kickstarter to Shopify: Official App and Store Setup",
   description:
-    "Kickstarter's free Shopify app sends finalized Pledge Manager orders to your store and tracking back. See what syncs, what does not and how to plan the store.",
+    "The free Kickstarter app for Shopify sends finalized Pledge Manager orders to your store and tracking back. See what syncs, what does not and how to plan.",
   path: "/kickstarter-to-shopify",
   keywords: [
     "Kickstarter to Shopify",
