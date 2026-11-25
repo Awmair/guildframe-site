@@ -57,6 +57,7 @@ export const contentDates = {
   productPageChecklist: "2026-09-30",
   kickstarterTabletopBenchmark: "2026-10-17",
   buildWithAi: "2026-10-28",
+  howToLaunch: "2026-11-25",
   metafieldSchema: "2026-09-30",
 } as const;
 
