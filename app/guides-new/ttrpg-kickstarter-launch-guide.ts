@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "ttrpg-kickstarter-launch-guide",
   title: "TTRPG Kickstarter Launch Guide (2026)",
-  seoTitle: "TTRPG Kickstarter Launch and Marketing Guide (2026)",
+  seoTitle: "TTRPG Kickstarter Launch and Marketing Guide",
   description: "Plan a TTRPG Kickstarter: the new RPG subcategory, Zine Quest or Zinetopia, PDF delivery through DriveThruRPG, audience channels and a launch timeline.",
   tag: "RPG launches",
   answer: "To promote an RPG Kickstarter, build an audience of players before launch, pick a launch window or event that suits your book, and make the page show how a session plays. In 2026 that also means choosing Kickstarter's new tabletop roleplaying subcategory, weighing Zine Quest against BackerKit's Zinetopia for a small zine, and planning PDF delivery before you set reward tiers.",

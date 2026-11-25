@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "kickstarter-vs-gamefound",
   title: "Kickstarter vs Gamefound for Board Games in 2026",
-  seoTitle: "Kickstarter vs Gamefound for Board Games in 2026",
+  seoTitle: "Kickstarter vs Gamefound for Board Games (2026)",
   description: "Kickstarter vs Gamefound for board games in 2026: fees, audience, pledge managers, Adfound and Jellop ads, the Indiegogo deal and which one fits your game.",
   tag: "Platform planning",
   servicePath: "/gamefound-launch-services",

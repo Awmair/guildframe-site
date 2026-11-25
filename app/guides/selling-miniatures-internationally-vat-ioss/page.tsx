@@ -10,7 +10,7 @@ import { contentDates } from "../../content-dates";
 import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
-  title: "Selling Miniatures Internationally: VAT and IOSS",
+  title: "Selling Miniatures Internationally: VAT & IOSS",
   description:
     "Plan international Shopify sales for miniatures, terrain and tabletop games with shipping zones, HS codes, EU VAT, IOSS, duties and clear delivery terms.",
   path: "/guides/selling-miniatures-internationally-vat-ioss",

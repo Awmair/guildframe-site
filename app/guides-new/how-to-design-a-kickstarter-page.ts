@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "how-to-design-a-kickstarter-page",
   title: "How to Design a Good Kickstarter Page for Your Board Game",
-  seoTitle: "How to Design a Kickstarter Page for a Board Game",
+  seoTitle: "How to Design a Kickstarter Page: Board Games",
   description: "How to design a good Kickstarter page for a board game. What goes first, what backers look for and how to make it look professional yourself.",
   tag: "New to Kickstarter",
   servicePath: "/campaign-design",

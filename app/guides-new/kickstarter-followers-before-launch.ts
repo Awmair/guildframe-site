@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "kickstarter-followers-before-launch",
   title: "How Many Kickstarter Followers Do You Need Before Launch?",
-  seoTitle: "Kickstarter Followers Before Launch: How Many You Need",
+  seoTitle: "Kickstarter Followers Before Launch: How Many?",
   description: "How many Kickstarter followers you need before launch, using published conversion figures, three scenarios and a worked funding goal example.",
   tag: "Prelaunch",
   answer: "You need enough prelaunch followers that a cautious share of them covers your funding goal, so the right number depends on your goal and average pledge. Kickstarter reports that 32% of prelaunch followers pledge on average and BackerKit found 20 to 25%, so we plan on a lower rate and treat anything above it as a bonus.",

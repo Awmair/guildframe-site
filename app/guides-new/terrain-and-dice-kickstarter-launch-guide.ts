@@ -7,7 +7,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "terrain-and-dice-kickstarter-launch-guide",
   title: "Launching Terrain, Dice and Accessories on Kickstarter",
-  seoTitle: "Terrain and Dice Kickstarter Launch Guide for Creators",
+  seoTitle: "Terrain and Dice Kickstarter Launch Guide",
   description: "Launch terrain, dice or accessories on Kickstarter: show scale and assembly, separate STL and physical rewards, plan add ons and price shipping by box size.",
   tag: "Terrain, dice & accessories",
   servicePath: "/miniatures-kickstarter-campaign-design",

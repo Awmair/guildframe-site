@@ -75,7 +75,7 @@ const revisions: Record<string, LaunchSection[]> = {
 const guideOverrides: Record<string, Partial<Omit<LaunchGuide, "slug" | "sections">>> = {
   "kickstarter-campaign-graphics-mobile-readability": {
     title: "Kickstarter Campaign Graphics That Read on a Phone",
-    seoTitle: "Kickstarter Campaign Graphics: Mobile Readability Guide",
+    seoTitle: "Kickstarter Campaign Graphics for Phone Screens",
     description: "Make Kickstarter campaign graphics readable on a phone: one job per graphic, labels that survive compression, and a quick image size reference.",
     answer: "Design every Kickstarter campaign graphic for a phone first: one job per image, labels a reader can see without zooming, and essential facts repeated in page text. Kickstarter compresses uploads, so we export story images at 700 pixels or wider, stay under its 50 MB limit and check the uploaded section on a real phone before building the rest.",
     relatedSlugs: ["kickstarter-image-sizes", "kickstarter-reward-tier-graphics", "board-game-kickstarter-page-checklist", "kickstarter-campaign-video-planning"],

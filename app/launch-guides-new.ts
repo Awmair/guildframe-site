@@ -14,7 +14,7 @@ export const newLaunchGuides: LaunchGuide[] = [
   guide({
     "slug": "kickstarter-prelaunch-page-guide",
     "title": "Kickstarter Prelaunch Page: What to Show Before Your Game Launches",
-    "seoTitle": "Kickstarter Prelaunch Page Guide for Tabletop Games",
+    "seoTitle": "Kickstarter Prelaunch Page Guide for Games",
     "description": "What a tabletop Kickstarter prelaunch page should show, how it differs from the preview link, when to share it and what followers see in the app.",
     "tag": "Prelaunch",
     "updated": "2026-11-25",
@@ -176,7 +176,7 @@ export const newLaunchGuides: LaunchGuide[] = [
   guide({
     slug: "board-game-kickstarter-gameplay-rulebook",
     title: "How to Explain Board Game Gameplay on a Kickstarter Page",
-    seoTitle: "Board Game Kickstarter Gameplay and Rulebook Guide",
+    seoTitle: "Board Game Kickstarter Gameplay and Rulebooks",
     description: "Show a sample turn, explain player decisions and link your rulebook or playthrough so a new backer can understand your board game.",
     tag: "Gameplay & rules", updated: "2026-11-25", servicePath: "/campaign-design", serviceLabel: "Kickstarter campaign design for tabletop games",
     answer: "Explain a board game on Kickstarter by stating the player's objective, then showing one representative turn with its decision and result, with the confirmed player count and play time nearby. Link a clearly labelled rulebook or playthrough for readers who want every rule, so the page itself never has to teach them all.",
@@ -224,7 +224,7 @@ export const newLaunchGuides: LaunchGuide[] = [
   guide({
     "slug": "kickstarter-stretch-goals-planning",
     "title": "Kickstarter Stretch Goals: Examples and a Planning Guide",
-    "seoTitle": "Kickstarter Stretch Goals: Card and Board Game Examples",
+    "seoTitle": "Kickstarter Stretch Goals: Card and Board Games",
     "description": "Kickstarter stretch goal examples for card and board games, from card expansions to upgraded components, with unlock rules, eligible rewards and cost checks.",
     "tag": "Stretch goals",
     "answer": "A stretch goal is an extra funding target the creator sets beyond the original Kickstarter goal, and it unlocks an upgrade or extra content for named rewards. Strong examples for card and board games are a small card expansion, a solo mode deck or upgraded components, each one priced, produced and shipped on paper before you announce it.",
@@ -428,7 +428,7 @@ export const newLaunchGuides: LaunchGuide[] = [
   guide({
     "slug": "kickstarter-shipping-delivery-page",
     "title": "How to Explain Kickstarter Shipping Costs and Delivery",
-    "seoTitle": "Kickstarter Shipping: Explain Costs and Delivery",
+    "seoTitle": "Kickstarter Shipping: Explain Cost and Delivery",
     "description": "Write the shipping section of a tabletop Kickstarter: when shipping is charged, regional estimates, delivery dates per tier and what backers should budget.",
     "tag": "Shipping & delivery",
     "updated": "2026-11-25",
@@ -620,7 +620,7 @@ export const newLaunchGuides: LaunchGuide[] = [
   guide({
     "slug": "kickstarter-prototype-risks-disclosure",
     "title": "Kickstarter Risks and Challenges: Show What Is Ready",
-    "seoTitle": "Kickstarter Risks and Challenges for Tabletop Games",
+    "seoTitle": "Kickstarter Risks and Challenges Section Guide",
     "description": "Write the Kickstarter risks and challenges section for a tabletop game, label prototypes and renders honestly and check the rules for your category.",
     "tag": "Prototypes & risks",
     "updated": "2026-11-25",
@@ -819,7 +819,7 @@ export const newLaunchGuides: LaunchGuide[] = [
   guide({
     "slug": "kickstarter-review-launch-timeline",
     "title": "Kickstarter Review Time and Your Launch Timeline",
-    "seoTitle": "How Long Does Kickstarter Take to Approve a Project?",
+    "seoTitle": "How Long Does Kickstarter Take to Approve?",
     "description": "Kickstarter review takes up to 3 business days, plus 3 more if changes are requested. Plan review, revisions and the manual launch with a buffer.",
     "tag": "Review & launch",
     "answer": "Kickstarter says project review can take up to 3 business days once your project is queued, and if its team requests changes it can take another 3 business days or longer. Approval doesn't publish the campaign, because launching is a manual step, so we suggest submitting about two working weeks before the launch date you announce.",
@@ -990,7 +990,7 @@ export const newLaunchGuides: LaunchGuide[] = [
   {...guide({
     slug: "gamefound-launch-page-checklist",
     title: "Gamefound Launch Checklist: Sections, Rewards and Tester Mode",
-    seoTitle: "Gamefound Launch Checklist: Page, Tester Mode and Adfound",
+    seoTitle: "Gamefound Launch Checklist: Page and Adfound",
     description: "Gamefound launch checklist for tabletop creators. Check stages, sections, rewards and Tester Mode, and budget for Adfound fees before backers arrive.",
     tag: "Gamefound launch", servicePath: "/gamefound-launch-services", serviceLabel: "Gamefound launch services for tabletop creators",
     answer: "Before your Gamefound page opens, check the stage you are editing, publish every story section and reward, test the order path in Tester Mode, then leave Tester Mode and check the public page. If you plan to use Adfound, budget for its fee, which is free in the Upcoming phase and 5% of attributed revenue once crowdfunding starts.",
@@ -1010,7 +1010,6 @@ export const newLaunchGuides: LaunchGuide[] = [
       { question: "Does copying a section prove it is public?", answer: "No. Inspect the destination stage, its content and its publication settings. Copying can also replace content already present in that stage." },
       { question: "Does a Tester Mode checkout send payment?", answer: "The cited Gamefound documentation says Tester Mode does not send orders to the payment operator. Exit the mode and check public visibility separately." },
       { question: "How much does Adfound cost on Gamefound?", answer: "Gamefound's billing article says Adfound is free in the Upcoming phase of a dedicated campaign, then charges 5% of attributed revenue during crowdfunding, late pledges or the pledge manager. Catalog campaigns are charged 15%. The final fee is set 7 days after the campaign ends." },
-      { question: "Did Gamefound buy Indiegogo?", answer: "Gamefound announced on July 24, 2025 that it would acquire Indiegogo. It said Gamefound would continue as a tabletop crowdfunding platform and that Gamefound campaigns would be featured on Indiegogo." },
     ],
   }), updated: "2026-11-25"},
   guide({

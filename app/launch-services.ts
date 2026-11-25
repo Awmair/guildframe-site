@@ -16,7 +16,7 @@ export const launchServices: CampaignPage[] = [
     guide: "board-game-kickstarter-marketing-plan", guideTitle: "Build your board game Kickstarter marketing plan", kind: "launch",
   },
   {
-    slug: "kickstarter-prelaunch-marketing", title: "Kickstarter Prelaunch Marketing for Tabletop Games",
+    slug: "kickstarter-prelaunch-marketing", title: "Kickstarter Prelaunch Marketing: Tabletop Games",
     description: "Kickstarter prelaunch marketing for tabletop games: a signup page, email sequence, tracking and capped ad tests. Part of $5,900 full campaign support.",
     headline: "Kickstarter prelaunch marketing", accent: "for tabletop games.", image: "party-cards",
     lead: "Kickstarter prelaunch marketing is the work of finding interested players and keeping them close before your campaign opens. Guildframe builds your signup page, email sequence, tracking and first capped ad tests, so launch day starts with people who already understand the game.",
@@ -30,7 +30,7 @@ export const launchServices: CampaignPage[] = [
     guide: "kickstarter-prelaunch-email-list", guideTitle: "Plan a prelaunch email list and launch sequence", kind: "launch",
   },
   {
-    slug: "kickstarter-advertising", title: "Kickstarter Advertising Agency for Tabletop Games",
+    slug: "kickstarter-advertising", title: "Kickstarter Advertising Agency: Tabletop Games",
     description: "Kickstarter advertising for tabletop games, run by Umair: ad creative, capped tests and clear reports. Included in $5,900 full campaign support.",
     headline: "Kickstarter advertising agency", accent: "for tabletop games.", image: "card-games",
     lead: "A Kickstarter advertising agency plans, runs and reports the paid ads that bring players to your prelaunch page and live campaign. At Guildframe, Umair runs the ads himself, with creative variants, capped tests, budget approvals and reports that separate spend from attributable pledges.",
@@ -44,7 +44,7 @@ export const launchServices: CampaignPage[] = [
     guide: "kickstarter-advertising-budget-board-games", guideTitle: "Work out a Kickstarter advertising test budget", kind: "launch",
   },
   {
-    slug: "kickstarter-campaign-management", title: "Kickstarter Campaign Management for Tabletop Games",
+    slug: "kickstarter-campaign-management", title: "Kickstarter Campaign Management: Tabletop Games",
     description: "Kickstarter campaign management for tabletop games: launch checks, backer updates, FAQ upkeep and live ads. Included in $5,900 full campaign support.",
     headline: "Kickstarter campaign management", accent: "for tabletop games.", image: "board-games",
     lead: "Kickstarter campaign management is the daily running of a live campaign, from launch checks to backer updates, FAQ answers, stretch goal graphics and ad reports. Guildframe runs that work with you through an agreed support period, and you approve every update before it goes out.",

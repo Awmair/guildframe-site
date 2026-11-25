@@ -20,12 +20,13 @@ import { absoluteUrl, pageMetadata } from "../../site-config";
 
 const path = "/resources/tabletop-campaign-page-study";
 const title = "Tabletop Campaign Page Study: 25 Public Examples";
+const seoTitle = "Tabletop Campaign Page Study: 25 Examples";
 const description =
   "Explore 25 public tabletop campaign examples covering gameplay, reward choices, shipping and previews, with source notes, unknowns and a downloadable CSV.";
 const reviewDate = contentDates.campaignPageStudy;
 
 export const metadata = pageMetadata({
-  title,
+  title: seoTitle,
   description,
   path,
   kind: "article",

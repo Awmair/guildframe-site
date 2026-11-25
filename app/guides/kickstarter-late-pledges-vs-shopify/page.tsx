@@ -10,7 +10,7 @@ import { pageMetadata } from "../../site-config";
 import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
-  title: "Selling After Kickstarter: Late Pledges vs Shopify",
+  title: "Kickstarter Late Pledges vs a Shopify Store",
   description:
     "Compare late pledges, preorders and Shopify for selling after Kickstarter. Choose the right post campaign sales path without confusing backers.",
   path: "/guides/kickstarter-late-pledges-vs-shopify",

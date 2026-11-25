@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "is-my-game-ready-for-kickstarter",
   title: "Is My Game Ready for Kickstarter? What You Need Before You Launch",
-  seoTitle: "What You Need Before Launching a Kickstarter Board Game",
+  seoTitle: "What You Need Before Launching a Kickstarter",
   description: "What you need before you launch a board game on Kickstarter: how finished the game should be, how much art, and whether a prototype is enough.",
   tag: "New to Kickstarter",
   servicePath: "/kickstarter-launch-services",

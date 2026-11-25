@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "kickstarter-image-sizes",
   title: "Kickstarter Image Sizes and Video Specs (2026 Cheat Sheet)",
-  seoTitle: "Kickstarter Image Sizes & Video Specs: 2026 Cheat Sheet",
+  seoTitle: "Kickstarter Image Sizes & Video Specs for 2026",
   description: "Kickstarter and Gamefound image sizes, reward image ratios and video limits in one table, taken from both help centres, plus the export sizes we use.",
   tag: "Campaign specs",
   servicePath: "/campaign-design",
@@ -113,7 +113,7 @@ export const guide: LaunchGuide = {
     },
     {
       id: "video-length",
-      title: "How long should a Kickstarter video be?",
+      title: "Kickstarter video length and specs",
       paragraphs: [
         "Kickstarter sets no required length for the main project video, and the video itself is optional. Its own launch checklist advises keeping the video engaging, clear and under two minutes, and checking it on desktop and mobile.",
         "The main video goes in the Basics tab as MOV, MPEG, AVI, MP4, 3GP, WMV or FLV, no larger than 5120 MB. Kickstarter then makes a 640 × 360 pixel, 16:9 version for display on the project page. Its encoding tip is H.264 on a Mac or WMV on Windows, starting around 1500 kbps and adjusting from there.",
@@ -157,7 +157,6 @@ export const guide: LaunchGuide = {
   faqs: [
     { question: "What size is the Kickstarter banner image?", answer: "Kickstarter has no separate banner. The project image does that job, and Kickstarter recommends 1024 × 576 pixels at 16:9, with no added banners, badges or text. We export it at 1920 × 1080 pixels." },
     { question: "What are the Kickstarter reward image dimensions?", answer: "Kickstarter asks for a 3:2 ratio, at least 348 × 232 pixels and no larger than 50 MB, as JPG, PNG or GIF. Reward images are optional. We export them at 1200 × 800 pixels." },
-    { question: "How long should a Kickstarter video be?", answer: "Kickstarter sets no required length for the main video. Its launch checklist advises under two minutes, and it recommends 60 to 90 seconds for the optional vertical Discovery Mode clip." },
     { question: "Why do my Kickstarter story images look blurry?", answer: "Kickstarter compresses uploads, so they display at a lower resolution than the original. Kickstarter asks for at least 700 pixels wide; we export at 1400 pixels so graphics stay sharp after compression." },
     { question: "What image sizes does Gamefound use?", answer: "Gamefound recommends a 700 × 700 thumbnail, a cover of at least 1743 × 498 at 21:6, and gallery and social images of at least 1280 × 720. Description images should be 840 to 1200 pixels wide." },
     { question: "Does Guildframe make campaign videos?", answer: "Our campaign creative work covers renders, short motion pieces and ad variants built from your artwork. Filmed production with a crew is external work that we scope separately from page design." },

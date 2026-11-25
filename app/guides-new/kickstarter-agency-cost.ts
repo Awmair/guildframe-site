@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "kickstarter-agency-cost",
   title: "How Much Does a Kickstarter Agency Cost?",
-  seoTitle: "Kickstarter Agency Cost: Pricing Models and Real Prices",
+  seoTitle: "Kickstarter Agency Cost: Real Prices and Models",
   description: "Kickstarter agency cost depends on the model: fixed fee, retainer or a share of pledges. See published prices, what is never included and red flags.",
   tag: "Budget planning",
   answer: "A Kickstarter agency usually charges a fixed fee per campaign, a monthly retainer or a share of the pledges it brings in, and ad spend and platform fees sit on top of all three. The flat prices we could find published today run from $1,800 for our campaign page package to $6,997 for BoostYourCampaign's largest package.",

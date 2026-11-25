@@ -7,7 +7,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "tcg-kickstarter-launch-guide",
   title: "Trading Card Game Kickstarter Guide: Print Runs, Boosters and Scalpers",
-  seoTitle: "TCG Kickstarter Guide: Print Runs, Boosters, Scalpers",
+  seoTitle: "TCG Kickstarter Guide: Print Runs and Boosters",
   description: "Plan a trading card game Kickstarter: booster randomization at the printer, print run size, starter decks, scalper proof rewards and organized play.",
   tag: "Card games & TCGs",
   servicePath: "/card-game-kickstarter-campaign-design",

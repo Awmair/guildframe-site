@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "how-to-market-a-kickstarter",
   title: "How to Market a Kickstarter Campaign: A Beginner's Guide for Tabletop Creators",
-  seoTitle: "How to Market a Kickstarter: Beginner Guide for Board Games",
+  seoTitle: "How to Market a Kickstarter: Beginner Guide",
   description: "How to market a Kickstarter when you have never done marketing before. What to do first, which channels suit a board game and what can wait.",
   tag: "Prelaunch",
   answer: "Marketing a Kickstarter means getting a few hundred of the right players to know your game exists and follow it before launch day, so day one isn't empty. Start with who the game is for, build one place to send people, show the game every week, and add paid ads only once your page is ready to turn visitors into backers.",

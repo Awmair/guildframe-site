@@ -16,7 +16,7 @@ const secubix = beyondTabletop[0];
 export const productCampaignPage: CampaignPage = {
   slug: productCampaignSlug,
   variant: "product",
-  title: "Kickstarter Campaign Design for Product Launches",
+  title: "Kickstarter Campaign Design for New Products",
   description: "Kickstarter campaign design for gadgets, design and lifestyle products and books: copy, creative, ads and live support. $1,800 page or $5,900 full support.",
   headline: "Kickstarter campaign design",
   accent: "for product launches.",

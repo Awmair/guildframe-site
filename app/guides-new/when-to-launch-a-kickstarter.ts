@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "when-to-launch-a-kickstarter",
   title: "When Should You Launch Your Kickstarter, and How Long Does It Take to Prepare?",
-  seoTitle: "When to Launch a Kickstarter: Prep Time and Best Dates",
+  seoTitle: "When to Launch a Kickstarter: Timing and Prep",
   description: "How long it takes to prepare a board game Kickstarter and how to pick a launch date. Readiness signs, best days and dates to avoid.",
   tag: "Launch timing",
   answer: "Most first board games need several months of preparation, and the right time to launch is when three things are true: enough followers for a strong first day, a page strangers understand and numbers that work. Then pick a weekday, avoid the end of year rush and plan around the big conventions.",

@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "kickstarter-for-beginners",
   title: "Kickstarter for Beginners: Questions First Time Tabletop Creators Ask",
-  seoTitle: "Kickstarter for Beginners: First Time Creator Questions",
+  seoTitle: "Kickstarter for Beginners: First Time Creators",
   description: "Kickstarter for beginners: plain answers to the questions first time tabletop creators ask about how it works, money, rules and where to start.",
   tag: "First time creators",
   answer: "Kickstarter is all or nothing. You set a goal and a deadline, backers pledge for rewards, and they are only charged if you reach the goal, after which you make and deliver what you promised.",

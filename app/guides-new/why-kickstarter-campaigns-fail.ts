@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "why-kickstarter-campaigns-fail",
   title: "What Makes a Kickstarter Fail, and How to Avoid It",
-  seoTitle: "Why Kickstarter Campaigns Fail and How to Avoid It",
+  seoTitle: "Why Kickstarter Campaigns Fail: How to Avoid It",
   description: "Why board game Kickstarters fail and how to avoid it. The common reasons first time creators miss their goal, and what to do if a campaign is slow.",
   tag: "Launch risks",
   answer: "Most tabletop Kickstarters fund. Kickstarter reported an 80% success rate for tabletop projects in 2024. The ones that miss usually launched with nobody waiting, a page that did not explain the game, or a price and goal the numbers did not support, and each of those shows before launch day.",

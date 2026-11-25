@@ -3,7 +3,7 @@ export const growthGuides: LaunchGuide[] = [
   {
     "slug": "board-game-kickstarter-funding-goal",
     "title": "How to Set a Kickstarter Funding Goal for a Board Game",
-    "seoTitle": "Kickstarter Funding Goal Calculator for Board Games",
+    "seoTitle": "Kickstarter Funding Goal: Board Game Calculator",
     "description": "Set a board game Kickstarter funding goal from factory minimums, fees, fulfillment and a reserve. Includes a calculator and a worked example.",
     "tag": "Funding and production",
     "answer": "Set your Kickstarter funding goal at the amount you need to deliver the promised game if the campaign ends exactly on target, covering the factory order, fulfillment, fixed work and a reserve, minus money you already hold. Then divide that cash need by the share of pledges left after fees, because Kickstarter takes a 5% platform fee plus US payment processing of 3% and $0.20 per pledge from a funded project.",
@@ -211,7 +211,7 @@ export const growthGuides: LaunchGuide[] = [
   {
     "slug": "board-game-kickstarter-reward-pricing",
     "title": "How to Price Kickstarter Rewards for a Board Game",
-    "seoTitle": "Kickstarter Pricing: How to Price Your Board Game Rewards",
+    "seoTitle": "Kickstarter Pricing for Board Game Rewards",
     "description": "Kickstarter pricing for board games: build each reward price from its real costs, fees and margin. See where a $40 pledge goes and test core and deluxe tiers.",
     "tag": "Reward pricing",
     "answer": "Price each Kickstarter reward from its own manufacturing, freight and fulfilment costs, then add platform and payment fees, an advertising allowance, a share of fixed work and the margin you need. On a US project Kickstarter takes 5% and payment processing takes 3% plus $0.20 per pledge, so a $40 pledge loses $3.40 to fees before any production cost.",
@@ -508,7 +508,7 @@ export const growthGuides: LaunchGuide[] = [
   {
     "slug": "kickstarter-referral-tags-tracking",
     "title": "How to Track Kickstarter Traffic with Referral Tags and UTMs",
-    "seoTitle": "How to Track Kickstarter Traffic: Referral Tags and UTMs",
+    "seoTitle": "How to Track Kickstarter Traffic: Referral Tags",
     "description": "How to track Kickstarter traffic with referral tags, GA4 and Meta Pixel IDs, UTMs on your landing page, and a report that keeps clicks and pledges apart.",
     "tag": "Campaign measurement",
     "answer": "To track Kickstarter traffic, create a custom referral tag in the Promotion tab for every link you share, add your GA4 measurement ID and Meta Pixel ID in the same tab, and put UTM parameters on links to your own landing page. Kickstarter's built in tracker then reports pledges and pledged amounts for each tag, and lists dropped pledges per tag once the campaign ends.",
@@ -967,7 +967,7 @@ export const growthGuides: LaunchGuide[] = [
   {
     "slug": "board-game-kickstarter-launch-day-checklist",
     "title": "Board Game Kickstarter Launch Checklist: 90 Days to Launch Day",
-    "seoTitle": "Board Game Launch Checklist for Kickstarter: 90 Days Out",
+    "seoTitle": "Board Game Launch Checklist for Kickstarter",
     "description": "A board game Kickstarter launch checklist from 90 days out to launch day. Lock rewards, open the prelaunch page, test ads, pass review and run the first hour.",
     "tag": "Launch checklist",
     "answer": "A board game Kickstarter launch checklist starts about 90 days out, when you lock the rewards, costs and funding goal. The prelaunch page, email list and capped ad tests fill the middle weeks, and review lands two to three weeks before launch. On launch day one person publishes, and a second checks the live page before any email or ad goes out.",
@@ -1342,7 +1342,7 @@ export const growthGuides: LaunchGuide[] = [
     "title": "Choose a Pledge Manager for Your Board Game Campaign",
     "description": "Compare pledge managers for a board game Kickstarter by upgrades, shipping, fees, order exports and support. Use a practical selection checklist.",
     "tag": "Pledge management",
-    "seoTitle": "Pledge Manager Checklist for Board Game Campaigns",
+    "seoTitle": "Pledge Manager Checklist: How to Choose One",
     "answer": "Choose a pledge manager by the work your campaign needs after funding, which means surveys, upgrades, shipping collection, remaining payments and an export your fulfillment partner can import. Compare Kickstarter's own Pledge Manager and outside systems against the same test orders and the full fee basis before you commit.",
     "sections": [
       {

@@ -179,7 +179,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "answer": "Yes. Send your project and artwork through the free mockup form. There is no obligation to book the full campaign."
       }
     ],
-    "seoTitle": "Kickstarter Campaign Design Cost for Board Games",
+    "seoTitle": "Kickstarter Campaign Design Cost: Board Games",
     "relatedSlugs": [
       "kickstarter-fees",
       "kickstarter-agency-cost",
@@ -330,7 +330,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "answer": "Yes. A free Guildframe mockup can explore the opening and identify the assets needed for the full campaign."
       }
     ],
-    "seoTitle": "Board Game Kickstarter Page Checklist Before Launch",
+    "seoTitle": "Board Game Kickstarter Page Checklist",
     "relatedSlugs": [
       "board-game-kickstarter-gameplay-rulebook",
       "kickstarter-image-sizes",
@@ -738,7 +738,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "answer": "Yes. Reward presentation is part of the campaign design service, and the exact graphics and comparison format are agreed in the brief."
       }
     ],
-    "seoTitle": "Kickstarter Reward Tier Graphics for Board Games",
+    "seoTitle": "Kickstarter Reward Tier Graphics: Board Games",
     "relatedSlugs": [
       "kickstarter-image-sizes",
       "kickstarter-stretch-goals-planning",
@@ -1067,7 +1067,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "answer": "The fixed campaign design price is listed on the service page. The chosen platform, files and scope are confirmed in the brief. Broader launch services are quoted separately."
       }
     ],
-    "seoTitle": "Campaign Page Design on Kickstarter vs Gamefound",
+    "seoTitle": "Campaign Page Design: Kickstarter vs Gamefound",
     "relatedSlugs": [
       "kickstarter-vs-gamefound",
       "gamefound-launch-page-checklist",

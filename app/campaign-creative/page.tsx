@@ -12,7 +12,7 @@ import { caseStudies } from "../case-studies";
 import { gameCategories } from "../campaign-content";
 import { absoluteUrl, pageMetadata, siteConfig } from "../site-config";
 
-const title = "Kickstarter Campaign Creative for Tabletop Games";
+const title = "Kickstarter Campaign Creative: Tabletop Games";
 const description = "Kickstarter campaign creative for tabletop games: scripts, product renders, motion graphics and ad variants from your artwork, quoted per brief.";
 const faqs = [
   { question: "What can creative production include?", answer: "Scripts and storyboards, product renders, motion graphics, short video edits and still or motion ad variants. The brief names the assets, lengths, formats, review rounds and source files included. Product renders depend on the models and reference material available." },

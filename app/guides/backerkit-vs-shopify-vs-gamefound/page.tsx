@@ -10,7 +10,7 @@ import { pageMetadata } from "../../site-config";
 import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
-  title: "BackerKit vs Shopify vs Gamefound in 2026",
+  title: "BackerKit vs Shopify vs Gamefound After Funding",
   description:
     "BackerKit vs Shopify vs Gamefound in 2026, plus the Kickstarter Pledge Manager: what each handles after funding, what changed this year and how to choose.",
   path: "/guides/backerkit-vs-shopify-vs-gamefound",

@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "board-game-tariffs-shipping-us",
   title: "Board Game Tariffs and US Shipping in 2026: What Creators Need to Know",
-  seoTitle: "Board Game Tariffs and US Shipping 2026: Creator Guide",
+  seoTitle: "Board Game Tariffs and US Shipping in 2026",
   description: "What 2026 US tariff changes mean for board game creators: the IEEPA ruling, Section 301 at 12.5% on China, the end of de minimis and reward pricing.",
   tag: "Tariffs & shipping",
   servicePath: "/kickstarter-launch-services",

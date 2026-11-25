@@ -7,7 +7,7 @@ import { contentDates } from "../../content-dates";
 
 const slug = "how-to-launch-a-board-game-on-kickstarter";
 const title = "The Complete Guide to Launching a Tabletop Kickstarter, A to Z";
-const seoTitle = "How to Launch a Board Game on Kickstarter: A to Z Guide";
+const seoTitle = "How to Launch a Board Game on Kickstarter";
 const metaDescription =
   "How to launch a board game on Kickstarter, from prototype and budget to page, marketing, launch day, shipping and delivery. Plain answers for first timers.";
 const heroDescription =

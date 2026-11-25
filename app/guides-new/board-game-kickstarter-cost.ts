@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "board-game-kickstarter-cost",
   title: "How Much Does It Cost to Launch a Board Game on Kickstarter?",
-  seoTitle: "Board Game Kickstarter Cost: What You Pay Before Launch",
+  seoTitle: "Board Game Kickstarter Cost: What You Pay",
   description: "How much it costs to launch a board game on Kickstarter, line by line. What you pay before launch, what comes out of the funding and where to save.",
   tag: "Budget planning",
   answer: "Launching a board game on Kickstarter costs money in two stages. Before launch you pay for prototypes, art, reviewer copies, the page and early marketing yourself, and after funding the pledges pay for manufacturing, shipping, fulfillment, fees of 8 to 10 percent and a reserve that Kickstarter suggests starting at 20 to 30 percent.",

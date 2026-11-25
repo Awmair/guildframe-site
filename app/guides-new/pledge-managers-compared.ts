@@ -5,7 +5,7 @@ export const guide: LaunchGuide = {
   updated: "2026-11-25",
   slug: "pledge-managers-compared",
   title: "Pledge Managers Compared: Kickstarter, BackerKit, Gamefound, PledgeBox",
-  seoTitle: "Pledge Managers Compared: BackerKit, Kickstarter, PledgeBox",
+  seoTitle: "Pledge Managers Compared: BackerKit and More",
   description: "Compare pledge managers for tabletop campaigns: the Kickstarter Pledge Manager, BackerKit, Gamefound and PledgeBox, with published fees and 2026 features.",
   tag: "Pledge management",
   servicePath: "/post-campaign-support",

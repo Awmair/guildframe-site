@@ -3,7 +3,7 @@ export const marketingGuides: LaunchGuide[] = [
   {
     "slug": "board-game-kickstarter-marketing-plan",
     "title": "How to Market a Board Game on Kickstarter: A Phased Plan",
-    "seoTitle": "How to Market a Board Game on Kickstarter in 2026",
+    "seoTitle": "Board Game Kickstarter Marketing Plan: 5 Phases",
     "description": "How to market a board game on Kickstarter, phase by phase: the pitch, a prelaunch audience, ad tests, reviewer previews, launch week and the live campaign.",
     "tag": "Launch marketing",
     "answer": "To market a board game on Kickstarter, settle a clear pitch and priced rewards first. Then spend six to eight weeks building an email list and Kickstarter followers, testing ads on a capped budget and lining up reviewer previews. Launch to that warm audience, and keep updates, ads and community posts going until the campaign closes.",
@@ -270,20 +270,12 @@ export const marketingGuides: LaunchGuide[] = [
         "answer": "Use several channels with different jobs. Build your own email list first, collect Kickstarter followers alongside it, test paid ads on a capped budget and line up reviewer previews. Then launch to the warm audience before switching ads on."
       },
       {
-        "question": "Are Facebook ads worth it for a board game Kickstarter?",
-        "answer": "They can be, when the page works and the reward margin can carry the cost. Test small with a written cap, track signups and attributed pledges, and scale only when the numbers fit your pricing."
-      },
-      {
         "question": "Can a good campaign page replace prelaunch marketing?",
         "answer": "No. The page explains the offer, but people still need a way to find it. Plan the audience, emails and promotion alongside the creative."
       },
       {
         "question": "Do I need a large email list to launch?",
         "answer": "List size alone does not answer that. Check whether contacts asked to hear from you, engage with the game and understand the offer. Use a cautious budget rather than assuming a fixed percentage will pledge."
-      },
-      {
-        "question": "Can I message my Kickstarter followers before launch?",
-        "answer": "Not directly. Kickstarter does not let you message prelaunch followers, but they are notified when you post a prelaunch update and they get a launch email when the project goes live."
       },
       {
         "question": "What if I only have a month before launch?",
@@ -326,7 +318,7 @@ export const marketingGuides: LaunchGuide[] = [
   {
     "slug": "kickstarter-prelaunch-email-list",
     "title": "Kickstarter Prelaunch Email List: Signup Page to Launch Sequence",
-    "seoTitle": "Kickstarter Prelaunch Email List for Board Games",
+    "seoTitle": "Kickstarter Prelaunch Email List: Board Games",
     "description": "Plan a tabletop Kickstarter email signup page, welcome email and prelaunch sequence. Test delivery and explain how your list differs from platform followers.",
     "tag": "Email & prelaunch",
     "answer": "Build a Kickstarter prelaunch email list with a signup page that explains the game and says exactly what subscribers will receive, then test the form, welcome email and unsubscribe link before you promote it. Kickstarter followers only get platform notifications, so your own list needs its own consent and software, and you should count the two audiences separately.",
@@ -642,7 +634,7 @@ export const marketingGuides: LaunchGuide[] = [
   {
     "slug": "kickstarter-live-campaign-updates",
     "title": "Kickstarter Campaign Updates: A Practical Plan for Tabletop Creators",
-    "seoTitle": "Kickstarter Campaign Updates: How Often and What to Post",
+    "seoTitle": "Kickstarter Campaign Updates: How Often to Post",
     "description": "How often to post Kickstarter campaign updates, a 30 day update rhythm, a delay update template and the monthly minimum Kickstarter expects after funding.",
     "tag": "Campaign management",
     "answer": "During a 30 day Kickstarter campaign, we recommend a useful update every three to five days, plus posts at launch, on funding and in the final two days. After funding, post at least once a month, because that is the minimum Kickstarter says it expects from creators.",
