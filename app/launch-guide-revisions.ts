@@ -64,11 +64,12 @@ export function reviseLaunchGuide(guide: LaunchGuide): LaunchGuide {
   });
   const checks = practicalChecks[guide.slug];
   if (checks) sections.push({ id: "working-checklist", title: "Use this in your launch review", paragraphs: ["Put these checks in the project brief and assign an owner to any missing item. Use confirmed game details in the public page; keep unresolved decisions in the working notes until they are approved."], table: { headers: ["Check", "Bring to the review", "Ready when"], rows: checks } });
-  const updated = guide.slug === "board-game-kickstarter-marketing-plan"
+  const reviewed = guide.slug === "board-game-kickstarter-marketing-plan"
     ? contentDates.marketingPlan
     : guide.slug === "choose-board-game-kickstarter-marketing-agency"
       ? contentDates.agencySelection
       : contentDates.launchGuideReview;
-  // Keep a later date set on the guide itself (for example a newer content review).
-  return { ...guide, sections, updated: guide.updated && guide.updated > updated ? guide.updated : updated };
+  // A guide edited after the shared review keeps its own, later date.
+  const updated = guide.updated && guide.updated > reviewed ? guide.updated : reviewed;
+  return { ...guide, sections, updated };
 }

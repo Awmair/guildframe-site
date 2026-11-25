@@ -14,8 +14,9 @@ import { GuideVisual } from "./GuideVisual";
 import { BoardDiorama, LaunchTrack, StandeeTile, trackLines } from "./LaunchServices";
 import { landmarks } from "./world/board-data";
 import { Icon, Roll } from "./chrome/Icon";
+import { GuideVisual, type GuideVisualData } from "./GuideVisual";
 
-export type CampaignPage = {slug:string;title:string;description:string;headline:string;accent:string;image:string;alt:string;introTitle:string;intro:string;details:readonly string[];lead?:string;price?:string;secondTitle:string;secondCopy:string;guide:string;guideTitle:string;kind?:"launch"};
+export type CampaignPage = {slug:string;title:string;description:string;headline:string;accent:string;image:string;alt:string;introTitle:string;intro:string;details:readonly string[];lead?:string;price?:string;secondTitle:string;secondCopy:string;guide:string;guideTitle:string;kind?:"launch";visuals?:readonly GuideVisualData[]};
 
 const hubSlug = "kickstarter-launch-services";
 const imageSize = (image: string) => image === "hero" || image === "launch-studio" ? [1774, 887] : image === "party-cards" ? [1200, 800] : [1000, 750];
@@ -108,6 +109,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
      <ul>{page.details.map(detail => <li key={detail}>{detail}</li>)}</ul>
     </aside>
    </div>
+   {page.visuals?.length ? <div className="w-wrap-wide sv-visuals">{page.visuals.map(visual => <GuideVisual key={visual.title} data={visual}/>)}</div> : null}
   </section>
 
   {delivery?.visuals ? <section className="sv-scope tone-board" id="how-it-runs" aria-labelledby="how-it-runs-title">
