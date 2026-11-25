@@ -5,6 +5,7 @@ import { Icon, Roll } from "../components/chrome/Icon";
 import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
 import { contentDates } from "../content-dates";
+import { GuideVisual } from "../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "Shopify Store Planning After Your Campaign",
@@ -58,6 +59,20 @@ export default function Page() {
             or start with the free{" "}
             <Link href="/resources/board-game-shopify-store-checklist">board game Shopify store checklist</Link>.
           </p>
+          <GuideVisual
+            data={{
+              kind: "steps",
+              title: "Nothing gets built until the brief and scope are agreed",
+              steps: [
+                { label: "Send the brief", detail: "Campaign link, product list, artwork and target date." },
+                { label: "Agree the scope", detail: "Pages, products, apps and who does what." },
+                { label: "Build and map", detail: "Products first, then rewards if backer orders sync." },
+                { label: "Review on a phone", detail: "Real products, cart, checkout and delivery wording." },
+                { label: "You approve and open", detail: "With access, files and notes handed over." },
+              ],
+              source: "Guildframe store planning process",
+            }}
+          />
         </section>
         <section>
           <h2>Prepare a useful store brief</h2>
@@ -73,7 +88,9 @@ export default function Page() {
             Mark unfinished decisions clearly. A product with an unconfirmed
             delivery date needs a different sales plan from stock ready to ship.
             The <Link href="/guides/kickstarter-to-shopify-launch-timeline">launch timeline</Link>{" "}
-            helps order the work around those decisions.
+            helps order the work around those decisions, and{" "}
+            <Link href="/guides/sell-board-game-expansions-add-ons-shopify">selling expansions, add ons and bundles on Shopify</Link>{" "}
+            settles which items become products, variants or bundles.
           </p>
         </section>
         <section>
@@ -93,7 +110,9 @@ export default function Page() {
           <p>
             Compare <Link href="/guides/best-shopify-themes-for-board-games">Shopify themes for board games</Link>{" "}
             and <Link href="/guides/shopify-developer-vs-diy-theme">hiring a developer versus building yourself</Link>{" "}
-            if you are still choosing the route.
+            if you are still choosing the route. The four things any board game
+            theme has to show are listed in{" "}
+            <Link href="/shopify-theme-for-board-games">Shopify theme setup for board games</Link>.
           </p>
         </section>
         <section>
@@ -103,6 +122,17 @@ export default function Page() {
             phone and desktop. Confirm the cart, delivery wording, shipping
             coverage, payment settings and notifications. Check how the order
             reaches the person or provider who fulfils it.
+          </p>
+          <p>
+            Each product page is checked against the{" "}
+            <Link href="/resources/board-game-product-page-checklist">board game product page checklist</Link>{" "}
+            before review.
+          </p>
+          <p>
+            If backer rewards will ship through the store, Kickstarter&apos;s
+            official Shopify app, listed on July 31, 2026, matches each reward to
+            products and variants that already exist. So we build the catalogue
+            before the first sync and test one backer order item by item.
           </p>
           <p>
             Keep original backer rewards separate from new store orders. The{" "}

@@ -7,6 +7,7 @@ import {
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
 import { contentDates } from "../../content-dates";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "Build a Tabletop Shopify Store With AI",
@@ -14,7 +15,7 @@ export const metadata = pageMetadata({
     "What AI coding tools can and cannot do when you build a board game, TTRPG or miniatures Shopify store, and the catalog decisions no model can make for you.",
   path: "/guides/build-a-tabletop-shopify-store-with-ai",
   kind: "article",
-  publishedTime: contentDates.buildWithAi,
+  publishedTime: "2026-10-28",
   modifiedTime: contentDates.buildWithAi,
   keywords: [
     "build a Shopify store with AI",
@@ -56,7 +57,7 @@ export default function BuildWithAiGuidePage() {
       title="Build a Tabletop Shopify Store With AI"
       description="Use AI coding tools for Shopify theme work, then check the code, editor settings and product data before publishing."
       answer="AI coding tools can draft Shopify Liquid sections, product copy and structured data. Theme code cannot modify Shopify checkout. You still need to define editions, expansions, compatibility and delivery terms, then verify the generated code against Shopify documentation and test the store."
-      published={contentDates.buildWithAi}
+      published="2026-10-28"
       updated={contentDates.buildWithAi}
       readTime="9 minute read"
       faqs={faqs}
@@ -80,6 +81,11 @@ export default function BuildWithAiGuidePage() {
           label: "Dawn theme repository",
           publisher: "Shopify on GitHub",
           href: "https://github.com/Shopify/dawn",
+        },
+        {
+          label: "Kickstarter app for Shopify",
+          publisher: "Shopify App Store",
+          href: "https://apps.shopify.com/kickstarter",
         },
       ]}
       toc={[
@@ -267,6 +273,22 @@ export default function BuildWithAiGuidePage() {
         </li>
       </ol>
 
+      <GuideVisual
+        data={{
+          kind: "steps",
+          title: "Safety comes from the setup, not the model",
+          steps: [
+            { label: "Development theme", detail: "Never let the tool edit the live theme." },
+            { label: "Shopify CLI", detail: "Pull, preview locally, push on purpose." },
+            { label: "Git", detail: "Read every diff and revert cleanly." },
+            { label: "Shopify AI Toolkit", detail: "Current docs, validated Liquid and GraphQL." },
+            { label: "Theme foundation", detail: "Dawn or Horizon as the base." },
+            { label: "Project rules file", detail: "Your metafields and the files it must not touch." },
+          ],
+          source: "Shopify AI Toolkit documentation; Dawn theme repository",
+        }}
+      />
+
       <h2 id="sample-prompts">Three prompts to start with</h2>
       <p>
         These are written to be used as they are. Each one includes what it gets
@@ -367,6 +389,17 @@ export default function BuildWithAiGuidePage() {
           the cost guide
         </Link>{" "}
         sets out what each route actually costs.
+      </p>
+      <p>
+        Whichever way you build, check the generated pages against the{" "}
+        <Link href="/resources/board-game-product-page-checklist">board game product page checklist</Link>{" "}
+        and the four needs in{" "}
+        <Link href="/shopify-theme-for-board-games">Shopify theme setup for board games</Link>.
+        If backer rewards will ship through the store, Kickstarter&apos;s official
+        Shopify app maps rewards to products and variants that already exist, so
+        build the catalogue before the first sync. Our{" "}
+        <Link href="/post-campaign-support">post campaign support</Link> covers the
+        backer side of that handoff.
       </p>
     </SeoArticlePage>
   );

@@ -5,6 +5,7 @@ import { SeoFooter, SeoHeader } from "./SeoChrome";
 import { Icon, Roll } from "./chrome/Icon";
 import { ShopFaq, ShopFrame, ShopHero, ShopRows, ShopTrack } from "./shopify/ShopWorld";
 import { absoluteUrl } from "../site-config";
+import { GuideVisual, type GuideVisualData } from "./GuideVisual";
 import { formatContentDate } from "../content-dates";
 
 export type LandingPageContent = {
@@ -25,6 +26,10 @@ export type LandingPageContent = {
   steps: { title: string; copy: string }[];
   faqs: { question: string; answer: string }[];
   related: { title: string; copy: string; href: string }[];
+  /** Optional infographic shown after the explanation section. */
+  visual?: GuideVisualData;
+  /** Optional heading for the infographic section. */
+  visualHeading?: string;
 };
 
 export function SeoLandingPage({ content }: { content: LandingPageContent }) {
@@ -143,6 +148,17 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
           </div>
         </section>
 
+        {content.visual ? (
+          <section className="sh-board tone-board sh-visual" aria-labelledby="shop-visual-title">
+            <div className="w-wrap-wide">
+              <h2 id="shop-visual-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>{content.visualHeading ?? content.visual.title}</span></span></h2>
+              <div style={{ maxWidth: "960px" }}>
+                <GuideVisual data={content.visual} />
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         <section className="sh-dusk sh-steps" aria-labelledby="shop-steps-title">
           <div className="w-wrap-wide">
             <h2 id="shop-steps-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Three steps to prepare</span></span> <span className="w-line"><span><em>your Shopify store</em></span></span></h2>
@@ -166,6 +182,10 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
           <div className="w-wrap-wide">
             <h2 id="shop-related-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Shopify setup and <em>migration guides</em></span></span></h2>
             <ShopRows items={content.related} />
+            <div className="sh-actions">
+              <Link className="w-btn w-btn--coral" href="/done-for-you-shopify-store" data-title="Shopify store planning" data-analytics-event="service_interest" data-analytics-label="Plan my store brief" data-analytics-location={`${content.slug} closing`}><Roll>Plan my store brief</Roll><Icon name="arrow" /></Link>
+              <Link className="w-link" href="/post-campaign-support">Explore post campaign support</Link>
+            </div>
           </div>
         </section>
       </main>

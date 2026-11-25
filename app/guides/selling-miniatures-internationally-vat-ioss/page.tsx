@@ -6,6 +6,8 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import { contentDates } from "../../content-dates";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "Selling Miniatures Internationally: VAT and IOSS",
@@ -14,7 +16,7 @@ export const metadata = pageMetadata({
   path: "/guides/selling-miniatures-internationally-vat-ioss",
   kind: "article",
   publishedTime: "2026-07-23",
-  modifiedTime: "2026-10-28",
+  modifiedTime: contentDates.internationalVatIoss,
   keywords: [
     "selling miniatures internationally VAT IOSS",
     "Shopify EU VAT miniatures",
@@ -55,7 +57,7 @@ export default function SellingMiniaturesInternationallyPage() {
       description="Plan international miniature sales by checking destination markets, package data, VAT, customs duties and who pays import charges."
       answer="Before selling miniatures internationally, confirm the markets you can serve and record packed weights, dimensions, HS codes and country of origin. Agree who pays import charges, check VAT and IOSS requirements with an adviser, configure shipping and taxes, then test orders for each region."
       published="2026-07-23"
-      updated="2026-10-28"
+      updated={contentDates.internationalVatIoss}
       readTime="9 minute read"
       faqs={faqs}
       sources={[
@@ -141,6 +143,19 @@ export default function SellingMiniaturesInternationallyPage() {
         customs duty exemption for low value ecommerce imports ended. A
         €3 temporary duty applies to qualifying B2C consignments valued at €150 or less. Its calculation depends on the declared items and grouping of declaration lines; do not assume it is charged separately for every sculpt.
       </p>
+      <GuideVisual
+        data={{
+          kind: "stats",
+          title: "Low value EU imports now carry a duty, counted per declaration line",
+          stats: [
+            { value: "€3", label: "Temporary customs duty", note: "Applied per declaration line in current practice" },
+            { value: "€150", label: "Consignment value ceiling", note: "B2C distance sales at or below this value" },
+            { value: "Jul 1, 2026", label: "Duty starts", note: "Planned to run until July 1, 2028" },
+            { value: "Nov 1, 2026", label: "Product identifiers required", note: "For import distance sales declarations" },
+          ],
+          source: "European Commission, Access2Markets customs guidance, checked November 25, 2026",
+        }}
+      />
       <p>
         This can materially affect orders containing several miniature packs or add
         ons. Do not publish a blanket duties included promise until a tax and customs
@@ -165,7 +180,18 @@ export default function SellingMiniaturesInternationallyPage() {
       </p>
       <p>
         Use the <Link href="/resources/board-game-shopify-store-checklist">board game Shopify store checklist</Link>
-        to review the remaining catalog, policy, mobile and checkout work.
+        to review the remaining catalog, policy, mobile and checkout work. When
+        the miniatures came from a campaign, the{" "}
+        <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link>{" "}
+        shows where shipping zones and taxes get set up, because backer orders
+        and store orders share them.
+      </p>
+      <p>
+        We write the delivery and customs wording for product pages and backer
+        updates as part of <Link href="/post-campaign-support">post campaign support</Link>,
+        and scope store setup through the{" "}
+        <Link href="/done-for-you-shopify-store">store planning brief</Link>. Your
+        tax adviser still confirms the registrations.
       </p>
 
       <h2 id="test">Test representative international orders</h2>
@@ -181,7 +207,7 @@ export default function SellingMiniaturesInternationallyPage() {
         This guide supports store planning and does not provide tax, customs or legal
         advice. Confirm the live rules for your business and destinations before launch.
       </ArticleCallout>
-<h2 id="november-identifiers">Prepare for the November 2026 identifier requirements</h2><p>European Commission guidance schedules product-identifier requirements for relevant import distance sales from November 1, 2026. Before shipping, ask your carrier or customs declarant which merchant and manufacturer identifiers it needs, how those fields should be transmitted, and how to handle an item without a standardized identifier.</p><p>This depends on the import arrangement. Confirm the current requirements for your shipments using <a href="https://trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments">the Commission&apos;s customs guidance</a> and your customs adviser.</p>
+<h2 id="november-identifiers">Prepare for the November 2026 identifier requirements</h2><p>European Commission guidance schedules product identifier requirements for relevant import distance sales from November 1, 2026. Before shipping, ask your carrier or customs declarant which merchant and manufacturer identifiers it needs, how those fields should be transmitted, and how to handle an item without a standardized identifier.</p><p>This depends on the import arrangement. Confirm the current requirements for your shipments using <a href="https://trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments">the Commission&apos;s customs guidance</a> and your customs adviser.</p>
     </SeoArticlePage>
   );
 }

@@ -1,15 +1,17 @@
 import Link from "next/link";
-import { ArticleCallout, ArticleTable, SeoArticlePage } from "../../components/SeoArticlePage";
+import { ArticleCallout, SeoArticlePage } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import { contentDates } from "../../content-dates";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "Board Game Shopify Store Checklist",
   description:
-    "A complete board game Shopify store checklist covering products, theme setup, mobile UX, checkout, policies, SEO and launch testing.",
+    "A whole store board game Shopify checklist covering catalogue, pages, payments, shipping, backer order sync, phone checks, search and a final test order.",
   path: "/resources/board-game-shopify-store-checklist",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-09-30",
+  modifiedTime: contentDates.storeChecklist,
   keywords: ["board game Shopify store checklist", "Shopify store checklist", "tabletop ecommerce checklist"],
 });
 
@@ -40,9 +42,9 @@ export default function BoardGameShopifyStoreChecklistPage() {
       category="Board game ecommerce"
       title="Board Game Shopify Store Checklist"
       description="Check products, page content, shipping, checkout, mobile layouts and search settings before opening your board game store."
-      answer="Before launching a board game Shopify store, confirm product contents and editions, add shipping and return policies, and configure payments, taxes and inventory. Check every key page on a phone and place a test order. Verify that search metadata and structured data match the products."
+      answer="Before launching a board game Shopify store, check five areas across the whole store: catalogue, store pages, payments and shipping, phone layouts and search settings. Then place a full test order. If backer rewards ship through Kickstarter's Shopify app, check that every reward maps to a product too."
       published="2026-07-17"
-      updated="2026-09-30"
+      updated={contentDates.storeChecklist}
       readTime="7 minute reference"
       faqs={faqs}
       sources={[
@@ -50,6 +52,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
         { label: "Online store themes", publisher: "Shopify Help Center", href: "https://help.shopify.com/en/manual/online-store/themes" },
         { label: "Setting up shipping and delivery", publisher: "Shopify Help Center", href: "https://help.shopify.com/en/manual/fulfillment/setup/shipping-rates" },
         { label: "Shopify product structured data", publisher: "Google Search Central", href: "https://developers.google.com/search/docs/appearance/structured-data/product" },
+        { label: "Kickstarter app for Shopify", publisher: "Shopify App Store", href: "https://apps.shopify.com/kickstarter" },
       ]}
       toc={[
         { id: "catalog", label: "Catalog and products" },
@@ -61,6 +64,27 @@ export default function BoardGameShopifyStoreChecklistPage() {
         { id: "faq", label: "Quick answers" },
       ]}
     >
+      <p>
+        This checklist covers the whole store, the week before it opens. For a
+        single product page, use the{" "}
+        <Link href="/resources/board-game-product-page-checklist">board game product page checklist</Link>{" "}
+        instead.
+      </p>
+      <GuideVisual
+        data={{
+          kind: "checklist",
+          title: "Five areas to clear before the store password comes off",
+          groups: [
+            { name: "Catalogue", items: ["Stable titles, prices and SKUs", "Expansions separate from core games", "Rewards mapped if backer orders sync"] },
+            { name: "Store pages", items: ["Homepage points to a product", "About, FAQ and contact", "Shipping, returns and privacy"] },
+            { name: "Payments and shipping", items: ["Test mode off at launch", "Zones and rates verified", "Tax settings match markets"] },
+            { name: "Phone", items: ["No sideways scrolling", "Art not cropped badly", "Buttons easy to reach"] },
+            { name: "Search", items: ["Unique titles and descriptions", "Structured data matches prices", "Sitemap and robots live"] },
+          ],
+          source: "Guildframe store checklist; Shopify Help Center",
+        }}
+      />
+
       <h2 id="catalog">1. Catalog and product structure</h2>
       <p>
         Begin with the commercial truth of the catalog. Campaign tiers often mix
@@ -75,15 +99,12 @@ export default function BoardGameShopifyStoreChecklistPage() {
         <li>Preorders, backorders and in stock products use unmistakable delivery language</li>
         <li>Collections use customer terms rather than internal campaign labels</li>
       </ul>
-      <ArticleTable
-        headers={["Catalog decision", "Use a separate product", "Use a variant"]}
-        rows={[
-          ["Core game vs expansion", "Usually", "Rarely"],
-          ["Standard vs deluxe with different contents", "Usually", "Sometimes, if inventory and content stay simple"],
-          ["Language edition", "When content, price or availability differs materially", "When only the language choice changes"],
-          ["Miniature finish or color", "When imagery and inventory are distinct", "When it is one controlled option set"],
-        ]}
-      />
+      <p>
+        If you are still deciding what is a product, a variant or a bundle, settle
+        it first with{" "}
+        <Link href="/guides/sell-board-game-expansions-add-ons-shopify">how to sell expansions, add ons and bundles on Shopify</Link>.
+        The checklist assumes those choices are made.
+      </p>
 
       <h2 id="content">2. Page content and product explanations</h2>
       <p>
@@ -114,6 +135,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
         <li>Order notifications and the customer support path have been tested</li>
         <li>Privacy, terms, returns and shipping policies are published and linked</li>
         <li>A complete test order reaches confirmation and updates inventory correctly</li>
+        <li>If backer orders sync through Kickstarter&apos;s Shopify app, every reward maps to a product and a test tracking number reaches Kickstarter</li>
       </ul>
 
       <h2 id="mobile">4. Mobile, tablet and accessibility</h2>
@@ -161,6 +183,14 @@ export default function BoardGameShopifyStoreChecklistPage() {
       <p>
         A store is ready when a new customer can understand the product, trust the
         delivery promise and complete checkout without campaign era context.
+      </p>
+      <p>
+        If you are not sure when to run this check, the{" "}
+        <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link>{" "}
+        puts it right before the store opens. When you want the store set up or
+        reviewed for you, start with the{" "}
+        <Link href="/done-for-you-shopify-store">store planning brief</Link>, or see{" "}
+        <Link href="/post-campaign-support">post campaign support</Link> for the backer side.
       </p>
     </SeoArticlePage>
   );
