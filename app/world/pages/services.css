@@ -72,7 +72,7 @@
 }
 
 /* ---------- on this page ---------- */
-.sv-jump{display:flex;gap:4px;width:max-content;max-width:calc(100% - 2 * var(--page-pad));margin:-24px auto;padding:4px;border-radius:var(--r-pill);background:rgb(14 35 37 / .78);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);box-shadow:inset 0 0 0 1px var(--line-dusk),0 18px 40px -20px rgb(0 0 0 / .6);position:relative;z-index:5;overflow-x:auto;scrollbar-width:none}
+.sv-jump{display:flex;gap:4px;width:max-content;max-width:calc(100% - 2 * var(--page-pad));margin:-24px auto;padding:4px;border-radius:var(--r-pill);background:rgb(14 35 37 / .94);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);box-shadow:inset 0 0 0 1px var(--line-dusk),0 18px 40px -20px rgb(0 0 0 / .6);position:relative;z-index:5;overflow-x:auto;scrollbar-width:none}
 .sv-jump::-webkit-scrollbar{display:none}
 .sv-jump a{flex:none;display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:var(--r-pill);font:500 var(--t-small)/1 var(--font-sans);color:var(--board-100);transition:background-color var(--d-state),color var(--d-state)}
 .sv-jump a:hover{background:var(--board-100);color:var(--ink-900)}
@@ -276,3 +276,6 @@
   .sv-standee,.sv-pawn,.sv-board-standee{animation:none}
   .sv-diorama:hover .sv-standee,.sv-cut:hover img,.sv-package:hover,.sv-next-card:hover .sv-next-standee{translate:none;transform:none}
 }
+/* The jump bar steps aside once the enquiry form is on screen. */
+.sv-jump{transition:opacity .3s var(--ease-out)}
+html.w-at-form .sv-jump{opacity:0;pointer-events:none}

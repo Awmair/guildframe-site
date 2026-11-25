@@ -370,9 +370,8 @@ html.w-menu-open .gd-article .gd-progress{opacity:0}
 
 /* ---------- the end of the article: next step, then where to read next ---------- */
 .gd-article .article-body .gd-end{display:grid;gap:56px;margin:72px 0 0}
-.gd-article .article-body .article-next-step{position:relative;isolation:isolate;max-width:100%;margin:48px 0;padding:clamp(28px,4vw,48px) clamp(24px,4vw,48px);padding-right:max(clamp(24px,4vw,48px),140px);overflow:hidden;border:0;border-radius:var(--r-panel);background:var(--baize-800);color:var(--board-100);box-shadow:0 24px 48px -28px rgb(4 14 15 / .7)}
+.gd-article .article-body .article-next-step{position:relative;isolation:isolate;max-width:100%;margin:48px 0;padding:clamp(28px,4vw,48px) clamp(24px,4vw,48px);overflow:hidden;border:0;border-radius:var(--r-panel);background:var(--baize-800);color:var(--board-100);box-shadow:0 24px 48px -28px rgb(4 14 15 / .7)}
 .gd-article .article-body .gd-end .article-next-step{margin:0}
-.gd-article .article-body .article-next-step::after{content:"";position:absolute;right:28px;bottom:24px;z-index:-1;width:88px;height:56px;border-radius:12px;background:var(--baize-700);box-shadow:inset 0 0 0 1px var(--line-dusk);transform:perspective(240px) rotateX(52deg)}
 .gd-article .article-body .gd-next-pawn{position:absolute;right:56px;bottom:40px;width:32px;height:52px;color:var(--coral-500);filter:drop-shadow(0 10px 6px rgb(0 0 0 / .45))}
 .gd-article .article-body .article-next-step h2{margin:0 0 14px;max-width:22ch;font:400 clamp(1.5rem,2.4vw,2.125rem)/1.12 var(--font-sans);letter-spacing:-.02em;color:var(--board-100)}
 .gd-article .article-body .article-next-step p{max-width:58ch;margin:0 0 14px;font-size:1.0625rem;line-height:1.6;color:var(--mist-300)}
@@ -450,8 +449,6 @@ html.w-menu-open .gd-article .gd-progress{opacity:0}
   .gd-article .article-body .economics-results dt{max-width:none}
   .gd-article .article-body .economics-results dd{text-align:left}
   .gd-article .article-body .article-sources ul{grid-template-columns:1fr}
-  .gd-article .article-body .article-next-step{padding-right:clamp(24px,4vw,48px);padding-bottom:96px}
-  .gd-article .article-body .article-next-step::after{right:auto;left:24px;bottom:20px;width:72px;height:44px}
   .gd-article .article-body .gd-next-pawn{right:auto;left:44px;bottom:32px;width:26px;height:42px}
   .gd-article .article-body :is(.guide-reading-path,.gd-related) a{padding:16px 4px}
 }
@@ -471,3 +468,9 @@ html.w-menu-open .gd-article .gd-progress{opacity:0}
   .gd-article .article-hero,.gd-article .gd-sheet{background:none;color:#000}
   .gd-article .gd-progress,.gd-article .article-cta,.gd-article .gd-end{display:none}
 }
+/* Row summaries and tags read as sentences: undo the old sheet's capitals and tracking. */
+.gd-index .gd-row-summary,.gd-index .gd-row-tag{text-transform:none;letter-spacing:0;font-weight:400}
+/* Guide and resource articles carry their own launch button beside the contents list, so the corner promo stays out of its way. */
+html:has(main.gd-article) .w-corner--left .w-pill-promo{display:none}
+/* Scrolling tables and the contents list get a quiet scrollbar that belongs to the greyboard. */
+.gd-article .article-body{scrollbar-color:rgb(20 36 38 / .35) transparent}

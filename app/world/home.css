@@ -104,7 +104,7 @@
 .h-tier{position:relative;display:grid;gap:18px;align-content:start;padding:clamp(24px,3vw,40px);border-radius:var(--r-panel);background:var(--greyboard-100);box-shadow:0 1px 2px rgb(20 36 38 / .08),0 24px 40px -28px rgb(20 36 38 / .35);transition:transform 700ms var(--ease-spring)}
 .h-tier:hover{transform:translateY(-6px) rotate(-.4deg)}
 .h-tier--wide{background:var(--ink-900);color:var(--board-100)}
-.h-tier--wide p,.h-tier--wide li{color:var(--mist-300)}
+.h-tier.h-tier--wide p,.h-tier.h-tier--wide li{color:var(--mist-300)}
 .h-tier--wide .w-link{color:var(--board-100)}
 .h-tier h3{font:500 1.125rem/1.2 var(--font-sans)}
 .h-price{font:400 var(--t-figure)/.9 var(--font-sans);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
@@ -277,3 +277,7 @@ html.w-gate-up .w-gate{position:fixed;inset:0;z-index:var(--z-gate);display:bloc
   .w-gate-dice{display:none}
   .w-gate-lid::before{inset:8px}
 }
+/* Laptops and up with the cookie note showing: lift the hero card so the note never covers its buttons. */
+@media(min-width:641px){html:has(.analytics-consent) .h-hero{padding-bottom:calc(var(--page-pad) + 68px)}}
+/* The hero card may rise beside the title instead of being pushed under the fold on shorter windows. */
+@media(min-width:901px){.h-title{grid-row:1}.h-hero-side{grid-row:1/4;align-self:end}}

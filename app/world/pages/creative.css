@@ -250,3 +250,10 @@ html.w-js .cc .cc-walk-frame[data-reveal="media"].is-in{clip-path:inset(0 0 roun
 @media(hover:hover){.cc-mockups .cc-mockup:hover{transform:rotate(0deg) translateY(-10px)}}
 @media(max-width:900px){.cc-mockups .cc-mockups-head{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.cc-mockups .cc-mockup:hover{transform:rotate(var(--r))}}
+/* Short laptop screens: bring the lead and buttons up beside the cover so they sit in the first screen. */
+@media(min-width:901px) and (max-height:700px){
+  .cc .cc-title{font-size:clamp(3rem,6vw,4.75rem);margin-bottom:28px}
+  .cc .cc-hero-side{align-self:start;padding-bottom:32px}
+}
+/* Phones: the card faces shrink to a band so four cards do not fill four screens. */
+@media(max-width:560px){.cc .cc-asset-face{aspect-ratio:auto;min-height:104px;padding:16px}}

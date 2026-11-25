@@ -193,3 +193,11 @@
   .sh-frame-card{padding:6px;border-radius:var(--r-card)}
   .sh-frame-card img{border-radius:8px}
 }
+/* Short laptop screens: a smaller title keeps the lead and buttons in the first screen. */
+@media(min-width:901px) and (max-height:700px){
+  .sh-hero{padding-top:100px}
+  .sh-title{font-size:clamp(2.75rem,4.6vw,3.75rem);max-width:16ch}
+  .sh-hero-side{margin-top:16px;gap:14px}
+}
+/* The tilted cutout must not widen the page on phones. */
+.sh{overflow-x:clip}
