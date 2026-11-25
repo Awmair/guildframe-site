@@ -57,7 +57,7 @@ export default function SellExpansionsAddonsShopifyPage() {
   return (
     <SeoArticlePage
       slug="sell-board-game-expansions-add-ons-shopify"
-      category="Tabletop catalogue structure"
+      category="Tabletop catalog structure"
       title="How to Sell Board Game Expansions, Add ons and Bundles on Shopify"
       description="Decide which items are separate products, which are variants and which are bundles, then turn old pledge tiers into a catalogue a new buyer can follow."
       answer="Sell each board game expansion as its own Shopify product with the required base game named beside the price. Use variants only for versions of the same box, use bundles for fixed sets such as core plus expansion, and break pledge tiers into those products instead of copying a tier as a product."
@@ -103,11 +103,11 @@ export default function SellExpansionsAddonsShopifyPage() {
         { id: "pledge-tiers", label: "Break up the pledge tiers" },
         { id: "compatibility", label: "The compatibility line" },
         { id: "collections", label: "Collections and cross links" },
-        { id: "catalogue-test", label: "Test the catalogue" },
+        { id: "catalogue-test", label: "Test the catalog" },
         { id: "faq", label: "Quick answers" },
       ]}
     >
-      <ArticleDefinition term="Tabletop catalogue structure">
+      <ArticleDefinition term="Tabletop catalog structure">
         How base games, editions, expansions, add ons and bundles are set up as
         Shopify products, variants and bundles, so a buyer can tell what each item
         is, what it needs and what it works with.
@@ -129,7 +129,7 @@ export default function SellExpansionsAddonsShopifyPage() {
             { label: "Is it a fixed set of items sold together?", detail: "Yes: make it a bundle, such as core plus expansion." },
             { label: "None of the above?", detail: "It is probably campaign only and stays off the store." },
           ],
-          source: "Guildframe catalogue method, based on Shopify product and bundle documentation",
+          source: "Guildframe catalog method, based on Shopify product and bundle documentation",
         }}
       />
       <p>
@@ -233,11 +233,11 @@ export default function SellExpansionsAddonsShopifyPage() {
 
       <h2 id="collections">Collections and cross links</h2>
       <p>
-        Once the shapes are set, the catalogue needs paths between them. Buyers
+        Once the shapes are set, the catalog needs paths between them. Buyers
         usually arrive on one product and need a route to its partners.
       </p>
       <ul>
-        <li>Use collections such as Core Games, Expansions, Accessories and Bundles once the catalogue is big enough.</li>
+        <li>Use collections such as Core Games, Expansions, Accessories and Bundles once the catalog is big enough.</li>
         <li>Link every expansion to its base game, and the base game to its expansions.</li>
         <li>Keep cross sells below the product explanation, not above it.</li>
       </ul>
@@ -247,9 +247,9 @@ export default function SellExpansionsAddonsShopifyPage() {
         checks.
       </p>
 
-      <h2 id="catalogue-test">Test the catalogue, not just the checkout</h2>
+      <h2 id="catalogue-test">Test the catalog, not just the checkout</h2>
       <p>
-        Catalogue mistakes hide until stock runs out. So we test the structure with
+        Catalog mistakes hide until stock runs out. So we test the structure with
         a few deliberate edge cases before the store opens.
       </p>
       <ol>

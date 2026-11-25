@@ -214,13 +214,13 @@ export const growthGuides: LaunchGuide[] = [
     "seoTitle": "Kickstarter Pricing: How to Price Your Board Game Rewards",
     "description": "Kickstarter pricing for board games: build each reward price from its real costs, fees and margin. See where a $40 pledge goes and test core and deluxe tiers.",
     "tag": "Reward pricing",
-    "answer": "Price each Kickstarter reward from its own manufacturing, freight and fulfilment costs, then add platform and payment fees, an advertising allowance, a share of fixed work and the margin you need. On a US project Kickstarter takes 5% and payment processing takes 3% plus $0.20 per pledge, so a $40 pledge loses $3.40 to fees before any production cost.",
+    "answer": "Price each Kickstarter reward from its own manufacturing, freight and fulfillment costs, then add platform and payment fees, an advertising allowance, a share of fixed work and the margin you need. On a US project Kickstarter takes 5% and payment processing takes 3% plus $0.20 per pledge, so a $40 pledge loses $3.40 to fees before any production cost.",
     "sections": [
       {
         "id": "contents",
         "title": "Start with what each reward actually contains",
         "paragraphs": [
-          "A price only means something once the contents are fixed, so we start with a reward sheet. A name such as Deluxe does not tell your factory or fulfilment partner what to pack.",
+          "A price only means something once the contents are fixed, so we start with a reward sheet. A name such as Deluxe does not tell your factory or fulfillment partner what to pack.",
           "List the game, expansions, upgraded pieces, sleeves, inserts and digital files for each tier, with quantities and language versions. Keep variants apart from extra items, because a choice of English or French rules is different from promising both. Gamefound builds rewards from their included items and lets you mark whether an item can be bought on its own.",
           "Once that sheet is approved, the reward graphics, the pledge manager and the price all work from the same list."
         ],
@@ -295,7 +295,7 @@ export const growthGuides: LaunchGuide[] = [
               "display": "$11.00"
             },
             {
-              "label": "Freight and fulfilment (illustrative)",
+              "label": "Freight and fulfillment (illustrative)",
               "share": 7.0,
               "display": "$7.00"
             },
@@ -324,7 +324,7 @@ export const growthGuides: LaunchGuide[] = [
         "id": "example",
         "title": "Work out a price floor, then round to a real price",
         "paragraphs": [
-          "Once you know your costs, the floor price is simple arithmetic. This hypothetical example assumes $42 in product and fulfilment costs, $6 for acquisition, $6 for fixed work and an $8 margin you want to keep, which totals $62.",
+          "Once you know your costs, the floor price is simple arithmetic. This hypothetical example assumes $42 in product and fulfillment costs, $6 for acquisition, $6 for fixed work and an $8 margin you want to keep, which totals $62.",
           "Kickstarter's US fees are 8% of the pledge plus $0.20. So the floor price is $62 plus $0.20, divided by 0.92, which comes to about $67.61. Rounding up to $69 gives fees of $5.72 and leaves $9.28 after the $54 in costs.",
           "Run the same sum for every tier, using your real quotes and the fee rates for your country."
         ],
@@ -360,7 +360,7 @@ export const growthGuides: LaunchGuide[] = [
         "paragraphs": [
           "A deluxe tier can sell for more and still leave less money per box. So we compare the extra revenue with the extra manufacturing, weight, packaging and handling, tier by tier.",
           "A larger box can move the whole parcel into a higher shipping bracket, even when the component upgrade looks cheap. Bundles and stretch goals need the same check, because a discount can pull backers away from the core box. Keep retailer terms separate too, since a pledge price is not automatically a workable wholesale price.",
-          "For a first campaign we usually suggest few tiers, often just a base game and one deluxe version, because every extra tier is another set of contents, graphics and costs to check. An early bird price needs the same check. It gives people a reason to back on day one, but later backers can feel penalised, and the discounted price still has to clear your floor.",
+          "For a first campaign we usually suggest few tiers, often just a base game and one deluxe version, because every extra tier is another set of contents, graphics and costs to check. An early bird price needs the same check. It gives people a reason to back on day one, but later backers can feel penalized, and the discounted price still has to clear your floor.",
           "Run these five checks on every tier, then use the comparison below to decide what stays."
         ],
         "visual": {
@@ -464,7 +464,7 @@ export const growthGuides: LaunchGuide[] = [
       },
       {
         "question": "Should I offer early bird rewards?",
-        "answer": "It is a trade, so it is your call. An early bird price gives people a reason to back on day one, but backers who arrive later can feel penalised for paying more for the same game. If you use one, price it from the same cost sheet so the discount still clears your floor."
+        "answer": "It is a trade, so it is your call. An early bird price gives people a reason to back on day one, but backers who arrive later can feel penalized for paying more for the same game. If you use one, price it from the same cost sheet so the discount still clears your floor."
       }
     ],
     "sources": [
@@ -688,7 +688,7 @@ export const growthGuides: LaunchGuide[] = [
         "title": "Report collected results alongside pledge value",
         "paragraphs": [
           "Here is a hypothetical USD example: $600 in ad spend and $1,800 in attributed pledges give a ROAS of 3.0 on pledge value. If $150 of those pledges drops, the collected attributed amount is $1,650 and the ratio falls to 2.75. Production, shipping, fees and service costs still sit outside both ratios.",
-          "Don't add an advertising platform's attributed revenue to Kickstarter's attributed revenue as if they were separate sales. Keep each report labelled, explain its limits and reconcile against collected funds when available. Our [advertising budget guide](/guides/kickstarter-advertising-budget-board-games) shows how to set the spending ceiling before you read any ratio."
+          "Don't add an advertising platform's attributed revenue to Kickstarter's attributed revenue as if they were separate sales. Keep each report labeled, explain its limits and reconcile against collected funds when available. Our [advertising budget guide](/guides/kickstarter-advertising-budget-board-games) shows how to set the spending ceiling before you read any ratio."
         ],
         "visual": {
           "kind": "bars",
@@ -910,10 +910,10 @@ export const growthGuides: LaunchGuide[] = [
         ],
         "visual": {
           "kind": "compare",
-          "title": "Paid previews can help backers, as long as they are labelled as paid",
+          "title": "Paid previews can help backers, as long as they are labeled as paid",
           "columns": [
             { "name": "Independent review", "points": ["The reviewer chooses the verdict", "They may decline or publish nothing", "Quote with permission and a link"] },
-            { "name": "Paid preview", "points": ["Shows how the game plays", "Labelled as paid wherever you use it", "Never presented as a verdict"], "highlight": true },
+            { "name": "Paid preview", "points": ["Shows how the game plays", "Labeled as paid wherever you use it", "Never presented as a verdict"], "highlight": true },
             { "name": "Your own claims", "points": ["Kept apart from reviewer words", "Checked against the current prototype"] }
           ]
         }
@@ -938,7 +938,7 @@ export const growthGuides: LaunchGuide[] = [
       },
       {
         "question": "Do I need reviews before I launch my Kickstarter?",
-        "answer": "No, reviews are not required to launch. But for a new creator an outside voice is the cheapest trust you can add, because a backer who has never heard of you gets to see someone else play the game. One well matched preview, clearly labelled, does more than a page of your own claims."
+        "answer": "No, reviews are not required to launch. But for a new creator an outside voice is the cheapest trust you can add, because a backer who has never heard of you gets to see someone else play the game. One well matched preview, clearly labeled, does more than a page of your own claims."
       }
     ],
     "sources": [
@@ -970,7 +970,7 @@ export const growthGuides: LaunchGuide[] = [
     "seoTitle": "Board Game Launch Checklist for Kickstarter: 90 Days Out",
     "description": "A board game Kickstarter launch checklist from 90 days out to launch day. Lock rewards, open the prelaunch page, test ads, pass review and run the first hour.",
     "tag": "Launch checklist",
-    "answer": "A board game Kickstarter launch checklist starts about 90 days out, when you lock the rewards, costs and funding goal. The prelaunch page, email list and capped ad tests fill the middle weeks, and review lands two to three weeks before launch. On launch day one person publishes, and a second checks the live page before any email or ad goes out.",
+    "answer": "A board game Kickstarter launch checklist starts about 90 days out, when you lock the rewards, costs and funding goal. In our planning example the email list starts at least 3 months out, the prelaunch page opens 6 to 12 weeks before launch, and you submit for review at least 2 weeks before the date. On launch day one person publishes, and a second checks the live page before any email or ad goes out.",
     "sections": [
       {
         "id": "at-a-glance",
@@ -987,8 +987,8 @@ export const growthGuides: LaunchGuide[] = [
           "events": [
             {
               "when": "90 days out",
-              "label": "Lock the offer",
-              "detail": "Reward contents, supplier quotes, funding goal and shipping approach"
+              "label": "Lock the offer, start the list",
+              "detail": "Reward contents, supplier quotes, funding goal and a simple email signup"
             },
             {
               "when": "75 days out",
@@ -997,7 +997,7 @@ export const growthGuides: LaunchGuide[] = [
             },
             {
               "when": "60 days out",
-              "label": "Open the signup route",
+              "label": "Grow the signup route",
               "detail": "Landing page, welcome email and the Kickstarter project draft"
             },
             {
@@ -1012,8 +1012,8 @@ export const growthGuides: LaunchGuide[] = [
             },
             {
               "when": "14 days out",
-              "label": "Final page review",
-              "detail": "Phone check, reward facts, shipping copy and review buffer"
+              "label": "Submitted for review",
+              "detail": "Phone check, reward facts, shipping copy and time for changes"
             },
             {
               "when": "7 days out",
@@ -1042,7 +1042,7 @@ export const growthGuides: LaunchGuide[] = [
         "paragraphs": [
           "The first month is about the offer, because every later piece of marketing repeats it. If the deluxe reward changes in week ten, the page, the reward graphics, the ads and the emails all change with it.",
           "We start with a reward sheet that names every tier, its exact contents and its price. Then you collect supplier quotes for manufacturing and freight, so the numbers come from real figures. From there you can [set a funding goal that covers delivery](/guides/board-game-kickstarter-funding-goal) and [price each reward](/guides/board-game-kickstarter-reward-pricing) against its own costs.",
-          "These five checks close the phase, and once they pass the offer can be shown in public."
+          "Open a simple email signup in this phase too, because we plan for the list to run at least 3 months before launch. These five checks close the phase, and once they pass the offer can be shown in public."
         ],
         "list": [
           "Every reward tier has frozen contents, quantities and language versions.",
@@ -1054,9 +1054,9 @@ export const growthGuides: LaunchGuide[] = [
       },
       {
         "id": "prelaunch",
-        "title": "60 to 30 days out: open the prelaunch page and the email list",
+        "title": "60 to 30 days out: open the prelaunch page and grow the list",
         "paragraphs": [
-          "This phase builds the audience you launch to, so it needs a working signup route early. Your own email list and Kickstarter prelaunch followers both matter, but they behave differently.",
+          "This phase builds the audience you launch to, so the signup route you opened at 90 days now needs real traffic. In our planning example the prelaunch page opens 6 to 12 weeks before launch. Your own email list and Kickstarter prelaunch followers both matter, but they behave differently.",
           "Kickstarter sends your followers a launch notification email when the project goes live. You cannot message those followers directly, though a prelaunch update reaches them. Your own [prelaunch email list](/guides/kickstarter-prelaunch-email-list) is the channel you control, so test the form, the welcome email and the unsubscribe link with a real address.",
           "One rule catches first time creators out. Kickstarter only lets a first time creator switch on the prelaunch page after the project has been submitted for review and approved. Repeat creators can open it from the Promotion tab sooner. That's why we plan an early submission for a first project, so the follow button is live while the audience is still growing. These five checks close the phase."
         ],
@@ -1074,7 +1074,7 @@ export const growthGuides: LaunchGuide[] = [
         "title": "30 to 14 days out: finish the page and pass review",
         "paragraphs": [
           "By now the campaign page should be close to final, so this phase is about proof. We read the page on a phone with someone who has never played the game, using the [Kickstarter page checklist](/guides/board-game-kickstarter-page-checklist). If they cannot say what comes in the box, the page is not finished.",
-          "Kickstarter says review can take up to three business days. If the team asks for changes, the next review takes up to three more business days after you reply, and busy periods run longer. Setting a target launch date does not launch the project, so plan a buffer of at least a week between approval and the date you announce.",
+          "Kickstarter says review can take up to three business days. If the team asks for changes, the next review takes up to three more business days after you reply, and busy periods run longer. Setting a target launch date does not launch the project, so we submit at least 2 weeks before the launch date and keep that time for change requests.",
           "Ad tests should still run inside a cap in this phase. Use the [advertising budget guide](/guides/kickstarter-advertising-budget-board-games) to set a ceiling your reward margin can carry, before the launch week asks for more. Before moving on, these five checks should pass."
         ],
         "list": [
@@ -1221,7 +1221,7 @@ export const growthGuides: LaunchGuide[] = [
                 "Story and reward graphics approved",
                 "Video and rules open on a phone",
                 "Reviewer copies delivered",
-                "Submitted with time for changes",
+                "Submitted 2 weeks or more ahead",
                 "Launch email drafted"
               ]
             },
@@ -1272,7 +1272,7 @@ export const growthGuides: LaunchGuide[] = [
     "faqs": [
       {
         "question": "How far ahead should I start a board game Kickstarter launch checklist?",
-        "answer": "We plan about 90 days for a first board game campaign. That leaves a month to lock the offer, a month to build the prelaunch audience and a month to finish the page and pass review. Move the dates if an input is late, and keep the order."
+        "answer": "We plan about 90 days for a first board game campaign. That leaves a month to lock the offer while the email list starts, a month to open the prelaunch page and grow the audience, and a month to finish the page and pass review. Move the dates if an input is late, and keep the order."
       },
       {
         "question": "Does Kickstarter launch automatically at my target time?",
@@ -1280,7 +1280,7 @@ export const growthGuides: LaunchGuide[] = [
       },
       {
         "question": "How long does Kickstarter review take?",
-        "answer": "Kickstarter says review can take up to three business days. If changes are requested, the next review takes up to three more business days after you respond, and busy periods can run longer. Plan at least a week of buffer before the date you announce."
+        "answer": "Kickstarter says review can take up to three business days. If changes are requested, the next review takes up to three more business days after you respond, and busy periods can run longer. We submit at least 2 weeks before the launch date, so a round of changes never moves the date you announce."
       },
       {
         "question": "When can I turn on the Kickstarter prelaunch page?",
@@ -1321,7 +1321,7 @@ export const growthGuides: LaunchGuide[] = [
         "href": "https://help.gamefound.com/article/366-tester-mode"
       },
       {
-        "label": "Kickstarter release notes: view dropped pledges in your dashboard (Oct 13, 2026)",
+        "label": "Kickstarter release notes: view dropped pledges in your dashboard (October 13, 2026)",
         "publisher": "Kickstarter",
         "href": "https://start.kickstarter.com/kickstarter-release-notes"
       }
@@ -1399,7 +1399,7 @@ export const growthGuides: LaunchGuide[] = [
         "title": "Choose the right stage as well as the right tool",
         "paragraphs": [
           "Gamefound distinguishes its optional Late Pledge stage from Pledge Manager. Late Pledge can extend the offer before shipping collection; Pledge Manager handles shipping details and fees. If you move directly to its manager after crowdfunding, you cannot later open the earlier Late Pledge stage.",
-          "A permanent Shopify store has another purpose, which is retail orders and an ongoing catalogue. It may run alongside campaign fulfillment, but decide which system owns each order and how shared stock is allocated. Opening a retail checkout never transfers campaign obligations by itself."
+          "A permanent Shopify store has another purpose, which is retail orders and an ongoing catalog. It may run alongside campaign fulfillment, but decide which system owns each order and how shared stock is allocated. Opening a retail checkout never transfers campaign obligations by itself."
         ],
         "visual": {
           "kind": "timeline",

@@ -50,7 +50,7 @@ export default function Page() {
           <h2>Choose the help you need</h2>
           <p>
             You may need a store build, help adapting campaign content, or a
-            handoff your own developer can use. Start with the catalogue and
+            handoff your own developer can use. Start with the catalog and
             remaining work. The brief confirms which tasks Guildframe handles,
             which stay with your team and what needs another supplier.
           </p>
@@ -81,7 +81,7 @@ export default function Page() {
             <li>Products, editions, expansions, bundles and digital files, including prices and stock status.</li>
             <li>Final artwork, product facts, rules and approved campaign copy.</li>
             <li>Required pages, apps, integrations and any preferred theme.</li>
-            <li>Confirmed shipping regions, preorder terms and the person responsible for fulfilment.</li>
+            <li>Confirmed shipping regions, preorder terms and the person responsible for fulfillment.</li>
             <li>Your target opening date, budget and the tasks your team will handle.</li>
           </ul>
           <p>
@@ -97,13 +97,13 @@ export default function Page() {
           <h2>Agree the work before the build</h2>
           <p>
             A separate store proposal should name the products and pages, theme
-            customisation, content entry, app setup and testing it covers. Confirm
+            customization, content entry, app setup and testing it covers. Confirm
             the review process, editable files, account handoff and support period.
             Agree the price and timing after the requirements are reviewed.
           </p>
           <p>
             Keep Shopify subscriptions, paid themes, apps and other supplier costs
-            visible in the budget. Your production and fulfilment team confirms
+            visible in the budget. Your production and fulfillment team confirms
             inventory, delivery, tax and shipping facts; the store needs accurate
             inputs before it can communicate them.
           </p>
@@ -131,7 +131,7 @@ export default function Page() {
           <p>
             If backer rewards will ship through the store, Kickstarter&apos;s
             official Shopify app, listed on July 31, 2026, matches each reward to
-            products and variants that already exist. So we build the catalogue
+            products and variants that already exist. So we build the catalog
             before the first sync and test one backer order item by item.
           </p>
           <p>

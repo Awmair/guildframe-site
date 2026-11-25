@@ -224,8 +224,8 @@ const originalLaunchGuides:LaunchGuide[]=[
           "groups": [
             { "name": "Opening", "items": ["Name and logo", "Real product image", "One line on what players do"] },
             { "name": "Game facts", "items": ["Player count", "Play time", "Age guidance and modes"] },
-            { "name": "Gameplay", "items": ["Sample turn", "Labelled rules link", "Component list"] },
-            { "name": "Rewards and delivery", "items": ["Edition comparison", "Optional extras labelled", "Shipping timing"] }
+            { "name": "Gameplay", "items": ["Sample turn", "Labeled rules link", "Component list"] },
+            { "name": "Rewards and delivery", "items": ["Edition comparison", "Optional extras labeled", "Shipping timing"] }
           ]
         },
         "list": [
@@ -239,7 +239,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "gameplay",
         "title": "Explain a turn before explaining every rule",
         "paragraphs": [
-          "Choose a turn or round that shows the main decisions. A few labelled steps can explain an action, what happens next and what the player is trying to achieve.",
+          "Choose a turn or round that shows the main decisions. A few labeled steps can explain an action, what happens next and what the player is trying to achieve.",
           "Use actual components in that explanation. Add a rules link, playthrough or independent preview if you have one. Give the component list its own space so readers can also check what’s in the box."
         ],
         "source": 0
@@ -323,7 +323,7 @@ const originalLaunchGuides:LaunchGuide[]=[
       },
       {
         "question": "What should a board game Kickstarter page include?",
-        "answer": "An opening with the name, a real product image and one line on what players do, then player count, play time and age guidance. Follow with a sample turn, a labelled rules link, the component list, an edition comparison and the shipping plan."
+        "answer": "An opening with the name, a real product image and one line on what players do, then player count, play time and age guidance. Follow with a sample turn, a labeled rules link, the component list, an edition comparison and the shipping plan."
       },
       {
         "question": "Can I get help before the page is finished?",
@@ -366,7 +366,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Start with the game in plain language",
         "paragraphs": [
           "We can only explain a game we understand, so the brief starts in plain language. Describe the product and who it's for. For a board game, explain the choices players make; for an RPG, describe a session and any required system; for an accessory, say what it does and what it fits.",
-          "Explain the tone you want, too. If you share campaign references, say what you like about each one, such as the layout, the reward comparison or the colours, because that tells a designer more than a request to copy another game's page. Start the brief with these four items."
+          "Explain the tone you want, too. If you share campaign references, say what you like about each one, such as the layout, the reward comparison or the colors, because that tells a designer more than a request to copy another game's page. Start the brief with these four items."
         ],
         "list": [
           "Game name and a short pitch",
@@ -421,7 +421,7 @@ const originalLaunchGuides:LaunchGuide[]=[
           "Group the folder into logos, product images, gameplay, interiors and rewards, and name files by product, version and status. For several editions or bundles, a PDF or spreadsheet of the contents helps the designer pick the right images. Send at least these five items."
         ],
         "list": [
-          "Final logo and brand colours if established",
+          "Final logo and brand colors if established",
           "Product and component artwork",
           "Interior spreads or sample cards where relevant",
           "Rules, sample adventure or gameplay links",
@@ -580,7 +580,7 @@ const originalLaunchGuides:LaunchGuide[]=[
             ],
             [
               "Digital reward",
-              "File format, content and applicable licence"
+              "File format, content and applicable license"
             ]
           ]
         }
@@ -617,7 +617,7 @@ const originalLaunchGuides:LaunchGuide[]=[
               "name": "Optional extra",
               "points": [
                 "Card sleeves",
-                "Labelled as paid separately"
+                "Labeled as paid separately"
               ],
               "verdict": "Never shown as included"
             }
@@ -654,14 +654,14 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Use a repeatable visual order",
         "paragraphs": [
           "We put the reward name in the same place on every graphic. Then comes the main product, the included extras and a short line on what changed from the tier before, so tiers are quick to compare.",
-          "When several rewards share most of their contents, a labelled comparison table often works better. Save detailed component spreads for the product sections, where readers can inspect what they're buying. Each tier graphic follows this order."
+          "When several rewards share most of their contents, a labeled comparison table often works better. Save detailed component spreads for the product sections, where readers can inspect what they're buying. Each tier graphic follows this order."
         ],
         "list": [
           "Reward name and edition",
           "Main product image",
           "Included items with quantities where useful",
           "Difference from the previous option",
-          "Optional extras labelled separately"
+          "Optional extras labeled separately"
         ]
       },
       {
@@ -678,7 +678,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Make the story and reward setup agree",
         "paragraphs": [
           "Check the graphics against the actual reward records before launch. Names, counts, prices and extras must match, and images for retired tiers should come out.",
-          "Gamefound places reward sections alongside the story and controls visibility by campaign stage, so plan the graphics for that structure. On either platform, you confirm the reward configuration and fulfilment details."
+          "Gamefound places reward sections alongside the story and controls visibility by campaign stage, so plan the graphics for that structure. On either platform, you confirm the reward configuration and fulfillment details."
         ],
         "source": 1
       },
@@ -723,7 +723,7 @@ const originalLaunchGuides:LaunchGuide[]=[
       },
       {
         "question": "Can I show an optional extra beside the main reward?",
-        "answer": "Yes, if it is clearly labelled as optional and the graphic matches the reward configuration. Don't imply that it is included."
+        "answer": "Yes, if it is clearly labeled as optional and the graphic matches the reward configuration. Don't imply that it is included."
       },
       {
         "question": "What size should Kickstarter reward images be?",
@@ -867,7 +867,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "direction",
         "title": "Build a direction that matches the game",
         "paragraphs": [
-          "Take the colours, type and imagery from the game itself. A noir investigation might use restrained colour, a whimsical adventure might be brighter and a horror zine may use empty space to build tension. Either way, keep enough contrast and room for the practical details.",
+          "Take the colors, type and imagery from the game itself. A noir investigation might use restrained color, a whimsical adventure might be brighter and a horror zine may use empty space to build tension. Either way, keep enough contrast and room for the practical details.",
           "Our campaign design service prepares the page structure, copy and graphics using your artwork. Send a summary, a sample spread and your launch plans for a free mockup of the opening section; new book illustration and video need their own scope. For the wider plan, from audience to pledge manager, see our TTRPG Kickstarter launch guide."
         ],
         "source": 1
@@ -1037,7 +1037,7 @@ const originalLaunchGuides:LaunchGuide[]=[
       },
       {
         "id": "stage-checks",
-        "title": "Check launch behaviour and stage visibility",
+        "title": "Check launch behavior and stage visibility",
         "paragraphs": [
           "The last difference shows up on launch day. Kickstarter launch is manual after approval, and setting a Target Launch Date does not publish the project. Gamefound descriptions and reward visibility depend on the stage and publication settings, so a finished draft in one stage is not proof that the next public stage is complete.",
           "Use the dedicated launch guides to review the selected platform. Keep the factual reward plan consistent across either platform and adapt the layout to its actual editor, and the page will read the same wherever backers find it."
@@ -1364,7 +1364,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "prelaunch",
         "title": "Prepare the public introduction alongside the full campaign",
         "paragraphs": [
-          "Kickstarter recommends sharing a prelaunch page at least one week before launch, so people can follow the project and get a launch notification. Prepare it alongside the full campaign story, not after it.",
+          "Kickstarter recommends sharing a prelaunch page at least one week before launch, so people can follow the project and get a launch notification. We treat that week as a floor, and in our planning example the page opens 6 to 12 weeks before launch. Prepare it alongside the full campaign story, not after it.",
           "Check that the title and main image explain the project while the longer page is being designed. Once you have a summary and artwork, request a free opening mockup through our campaign design page, and we agree the full scope and timing before any work starts."
         ],
         "source": 0

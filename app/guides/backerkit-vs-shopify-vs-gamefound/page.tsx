@@ -24,17 +24,17 @@ const faqs = [
   {
     question: "What is BackerKit?",
     answer:
-      "BackerKit is a crowdfunding platform and pledge manager. Creators use it to run campaigns and, after funding, to collect surveys, sell add ons and upgrades, and prepare order data for fulfilment. It can push eligible orders into Shopify.",
+      "BackerKit is a crowdfunding platform and pledge manager. Creators use it to run campaigns and, after funding, to collect surveys, sell add ons and upgrades, and prepare order data for fulfillment. It can push eligible orders into Shopify.",
   },
   {
     question: "Should I use Kickstarter's Pledge Manager or BackerKit?",
     answer:
-      "Check Kickstarter's own Pledge Manager first if you funded on Kickstarter. It has no upfront cost, takes Kickstarter's usual fees on payments made in it, and added VAT options, self serve add ons and order editing in 2026. Choose BackerKit when its workflow or integrations suit your fulfilment better.",
+      "Check Kickstarter's own Pledge Manager first if you funded on Kickstarter. It has no upfront cost, takes Kickstarter's usual fees on payments made in it, and added VAT options, self serve add ons and order editing in 2026. Choose BackerKit when its workflow or integrations suit your fulfillment better.",
   },
   {
     question: "Does Kickstarter's Pledge Manager connect to Shopify?",
     answer:
-      "Yes. Kickstarter's free Shopify app, listed on the Shopify App Store since July 31, 2026, sends finalised Pledge Manager orders to Shopify and maps rewards to your products. Tracking numbers added in Shopify sync back to Kickstarter.",
+      "Yes. Kickstarter's free Shopify app, listed on the Shopify App Store since July 31, 2026, sends finalized Pledge Manager orders to Shopify and maps rewards to your products. Tracking numbers added in Shopify sync back to Kickstarter.",
   },
   {
     question: "Is BackerKit a replacement for Shopify?",
@@ -155,7 +155,7 @@ export default function BackerkitShopifyGamefoundGuide() {
                 "Surveys, add ons, upgrades and order data",
                 "Pushes eligible orders into Shopify",
               ],
-              verdict: "When its workflow suits your fulfilment",
+              verdict: "When its workflow suits your fulfillment",
             },
             {
               name: "Gamefound",
@@ -169,7 +169,7 @@ export default function BackerkitShopifyGamefoundGuide() {
             {
               name: "Shopify",
               points: [
-                "Permanent store, catalogue and checkout",
+                "Permanent store, catalog and checkout",
                 "Doesn't understand reward tiers by itself",
                 "Receives orders from Kickstarter or BackerKit",
               ],
@@ -197,19 +197,19 @@ export default function BackerkitShopifyGamefoundGuide() {
       <p>
         Through 2026 Kickstarter kept adding Pledge Manager features, several of
         them tasks creators used to handle in a separate tool. Here are the updates
-        that matter most for tabletop fulfilment, in the order they shipped.
+        that matter most for tabletop fulfillment, in the order they shipped.
       </p>
       <GuideVisual
         data={{
           kind: "timeline",
-          title: "Eight Pledge Manager updates in 2026 that matter for tabletop fulfilment",
+          title: "Eight Pledge Manager updates in 2026 that matter for tabletop fulfillment",
           events: [
             { when: "Mar 12", label: "Edit settings after opening", detail: "Plus a direct ShipStation sync" },
             { when: "Mar 31", label: "Send digital rewards", detail: "Files delivered on Kickstarter itself" },
             { when: "Apr 13", label: "VAT flexibility", detail: "Choose whether Kickstarter collects VAT" },
             { when: "May 6", label: "Edit survey responses", detail: "Changes after checkout" },
             { when: "Jun 1", label: "Lock addresses by segment", detail: "Ship in waves" },
-            { when: "Jul 31", label: "Shopify app listed", detail: "Free, syncs finalised orders", highlight: true },
+            { when: "Jul 31", label: "Shopify app listed", detail: "Free, syncs finalized orders", highlight: true },
             { when: "Aug 20", label: "Self serve add ons", detail: "Backers add items after submitting" },
             { when: "Oct 28", label: "Order editing", detail: "Creators change backer orders" },
           ],
@@ -267,7 +267,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         operations.
       </p>
       <ul>
-        <li><strong>Choose it when:</strong> you need backer surveys, extras, upgrades and fulfilment data.</li>
+        <li><strong>Choose it when:</strong> you need backer surveys, extras, upgrades and fulfillment data.</li>
         <li><strong>Do not assume:</strong> that a campaign or preorder surface replaces the need for a long term branded store.</li>
         <li><strong>Check carefully:</strong> current fees, supported integrations, order mapping and tax or shipping responsibilities.</li>
       </ul>
@@ -291,7 +291,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         <li><strong>Plan carefully:</strong> product structure, fulfillment status, migration permissions and integrations.</li>
       </ul>
       <p>
-        Guildframe’s <Link href="/shopify-theme-for-board-games">store planning references</Link> cover the catalogue work that follows a campaign.
+        Guildframe’s <Link href="/shopify-theme-for-board-games">store planning references</Link> cover the catalog work that follows a campaign.
       </p>
 
       <h2 id="gamefound">Where Gamefound fits</h2>
@@ -355,7 +355,7 @@ export default function BackerkitShopifyGamefoundGuide() {
         <li><strong>Give customers one clear support path.</strong> Tell backers and retail customers where to ask for help.</li>
       </ol>
       <ArticleCallout>
-        Choose which system will handle each stage. Then check how orders, addresses and fulfilment information move between them.
+        Choose which system will handle each stage. Then check how orders, addresses and fulfillment information move between them.
       </ArticleCallout>
 <h2 id="native-platform-stages">Check the native options and the project stage</h2><p>If you are still deciding what happens next, <Link href="/guides/what-happens-after-kickstarter-is-funded">what happens after a Kickstarter is funded</Link> lays out the sequence, and the <Link href="/guides/kickstarter-late-pledges-vs-shopify">late pledges vs Shopify guide</Link> covers selling to people who missed the campaign.</p><p>An eligible Kickstarter project may also use Kickstarter&apos;s own Pledge Manager. Compare that route before choosing an external system. Gamefound distinguishes Late Pledge from Pledge Manager: Late Pledge does not collect shipping details or shipping fees, while Pledge Manager handles that stage and can allow new buyers.</p><p>Test the route your project will actually use. The <Link href="/guides/board-game-pledge-manager-checklist">requirements checklist</Link> covers rewards, shipping, payments and exports. Sources: <a href="https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager">Kickstarter Pledge Manager</a> and <a href="https://help.gamefound.com/article/285-getting-started-with-crowdfunding">Gamefound project stages</a>.</p>
       <h2 id="help">Get help choosing your platform stack</h2>

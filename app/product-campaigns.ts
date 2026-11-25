@@ -5,7 +5,7 @@ import { beyondTabletop } from "./past-work";
 
 /*
  * The one service page for Kickstarter campaigns outside tabletop (option B,
- * approved 25 Nov 2026). Guildframe stays tabletop first: titles, hubs and
+ * approved November 25, 2026). Guildframe stays tabletop first: titles, hubs and
  * guides stay tabletop, and this page is linked lightly from /work, /about
  * and the footer. Proof comes only from `beyondTabletop` in app/past-work.ts.
  */

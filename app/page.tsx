@@ -18,7 +18,7 @@ const homeFaqs = [
   { question: "Can I book only the campaign page?", answer: "Yes. The campaign page package stands on its own. If you later want prelaunch, paid advertising or live campaign support, you can move to full campaign support." },
   { question: "How does the free opening mockup work?", answer: "Send a short game description and usable artwork. I will design one opening campaign section so you can see a direction before booking. There is no payment or obligation." },
   { question: "Do I keep my accounts, contacts and files?", answer: "Yes. Your campaign and marketing accounts stay yours. The brief lists the final files and editable sources I will hand over." },
-  { question: "Can you guarantee the campaign will fund?", answer: "I cannot guarantee funding. The product, audience, pricing and fulfilment plan all affect the result. We agree the work, budget and measures of progress before the project starts." },
+  { question: "Can you guarantee the campaign will fund?", answer: "I cannot guarantee funding. The product, audience, pricing and fulfillment plan all affect the result. We agree the work, budget and measures of progress before the project starts." },
 ];
 const projectSummaries = [
   "Visual direction and campaign presentation for an unfamiliar RPG accessory.",
@@ -32,7 +32,7 @@ const concepts = [
   { image: "trading-card-game", alt: "Original Starbound trading card game concept with a celestial deck box and illustrated foil cards" },
   { image: "rpg-book", alt: "Original Moth and Moon folk horror RPG concept with a green clothbound book, adventure zine and character sheets" },
   { image: "miniature-terrain", alt: "Original Orbital Outpost miniature game concept with a lunar box, sculpted mech and modular terrain" },
-  { image: "dice-accessories", alt: "Original Prismatic accessories concept with jewel coloured dice, coral suede tray and petrol presentation box" },
+  { image: "dice-accessories", alt: "Original Prismatic accessories concept with jewel colored dice, coral suede tray and petrol presentation box" },
 ];
 const featuredGuides = [
   { href: "/guides/board-game-kickstarter-marketing-plan", topic: "Planning", title: "Board game Kickstarter marketing plan" },

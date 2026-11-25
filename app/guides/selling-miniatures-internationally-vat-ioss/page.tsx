@@ -161,8 +161,8 @@ export default function SellingMiniaturesInternationallyPage() {
           stats: [
             { value: "€3", label: "Temporary customs duty", note: "Applied per declaration line in current practice" },
             { value: "€150", label: "Consignment value ceiling", note: "B2C distance sales at or below this value" },
-            { value: "Jul 1, 2026", label: "Duty starts", note: "Planned to run until July 1, 2028" },
-            { value: "Nov 1, 2026", label: "Product identifiers required", note: "For import distance sales declarations" },
+            { value: "July 1, 2026", label: "Duty starts", note: "Planned to run until July 1, 2028" },
+            { value: "November 1, 2026", label: "Product identifiers required", note: "For import distance sales declarations" },
           ],
           source: "European Commission, Access2Markets customs guidance, checked November 25, 2026",
         }}

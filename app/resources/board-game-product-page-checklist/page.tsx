@@ -169,7 +169,7 @@ export default function BoardGameProductPageChecklistPage() {
         <li>For bundles, every included product listed</li>
       </ul>
       <p>
-        Whether an edition should be a variant or its own product is a catalogue
+        Whether an edition should be a variant or its own product is a catalog
         decision, covered in{" "}
         <Link href="/guides/sell-board-game-expansions-add-ons-shopify">how to sell expansions, add ons and bundles on Shopify</Link>.
       </p>

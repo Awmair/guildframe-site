@@ -49,7 +49,7 @@ export default function ShopifyVsEtsyMiniaturesPage() {
       category="Miniature store platform comparison"
       title="Shopify vs Etsy for Selling Miniatures and Terrain"
       description="Compare Etsy’s marketplace with a Shopify store for miniature products, customer discovery, fees and catalogue control."
-      answer="Etsy offers marketplace search and a listing based setup. Shopify gives you a dedicated store with control over product pages, collections and customer checkout. Choose based on how customers find you and how you want to manage the catalogue. If you use both, keep stock and delivery information consistent."
+      answer="Etsy offers marketplace search and a listing based setup. Shopify gives you a dedicated store with control over product pages, collections and customer checkout. Choose based on how customers find you and how you want to manage the catalog. If you use both, keep stock and delivery information consistent."
       published="2026-07-23"
       updated={contentDates.shopifyVsEtsyMiniatures}
       readTime="7 minute read"
@@ -167,8 +167,8 @@ export default function ShopifyVsEtsyMiniaturesPage() {
           title: "Etsy finds buyers; Shopify keeps them",
           columns: [
             { name: "Etsy", points: ["Marketplace search brings new buyers", "Listings and shop sections", "$0.20 per listing, 6.5% per order"], verdict: "Best for testing demand" },
-            { name: "Shopify", points: ["You bring the traffic", "Collections, variants and guides", "Plan fee, processing and apps"], verdict: "Best for a growing catalogue", highlight: true },
-            { name: "Both", points: ["Etsy for discovery", "Shopify for the full catalogue", "One source of stock truth"], verdict: "Works when stock stays in sync" },
+            { name: "Shopify", points: ["You bring the traffic", "Collections, variants and guides", "Plan fee, processing and apps"], verdict: "Best for a growing catalog", highlight: true },
+            { name: "Both", points: ["Etsy for discovery", "Shopify for the full catalog", "One source of stock truth"], verdict: "Works when stock stays in sync" },
           ],
           caption: "Etsy fees checked November 25, 2026. Payment processing and advertising are charged separately.",
           source: "Etsy Help: fees and taxes; Shopify pricing",

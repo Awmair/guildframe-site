@@ -39,12 +39,12 @@ const faqs = [
   {
     question: "Should the store open before backers receive their rewards?",
     answer:
-      "It can, as long as delivery timing is explicit and nobody could reasonably think store buyers are shipping ahead of backers. Many creators open with a signup or clearly labelled preorders first and switch to in stock orders after rewards ship.",
+      "It can, as long as delivery timing is explicit and nobody could reasonably think store buyers are shipping ahead of backers. Many creators open with a signup or clearly labeled preorders first and switch to in stock orders after rewards ship.",
   },
   {
     question: "How long does a Shopify store take after Kickstarter?",
     answer:
-      "There is no fixed interval after campaign close. The build depends on final assets, catalogue size, integrations and review speed, and the opening depends on stock and fulfilment. We agree timing after reviewing the catalogue and the delivery plan.",
+      "There is no fixed interval after campaign close. The build depends on final assets, catalog size, integrations and review speed, and the opening depends on stock and fulfillment. We agree timing after reviewing the catalog and the delivery plan.",
   },
 ];
 
@@ -109,7 +109,7 @@ export default function KickstarterToShopifyTimelinePage() {
           kind: "timeline",
           title: "The store is built early but opens late",
           events: [
-            { when: "Campaign live", label: "Plan the catalogue", detail: "List what stays on sale after the campaign." },
+            { when: "Campaign live", label: "Plan the catalog", detail: "List what stays on sale after the campaign." },
             { when: "Close day", label: "Lock products and prices", detail: "Final names, SKUs and variants agreed." },
             { when: "Pledge manager open", label: "Build the store", detail: "Products must exist before rewards can be mapped.", highlight: true },
             { when: "Backer orders lock", label: "Sync and allocate", detail: "Backer orders reach Shopify; reward stock is set aside." },
@@ -147,7 +147,7 @@ export default function KickstarterToShopifyTimelinePage() {
         This is the stage that moved in 2026. Kickstarter&apos;s official Shopify
         app, listed on July 31, 2026, matches rewards to Shopify products and
         variants that already exist. So if Shopify will ship your backer rewards,
-        the catalogue has to be in place while backers are still completing the
+        the catalog has to be in place while backers are still completing the
         Pledge Manager.
       </p>
       <ArticleTable
@@ -173,7 +173,7 @@ export default function KickstarterToShopifyTimelinePage() {
         in segments. This is the moment to count what is left for the store.
       </p>
       <ol>
-        <li><strong>Sync or export backer orders.</strong> Send them all, or a region at a time if fulfilment ships in waves.</li>
+        <li><strong>Sync or export backer orders.</strong> Send them all, or a region at a time if fulfillment ships in waves.</li>
         <li><strong>Set aside reward stock.</strong> Count backer units first, then spares for damage and replacements.</li>
         <li><strong>Count store stock.</strong> Only what remains becomes store inventory.</li>
         <li><strong>Confirm tracking.</strong> Check that a test shipment&apos;s tracking number reaches Kickstarter.</li>
@@ -248,7 +248,7 @@ export default function KickstarterToShopifyTimelinePage() {
         <Link href="/post-campaign-support">post campaign support</Link>{" "}
         covers backer updates and product content, and the{" "}
         <Link href="/done-for-you-shopify-store">store planning brief</Link>{" "}
-        scopes optional Shopify setup. Send the campaign link, fulfilment status
+        scopes optional Shopify setup. Send the campaign link, fulfillment status
         and product list, and we will agree the dates with you.
       </p>
     </SeoArticlePage>

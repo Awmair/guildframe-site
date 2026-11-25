@@ -267,7 +267,7 @@ export default function SellBoardGamePreordersOnShopifyPage() {
       </ArticleCallout>
       <p>
         Replace every bracketed field and use the wording only when the checkout
-        and fulfilment process support it. State whether your estimate refers to
+        and fulfillment process support it. State whether your estimate refers to
         dispatch or arrival. A confirmation that says an order has been received
         should not suggest that the preorder is already on its way.
       </p>
@@ -289,7 +289,7 @@ export default function SellBoardGamePreordersOnShopifyPage() {
       <p>
         Include the last allowed preorder and the next order after the cap in the
         test. Check a mixed cart, a cancellation and any payment collected later.
-        Record what happens to the stock allocation, customer message and fulfilment
+        Record what happens to the stock allocation, customer message and fulfillment
         status in each case. An app&apos;s success message alone does not establish
         that the backer reserve stayed protected.
       </p>

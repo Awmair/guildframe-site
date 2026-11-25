@@ -28,12 +28,12 @@ const faqs = [
   {
     question: "Does Kickstarter have an official Shopify integration?",
     answer:
-      "Yes. Kickstarter, PBC publishes a free Kickstarter app on the Shopify App Store, listed as launched on July 31, 2026. It sends finalized Kickstarter Pledge Manager orders to Shopify for fulfilment, matches rewards to Shopify products by SKU and syncs tracking numbers back to Kickstarter.",
+      "Yes. Kickstarter, PBC publishes a free Kickstarter app on the Shopify App Store, listed as launched on July 31, 2026. It sends finalized Kickstarter Pledge Manager orders to Shopify for fulfillment, matches rewards to Shopify products by SKU and syncs tracking numbers back to Kickstarter.",
   },
   {
     question: "Does the Kickstarter Shopify app build my store or move late pledges?",
     answer:
-      "No. The listing describes order sync, SKU mapping and tracking updates. It maps rewards to products that already exist in Shopify, so you still build the catalogue, product pages and policies, and you decide where late buyers order.",
+      "No. The listing describes order sync, SKU mapping and tracking updates. It maps rewards to products that already exist in Shopify, so you still build the catalog, product pages and policies, and you decide where late buyers order.",
   },
   {
     question: "When should I build a Shopify store after Kickstarter?",
@@ -52,11 +52,11 @@ const faqs = [
   },
   {
     question: "How long should store preparation take?",
-    answer: "Timing depends on your catalogue, assets, operations and review process. Agree a schedule after those requirements are clear.",
+    answer: "Timing depends on your catalog, assets, operations and review process. Agree a schedule after those requirements are clear.",
   },
   {
     question: "Can Guildframe help with the store after my campaign?",
-    answer: "Guildframe offers post campaign communication, product content and artwork support. Optional Shopify planning and setup are scoped under a separate brief after reviewing the catalogue, required features and operating plan. The proposal confirms price, timing and responsibilities.",
+    answer: "Guildframe offers post campaign communication, product content and artwork support. Optional Shopify planning and setup are scoped under a separate brief after reviewing the catalog, required features and operating plan. The proposal confirms price, timing and responsibilities.",
   },
 ];
 
@@ -105,7 +105,7 @@ const appScope: GuideVisualData = {
         "Tracking numbers from Shopify back to Kickstarter",
         "All orders at once, or exports in segments",
       ],
-      verdict: "Backer fulfilment runs on the Shopify tools you already use",
+      verdict: "Backer fulfillment runs on the Shopify tools you already use",
       highlight: true,
     },
     {
@@ -116,7 +116,7 @@ const appScope: GuideVisualData = {
         "Orders from BackerKit or Gamefound pledge managers",
         "Pledges that have not been finalized in the Pledge Manager",
       ],
-      verdict: "Plan the catalogue, store and sales route separately",
+      verdict: "Plan the catalog, store and sales route separately",
     },
   ],
   caption: "Summary of the Shopify App Store listing and Kickstarter's August 2026 Pledge Manager update.",
@@ -188,7 +188,7 @@ export default function KickstarterToShopifyPage() {
         >
           <p className="sh-lead">
             Kickstarter now has an official Shopify app. It sends finalized Pledge Manager
-            orders to your Shopify store for fulfilment and syncs tracking back to Kickstarter.
+            orders to your Shopify store for fulfillment and syncs tracking back to Kickstarter.
           </p>
           <p>
             The app handles backer orders, so you still plan the store itself for late demand,
@@ -207,7 +207,7 @@ export default function KickstarterToShopifyPage() {
               src="/images/post-campaign-tabletop-store-v1.webp"
               width={1828}
               height={860}
-              alt="A funded tabletop game laid out on a desk with cards, miniatures and shipping boxes, beside a laptop showing the game's new online catalogue"
+              alt="A funded tabletop game laid out on a desk with cards, miniatures and shipping boxes, beside a laptop showing the game's new online catalog"
               caption="The game, the boxes and the store that sells it next"
             />
             <div className="sh-split">
@@ -231,7 +231,7 @@ export default function KickstarterToShopifyPage() {
           <div className="w-wrap-wide">
             <div className="sh-steps-head">
               <h2 id="k2s-timeline-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>A practical</span></span> <span className="w-line"><span><em>post campaign timeline</em></span></span></h2>
-              <p>Prepare products and pages while fulfilment continues. Open sales when you can state availability and delivery terms accurately.</p>
+              <p>Prepare products and pages while fulfillment continues. Open sales when you can state availability and delivery terms accurately.</p>
             </div>
             <ShopTrack steps={timeline} />
             <p className="sh-after"><Link className="w-link" href="/guides/kickstarter-to-shopify-launch-timeline">Follow the detailed launch timeline</Link>{" "}or use the <Link className="w-link" href="/guides/move-from-kickstarter-to-shopify">migration guide</Link> to prepare the handoff.</p>
@@ -266,7 +266,7 @@ export default function KickstarterToShopifyPage() {
                   arrive in Shopify and tracking numbers flow back to Kickstarter for backers to follow.
                 </p>
                 <p>
-                  It works from products that already exist in Shopify, so the catalogue comes first. That&apos;s why we
+                  It works from products that already exist in Shopify, so the catalog comes first. That&apos;s why we
                   set up products and SKUs for every reward and add on before the first sync, then test with a small
                   segment of orders.
                 </p>
@@ -329,7 +329,7 @@ export default function KickstarterToShopifyPage() {
           <div className="w-wrap-wide sh-offer-inner">
             <div className="sh-offer-copy">
               <h2 id="k2s-offer-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Scope the campaign</span></span> <span className="w-line"><span><em>to store handoff</em></span></span></h2>
-              <p>Guildframe can prepare the product content, artwork and communication for the next stage. Optional Shopify planning and setup need a separate brief. Share your campaign link, catalogue, fulfilment status and target opening date.</p>
+              <p>Guildframe can prepare the product content, artwork and communication for the next stage. Optional Shopify planning and setup need a separate brief. Share your campaign link, catalog, fulfillment status and target opening date.</p>
               <p><Link className="w-link" href="/post-campaign-support" data-title="After the campaign">See post campaign support</Link>{" "}or <Link className="w-link" href="/guides/shopify-developer-vs-diy-theme">compare a developer with DIY setup</Link>.</p>
               <p><Link className="w-link" href="/kickstarter-launch-services" data-title="Launch services">Back to the campaign services</Link></p>
             </div>
@@ -349,7 +349,7 @@ export default function KickstarterToShopifyPage() {
               <h2 id="k2s-final-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Plan the handoff</span></span> <span className="w-line"><span><em>from backers to buyers</em></span></span></h2>
               <p>
                 We prepare the product content, artwork and backer communication for the stage after funding, and scope
-                optional Shopify setup under its own brief. Send your campaign link, reward list and fulfilment status,
+                optional Shopify setup under its own brief. Send your campaign link, reward list and fulfillment status,
                 and we will reply with the next steps.
               </p>
               <p><Link className="w-link" href="/post-campaign-support" data-title="After the campaign">See post campaign support</Link></p>

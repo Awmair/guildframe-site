@@ -101,7 +101,7 @@ export default function TabletopCampaignPageStudyPage() {
           temporalCoverage: campaignStudyCaptureDate,
           isAccessibleForFree: true,
           measurementTechnique:
-            "Manual review of retrieved public campaign text, selected native reward lists and one labelled creator source. Coding uses observed, unknown and not applicable. Image contents, linked file permissions and rendered mobile views were not tested. Two campaign bodies were unavailable and remain in the sample.",
+            "Manual review of retrieved public campaign text, selected native reward lists and one labeled creator source. Coding uses observed, unknown and not applicable. Image contents, linked file permissions and rendered mobile views were not tested. Two campaign bodies were unavailable and remain in the sample.",
           variableMeasured: fields.map((field) => field.label),
           isBasedOn: campaignPageStudy.map((row) => row.campaignUrl),
           distribution: {
@@ -168,7 +168,7 @@ export default function TabletopCampaignPageStudyPage() {
           The sample contains six board games, two card game projects, seven
           tabletop RPGs, five miniature or terrain projects and five accessories.
           It includes a cancelled campaign and both older and recent projects.
-          Selection favoured product variety and sources that could be inspected.
+          Selection favored product variety and sources that could be inspected.
           Search terms also included the features being studied, so these counts
           cannot estimate their prevalence across crowdfunding.
         </p>
@@ -219,7 +219,7 @@ export default function TabletopCampaignPageStudyPage() {
           <a href={campaignPageStudy[7].campaignUrl}> Riposte! and Cell Block 18</a>{" "}
           also states when shipping and tax are collected. These are historical
           wording examples. Confirm your own destinations, assumptions and fee
-          timing with the person handling fulfilment before using the{" "}
+          timing with the person handling fulfillment before using the{" "}
           <Link href="/guides/kickstarter-shipping-delivery-page">shipping page guide</Link>.
         </p>
         <h3>Say what a preview contains and how finished it is</h3>
@@ -325,7 +325,7 @@ export default function TabletopCampaignPageStudyPage() {
           This is a single review of accessible text, with no second reviewer or
           visual scoring. Source availability and discovery terms affect what can
           be observed. The review contains no funding outcome dataset, traffic,
-          conversion, advertising or fulfilment measurements. It cannot establish
+          conversion, advertising or fulfillment measurements. It cannot establish
           which presentation choices cause a campaign to fund.
         </p>
 

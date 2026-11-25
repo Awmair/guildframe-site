@@ -49,7 +49,7 @@ export default function BoardGameWebsiteCostPage() {
       category="Board game website cost"
       title="How Much Does a Board Game Website Cost?"
       description="Budget for a board game website by separating the Shopify plan, theme or development, product content and ongoing costs."
-      answer="A board game store budget includes the platform, domain, theme or development, product setup, payment processing and any paid apps. A free theme reduces the theme cost, but you still need to prepare the content and test the store. Get a quote based on your catalogue and required integrations."
+      answer="A board game store budget includes the platform, domain, theme or development, product setup, payment processing and any paid apps. A free theme reduces the theme cost, but you still need to prepare the content and test the store. Get a quote based on your catalog and required integrations."
       published="2026-07-23"
       updated={contentDates.boardGameWebsiteCost}
       readTime="7 minute read"
@@ -173,13 +173,13 @@ export default function BoardGameWebsiteCostPage() {
         yourself. Hire a specialist when the team needs a finished result, has a firm
         launch date or cannot spare the time required for structure, content entry and testing.
       </p>
-      <p>Use the free <Link href="/resources/board-game-shopify-store-checklist">store checklist</Link> to organise your catalogue and compare the build responsibilities before choosing a route.</p>
+      <p>Use the free <Link href="/resources/board-game-shopify-store-checklist">store checklist</Link> to organize your catalog and compare the build responsibilities before choosing a route.</p>
       <p>
         The <Link href="/guides/shopify-developer-vs-diy-theme">Shopify developer vs DIY theme</Link>{" "}
         comparison helps you split the work, and{" "}
         <Link href="/shopify-theme-for-board-games">Shopify theme setup for board games</Link>{" "}
         lists what any theme has to show. When you want a quote for the store
-        work, send the catalogue through the{" "}
+        work, send the catalog through the{" "}
         <Link href="/done-for-you-shopify-store">store planning brief</Link>; the
         backer side sits under <Link href="/post-campaign-support">post campaign support</Link>.
       </p>

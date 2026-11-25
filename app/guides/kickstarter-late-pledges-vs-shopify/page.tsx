@@ -54,7 +54,7 @@ export default function LatePledgesVsShopifyGuide() {
       category="Post campaign strategy"
       title="Selling After Kickstarter: Late Pledges, Preorders or Shopify?"
       description="Compare Kickstarter Late Pledges, retail preorders and Shopify orders after your campaign closes."
-      answer="Use Kickstarter Late Pledges for eligible campaign rewards and the backer workflow. Use Shopify for ongoing retail orders or clearly labelled preorders. Before using both, decide which system owns each order and how you will track stock and delivery updates."
+      answer="Use Kickstarter Late Pledges for eligible campaign rewards and the backer workflow. Use Shopify for ongoing retail orders or clearly labeled preorders. Before using both, decide which system owns each order and how you will track stock and delivery updates."
       published="2026-07-16"
       updated={contentDates.latePledgesVsShopify}
       readTime="7 minute read"
@@ -208,7 +208,7 @@ export default function LatePledgesVsShopifyGuide() {
             { when: "Draft or live", label: "Turn on Late Pledges", detail: "They cannot be enabled after the campaign ends." },
             { when: "After close", label: "Late pledges run", detail: "Eligible rewards stay on sale in the campaign context." },
             { when: "Pledge Manager", label: "Late pledges end", detail: "The Pledge Manager can be set to accept new backers." },
-            { when: "Orders final", label: "Orders sync to Shopify", detail: "Through Kickstarter's Shopify app, for fulfilment.", highlight: true },
+            { when: "Orders final", label: "Orders sync to Shopify", detail: "Through Kickstarter's Shopify app, for fulfillment.", highlight: true },
             { when: "Ongoing", label: "Shopify store sells", detail: "Preorders or stock for new buyers." },
           ],
           source: "Kickstarter Support: Late Pledges and Pledge Manager; Kickstarter app listing, Shopify App Store",
@@ -244,7 +244,7 @@ export default function LatePledgesVsShopifyGuide() {
       <p>
         You may use a campaign, a late pledge window, pledge management and a permanent store at different stages. Keep the order types and responsibilities clear as you move between them.
       </p>
-<h2 id="native-pledge-manager">Moving from Late Pledges to Kickstarter Pledge Manager</h2><p>Kickstarter&apos;s Pledge Manager is a separate next stage for eligible projects. End Late Pledges before launching it. You can configure the manager to accept new backers while collecting the choices, shipping details and applicable payments needed for fulfilment. Check eligibility and settings before announcing the transition.</p><p>Source: <a href="https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager">Kickstarter Pledge Manager help</a>. Use the <Link href="/guides/board-game-pledge-manager-checklist">pledge manager requirements checklist</Link> to test the handoff.</p>
+<h2 id="native-pledge-manager">Moving from Late Pledges to Kickstarter Pledge Manager</h2><p>Kickstarter&apos;s Pledge Manager is a separate next stage for eligible projects. End Late Pledges before launching it. You can configure the manager to accept new backers while collecting the choices, shipping details and applicable payments needed for fulfillment. Check eligibility and settings before announcing the transition.</p><p>Source: <a href="https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager">Kickstarter Pledge Manager help</a>. Use the <Link href="/guides/board-game-pledge-manager-checklist">pledge manager requirements checklist</Link> to test the handoff.</p>
       <h2 id="shopify-app">Where Kickstarter&apos;s Shopify app fits</h2>
       <p>
         Since July 31, 2026, Kickstarter has an official app on the Shopify App

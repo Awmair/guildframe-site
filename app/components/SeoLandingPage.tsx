@@ -166,7 +166,7 @@ export function SeoLandingPage({ content }: { content: LandingPageContent }) {
             <div className="sh-note">
               <div>
                 <h3>Need help after the campaign?</h3>
-                <p>Guildframe can scope product content and artwork adaptation, with optional Shopify planning and setup under a separate brief. Share your catalogue and operating plan to agree the work, price and timing.</p>
+                <p>Guildframe can scope product content and artwork adaptation, with optional Shopify planning and setup under a separate brief. Share your catalog and operating plan to agree the work, price and timing.</p>
               </div>
               <div className="sh-note-links">
                 <Link className="w-btn" href="/post-campaign-support" data-title="After the campaign" data-analytics-event="service_interest" data-analytics-label="Discuss post-campaign support" data-analytics-location={`${content.slug} offer`}><Roll>Explore post campaign support</Roll><Icon name="arrow" /></Link>

@@ -95,7 +95,7 @@ export const newLaunchGuides: LaunchGuide[] = [
         "list": [
           "Can a new reader tell whether this is a board game, card game, book or accessory?",
           "Does the opening image show the reward, not only decorative art?",
-          "Are draft art and prototype components labelled?",
+          "Are draft art and prototype components labeled?",
           "Do the reward details in the preview match the story?"
         ]
       },
@@ -104,7 +104,7 @@ export const newLaunchGuides: LaunchGuide[] = [
         "title": "Leave time to share the page before launch",
         "paragraphs": [
           "When you can start depends on whether you have launched before. First time creators get the Promotion tab after the project is submitted and approved, while repeat creators can open it ahead of review.",
-          "Kickstarter recommends sharing the prelaunch page at least one week before your intended launch date. We treat that as a floor, not a promise of followers. A planned date also doesn't launch the campaign by itself, so name the person who presses launch and have them check the approved campaign first."
+          "Kickstarter recommends sharing the prelaunch page at least one week before your intended launch date. We treat that as a floor, not a promise of followers. In Guildframe's planning example the prelaunch page opens 6 to 12 weeks before launch, so a first time creator submits for review early. A planned date also doesn't launch the campaign by itself, so name the person who presses launch and have them check the approved campaign first."
         ],
         "visual": {
           "kind": "timeline",
@@ -179,22 +179,22 @@ export const newLaunchGuides: LaunchGuide[] = [
     seoTitle: "Board Game Kickstarter Gameplay and Rulebook Guide",
     description: "Show a sample turn, explain player decisions and link your rulebook or playthrough so a new backer can understand your board game.",
     tag: "Gameplay & rules", updated: "2026-11-25", servicePath: "/campaign-design", serviceLabel: "Kickstarter campaign design for tabletop games",
-    answer: "Explain a board game on Kickstarter by stating the player's objective, then showing one representative turn with its decision and result, with the confirmed player count and play time nearby. Link a clearly labelled rulebook or playthrough for readers who want every rule, so the page itself never has to teach them all.",
+    answer: "Explain a board game on Kickstarter by stating the player's objective, then showing one representative turn with its decision and result, with the confirmed player count and play time nearby. Link a clearly labeled rulebook or playthrough for readers who want every rule, so the page itself never has to teach them all.",
     relatedSlugs: ["board-game-kickstarter-page-checklist", "kickstarter-campaign-video-planning", "card-game-kickstarter-launch-guide", "kickstarter-campaign-graphics-mobile-readability"],
     sources: [project, source("How to playtest your board game before launch", "Kickstarter", "https://updates.kickstarter.com/how-to-playtest-your-board-game-before-you-launch-on-kickstarter/"), gamefound],
     sections: [
       { id: "facts", title: "Start with the game your reader will actually play", paragraphs: ["Give the confirmed player count, expected play time and player objective before the setting's history. Mention solo play, cooperative play or a required app if they affect someone's decision to back.", "For an expansion, state the required base game. If the components carry text, name the available languages and say which pieces contain it. Avoid showing an unsupported mode simply because it makes the pitch broader. Then answer these four questions before anything else."], list: ["Who plays, and with how many people?", "What does a player try to achieve?", "What do players choose during a turn or round?", "What ends the game, and how is the result decided?"] },
-      { id: "sample-turn", title: "Show one decision and its consequence", paragraphs: ["Choose a turn that reveals the main choice. A worker placement game might show a player choosing between collecting supplies and completing a contract. A party game might show how a prompt becomes a shared answer.", "Use an actual board or component image with a few readable labels. Show the choice, the change it causes and why the player cares. Save exceptions and edge cases for the rules link.", "This is our suggested layout, not a template Kickstarter requires. The platform asks creators to explain their project, how it will be made and their progress, and gameplay evidence is how a game meets that guidance."], visual: { kind: "steps", title: "One turn told in three beats explains more than a page of rules", caption: "Our layout for a sample turn graphic. Edge cases stay in the linked rulebook.", steps: [{ label: "Starting state", detail: "The board, hand or market the player sees" }, { label: "The decision", detail: "The choice and what it costs them" }, { label: "The result", detail: "What changed and why the player cares" }, { label: "The rules link", detail: "Labelled with version and draft status" }] }, source: 0 },
-      { id: "rulebook", title: "Label the rulebook and test the link", paragraphs: ["Use a link label such as 'Read the draft English rulebook, version 0.8'. That tells a reader what they are opening and whether it can change. Check sharing permissions in a signed out browser so the link does not require access to your private drive.", "If a tutorial replaces or supplements the written rules, say what it covers. An overview video, a full playthrough and the rulebook answer different questions. Put each link near the relevant explanation.", "Kickstarter's playtesting guidance recommends blind testing, where a group learns from the rules without the designer teaching them. The questions from that session improve both the rulebook and the campaign explanation.", "The rulebook does not need its final layout before launch, but the rules should be final in substance, so the game plays the way the page describes. A labelled draft with placeholder art is fine. Rules that could still change how a turn works are a reason to wait."], visual: { kind: "compare", title: "Overview video, playthrough and rulebook each answer a different question", columns: [{ name: "Overview video", points: ["What the game feels like", "Who it suits"], verdict: "Near the opening" }, { name: "Full playthrough", points: ["How a whole game flows", "How long turns take"], verdict: "In the gameplay section", highlight: true }, { name: "Rulebook", points: ["Exact rules and edge cases", "Version and draft status"], verdict: "Linked and tested signed out" }] }, source: 1 },
+      { id: "sample-turn", title: "Show one decision and its consequence", paragraphs: ["Choose a turn that reveals the main choice. A worker placement game might show a player choosing between collecting supplies and completing a contract. A party game might show how a prompt becomes a shared answer.", "Use an actual board or component image with a few readable labels. Show the choice, the change it causes and why the player cares. Save exceptions and edge cases for the rules link.", "This is our suggested layout, not a template Kickstarter requires. The platform asks creators to explain their project, how it will be made and their progress, and gameplay evidence is how a game meets that guidance."], visual: { kind: "steps", title: "One turn told in three beats explains more than a page of rules", caption: "Our layout for a sample turn graphic. Edge cases stay in the linked rulebook.", steps: [{ label: "Starting state", detail: "The board, hand or market the player sees" }, { label: "The decision", detail: "The choice and what it costs them" }, { label: "The result", detail: "What changed and why the player cares" }, { label: "The rules link", detail: "Labeled with version and draft status" }] }, source: 0 },
+      { id: "rulebook", title: "Label the rulebook and test the link", paragraphs: ["Use a link label such as 'Read the draft English rulebook, version 0.8'. That tells a reader what they are opening and whether it can change. Check sharing permissions in a signed out browser so the link does not require access to your private drive.", "If a tutorial replaces or supplements the written rules, say what it covers. An overview video, a full playthrough and the rulebook answer different questions. Put each link near the relevant explanation.", "Kickstarter's playtesting guidance recommends blind testing, where a group learns from the rules without the designer teaching them. The questions from that session improve both the rulebook and the campaign explanation.", "The rulebook does not need its final layout before launch, but the rules should be final in substance, so the game plays the way the page describes. A labeled draft with placeholder art is fine. Rules that could still change how a turn works are a reason to wait."], visual: { kind: "compare", title: "Overview video, playthrough and rulebook each answer a different question", columns: [{ name: "Overview video", points: ["What the game feels like", "Who it suits"], verdict: "Near the opening" }, { name: "Full playthrough", points: ["How a whole game flows", "How long turns take"], verdict: "In the gameplay section", highlight: true }, { name: "Rulebook", points: ["Exact rules and edge cases", "Version and draft status"], verdict: "Linked and tested signed out" }] }, source: 1 },
       { id: "evidence", title: "Use previews as evidence, with permission", paragraphs: ["When you include a review quote, preserve its meaning, credit the reviewer and link to the original preview. Get permission for footage, logos and quotes before putting them in campaign graphics.", "Say whether a reviewer used a prototype or production sample. A preview of unfinished components should not imply that the final edition has already been tested. Keep your own claims about the game separate from the reviewer's words." ] },
       { id: "test", title: "Give the page to someone who has not played", paragraphs: ["Ask the reader to explain a turn and describe who they would play with. Let them read without a live explanation from you. Their questions show which parts the page has failed to communicate.", "Run the same check on a phone. If the labels on a board diagram become tiny, simplify the diagram or split it into steps. Keep essential information in readable text as well as images."], list: ["The reader can name the main decision.", "They can find the player count and supported modes.", "They can open the correct rules without requesting permission.", "They know which images or rules are still provisional."] },
     ],
     faqs: [
-      { question: "Do all board game Kickstarter campaigns need a downloadable rulebook?", answer: "We have not found a universal rulebook download requirement in the cited platform guidance. A clearly labelled rulebook or playable explanation is a useful way to let backers assess your game." },
+      { question: "Do all board game Kickstarter campaigns need a downloadable rulebook?", answer: "We have not found a universal rulebook download requirement in the cited platform guidance. A clearly labeled rulebook or playable explanation is a useful way to let backers assess your game." },
       { question: "Should I link a playthrough video or a rulebook?", answer: "Both, if you have them. An overview video, a full playthrough and the rulebook answer different questions, so put each link beside the explanation it supports." },
       { question: "Should I explain every rule on the campaign page?", answer: "Start with the objective and the main decisions. Put detailed rules and unusual cases in a rulebook or playthrough that readers can choose to open." },
       { question: "Can I show draft rules?", answer: "Label the version and draft status, explain what may change and keep the linked file current. Do not present an unfinished document as final." },
-      { question: "Does my rulebook have to be finished before I launch?", answer: "The rules should be final in substance, so the game plays the way the campaign page describes. The layout and art can still be a labelled draft. If the rules could still change how a turn works, finish the playtesting before you launch." },
+      { question: "Does my rulebook have to be finished before I launch?", answer: "The rules should be final in substance, so the game plays the way the campaign page describes. The layout and art can still be a labeled draft. If the rules could still change how a turn works, finish the playtesting before you launch." },
     ],
   }),
   guide({
@@ -290,7 +290,7 @@ export const newLaunchGuides: LaunchGuide[] = [
         "title": "Use a planning table before an unlock chart",
         "paragraphs": [
           "We fill in the fields below with the real project information before any artwork is made. Uncertain entries stay marked for approval instead of turning into public promises.",
-          "The eligible reward matters as much as the unlock target. A physical bonus may belong to certain boxes but not to a pledge for the PDF only, so name those tiers directly. That one column saves a lot of fulfilment trouble later."
+          "The eligible reward matters as much as the unlock target. A physical bonus may belong to certain boxes but not to a pledge for the PDF only, so name those tiers directly. That one column saves a lot of fulfillment trouble later."
         ],
         "table": {
           "headers": [
@@ -372,7 +372,7 @@ export const newLaunchGuides: LaunchGuide[] = [
         "id": "graphics",
         "title": "Show status and eligibility in the graphic",
         "paragraphs": [
-          "Use a readable target, item name and status label. Repeat the eligibility in text so nobody has to decode an icon, and keep locked and unlocked states distinct without relying on colour alone.",
+          "Use a readable target, item name and status label. Repeat the eligibility in text so nobody has to decode an icon, and keep locked and unlocked states distinct without relying on color alone.",
           "When a goal unlocks, update the story and any affected component or reward summaries. Check that the same product isn't described as both an included bonus and a paid add on. Our [reward tier graphics guide](/guides/kickstarter-reward-tier-graphics) shows how to keep those summaries readable on a phone."
         ],
         "list": [
@@ -496,9 +496,9 @@ export const newLaunchGuides: LaunchGuide[] = [
         "id": "estimates",
         "title": "Build a regional table from real quotes",
         "paragraphs": [
-          "Real quotes make a credible table, so we ask whoever owns the delivery plan for package size, weight, fulfilment origin and destinations. Include likely bundles and add ons before asking for rates.",
+          "Real quotes make a credible table, so we ask whoever owns the delivery plan for package size, weight, fulfillment origin and destinations. Include likely bundles and add ons before asking for rates.",
           "Use the table below as a worksheet. It has no sample prices on purpose, so fill it with approved figures, date the estimate and explain any exclusions right beside it.",
-          "If you ship games made abroad into the United States, import duty belongs in this conversation too. Our guide to board game tariffs and US shipping covers the current rules, and only wording your fulfilment partner confirms should go on the page."
+          "If you ship games made abroad into the United States, import duty belongs in this conversation too. Our guide to board game tariffs and US shipping covers the current rules, and only wording your fulfillment partner confirms should go on the page."
         ],
         "table": {
           "headers": [
@@ -524,7 +524,7 @@ export const newLaunchGuides: LaunchGuide[] = [
             ],
             [
               "Quote date",
-              "Date and conditions of the fulfilment estimate"
+              "Date and conditions of the fulfillment estimate"
             ],
             [
               "Exclusions",
@@ -537,7 +537,7 @@ export const newLaunchGuides: LaunchGuide[] = [
         "id": "dates",
         "title": "Separate production from delivery",
         "paragraphs": [
-          "Backers read your timeline as a promise, so we split it into stages. File approval, manufacturing, freight, warehouse intake and final dispatch each get their own line, and the factory finish date is never labelled as the day a backer receives the game.",
+          "Backers read your timeline as a promise, so we split it into stages. File approval, manufacturing, freight, warehouse intake and final dispatch each get their own line, and the factory finish date is never labeled as the day a backer receives the game.",
           "Kickstarter requires an estimated delivery date on each reward tier. For a bundle, it says the estimate should reflect when all the contents are expected to arrive. Match the tier field to the timeline and explain the known uncertainties."
         ],
         "visual": {
@@ -567,7 +567,7 @@ export const newLaunchGuides: LaunchGuide[] = [
               "highlight": true
             }
           ],
-          "caption": "Example stages. Your fulfilment plan sets the real ones.",
+          "caption": "Example stages. Your fulfillment plan sets the real ones.",
           "source": "Kickstarter Help Center, estimated delivery dates"
         },
         "source": 1
@@ -601,7 +601,7 @@ export const newLaunchGuides: LaunchGuide[] = [
       },
       {
         "question": "Can I show estimated shipping prices?",
-        "answer": "Yes, if you label them as estimates, give their date and assumptions and use approved fulfilment information. Explain collection timing and exclusions beside the figures."
+        "answer": "Yes, if you label them as estimates, give their date and assumptions and use approved fulfillment information. Explain collection timing and exclusions beside the figures."
       },
       {
         "question": "Which delivery date should a bundle show?",
@@ -609,7 +609,7 @@ export const newLaunchGuides: LaunchGuide[] = [
       },
       {
         "question": "How do tariffs affect shipping a board game to the US?",
-        "answer": "Import duty depends on where the game is made and the rules in force when it arrives. Our guide to board game tariffs and US shipping covers the current position. Put only wording your fulfilment partner confirms on the page."
+        "answer": "Import duty depends on where the game is made and the rules in force when it arrives. Our guide to board game tariffs and US shipping covers the current position. Put only wording your fulfillment partner confirms on the page."
       },
       {
         "question": "Who pays for shipping on a Kickstarter, me or the backer?",
@@ -783,7 +783,7 @@ export const newLaunchGuides: LaunchGuide[] = [
         "title": "Check captions and claims before launch",
         "paragraphs": [
           "Status labels belong where readers see the images, not in a distant footer. We check the same labels in component spreads, reward graphics and video captions.",
-          "You approve the final factual claims, and we keep the approved asset list with the design brief, so a replacement image can't quietly change what the page implies. When we design a campaign page, this labelling pass is part of the work, and these four checks close it out."
+          "You approve the final factual claims, and we keep the approved asset list with the design brief, so a replacement image can't quietly change what the page implies. When we design a campaign page, this labeling pass is part of the work, and these four checks close it out."
         ],
         "list": [
           "Every image that isn't final has a clear status.",
@@ -822,7 +822,7 @@ export const newLaunchGuides: LaunchGuide[] = [
     "seoTitle": "How Long Does Kickstarter Take to Approve a Project?",
     "description": "Kickstarter review takes up to 3 business days, plus 3 more if changes are requested. Plan review, revisions and the manual launch with a buffer.",
     "tag": "Review & launch",
-    "answer": "Kickstarter says project review can take up to 3 business days once your project is queued, and if its team requests changes it can take another 3 business days or longer. Approval doesn't publish the campaign, because launching is a manual step, so we suggest submitting about two working weeks before the launch date you announce.",
+    "answer": "Kickstarter says project review can take up to 3 business days once your project is queued, and if its team requests changes it can take another 3 business days or longer. Approval doesn't publish the campaign, because launching is a manual step, so we submit at least 2 weeks before the launch date you announce.",
     "relatedSlugs": [
       "kickstarter-prelaunch-page-guide",
       "board-game-kickstarter-page-checklist",
@@ -879,7 +879,7 @@ export const newLaunchGuides: LaunchGuide[] = [
         "id": "dependencies",
         "title": "Plan the work that must happen before launch",
         "paragraphs": [
-          "We start with the dependencies rather than a universal number of weeks. Your launch needs complete editor fields, accurate rewards, a finished page, platform review and owner approval, and production decisions may block some of those tasks.",
+          "We start with the dependencies rather than a universal number of weeks. Your launch needs complete editor fields, accurate rewards, a finished page, platform review and owner approval, and production decisions may block some of those tasks. As Guildframe's planning example, we start the email list 3 months or more before launch, open the prelaunch page 6 to 12 weeks out and submit for review at least 2 weeks before the date.",
           "Each task gets an owner. We can prepare the copy and graphics, but the creator confirms prices, account information, product facts and delivery plans. Your [prelaunch page](/guides/kickstarter-prelaunch-page-guide) can go live while this work continues, so followers build up during review."
         ],
         "table": {
@@ -953,7 +953,7 @@ export const newLaunchGuides: LaunchGuide[] = [
         "title": "How we build review time into a launch plan",
         "paragraphs": [
           "We plan the review window into every launch schedule we build, because a requested change close to an announced date is an easy way for a launch to slip. Our page work is finished and checked before submission, which leaves the buffer for Kickstarter's questions rather than our own fixes.",
-          "You can manage this yourself with the timeline above. The honest limit is that review, page fixes and prelaunch promotion all land in the same fortnight. If you want that run for you, see our [Kickstarter launch services for tabletop games](/kickstarter-launch-services)."
+          "You can manage this yourself with the timeline above. The honest limit is that review, page fixes and prelaunch promotion all land in the same two weeks. If you want that run for you, see our [Kickstarter launch services for tabletop games](/kickstarter-launch-services)."
         ]
       }
     ],
@@ -972,7 +972,7 @@ export const newLaunchGuides: LaunchGuide[] = [
       },
       {
         "question": "How far ahead should I submit my project for review?",
-        "answer": "We suggest about two working weeks before the date you announce. That covers two review rounds at Kickstarter's published estimates, plus time for your own final checks."
+        "answer": "We submit at least 2 weeks before the date you announce. That covers two review rounds at Kickstarter's published estimates, plus time for your own final checks."
       },
       {
         "question": "How long should a Kickstarter campaign run?",
@@ -1024,9 +1024,9 @@ export const newLaunchGuides: LaunchGuide[] = [
     sources: [project, rewards, source("Board game playtesting before launch", "Kickstarter", "https://updates.kickstarter.com/how-to-playtest-your-board-game-before-you-launch-on-kickstarter/")],
     sections: [
       { id: "product", title: "Name the product and how it is played", paragraphs: ["Tell readers whether this is a complete card game, a starter product for a collectible system or an expansion that requires something else. Give the player count, expected duration and necessary base products using confirmed details.", "Explain the main decision before introducing every faction. A reader should understand what they do on a turn and what they are trying to achieve. Put deeper setting information after that introduction." ] },
-      { id: "cards", title: "Show a few cards that readers can actually read", paragraphs: ["Choose examples that demonstrate the game's choices. Use close ups to explain the information on a card, then show where it fits into a turn. Keep flavour text and rules text distinguishable.", "A large deck spread can show variety, but it rarely explains play on a phone. Pair it with a few readable examples. Label unfinished artwork, wording or layouts rather than making the examples appear final. A sample card section works when it includes these four things."], visual: { kind: "steps", title: "A few readable cards teach more than a full deck spread", caption: "Our layout for a card game sample turn. The full card list lives in the rules or a card reference.", steps: [{ label: "One card, close up", detail: "Cost, effect and flavour text labelled" }, { label: "Put it in a turn", detail: "What the player holds and plays" }, { label: "Show the result", detail: "What changed and why it matters" }, { label: "Link the current rules", detail: "Version labelled, opens signed out" }] }, list: ["A sample card with readable labels", "A short turn or interaction using that card", "The result and why it matters to the player", "A working link to the current rules or demonstration"] },
+      { id: "cards", title: "Show a few cards that readers can actually read", paragraphs: ["Choose examples that demonstrate the game's choices. Use close ups to explain the information on a card, then show where it fits into a turn. Keep flavor text and rules text distinguishable.", "A large deck spread can show variety, but it rarely explains play on a phone. Pair it with a few readable examples. Label unfinished artwork, wording or layouts rather than making the examples appear final. A sample card section works when it includes these four things."], visual: { kind: "steps", title: "A few readable cards teach more than a full deck spread", caption: "Our layout for a card game sample turn. The full card list lives in the rules or a card reference.", steps: [{ label: "One card, close up", detail: "Cost, effect and flavor text labeled" }, { label: "Put it in a turn", detail: "What the player holds and plays" }, { label: "Show the result", detail: "What changed and why it matters" }, { label: "Link the current rules", detail: "Version labeled, opens signed out" }] }, list: ["A sample card with readable labels", "A short turn or interaction using that card", "The result and why it matters to the player", "A working link to the current rules or demonstration"] },
       { id: "contents", title: "Make counts and product types explicit", paragraphs: ["Confirm the card count, number of decks, accessories and language in each reward. If a tier contains two copies of the game, say that instead of relying on a repeated box render.", "For a collectible game, explain what the creator has confirmed about pack size, fixed contents, random contents and available products. Do not promise a specific card, rarity distribution or collecting outcome unless it is actually guaranteed by the approved product specification."], visual: { kind: "compare", title: "Each card product type needs different reward wording", columns: [{ name: "Complete game", points: ["Exact decks and total cards", "Accessories included", "Player count it supports"], verdict: "Count everything" }, { name: "Starter product", points: ["Who can play with it", "What else they need", "How it links to packs"], verdict: "Say what is missing", highlight: true }, { name: "Packs or boosters", points: ["Approved pack size", "Fixed versus random contents", "No promised rarity"], verdict: "Only what is guaranteed" }] }, table: { headers: ["Reward detail", "What the page needs"], rows: [["Complete game", "Exact decks, total cards and required accessories"], ["Starter product", "Who can play with it and what else is needed"], ["Packs or boosters", "Approved counts and clear fixed versus random wording"], ["Expansion", "Required base game and included new content"], ["Bundle", "Exact product names, quantities and optional extras"]] }, source: 1 },
-      { id: "proof", title: "Show rules evidence and the product's status", paragraphs: ["Provide draft rules or a playthrough where available, with the version clearly labelled. Let someone learn the game without you explaining it beside them; Kickstarter's playtesting article recommends that kind of blind test for finding gaps in rules.", "For physical cards, say which manufacturing details are approved and which are still pending. Do not turn a design mockup into a claim about finished card stock, printing or packaging."], source: 2 },
+      { id: "proof", title: "Show rules evidence and the product's status", paragraphs: ["Provide draft rules or a playthrough where available, with the version clearly labeled. Let someone learn the game without you explaining it beside them; Kickstarter's playtesting article recommends that kind of blind test for finding gaps in rules.", "For physical cards, say which manufacturing details are approved and which are still pending. Do not turn a design mockup into a claim about finished card stock, printing or packaging."], source: 2 },
       { id: "review", title: "Review the reward picker alongside the story", paragraphs: ["Use the same deck and edition names in native rewards, comparison graphics and the component list. Make digital downloads, optional accessories and additional copies easy to identify.", "Check the preview on a phone. Ask someone to choose the smallest reward that lets their group play, then explain what it contains. If they cannot answer, revise the reward names or comparison before adding more artwork. We run that same check on every card game page we design, before the creator approves launch." ] },
     ],
     faqs: [
@@ -1045,7 +1045,7 @@ export const newLaunchGuides: LaunchGuide[] = [
     "updated": "2026-11-25",
     "servicePath": "/miniatures-kickstarter-campaign-design",
     "serviceLabel": "Miniatures and terrain Kickstarter campaign design",
-    "answer": "A miniatures or STL Kickstarter page has to say, for every reward, whether the backer gets physical models, digital files or both. We put that format in the reward name, show scale with approved measurements and keep shipping for models separate from file delivery and licence terms.",
+    "answer": "A miniatures or STL Kickstarter page has to say, for every reward, whether the backer gets physical models, digital files or both. We put that format in the reward name, show scale with approved measurements and keep shipping for models separate from file delivery and license terms.",
     "relatedSlugs": [
       "terrain-and-dice-kickstarter-launch-guide",
       "kickstarter-prototype-risks-disclosure",
@@ -1100,7 +1100,7 @@ export const newLaunchGuides: LaunchGuide[] = [
               "points": [
                 "File formats and versions",
                 "Delivery method",
-                "Usage and licence terms"
+                "Usage and license terms"
               ]
             },
             {
@@ -1162,7 +1162,7 @@ export const newLaunchGuides: LaunchGuide[] = [
         "title": "Explain what file backers will receive",
         "paragraphs": [
           "Tell file backers which formats and versions are included, how they will receive them and which usage terms apply. Mention supported or unsupported versions only once that has been confirmed.",
-          "We use your approved licence text and tested print information. A render can't support a promise that every printer will succeed, so if you tested a particular process or setup, we state exactly what was tested."
+          "We use your approved license text and tested print information. A render can't support a promise that every printer will succeed, so if you tested a particular process or setup, we state exactly what was tested."
         ],
         "visual": {
           "kind": "checklist",
@@ -1174,7 +1174,7 @@ export const newLaunchGuides: LaunchGuide[] = [
                 "Formats included",
                 "Supported versions, if confirmed",
                 "How files are delivered",
-                "Usage and licence terms",
+                "Usage and license terms",
                 "Which print setup was tested"
               ]
             },

@@ -9,8 +9,17 @@ import { absoluteUrl, pageMetadata } from "../site-config";
 import { caseStudies, workDate } from "../case-studies";
 import { beyondTabletop } from "../past-work";
 import { formatContentDate } from "../content-dates";
+import { GuideVisual, type GuideVisualData } from "../components/GuideVisual";
 
 export const metadata = pageMetadata({ title: "Tabletop Kickstarter Campaign Design Case Studies", description: "Campaign design for ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers: Umair's contribution, design choices and the published pages.", path: "/work" });
+
+// Built from the case study data, so the categories and roles always match the cards below.
+const categoryVisual: GuideVisualData = {
+  kind: "compare",
+  title: "Four case studies cover four tabletop categories",
+  columns: caseStudies.map(project => ({ name: project.category, points: [project.name, project.contributionSummary] })),
+  caption: "Each case study links to the published Kickstarter campaign. Funding totals are the creators' results.",
+};
 
 const nextLinks = [
   { href: "/campaign-creative", label: "Discuss creative production" },
@@ -34,7 +43,7 @@ export default function WorkPage() {
           <h1 className="wk-title" data-reveal="lines"><span className="w-line"><span>Tabletop campaign</span></span> <span className="w-line"><span><em>design case studies.</em></span></span></h1>
           <div className="wk-hero-foot">
             <div className="wk-hero-lead" data-reveal="rise">
-              <p>RPG accessories, modular terrain and card storage. Each case study shows the project, my contribution and the design choices behind the campaign presentation.</p>
+              <p>A survival horror board game, an RPG accessory, modular terrain and card storage. Each case study shows the project, my contribution and the design choices behind the campaign presentation.</p>
               <p className="wk-updated">Updated <time dateTime={workDate}>{formatContentDate(workDate)}</time></p>
             </div>
             <div className="wk-total" data-reveal="rise">
@@ -45,6 +54,10 @@ export default function WorkPage() {
           </div>
         </div>
       </header>
+
+      <section className="wk-wrap" aria-label="Case studies by category">
+        <GuideVisual data={categoryVisual} />
+      </section>
 
       <section className="wk-deck" aria-label="Client case studies">
         {caseStudies.map((project, index) => <article className="wk-card" aria-labelledby={`project-${project.slug}`} key={project.slug} style={{ "--tone": caseTones[project.slug] ?? caseTones["scented-realms"], "--stack": index } as React.CSSProperties}>

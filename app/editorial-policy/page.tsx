@@ -69,7 +69,7 @@ export default function EditorialPolicyPage() {
           <p>
             Guildframe offers Kickstarter and Gamefound launch services, including campaign creative, prelaunch, paid advertising and live support.
             Broader projects use a scoped quote. The design only price is listed on its service page.
-            A free mockup explores an opening campaign section. Concept mockups are labelled separately from the client campaigns in Past work. Client quotes are short, verbatim excerpts matched to their projects.
+            A free mockup explores an opening campaign section. Concept mockups are labeled separately from the client campaigns in Past work. Client quotes are short, verbatim excerpts matched to their projects.
             We do not claim funding results or guaranteed search rankings.
           </p>
           <p>

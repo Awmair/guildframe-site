@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Does moving to Shopify replace Kickstarter or a pledge manager?",
-    answer: "No. Kickstarter stays the campaign and backer communication record, and the pledge manager still collects surveys, upgrades and add ons. Shopify becomes the permanent store, and can also receive backer orders for fulfilment.",
+    answer: "No. Kickstarter stays the campaign and backer communication record, and the pledge manager still collects surveys, upgrades and add ons. Shopify becomes the permanent store, and can also receive backer orders for fulfillment.",
   },
   {
     question: "What order should I work through the checklist in?",

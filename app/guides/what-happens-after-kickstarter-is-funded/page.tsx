@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "What is new in Kickstarter's Pledge Manager in 2026?",
     answer:
-      "The 2026 updates include VAT options, address locking by segment for shipping in waves, multiple tracking numbers, digital reward delivery, backer self serve add ons and creator order editing. A free Kickstarter app for Shopify, listed since July 31, 2026, sends finalised orders to a Shopify store.",
+      "The 2026 updates include VAT options, address locking by segment for shipping in waves, multiple tracking numbers, digital reward delivery, backer self serve add ons and creator order editing. A free Kickstarter app for Shopify, listed since July 31, 2026, sends finalized orders to a Shopify store.",
   },
   {
     question: "Can people still buy after a Kickstarter campaign ends?",
@@ -154,7 +154,7 @@ export default function WhatHappensAfterKickstarterPage() {
             { when: "3 to 14 business days later", label: "Funds arrive", detail: "Timing depends on your bank" },
             { when: "Day 28", label: "Still nothing?", detail: "Check your bank, then contact Kickstarter" },
             { when: "When rewards are settled", label: "Pledge manager opens", detail: "Review up to 5 business days, open 3 weeks or more" },
-            { when: "Following months", label: "Production and delivery", detail: "Samples, freight, fulfilment, updates" },
+            { when: "Following months", label: "Production and delivery", detail: "Samples, freight, fulfillment, updates" },
           ],
           caption: "Calendar days after the campaign deadline unless marked. Production timing depends on your suppliers.",
           source: "Kickstarter Help Center, checked November 25, 2026",
@@ -190,7 +190,7 @@ export default function WhatHappensAfterKickstarterPage() {
         before opening it, and it must stay open for at least 3 weeks.
       </p>
       <p>
-        The 2026 updates matter for tabletop fulfilment in particular. Here are the
+        The 2026 updates matter for tabletop fulfillment in particular. Here are the
         ones worth checking first for a funded game.
       </p>
       <GuideVisual
@@ -203,7 +203,7 @@ export default function WhatHappensAfterKickstarterPage() {
               items: [
                 "Lock addresses by segment to ship in waves (June 1)",
                 "Add several tracking numbers to one pledge (March 31)",
-                "Send finalised orders to Shopify with Kickstarter's free app (July 31)",
+                "Send finalized orders to Shopify with Kickstarter's free app (July 31)",
               ],
             },
             {
@@ -226,7 +226,7 @@ export default function WhatHappensAfterKickstarterPage() {
 
       <h2 id="fulfillment">Produce and deliver the rewards</h2>
       <p>
-        After funding, finalise files, place production orders, inspect samples, arrange freight and collect missing delivery details. Keep a record of each reward, extra, quantity, address and fulfilment status.
+        After funding, finalize files, place production orders, inspect samples, arrange freight and collect missing delivery details. Keep a record of each reward, extra, quantity, address and fulfillment status.
       </p>
       <ArticleTable
         caption="The post funding operating sequence"
@@ -282,7 +282,7 @@ export default function WhatHappensAfterKickstarterPage() {
         <li>Tell backers whether the store changes anything about their fulfillment.</li>
       </ul>
       <p>
-        Use the <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link> for the complete storefront implementation sequence. Decide whether to build the store yourself or hire a developer after reviewing your catalogue and operating requirements.
+        Use the <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link> for the complete storefront implementation sequence. Decide whether to build the store yourself or hire a developer after reviewing your catalog and operating requirements.
       </p>
 
       <h2 id="roadmap">Steps after your Kickstarter is funded</h2>
@@ -297,9 +297,9 @@ export default function WhatHappensAfterKickstarterPage() {
         <li>Keep backer fulfillment and new retail orders clearly separated</li>
       </ol>
       <p>
-        You can prepare the permanent store while fulfilment continues. Open sales when inventory, delivery timing and the process for new orders are ready.
+        You can prepare the permanent store while fulfillment continues. Open sales when inventory, delivery timing and the process for new orders are ready.
       </p>
-<h2 id="choose-order-owner">Choose who owns the backer order</h2><p>An eligible project can use Kickstarter&apos;s native Pledge Manager for backer selections and applicable shipping and tax payments. An external manager may suit a different fulfilment workflow. A permanent retail store handles ongoing sales, but it does not automatically reconcile your existing backer obligations.</p><p>Before choosing, test an existing backer, an upgrade and a new buyer. Confirm which system records each payment and which exports reach your fulfilment partner. See <a href="https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager">Kickstarter&apos;s eligibility and setup guidance</a> and our <Link href="/guides/board-game-pledge-manager-checklist">pledge manager checklist</Link>.</p>
+<h2 id="choose-order-owner">Choose who owns the backer order</h2><p>An eligible project can use Kickstarter&apos;s native Pledge Manager for backer selections and applicable shipping and tax payments. An external manager may suit a different fulfillment workflow. A permanent retail store handles ongoing sales, but it does not automatically reconcile your existing backer obligations.</p><p>Before choosing, test an existing backer, an upgrade and a new buyer. Confirm which system records each payment and which exports reach your fulfillment partner. See <a href="https://help.kickstarter.com/en-us/articles/16236383-how-do-i-use-kickstarter-s-pledge-manager">Kickstarter&apos;s eligibility and setup guidance</a> and our <Link href="/guides/board-game-pledge-manager-checklist">pledge manager checklist</Link>.</p>
       <h2 id="help">Get help with the work after funding</h2>
       <p>
         We support funded tabletop creators with backer updates, pledge manager

@@ -34,12 +34,12 @@ const faqs = [
   {
     question: "Can I move Kickstarter backers into Shopify as customers?",
     answer:
-      "Backer orders can reach Shopify through the app for fulfilment. That is different from adding backers to your marketing list. Follow the permissions attached to the backer data, and invite backers to join your store list rather than subscribing them yourself.",
+      "Backer orders can reach Shopify through the app for fulfillment. That is different from adding backers to your marketing list. Follow the permissions attached to the backer data, and invite backers to join your store list rather than subscribing them yourself.",
   },
   {
     question: "Does Shopify replace a pledge manager?",
     answer:
-      "Usually not. The pledge manager still collects surveys, shipping details, upgrades and add ons from backers. Shopify becomes the permanent store for new buyers, and with the Kickstarter app it can also receive finalized backer orders for fulfilment.",
+      "Usually not. The pledge manager still collects surveys, shipping details, upgrades and add ons from backers. Shopify becomes the permanent store for new buyers, and with the Kickstarter app it can also receive finalized backer orders for fulfillment.",
   },
   {
     question: "What if I used BackerKit or Gamefound instead of Kickstarter's Pledge Manager?",
@@ -184,7 +184,7 @@ export default function MoveKickstarterToShopifyGuide() {
         The listing describes three jobs. The app sends finalized Pledge Manager
         orders to Shopify, matches rewards to existing products and variants, and
         syncs tracking numbers back to Kickstarter. It does not create your
-        products, so the catalogue has to be built first.
+        products, so the catalog has to be built first.
       </p>
       <ArticleCallout>
         <strong>The honest limit:</strong> the app reads orders from
@@ -203,7 +203,7 @@ export default function MoveKickstarterToShopifyGuide() {
       <h2 id="backer-data">Keep backer data and marketing permission separate</h2>
       <p>
         An order in Shopify is not the same as permission to email someone.
-        Backer orders that arrive for fulfilment still carry the terms the backer
+        Backer orders that arrive for fulfillment still carry the terms the backer
         agreed to on Kickstarter.
       </p>
       <ArticleTable
@@ -211,7 +211,7 @@ export default function MoveKickstarterToShopifyGuide() {
         headers={["Information", "Use it for", "Do not use it for"]}
         rows={[
           ["Synced Pledge Manager order", "Picking, packing and tracking the reward", "Adding the backer to a store newsletter"],
-          ["Backer report", "Backer and fulfilment management", "Building a customer list without consent"],
+          ["Backer report", "Backer and fulfillment management", "Building a customer list without consent"],
           ["Store signup", "Store news, restocks and new releases", "Changing what a backer was promised"],
         ]}
       />
@@ -231,7 +231,7 @@ export default function MoveKickstarterToShopifyGuide() {
         headers={["Campaign asset", "Store destination", "What changes"]}
         rows={[
           ["Hero art and promise", "Homepage or collection header", "Shorter, with a direct path to the products"],
-          ["Reward tiers", "Products, variants and bundles", "Organised around buyer choices, not pledge levels"],
+          ["Reward tiers", "Products, variants and bundles", "Organized around buyer choices, not pledge levels"],
           ["How to play", "Product page and a rules page", "Keep the clearest explanation, drop the campaign repetition"],
           ["Creator story", "About page", "Keep the trust, add what you are making next"],
           ["Campaign FAQ", "Product FAQ and policy pages", "Updated for delivery, returns and stock"],
@@ -273,7 +273,7 @@ export default function MoveKickstarterToShopifyGuide() {
         <li>The final store test: <Link href="/resources/board-game-shopify-store-checklist">board game Shopify store checklist</Link>.</li>
       </ul>
       <p>
-        Doing the move yourself is realistic when the catalogue is small and you
+        Doing the move yourself is realistic when the catalog is small and you
         have time to rewrite the content. When you would rather hand over the
         backer communication and product content, our{" "}
         <Link href="/post-campaign-support">post campaign support</Link>{" "}
