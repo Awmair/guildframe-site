@@ -347,7 +347,7 @@ test("exports AEO and social metadata", async () => {
   assert.doesNotMatch(homepage, /"@type":"Audience"/i);
   assert.doesNotMatch(homepage, /OutOfStock/i);
   assert.doesNotMatch(homepage, /<script\b[^>]*\bsrc="https:\/\/(?:www\.googletagmanager\.com|www\.clarity\.ms)\//i);
-  assert.doesNotMatch(visibleText(homepage), /Your analytics choice/);
+  assert.match(visibleText(homepage), /Your analytics choice/);
 
   const homepageImages = homepage.match(/<img\b[^>]*>/gi) ?? [];
   assert.ok(homepageImages.length > 0, "Homepage should contain images");

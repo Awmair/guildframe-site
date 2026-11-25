@@ -118,9 +118,10 @@ export function Analytics() {
     {accepted && clarityProjectId ? <Script id="guildframe-microsoft-clarity" strategy="afterInteractive">
       {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};c[a]('consentv2',{analytics_Storage:'granted',ad_Storage:'denied'});t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${clarityProjectId}");`}
     </Script> : null}
-    {choicesOpen ? <section className="analytics-consent" aria-labelledby="analytics-consent-title" aria-describedby="analytics-consent-description">
-      <div><h2 id="analytics-consent-title" tabIndex={-1} ref={titleRef}>Your analytics choice</h2><p id="analytics-consent-description">With your permission, Google Analytics and Microsoft Clarity help me understand how this site is used. You can browse and send a project without them. <Link href="/privacy#analytics">Read about privacy</Link>.</p></div>
-      <div className="analytics-consent-actions"><button type="button" onClick={() => chooseConsent("accepted")}>Accept analytics</button><button type="button" onClick={() => chooseConsent("declined")}>Decline analytics</button></div>
+    {consent === null || choicesOpen ? <section className="analytics-consent" aria-labelledby="analytics-consent-title" aria-describedby="analytics-consent-description">
+      <h2 id="analytics-consent-title" className="gf-sr-only" tabIndex={-1} ref={titleRef}>Your analytics choice</h2>
+      <p id="analytics-consent-description">Allow analytics cookies? <Link href="/privacy#analytics">Privacy</Link></p>
+      <div className="analytics-consent-actions"><button type="button" onClick={() => chooseConsent("accepted")}>Allow</button><button type="button" onClick={() => chooseConsent("declined")}>No thanks</button></div>
     </section> : null}
   </>;
 }
