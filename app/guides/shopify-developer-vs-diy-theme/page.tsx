@@ -7,6 +7,7 @@ import {
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
 import {contentDates} from "../../content-dates";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "Shopify Developer vs DIY Theme",
@@ -132,6 +133,19 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         ]}
       />
 
+      <GuideVisual
+        data={{
+          kind: "compare",
+          title: "Either way, you still supply the facts and approve the store",
+          columns: [
+            { name: "DIY theme", points: ["You plan the catalogue", "You enter products and test", "You maintain the store"], verdict: "Fits a mapped catalogue and spare time" },
+            { name: "Shopify developer", points: ["Plans the structure with you", "Adapts the theme to your brand", "Hands over access and training"], verdict: "Fits editions, integrations or a firm date", highlight: true },
+            { name: "Split the work", points: ["You configure the theme", "Help with copy, art or one integration", "One named person runs the final test"], verdict: "Fits a team with some time" },
+          ],
+          source: "Guildframe comparison; Shopify Partner hiring guidance",
+        }}
+      />
+
       <h2 id="diy">When to build the store yourself</h2>
       <p>
         A premium theme is the efficient route when the store does not need a new
@@ -214,16 +228,16 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         Record who tests the completed store when several people contribute.
       </p>
       <aside className="article-next-step">
-        <h2>Need help with the campaign-to-store handoff?</h2>
+        <h2>Need help handing the campaign over to a store?</h2>
         <p>
           Guildframe can scope the product content, artwork adaptation and
-          post-campaign communication. Optional Shopify planning and setup need a
+          post campaign communication. Optional Shopify planning and setup need a
           separate brief, with the catalogue, responsibilities and launch checks
           agreed before work starts.
         </p>
         <p>
           <Link href="/done-for-you-shopify-store" data-analytics-event="service_interest" data-analytics-label="Scope my Shopify store" data-analytics-location="developer versus DIY guide">See what to include in your store brief</Link>{" "}
-          or review <Link href="/post-campaign-support">post-campaign support</Link>.
+          or review <Link href="/post-campaign-support">post campaign support</Link>.
         </p>
       </aside>
 
@@ -242,7 +256,9 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         If you hire help, use the same checklist to agree who owns the catalogue,
         content, testing and publication tasks. The{" "}
         <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify timeline</Link>{" "}
-        shows where those tasks fit around campaign fulfilment.
+        shows where those tasks fit around campaign fulfilment, and the{" "}
+        <Link href="/guides/move-from-kickstarter-to-shopify">migration guide</Link>{" "}
+        sorts what moves from the campaign into the store.
       </p>
       <ArticleCallout>
         Choose a theme if you’ll do the setup yourself. If you hire a developer, agree which parts of the finished store they’re responsible for.

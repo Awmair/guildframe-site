@@ -59,7 +59,7 @@ export function SeoArticlePage({
 }) {
   const canonicalPath = path ?? `/guides/${slug}`;
   const articleToc = collectionHref === "/guides" && guideWorkbooks[slug] ? [...toc.filter(item=>item.id!=="faq"),{id:"put-it-to-work",label:"Put it to work"},...toc.filter(item=>item.id==="faq")] : toc;
-  const isStoreGuide = /shopify|board-game-website-cost|kickstarter-is-funded|selling-miniatures-internationally-vat-ioss/.test(slug);
+  const isStoreGuide = /shopify|board-game-website-cost|kickstarter-is-funded|selling-miniatures-internationally-vat-ioss|product-page-checklist/.test(slug);
   const servicePath = isStoreGuide ? "/done-for-you-shopify-store" : siteConfig.purchasePath;
   const serviceLabel = isStoreGuide ? "Discuss your tabletop store" : "Explore launch services";
 

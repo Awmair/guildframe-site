@@ -7,6 +7,7 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "How to Sell Board Game Preorders on Shopify",
@@ -83,6 +84,11 @@ export default function SellBoardGamePreordersOnShopifyPage() {
           label: "Eligibility and considerations for product bundles",
           publisher: "Shopify Help Center",
           href: "https://help.shopify.com/en/manual/products/bundles/eligibility-and-considerations",
+        },
+        {
+          label: "Kickstarter app for Shopify",
+          publisher: "Shopify App Store",
+          href: "https://apps.shopify.com/kickstarter",
         },
         {
           label: "Late Pledges Common Questions",
@@ -185,6 +191,21 @@ export default function SellBoardGamePreordersOnShopifyPage() {
           ["Remaining for new sales", "225", "1,500 minus 1,100 minus 75 minus 100"],
         ]}
       />
+      <GuideVisual
+        data={{
+          kind: "split",
+          title: "Backers take most of the run before the store sees a unit",
+          total: "Example: a hypothetical 1,500 unit print run for one edition",
+          parts: [
+            { label: "Backer rewards", share: 1100, display: "1,100" },
+            { label: "Retailer commitments", share: 100, display: "100" },
+            { label: "Replacement and damage reserve", share: 75, display: "75" },
+            { label: "Shopify preorders", share: 125, display: "125" },
+            { label: "Late pledges", share: 100, display: "100" },
+          ],
+          caption: "Illustrative numbers from the worked example on this page, not a recommended reserve.",
+        }}
+      />
       <p>
         The creator could allocate 125 of those units to Shopify preorders and 100
         to late pledges. After 90 store orders and 60 late pledges, 75 remain: 35 in
@@ -197,6 +218,14 @@ export default function SellBoardGamePreordersOnShopifyPage() {
         the review frequency. Apply the calculation separately to each edition and
         language. When cartons arrive, replace the production estimate with the
         usable quantity the warehouse confirms before offering immediate dispatch.
+      </p>
+
+      <p>
+        If you ship backer rewards through Shopify with Kickstarter&apos;s official
+        app, listed on July 31, 2026, finalized Pledge Manager orders arrive in the
+        same Shopify order list as your preorders. Tag or segment them on arrival so
+        the warehouse and support team can tell a backer reward from a store
+        preorder at a glance.
       </p>
 
       <h2 id="copy">Write preorder copy at the buying point</h2>
@@ -284,7 +313,17 @@ export default function SellBoardGamePreordersOnShopifyPage() {
         Shopify gives the preorder an ongoing customer and order context. A
         <Link href="/shopify-theme-for-board-games"> board game Shopify theme</Link>
         should make the edition, included components and delivery status clear on
-        mobile before adding visual complexity.
+        mobile before adding visual complexity. The{" "}
+        <Link href="/resources/board-game-product-page-checklist">board game product page checklist</Link>{" "}
+        shows where the preorder line sits on the page, and the{" "}
+        <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link>{" "}
+        shows when preorders can open.
+      </p>
+      <p>
+        If you want the preorder pages and backer updates written for you, our{" "}
+        <Link href="/post-campaign-support">post campaign support</Link> covers
+        them, and the <Link href="/done-for-you-shopify-store">store planning brief</Link>{" "}
+        scopes the Shopify setup.
       </p>
     </SeoArticlePage>
   );

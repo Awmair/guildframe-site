@@ -5,13 +5,14 @@ import {
   ArticleTable,
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
+import { GuideVisual } from "../../components/GuideVisual";
 import { pageMetadata } from "../../site-config";
-import {contentDates} from "../../content-dates";
+import { contentDates } from "../../content-dates";
 
 export const metadata = pageMetadata({
   title: "Kickstarter to Shopify Launch Timeline",
   description:
-    "A practical Kickstarter to Shopify timeline covering campaign close, catalog preparation, fulfillment boundaries, store testing and launch.",
+    "When to open a Shopify store after Kickstarter, with the order of work from campaign close to the first store order and the check that ends each stage.",
   path: "/guides/kickstarter-to-shopify-launch-timeline",
   kind: "article",
   publishedTime: "2026-07-17",
@@ -19,25 +20,31 @@ export const metadata = pageMetadata({
   keywords: [
     "Kickstarter to Shopify timeline",
     "when to launch Shopify after Kickstarter",
+    "when to open a store after Kickstarter",
     "post Kickstarter store launch plan",
   ],
 });
 
 const faqs = [
   {
-    question: "When should I start building Shopify after Kickstarter?",
+    question: "When should I open my Shopify store after Kickstarter?",
     answer:
-      "Start planning during the campaign, but build against final product, pricing and fulfillment facts. A focused store can be prepared while campaign fulfillment continues as long as new orders and backer rewards remain clearly separated.",
+      "Open it for orders when you can ship a new order without using stock reserved for backers. For most creators that comes after the pledge manager locks and stock is allocated. Build the store earlier, because Kickstarter's Shopify app needs products in place before backer orders sync.",
   },
   {
-    question: "Should the store launch before backers receive their rewards?",
+    question: "When should I start building the store?",
     answer:
-      "It can, but only when delivery timing is explicit and the launch will not create a reasonable impression that retail customers are being prioritized over backers. Many creators prepare the store early and control product availability until operations are ready.",
+      "Start planning while the campaign is live and build once products and prices are final, usually during the pledge manager stage. If you will ship backer rewards through Shopify with the Kickstarter app, the products and variants must exist before you map rewards.",
+  },
+  {
+    question: "Should the store open before backers receive their rewards?",
+    answer:
+      "It can, as long as delivery timing is explicit and nobody could reasonably think store buyers are shipping ahead of backers. Many creators open with a signup or clearly labelled preorders first and switch to in stock orders after rewards ship.",
   },
   {
     question: "How long does a Shopify store take after Kickstarter?",
     answer:
-      "There is no fixed interval after campaign close. The build depends on final assets, catalogue complexity, integrations and review speed; the sales opening also depends on inventory and fulfilment readiness. Guildframe scopes optional store planning and setup under a separate brief before agreeing timing.",
+      "There is no fixed interval after campaign close. The build depends on final assets, catalogue size, integrations and review speed, and the opening depends on stock and fulfilment. We agree timing after reviewing the catalogue and the delivery plan.",
   },
 ];
 
@@ -47,22 +54,22 @@ export default function KickstarterToShopifyTimelinePage() {
       slug="kickstarter-to-shopify-launch-timeline"
       category="Post campaign launch planning"
       title="Kickstarter to Shopify Launch Timeline"
-      description="Plan your Shopify store before the campaign closes, then build and test it once the products and delivery details are confirmed."
-      answer="Start domain, product and artwork preparation during the campaign. After funding, confirm product prices, inventory and delivery terms, build the store and test checkout. Open sales when you can fulfil new orders accurately. The schedule depends on those decisions and the build scope."
+      description="Build the store while the pledge manager is open, then open it for orders once backer stock is set aside. Here is the order of work and the check that ends each stage."
+      answer="Open your Shopify store for orders once backer stock is set aside and you can ship a new order without delaying a reward, which for most creators comes after the pledge manager locks. Build it earlier, because Kickstarter's Shopify app needs your products in place before backer orders can sync."
       published="2026-07-17"
       updated={contentDates.kickstarterToShopifyTimeline}
-      readTime="8 minute read"
+      readTime="7 minute read"
       faqs={faqs}
       sources={[
         {
-          label: "How to Transition From Kickstarter to Shopify",
-          publisher: "Shopify",
-          href: "https://www.shopify.com/uk/blog/how-to-transition-from-kickstarter-to-shopify",
+          label: "Kickstarter app for Shopify",
+          publisher: "Shopify App Store",
+          href: "https://apps.shopify.com/kickstarter",
         },
         {
-          label: "Products",
-          publisher: "Shopify Help Center",
-          href: "https://help.shopify.com/en/manual/products",
+          label: "Kickstarter release notes",
+          publisher: "Kickstarter",
+          href: "https://start.kickstarter.com/kickstarter-release-notes",
         },
         {
           label: "How can I use my project's backer report?",
@@ -76,158 +83,173 @@ export default function KickstarterToShopifyTimelinePage() {
         },
       ]}
       toc={[
-        { id: "timeline", label: "Recommended timeline" },
-        { id: "before-close", label: "Before campaign close" },
-        { id: "week-one", label: "After funding" },
-        { id: "build", label: "Store build" },
-        { id: "sales-path", label: "Choose the sales opening" },
-        { id: "testing", label: "Testing and review" },
-        { id: "launch-gate", label: "Launch gate" },
+        { id: "timeline", label: "The timeline at a glance" },
+        { id: "campaign-live", label: "While the campaign is live" },
+        { id: "pledge-manager", label: "While the pledge manager is open" },
+        { id: "orders-lock", label: "When backer orders lock" },
+        { id: "opening", label: "Choose how the store opens" },
+        { id: "launch-gate", label: "The final gate" },
         { id: "faq", label: "Quick answers" },
       ]}
     >
       <ArticleDefinition term="Launch timeline">
-        The sequence that moves a funded tabletop project from campaign facts to a
-        tested public store. It is a readiness framework, not a promise that every
-        campaign should open retail sales on the same day.
+        The order of work that takes a funded tabletop project from campaign close
+        to its first store order. It runs on milestones, not calendar weeks,
+        because every campaign reaches them at a different pace.
       </ArticleDefinition>
 
-      <h2 id="timeline">Recommended Kickstarter to Shopify timeline</h2>
+      <h2 id="timeline">The Kickstarter to Shopify timeline at a glance</h2>
       <p>
-        Work backward from the first order you can fulfil. Some preparation can
-        happen during the campaign, but campaign close does not start a universal
-        countdown to retail. These phases can overlap; do not announce a store
-        opening until the required decisions and tests are complete.
+        We plan the store against campaign milestones rather than a countdown from
+        close day. Each stage ends with one check, and the next stage waits until
+        that check passes.
       </p>
-      <ArticleTable
-        caption="A practical post campaign storefront sequence"
-        headers={["Phase", "Primary work", "Exit condition"]}
-        rows={[
-          ["During campaign", "Reserve domain, inventory assets and draft the catalog", "One owner and one source of truth are named"],
-          ["After campaign details are confirmed", "Lock products, prices, variants and order boundaries", "New store offers match the production and fulfilment plan"],
-          ["While production or fulfilment continues", "Build products, navigation, policies and campaign story", "The draft store is ready for review; sales can remain closed"],
-          ["Before accepting public orders", "Test mobile, checkout, tax, shipping and notifications", "Test orders and the order handoff pass; live payment mode is restored"],
-          ["Launch", "Open the intended products and communicate clearly", "Backers and new buyers understand what happens next"],
-          ["After launch", "Monitor support, search, conversion and inventory", "Issues are documented and corrected quickly"],
-        ]}
+      <GuideVisual
+        data={{
+          kind: "timeline",
+          title: "The store is built early but opens late",
+          events: [
+            { when: "Campaign live", label: "Plan the catalogue", detail: "List what stays on sale after the campaign." },
+            { when: "Close day", label: "Lock products and prices", detail: "Final names, SKUs and variants agreed." },
+            { when: "Pledge manager open", label: "Build the store", detail: "Products must exist before rewards can be mapped.", highlight: true },
+            { when: "Backer orders lock", label: "Sync and allocate", detail: "Backer orders reach Shopify; reward stock is set aside." },
+            { when: "Stock confirmed", label: "Open for orders", detail: "Signup, preorders or in stock, whichever is true.", highlight: true },
+            { when: "After opening", label: "Watch support and stock", detail: "Fix issues in the first days." },
+          ],
+          caption: "Milestones, not fixed dates. Each campaign moves through them at its own pace.",
+          source: "Kickstarter app listing, Shopify App Store; Guildframe planning method",
+        }}
       />
-      <ArticleCallout>
-        Use the free{" "}
-        <Link href="/resources/board-game-shopify-store-checklist">board game Shopify store checklist</Link>{" "}
-        to record each unfinished task and its owner. A theme cannot decide your
-        shipping regions, refund rules or whether a new order will delay a backer reward.
-      </ArticleCallout>
-
-      <h2 id="before-close">Before the campaign closes</h2>
       <p>
-        Prepare the reusable layer while the campaign is still active. Reserve the
-        permanent domain, identify the person responsible for Shopify and collect
-        final logos, product renders, box contents, how to play material and brand
-        copy. Draft the store catalog without publishing uncertain products.
+        The shape surprises people. The store build moves earlier than you would
+        guess, and the opening moves later, so there is often a stretch where the
+        store is finished but closed. That&apos;s normal and it protects backers.
+      </p>
+
+      <h2 id="campaign-live">While the campaign is live: plan, do not build</h2>
+      <p>
+        During the campaign, your attention belongs to backers. So we only do the
+        planning work that will not change as stretch goals are reached.
       </p>
       <ul>
-        <li>List the products that will remain available after crowdfunding.</li>
-        <li>Separate permanent products from campaign only rewards.</li>
-        <li>Map core games, editions, expansions, bundles and accessories.</li>
-        <li>Record which platform owns backer choices, addresses and fulfillment status.</li>
-        <li>Prepare a plain language status message for customers and backers.</li>
+        <li>List the products that stay on sale after the campaign.</li>
+        <li>Mark campaign only rewards that will never appear in the store.</li>
+        <li>Reserve the domain and name the person who owns the Shopify account.</li>
+        <li>Collect final logos, box renders and component photos as they are approved.</li>
       </ul>
-
-      <h2 id="week-one">After funding: confirm what becomes a store product</h2>
       <p>
-        Turn reward logic into retail logic. Shopify products need stable names,
-        prices, media, inventory rules and variants. A pledge tier may become one
-        product, several products or a bundle depending on how a new customer will
-        understand and receive it.
-      </p>
-      <p>
-        Keep personal data and marketing permission separate from catalog work.
-        Kickstarter&apos;s backer report is designed for backer and fulfillment
-        management. Do not assume every backer can automatically become a marketing
-        subscriber or Shopify customer record.
+        Leave product entry until close day, because a late stretch goal can change
+        a contents list you already typed in.
       </p>
 
-      <h2 id="build">Build the smallest complete storefront</h2>
-      <ol>
-        <li><strong>Products:</strong> add titles, prices, variants, media, contents, delivery timing and inventory rules.</li>
-        <li><strong>Collections:</strong> organize the catalog in customer language such as Core Games, Expansions or Miniatures.</li>
-        <li><strong>Homepage:</strong> explain the world, show the key products and direct visitors to a clear next step.</li>
-        <li><strong>Trust pages:</strong> publish about, contact, shipping, returns, privacy and FAQ information.</li>
-        <li><strong>Operations:</strong> configure payments, taxes, shipping zones, inventory locations and notifications.</li>
-      </ol>
+      <h2 id="pledge-manager">While the pledge manager is open: build the store</h2>
       <p>
-        Compare themes with the{" "}
-        <Link href="/guides/best-shopify-themes-for-board-games">board game Shopify theme shortlist</Link>{" "}
-        after the catalogue is clear. Decide who will configure, test and maintain
-        the store using the{" "}
-        <Link href="/guides/shopify-developer-vs-diy-theme">developer versus DIY comparison</Link>.
+        This is the stage that moved in 2026. Kickstarter&apos;s official Shopify
+        app, listed on July 31, 2026, matches rewards to Shopify products and
+        variants that already exist. So if Shopify will ship your backer rewards,
+        the catalogue has to be in place while backers are still completing the
+        Pledge Manager.
       </p>
-
-      <aside className="article-next-step">
-        <h2>Turn the handoff into a written brief</h2>
-        <p>
-          Guildframe can help prepare the product content, artwork and
-          post-campaign communication. Optional Shopify planning and setup are
-          scoped separately after reviewing the catalogue and operating requirements.
-          Send the campaign link, current fulfilment status, product list and target opening date.
-        </p>
-        <p>
-          <Link href="/done-for-you-shopify-store" data-analytics-event="service_interest" data-analytics-label="Plan my store handoff" data-analytics-location="Shopify timeline">Prepare your store brief</Link>{" "}
-          or see <Link href="/post-campaign-support">post-campaign support</Link>.
-        </p>
-      </aside>
-
-      <h2 id="sales-path">Choose what opens before choosing the date</h2>
       <ArticleTable
-        caption="Sales opening options while a game is still in production"
-        headers={["Current readiness", "Suitable public path", "Confirm before opening"]}
+        caption="What to finish while backers complete the pledge manager"
+        headers={["Work", "Why it belongs here", "Done when"]}
         rows={[
-          ["Delivery or sellable inventory is unconfirmed", "Product information and an optional email signup", "The page does not take an order or imply immediate availability"],
-          ["Preorder terms and payment setup are ready", "Clearly labelled Shopify preorders", "Delivery estimates, cancellation terms, stock allocation and mixed-order handling are defined"],
-          ["Allocated retail stock can ship", "In-stock retail orders", "The fulfilment team has stock available for these orders without using reserved backer inventory"],
+          ["Products and variants", "Rewards can only map to products that exist", "Every item a reward contains is in Shopify"],
+          ["Reward mapping", "The app needs to know what each reward ships", "Each reward points to its products"],
+          ["Shipping zones and taxes", "Backer orders and store orders share them", "Rates match the delivery plan"],
+          ["Store pages, kept closed", "Buyers should not find a half built store", "Pages ready for review, password still on"],
         ]}
       />
       <p>
-        Keep campaign late pledges in the chosen campaign workflow. Compare{" "}
-        <Link href="/guides/kickstarter-late-pledges-vs-shopify">late pledges with Shopify orders</Link>{" "}
-        before directing backers or new buyers to another checkout.
+        Kickstarter has also added Pledge Manager changes this year: backer self
+        serve add ons from August 20, 2026 and creator edits to backer orders from
+        October 28, 2026. Both mean orders can still change in this stage, so we
+        sync once orders are final rather than on the first day.
       </p>
 
-      <h2 id="testing">Testing and review</h2>
+      <h2 id="orders-lock">When backer orders lock: sync and allocate stock</h2>
       <p>
-        Test the path a buyer will actually follow. Begin on a phone, enter from the
-        homepage and a product page, choose each important edition, calculate
-        shipping and complete a test checkout. Review the order confirmation and
-        inventory change in Shopify. If a fulfilment provider handles orders,
-        confirm the order reaches its intended workflow as a separate check.
+        Once backer orders are finalized, they can be sent to Shopify in one go or
+        in segments. This is the moment to count what is left for the store.
       </p>
-      <ul className="article-checklist">
-        <li>Menus and product selectors work with keyboard and touch</li>
-        <li>Delivery timing is visible before checkout</li>
-        <li>Every active product has accurate inventory behavior</li>
-        <li>Shipping regions, rates and taxes match the plan</li>
-        <li>Order and support emails reach the correct inbox</li>
-        <li>Campaign only promises are not presented as retail offers</li>
-        <li>A mixed preorder and in-stock cart follows the delivery plan</li>
-        <li>Unsupported shipping addresses cannot complete an unintended order</li>
-        <li>Payment providers leave test mode before public sales open</li>
-      </ul>
+      <ol>
+        <li><strong>Sync or export backer orders.</strong> Send them all, or a region at a time if fulfilment ships in waves.</li>
+        <li><strong>Set aside reward stock.</strong> Count backer units first, then spares for damage and replacements.</li>
+        <li><strong>Count store stock.</strong> Only what remains becomes store inventory.</li>
+        <li><strong>Confirm tracking.</strong> Check that a test shipment&apos;s tracking number reaches Kickstarter.</li>
+      </ol>
+      <p>
+        If your pledge manager is not Kickstarter&apos;s own, this stage still
+        happens, but through that tool&apos;s export or connection instead.
+      </p>
 
-      <h2 id="launch-gate">Checks before opening store orders</h2>
+      <h2 id="opening">Choose how the store opens before choosing the date</h2>
+      <p>
+        Your stock position decides what the store can honestly sell, and that
+        decides the opening date. There are three ways to open.
+      </p>
+      <GuideVisual
+        data={{
+          kind: "compare",
+          title: "What the store sells depends on where your stock is",
+          columns: [
+            {
+              name: "Signup only",
+              points: ["Stock not confirmed yet", "Product pages with an email signup", "No payment taken"],
+              verdict: "Safe from close day",
+            },
+            {
+              name: "Preorders",
+              points: ["Delivery estimate agreed", "Clear preorder label by the price", "Cancellation terms written"],
+              verdict: "Once preorder terms are ready",
+            },
+            {
+              name: "In stock",
+              points: ["Store stock counted after rewards", "Ships without touching backer units", "Normal delivery promise"],
+              verdict: "Once backer stock is set aside",
+              highlight: true,
+            },
+          ],
+          source: "Guildframe planning method",
+        }}
+      />
+      <p>
+        Late pledges stay in the campaign workflow, so compare{" "}
+        <Link href="/guides/kickstarter-late-pledges-vs-shopify">late pledges with Shopify orders</Link>{" "}
+        before sending anyone to another checkout. If you are taking preorders, the{" "}
+        <Link href="/guides/sell-board-game-preorders-on-shopify">board game preorder guide</Link>{" "}
+        covers payment timing and stock rules.
+      </p>
+
+      <h2 id="launch-gate">The final gate before the first store order</h2>
+      <p>
+        We run one last set of questions before switching off the store password.
+        Each has a plain answer when the store is ready.
+      </p>
       <ArticleTable
         caption="Conditions to check before accepting public orders"
         headers={["Question", "Ready when"]}
         rows={[
-          ["What can a customer buy?", "Products, prices, editions and availability are final"],
-          ["When will it ship?", "The product page and policy state the same timing"],
-          ["What happens to backers?", "Backer fulfillment remains separately tracked and explained"],
-          ["Can a buyer complete checkout?", "Mobile and desktop test orders pass"],
-          ["Can the team support it?", "One contact path and an escalation owner are active"],
-          ["Can search engines understand it?", "Metadata, internal links, schema, sitemap and crawl rules are validated"],
+          ["What can a buyer purchase?", "Products, prices, editions and availability are final"],
+          ["When will it ship?", "The product page and the shipping policy say the same thing"],
+          ["What happens to backers?", "Reward orders are tracked separately and explained in an update"],
+          ["Can a buyer finish checkout?", "Phone and desktop test orders pass and test mode is off"],
+          ["Who answers questions?", "One store support route and one campaign support route are live"],
         ]}
       />
+      <ArticleCallout>
+        For the page by page store test, use the{" "}
+        <Link href="/resources/board-game-shopify-store-checklist">board game Shopify store checklist</Link>.
+        For what moves from the campaign and what stays, read the{" "}
+        <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link>.
+      </ArticleCallout>
       <p>
-        Open sales after these checks pass. Tell existing backers how the store relates to their rewards and tell new customers what is available.
+        If you want help running this timeline, our{" "}
+        <Link href="/post-campaign-support">post campaign support</Link>{" "}
+        covers backer updates and product content, and the{" "}
+        <Link href="/done-for-you-shopify-store">store planning brief</Link>{" "}
+        scopes optional Shopify setup. Send the campaign link, fulfilment status
+        and product list, and we will agree the dates with you.
       </p>
     </SeoArticlePage>
   );
