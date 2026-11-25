@@ -51,7 +51,7 @@ export function StudioDesk() {
     const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
     const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!fine || calm) return;
-    setLive(true);
+    const goLive = requestAnimationFrame(() => setLive(true));
 
     const bodies: Body[] = Array.from(root.querySelectorAll<HTMLElement>(".st-piece")).map(el => {
       el.dataset.cursor = "drag";
@@ -150,6 +150,7 @@ export function StudioDesk() {
     root.addEventListener("pointercancel", up);
     window.addEventListener("resize", resize);
     return () => {
+      cancelAnimationFrame(goLive);
       cancelAnimationFrame(frame);
       root.removeEventListener("pointerdown", down);
       root.removeEventListener("pointermove", move);

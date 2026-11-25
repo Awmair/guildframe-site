@@ -19,11 +19,12 @@ export function WorldFx() {
   // Mark the document as scripted so reveal start states apply only with JavaScript.
   useEffect(() => {
     document.documentElement.classList.add("w-js");
-    setSoundState(restoreSound());
+    // Read the stored sound choice after mount (localStorage is not available on the server).
+    const restore = requestAnimationFrame(() => setSoundState(restoreSound()));
     const off = onSoundChange(setSoundState);
     const wake = () => { if (isSoundOn()) setSound(true); };
     window.addEventListener("pointerdown", wake, { once: true });
-    return () => { off(); window.removeEventListener("pointerdown", wake); };
+    return () => { cancelAnimationFrame(restore); off(); window.removeEventListener("pointerdown", wake); };
   }, []);
 
   // Curtain: intercept ordinary same-site navigations.
