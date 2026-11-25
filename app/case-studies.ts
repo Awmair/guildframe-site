@@ -98,7 +98,7 @@ const projectNotes = [
       { title: "Name, genre and table facts", copy: "The logo sits above the line \"Asymmetrical squad tactics and survival horror\", with the player count, play time and age underneath: 2 to 4 players, 1 to 3 hours, 13 and up.", alt: "Detail of the Cryptic Explorers logo, the genre line and the player count, play time and age icons in the campaign header", position: "100% 50%", scale: 1.04 },
     ],
     seoTitle: "Cryptic Explorers Kickstarter Campaign Design Case Study",
-    description: "Cryptic Explorers campaign presentation by Umair: introducing the Cryptonauts, the Goddesses of Death and a customization led survival horror game for 2 to 4 players.",
+    description: "Cryptic Explorers campaign by Umair: introducing the Cryptonauts, the Goddesses of Death and a survival horror tactics game for 2 to 4 players.",
     headline: "Introducing a survival horror world and how it plays.",
     brief: "Cryptic Explorers is an asymmetrical squad tactics and survival horror game for 2 to 4 players from Tempest Tome Games, created by Maher Sagrillo. Its campaign had to introduce the Cryptonauts, the Goddesses of Death and a gameplay loop led by customization.",
     role: "I created the launch facing campaign presentation. The page introduces the Cryptonauts, the Goddesses of Death and the customization led gameplay loop in a structured story, and keeps the project's graphic novel atmosphere front and center. The game, its artwork and the Cryptic Explorers identity belong to Tempest Tome Games.",

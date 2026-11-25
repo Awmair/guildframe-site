@@ -10,7 +10,7 @@ import { caseStudies, workDate } from "../case-studies";
 import { beyondTabletop } from "../past-work";
 import { formatContentDate } from "../content-dates";
 
-export const metadata = pageMetadata({ title: "Tabletop Kickstarter Campaign Design Case Studies", description: "Explore campaign design for ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers. See Umair's contribution, design choices and published Kickstarter pages.", path: "/work" });
+export const metadata = pageMetadata({ title: "Tabletop Kickstarter Campaign Design Case Studies", description: "Campaign design for ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers: Umair's contribution, design choices and the published pages.", path: "/work" });
 
 const nextLinks = [
   { href: "/campaign-creative", label: "Discuss creative production" },
