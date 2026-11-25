@@ -1037,4 +1037,4 @@ const originalLaunchGuides:LaunchGuide[]=[
 ];
 
 const growthUpdatedSlugs = new Set(["choose-board-game-kickstarter-marketing-agency", "board-game-kickstarter-campaign-design-cost", "kickstarter-prelaunch-email-list", "kickstarter-campaign-video-planning", "kickstarter-advertising-budget-board-games"]);
-export const launchGuides = originalLaunchGuides.map(reviseLaunchGuide).map(reviseBuyerGuide).map(guide => growthUpdatedSlugs.has(guide.slug) ? {...guide, updated:contentDates.growthReview} : guide);
+export const launchGuides = originalLaunchGuides.map(reviseLaunchGuide).map(reviseBuyerGuide).map(guide => growthUpdatedSlugs.has(guide.slug) && !(guide.updated && guide.updated > contentDates.growthReview) ? {...guide, updated:contentDates.growthReview} : guide);

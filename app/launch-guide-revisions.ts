@@ -69,5 +69,6 @@ export function reviseLaunchGuide(guide: LaunchGuide): LaunchGuide {
     : guide.slug === "choose-board-game-kickstarter-marketing-agency"
       ? contentDates.agencySelection
       : contentDates.launchGuideReview;
-  return { ...guide, sections, updated };
+  // Keep a later date set on the guide itself (for example a newer content review).
+  return { ...guide, sections, updated: guide.updated && guide.updated > updated ? guide.updated : updated };
 }
