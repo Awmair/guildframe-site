@@ -110,6 +110,7 @@ const pages = [
   ["/guides/ttrpg-kickstarter-launch-guide", "TTRPG Kickstarter Launch and Marketing Guide (2026) | Guildframe", "TTRPG Kickstarter Launch Guide \\(2026\\)"],
   ["/guides/when-to-launch-a-kickstarter", "When to Launch a Kickstarter: Prep Time and Best Dates | Guildframe", "When Should You Launch Your Kickstarter"],
   ["/guides/why-kickstarter-campaigns-fail", "Why Kickstarter Campaigns Fail and How to Avoid It | Guildframe", "What Makes a Kickstarter Fail, and"],
+  ["/kickstarter-product-campaign-design", "Kickstarter Campaign Design for Product Launches | Guildframe", "Kickstarter campaign design"],
 ];
 
 const afterFundingPaths = new Set(['/guides/what-happens-after-kickstarter-is-funded', '/guides/move-from-kickstarter-to-shopify', '/guides/best-shopify-themes-for-board-games', '/guides/shopify-developer-vs-diy-theme', '/guides/kickstarter-late-pledges-vs-shopify', '/guides/backerkit-vs-shopify-vs-gamefound', '/guides/kickstarter-to-shopify-launch-timeline', '/guides/sell-board-game-preorders-on-shopify', '/guides/sell-board-game-expansions-add-ons-shopify', '/guides/selling-miniatures-internationally-vat-ioss', '/guides/how-much-does-a-board-game-website-cost', '/guides/shopify-vs-etsy-for-selling-miniatures', '/guides/build-a-tabletop-shopify-store-with-ai']);
@@ -617,6 +618,7 @@ for (const path of [
   "/guides/kickstarter-advertising-budget-board-games",
   "/guides/sell-board-game-preorders-on-shopify",
 ]) datedPages.set(path, "2026-11-06");
+
 
 
 // seo-pass-2026-11-25 dates (generated)
