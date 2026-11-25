@@ -206,25 +206,27 @@ export const growthGuides: LaunchGuide[] = [
   {
     "slug": "board-game-kickstarter-reward-pricing",
     "title": "How to Price Kickstarter Rewards for a Board Game",
-    "description": "Price board game Kickstarter rewards using real costs, fee allowances and margins. Compare core, deluxe and bundle tiers with a worked example.",
+    "seoTitle": "Kickstarter Pricing: How to Price Your Board Game Rewards",
+    "description": "Kickstarter pricing for board games: build each reward price from its real costs, fees and margin. See where a $40 pledge goes and test core and deluxe tiers.",
     "tag": "Reward pricing",
-    "answer": "Price each reward against its exact contents, production cost, fulfillment obligations, fees and share of fixed work. Check the core game, deluxe edition and add-ons separately. A popular tier still needs enough margin to deliver what it promises.",
+    "answer": "Price each Kickstarter reward from its own manufacturing, freight and fulfilment costs, then add platform and payment fees, an advertising allowance, a share of fixed work and the margin you need. On a US project Kickstarter takes 5% and payment processing takes 3% plus $0.20 per pledge, so a $40 pledge loses $3.40 to fees before any production cost.",
     "sections": [
       {
         "id": "contents",
-        "title": "Freeze the contents before comparing prices",
+        "title": "Start with what each reward actually contains",
         "paragraphs": [
-          "A reward name such as Deluxe does not tell your factory or fulfillment partner what to supply. List the game, expansions, upgraded pieces, sleeves, inserts and digital files, including quantities and language. The campaign graphics should use that same list.",
-          "Keep variants distinct from additional items. A choice of English or French rules is different from promising both. Gamefound builds rewards from their included items; its settings also distinguish whether an item can be bought separately. Decide the product structure before designing a comparison chart."
+          "A price only means something once the contents are fixed, so we start with a reward sheet. A name such as Deluxe does not tell your factory or fulfilment partner what to pack.",
+          "List the game, expansions, upgraded pieces, sleeves, inserts and digital files for each tier, with quantities and language versions. Keep variants apart from extra items, because a choice of English or French rules is different from promising both. Gamefound builds rewards from their included items and lets you mark whether an item can be bought on its own.",
+          "Once that sheet is approved, the reward graphics, the pledge manager and the price all work from the same list."
         ],
         "source": 1
       },
       {
         "id": "cost-model",
-        "title": "Build the price from costs rather than a competitor screenshot",
+        "title": "Build the price from your costs, not another campaign's price",
         "paragraphs": [
-          "Another campaign may use a different print quantity, shipping model or retail strategy. Its pledge price is useful context, but it cannot reveal your margin. Start with the supplier quote and the actual work needed to deliver each tier.",
-          "Assign fixed work consistently. If campaign design and tooling appear in a shared project budget, do not count their full cost again in every reward. Use an allocation for planning, then reconcile the whole campaign against the funding-goal model."
+          "Another campaign's pledge price is useful context, but it cannot tell you your margin. They may print a different quantity, ship a different way or plan a different retail price.",
+          "So we build each price from six inputs. Fixed work such as campaign design or tooling sits in the project budget once, then gets spread across the backers you expect, rather than counted in full on every reward."
         ],
         "table": {
           "headers": [
@@ -234,37 +236,92 @@ export const growthGuides: LaunchGuide[] = [
           "rows": [
             [
               "Physical contents",
-              "Cost at the quoted production quantity"
+              "Cost per unit at the quoted print run"
             ],
             [
               "Delivery obligation",
               "Freight, packing, handling and any shipping you absorb"
             ],
             [
-              "Payment and platform costs",
-              "Current percentage and per-transaction charges"
+              "Platform and payment fees",
+              "The current percentage and the charge per pledge"
             ],
             [
               "Acquisition",
-              "The amount available to acquire a backer"
+              "The amount you can spend to win one backer"
             ],
             [
               "Fixed work and reserve",
-              "A consistent allocation and uncertainty allowance"
+              "A consistent share per backer and an uncertainty allowance"
             ],
             [
               "Remaining margin",
-              "What remains after the costs above"
+              "What is left after everything above"
             ]
           ]
         }
       },
       {
-        "id": "example",
-        "title": "Calculate a price floor, then test a practical price",
+        "id": "forty-dollar-pledge",
+        "title": "Where a $40 pledge goes",
         "paragraphs": [
-          "This hypothetical USD example assumes $42 in product and fulfillment costs, $6 for acquisition, $6 allocated to fixed work and a desired $8 remaining contribution. Those amounts total $62. With an assumed 8% percentage fee, the price required is $62 divided by 0.92, or about $67.39.",
-          "At a $69 pledge price, the assumed percentage fee is $5.52. Subtracting that and the $54 in stated costs leaves $9.48. The 8% is a teaching input, not a fee quote. Replace it with the actual fee structure, including any fixed transaction charges, and use consistent shipping and tax treatment."
+          "Fees are the only costs here that are the same for every creator, so we start with them. On a US project, Kickstarter's platform fee is 5% of funds raised and payment processing is 3% plus $0.20 per pledge. Pledges under $10 use a micropledge rate of 5% plus $0.05. Fees are only collected if the project funds. Our [Kickstarter fees guide](/guides/kickstarter-fees) covers the full fee picture, including other countries.",
+          "For a $40 pledge that means $2.00 to Kickstarter and $1.40 to payment processing, so $3.40 in total. Everything else in the example below is illustrative, and you should replace it with your own quotes. It assumes shipping to the backer is charged separately.",
+          "The point of the example is the last line. A $40 price can look generous and still leave less than $6 to absorb a late freight quote or a damaged shipment."
+        ],
+        "visual": {
+          "kind": "split",
+          "title": "In this example, $5.60 of a $40 pledge is left once fees and costs are paid",
+          "total": "Example: a $40 core game pledge on a US Kickstarter project",
+          "parts": [
+            {
+              "label": "Kickstarter fee (5%)",
+              "share": 2.0,
+              "display": "$2.00"
+            },
+            {
+              "label": "Payment processing (3% + $0.20)",
+              "share": 1.4,
+              "display": "$1.40"
+            },
+            {
+              "label": "Manufacturing (illustrative)",
+              "share": 11.0,
+              "display": "$11.00"
+            },
+            {
+              "label": "Freight and fulfilment (illustrative)",
+              "share": 7.0,
+              "display": "$7.00"
+            },
+            {
+              "label": "Advertising allowance (illustrative)",
+              "share": 6.0,
+              "display": "$6.00"
+            },
+            {
+              "label": "Fixed work and reserve (illustrative)",
+              "share": 7.0,
+              "display": "$7.00"
+            },
+            {
+              "label": "Remaining margin",
+              "share": 5.6,
+              "display": "$5.60"
+            }
+          ],
+          "caption": "Fee rates are Kickstarter's published US rates. Every other amount is an invented example, not an industry average or a Guildframe quote.",
+          "source": "Kickstarter fees for creators (US)"
+        },
+        "source": 3
+      },
+      {
+        "id": "example",
+        "title": "Work out a price floor, then round to a real price",
+        "paragraphs": [
+          "Once you know your costs, the floor price is simple arithmetic. This hypothetical example assumes $42 in product and fulfilment costs, $6 for acquisition, $6 for fixed work and an $8 margin you want to keep, which totals $62.",
+          "Kickstarter's US fees are 8% of the pledge plus $0.20. So the floor price is $62 plus $0.20, divided by 0.92, which comes to about $67.61. Rounding up to $69 gives fees of $5.72 and leaves $9.28 after the $54 in costs.",
+          "Run the same sum for every tier, using your real quotes and the fee rates for your country."
         ],
         "table": {
           "headers": [
@@ -273,60 +330,127 @@ export const growthGuides: LaunchGuide[] = [
           ],
           "rows": [
             [
-              "Costs plus desired contribution",
+              "Costs plus the margin you want",
               "$42 + $6 + $6 + $8 = $62"
             ],
             [
-              "Price before rounding",
-              "$62 ÷ 0.92 = $67.39"
+              "Floor price before rounding",
+              "($62 + $0.20) divided by 0.92 = $67.61"
             ],
             [
-              "Fee allowance at a $69 price",
-              "$5.52"
+              "Fees at a $69 price",
+              "$3.45 platform + $2.27 processing = $5.72"
             ],
             [
-              "Contribution after stated costs",
-              "$69 − $5.52 − $54 = $9.48"
+              "Margin after stated costs",
+              "$69 minus $5.72 minus $54 = $9.28"
             ]
           ]
-        }
+        },
+        "source": 3
       },
       {
         "id": "tiers",
-        "title": "Check whether the upgrade earns its extra cost",
+        "title": "Check that the deluxe tier earns its extra cost",
         "paragraphs": [
-          "A deluxe tier can sell for more while leaving less money per order. Compare the extra revenue with the extra manufacturing, weight, packaging and handling. A larger box may change the delivery bracket even if the component upgrade looks inexpensive.",
-          "Apply the same check to bundles and stretch goals. Discounts can also move demand away from your base reward, so test the expected mix instead of assuming that every tier adds independent sales. Keep retailer terms separate; a crowdfunding pledge price is not automatically a sustainable wholesale price."
+          "A deluxe tier can sell for more and still leave less money per box. So we compare the extra revenue with the extra manufacturing, weight, packaging and handling, tier by tier.",
+          "A larger box can move the whole parcel into a higher shipping bracket, even when the component upgrade looks cheap. Bundles and stretch goals need the same check, because a discount can pull backers away from the core box. Keep retailer terms separate too, since a pledge price is not automatically a workable wholesale price.",
+          "Run these five checks on every tier, then use the comparison below to decide what stays."
         ],
+        "visual": {
+          "kind": "compare",
+          "title": "A deluxe tier can earn more per pledge and still leave less per box",
+          "columns": [
+            {
+              "name": "Core box",
+              "points": [
+                "Sets the price most backers compare",
+                "Smallest box and lowest weight",
+                "Needs a margin on its own"
+              ],
+              "verdict": "Price it first"
+            },
+            {
+              "name": "Deluxe box",
+              "points": [
+                "Extra components and a bigger box",
+                "May reach a higher shipping bracket",
+                "Check the extra margin, not the price"
+              ],
+              "verdict": "Keep it only if the extra margin is real",
+              "highlight": true
+            },
+            {
+              "name": "Bundle with expansion",
+              "points": [
+                "The discount comes out of your margin",
+                "Can pull backers from the core box",
+                "Test it against the sales mix you expect"
+              ],
+              "verdict": "Price the discount, not the headline"
+            }
+          ],
+          "caption": "Guildframe's tier review. Use packed sizes and supplier quotes, not product weight alone."
+        },
         "list": [
           "Compare the core and deluxe reward side by side.",
           "Check packed dimensions as well as product weight.",
           "Test bundles with the actual quantities and discounts.",
-          "Keep stock allocated across rewards and add-ons consistent.",
+          "Keep stock allocated across rewards and add ons consistent.",
           "Recalculate when a stretch goal changes the contents."
         ]
       },
       {
-        "id": "presentation",
-        "title": "Show the offer without making the reader do arithmetic",
+        "id": "shipping",
+        "title": "Decide whether shipping sits in the pledge or comes later",
         "paragraphs": [
-          "Once the numbers are approved, prepare a simple reward comparison with exact contents, price, delivery estimate and any later shipping or tax charges. Use one clear explanation for items that require the base game. Make the default language or edition obvious.",
-          "Keep MSRP claims tied to a real retail plan. If a future selling price is still undecided, describe the campaign price without inventing a crossed-out comparison. Guildframe can design the reward graphics after the contents and prices are settled."
+          "Shipping changes how backers read your price, so decide early. Kickstarter supports charging shipping at the pledge or collecting it later in its Pledge Manager.",
+          "Charging at the pledge makes the total clear on day one, but you commit to rates months before freight is booked. Collecting later protects you from rate changes, but the page then needs a plain explanation of what backers will pay and when. Either way, the [shipping and delivery page guide](/guides/kickstarter-shipping-delivery-page) shows how to explain it.",
+          "Whichever route you choose, the pricing sheet and the campaign page must describe it the same way."
+        ],
+        "source": 4
+      },
+      {
+        "id": "presentation",
+        "title": "Show the price so backers never do arithmetic",
+        "paragraphs": [
+          "Once the numbers are approved, the page has to make them easy to compare. We design a reward comparison with exact contents, price, delivery estimate and any shipping or tax charged later. Our [reward tier graphics guide](/guides/kickstarter-reward-tier-graphics) covers the layout.",
+          "Keep MSRP claims tied to a real retail plan. If the future shop price is still undecided, show the campaign price without inventing a crossed out comparison. A backer who trusts the numbers pledges faster than one doing sums on a phone."
+        ]
+      },
+      {
+        "id": "help",
+        "title": "Pricing rewards with us",
+        "paragraphs": [
+          "We check reward pricing as part of launch planning, because a price problem found after launch is expensive to fix. You bring the supplier quotes and the reward sheet. We test each tier against the fees, the ad allowance and the shipping plan, then design the reward graphics from the approved numbers.",
+          "You can do the sums yourself with the steps above. The honest limit is time and a second pair of eyes, since one wrong freight figure can erase a tier's margin. See [Kickstarter launch services for tabletop games](/kickstarter-launch-services) for how this fits into a full launch, or start with the [funding goal guide](/guides/board-game-kickstarter-funding-goal)."
         ]
       }
     ],
     "faqs": [
       {
-        "question": "Should every reward have the same margin percentage?",
-        "answer": "There is no universal rule. Compare the cash each tier contributes, the work it adds and the expected sales mix. A low-margin tier can become a problem if it dominates orders."
+        "question": "What fees does Kickstarter take from a pledge?",
+        "answer": "On a US project Kickstarter's platform fee is 5% of funds raised, and payment processing is 3% plus $0.20 per pledge. Pledges under $10 use a 5% plus $0.05 micropledge rate. Fees are only collected if the project funds."
       },
       {
-        "question": "Can I use another game’s Kickstarter price as my price?",
-        "answer": "Use it as market context, then calculate your own costs. Different print quantities, contents and shipping terms can produce very different economics."
+        "question": "How much of a $40 pledge does the creator keep?",
+        "answer": "On a US project, $3.40 of a $40 pledge goes to fees, so $36.60 is left for manufacturing, freight, advertising, fixed work and margin. In our illustrative example only $5.60 remains once those costs are paid."
+      },
+      {
+        "question": "Should every reward have the same margin percentage?",
+        "answer": "There is no universal rule. Compare the cash each tier contributes, the work it adds and the expected sales mix. A low margin tier becomes a problem if it ends up being the tier most backers choose."
+      },
+      {
+        "question": "Can I use another game's Kickstarter price as my price?",
+        "answer": "Use it as market context, then calculate your own costs. A different print run, contents or shipping model can give very different numbers."
       },
       {
         "question": "Does a higher deluxe price guarantee more profit?",
-        "answer": "No. Extra components, packing and shipping can consume the difference. Compare the additional revenue with the full additional cost."
+        "answer": "No. Extra components, a bigger box and a higher shipping bracket can use up the difference. Compare the extra revenue with the full extra cost."
+      },
+      {
+        "question": "Should shipping be included in the pledge price?",
+        "answer": "Kickstarter supports charging shipping at the pledge or collecting it later in its Pledge Manager. Charging at the pledge makes the total clear on day one. Collecting later protects you from rate changes but needs a clear explanation on the page."
       }
     ],
     "sources": [
@@ -344,17 +468,28 @@ export const growthGuides: LaunchGuide[] = [
         "label": "Setting a Kickstarter funding goal",
         "publisher": "Kickstarter Help Center",
         "href": "https://help.kickstarter.com/en-us/articles/16236709-how-to-set-the-right-funding-goal-for-your-kickstarter-campaign"
+      },
+      {
+        "label": "Kickstarter fees for creators (US)",
+        "publisher": "Kickstarter",
+        "href": "https://www.kickstarter.com/help/fees"
+      },
+      {
+        "label": "Pledge Manager release notes: shipping at pledge or in Pledge Manager",
+        "publisher": "Kickstarter",
+        "href": "https://start.kickstarter.com/pledge-manager-release-notes"
       }
     ],
     "relatedSlugs": [
       "board-game-kickstarter-funding-goal",
       "kickstarter-reward-tier-graphics",
-      "kickstarter-stretch-goals-planning"
+      "kickstarter-stretch-goals-planning",
+      "kickstarter-advertising-budget-board-games"
     ],
-    "servicePath": "/campaign-design",
-    "serviceLabel": "Plan your campaign design",
+    "servicePath": "/kickstarter-launch-services",
+    "serviceLabel": "Kickstarter launch services for tabletop games",
     "published": "2026-10-28",
-    "updated": "2026-10-28"
+    "updated": "2026-11-25"
   },
   {
     "slug": "kickstarter-referral-tags-tracking",
@@ -674,138 +809,332 @@ export const growthGuides: LaunchGuide[] = [
   },
   {
     "slug": "board-game-kickstarter-launch-day-checklist",
-    "title": "A Kickstarter Launch-Day Checklist for Board Games",
-    "description": "Run a board game Kickstarter launch with clear owners, mobile and reward checks, tested links and first-day reporting. Includes Gamefound testing notes.",
-    "tag": "Launch operations",
-    "answer": "Before launch, confirm approval, reward details, page assets and who will publish. After publishing, verify the public campaign and announcement links before increasing promotion. Keep a short run sheet with owners, evidence and clear reasons to stop.",
+    "title": "Board Game Kickstarter Launch Checklist: 90 Days to Launch Day",
+    "seoTitle": "Board Game Launch Checklist for Kickstarter: 90 Days Out",
+    "description": "A board game Kickstarter launch checklist from 90 days out to launch day. Lock rewards, open the prelaunch page, test ads, pass review and run the first hour.",
+    "tag": "Launch checklist",
+    "answer": "A board game Kickstarter launch checklist starts about 90 days out, when you lock the rewards, costs and funding goal. The prelaunch page, email list and capped ad tests fill the middle weeks, and review lands two to three weeks before launch. On launch day one person publishes, and a second checks the live page before any email or ad goes out.",
     "sections": [
       {
-        "id": "ready",
-        "title": "Make the final decision before the announcement goes out",
+        "id": "at-a-glance",
+        "title": "The checklist at a glance, from 90 days out to day three",
         "paragraphs": [
-          "Bring the approved page, reward list and production assumptions into one review. The final check should catch a wrong price, missing component, unreadable graphic or unsupported delivery promise. It should not be the first time the team discusses the reward contents.",
-          "Kickstarter review can take up to three business days, with additional time for revisions or busy periods. A target launch date is a planning aid, not approval. Keep enough buffer to resolve questions before scheduling the public announcement."
+          "We run first board game launches on a schedule of about 90 days, because the offer, the audience and the page all need time to settle. Most of the work happens well before launch day. Launch day itself is short, if the weeks before it went to plan.",
+          "Treat the dates as a working order rather than a rule. If your rewards or artwork arrive late, move every later date with them. Skipping a check to hold a date is how a wrong price or a broken link reaches backers.",
+          "So the timeline below is the shape of the whole project, and the sections after it explain each phase in turn."
+        ],
+        "visual": {
+          "kind": "timeline",
+          "title": "Most of the launch work is done 30 days or more before the button is pressed",
+          "events": [
+            {
+              "when": "90 days out",
+              "label": "Lock the offer",
+              "detail": "Reward contents, supplier quotes, funding goal and shipping approach"
+            },
+            {
+              "when": "75 days out",
+              "label": "Brief the page and creative",
+              "detail": "Story outline, reward graphics list and missing assets"
+            },
+            {
+              "when": "60 days out",
+              "label": "Open the signup route",
+              "detail": "Landing page, welcome email and the Kickstarter project draft"
+            },
+            {
+              "when": "45 days out",
+              "label": "Get the prelaunch page live",
+              "detail": "First time creators need review approval before it can go live"
+            },
+            {
+              "when": "30 days out",
+              "label": "Test ads and send preview copies",
+              "detail": "A capped ad budget and reviewer copies with agreed dates"
+            },
+            {
+              "when": "14 days out",
+              "label": "Final page review",
+              "detail": "Phone check, reward facts, shipping copy and review buffer"
+            },
+            {
+              "when": "7 days out",
+              "label": "Rehearse launch day",
+              "detail": "Named owners, a run sheet and a tested launch email"
+            },
+            {
+              "when": "Launch day",
+              "label": "Publish, check, then promote",
+              "detail": "A manual launch, a live page check, then email and ads",
+              "highlight": true
+            },
+            {
+              "when": "Days 1 to 3",
+              "label": "Answer what backers ask",
+              "detail": "Repeated questions, page fixes and a first spend review"
+            }
+          ],
+          "caption": "Guildframe's working schedule for a first board game campaign. Move the dates when an input is late, and keep the order.",
+          "source": "Kickstarter Help Center for review timing and prelaunch page rules"
+        }
+      },
+      {
+        "id": "offer",
+        "title": "90 to 60 days out: lock the offer and the numbers",
+        "paragraphs": [
+          "The first month is about the offer, because every later piece of marketing repeats it. If the deluxe reward changes in week ten, the page, the reward graphics, the ads and the emails all change with it.",
+          "We start with a reward sheet that names every tier, its exact contents and its price. Then you collect supplier quotes for manufacturing and freight, so the numbers come from real figures. From there you can [set a funding goal that covers delivery](/guides/board-game-kickstarter-funding-goal) and [price each reward](/guides/board-game-kickstarter-reward-pricing) against its own costs.",
+          "These five checks close the phase, and once they pass the offer can be shown in public."
+        ],
+        "list": [
+          "Every reward tier has frozen contents, quantities and language versions.",
+          "Manufacturing and freight quotes exist at your planned print run.",
+          "The funding goal covers production, delivery, fees and a reserve.",
+          "Each reward and add on has a price that leaves a margin.",
+          "You know whether shipping is charged at pledge or later in the pledge manager."
+        ]
+      },
+      {
+        "id": "prelaunch",
+        "title": "60 to 30 days out: open the prelaunch page and the email list",
+        "paragraphs": [
+          "This phase builds the audience you launch to, so it needs a working signup route early. Your own email list and Kickstarter prelaunch followers both matter, but they behave differently.",
+          "Kickstarter sends your followers a launch notification email when the project goes live. You cannot message those followers directly, though a prelaunch update reaches them. Your own [prelaunch email list](/guides/kickstarter-prelaunch-email-list) is the channel you control, so test the form, the welcome email and the unsubscribe link with a real address.",
+          "One rule catches first time creators out. Kickstarter only lets a first time creator switch on the prelaunch page after the project has been submitted for review and approved. Repeat creators can open it from the Promotion tab sooner. That's why we plan an early submission for a first project, so the follow button is live while the audience is still growing. These five checks close the phase."
+        ],
+        "list": [
+          "Landing page, welcome email and unsubscribe link pass a real test.",
+          "The Kickstarter draft exists with a target launch date in the Basics section.",
+          "The prelaunch page is live and linked from your own pages.",
+          "Each channel has its own named referral link.",
+          "A first ad test is running under a written spending cap."
+        ],
+        "source": 2
+      },
+      {
+        "id": "page-and-review",
+        "title": "30 to 14 days out: finish the page and pass review",
+        "paragraphs": [
+          "By now the campaign page should be close to final, so this phase is about proof. We read the page on a phone with someone who has never played the game, using the [Kickstarter page checklist](/guides/board-game-kickstarter-page-checklist). If they cannot say what comes in the box, the page is not finished.",
+          "Kickstarter says review can take up to three business days. If the team asks for changes, the next review takes up to three more business days after you reply, and busy periods run longer. Setting a target launch date does not launch the project, so plan a buffer of at least a week between approval and the date you announce.",
+          "Ad tests should still run inside a cap in this phase. Use the [advertising budget guide](/guides/kickstarter-advertising-budget-board-games) to set a ceiling your reward margin can carry, before the launch week asks for more. Before moving on, these five checks should pass."
+        ],
+        "list": [
+          "The story, reward graphics and stretch goal graphic are approved.",
+          "The video, rules sample and downloads open on a phone.",
+          "Reviewer copies have arrived with agreed publishing dates.",
+          "The project is submitted with time left for change requests.",
+          "The launch email is drafted with a placeholder for the live link."
         ],
         "source": 0
       },
       {
         "id": "owners",
-        "title": "Put one person in charge of publishing",
+        "title": "The final week: name one owner for each launch job",
         "paragraphs": [
-          "Kickstarter launches are manual. The platform does not automatically publish the project at your chosen target time. Name who will press the launch button and who will confirm the result. Make sure both can reach the correct campaign and communicate if something changes.",
-          "Keep the launch email and paid ads under their own named owners. They need the confirmed live URL before sending traffic. An approved campaign draft and a public live campaign are different states."
+          "Launch day goes wrong when two people assume the other one pressed the button. So in the last week we write down one owner for each job and what that owner must confirm.",
+          "Four checks come first, then the table gives each launch job its owner. The email can be perfect while the ads point at a preview link, which is why each job gets its own owner and its own check."
         ],
-        "source": 1,
         "table": {
           "headers": [
-            "Work",
-            "Owner must confirm"
+            "Launch job",
+            "The owner confirms"
           ],
           "rows": [
             [
-              "Campaign publication",
-              "Approved project, correct account and public live URL"
+              "Publishing the campaign",
+              "The approved project, the right account and the public live URL"
             ],
             [
-              "Email",
-              "Delivered test, final links and the intended audience"
+              "Launch email",
+              "A test delivered to a real inbox, final links and the right audience"
             ],
             [
               "Advertising",
-              "Destination, approved spend cap and start decision"
+              "The live destination, the approved spend cap and the start time"
             ],
             [
-              "Support",
-              "Where questions arrive and who can answer product facts"
+              "Backer questions",
+              "Where comments and messages arrive and who can answer product facts"
             ],
             [
               "Reporting",
-              "Date range, referral names and the first review time"
+              "The referral link names and the time of the first review"
             ]
           ]
-        }
-      },
-      {
-        "id": "day-before",
-        "title": "Check the page as a backer would see it",
-        "paragraphs": [
-          "Use a phone and a desktop. Read the opening without zooming. Check the gameplay explanation, reward names, language choices, component counts and delivery information. Open the rulebook and video rather than assuming the thumbnail means they work.",
-          "Test the actual email delivered to your inbox, including links rewritten by the email platform. Check that your public project link has not been confused with a private preview link. Keep a copy of the approved page facts so last-minute edits can be checked against it."
-        ],
+        },
         "list": [
-          "Verify each reward price and its contents.",
-          "Check any later shipping or tax explanation.",
-          "Open every download and external media link.",
-          "Confirm the launch time and timezone with the team.",
-          "Record the maximum approved ad spend.",
-          "Prepare a fallback message if publication is delayed."
+          "The launch time and timezone are agreed with everyone on the run sheet.",
+          "The maximum daily ad spend is written down and approved.",
+          "A fallback message is ready in case publishing slips.",
+          "A copy of the approved reward facts sits beside the run sheet."
         ]
       },
       {
-        "id": "first-hour",
-        "title": "Use a short first-hour run sheet",
+        "id": "launch-day",
+        "title": "Launch day: publish by hand, then check before you promote",
         "paragraphs": [
-          "This is an illustrative sequence, not a promise that every campaign launches without interruption. The publication owner confirms the live project. A second person checks it from a normal visitor view. The email owner then checks the destination and sends the approved announcement. The advertising owner verifies the live destination before enabling the agreed traffic.",
-          "If a reward price or essential product claim is wrong, stop the affected promotion while the creator resolves it. Do not keep spending just because the launch calendar says the campaign is live."
+          "Kickstarter launches are manual, and the platform cannot schedule an automatic launch for a set date. Someone has to press launch in the project dashboard, so put that person and a backup on the run sheet.",
+          "Then the order matters more than the speed. A second person opens the live page as a normal visitor on a phone and checks the rewards, prices and downloads. Only then does the email owner send the announcement, and only after that does the ad owner switch traffic on.",
+          "If a reward price or a key product claim is wrong, pause the promotion that points at it while you fix the page. Spending on a broken offer costs more than a short delay."
         ],
-        "table": {
-          "headers": [
-            "Point in the sequence",
-            "Evidence to keep"
+        "visual": {
+          "kind": "steps",
+          "title": "The first hour runs in a fixed order: publish, check, announce, advertise",
+          "steps": [
+            {
+              "label": "Publish",
+              "detail": "The owner launches by hand and copies the live URL"
+            },
+            {
+              "label": "Check",
+              "detail": "A second person reviews the live page on a phone"
+            },
+            {
+              "label": "Announce",
+              "detail": "Email and posts go out with the checked live link"
+            },
+            {
+              "label": "Advertise",
+              "detail": "Ads start once the destination is confirmed"
+            },
+            {
+              "label": "Review",
+              "detail": "First look at pledges, spend and questions"
+            }
           ],
-          "rows": [
-            [
-              "Publication",
-              "Public campaign URL and confirmation"
-            ],
-            [
-              "Visitor check",
-              "Mobile page, reward details and working downloads"
-            ],
-            [
-              "Announcement",
-              "Sent email and correct destination"
-            ],
-            [
-              "Paid traffic",
-              "Active destination and approved budget"
-            ],
-            [
-              "First review",
-              "Spend, attributed pledges and recurring questions"
-            ]
-          ]
-        }
+          "caption": "Guildframe's launch day order. Kickstarter launches are manual, so the first step always has a named person."
+        },
+        "source": 1
       },
       {
         "id": "gamefound",
-        "title": "Use Gamefound Tester Mode for a Gamefound launch",
+        "title": "On Gamefound, use Tester Mode before you launch",
         "paragraphs": [
-          "Gamefound lets invited testers inspect different campaign phases and place test orders. Those orders do not send a payment to the payment operator. Use the tool to inspect options, quantities and order data, then leave Tester Mode before checking the public experience.",
-          "Include a base reward, an add-on, a language choice and representative shipping regions in your test plan. Check the resulting export where relevant. A passing test order demonstrates that test route; it does not prove real payment collection or a later payout."
+          "If you launch on Gamefound instead, the rehearsal can go further. Gamefound lets invited testers walk through campaign phases and place test orders that are not sent to the payment operator.",
+          "So we build a test plan with a base reward, an add on, a language choice and a few shipping regions, then check the order data each one produces. A passing test order proves that route works. It does not prove a real payment or a later payout."
         ],
-        "source": 2
+        "source": 3
       },
       {
-        "id": "first-day",
-        "title": "Respond to what the first day reveals",
+        "id": "first-days",
+        "title": "Days 1 to 3: answer what the launch reveals",
         "paragraphs": [
-          "Collect repeated questions about gameplay, editions, shipping and timing. Correct unclear wording after the creator confirms the facts, and record what changed. Compare advertising results with the reward economics before approving more spend. Do not treat a large first-hour pledge total as proof that every part of the launch is working."
+          "The first days tell you which parts of the page still confuse people. We keep one list of repeated questions about gameplay, editions, shipping and timing, then fix the wording once the creator confirms the facts.",
+          "Kickstarter now shows dropped pledges in the Backer Source data of the creator dashboard, which helps when a channel brings pledges that later fail. Compare ad spend with the reward margin before you approve more budget, and post a first backer update that answers the most common question.",
+          "A big first hour total is good news, but it does not prove every part of the launch works. The checks above are what keep the second week healthy."
+        ],
+        "source": 4
+      },
+      {
+        "id": "full-checklist",
+        "title": "The whole checklist on one page",
+        "paragraphs": [
+          "Here is every check from the phases above in one place, grouped the way we run them. Copy it into your project plan and put a name beside each line.",
+          "If a line has no owner a week before launch, that is the line most likely to fail on the day."
+        ],
+        "visual": {
+          "kind": "checklist",
+          "title": "30 checks, grouped by phase, from 90 days out to day three",
+          "groups": [
+            {
+              "name": "90 to 60 days out",
+              "items": [
+                "Reward contents frozen",
+                "Supplier quotes in hand",
+                "Funding goal covers delivery",
+                "Every reward priced with a margin",
+                "Shipping approach chosen"
+              ]
+            },
+            {
+              "name": "60 to 30 days out",
+              "items": [
+                "Signup route tested",
+                "Kickstarter draft and target date set",
+                "Prelaunch page live",
+                "Referral link for each channel",
+                "First capped ad test running"
+              ]
+            },
+            {
+              "name": "30 to 8 days out",
+              "items": [
+                "Story and reward graphics approved",
+                "Video and rules open on a phone",
+                "Reviewer copies delivered",
+                "Submitted with time for changes",
+                "Launch email drafted"
+              ]
+            },
+            {
+              "name": "The final week",
+              "items": [
+                "One owner per launch job",
+                "Launch time and timezone agreed",
+                "Daily ad cap approved",
+                "Launch email test delivered",
+                "Fallback message ready"
+              ]
+            },
+            {
+              "name": "Launch day",
+              "items": [
+                "Published by hand",
+                "Live page checked on a phone",
+                "Email sent with the live link",
+                "Ads on after the destination check",
+                "First review booked"
+              ]
+            },
+            {
+              "name": "Days 1 to 3",
+              "items": [
+                "Repeated questions logged",
+                "Page fixes approved",
+                "Spend compared with margin",
+                "First backer update posted",
+                "Dropped pledges checked"
+              ]
+            }
+          ],
+          "caption": "Guildframe's working checklist. Platform rules come from the Kickstarter and Gamefound sources below."
+        }
+      },
+      {
+        "id": "help",
+        "title": "Running the checklist with us",
+        "paragraphs": [
+          "We run this checklist for a living, from the reward sheet to the first backer update. Most creators can work through it alone, but the hard part is owning six jobs on the same morning while answering backer comments.",
+          "Our full campaign support covers the campaign page, the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff. If you only need part of it, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) page shows how the pieces split, and [live campaign management](/kickstarter-campaign-management) covers launch day on its own.",
+          "Send us your game, your platform and your target date, and we will tell you honestly whether the timeline still fits."
         ]
       }
     ],
     "faqs": [
       {
+        "question": "How far ahead should I start a board game Kickstarter launch checklist?",
+        "answer": "We plan about 90 days for a first board game campaign. That leaves a month to lock the offer, a month to build the prelaunch audience and a month to finish the page and pass review. Move the dates if an input is late, and keep the order."
+      },
+      {
         "question": "Does Kickstarter launch automatically at my target time?",
-        "answer": "No. Its current Help Center describes a manual launch process. Assign someone to publish and verify the public result."
+        "answer": "No. Kickstarter says launching is a manual process and an automatic launch cannot be scheduled. Setting a target launch date does not launch the project, so name the person who will press launch and a backup."
+      },
+      {
+        "question": "How long does Kickstarter review take?",
+        "answer": "Kickstarter says review can take up to three business days. If changes are requested, the next review takes up to three more business days after you respond, and busy periods can run longer. Plan at least a week of buffer before the date you announce."
+      },
+      {
+        "question": "When can I turn on the Kickstarter prelaunch page?",
+        "answer": "First time creators can turn it on after the project has been submitted for review and approved. Repeat creators can open it from the Promotion tab before review. Followers then get a launch notification email when the project goes live."
       },
       {
         "question": "Should ads start before I check the live campaign?",
-        "answer": "Verify the live destination and essential reward details first. The small delay is preferable to paying for traffic to a broken or incorrect offer."
+        "answer": "No. Check the live page on a phone first, then send the launch email, then switch ads on. A short delay costs less than paying for traffic to a wrong price or a broken link."
       },
       {
         "question": "Does a Gamefound test order charge a real payment?",
-        "answer": "No. Gamefound says Tester Mode saves the test order without sending it to the payment operator. Check real payment operation separately when appropriate."
+        "answer": "No. Gamefound says Tester Mode saves the test order without sending it to the payment operator. Check real payment collection separately."
       }
     ],
     "sources": [
@@ -820,20 +1149,31 @@ export const growthGuides: LaunchGuide[] = [
         "href": "https://help.kickstarter.com/en-us/articles/16236427-how-do-i-launch-my-project-after-it-s-been-approved"
       },
       {
+        "label": "Setting up your project's prelaunch page",
+        "publisher": "Kickstarter Help Center",
+        "href": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page"
+      },
+      {
         "label": "Tester Mode",
         "publisher": "Gamefound Knowledge Base",
         "href": "https://help.gamefound.com/article/366-tester-mode"
+      },
+      {
+        "label": "Kickstarter release notes: view dropped pledges in your dashboard (Oct 13, 2026)",
+        "publisher": "Kickstarter",
+        "href": "https://start.kickstarter.com/kickstarter-release-notes"
       }
     ],
     "relatedSlugs": [
       "kickstarter-review-launch-timeline",
       "board-game-kickstarter-page-checklist",
-      "gamefound-launch-page-checklist"
+      "kickstarter-prelaunch-email-list",
+      "board-game-kickstarter-marketing-plan"
     ],
     "servicePath": "/kickstarter-launch-services",
-    "serviceLabel": "Plan your tabletop launch",
+    "serviceLabel": "Kickstarter launch services for tabletop games",
     "published": "2026-10-28",
-    "updated": "2026-10-28"
+    "updated": "2026-11-25"
   },
   {
     "slug": "board-game-pledge-manager-checklist",
