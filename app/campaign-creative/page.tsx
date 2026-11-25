@@ -130,7 +130,7 @@ export default function CampaignCreativePage() {
       <section className="cc-cases" aria-labelledby="creative-projects-title">
         <div className="w-wrap-wide">
           <div className="cc-head">
-            <h2 id="creative-projects-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Three projects,</span></span> <span className="w-line"><span><em>each contribution explained</em></span></span></h2>
+            <h2 id="creative-projects-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Four projects,</span></span> <span className="w-line"><span><em>each contribution explained</em></span></span></h2>
             <p>Campaign artwork and client product photography are credited on their case pages. The cases describe the creative work and design choices.</p>
           </div>
           <div className="cc-case-list">{caseStudies.map(project => <Link className="cc-case" href={`/work/${project.slug}`} key={project.slug} data-title={project.name} data-cursor-label="Read">

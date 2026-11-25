@@ -7,9 +7,10 @@ import { WorkFx } from "../components/work/WorkFx";
 import { caseTones } from "../components/work/tones";
 import { absoluteUrl, pageMetadata } from "../site-config";
 import { caseStudies, workDate } from "../case-studies";
+import { beyondTabletop } from "../past-work";
 import { formatContentDate } from "../content-dates";
 
-export const metadata = pageMetadata({ title: "Tabletop Kickstarter Campaign Design Case Studies", description: "Explore campaign design for ScentedRealms, FutureProof Terrain and Quiver Time. See Umair's contribution, design choices and published Kickstarter pages.", path: "/work" });
+export const metadata = pageMetadata({ title: "Tabletop Kickstarter Campaign Design Case Studies", description: "Explore campaign design for ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers. See Umair's contribution, design choices and published Kickstarter pages.", path: "/work" });
 
 const nextLinks = [
   { href: "/campaign-creative", label: "Discuss creative production" },
@@ -56,7 +57,7 @@ export default function WorkPage() {
             <h2 className="wk-card-name" id={`project-${project.slug}`}><Link href={`/work/${project.slug}`} data-title={project.name}>{project.name}</Link></h2>
             <p className="wk-tags"><span className="w-dot">Client work</span><span>{project.category}</span></p>
             <p className="wk-card-brief">{project.brief}</p>
-            <dl className="wk-card-role"><dt>My contribution</dt><dd>{project.contributionSummary}</dd></dl>
+            <dl className="wk-card-role"><div><dt>My contribution</dt><dd>{project.contributionSummary}</dd></div>{project.result && <div><dt>Client result</dt><dd className="wk-card-result">{project.result.total} on Kickstarter</dd></div>}</dl>
             {project.testimonial && <blockquote className="wk-card-quote"><p>“{project.testimonial.quote}”</p><footer>Client feedback from {project.testimonial.client}</footer></blockquote>}
             <nav className="wk-card-links" aria-label={`${project.name} links`}>
               <Link className="w-btn w-btn--small" href={`/work/${project.slug}`} data-title={project.name}>Read the case study<span className="gf-sr-only"> for {project.name}</span><Icon name="arrow" /></Link>
@@ -64,6 +65,28 @@ export default function WorkPage() {
             </nav>
           </div>
         </article>)}
+      </section>
+
+      <section className="wk-beyond" aria-labelledby="beyond-title">
+        <div className="wk-wrap">
+          <div className="wk-beyond-head">
+            <h2 className="wk-h2" id="beyond-title" data-reveal="lines"><span className="w-line"><span>Beyond <em>tabletop</em></span></span></h2>
+            <p>Client campaigns outside games. The totals are public Kickstarter figures and are my clients’ results.</p>
+          </div>
+          <ul className="wk-beyond-list">{beyondTabletop.map(item => <li className="wk-mini" key={item.name}>
+            <a className="wk-mini-media" href={item.href} target="_blank" rel="noopener noreferrer" tabIndex={-1} aria-hidden="true" data-cursor-label="View on Kickstarter" data-reveal="media">
+              <ResponsiveImage src={`/images/work/${item.image}.webp`} alt={item.alt} width={1400} height={788} loading="lazy" sizes="(max-width: 900px) calc(100vw - 32px), 30vw" />
+            </a>
+            <div className="wk-mini-body">
+              <h3>{item.name}</h3>
+              <p className="wk-tags"><span className="w-dot">Client work</span></p>
+              <p>{item.line}</p>
+              {"role" in item && <p className="wk-mini-role"><span>My contribution: </span>{item.role}</p>}
+              <p className="wk-mini-result">{item.result}</p>
+              <a className="w-link" href={item.href} target="_blank" rel="noopener noreferrer">View on Kickstarter<span className="gf-sr-only"> for {item.name}, opens in a new tab</span></a>
+            </div>
+          </li>)}</ul>
+        </div>
       </section>
 
       <aside className="wk-note" aria-labelledby="work-note-title">

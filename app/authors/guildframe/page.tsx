@@ -47,7 +47,7 @@ export default function GuildframeAuthorPage() {
       <section id="what-i-work-on">
         <h2>What I work on</h2>
         <p>I run Guildframe. My work covers campaign planning, copy, graphics and paid advertising for board games, card games, RPGs, miniatures and accessories. Guildframe brings those into a launch scope with prelaunch and campaign support.</p>
-        <p>You can see ScentedRealms, FutureProof Terrain and Quiver Time in <Link href="/work">my past campaign work</Link>. The guides explain the decisions behind a page: what to show first, how to explain the game and how to make rewards easier to compare.</p>
+        <p>You can see ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers in <Link href="/work">my past campaign work</Link>. The guides explain the decisions behind a page: what to show first, how to explain the game and how to make rewards easier to compare.</p>
         <p><Link href="/kickstarter-launch-services">See Guildframe’s launch services</Link>. Send your game and launch plans to discuss the scope, or request a <a href="#start-project">free opening mockup</a> for campaign creative.</p>
       </section>
       <section id="how-i-write">

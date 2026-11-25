@@ -29,7 +29,7 @@ export function CaseStudyStory({ project: p, path, title, published, updated, re
   const index = caseStudies.findIndex(other => other.slug === p.slug);
   const next = caseStudies[(index + 1) % caseStudies.length];
   const others = caseStudies.filter(other => other.slug !== p.slug && other.slug !== next.slug);
-  const hasWalkthrough = p.slug !== "quiver-time";
+  const hasWalkthrough = p.slug === "scented-realms" || p.slug === "futureproof-terrain";
   const square = p.imageWidth === p.imageHeight;
   const toc = [{ id: "role", label: "My contribution" }, { id: "visual-details", label: "Visual details" }, ...(hasWalkthrough ? [{ id: "walkthrough", label: "Campaign walkthrough" }] : []), { id: "presentation", label: "The campaign presentation" }, { id: "takeaway", label: "For your own launch" }];
   const servicePath = siteConfig.purchasePath;
@@ -59,6 +59,7 @@ export function CaseStudyStory({ project: p, path, title, published, updated, re
             <div><dt>Category</dt><dd>{p.category}</dd></div>
             <div><dt>Platform</dt><dd>Kickstarter</dd></div>
             <div><dt>Visual shown here</dt><dd>{p.imageNote}</dd></div>
+            {p.result && <div className="wk-fact-result"><dt>Client result</dt><dd>{p.result.total} on Kickstarter. This is {p.result.creator}&apos;s result; my part was the campaign presentation.</dd></div>}
           </dl>
         </div>
       </header>
@@ -86,7 +87,7 @@ export function CaseStudyStory({ project: p, path, title, published, updated, re
         <section className="wk-details" aria-labelledby="visual-details">
           <div className="wk-wrap wk-split">
             <h2 className="wk-h2" id="visual-details">{p.proofLabel}</h2>
-            <div className="wk-prose"><p>{p.slug === "quiver-time" ? "These detail views use the same Quiver Time product photograph shown above. They are product references." : "These detail views use the same campaign artwork shown above. Each focuses on a specific part of the product presentation."}</p></div>
+            <div className="wk-prose"><p>{p.proofIntro}</p></div>
           </div>
           <div className="wk-wrap wk-detail-grid">{p.proofViews.map(view => <figure className="wk-detail" key={view.title}>
             <div className="wk-detail-media" data-reveal="media"><ResponsiveImage src={`/images/work/${p.image}.webp`} alt={view.alt} width={p.imageWidth} height={p.imageHeight} sizes="(max-width: 760px) calc(100vw - 32px), 50vw" loading="lazy" style={{ objectPosition: view.position, transform: `scale(${view.scale})` }} /></div>

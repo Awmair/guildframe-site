@@ -22,6 +22,7 @@ const pages = [
   ["/work/scented-realms", "ScentedRealms Kickstarter Campaign Design Case Study | Guildframe", "ScentedRealms: campaign design"],
   ["/work/futureproof-terrain", "FutureProof Terrain Kickstarter Campaign Design Case Study | Guildframe", "FutureProof Terrain: campaign design"],
   ["/work/quiver-time", "Quiver Time CITADEL Kickstarter Campaign Design Case Study | Guildframe", "Quiver Time: campaign design"],
+  ["/work/cryptic-explorers", "Cryptic Explorers Kickstarter Campaign Design Case Study | Guildframe", "Cryptic Explorers: campaign design"],
   ["/", "Kickstarter Agency for Board Games & Tabletop | Guildframe", "Kickstarter launches"],
   ["/buy", "Start Your Tabletop Launch Project | Guildframe", "Start your tabletop launch project"],
   ["/done-for-you-shopify-store", "Shopify Store Planning After Your Campaign | Guildframe", "Plan a Shopify store after crowdfunding"],
@@ -591,6 +592,7 @@ for (const path of [
   "/work/scented-realms",
   "/work/futureproof-terrain",
   "/work/quiver-time",
+  "/work/cryptic-explorers",
   "/guides/choose-board-game-kickstarter-marketing-agency",
   "/guides/board-game-kickstarter-campaign-design-cost",
   "/guides/kickstarter-prelaunch-email-list",
@@ -747,9 +749,10 @@ test("shows verified client projects separately from concept mockups", async () 
     "https://www.kickstarter.com/projects/hans-h-h-hansen/scentedrealms-fantasy-scents-for-immersive-gameplay",
     "https://www.kickstarter.com/projects/snotgoblingaming/futureproof-wargaming-terrain-by-snot-goblin-gaming",
     "https://www.kickstarter.com/projects/quivertime/quiver-time-citadel-deck-block-cards-dice-tokens-and-coins",
+    "https://www.kickstarter.com/projects/tempesttome/cryptic-explorers",
   ];
   for (const href of links) assert.ok(work.includes(`href="${href}"`));
-  for (const asset of ["scented-realms", "futureproof", "quiver-time"]) {
+  for (const asset of ["scented-realms", "futureproof", "quiver-time", "cryptic-explorers"]) {
     assert.ok(work.includes(`/images/work/${asset}.webp`));
     await access(new URL(`images/work/${asset}.webp`, outputRoot));
   }
@@ -910,7 +913,7 @@ test("opens the homepage with the offer and keeps concepts labelled apart from c
 
 test("publishes three honest case studies and connects them to service pages", async () => {
   const work = await readPage("/work");
-  for (const slug of ["scented-realms", "futureproof-terrain", "quiver-time"]) {
+  for (const slug of ["scented-realms", "futureproof-terrain", "quiver-time", "cryptic-explorers"]) {
     const html = await readPage(`/work/${slug}`);
     assert.ok(work.includes(`href="/work/${slug}"`));
     assert.match(html, /My contribution/);

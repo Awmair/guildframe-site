@@ -1,4 +1,4 @@
-import { pastWork, clientTestimonials } from "./past-work";
+import { pastWork, clientTestimonials, campaignResults } from "./past-work";
 
 import { contentDates } from "./content-dates";
 export const workDate = contentDates.work;
@@ -10,6 +10,7 @@ const projectNotes = [
     imageWidth: 1400,
     imageHeight: 788,
     proofLabel: "Details from the campaign artwork",
+    proofIntro: "These detail views use the same campaign artwork shown above. Each focuses on a specific part of the product presentation.",
     contributionSummary: "Visual direction and campaign presentation",
     proofViews: [
       { title: "Products before the explanation", copy: "The packaged scents and ScentEngine sit together in the foreground. They give a visitor a physical product to look at while the copy introduces the idea.", alt: "Detail of the packaged ScentedRealms scents and ScentEngine in the campaign artwork", position: "50% 78%", scale: 1.18 },
@@ -36,6 +37,7 @@ const projectNotes = [
     imageWidth: 1400,
     imageHeight: 788,
     proofLabel: "Details from the original campaign artwork",
+    proofIntro: "These detail views use the same campaign artwork shown above. Each focuses on a specific part of the product presentation.",
     contributionSummary: "Campaign presentation and product explanation",
     proofViews: [
       { title: "Separate parts", copy: "The walls and floors appear apart from the assembled building. The graphic connects the product name with the pieces a player will handle.", alt: "Detail of the separate modular wall and floor components in the FutureProof Terrain campaign graphic", position: "100% 19%", scale: 1.15 },
@@ -59,33 +61,62 @@ const projectNotes = [
   },
   {
     slug: "quiver-time",
-    imageWidth: 1200,
-    imageHeight: 1200,
-    proofLabel: "Details from Quiver Time's product reference",
+    imageWidth: 1400,
+    imageHeight: 788,
+    proofLabel: "Details from Quiver Time's campaign header",
+    proofIntro: "These detail views use the same Quiver Time campaign header shown above. Each focuses on one part of how the header introduces the product.",
     contributionSummary: "Campaign presentation of features and storage options",
     proofViews: [
-      { title: "The physical product", copy: "Quiver Time's photograph shows the black CITADEL product and its finish. It is the creator's product reference; Umair's contribution was the campaign presentation.", alt: "Detail of Quiver Time's black CITADEL Deck Block in the creator supplied photograph", position: "16% 20%", scale: 1.12 },
-      { title: "Packaging and product identity", copy: "The photograph also shows the retail packaging and CITADEL name. The product, packaging, branding and photography belong to Quiver Time.", alt: "Detail of Quiver Time's CITADEL Deck Block packaging in the creator supplied product photograph", position: "100% 100%", scale: 1.15 },
+      { title: "Name, promise and an open box", copy: "The CITADEL DECK BLOCK name and the line \"Deck protection like never before\" sit beside a small opened box, so the header shows the inside as well as the cover.", alt: "Detail of the Quiver logo, the CITADEL DECK BLOCK name and a small opened red box in Quiver Time's campaign header", position: "0% 50%", scale: 1.04 },
+      { title: "The product and the early result", copy: "The red leather CITADEL with its Quiver strap fills the centre, beside a badge reporting 100% funded within 6 days. The product, branding and photography belong to Quiver Time.", alt: "Detail of the red leather CITADEL Deck Block and the 100% funded within 6 days badge in Quiver Time's campaign header", position: "100% 50%", scale: 1.04 },
     ],
     seoTitle: "Quiver Time CITADEL Kickstarter Campaign Design Case Study",
     description: "Quiver Time CITADEL campaign presentation by Umair: explaining a card storage accessory through its cover, divider, compartments and everyday use.",
     headline: "Making a card storage product easy to understand.",
     brief: "Quiver Time's CITADEL Deck Block is a storage accessory for cards, dice, tokens and coins. The campaign needed to explain its physical features and organisation options so a player could decide whether it suited their collection.",
-    role: "I designed the campaign presentation around the magnetic cover, flexible divider and storage options. Quiver Time supplied the product and its photography. The photograph shown here is credited to Quiver Time; it is a product reference, rather than an example of game artwork created by Guildframe.",
+    role: "I designed the campaign presentation around the magnetic cover, flexible divider and storage options. Quiver Time supplied the product and its photography. The image shown here is the campaign header from Quiver Time's Kickstarter page, credited to Quiver Time.",
     decisions: [
       { title: "Start with how a player uses it", copy: "A storage accessory is easier to evaluate when the page explains what goes inside and how the compartments are used. The campaign presentation centred on the cover, divider and storage options, giving each feature a practical job in the story." },
       { title: "Put compatibility near the product information", copy: "Card players need fit and capacity information before choosing a storage product. That information belongs beside the product and reward explanation, using the creator's confirmed specifications rather than an assumption that every deck will fit." },
-      { title: "Keep the product photography distinct from the design work", copy: "The reference photograph shows the black CITADEL product and its packaging. The product and photography are Quiver Time's work. My contribution was the way the campaign explained the product, its features and the offer." },
+      { title: "Keep the creator's imagery distinct from the design work", copy: "The header image comes from Quiver Time's Kickstarter page and shows the red leather CITADEL with the Quiver logo. The product and its photography are Quiver Time's work. My contribution was the way the campaign explained the product, its features and the offer." },
     ],
     lesson: "For a card game accessory, attractive photography starts the conversation. Dimensions, compatible formats, capacity and bundle contents help finish it. Keep those facts close to the images and use consistent names in the rewards.",
-    imageContext: "Product photograph courtesy of Quiver Time: the black CITADEL Deck Block with its packaging.",
-    credit: "Campaign presentation by Umair. Product design, branding and the photograph shown here belong to Quiver Time.",
+    imageContext: "Campaign header image from Quiver Time's Kickstarter page: the red leather CITADEL Deck Block, the Quiver logo and a badge reporting 100% funded within 6 days.",
+    credit: "Campaign presentation by Umair. Product design, branding and product photography belong to Quiver Time. The header image is shown as it appears on Quiver Time's Kickstarter page.",
     servicePath: "/tabletop-accessories-campaign-design", serviceLabel: "Campaign design for card storage and accessories",
     guide: "kickstarter-reward-tier-graphics", guideLabel: "Making reward contents easy to compare",
+  },
+  {
+    slug: "cryptic-explorers",
+    imageWidth: 1400,
+    imageHeight: 788,
+    proofLabel: "Details from the campaign header",
+    proofIntro: "These detail views use the same campaign header shown above. Each focuses on one part of how the game is introduced.",
+    contributionSummary: "Launch facing campaign presentation",
+    proofViews: [
+      { title: "The box and the figure", copy: "The black game box and a horned figure holding a chalice fill one side of the header. They set the graphic novel atmosphere before a visitor reads a word about the rules.", alt: "Detail of the black Cryptic Explorers game box and a horned figure holding a chalice in the campaign header", position: "0% 50%", scale: 1.04 },
+      { title: "Name, genre and table facts", copy: "The logo sits above the line \"Asymmetrical squad tactics and survival horror\", with the player count, play time and age underneath: 2 to 4 players, 1 to 3 hours, 13 and up.", alt: "Detail of the Cryptic Explorers logo, the genre line and the player count, play time and age icons in the campaign header", position: "100% 50%", scale: 1.04 },
+    ],
+    seoTitle: "Cryptic Explorers Kickstarter Campaign Design Case Study",
+    description: "Cryptic Explorers campaign presentation by Umair: introducing the Cryptonauts, the Goddesses of Death and a customization led survival horror game for 2 to 4 players.",
+    headline: "Introducing a survival horror world and how it plays.",
+    brief: "Cryptic Explorers is an asymmetrical squad tactics and survival horror game for 2 to 4 players from Tempest Tome Games, created by Maher Sagrillo. Its campaign had to introduce the Cryptonauts, the Goddesses of Death and a gameplay loop led by customization.",
+    role: "I created the launch facing campaign presentation. The page introduces the Cryptonauts, the Goddesses of Death and the customization led gameplay loop in a structured story, and keeps the project's graphic novel atmosphere front and center. The game, its artwork and the Cryptic Explorers identity belong to Tempest Tome Games.",
+    decisions: [
+      { title: "Meet the characters before the rules", copy: "The page introduces the Cryptonauts and the Goddesses of Death before the details of play. An asymmetrical game is easier to follow once a visitor has met the characters it is built around." },
+      { title: "Tell it as a structured story", copy: "The Cryptonauts, the Goddesses of Death and the customization led gameplay loop are presented as one story rather than a list of features. Each section gives the next one its context." },
+      { title: "Keep the graphic novel atmosphere front and center", copy: "The project's art carries the page. Layout and headings stay out of its way, so the atmosphere that sets the game apart is what a visitor remembers." },
+    ],
+    lesson: "For a game with asymmetrical sides and a strong art style, introduce the world and its characters first, then explain how a round plays. Let the artwork set the tone, and keep player count, play time and age close to the top.",
+    imageContext: "Campaign header image from the Cryptic Explorers Kickstarter page: the game box, a horned figure holding a chalice, player count, play time and age, and banners reading Funded In 27 Hours and Unlocking Stretch Goals.",
+    credit: "Campaign presentation by Umair. The game, its artwork and the Cryptic Explorers identity belong to Tempest Tome Games.",
+    servicePath: "/board-game-kickstarter-campaign-design", serviceLabel: "Campaign design for board games",
+    guide: "board-game-kickstarter-gameplay-rulebook", guideLabel: "Explaining gameplay on a campaign page",
   },
 ] as const;
 
 export const caseStudies = projectNotes.map((notes, index) => ({
   ...pastWork[index], ...notes,
   testimonial: clientTestimonials.find(t => t.project === pastWork[index].name),
+  result: campaignResults[pastWork[index].name] as { total: string; creator: string } | undefined,
 }));

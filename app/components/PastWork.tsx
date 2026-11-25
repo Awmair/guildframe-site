@@ -10,7 +10,7 @@ export function PastWork() {
   return <section className="sv-work" id="past-work" aria-labelledby="past-work-title">
     <div className="w-wrap-wide sv-work-head">
       <h2 id="past-work-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Tabletop Kickstarter</span></span> <span className="w-line"><span><em>campaigns I’ve worked on</em></span></span></h2>
-      <p>Creative work for three tabletop projects. Follow the links to see their published Kickstarter campaigns.</p>
+      <p>Creative work for four tabletop projects. Follow the links to see their published Kickstarter campaigns.</p>
     </div>
     <div className="sv-projects">{caseStudies.map((project, index) => <article className="sv-project" key={project.slug} style={{ "--tone": tones[index % tones.length] } as React.CSSProperties}>
       <Link className="sv-project-media" href={`/work/${project.slug}`} data-title={project.name} data-cursor-label="Read the case study" data-reveal="media" tabIndex={-1} aria-hidden="true">

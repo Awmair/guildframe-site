@@ -23,7 +23,8 @@ const homeFaqs = [
 const projectSummaries = [
   "Visual direction and campaign presentation for an unfamiliar RPG accessory.",
   "A campaign story around modular parts, table use and storage.",
-  "A clear presentation of the cover, divider and card storage options. Product photography courtesy of Quiver Time.",
+  "A clear presentation of the cover, divider and card storage options. Campaign header image courtesy of Quiver Time.",
+  "A structured story for a survival horror game that keeps its graphic novel atmosphere front and center.",
 ];
 const concepts = [
   { image: "party-card-game", alt: "Original Snack Attack party game concept with a coral box, illustrated fruit cards and tokens" },
@@ -40,7 +41,7 @@ const featuredGuides = [
 ];
 
 const marquee = ["Launch planning", "Prelaunch pages", "Campaign copy", "Page design", "Ad creative", "Paid advertising", "Live campaign checks", "Backer updates", "Gamefound", "Kickstarter to Shopify"];
-const tones = ["#6E2D24", "#22463B", "#2B2E3A"];
+const tones = ["#6E2D24", "#22463B", "#2B2E3A", "#36304A"];
 
 export default function Home() {
   return <>
@@ -74,7 +75,7 @@ export default function Home() {
       <Testimonials />
       <section className="h-work" id="past-work" aria-labelledby="past-work-title" data-tone-shift="">
         <div className="w-wrap-wide h-work-head">
-          <h2 id="past-work-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Three campaigns,</span></span> <span className="w-line"><span><em>three very different games</em></span></span></h2>
+          <h2 id="past-work-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Four campaigns,</span></span> <span className="w-line"><span><em>four very different games</em></span></span></h2>
           <div className="h-work-total" data-reveal="rise">
             <strong className="h-figure">$5M<sup>+</sup></strong>
             <p>Raised on Kickstarter by the campaigns I have worked on. These are my clients’ results, and they include campaigns not shown here.</p>
