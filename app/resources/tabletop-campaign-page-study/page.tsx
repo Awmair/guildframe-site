@@ -7,6 +7,7 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { JsonLd } from "../../components/JsonLd";
+import { GuideVisual } from "../../components/GuideVisual";
 import { contentDates, formatContentDate } from "../../content-dates";
 import {
   campaignPageStudy,
@@ -78,6 +79,9 @@ function Evidence({ observation, fallbackUrl, sourceLabel }: { observation: Camp
 export default function TabletopCampaignPageStudyPage() {
   const textCount = campaignPageStudy.filter((row) => row.sourceAccess === "campaign_text").length;
   const limitedCount = campaignPageStudy.length - textCount;
+  const observedCount = (key: (typeof fields)[number]["key"]) => campaignPageStudy.filter((row) => row[key].status === "observed").length;
+  const observedBars = fields.map((field) => ({ label: field.label, value: observedCount(field.key), display: `${observedCount(field.key)} of ${campaignPageStudy.length}` }));
+  const topField = observedBars.reduce((best, bar) => (bar.value > best.value ? bar : best));
 
   return (
     <>
@@ -177,6 +181,15 @@ export default function TabletopCampaignPageStudyPage() {
             String(campaignPageStudy.filter((row) => row[field.key].status === "unknown").length),
             String(campaignPageStudy.filter((row) => row[field.key].status === "not_applicable").length),
           ])}
+        />
+        <GuideVisual
+          data={{
+            kind: "bars",
+            title: `${topField.label} was observed most often, in ${topField.display} campaigns; mobile legibility was never inspected`,
+            bars: observedBars.map((bar) => ({ ...bar, highlight: bar.label === topField.label })),
+            caption: "Observed means the reviewed public text established the feature. Unknown and not applicable entries are excluded, and the sample cannot estimate how common a feature is.",
+            source: `Guildframe campaign page study, captured ${formatContentDate(campaignStudyCaptureDate)}`,
+          }}
         />
 
         <h2 id="examples">Five examples to use in a campaign brief</h2>
@@ -342,8 +355,12 @@ export default function TabletopCampaignPageStudyPage() {
           <p>
             Guildframe&apos;s <Link href="/campaign-design">campaign design service</Link>{" "}
             can help turn confirmed product facts into copy and graphics. See the{" "}
-            <Link href="/work">three campaign design case studies</Link> for that
+            <Link href="/work">four campaign design case studies</Link> for that
             separate creative work.
+          </p>
+          <p>
+            Ready to start? <Link href="/buy">Book your campaign page</Link> or
+            ask for a free opening mockup built from your own artwork.
           </p>
         </aside>
       </SeoArticlePage>

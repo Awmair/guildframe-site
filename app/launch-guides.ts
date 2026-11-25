@@ -254,9 +254,9 @@ const originalLaunchGuides:LaunchGuide[]=[
   {
     "slug": "what-to-send-kickstarter-campaign-designer",
     "title": "What to Send Your Kickstarter Campaign Designer",
-    "description": "Send your Kickstarter designer the game summary, artwork, reward contents and launch plans. Use this checklist to prepare the brief.",
+    "description": "Send your Kickstarter designer the game summary, artwork, reward contents and launch plans. Use this checklist to prepare a brief they can work from.",
     "tag": "Your design brief",
-    "answer": "Send a short game summary, artwork, gameplay information, reward contents and prices, production details, your platform and a planned launch date. Mark finished files and placeholders. Explain the folder so your designer knows which files to use.",
+    "answer": "Send your Kickstarter campaign designer a short game summary, the artwork you have, how the game plays and one approved reward sheet with contents and prices, plus your platform and launch date. Mark which files are final and which are placeholders, so nobody builds a graphic around art that will change.",
     "sources": [
       {
         "label": "Guildframe campaign design scope and price",
@@ -274,22 +274,60 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "summary",
         "title": "Start with the game in plain language",
         "paragraphs": [
-          "Describe the product and who it’s for. For a board game, explain the choices players make. For an RPG, describe a session and any required system. For an accessory, say what it does and which products it fits.",
-          "Explain the tone you want. If you share campaign references, say what you like: the layout, reward comparison or colours. That tells the designer more than a request to copy another game’s page."
+          "We can only explain a game we understand, so the brief starts in plain language. Describe the product and who it's for. For a board game, explain the choices players make; for an RPG, describe a session and any required system; for an accessory, say what it does and what it fits.",
+          "Explain the tone you want, too. If you share campaign references, say what you like about each one, such as the layout, the reward comparison or the colours, because that tells a designer more than a request to copy another game's page. Start the brief with these four items."
         ],
         "list": [
           "Game name and a short pitch",
           "Audience, play experience and standout features",
           "Platform and target launch date",
           "Design references with a sentence about each"
-        ]
+        ],
+        "visual": {
+          "kind": "checklist",
+          "title": "A brief a designer can work from covers four things: game, art, rewards and launch",
+          "groups": [
+            {
+              "name": "The game",
+              "items": [
+                "Name and short pitch",
+                "How it plays",
+                "Who it's for"
+              ]
+            },
+            {
+              "name": "Artwork",
+              "items": [
+                "Logo and box art",
+                "Component images",
+                "Placeholders marked"
+              ]
+            },
+            {
+              "name": "Rewards",
+              "items": [
+                "One sheet of tiers",
+                "Contents and prices",
+                "Physical or digital"
+              ]
+            },
+            {
+              "name": "Launch",
+              "items": [
+                "Platform",
+                "Target date",
+                "Who approves facts"
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "art",
         "title": "Send artwork that can actually be used",
         "paragraphs": [
-          "Send the best available logo, box art, component images and product photos. Include original files and transparent versions where available. Card images need enough resolution for their text to remain readable on the campaign page.",
-          "Group the folder into logos, product images, gameplay, interiors and rewards. Name files by product, version and status. For several editions or bundles, a PDF or spreadsheet with the contents helps the designer use the right images."
+          "Send the best available logo, box art, component images and product photos, with original files and transparent versions where you have them. Card images need enough resolution for their text to stay readable on the campaign page.",
+          "Group the folder into logos, product images, gameplay, interiors and rewards, and name files by product, version and status. For several editions or bundles, a PDF or spreadsheet of the contents helps the designer pick the right images. Send at least these five items."
         ],
         "list": [
           "Final logo and brand colours if established",
@@ -303,8 +341,8 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "facts",
         "title": "Keep reward and production facts in a separate document",
         "paragraphs": [
-          "Put reward names, contents and prices in one table, with a row for each tier. List optional extras separately. Include compatibility, languages and whether each item is physical or digital.",
-          "Share the production, shipping, delivery, risk and team information you’re ready to publish. Mark unresolved facts and estimates. Check that the images only show components included in the reward, or label the extras."
+          "Put reward names, contents and prices in one table, with a row for each tier and optional extras listed separately. Include compatibility, languages and whether each item is physical or digital.",
+          "Share the production, shipping, delivery, risk and team information you're ready to publish, and mark unresolved facts and estimates. Then check that the images only show components included in the reward, or label the extras."
         ],
         "table": {
           "headers": [
@@ -335,42 +373,77 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "handoff",
         "title": "Agree who reviews the final page",
         "paragraphs": [
-          "Choose one person to collect design feedback. If someone else checks rules, rewards or production details, explain how they’ll review the page before agreeing the deadline. Knowing who owns each fact makes corrections easier.",
-          "For a free Guildframe mockup, a game summary, artwork link, platform and launch plans are enough to start. We can explore the opening while you prepare the rest. The full project starts after we agree the scope, fees and schedule."
+          "Choose one person to collect design feedback. If someone else checks rules, rewards or production details, agree how they'll review the page before setting the deadline, because knowing who owns each fact makes corrections faster.",
+          "For a free Guildframe mockup, a game summary, an artwork link, the platform and your launch plans are enough to start. We explore the opening while you prepare the rest, and the full campaign design project starts once we agree the scope, fee and schedule."
         ],
+        "visual": {
+          "kind": "steps",
+          "title": "From brief to finished campaign page in five steps",
+          "steps": [
+            {
+              "label": "You send the brief",
+              "detail": "Summary, artwork link, platform and date"
+            },
+            {
+              "label": "Free opening mockup",
+              "detail": "One section, no payment or obligation"
+            },
+            {
+              "label": "Scope agreed",
+              "detail": "Sections, files, fee and schedule in writing"
+            },
+            {
+              "label": "Design and copy",
+              "detail": "You confirm every fact"
+            },
+            {
+              "label": "Preview check",
+              "detail": "We review the page inside the platform"
+            }
+          ]
+        },
         "source": 0
       }
     ],
     "faqs": [
       {
         "question": "Do I need all the art finished to request a mockup?",
-        "answer": "No. Share enough material to establish a direction and label unfinished pieces clearly. Final campaign production needs the artwork that will actually appear."
+        "answer": "No. Share enough material to set a direction and label unfinished pieces clearly. Final campaign production needs the artwork that will actually appear."
       },
       {
         "question": "Should I give a designer my account password?",
-        "answer": "No. Start with files, a brief and preview links. If platform access is required later, agree an appropriate access method without putting passwords in the brief."
+        "answer": "No. Start with files, a brief and preview links. If platform access is needed later, agree a proper access method without putting passwords in the brief."
       },
       {
         "question": "Can the designer write campaign copy?",
-        "answer": "Guildframe shapes the copy from your information. You remain responsible for confirming product, gameplay, reward and production facts."
+        "answer": "Yes. We shape the copy from your information, and you stay responsible for confirming product, gameplay, reward and production facts."
+      },
+      {
+        "question": "What file formats should I send for artwork?",
+        "answer": "Send the original or highest resolution files you have, plus transparent versions of logos and components where they exist. Card images need enough resolution for their text to stay readable on the page."
+      },
+      {
+        "question": "Can I send the brief before the rewards are final?",
+        "answer": "Yes. Mark the reward sheet as a draft and note which items may change. We can start on the opening and page outline, then build the reward graphics once the contents are approved."
       }
     ],
     "seoTitle": "What to Send Your Kickstarter Campaign Designer",
     "relatedSlugs": [
       "when-to-hire-kickstarter-campaign-designer",
       "board-game-kickstarter-campaign-design-cost",
-      "kickstarter-reward-tier-graphics"
+      "kickstarter-reward-tier-graphics",
+      "kickstarter-image-sizes"
     ],
     "servicePath": "/campaign-design",
-    "serviceLabel": "Kickstarter campaign copy and graphics",
-    "updated": "2026-10-03"
+    "serviceLabel": "Kickstarter campaign design for tabletop games",
+    "updated": "2026-11-25"
   },
   {
     "slug": "kickstarter-reward-tier-graphics",
     "title": "Kickstarter Reward Tier Graphics for Board Games",
     "description": "Design Kickstarter reward graphics that show the contents of each tier. Compare board game editions, card decks, RPG books and optional extras.",
     "tag": "Reward design",
-    "answer": "A reward graphic should name the tier, show its contents and explain how it differs from the others. Use consistent images and labels, and compare each graphic with the platform’s reward setup before launch.",
+    "answer": "A Kickstarter reward tier graphic should name the tier, show exactly what it contains and make the difference from the next tier obvious at phone width. We build every graphic from one approved reward list, so the images, the story and Kickstarter's native reward fields all say the same thing.",
     "sources": [
       {
         "label": "Adding images and media to a Kickstarter project",
@@ -393,8 +466,8 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "inventory",
         "title": "Make one reward inventory before making graphics",
         "paragraphs": [
-          "List every tier and the items it includes. Use one name for each item. State whether an expansion bundle includes the base game. For an RPG, list physical books, PDFs and extras separately.",
-          "Mark optional extras in both the graphic and the platform setup. If the dice or sleeves beside a box cost extra, a backer should be able to see that immediately."
+          "We start every reward graphic from one inventory, not from the artwork. List every tier and the items it includes, using one name for each item. Say whether an expansion bundle includes the base game, and for an RPG, list physical books, PDFs and extras separately.",
+          "Mark optional extras in both the graphic and the platform setup. If the dice or sleeves beside a box cost extra, a backer should see that straight away."
         ],
         "table": {
           "headers": [
@@ -425,8 +498,41 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "example",
         "title": "Example: compare the contents before the artwork",
         "paragraphs": [
-          "This fictional reward plan shows how a single list keeps the graphics consistent. Replace the names and counts with your confirmed products. Optional extras need their own label, even if they appear beside a reward in a photograph."
+          "This fictional reward plan shows how one list keeps the graphics consistent. Replace the names and counts with your confirmed products. Optional extras need their own label, even when they sit beside a reward in a photo."
         ],
+        "visual": {
+          "kind": "compare",
+          "title": "A tier graphic should show what changes, not repeat everything",
+          "columns": [
+            {
+              "name": "Core game",
+              "points": [
+                "Base game and rules",
+                "Standard components"
+              ],
+              "verdict": "The starting point"
+            },
+            {
+              "name": "Deluxe game",
+              "points": [
+                "Everything in Core",
+                "Added: metal coins",
+                "Added: playmat"
+              ],
+              "verdict": "Additions grouped together",
+              "highlight": true
+            },
+            {
+              "name": "Optional extra",
+              "points": [
+                "Card sleeves",
+                "Labelled as paid separately"
+              ],
+              "verdict": "Never shown as included"
+            }
+          ],
+          "caption": "Illustrative example, not a real campaign."
+        },
         "table": {
           "headers": [
             "Example reward",
@@ -456,8 +562,8 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "hierarchy",
         "title": "Use a repeatable visual order",
         "paragraphs": [
-          "Put the reward name in the same place on each graphic. Show the main product, then the included extras, with a short line explaining the difference. That makes tiers easier to compare.",
-          "When several rewards share most contents, try a labelled comparison table. Save detailed component spreads for the product sections, where readers can inspect what they’re buying."
+          "We put the reward name in the same place on every graphic. Then comes the main product, the included extras and a short line on what changed from the tier before, so tiers are quick to compare.",
+          "When several rewards share most of their contents, a labelled comparison table often works better. Save detailed component spreads for the product sections, where readers can inspect what they're buying. Each tier graphic follows this order."
         ],
         "list": [
           "Reward name and edition",
@@ -471,8 +577,8 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "mobile",
         "title": "Check comparison graphics at phone width",
         "paragraphs": [
-          "Preview the reward graphic at the width it will occupy on a phone. If someone has to pinch to read the contents, simplify the layout or split the information into smaller sections.",
-          "Where the platform allows it, put essential contents in readable page text too. Someone should still be able to understand the reward if the image is small or slow to load."
+          "Preview each reward graphic at the width it will take up on a phone. If someone has to pinch to read the contents, simplify the layout or split the information into smaller pieces.",
+          "Where the platform allows it, put the essential contents in readable page text too. Someone should still understand the reward if the image is small or slow to load. Our guide to Kickstarter image sizes covers the export dimensions for story and reward images."
         ],
         "source": 0
       },
@@ -480,51 +586,85 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "consistency",
         "title": "Make the story and reward setup agree",
         "paragraphs": [
-          "Check the graphics against the actual reward records before launch. Names, counts, prices and extras must match. Remove images for tiers you’ve retired.",
-          "Gamefound places reward sections alongside the story and controls visibility by campaign stage. Plan the graphics for that structure. The creator confirms the reward configuration and fulfilment details on either platform."
+          "Check the graphics against the actual reward records before launch. Names, counts, prices and extras must match, and images for retired tiers should come out.",
+          "Gamefound places reward sections alongside the story and controls visibility by campaign stage, so plan the graphics for that structure. On either platform, you confirm the reward configuration and fulfilment details."
         ],
         "source": 1
       },
       {
         "id": "native-images",
-        "title": "Check the native reward image and add-on settings",
+        "title": "Check the native reward image and add on settings",
         "paragraphs": [
-          "Kickstarter reward and add-on images use a 3:2 ratio, at least 348 × 232 pixels and a maximum file size of 50 MB. Supported formats in its reward guidance are JPG, PNG and GIF. These are the native reward fields, not the tall section graphics in the story.",
-          "A digital main reward cannot accept shippable add-ons. Check product format, destinations and the reward configuration before promising a mixed bundle in a graphic."
+          "Kickstarter's native reward and add on images need a 3:2 ratio, at least 348 x 232 pixels and a file no larger than 50 MB, in JPG, PNG or GIF. These are the reward fields, not the tall section graphics inside the story.",
+          "A digital main reward can't take shippable add ons, and backers only see shippable add ons that ship to their country. So we check product format, destinations and reward setup before promising a mixed bundle in a graphic. That check is part of every reward comparison in our campaign design work."
         ],
+        "visual": {
+          "kind": "stats",
+          "title": "Kickstarter reward images: 3:2, at least 348 x 232 pixels, under 50 MB",
+          "stats": [
+            {
+              "value": "3:2",
+              "label": "Image ratio",
+              "note": "Reward and add on images"
+            },
+            {
+              "value": "348 x 232",
+              "label": "Minimum size in pixels"
+            },
+            {
+              "value": "50 MB",
+              "label": "Largest file allowed"
+            },
+            {
+              "value": "JPG, PNG, GIF",
+              "label": "Accepted formats"
+            }
+          ],
+          "source": "Kickstarter Help Center, adding rewards"
+        },
         "source": 2
       }
     ],
     "faqs": [
       {
         "question": "Should every tier have its own large graphic?",
-        "answer": "Only when it helps the choice. Shared layouts or a compact comparison can explain similar tiers more clearly."
+        "answer": "Only when it helps the choice. A shared layout or a compact comparison often explains similar tiers more clearly."
       },
       {
         "question": "Can I show an optional extra beside the main reward?",
-        "answer": "Yes, if it is clearly labelled as optional and the graphic matches the reward configuration. Do not imply that it is included."
+        "answer": "Yes, if it is clearly labelled as optional and the graphic matches the reward configuration. Don't imply that it is included."
+      },
+      {
+        "question": "What size should Kickstarter reward images be?",
+        "answer": "Kickstarter asks for a 3:2 ratio, at least 348 x 232 pixels and no more than 50 MB, in JPG, PNG or GIF. Tall graphics inside the story are a separate format."
+      },
+      {
+        "question": "Can a digital reward include physical add ons?",
+        "answer": "No. Kickstarter says that when the main reward tier is digital, backers can't add shippable add ons. Plan mixed bundles around a physical main tier."
       },
       {
         "question": "Are reward graphics included in Guildframe campaign design?",
-        "answer": "Reward presentation is part of the campaign design service. The exact graphics and comparison format are agreed in the brief."
+        "answer": "Yes. Reward presentation is part of the campaign design service, and the exact graphics and comparison format are agreed in the brief."
       }
     ],
     "seoTitle": "Kickstarter Reward Tier Graphics for Board Games",
     "relatedSlugs": [
+      "kickstarter-image-sizes",
+      "kickstarter-stretch-goals-planning",
+      "kickstarter-campaign-graphics-mobile-readability",
       "card-game-kickstarter-launch-guide",
-      "miniatures-stl-kickstarter-launch-guide",
-      "kickstarter-stretch-goals-planning"
+      "miniatures-stl-kickstarter-launch-guide"
     ],
-    "servicePath": "/card-game-kickstarter-campaign-design",
-    "serviceLabel": "Card game Kickstarter page design",
-    "updated": "2026-10-03"
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign design for tabletop games",
+    "updated": "2026-11-25"
   },
   {
     "slug": "ttrpg-kickstarter-campaign-page-design",
     "title": "How to Design a TTRPG Kickstarter Campaign Page",
     "description": "Build a TTRPG Kickstarter page that explains the game, shows sample spreads and separates PDF and print rewards. A practical guide for RPG creators.",
     "tag": "RPG launches",
-    "answer": "Explain what happens during a session, which system or books players need and what each reward contains. Show readable sample pages and accurate print and digital details. Leave room for those answers within the atmosphere of the game.",
+    "answer": "A TTRPG Kickstarter page should show what a session feels like, which system or books a group needs and exactly what each PDF, print and bundle reward contains. Readable sample spreads do more work than cover art, so we place one close to the top of the page.",
     "sources": [
       {
         "label": "Adding images and media to a Kickstarter project",
@@ -535,6 +675,11 @@ const originalLaunchGuides:LaunchGuide[]=[
         "label": "Guildframe campaign design scope and price",
         "publisher": "Guildframe",
         "href": "/campaign-design"
+      },
+      {
+        "label": "New Games and Publishing subcategories: TTRPG and STL",
+        "publisher": "Kickstarter",
+        "href": "https://start.kickstarter.com/kickstarter-release-notes/new-games-publishing-subcategories-ttrpg-stl-and-audiobooks"
       }
     ],
     "sections": [
@@ -542,22 +687,44 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "experience",
         "title": "Introduce the play experience before the lore",
         "paragraphs": [
-          "Give someone a way into the setting. Describe the characters players take, the situations they face and the tone of a session. A short example can do more here than several paragraphs of world history.",
-          "Say whether this is a complete game, an adventure or a supplement. Name any required core book or system using the compatibility information you’re authorised to publish. Readers need to know what else they’ll need to play."
+          "It's tempting to open an RPG page with lore, but a reader first wants to know what a session feels like. So we describe the characters players take, the situations they face and the tone at the table. A short example of play does more than several paragraphs of world history.",
+          "Then say whether this is a complete game, an adventure or a supplement. Name any required core book or system, using the compatibility wording you're allowed to publish, because readers need to know what else they'll need. Answer these four questions near the top."
         ],
         "list": [
           "What the group does during play",
           "The tone and intended experience",
           "Any required system or additional books",
           "Available sample, quickstart or play material"
-        ]
+        ],
+        "visual": {
+          "kind": "steps",
+          "title": "Open with the session, then the system, then the rewards",
+          "steps": [
+            {
+              "label": "Premise",
+              "detail": "Who the players are and what they do"
+            },
+            {
+              "label": "Requirements",
+              "detail": "Complete game or supplement, and which system"
+            },
+            {
+              "label": "Sample spread",
+              "detail": "A real page, readable on a phone"
+            },
+            {
+              "label": "Rewards",
+              "detail": "PDF, print and bundle contents"
+            }
+          ]
+        }
       },
       {
         "id": "samples",
         "title": "Show readable sample pages",
         "paragraphs": [
-          "Show a rules page, adventure location, character sheet or usable table at a readable size. A book render shows the physical object; a sample spread lets someone judge how the pages work during play.",
-          "If you have a shareable sample, link to it and say what’s included. Label prototype images and unfinished layouts so readers know what is still changing."
+          "Show a rules page, an adventure location, a character sheet or a usable table at a readable size. A book render shows the physical object, while a sample spread lets someone judge how the pages work during play.",
+          "If you have a shareable sample, link to it and say what's included. Label prototype images and unfinished layouts so readers know what is still changing."
         ],
         "source": 0
       },
@@ -565,40 +732,52 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "formats",
         "title": "Separate physical, digital and bundle rewards",
         "paragraphs": [
-          "List what’s in each reward. Say when a print book includes its PDF, and name the adventures or maps in a digital bundle. Exact contents are easier to compare than a label such as complete package.",
-          "Use confirmed page count, dimensions, binding, paper and production details, or clearly label estimates. Format and scope can help explain a zine; for a hardback, readers also need to see the contents and how the layout works."
+          "List what's in each reward. Say when a print book includes its PDF, and name the adventures or maps in a digital bundle, because exact contents are easier to compare than a label like complete package.",
+          "Use confirmed page count, dimensions, binding, paper and production details, or label them clearly as estimates. Format and scope can explain a zine on their own, but for a hardback, readers also need to see the contents and how the layout works."
         ],
-        "table": {
-          "headers": [
-            "Reward format",
-            "Questions to answer"
-          ],
-          "rows": [
-            [
-              "PDF",
-              "Which books or files are included?"
-            ],
-            [
-              "Print book",
-              "What format and confirmed specifications?"
-            ],
-            [
-              "Print plus digital",
-              "Does it include the matching PDF?"
-            ],
-            [
-              "Bundle",
-              "Which adventures, maps or supplements are included?"
-            ]
+        "visual": {
+          "kind": "compare",
+          "title": "Each RPG reward format answers a different question",
+          "columns": [
+            {
+              "name": "PDF",
+              "points": [
+                "Which books or files are included",
+                "When the files arrive"
+              ]
+            },
+            {
+              "name": "Print book",
+              "points": [
+                "Format, binding and page count",
+                "Whether the matching PDF is included"
+              ]
+            },
+            {
+              "name": "Bundle",
+              "points": [
+                "Each adventure, map or supplement named",
+                "Which parts are print and which are digital"
+              ]
+            }
           ]
         }
+      },
+      {
+        "id": "category",
+        "title": "Check the TTRPG subcategory",
+        "paragraphs": [
+          "Kickstarter announced TTRPG and STL subcategories across Games and Publishing on May 8, 2026, and said creators would be able to select them while building a campaign and after launch. If your book sits under a broader category, check whether the TTRPG subcategory is now the better fit.",
+          "Pick the subcategory that matches what backers mostly receive, then keep the page's system and format details consistent with it."
+        ],
+        "source": 2
       },
       {
         "id": "direction",
         "title": "Build a direction that matches the game",
         "paragraphs": [
-          "Take the colours, type and imagery from the game. A noir investigation might use restrained colour; a whimsical adventure might be brighter. A horror zine may use empty space to build tension. Keep enough contrast and space for the practical details.",
-          "Guildframe prepares page structure, copy and graphics using your artwork. Send a summary, sample spread and launch plans for a free opening mockup. New book illustration and video need their own scope."
+          "Take the colours, type and imagery from the game itself. A noir investigation might use restrained colour, a whimsical adventure might be brighter and a horror zine may use empty space to build tension. Either way, keep enough contrast and room for the practical details.",
+          "Our campaign design service prepares the page structure, copy and graphics using your artwork. Send a summary, a sample spread and your launch plans for a free mockup of the opening section; new book illustration and video need their own scope. For the wider plan, from audience to pledge manager, see our TTRPG Kickstarter launch guide."
         ],
         "source": 1
       }
@@ -606,26 +785,35 @@ const originalLaunchGuides:LaunchGuide[]=[
     "faqs": [
       {
         "question": "Do I need a fully written book before requesting design?",
-        "answer": "Not necessarily. A clear premise and usable artwork can establish a direction. Final campaign claims and sample material must be reviewed for accuracy before launch."
+        "answer": "Not necessarily. A clear premise and usable artwork can set a direction. Final campaign claims and sample material must be checked for accuracy before launch."
       },
       {
         "question": "Should the campaign include a sample PDF?",
-        "answer": "A sample can help readers assess the layout and tone if you have one ready to share. It is a design recommendation, not a platform requirement."
+        "answer": "A sample helps readers judge the layout and tone if you have one ready to share. It is a design recommendation, not a platform requirement."
       },
       {
         "question": "Can one campaign show print and digital rewards?",
         "answer": "Yes. Present the contents and format clearly for each option, then make sure the platform reward setup matches."
+      },
+      {
+        "question": "Is there a TTRPG category on Kickstarter?",
+        "answer": "Kickstarter announced a TTRPG subcategory, alongside STL, across Games and Publishing on May 8, 2026. Check the current options in your project basics and choose the one that fits your book."
+      },
+      {
+        "question": "Should my page say which system the game needs?",
+        "answer": "Yes. Say whether the book is a complete game, an adventure or a supplement, and name any required core book or system using wording you're allowed to publish."
       }
     ],
-    "seoTitle": "How to Design a TTRPG Kickstarter Campaign Page",
+    "seoTitle": "TTRPG Kickstarter Page Design: What to Show",
     "relatedSlugs": [
+      "ttrpg-kickstarter-launch-guide",
       "kickstarter-reward-tier-graphics",
       "what-to-send-kickstarter-campaign-designer",
       "kickstarter-campaign-graphics-mobile-readability"
     ],
-    "servicePath": "/ttrpg-kickstarter-campaign-design",
-    "serviceLabel": "TTRPG Kickstarter page design",
-    "updated": "2026-10-03"
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign design for tabletop games",
+    "updated": "2026-11-25"
   },
   {
     "slug": "kickstarter-vs-gamefound-campaign-page-design",
@@ -927,9 +1115,9 @@ const originalLaunchGuides:LaunchGuide[]=[
   {
     "slug": "when-to-hire-kickstarter-campaign-designer",
     "title": "When Should You Hire a Kickstarter Campaign Designer?",
-    "description": "Contact a Kickstarter page designer once your game summary and usable artwork are ready. Plan assets, rewards and review time before launch.",
+    "description": "Hire a Kickstarter campaign designer once your game summary and usable artwork are ready. Plan assets, rewards and review time before launch.",
     "tag": "Launch timing",
-    "answer": "Contact a campaign designer once you can explain the game and share usable artwork and proposed rewards. You can explore an opening design earlier. Schedule the full page around asset delivery and review time; the right start date depends on what is ready.",
+    "answer": "Hire a Kickstarter campaign designer once you can explain the game, share usable artwork and list draft rewards. You can start an opening mockup earlier, but book the full page around when your assets arrive and leave time to review the preview before launch.",
     "sources": [
       {
         "label": "Setting up a Kickstarter prelaunch page",
@@ -947,31 +1135,30 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "readiness",
         "title": "What can start before the game is finished?",
         "paragraphs": [
-          "An opening mockup can start before every reward image and production detail is final. For the full page, unfinished content means work will need to be replaced and checked again.",
-          "If the premise and art direction are settled, start with the opening and page outline while rewards are being decided. If the game itself is still changing, prepare a more settled brief before commissioning final graphics."
+          "You don't need a finished game to start. An opening mockup can begin before every reward image and production detail is final, but on the full page, unfinished content means work gets replaced and checked again.",
+          "If the premise and art direction are settled, we start with the opening and the page outline while you decide the rewards. If the game itself is still changing, settle the brief first and commission the final graphics after."
         ],
-        "table": {
-          "headers": [
-            "Stage",
-            "Useful design work"
-          ],
-          "rows": [
-            [
-              "Premise and art direction established",
-              "Opening mockup and page outline"
-            ],
-            [
-              "Reward contents and assets taking shape",
-              "Content inventory and comparison plan"
-            ],
-            [
-              "Key facts and artwork confirmed",
-              "Final page graphics and copy"
-            ],
-            [
-              "Content uploaded to the platform",
-              "Preview review and corrections"
-            ]
+        "visual": {
+          "kind": "timeline",
+          "title": "Design can start in stages, as each decision settles",
+          "events": [
+            {
+              "when": "Premise and art direction set",
+              "label": "Opening mockup and page outline"
+            },
+            {
+              "when": "Rewards taking shape",
+              "label": "Content inventory and comparison plan"
+            },
+            {
+              "when": "Facts and artwork confirmed",
+              "label": "Final page graphics and copy",
+              "highlight": true
+            },
+            {
+              "when": "Uploaded to the platform",
+              "label": "Preview review and corrections"
+            }
           ]
         }
       },
@@ -979,32 +1166,64 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "inputs",
         "title": "Check the inputs before promising a date",
         "paragraphs": [
-          "List missing assets and who will supply each one. Component renders, sample spreads, gameplay media, reward prices and production information may come from different people. Include their delivery dates in the design schedule.",
-          "Tell the designer what’s available, what will change and when to expect the rest. Agree whether the schedule starts at booking or when the required assets arrive."
+          "List the missing assets and who will supply each one. Component renders, sample spreads, gameplay media, reward prices and production information may come from different people, so their delivery dates belong in the design schedule.",
+          "Tell the designer what's available, what will change and when to expect the rest, and agree whether the schedule starts at booking or when the assets arrive. Have these five things ready before you book."
         ],
         "list": [
-          "A usable logo and principal product artwork",
-          "A concise game or product explanation",
+          "A usable logo and the main product artwork",
+          "A short game or product explanation",
           "Proposed reward names and contents",
           "An owner for production and delivery facts",
-          "A person who will consolidate design feedback"
+          "A person who will collect design feedback"
         ]
       },
       {
         "id": "review",
         "title": "Leave time for an actual review",
         "paragraphs": [
-          "Review the design after upload. The creator checks product facts, rewards and visibility. A new reader checks whether the page explains the game. Phone review can catch labels that looked fine on the design canvas.",
-          "Leave time for those checks before launch day. Work back from the launch date to allow for assets, design, feedback and preview corrections. Guildframe agrees timing from the brief because projects vary."
+          "We review the design after it is uploaded, because the platform view is what backers see. You check product facts, rewards and visibility, a new reader checks whether the page explains the game, and a phone check catches labels that looked fine on the design canvas.",
+          "Leave time for those checks before launch day. Work back from the launch date to allow for assets, design, feedback and preview corrections. We agree timing from your brief, because every project is different."
         ],
         "source": 1
+      },
+      {
+        "id": "diy",
+        "title": "Doing it yourself or hiring a designer",
+        "paragraphs": [
+          "Building your own page is a fair choice when someone on the team has the time and the design skills. The honest limit is hours, because layout, graphics, exports and phone checks compete with production, community and prelaunch work in the same weeks.",
+          "When you hire us, you still own the facts: rules, rewards, prices and delivery. We plan the page, write the copy and build the graphics from your artwork, and the campaign page package has a fixed price on our campaign design page. If you're weighing a full agency instead, our guide to Kickstarter agency cost covers that decision."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "Doing it yourself saves the fee; hiring a designer saves the hours",
+          "columns": [
+            {
+              "name": "Do it yourself",
+              "points": [
+                "No design fee",
+                "You plan, write, design and export",
+                "Phone checks and fixes are on you"
+              ]
+            },
+            {
+              "name": "Hire a campaign designer",
+              "points": [
+                "Fixed price for the page package",
+                "We plan, write and design from your art",
+                "You confirm facts; we check the preview"
+              ],
+              "highlight": true
+            }
+          ],
+          "caption": "Ad spend, platform fees and production costs stay separate either way."
+        }
       },
       {
         "id": "prelaunch",
         "title": "Prepare the public introduction alongside the full campaign",
         "paragraphs": [
-          "Kickstarter recommends sharing a prelaunch page before launch. It lets people follow the project and receive a launch notification. Prepare it alongside the full campaign story.",
-          "Check that the title and main image explain the project while the longer page is being designed. Once you have a summary and artwork, request a free Guildframe opening mockup. The full scope and timing are agreed before work starts."
+          "Kickstarter recommends sharing a prelaunch page at least one week before launch, so people can follow the project and get a launch notification. Prepare it alongside the full campaign story, not after it.",
+          "Check that the title and main image explain the project while the longer page is being designed. Once you have a summary and artwork, request a free opening mockup through our campaign design page, and we agree the full scope and timing before any work starts."
         ],
         "source": 0
       }
@@ -1012,26 +1231,35 @@ const originalLaunchGuides:LaunchGuide[]=[
     "faqs": [
       {
         "question": "Should I hire a designer before all the art is final?",
-        "answer": "You can explore a direction early, but identify unfinished assets and agree when they must be supplied for final production."
+        "answer": "You can explore a direction early. Mark the unfinished assets and agree when they must arrive for final production."
       },
       {
         "question": "How long does Guildframe campaign design take?",
-        "answer": "The schedule depends on the assets, page sections and review process. I confirm it after looking at your brief and planned launch date."
+        "answer": "It depends on the assets, page sections and review process. We confirm a schedule after reading your brief and planned launch date."
+      },
+      {
+        "question": "How far ahead should I book a campaign designer?",
+        "answer": "Book once your summary, usable art and draft rewards exist, then work back from launch to allow for assets, design, feedback and preview fixes. We confirm the schedule after reading your brief."
+      },
+      {
+        "question": "Is it cheaper to design my own Kickstarter page?",
+        "answer": "It saves the design fee, but the hours move to you: layout, graphics, exports and phone checks. Weigh that time against the fixed price of our campaign page package and the rest of your launch work."
       },
       {
         "question": "Can design replace building a prelaunch audience?",
-        "answer": "No. Campaign design and audience preparation are different work. A clear page still needs the right people to discover it."
+        "answer": "No. Campaign design and audience building are different work, and a clear page still needs the right people to find it."
       }
     ],
     "seoTitle": "When to Hire a Kickstarter Campaign Designer",
     "relatedSlugs": [
+      "kickstarter-agency-cost",
       "what-to-send-kickstarter-campaign-designer",
       "board-game-kickstarter-campaign-design-cost",
       "board-game-kickstarter-page-checklist"
     ],
     "servicePath": "/campaign-design",
-    "serviceLabel": "Kickstarter campaign copy and graphics",
-    "updated": "2026-10-03"
+    "serviceLabel": "Kickstarter campaign design for tabletop games",
+    "updated": "2026-11-25"
   }
 
 ];

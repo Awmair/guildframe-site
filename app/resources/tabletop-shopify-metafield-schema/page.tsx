@@ -6,6 +6,7 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import { GuideVisual } from "../../components/GuideVisual";
 import { contentDates } from "../../content-dates";
 
 export const metadata = pageMetadata({
@@ -118,6 +119,19 @@ export default function TabletopMetafieldSchemaPage() {
         namespace keeps the fields grouped in the Shopify admin and makes them
         easy to identify in theme code.
       </p>
+      <GuideVisual
+        data={{
+          kind: "stats",
+          title: "Start with 9 shared fields, then add only the block for your category",
+          stats: [
+            { value: "9", label: "Shared fields", note: "Edition, release status, delivery, customs" },
+            { value: "10", label: "Board and card game fields", note: "Player count, playtime, components" },
+            { value: "7", label: "TTRPG fields", note: "Format, page count, game system" },
+            { value: "8", label: "Miniatures and terrain fields", note: "Scale, material, assembly, files" },
+          ],
+          caption: "Counts of the fields defined in the tables on this page, all in the tabletop namespace.",
+        }}
+      />
       <ul>
         <li>
           <strong>Namespace:</strong> <code>tabletop</code>
@@ -254,6 +268,18 @@ export default function TabletopMetafieldSchemaPage() {
         </Link>
         .
       </p>
+      <aside className="article-next-step">
+        <h2>Moving from a funded campaign to a store?</h2>
+        <p>
+          This schema works best when the product facts come straight from your
+          campaign: the same editions, contents and delivery terms backers saw.
+          Our{" "}
+          <Link href="/post-campaign-support">post campaign support</Link>{" "}
+          covers that handoff, and our{" "}
+          <Link href="/done-for-you-shopify-store">done for you Shopify store</Link>{" "}
+          service can set the fields up for you.
+        </p>
+      </aside>
     </SeoArticlePage>
   );
 }

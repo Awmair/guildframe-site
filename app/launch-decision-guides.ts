@@ -35,34 +35,228 @@ export const decisionGuides: LaunchGuide[] = [
     ],
   },
   {
-    slug: "kickstarter-prelaunch-page-vs-landing-page",
-    title: "Kickstarter Prelaunch Page or Your Own Landing Page?",
-    seoTitle: "Kickstarter Prelaunch Page vs Landing Page for Board Games",
-    description: "Compare Kickstarter followers with your own email signup page. Choose the right prelaunch flow for a board game, card game or tabletop RPG campaign.",
-    tag: "Prelaunch decisions",
-    published: "2026-10-04",
-    updated: "2026-10-04",
-    answer: "Use Kickstarter's prelaunch page to collect platform followers who receive launch notifications and prelaunch updates. Use your own landing page when you need a separate email signup flow, more room to explain the game or tests in your own tools. You can use both, but give each page a clear purpose and measure their audiences separately.",
-    servicePath: "/kickstarter-prelaunch-marketing",
-    serviceLabel: "Guildframe prelaunch landing pages and email",
-    relatedSlugs: ["kickstarter-prelaunch-page-guide", "kickstarter-prelaunch-email-list", "board-game-kickstarter-marketing-plan"],
-    sources: [
-      { label: "Kickstarter prelaunch page features and follower notifications", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page" },
-      { label: "Kickstarter's promotion handbook", publisher: "Kickstarter", href: "https://www.kickstarter.com/help/handbook/promotion" },
+    "slug": "kickstarter-prelaunch-page-vs-landing-page",
+    "title": "Kickstarter Prelaunch Page or Your Own Landing Page?",
+    "seoTitle": "Kickstarter Prelaunch Page vs Landing Page for Board Games",
+    "description": "Compare Kickstarter followers with your own email signup page. Choose the right prelaunch flow for a board game, card game or tabletop RPG campaign.",
+    "tag": "Prelaunch decisions",
+    "published": "2026-10-04",
+    "updated": "2026-11-25",
+    "answer": "Use the Kickstarter prelaunch page to collect followers who get an email when the campaign goes live, and your own landing page when the game needs more explaining or you want an email list in your own tools. You can use both, as long as each page has one job and you count each audience separately.",
+    "servicePath": "/kickstarter-prelaunch-marketing",
+    "serviceLabel": "Kickstarter prelaunch marketing for tabletop games",
+    "relatedSlugs": [
+      "kickstarter-followers-before-launch",
+      "kickstarter-prelaunch-page-guide",
+      "kickstarter-prelaunch-email-list",
+      "board-game-kickstarter-marketing-plan"
     ],
-    sections: [
-      { id: "comparison", title: "Compare the signup and communication options", paragraphs: ["A Kickstarter follow and a signup in your email software are different records. Don't add the counts together as if every person were unique, and don't treat either as a confirmed pledge."], table: { headers: ["Decision", "Kickstarter prelaunch page", "Your own landing page"], rows: [["Visitor action", "Follow the project for a launch notification", "Sign up for the emails described on your form"], ["Communication", "Platform launch notification and prelaunch updates", "Your welcome email and planned sequence"], ["Direct messages to followers", "Not available; use prelaunch updates", "Email subscribers through your own software and permissions"], ["Page content", "Platform fields and editable description; app display differs", "Layout and content chosen for your game"], ["Testing", "Check the platform page and follow action", "Check signup, delivery, tracking and mobile presentation"]] }, source: 0 },
-      { id: "platform", title: "Use the platform page for people ready to follow the campaign", paragraphs: ["Check the title, image and project description against the game you are promoting. Kickstarter's app does not display the editable prelaunch description, so check that view as well as desktop. A game should still be understandable from the information visitors can see.", "Keep the public prelaunch URL distinct from your private preview link. The preview is useful for feedback on the campaign; the public page is the link you want interested players to follow. Check that your launch announcement will point to the right project."], source: 0 },
-      { id: "landing", title: "Use your own page when the game needs a fuller introduction", paragraphs: ["A party card game might need a short sample round and a clear photo of the deck. A strategy board game may need a turn example and component spread. An RPG can offer readable sample pages. Choose the smallest amount of material that helps a visitor decide whether the project interests them.", "Tell visitors what signing up means. For example, explain that you will send a rules preview and launch announcement if that is your actual plan. Make sure a test subscriber reaches the correct list and receives the promised welcome message."], list: ["Explain the game and who would enjoy it.", "Use accurate images and label prototypes.", "Give the signup one clear purpose.", "Check the form, confirmation, email delivery and unsubscribe flow.", "Test on a phone before sending paid traffic."] },
-      { id: "both", title: "If you use both pages, give each a job", paragraphs: ["You could send new visitors to your own page to understand the game and join the email list, then include the Kickstarter follow link in a useful email. Or an established audience may be ready to go directly to the platform page. Treat those as routes to test, not a required funnel for every game.", "Avoid asking a first-time visitor to subscribe, follow, download and join a community all at once. Choose the next action the page is meant to support. Your launch plan can offer the other actions later."], source: 1 },
-      { id: "measurement", title: "Measure each route without double-counting people", paragraphs: ["Keep a record of successful email signups, email clicks and the follower count shown by the platform. Record dates and the traffic source when your tools can provide it. Some people will appear in both audiences; that overlap is a reason to interpret the numbers carefully.", "A low signup cost is useful only alongside what happens next. Check whether subscribers read the game information, use the sample material and click campaign links. After launch, compare attributable pledges with the agreed reporting limits. Do not assume every subscriber will back the game."], table: { headers: ["Check", "What it tells you"], rows: [["Successful signup and welcome email", "The email flow works for that test contact"], ["Clicks to rules or campaign", "Some subscribers took the next step"], ["Platform follower count", "How many follows the platform reports"], ["Attributed pledges after launch", "The results your campaign tracking can report"], ["Overlap and tracking limits", "Why audience totals and reports may not reconcile"]] } },
-      { id: "choice", title: "Choose the next step based on what you can maintain", paragraphs: ["If your audience already knows the game, a platform follow may be the most useful immediate action. If you need to explain it and send a planned email sequence, prepare your own page and test it. Both routes still need accurate assets and a launch plan.", "Before booking a landing page, agree who owns the domain, signup software, contact records and updates. Ask whether copy, design, tracking checks and emails are included. These handoffs matter as much as the page layout."] },
+    "sources": [
+      {
+        "label": "Kickstarter prelaunch page features and follower notifications",
+        "publisher": "Kickstarter",
+        "href": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page"
+      },
+      {
+        "label": "Kickstarter's promotion handbook",
+        "publisher": "Kickstarter",
+        "href": "https://www.kickstarter.com/help/handbook/promotion"
+      }
     ],
-    faqs: [
-      { question: "Can I email Kickstarter prelaunch followers directly?", answer: "Kickstarter does not let creators directly message prelaunch followers. You can post prelaunch updates, which notify current followers. Your own email list is a separate signup and communication flow." },
-      { question: "Do I need both a Kickstarter prelaunch page and a landing page?", answer: "It depends on your audience and plan. The platform page collects follows. Your own page can explain the game and collect permission-based email signups. Use both when each has a useful job and someone can maintain them." },
-      { question: "Will a Kickstarter follower appear in my email software?", answer: "Treat a platform follow and an email signup as separate actions. Do not assume a follower is a contact in your email software; test your own signup flow." },
-      { question: "Is the Kickstarter preview link the prelaunch link?", answer: "No. Kickstarter provides different preview and public prelaunch URLs. The preview is for sharing the campaign before launch, including review and feedback. Confirm which link you are promoting." },
+    "sections": [
+      {
+        "id": "comparison",
+        "title": "Compare the signup and communication options",
+        "paragraphs": [
+          "A Kickstarter follow and a signup in your email software are different records, and we keep them apart from day one. Don't add the counts together as if every person were unique, and don't treat either number as a confirmed pledge."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "A Kickstarter follow and an email signup are two different audiences",
+          "columns": [
+            {
+              "name": "Kickstarter prelaunch page",
+              "points": [
+                "Visitor taps Notify me on launch",
+                "You reach followers through prelaunch updates",
+                "Kickstarter sends the launch email"
+              ],
+              "verdict": "Suits people ready to follow"
+            },
+            {
+              "name": "Your own landing page",
+              "points": [
+                "Visitor joins your email list",
+                "You send the welcome email and sequence",
+                "You choose the layout and the sample"
+              ],
+              "verdict": "Suits a game that needs explaining"
+            }
+          ],
+          "source": "Kickstarter Help Center, prelaunch page setup"
+        },
+        "table": {
+          "headers": [
+            "Decision",
+            "Kickstarter prelaunch page",
+            "Your own landing page"
+          ],
+          "rows": [
+            [
+              "Visitor action",
+              "Follow the project for a launch notification",
+              "Sign up for the emails described on your form"
+            ],
+            [
+              "Communication",
+              "Platform launch notification and prelaunch updates",
+              "Your welcome email and planned sequence"
+            ],
+            [
+              "Direct messages to followers",
+              "Not available; use prelaunch updates",
+              "Email subscribers through your own software and permissions"
+            ],
+            [
+              "Page content",
+              "Platform fields and editable description; app display differs",
+              "Layout and content chosen for your game"
+            ],
+            [
+              "Testing",
+              "Check the platform page and follow action",
+              "Check signup, delivery, tracking and mobile presentation"
+            ]
+          ]
+        },
+        "source": 0
+      },
+      {
+        "id": "platform",
+        "title": "Use the platform page for people ready to follow the campaign",
+        "paragraphs": [
+          "Check the title, image and project description against the game you are promoting. Kickstarter's app leaves out the editable prelaunch description, so we check the app view as well as desktop. The game should still make sense from what visitors can see.",
+          "Keep the public prelaunch URL apart from your private preview link. The preview is for feedback on the campaign, while the public page is the link you want interested players to follow. Before launch, check that your announcement points to the right project."
+        ],
+        "source": 0
+      },
+      {
+        "id": "landing",
+        "title": "Use your own page when the game needs a fuller introduction",
+        "paragraphs": [
+          "A party card game might need a short sample round and a clear photo of the deck. A strategy board game may need a turn example and a component spread, and an RPG can offer readable sample pages. Choose the smallest amount of material that helps a visitor decide whether the project is for them.",
+          "Tell visitors what signing up means. For example, say you will send a rules preview and the launch announcement, if that is your actual plan. Before sending any traffic, run through these five checks."
+        ],
+        "list": [
+          "Explain the game and who would enjoy it.",
+          "Use accurate images and label prototypes.",
+          "Give the signup one clear purpose.",
+          "Check the form, confirmation, email delivery and unsubscribe flow.",
+          "Test on a phone before sending paid traffic."
+        ]
+      },
+      {
+        "id": "both",
+        "title": "If you use both pages, give each one a job",
+        "paragraphs": [
+          "One route to test for a game that needs explaining is to send new visitors to your own page first. They learn the game and join the email list, then a useful email gives them the Kickstarter follow link. An established audience may be ready to go straight to the platform page instead.",
+          "Avoid asking a first time visitor to subscribe, follow, download and join a community all at once. Choose the one next action the page supports, and let your launch plan offer the others later."
+        ],
+        "visual": {
+          "kind": "steps",
+          "title": "One route to test: explain the game first, then ask for the follow",
+          "steps": [
+            {
+              "label": "Ad or community post",
+              "detail": "Points to your landing page"
+            },
+            {
+              "label": "Landing page signup",
+              "detail": "One promise, such as a rules sample"
+            },
+            {
+              "label": "Welcome email",
+              "detail": "Delivers the sample you promised"
+            },
+            {
+              "label": "Kickstarter follow",
+              "detail": "Link to the public prelaunch page"
+            },
+            {
+              "label": "Launch day",
+              "detail": "Your list and your followers both hear"
+            }
+          ],
+          "caption": "A route to test, not a required funnel."
+        },
+        "source": 1
+      },
+      {
+        "id": "measurement",
+        "title": "Measure each route without counting people twice",
+        "paragraphs": [
+          "Keep a record of successful email signups, email clicks and the follower count the platform shows. Note dates and the traffic source when your tools can provide them. Some people will appear in both audiences, which is a reason to read the numbers carefully.",
+          "A low signup cost only matters next to what happens afterwards. Check whether subscribers read the game information, use the sample and click campaign links. After launch, compare attributable pledges within the agreed reporting limits, and don't assume every subscriber will back the game."
+        ],
+        "table": {
+          "headers": [
+            "Check",
+            "What it tells you"
+          ],
+          "rows": [
+            [
+              "Successful signup and welcome email",
+              "The email flow works for that test contact"
+            ],
+            [
+              "Clicks to rules or campaign",
+              "Some subscribers took the next step"
+            ],
+            [
+              "Platform follower count",
+              "How many follows the platform reports"
+            ],
+            [
+              "Attributed pledges after launch",
+              "The results your campaign tracking can report"
+            ],
+            [
+              "Overlap and tracking limits",
+              "Why audience totals and reports may not reconcile"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "choice",
+        "title": "Choose the next step based on what you can maintain",
+        "paragraphs": [
+          "If your audience already knows the game, a platform follow may be the most useful first action. If you need to explain the game and send a planned email sequence, build your own page and test it. Both routes still need accurate assets and a launch plan.",
+          "Before booking a landing page, agree who owns the domain, signup software, contact records and updates. If you'd rather hand it over, our prelaunch marketing service builds the landing page, the signup route and the emails, then checks the Kickstarter follow link before launch."
+        ]
+      }
     ],
+    "faqs": [
+      {
+        "question": "Can I email Kickstarter prelaunch followers directly?",
+        "answer": "No. Kickstarter doesn't let creators message prelaunch followers directly. You can post prelaunch updates, which notify current followers, and your own email list is a separate signup and communication flow."
+      },
+      {
+        "question": "Do I need both a Kickstarter prelaunch page and a landing page?",
+        "answer": "It depends on your audience and plan. The platform page collects follows, and your own page can explain the game and collect opt in email signups. Use both when each has a useful job and someone can maintain them."
+      },
+      {
+        "question": "Will a Kickstarter follower appear in my email software?",
+        "answer": "No. A platform follow and an email signup are separate actions. Don't assume a follower is a contact in your email software, and test your own signup flow."
+      },
+      {
+        "question": "Is the Kickstarter preview link the prelaunch link?",
+        "answer": "No. Kickstarter provides different preview and public prelaunch URLs. The preview is for sharing the draft campaign for review and feedback, so confirm which link you are promoting."
+      },
+      {
+        "question": "Should I send paid ads to the Kickstarter prelaunch page or my landing page?",
+        "answer": "Either can work. A landing page lets you measure signups and the welcome email in your own tools, while followers are counted by Kickstarter. If you test both, use separate links and compare them over the same dates."
+      }
+    ]
   },
 ];

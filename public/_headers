@@ -21,3 +21,6 @@
 
 /downloads/guides/*
   X-Robots-Tag: noindex
+
+/videos/*.vtt
+  X-Robots-Tag: noindex
