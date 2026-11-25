@@ -6,6 +6,14 @@ import {contentDates} from "./content-dates";
 import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
 import {decisionGuides} from "./launch-decision-guides";
+import {guide as ngBoardGameKickstarterCost} from "./guides-new/board-game-kickstarter-cost";
+import {guide as ngHowToDesignAKickstarterPage} from "./guides-new/how-to-design-a-kickstarter-page";
+import {guide as ngHowToGetKickstarterBackers} from "./guides-new/how-to-get-kickstarter-backers";
+import {guide as ngHowToMarketAKickstarter} from "./guides-new/how-to-market-a-kickstarter";
+import {guide as ngIsMyGameReadyForKickstarter} from "./guides-new/is-my-game-ready-for-kickstarter";
+import {guide as ngKickstarterForBeginners} from "./guides-new/kickstarter-for-beginners";
+import {guide as ngWhenToLaunchAKickstarter} from "./guides-new/when-to-launch-a-kickstarter";
+import {guide as ngWhyKickstarterCampaignsFail} from "./guides-new/why-kickstarter-campaigns-fail";
 import {guide as ngKickstarterVsGamefound} from "./guides-new/kickstarter-vs-gamefound";
 import {guide as ngPledgeManagersCompared} from "./guides-new/pledge-managers-compared";
 import {guide as ngBoardGameTariffsShippingUs} from "./guides-new/board-game-tariffs-shipping-us";
@@ -25,16 +33,24 @@ const originalLaunchGuides:LaunchGuide[]=[
   ...marketingGuides,
   ...newLaunchGuides,
   // seo-pass-2026-11-25 new guides
+  ngBoardGameKickstarterCost,
   ngBoardGameTariffsShippingUs,
+  ngHowToDesignAKickstarterPage,
+  ngHowToGetKickstarterBackers,
+  ngHowToMarketAKickstarter,
+  ngIsMyGameReadyForKickstarter,
   ngKickstarterAgencyCost,
   ngKickstarterFees,
   ngKickstarterFollowersBeforeLaunch,
+  ngKickstarterForBeginners,
   ngKickstarterImageSizes,
   ngKickstarterVsGamefound,
   ngPledgeManagersCompared,
   ngTcgKickstarterLaunchGuide,
   ngTerrainAndDiceKickstarterLaunchGuide,
   ngTtrpgKickstarterLaunchGuide,
+  ngWhenToLaunchAKickstarter,
+  ngWhyKickstarterCampaignsFail,
 
 
   {
