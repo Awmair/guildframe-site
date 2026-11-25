@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { contentDates } from "../../content-dates";
+import { contentDates, formatContentDate } from "../../content-dates";
+import { GuideVisual } from "../../components/GuideVisual";
 import {
   ArticleCallout,
   ArticleDefinition,
@@ -14,14 +15,16 @@ const benchmarkPath = "/resources/kickstarter-tabletop-games-benchmark";
 const benchmarkCsvPath = "/data/kickstarter-tabletop-games-benchmark-2024.csv";
 
 export const metadata = pageMetadata({
-  title: "2024 Kickstarter Tabletop Games Funding Benchmark",
+  title: "Highest Funded Tabletop Kickstarters of 2024",
   description:
-    "A source backed Kickstarter tabletop games benchmark with 2024 funding, success rate and top campaign data plus transparent calculations.",
+    "The ten highest funded tabletop Kickstarters of 2024, with funding and backers, plus Kickstarter's 6,646 launches and 80% success rate in one sourced table.",
   path: "/resources/kickstarter-tabletop-games-benchmark",
   kind: "article",
   publishedTime: "2026-07-17",
   modifiedTime: contentDates.kickstarterTabletopBenchmark,
   keywords: [
+    "highest funded tabletop Kickstarters",
+    "most funded board game Kickstarter 2024",
     "Kickstarter tabletop games statistics",
     "board game Kickstarter benchmark",
     "tabletop crowdfunding data",
@@ -29,6 +32,16 @@ export const metadata = pageMetadata({
 });
 
 const faqs = [
+  {
+    question: "What was the highest funded tabletop Kickstarter of 2024?",
+    answer:
+      "Brandon Sanderson's Cosmere RPG, with more than $15.1 million from 55,106 backers. Altered TCG was second with more than $6.7 million and Trench Crusade third with more than $3.3 million.",
+  },
+  {
+    question: "How much did the ten highest funded tabletop Kickstarters raise?",
+    answer:
+      "At least $41.1 million combined, using Kickstarter's rounded figures. That is at least 18.7% of the $220 million pledged to all successful tabletop campaigns in 2024, from 232,773 backer counts.",
+  },
   {
     question: "How many tabletop game projects launched on Kickstarter in 2024?",
     answer:
@@ -92,12 +105,12 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
       schemaType="TechArticle"
       sidebarTitle="In this benchmark"
       category="Tabletop crowdfunding data"
-      title="2024 Kickstarter Tabletop Games Funding Benchmark"
-      description="Review Kickstarter’s published 2024 tabletop funding figures, the ten largest campaigns and calculations derived from those figures."
-      answer="Kickstarter reported 6,646 tabletop game launches in 2024, 5,314 successfully funded projects, an 80% success rate and $220 million pledged to successful tabletop campaigns. The published figures imply roughly $41,400 pledged per successful project as a simple mean, while the ten highest funded campaigns accounted for at least $41.1 million."
+      title="Highest Funded Tabletop Kickstarters of 2024: Benchmark Data"
+      description="The ten highest funded tabletop Kickstarters of 2024, Kickstarter's published category totals and the ratios we derived from them."
+      answer="The highest funded tabletop Kickstarter of 2024 was Brandon Sanderson's Cosmere RPG at more than $15.1 million from 55,106 backers, followed by Altered TCG and Trench Crusade. Across the category, Kickstarter reported 6,646 tabletop launches, 5,314 funded projects for an 80% success rate, and $220 million pledged to successful campaigns."
       published="2026-07-17"
       updated={contentDates.kickstarterTabletopBenchmark}
-      readTime="6 minute read"
+      readTime="7 minute read"
       faqs={faqs}
       sources={[
         {
@@ -112,22 +125,58 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
         },
       ]}
       toc={[
+        { id: "findings", label: "Top line findings" },
         { id: "headline-data", label: "Headline data" },
         { id: "derived", label: "Derived benchmarks" },
         { id: "top-campaigns", label: "Top campaigns" },
         { id: "methodology", label: "Methodology" },
         { id: "commerce", label: "Commerce implications" },
+        { id: "plan", label: "Use it in your plan" },
         { id: "download", label: "Download the data" },
         { id: "faq", label: "Quick answers" },
       ]}
     >
+      <h2 id="findings">Top line findings from the highest funded tabletop Kickstarters</h2>
+      <p>
+        Here is what the 2024 numbers say before you read the full tables. Every
+        figure below comes from Kickstarter&apos;s own 2024 games retrospective,
+        and the ratios are our arithmetic on those published totals.
+      </p>
+      <ul>
+        <li><strong>One campaign set the pace.</strong> Cosmere RPG raised more than $15.1 million, more than the next three campaigns combined.</li>
+        <li><strong>The top ten took a large share.</strong> The ten highest funded campaigns raised at least $41.1 million, at least 18.7% of all money pledged to successful tabletop projects.</li>
+        <li><strong>Most projects funded.</strong> 5,314 of 6,646 tabletop launches succeeded, an 80% success rate and Kickstarter&apos;s highest in 15 years.</li>
+        <li><strong>Big crowds and big pledges are different routes.</strong> Twisted Cryptids drew the second largest crowd at 33,210 backers, while Altered TCG raised more per backer than any other top ten campaign.</li>
+        <li><strong>The average hides the spread.</strong> The simple mean is about $41,400 per successful project, but Kickstarter did not publish a median, so a typical campaign is likely far smaller.</li>
+      </ul>
+      <GuideVisual
+        data={{
+          kind: "bars",
+          title: "Cosmere RPG raised more than the next three campaigns combined",
+          bars: [
+            { label: "Cosmere RPG", value: 15.1, display: "$15.1M+", highlight: true },
+            { label: "Altered TCG", value: 6.7, display: "$6.7M+" },
+            { label: "Trench Crusade", value: 3.3, display: "$3.3M+" },
+            { label: "Twisted Cryptids", value: 3.1, display: "$3.1M+" },
+            { label: "Discworld RPG", value: 3.0, display: "$3.0M+" },
+            { label: "Root: The Homeland Expansion", value: 2.4, display: "$2.4M+" },
+            { label: "DC20", value: 2.2, display: "$2.2M+" },
+            { label: "Terraria: The Board Game", value: 2.0, display: "$2.0M+" },
+            { label: "Return To The 7th Citadel", value: 1.7, display: "$1.7M+" },
+            { label: "Thunder Road Vendetta: Carnival of Chaos", value: 1.6, display: "$1.6M+" },
+          ],
+          caption: "Funding of the ten highest funded tabletop Kickstarters of 2024, in US dollars. Kickstarter published rounded figures with plus signs, so each bar is a lower bound.",
+          source: "Kickstarter, 2024 Was a Big Year for Games on Kickstarter",
+        }}
+      />
+
       <ArticleDefinition term="Benchmark scope">
         This reference summarizes Kickstarter&apos;s published 2024 tabletop games
         totals and derives a small set of reproducible ratios. It measures campaign
         funding activity, not fulfillment quality, profitability or store revenue.
       </ArticleDefinition>
 
-      <ArticleCallout><strong>Source review: October 17, 2026.</strong> These figures cover 2024. Kickstarter published them in February 2025. Its <a href="https://updates.kickstarter.com/a-year-in-review-2025-kickstarter-highlights/">2025 Highlights</a> article does not supply the same annual tabletop totals. We have kept the historical year rather than presenting these numbers as 2025 or 2026 data.</ArticleCallout>
+      <ArticleCallout><strong>Source review: {formatContentDate(contentDates.kickstarterTabletopBenchmark)}.</strong> These figures cover 2024. Kickstarter published them in February 2025. Its <a href="https://updates.kickstarter.com/a-year-in-review-2025-kickstarter-highlights/">2025 Highlights</a> article does not supply the same annual tabletop totals. We have kept the historical year rather than presenting these numbers as 2025 or 2026 data.</ArticleCallout>
       <aside className="article-next-step"><h2>Use the benchmark to frame questions, not forecast your funding.</h2><p>The published success rate does not give the probability that your own game will fund. The mean also combines campaigns with very different audiences, rewards and costs. Build your <Link href="/guides/board-game-kickstarter-marketing-plan">launch plan</Link> and <Link href="/guides/kickstarter-advertising-budget-board-games">advertising budget</Link> from your actual offer and economics.</p><p>If you need help preparing those stages, see <Link href="/kickstarter-launch-services">Guildframe&apos;s tabletop launch services</Link> and the <Link href="/work">campaign creative case studies</Link>.</p></aside>
       <h2 id="headline-data">Headline tabletop Kickstarter data</h2>
       <ArticleStatGrid
@@ -156,6 +205,7 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
           ["Simple mean pledged per success", "$220M / 5,314", "About $41,400", "Not a median and strongly affected by large campaigns"],
           ["Top 10 funding lower bound", "Sum of published rounded figures", "At least $41.1M", "At least 18.7% of the successful tabletop total"],
           ["Top 10 published backers", "Sum of reported backer counts", "232,773", "Counts are campaign level, not unique people"],
+          ["Top 10 pledged per backer", "$41.1M / 232,773", "At least about $177", "A lower bound because the funding figures are rounded down"],
         ]}
       />
       <ArticleCallout>
@@ -180,6 +230,31 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
           ["9", "Return To The 7th Citadel", "$1.7M+", "15,137"],
           ["10", "Thunder Road: Vendetta - Carnival of Chaos", "$1.6M+", "13,460"],
         ]}
+      />
+      <p>
+        Dividing each campaign&apos;s published funding by its backer count shows
+        two different routes to the top ten. Some campaigns got there on crowd
+        size, and others on a high average pledge per backer.
+      </p>
+      <GuideVisual
+        data={{
+          kind: "bars",
+          title: "Altered TCG backers pledged the most per person, about $447",
+          bars: [
+            { label: "Altered TCG", value: 447, display: "$447+", highlight: true },
+            { label: "Cosmere RPG", value: 274, display: "$274+" },
+            { label: "Discworld RPG", value: 174, display: "$174+" },
+            { label: "Trench Crusade", value: 164, display: "$164+" },
+            { label: "Terraria: The Board Game", value: 131, display: "$131+" },
+            { label: "Thunder Road Vendetta: Carnival of Chaos", value: 119, display: "$119+" },
+            { label: "Return To The 7th Citadel", value: 112, display: "$112+" },
+            { label: "DC20", value: 106, display: "$106+" },
+            { label: "Twisted Cryptids", value: 93, display: "$93+" },
+            { label: "Root: The Homeland Expansion", value: 87, display: "$87+" },
+          ],
+          caption: "Our calculation: published funding divided by published backers, rounded to the nearest dollar. Each figure is a lower bound because the funding totals were rounded down.",
+          source: "Kickstarter 2024 games retrospective, Guildframe calculation",
+        }}
       />
 
       <h2 id="methodology">Methodology and limitations</h2>
@@ -206,6 +281,21 @@ export default function KickstarterTabletopGamesBenchmarkPage() {
         <li>Retain campaign storytelling while shortening the path to a buying decision.</li>
         <li>Measure the store as a long term sales channel, not as another funding total.</li>
       </ul>
+
+      <h2 id="plan">Use these numbers in your own launch plan</h2>
+      <p>
+        The top ten are outliers, so we use this benchmark to frame questions, not
+        to set a funding goal. Your own goal should come from your reward costs and
+        audience, which our <Link href="/guides/board-game-kickstarter-funding-goal">funding goal guide</Link> walks
+        through. The per backer figures are a useful prompt for your reward ladder,
+        and the <Link href="/guides/board-game-kickstarter-reward-pricing">reward pricing guide</Link> shows how to build one.
+      </p>
+      <p>
+        We plan tabletop launches for a living, from the prelaunch audience to the
+        campaign page and paid advertising. If you want that work done with you,
+        see our <Link href="/kickstarter-launch-services">Kickstarter launch services for tabletop games</Link> or
+        go straight to <Link href="/buy">booking a project</Link>.
+      </p>
 
       <h2 id="download">Download the benchmark data</h2>
       <p>

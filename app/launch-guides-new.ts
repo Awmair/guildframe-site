@@ -4,8 +4,9 @@ const source = (label: string, publisher: string, href: string) => ({ label, pub
 const project = source("What to share on a Kickstarter project page", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236738-what-information-should-i-share-on-my-project-page");
 const media = source("Images and media in a project story", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236740-how-do-i-include-images-or-other-media-in-my-project-description-and-updates");
 const rewards = source("Adding rewards and reward images", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236688-how-do-i-add-rewards-to-my-project");
+const releaseNotes = source("Kickstarter release notes", "Kickstarter", "https://start.kickstarter.com/kickstarter-release-notes");
 const gamefound = source("Getting started with crowdfunding", "Gamefound", "https://help.gamefound.com/article/285-getting-started-with-crowdfunding");
-const guide = (content: Omit<LaunchGuide, "published" | "updated" | "servicePath" | "serviceLabel"> & Partial<Pick<LaunchGuide, "servicePath" | "serviceLabel">>): LaunchGuide => ({
+const guide = (content: Omit<LaunchGuide, "published" | "updated" | "servicePath" | "serviceLabel"> & Partial<Pick<LaunchGuide, "servicePath" | "serviceLabel" | "updated">>): LaunchGuide => ({
   published: "2026-10-03", updated: "2026-10-03", servicePath: "/campaign-design", serviceLabel: "Kickstarter and Gamefound campaign design", ...content,
 });
 
@@ -77,26 +78,204 @@ export const newLaunchGuides: LaunchGuide[] = [
     ],
   }),
   guide({
-    slug: "kickstarter-stretch-goals-planning",
-    title: "Kickstarter Stretch Goals: Plan the Promise Before the Graphic",
-    seoTitle: "Kickstarter Stretch Goals for Board Games: Planning Guide",
-    description: "Plan tabletop stretch goals with clear unlock conditions, eligible rewards and production checks. Compare them with add-ons and Gamefound's native goals.",
-    tag: "Stretch goals",
-    answer: "A stretch goal adds or improves something if a campaign passes an extra target. Decide what changes, which backers receive it and whether you can produce and ship it before designing the graphic. Kickstarter treats stretch goals as creator-defined promises; Gamefound has native stretch-goal controls.",
-    relatedSlugs: ["kickstarter-reward-tier-graphics", "kickstarter-shipping-delivery-page", "gamefound-launch-page-checklist"],
-    sources: [source("What are stretch goals?", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236765-what-are-stretch-goals"), source("Stretch goals", "Gamefound", "https://help.gamefound.com/article/113-stretch-goals")],
-    sections: [
-      { id: "base-game", title: "Make the base reward complete first", paragraphs: ["A backer should know what the initial pledge buys even if no extra goal unlocks. Keep essential rules, promised components and a playable core game in that base offer.", "Do not announce an upgrade until someone responsible for production has checked it. A new card may need editing and art; a new miniature can affect tooling, packaging and shipping. Extra funding does not remove those tasks." ] },
-      { id: "planning-table", title: "Use a planning table before an unlock chart", paragraphs: ["Fill in the fields below with your real project information. Leave uncertain entries marked for approval instead of turning them into public promises.", "The eligible reward matters as much as the unlock target. A physical bonus may belong to certain boxes but not to a PDF-only pledge. Name those tiers directly."], table: { headers: ["Field", "What to confirm"], rows: [["Unlock condition", "Funding amount or another clearly defined trigger"], ["Benefit", "The exact upgrade or extra item"], ["Eligible rewards", "Which named tiers receive it"], ["Production check", "Cost, files, supplier approval and extra work"], ["Delivery effect", "Packaging, weight and schedule changes"], ["Status", "Planned, locked or unlocked"]] } },
-      { id: "platforms", title: "Separate platform controls from the promise", paragraphs: ["Kickstarter says stretch goals are not an official platform feature. The creator defines and explains them in the campaign. Meeting the original funding goal still determines whether the project funds, even if additional stretch targets remain unmet.", "Gamefound provides native stretch-goal settings. Check the selected trigger and display against your approved plan rather than assuming a graphic changes the project settings."], source: 0 },
-      { id: "addons", title: "Decide whether an extra belongs in an add-on", paragraphs: ["An optional expansion or accessory may be easier to explain as an add-on that a backer chooses. A small upgrade included in named rewards can fit a stretch goal. Choose based on cost, compatibility and the promise you can keep.", "Kickstarter's guidance identifies add-ons as an alternative and warns that additional scope can complicate production and delivery. Do not use a stretch goal to conceal a cost that the base reward already needs."], source: 0 },
-      { id: "graphics", title: "Show status and eligibility in the graphic", paragraphs: ["Use a readable target, item name and status label. Repeat the eligibility in text so someone does not have to decode an icon. Keep locked and unlocked states distinct without relying on colour alone.", "When a goal unlocks, update the story and any affected component or reward summaries. Check that the same product is not described as both an included bonus and a paid optional extra."], list: ["The goal has a confirmed production plan.", "Each reward's eligibility is explicit.", "The status label agrees with the actual campaign.", "Added weight or work has been included in the delivery plan."] },
+    "slug": "kickstarter-stretch-goals-planning",
+    "title": "Kickstarter Stretch Goals: Examples and a Planning Guide",
+    "seoTitle": "Kickstarter Stretch Goals: Card and Board Game Examples",
+    "description": "Kickstarter stretch goal examples for card and board games, from card expansions to upgraded components, with unlock rules, eligible rewards and cost checks.",
+    "tag": "Stretch goals",
+    "answer": "A stretch goal is an extra funding target the creator sets beyond the original Kickstarter goal, and it unlocks an upgrade or extra content for named rewards. Strong examples for card and board games are a small card expansion, a solo mode deck or upgraded components, each one priced, produced and shipped on paper before you announce it.",
+    "relatedSlugs": [
+      "kickstarter-reward-tier-graphics",
+      "card-game-kickstarter-launch-guide",
+      "kickstarter-shipping-delivery-page",
+      "gamefound-launch-page-checklist"
     ],
-    faqs: [
-      { question: "Do stretch goals decide whether a Kickstarter is funded?", answer: "No. The original funding goal determines whether the project funds. Unmet stretch goals do not replace that goal." },
-      { question: "Should every extra item be a stretch goal?", answer: "No. An optional product may work better as an add-on. Check its cost, compatibility and delivery effect before deciding." },
-      { question: "Can a designer choose the unlock amounts?", answer: "The creator should approve the amounts from the project's production and delivery budget. A designer can present that plan clearly but cannot validate the economics from artwork alone." },
+    "sources": [source("What are stretch goals?", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236765-what-are-stretch-goals"), source("Stretch goals", "Gamefound", "https://help.gamefound.com/article/113-stretch-goals"), releaseNotes],
+    "sections": [
+      {
+        "id": "base-game",
+        "title": "Make the base reward complete first",
+        "paragraphs": [
+          "We start every stretch goal plan with the base reward, because a backer should know what the first pledge buys even if no extra goal unlocks. Essential rules, promised components and a playable core game all belong in that base offer.",
+          "Then we check each upgrade with whoever owns production before it goes public. A new card may need editing and art, and a new miniature can affect tooling, packaging and shipping. Extra funding doesn't remove those tasks, so no unlock is announced until it has a cost."
+        ]
+      },
+      {
+        "id": "examples",
+        "title": "Stretch goal examples for card games and board games",
+        "paragraphs": [
+          "These examples show the kinds of unlocks that suit tabletop games, and the cost each one carries. A card expansion is a natural card game stretch goal, usually a small set of new cards added to every eligible box. It can fit the existing print run and box, as long as the art, editing and print sheet are planned from the start.",
+          "French language campaigns often call this an extension de cartes, and the planning is the same. Board games often use component upgrades such as thicker tokens or a box insert, while TTRPGs add adventures, art or print upgrades. Whatever the unlock, decide which rewards receive it before the graphic exists."
+        ],
+        "visual": {
+          "kind": "timeline",
+          "title": "Example: each card game unlock costs more to produce and ship",
+          "events": [
+            {
+              "when": "$12,000",
+              "label": "Funding goal",
+              "detail": "The complete base game ships either way"
+            },
+            {
+              "when": "$15,000",
+              "label": "Card expansion",
+              "detail": "12 new cards in every core box",
+              "highlight": true
+            },
+            {
+              "when": "$20,000",
+              "label": "Solo mode deck",
+              "detail": "New rules and cards, extra editing"
+            },
+            {
+              "when": "$26,000",
+              "label": "Upgraded tokens",
+              "detail": "Thicker stock, new supplier quote"
+            },
+            {
+              "when": "$32,000",
+              "label": "Box insert",
+              "detail": "Can change box size, weight and shipping"
+            }
+          ],
+          "caption": "Illustrative example for a hypothetical card game, not real campaign data."
+        }
+      },
+      {
+        "id": "planning-table",
+        "title": "Use a planning table before an unlock chart",
+        "paragraphs": [
+          "We fill in the fields below with the real project information before any artwork is made. Uncertain entries stay marked for approval instead of turning into public promises.",
+          "The eligible reward matters as much as the unlock target. A physical bonus may belong to certain boxes but not to a pledge for the PDF only, so name those tiers directly. That one column saves a lot of fulfilment trouble later."
+        ],
+        "table": {
+          "headers": [
+            "Field",
+            "What to confirm"
+          ],
+          "rows": [
+            [
+              "Unlock condition",
+              "Funding amount or another clearly defined trigger"
+            ],
+            [
+              "Benefit",
+              "The exact upgrade or extra item"
+            ],
+            [
+              "Eligible rewards",
+              "Which named tiers receive it"
+            ],
+            [
+              "Production check",
+              "Cost, files, supplier approval and extra work"
+            ],
+            [
+              "Delivery effect",
+              "Packaging, weight and schedule changes"
+            ],
+            [
+              "Status",
+              "Planned, locked or unlocked"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "platforms",
+        "title": "Separate platform controls from the promise",
+        "paragraphs": [
+          "Kickstarter says stretch goals are not part of the official platform, so the creator defines and explains them in the story. Meeting the original funding goal still decides whether the project funds, even if later stretch targets are never reached. Since May 6, 2026, Kickstarter also lets you link backers straight to a section of your story, such as Stretch Goals, which makes an unlock update easier to act on.",
+          "Gamefound has native stretch goals, either manual or automatic. Automatic goals unlock on a backer count, funds raised or a campaign day, and the next goal shows at the top of the project. Check the selected trigger against your approved plan, because a graphic alone doesn't change the project settings."
+        ],
+        "source": 1
+      },
+      {
+        "id": "addons",
+        "title": "Decide whether an extra belongs in an add on",
+        "paragraphs": [
+          "An optional expansion or accessory is often easier to explain as an add on that a backer chooses. A small upgrade included in named rewards fits a stretch goal better. We choose based on cost, compatibility and the promise the creator can keep.",
+          "Kickstarter's own guidance suggests add ons as an alternative to stretch goals. Never use a stretch goal to hide a cost that the base reward already needs, because backers will treat it as part of the game they paid for."
+        ],
+        "visual": {
+          "kind": "compare",
+          "title": "A card expansion can be a stretch goal or an add on",
+          "columns": [
+            {
+              "name": "Stretch goal",
+              "points": [
+                "Included free in named rewards",
+                "Unlocks when funding passes a target",
+                "Cost comes out of the extra funding"
+              ],
+              "verdict": "Best for small upgrades every backer gets",
+              "highlight": true
+            },
+            {
+              "name": "Add on",
+              "points": [
+                "Backer chooses and pays for it",
+                "Available whatever the total",
+                "Cost covered by its own price"
+              ],
+              "verdict": "Best for larger or optional expansions"
+            }
+          ]
+        },
+        "source": 0
+      },
+      {
+        "id": "graphics",
+        "title": "Show status and eligibility in the graphic",
+        "paragraphs": [
+          "Use a readable target, item name and status label. Repeat the eligibility in text so nobody has to decode an icon, and keep locked and unlocked states distinct without relying on colour alone.",
+          "When a goal unlocks, update the story and any affected component or reward summaries. Check that the same product isn't described as both an included bonus and a paid add on. Our [reward tier graphics guide](/guides/kickstarter-reward-tier-graphics) shows how to keep those summaries readable on a phone."
+        ],
+        "list": [
+          "The goal has a confirmed production plan.",
+          "Each reward's eligibility is explicit.",
+          "The status label agrees with the actual campaign.",
+          "Added weight or work has been included in the delivery plan."
+        ]
+      },
+      {
+        "id": "help",
+        "title": "How we plan and design stretch goals",
+        "paragraphs": [
+          "We plan stretch goals with the creator before we design a single unlock graphic, because the order, eligibility and cost of each goal shape the whole campaign page. Then we build the stretch goal graphic, the reward summaries and the update templates so they always agree.",
+          "You can plan this yourself with the table above and your supplier quotes. The honest limit is keeping every graphic and reward summary in step once goals start unlocking mid campaign. Our [Kickstarter campaign design](/campaign-design) service covers that work, and the [shipping and delivery guide](/guides/kickstarter-shipping-delivery-page) helps you price the weight each unlock adds."
+        ]
+      }
     ],
+    "faqs": [
+      {
+        "question": "Do stretch goals decide whether a Kickstarter is funded?",
+        "answer": "No. The original funding goal determines whether the project funds. Unmet stretch goals do not replace that goal."
+      },
+      {
+        "question": "What are good stretch goals for a card game?",
+        "answer": "A small card expansion added to every eligible box, a solo mode deck, or upgraded card stock or tokens. Price each one, including art, editing and any change in weight, before you set its target."
+      },
+      {
+        "question": "Can a card expansion be a stretch goal?",
+        "answer": "Yes. Confirm the art, editing and print sheet first, name which rewards receive it, and check that it fits the box you already quoted. A larger expansion may work better as an add on."
+      },
+      {
+        "question": "Should every extra item be a stretch goal?",
+        "answer": "No. An optional product may work better as an add on. Check its cost, compatibility and delivery effect before deciding."
+      },
+      {
+        "question": "Are stretch goals an official Kickstarter feature?",
+        "answer": "No. Kickstarter says stretch goals are not part of the official platform, so the creator defines them in the story. Gamefound has native manual and automatic stretch goals."
+      },
+      {
+        "question": "Can a designer choose the unlock amounts?",
+        "answer": "The creator should approve the amounts from the project's production and delivery budget. A designer can present that plan clearly but cannot validate the economics from artwork alone."
+      }
+    ],
+    "servicePath": "/campaign-design",
+    "serviceLabel": "Kickstarter campaign design for tabletop games",
+    "updated": "2026-11-25"
   }),
   guide({
     slug: "kickstarter-shipping-delivery-page",
@@ -143,26 +322,174 @@ export const newLaunchGuides: LaunchGuide[] = [
     ],
   }),
   guide({
-    slug: "kickstarter-review-launch-timeline",
-    title: "Kickstarter Review to Launch: Leave Time for Changes",
-    seoTitle: "Kickstarter Review Time & Launch Timeline for Game Creators",
-    description: "Plan Kickstarter review, possible revisions, prelaunch sharing and the manual launch action. Keep platform approval separate from design delivery.",
-    tag: "Review & launch",
-    answer: "Kickstarter says a queued review can take up to three business days. Requested changes can add another three business days or longer, and high submission volume can extend the process. Build a buffer into your launch plan. Approval and a Target Launch Date do not publish the campaign; the creator still launches it manually.",
-    relatedSlugs: ["kickstarter-prelaunch-page-guide", "when-to-hire-kickstarter-campaign-designer", "board-game-kickstarter-page-checklist"],
-    sources: [source("How project review works", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236415-my-project-is-awaiting-review-how-does-this-work"), source("Launching an approved project", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236427-how-do-i-launch-my-project-after-it-s-been-approved"), source("Maximum campaign duration", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236742-what-is-the-maximum-project-duration")],
-    sections: [
-      { id: "dependencies", title: "Plan the work that must happen before launch", paragraphs: ["Start with the dependencies rather than a universal number of weeks. Your launch needs complete editor fields, accurate rewards, a finished page, platform review and owner sign-off. Production decisions may block some of those tasks.", "Give each task an owner. The designer can prepare copy and graphics, but the creator must confirm prices, account information, product facts and delivery plans. Do not leave those decisions to the final upload."], table: { headers: ["Stage", "What needs to be ready"], rows: [["Page brief", "Product facts, artwork, rewards and delivery plan"], ["Platform setup", "Required account and project fields completed by the creator"], ["Review submission", "Campaign prepared for platform review"], ["Changes and approval", "Any requested fixes resolved"], ["Final checks", "Native rewards, links, mobile view and owner sign-off"], ["Launch", "Creator performs and verifies the launch action"]] } },
-      { id: "review", title: "Allow for review and another round of changes", paragraphs: ["Kickstarter's review estimate is up to three business days. It says requested changes can take another three business days or longer, and volume can extend the process. Do not treat the estimate as a deadline the platform has promised your project.", "Work backwards from your intended announcement and leave a buffer for fixes. Design delivery and platform approval are separate events; an exported graphic does not establish that the campaign is approved."], source: 0 },
-      { id: "date", title: "Assign the manual launch action", paragraphs: ["Kickstarter's Target Launch Date helps with planning. It does not automatically make the campaign live. After approval, the creator must carry out the launch steps.", "Name the person who will launch, confirm the time zone and agree who checks the public URL afterward. Prepare announcement links in advance, then verify that they point to the live campaign before using them."], source: 1 },
-      { id: "duration", title: "Confirm the end date before publishing", paragraphs: ["Kickstarter allows campaigns from one to 60 days and recommends 30 days or fewer. That recommendation does not guarantee a funding result. Its documentation says the funding duration and deadline cannot be adjusted after launch.", "Check the end date and time alongside the launch date. Make sure whoever handles messages and updates knows when the campaign closes."], source: 2 },
-      { id: "final-check", title: "Review the page after the last edit", paragraphs: ["Changes made during review can affect another part of the page. A revised edition name must also change in the graphics. A delivery adjustment needs to match the reward field, story and FAQ.", "Open the final preview on a phone and a desktop. Test the rules, review and video links without private sharing access. Clear any placeholder labels before the owner approves the launch."], list: ["Prices and contents agree in text, graphics and native rewards.", "Shipping collection timing is easy to find.", "Draft or prototype assets have accurate labels.", "The duration, deadline and time zone have been checked.", "The creator knows who performs the launch and confirms it is live."] },
+    "slug": "kickstarter-review-launch-timeline",
+    "title": "Kickstarter Review Time and Your Launch Timeline",
+    "seoTitle": "How Long Does Kickstarter Take to Approve a Project?",
+    "description": "Kickstarter review takes up to 3 business days, plus 3 more if changes are requested. Plan review, revisions and the manual launch with a buffer.",
+    "tag": "Review & launch",
+    "answer": "Kickstarter says project review can take up to 3 business days once your project is queued, and if its team requests changes it can take another 3 business days or longer. Approval doesn't publish the campaign, because launching is a manual step, so we suggest submitting about two working weeks before the launch date you announce.",
+    "relatedSlugs": [
+      "kickstarter-prelaunch-page-guide",
+      "board-game-kickstarter-page-checklist",
+      "board-game-kickstarter-launch-day-checklist",
+      "when-to-hire-kickstarter-campaign-designer"
     ],
-    faqs: [
-      { question: "How long does Kickstarter review take?", answer: "Kickstarter says a queued review can take up to three business days. Requested changes can add another three business days or longer; high volume can extend review. Allow a buffer." },
-      { question: "Will Kickstarter launch at my Target Launch Date automatically?", answer: "No. The Target Launch Date is a planning aid. The creator must manually launch the approved project." },
-      { question: "Can I extend the funding deadline after launch?", answer: "Kickstarter's cited duration guidance says the funding duration and deadline cannot be changed after launch. Check them before publishing." },
+    "sources": [source("How project review works", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236415-my-project-is-awaiting-review-how-does-this-work"), source("Launching an approved project", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236427-how-do-i-launch-my-project-after-it-s-been-approved"), source("Maximum campaign duration", "Kickstarter", "https://help.kickstarter.com/en-us/articles/16236742-what-is-the-maximum-project-duration")],
+    "sections": [
+      {
+        "id": "review",
+        "title": "How long Kickstarter review takes",
+        "paragraphs": [
+          "Kickstarter says review can take up to 3 business days once a project is queued. If its team asks for changes to the draft, allow another 3 business days, or longer if more revisions are needed.",
+          "Kickstarter also warns that turnaround can be slightly longer when submission volume is high, and recommends building extra buffer time into your launch. So we treat the estimate as planning guidance, not a deadline the platform has promised your project."
+        ],
+        "visual": {
+          "kind": "timeline",
+          "title": "Two review rounds can take six business days before you can launch",
+          "events": [
+            {
+              "when": "Day 0",
+              "label": "Submit for review",
+              "detail": "Draft complete, rewards and shipping entered"
+            },
+            {
+              "when": "Up to day 3",
+              "label": "First decision",
+              "detail": "Kickstarter's estimate for a queued project"
+            },
+            {
+              "when": "Up to day 6",
+              "label": "Changes reviewed",
+              "detail": "Another 3 business days, or longer",
+              "highlight": true
+            },
+            {
+              "when": "After approval",
+              "label": "Final checks",
+              "detail": "Phone preview, links and owner approval"
+            },
+            {
+              "when": "Launch day",
+              "label": "Creator clicks Launch",
+              "detail": "Manual, it cannot be scheduled"
+            }
+          ],
+          "caption": "Business days. Example timeline built from Kickstarter's published estimates, which high volume can extend.",
+          "source": "Kickstarter Help Center, checked November 25, 2026"
+        },
+        "source": 0
+      },
+      {
+        "id": "dependencies",
+        "title": "Plan the work that must happen before launch",
+        "paragraphs": [
+          "We start with the dependencies rather than a universal number of weeks. Your launch needs complete editor fields, accurate rewards, a finished page, platform review and owner approval, and production decisions may block some of those tasks.",
+          "Each task gets an owner. We can prepare the copy and graphics, but the creator confirms prices, account information, product facts and delivery plans. Your [prelaunch page](/guides/kickstarter-prelaunch-page-guide) can go live while this work continues, so followers build up during review."
+        ],
+        "table": {
+          "headers": [
+            "Stage",
+            "What needs to be ready"
+          ],
+          "rows": [
+            [
+              "Page brief",
+              "Product facts, artwork, rewards and delivery plan"
+            ],
+            [
+              "Platform setup",
+              "Required account and project fields completed by the creator"
+            ],
+            [
+              "Review submission",
+              "Campaign prepared for platform review"
+            ],
+            [
+              "Changes and approval",
+              "Any requested fixes resolved"
+            ],
+            [
+              "Final checks",
+              "Native rewards, links, mobile view and owner approval"
+            ],
+            [
+              "Launch",
+              "Creator performs and verifies the launch action"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "date",
+        "title": "Assign the manual launch action",
+        "paragraphs": [
+          "Kickstarter says launching is a manual process, and it isn't possible to schedule an automatic launch for a set date. After approval, someone clicks Launch project and the campaign goes live at that moment.",
+          "So name the person who will launch, confirm the time zone and agree who checks the public URL afterwards. Prepare announcement links in advance, then verify that they point to the live campaign before you send them."
+        ],
+        "source": 1
+      },
+      {
+        "id": "duration",
+        "title": "Confirm the end date before publishing",
+        "paragraphs": [
+          "Kickstarter allows campaigns from 1 to 60 days and recommends 30 days or fewer. That recommendation doesn't guarantee a funding result, and Kickstarter says you can't adjust the deadline or funding duration after launch.",
+          "Check the end date and time alongside the launch date. Make sure whoever handles messages and updates knows exactly when the campaign closes."
+        ],
+        "source": 2
+      },
+      {
+        "id": "final-check",
+        "title": "Review the page after the last edit",
+        "paragraphs": [
+          "Changes made during review can affect another part of the page. A revised edition name must also change in the graphics, and a delivery adjustment needs to match the reward field, story and FAQ.",
+          "Open the final preview on a phone and a desktop. Test the rules, review and video links without private sharing access, and clear any placeholder labels before the owner approves the launch. The [Kickstarter page checklist](/guides/board-game-kickstarter-page-checklist) covers the rest of that pass."
+        ],
+        "list": [
+          "Prices and contents agree in text, graphics and native rewards.",
+          "Shipping collection timing is easy to find.",
+          "Draft or prototype assets have accurate labels.",
+          "The duration, deadline and time zone have been checked.",
+          "The creator knows who performs the launch and confirms it is live."
+        ]
+      },
+      {
+        "id": "help",
+        "title": "How we build review time into a launch plan",
+        "paragraphs": [
+          "We plan the review window into every launch schedule we build, because a requested change close to an announced date is an easy way for a launch to slip. Our page work is finished and checked before submission, which leaves the buffer for Kickstarter's questions rather than our own fixes.",
+          "You can manage this yourself with the timeline above. The honest limit is that review, page fixes and prelaunch promotion all land in the same fortnight. If you want that run for you, see our [Kickstarter launch services for tabletop games](/kickstarter-launch-services)."
+        ]
+      }
     ],
+    "faqs": [
+      {
+        "question": "How long does Kickstarter take to approve a project?",
+        "answer": "Up to 3 business days once the project is queued for review. If Kickstarter requests changes, allow another 3 business days or longer, and expect slightly longer waits when submission volume is high."
+      },
+      {
+        "question": "What happens if Kickstarter asks for changes?",
+        "answer": "You revise the draft and it goes back for review, which Kickstarter says can take another 3 business days, or longer if more revisions are needed. Check the rest of the page after each fix, because one change often touches several sections."
+      },
+      {
+        "question": "Does Kickstarter launch my project automatically after approval?",
+        "answer": "No. Kickstarter says launching is manual and can't be scheduled for a set date. Someone on your team clicks Launch project and then checks the live page."
+      },
+      {
+        "question": "How far ahead should I submit my project for review?",
+        "answer": "We suggest about two working weeks before the date you announce. That covers two review rounds at Kickstarter's published estimates, plus time for your own final checks."
+      },
+      {
+        "question": "How long should a Kickstarter campaign run?",
+        "answer": "Kickstarter allows 1 to 60 days and recommends 30 days or fewer. Set the end date before launch, because it can't be changed afterwards."
+      },
+      {
+        "question": "Can I extend the funding deadline after launch?",
+        "answer": "No. Kickstarter's duration guidance says the funding duration and deadline cannot be adjusted after launch. Check them before publishing."
+      }
+    ],
+    "servicePath": "/kickstarter-launch-services",
+    "serviceLabel": "Kickstarter launch services for tabletop games",
+    "updated": "2026-11-25"
   }),
   guide({
     slug: "gamefound-launch-page-checklist",

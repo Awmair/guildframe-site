@@ -8,6 +8,7 @@ import { launchGuides, launchGuideDate } from "../../launch-guides";
 import { pageMetadata } from "../../site-config";
 import { SeoArticlePage, ArticleTable } from "../../components/SeoArticlePage";
 import { GuideVisual } from "../../components/GuideVisual";
+import { withInlineLinks } from "../../components/InlineLinks";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return launchGuides.map(g => ({ slug: g.slug })); }
@@ -29,7 +30,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return <SeoArticlePage slug={g.slug} title={g.title} description={g.description} category={g.tag} answer={g.answer} published={g.published ?? launchGuideDate} updated={g.updated ?? launchGuideDate} readTime={`${Math.max(1, Math.ceil(words / 200))} min read`} toc={toc} faqs={g.faqs} sources={g.sources} related={related.map(guide => ({ href: `/guides/${guide.slug}`, label: guide.title }))}>
     {g.sections.map(s => <section key={s.id}>
       <h2 id={s.id}>{s.title}</h2>
-      {s.paragraphs.map(p => <p key={p}>{p}</p>)}
+      {s.paragraphs.map(p => <p key={p}>{withInlineLinks(p)}</p>)}
       {s.list && <ul>{s.list.map(x => <li key={x}>{x}</li>)}</ul>}
       {s.visual && <GuideVisual data={s.visual} />}
       {s.table && <ArticleTable caption={s.title} headers={s.table.headers} rows={s.table.rows} />}
