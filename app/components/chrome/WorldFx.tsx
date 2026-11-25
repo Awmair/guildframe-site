@@ -137,28 +137,37 @@ export function WorldFx() {
   useEffect(() => {
     if (!finePointer() || reduced()) return;
     const root = document.documentElement;
-    let target = window.scrollY, current = window.scrollY, frame = 0, running = false;
+    let target = window.scrollY, current = window.scrollY, frame = 0, running = false, trackpad = false;
     const max = () => root.scrollHeight - window.innerHeight;
     const jump = (y: number) => window.scrollTo({ top: y, behavior: "instant" as ScrollBehavior });
     const innerCanScroll = (start: Element | null, dy: number) => {
       for (let el = start; el && el !== document.body && el !== root; el = el.parentElement) {
         const style = getComputedStyle(el);
-        if (!/(auto|scroll)/.test(style.overflowY) || el.scrollHeight <= el.clientHeight + 1) continue;
+        if (!/(auto|scroll)/.test(style.overflowY) || el.scrollHeight - el.clientHeight < 8) continue;
         if (dy > 0 && el.scrollTop + el.clientHeight < el.scrollHeight - 1) return true;
         if (dy < 0 && el.scrollTop > 0) return true;
       }
       return false;
     };
-    const tick = () => {
-      current += (target - current) * 0.1;
-      if (Math.abs(target - current) < 0.4) { current = target; jump(current); running = false; return; }
+    let last = 0;
+    const stop = () => { cancelAnimationFrame(frame); running = false; target = current = window.scrollY; };
+    const tick = (now: number) => {
+      // If anything else moved the page (a focus jump, an anchor, the browser), follow it instead of pulling back.
+      if (Math.abs(window.scrollY - current) > 3) { stop(); return; }
+      // Same feel at 60 and 120 frames a second.
+      const dt = Math.min(64, last ? now - last : 16.7);
+      last = now;
+      current += (target - current) * (1 - Math.pow(1 - 0.14, dt / 16.7));
+      if (Math.abs(target - current) < 0.5) { current = target; jump(current); running = false; last = 0; return; }
       jump(current);
       frame = requestAnimationFrame(tick);
     };
-    const stop = () => { cancelAnimationFrame(frame); running = false; target = current = window.scrollY; };
     const onWheel = (event: WheelEvent) => {
-      if (event.ctrlKey || event.defaultPrevented || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
-      if (root.classList.contains("w-menu-open") || root.classList.contains("w-gate-up")) return;
+      // Anything the easing does not handle goes to the browser, and the easing stops first so nothing fights.
+      if (event.ctrlKey || event.defaultPrevented || Math.abs(event.deltaX) > Math.abs(event.deltaY) || root.classList.contains("w-menu-open") || root.classList.contains("w-gate-up")) { if (running) stop(); return; }
+      // Trackpads already glide natively; easing on top of their momentum feels like stutter. Mouse wheels get the easing.
+      if (event.deltaMode === 0 && (event.deltaX !== 0 || !Number.isInteger(event.deltaY) || Math.abs(event.deltaY) < 16)) trackpad = true;
+      if (trackpad) { if (running) stop(); return; }
       const el = event.target as Element | null;
       const dy = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1);
       // Hand over to the browser only where something inside really scrolls (a long textarea, an open list, an embed).
@@ -167,7 +176,7 @@ export function WorldFx() {
       event.preventDefault();
       if (!running) target = current = window.scrollY;
       target = Math.min(max(), Math.max(0, target + dy));
-      if (!running) { running = true; frame = requestAnimationFrame(tick); }
+      if (!running) { running = true; last = 0; frame = requestAnimationFrame(tick); }
     };
     // Keyboard, scrollbar and anchor jumps move the page directly; follow them.
     const onScroll = () => { if (!running) target = current = window.scrollY; };

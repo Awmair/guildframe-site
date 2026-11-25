@@ -208,8 +208,8 @@ html.w-has-cursor input,html.w-has-cursor textarea,html.w-has-cursor select{curs
 @media(max-width:560px){.w-form{grid-template-columns:1fr}}
 
 /* ---------- reveals ---------- */
-html.w-js [data-reveal="lines"] .w-line>span{transform:translateY(110%)}
-html.w-js [data-reveal="lines"].is-in .w-line>span{transform:none;transition:transform 1100ms var(--ease-out)}
+html.w-js [data-reveal="lines"] .w-line>span{transform:translateY(130%);opacity:0}
+html.w-js [data-reveal="lines"].is-in .w-line>span{transform:none;opacity:1;transition:transform 1100ms var(--ease-out),opacity 500ms var(--ease-out)}
 html.w-js [data-reveal="lines"].is-in .w-line:nth-child(2)>span{transition-delay:90ms}
 html.w-js [data-reveal="lines"].is-in .w-line:nth-child(3)>span{transition-delay:180ms}
 html.w-js [data-reveal="media"]{clip-path:inset(10% 6% round var(--r-card));transition:clip-path 1200ms var(--ease-out)}

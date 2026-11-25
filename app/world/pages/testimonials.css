@@ -1,4 +1,4 @@
-/* Home: client reviews from Fiverr, shown as a hand of cards above the past work. */
+/* Home: client reviews, shown as a hand of cards above the past work. */
 .h-reviews{position:relative;background:var(--baize-900);color:var(--board-100);padding:var(--section) 0;overflow:hidden}
 .h-reviews::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 85% 30%,rgb(239 100 77 / .08),transparent 70%),radial-gradient(50% 60% at 10% 90%,rgb(92 192 164 / .06),transparent 70%);pointer-events:none}
 .hr-inner{position:relative;width:var(--wrap-wide);margin:0 auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:clamp(32px,5vw,88px);align-items:start}

@@ -1,7 +1,5 @@
-// Ten reviews from Umair's Fiverr profile (fiverr.com/designologists), quoted word for word.
+// Ten client reviews from Umair's years before Guildframe, quoted word for word.
 // Shown as plain text only: no review schema, because self published reviews are not eligible for rich results.
-
-const profile = "https://www.fiverr.com/designologists";
 
 type Review = { handle: string; country: string; quote: string; about?: string };
 
@@ -45,12 +43,11 @@ export function Testimonials() {
         <div className="hr-side">
           <p className="hr-eyebrow">Before Guildframe</p>
           <h2 id="reviews-title" data-reveal="lines"><span className="w-line"><span>Ten years of</span></span><span className="w-line"><span><em>happy creators</em></span></span></h2>
-          <p className="hr-lead">For ten years I designed campaigns on Fiverr as Designologists. These are ten of the 252 reviews clients left there, word for word.</p>
+          <p className="hr-lead">Before Guildframe I spent ten years designing campaigns for creators around the world. These are ten of the 252 reviews they left, word for word.</p>
           <div className="hr-score" data-reveal="rise">
             <span className="hr-score-num">5.0</span>
-            <span className="hr-score-meta"><Pips label="Average rating 5.0 out of 5" /><span>252 reviews on Fiverr</span></span>
+            <span className="hr-score-meta"><Pips label="Average rating 5.0 out of 5" /><span>Average from 252 client reviews</span></span>
           </div>
-          <a className="w-link hr-all" href={profile} target="_blank" rel="noopener noreferrer">Read every review on Fiverr</a>
           <figure className="hr-feature" data-reveal="rise">
             <span className="hr-feature-tag">{featured.about}</span>
             <blockquote><p>{featured.quote}</p></blockquote>
