@@ -2,9 +2,9 @@ import type { CSSProperties } from "react";
 import { DragStrip } from "./DragStrip";
 import { ResponsiveImage } from "./ResponsiveImage";
 const mockups = [
-  {image:"party-cards",title:"Party & family cards",style:"Risograph illustration",alt:"Snack Attack concept: colourful fruit characters on a party deck and box against a yellow backdrop",copy:"Big shapes, expressive characters and a box you can spot across the table.",r:-2},
+  {image:"party-cards",title:"Party & family cards",style:"Risograph illustration",alt:"Snack Attack concept: colorful fruit characters on a party deck and box against a yellow backdrop",copy:"Big shapes, expressive characters and a box you can spot across the table.",r:-2},
   {image:"adventure-cards",title:"Adventure card games",style:"Retro science fiction comics",alt:"Orbital Crew concept: comic book astronauts on a card game box with illustrated cards and tokens",copy:"Illustrated cards and a darker palette for a cooperative space adventure.",r:1.5},
-  {image:"minimal-cards",title:"Abstract strategy decks",style:"Minimal geometric design",alt:"Common Ground concept: ivory cards with green and blue geometric shapes beside a compact green box",copy:"Quiet colours and simple geometry that leave room to read the cards.",r:-1},
+  {image:"minimal-cards",title:"Abstract strategy decks",style:"Minimal geometric design",alt:"Common Ground concept: ivory cards with green and blue geometric shapes beside a compact green box",copy:"Quiet colors and simple geometry that leave room to read the cards.",r:-1},
 ] as const;
 /** Three studio card game concepts in a draggable strip. Used on the card game service page. */
 export function MockupGallery() {

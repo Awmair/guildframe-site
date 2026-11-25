@@ -2,6 +2,7 @@ import { contentDates } from "../../content-dates";
 import Link from "next/link";
 import { ArticleCallout, ArticleTable, SeoArticlePage } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "Tabletop Crowdfunding Platform Role Matrix",
@@ -52,6 +53,7 @@ export default function PlatformComparisonMatrixPage() {
         { label: "Gamefound Knowledge Base", publisher: "Gamefound", href: "https://help.gamefound.com/" },
         { label: "Shopify products", publisher: "Shopify Help Center", href: "https://help.shopify.com/en/manual/products" },
         { label: "Shopify checkout", publisher: "Shopify Help Center", href: "https://help.shopify.com/en/manual/checkout-settings" },
+        { label: "Kickstarter app for Shopify", publisher: "Shopify App Store", href: "https://apps.shopify.com/kickstarter" },
       ]}
       toc={[
         { id: "matrix", label: "Role comparison" },
@@ -78,6 +80,18 @@ export default function PlatformComparisonMatrixPage() {
           ["Brand content and collections", "Limited compared with a full store", "Core role through themes and content", "Campaign focused presentation"],
           ["Repeat customer commerce", "Possible, but not the primary storefront model", "Core role", "Possible within platform context"],
         ]}
+      />
+      <GuideVisual
+        data={{
+          kind: "compare",
+          title: "Two platforms manage backers; only Shopify runs the permanent store",
+          columns: [
+            { name: "BackerKit", points: ["Crowdfunding and pledge management", "Surveys, upgrades and add ons", "Backer fulfillment data"], verdict: "Owns backer workflows" },
+            { name: "Gamefound", points: ["Tabletop crowdfunding platform", "Pledge manager built in", "Campaign focused presentation"], verdict: "Owns campaign pledges" },
+            { name: "Shopify", points: ["Permanent catalog and checkout", "Inventory and repeat customers", "Themes, collections and content"], verdict: "Owns new retail orders", highlight: true },
+          ],
+          source: "BackerKit, Gamefound and Shopify documentation listed below",
+        }}
       />
       <ArticleCallout>
         This is a role comparison, not a claim that one platform is universally
@@ -122,6 +136,7 @@ export default function PlatformComparisonMatrixPage() {
       <ArticleTable
         headers={["Creator situation", "Practical stack", "Ownership rule"]}
         rows={[
+          ["Kickstarter campaign using Kickstarter's Pledge Manager", "Kickstarter plus Shopify through Kickstarter's app", "The Pledge Manager owns backer choices; finalized orders sync to Shopify for fulfillment and tracking syncs back"],
           ["BackerKit campaign with ongoing retail", "BackerKit plus Shopify", "BackerKit owns campaign and backer workflows; Shopify owns new retail orders"],
           ["Gamefound campaign with permanent brand store", "Gamefound plus Shopify", "Gamefound owns campaign pledges; Shopify owns the long term catalog"],
           ["Campaign fulfilled and no pledge manager needed", "Shopify", "Shopify becomes the clear commerce source of truth"],
@@ -133,6 +148,13 @@ export default function PlatformComparisonMatrixPage() {
         should be written down before data starts moving. Product names, SKUs and
         availability can be shared. Backer records and new customer orders should
         not become ambiguous.
+      </p>
+      <p>
+        Kickstarter added one automated route this year. Its official Shopify app,
+        listed on July 31, 2026, sends finalized Pledge Manager orders into
+        Shopify and matches rewards to existing products and variants. The{" "}
+        <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link>{" "}
+        explains what moves through it and what stays on Kickstarter.
       </p>
 
       <h2 id="decision">Decision checklist</h2>
@@ -148,7 +170,9 @@ export default function PlatformComparisonMatrixPage() {
       <p>
         Read the full <Link href="/guides/backerkit-vs-shopify-vs-gamefound">BackerKit vs Shopify vs Gamefound guide</Link>
         for more context, or use the <Link href="/resources/kickstarter-to-shopify-migration-checklist">migration checklist</Link>
-        when the destination store has already been chosen.
+        when the destination store has already been chosen. For help with the
+        backer handoff, see <Link href="/post-campaign-support">post campaign support</Link>;
+        for the store itself, the <Link href="/done-for-you-shopify-store">store planning brief</Link>.
       </p>
     </SeoArticlePage>
   );

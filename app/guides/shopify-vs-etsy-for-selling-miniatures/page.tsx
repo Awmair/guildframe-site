@@ -6,6 +6,7 @@ import {
 } from "../../components/SeoArticlePage";
 import { contentDates } from "../../content-dates";
 import { pageMetadata } from "../../site-config";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "Shopify vs Etsy for Selling Miniatures",
@@ -37,7 +38,7 @@ const faqs = [
   {
     question: "What does Etsy charge sellers?",
     answer:
-      "As of September 30, 2026, Etsy lists a 20 cent listing fee, a 6.5 percent transaction fee and separate payment processing charges that vary by country. Other fees can apply. Confirm the current fees for your location in Etsy Help before comparing costs.",
+      "As of November 25, 2026, Etsy lists a 20 cent listing fee, a 6.5 percent transaction fee and separate payment processing charges that vary by country. Other fees can apply. Confirm the current fees for your location in Etsy Help before comparing costs.",
   },
 ];
 
@@ -47,8 +48,8 @@ export default function ShopifyVsEtsyMiniaturesPage() {
       slug="shopify-vs-etsy-for-selling-miniatures"
       category="Miniature store platform comparison"
       title="Shopify vs Etsy for Selling Miniatures and Terrain"
-      description="Compare Etsy’s marketplace with a Shopify store for miniature products, customer discovery, fees and catalogue control."
-      answer="Etsy offers marketplace search and a listing based setup. Shopify gives you a dedicated store with control over product pages, collections and customer checkout. Choose based on how customers find you and how you want to manage the catalogue. If you use both, keep stock and delivery information consistent."
+      description="Compare Etsy’s marketplace with a Shopify store for miniature products, customer discovery, fees and catalog control."
+      answer="Etsy offers marketplace search and a listing based setup. Shopify gives you a dedicated store with control over product pages, collections and customer checkout. Choose based on how customers find you and how you want to manage the catalog. If you use both, keep stock and delivery information consistent."
       published="2026-07-23"
       updated={contentDates.shopifyVsEtsyMiniatures}
       readTime="7 minute read"
@@ -117,7 +118,7 @@ export default function ShopifyVsEtsyMiniaturesPage() {
         <li>The seller does not yet have an email list or reliable traffic source.</li>
       </ul>
       <ArticleCallout>
-        Compare total fees using real orders. As of September 30, 2026, Etsy lists a 20 cent listing
+        Compare total fees using real orders. As of November 25, 2026, Etsy lists a 20 cent listing
         fee and a 6.5 percent transaction fee, with separate payment processing and
         possible advertising or regional charges.
       </ArticleCallout>
@@ -160,6 +161,20 @@ export default function ShopifyVsEtsyMiniaturesPage() {
         ]}
       />
 
+      <GuideVisual
+        data={{
+          kind: "compare",
+          title: "Etsy finds buyers; Shopify keeps them",
+          columns: [
+            { name: "Etsy", points: ["Marketplace search brings new buyers", "Listings and shop sections", "$0.20 per listing, 6.5% per order"], verdict: "Best for testing demand" },
+            { name: "Shopify", points: ["You bring the traffic", "Collections, variants and guides", "Plan fee, processing and apps"], verdict: "Best for a growing catalog", highlight: true },
+            { name: "Both", points: ["Etsy for discovery", "Shopify for the full catalog", "One source of stock truth"], verdict: "Works when stock stays in sync" },
+          ],
+          caption: "Etsy fees checked November 25, 2026. Payment processing and advertising are charged separately.",
+          source: "Etsy Help: fees and taxes; Shopify pricing",
+        }}
+      />
+
       <h2 id="move">Keep existing listings and inventory accurate</h2>
       <ol>
         <li><strong>Audit profitable Etsy listings.</strong> Keep the listings that bring customers who buy.</li>
@@ -170,7 +185,14 @@ export default function ShopifyVsEtsyMiniaturesPage() {
       </ol>
       <p>
         Use the <Link href="/resources/board-game-shopify-store-checklist">Shopify store checklist</Link>
-        before directing customers to the new store.
+        before directing customers to the new store, and the{" "}
+        <Link href="/resources/board-game-product-page-checklist">product page checklist</Link>{" "}
+        when you rewrite each listing as a product page. If the miniatures came
+        from a crowdfunding campaign, the{" "}
+        <Link href="/guides/move-from-kickstarter-to-shopify">Kickstarter to Shopify migration guide</Link>{" "}
+        covers what moves across. Our <Link href="/post-campaign-support">post campaign support</Link>{" "}
+        and <Link href="/done-for-you-shopify-store">store planning brief</Link>{" "}
+        cover the content and setup when you want help.
       </p>
 <h2 id="fee-basis">Compare fees using the full order</h2><p>Etsy&apos;s transaction fee applies to its stated order basis, including charged shipping and gift wrapping. Payment processing, applicable advertising charges and other fees are separate. Calculate a representative order using the <a href="https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy">current official fee guidance</a>; the transaction percentage alone is not the total selling cost.</p>
     </SeoArticlePage>

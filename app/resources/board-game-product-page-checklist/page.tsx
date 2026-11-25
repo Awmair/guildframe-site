@@ -1,30 +1,45 @@
 import Link from "next/link";
 import { ArticleCallout, ArticleTable, SeoArticlePage } from "../../components/SeoArticlePage";
+import { GuideVisual } from "../../components/GuideVisual";
 import { pageMetadata } from "../../site-config";
+import { contentDates } from "../../content-dates";
 
 export const metadata = pageMetadata({
   title: "Board Game Shopify Product Page Checklist",
   description:
-    "A board game Shopify product page checklist for artwork, gameplay facts, editions, components, delivery clarity, mobile UX and structured data.",
+    "What a board game product page should include, zone by zone, from price, edition and delivery to player count, contents, proof and a phone check.",
   path: "/resources/board-game-product-page-checklist",
   kind: "article",
   publishedTime: "2026-07-17",
-  modifiedTime: "2026-09-30",
-  keywords: ["board game Shopify product page", "Shopify product page checklist", "board game product page design"],
+  modifiedTime: contentDates.productPageChecklist,
+  keywords: [
+    "board game product page",
+    "what should a board game product page include",
+    "board game Shopify product page",
+    "Shopify product page checklist",
+  ],
 });
 
 const faqs = [
   {
-    question: "What information belongs above the fold on a board game product page?",
-    answer: "Show the product name, strongest image, price, availability or preorder timing, a short value statement, edition choice if needed and a clear purchase action. Player count, play time and age guidance should also be quickly visible when they affect fit.",
+    question: "What should a board game product page include?",
+    answer:
+      "Price, edition choice and delivery timing on the first screen. Then the gallery, player count and play time, the full contents list, proof such as reviews or campaign results, and the shipping and returns answers. Every fact should match the box.",
+  },
+  {
+    question: "What belongs on the first screen of a board game product page?",
+    answer:
+      "The product name, the strongest image, the price, stock or preorder status, the edition selector and the purchase button. Player count and play time belong there too when they decide whether the game fits.",
   },
   {
     question: "How many images should a board game product page include?",
-    answer: "Use enough media to explain the purchase: box and components, table presence, detail views, edition differences and scale where relevant. Image quality and decision value matter more than a fixed count.",
+    answer:
+      "Enough to answer the buyer's questions: the box, the components laid out, the game set up on a table, close details and an edition comparison if there is one. Each image should answer a different question.",
   },
   {
-    question: "Should rules and how to play content be on the product page?",
-    answer: "Include the clearest gameplay explanation and link to complete rules or videos when they help the buying decision. Keep the purchase path readable rather than embedding every possible detail above the primary action.",
+    question: "Should the rules be on the product page?",
+    answer:
+      "Put a short gameplay explanation on the page and link to the full rules or a how to play video. The aim is to help the decision without pushing the purchase button far down the page.",
   },
 ];
 
@@ -36,14 +51,14 @@ export default function BoardGameProductPageChecklistPage() {
       collectionLabel="Resources"
       collectionHref="/resources"
       schemaType="TechArticle"
-      sidebarTitle="Page anatomy"
+      sidebarTitle="Page zones"
       category="Shopify product pages"
       title="Board Game Shopify Product Page Checklist"
-      description="Check the game details, editions, components, availability and purchase controls on each Shopify product page."
-      answer="A board game product page should show the price, edition, availability, box contents, player count and play time. Explain expansion compatibility and expected delivery where relevant. Make the controls usable on a phone and keep Product structured data consistent with the visible offer."
+      description="One product page, checked from top to bottom. Seven zones, in the order a buyer scrolls, with what each zone has to answer."
+      answer="A board game product page should answer, in scroll order: what is it, which edition, when does it ship, who is it for, what is in the box and why trust it. Put the price, edition choice and delivery timing on the first screen, then the gameplay facts, contents list, proof and shipping answers below."
       published="2026-07-17"
-      updated="2026-09-30"
-      readTime="7 minute reference"
+      updated={contentDates.productPageChecklist}
+      readTime="6 minute reference"
       faqs={faqs}
       sources={[
         { label: "Product details", publisher: "Shopify Help Center", href: "https://help.shopify.com/en/manual/products/details" },
@@ -52,115 +67,157 @@ export default function BoardGameProductPageChecklistPage() {
         { label: "Product structured data", publisher: "Google Search Central", href: "https://developers.google.com/search/docs/appearance/structured-data/product" },
       ]}
       toc={[
-        { id: "purchase", label: "Purchase block" },
-        { id: "media", label: "Media and table presence" },
-        { id: "facts", label: "Gameplay and contents" },
-        { id: "editions", label: "Editions and bundles" },
-        { id: "proof", label: "Proof and objections" },
-        { id: "mobile", label: "Mobile and search" },
+        { id: "zones", label: "The seven zones" },
+        { id: "first-screen", label: "Zone 1: first screen" },
+        { id: "gallery", label: "Zone 2: gallery" },
+        { id: "fit", label: "Zone 3: fit facts" },
+        { id: "contents", label: "Zone 4: box contents" },
+        { id: "proof", label: "Zones 5 to 7: proof, delivery, related" },
+        { id: "phone", label: "Check it on a phone" },
         { id: "faq", label: "Quick answers" },
       ]}
     >
-      <h2 id="purchase">1. Product name, price and purchase button</h2>
+      <h2 id="zones">The seven zones of a board game product page</h2>
       <p>
-        The first screen should let a customer identify the product, understand its
-        current buying status and take the next step. It does not need to explain the
-        entire game before the purchase action appears.
+        This checklist covers one product page, read from top to bottom. We split
+        the page into seven zones because each one answers a different buyer
+        question, and the order matches how people scroll.
+      </p>
+      <GuideVisual
+        data={{
+          kind: "steps",
+          title: "Price and delivery come before the story",
+          steps: [
+            { label: "First screen", detail: "Name, image, price, edition, delivery, button." },
+            { label: "Gallery", detail: "Box, components, table, details." },
+            { label: "Fit facts", detail: "Players, time, age, mechanics." },
+            { label: "Box contents", detail: "Every component, with quantities." },
+            { label: "Proof", detail: "Reviews, awards, campaign result." },
+            { label: "Delivery and returns", detail: "Regions, timing, damage policy." },
+            { label: "Related products", detail: "Expansions and accessories." },
+          ],
+          source: "Guildframe product page method",
+        }}
+      />
+      <p>
+        If a page skips a zone, the buyer usually goes looking for the answer
+        somewhere else, often on the old campaign page. That&apos;s the leak this
+        checklist closes.
+      </p>
+
+      <h2 id="first-screen">Zone 1: the first screen decides the click</h2>
+      <p>
+        On a phone, the first screen has room for very little. So we keep only the
+        facts that let a buyer act.
       </p>
       <ul className="article-checklist">
-        <li>Product name matches the box and catalog language</li>
-        <li>Price and any compare at price are accurate</li>
-        <li>Availability, preorder status or delivery timing is visible beside the action</li>
-        <li>One short sentence explains the central player experience</li>
+        <li>Product name matches the box</li>
+        <li>Price, and any compare at price, is accurate</li>
+        <li>Stock, preorder or delivery timing sits next to the button</li>
         <li>Edition or language choice appears before Add to cart</li>
-        <li>Quantity control and purchase button have clear accessible labels</li>
-        <li>Player count, play time and age guidance are quickly visible when relevant</li>
+        <li>One sentence explains what playing feels like</li>
+        <li>Player count and play time show here when they decide fit</li>
       </ul>
       <ArticleCallout>
-        Do not make a customer scroll through the entire campaign story to discover
-        the price, edition choice or expected delivery window.
+        A buyer should never scroll through the creator story to find the price,
+        the edition choice or the delivery window.
       </ArticleCallout>
 
-      <h2 id="media">2. Artwork, components and table presence</h2>
+      <h2 id="gallery">Zone 2: every image answers one question</h2>
+      <p>
+        A gallery works when each image does a different job. We plan it as a list
+        of questions, then shoot or render to fill the gaps.
+      </p>
       <ArticleTable
-        headers={["Media type", "Question it answers", "Useful example"]}
+        headers={["Image", "Question it answers", "Example"]}
         rows={[
-          ["Box hero", "What product is this?", "Front facing box or complete product arrangement"],
-          ["Component spread", "What is included?", "Boards, cards, miniatures, books and tokens laid out clearly"],
-          ["Table scene", "What does play feel like?", "A realistic setup at readable scale"],
-          ["Detail image", "What is the quality?", "Card stock, miniature sculpt, terrain texture or book spread"],
-          ["Edition comparison", "Which version is right for me?", "Standard and deluxe contents shown side by side"],
-          ["Scale reference", "How large is it?", "Miniature, terrain or box shown against a familiar reference"],
+          ["Box hero", "What is this?", "Front facing box or full product arrangement"],
+          ["Component spread", "What is inside?", "Boards, cards, miniatures and tokens laid out"],
+          ["Table scene", "What does play look like?", "A real setup at readable scale"],
+          ["Close detail", "Is it good quality?", "Card stock, sculpt detail or book spread"],
+          ["Edition comparison", "Which version do I want?", "Standard and deluxe side by side"],
         ]}
       />
-      <ul className="article-checklist">
-        <li>Primary image remains legible on phone and desktop</li>
-        <li>Thumbnails are large enough to identify and easy to operate</li>
-        <li>Images use descriptive alt text rather than filenames or keyword lists</li>
-        <li>Width and height are declared to reduce layout movement</li>
-        <li>Files are compressed and responsive sizes avoid oversized mobile downloads</li>
-        <li>Video has a visible purpose and does not block the buying path</li>
-      </ul>
-
-      <h2 id="facts">3. Gameplay, fit and box contents</h2>
       <p>
-        A customer should be able to decide whether the game fits their group and
-        taste without opening a campaign archive or external review.
+        Give each image descriptive alt text and declared dimensions, so the page
+        stays steady while it loads.
+      </p>
+
+      <h2 id="fit">Zone 3: fit facts help buyers rule themselves in</h2>
+      <p>
+        Fit facts let a buyer decide whether the game suits their group without
+        reading a review. Keep them short and scannable.
       </p>
       <ul className="article-checklist">
-        <li>Player count and best supported player range</li>
-        <li>Typical play time and setup expectations</li>
-        <li>Age guidance and important content notes</li>
-        <li>Core mechanics, tone and intended player experience</li>
-        <li>Cooperative, competitive, solo or campaign structure</li>
+        <li>Player count and the best supported player range</li>
+        <li>Play time and setup time</li>
+        <li>Age guidance and any content notes</li>
+        <li>Cooperative, competitive, solo or campaign play</li>
+        <li>Core mechanics and tone, in plain words</li>
         <li>Language dependence and available languages</li>
-        <li>Complete contents list and component quantities</li>
-        <li>Required base game or compatibility information for expansions</li>
       </ul>
 
-      <h2 id="editions">4. Editions, variants, bundles and add ons</h2>
+      <h2 id="contents">Zone 4: the contents list is the contract</h2>
       <p>
-        Edition choices create friction when the difference is hidden in campaign
-        terminology. Compare the contents and value directly beside the selector.
+        Buyers treat the contents list as a promise, so it has to match the box
+        exactly. Stretch goal items from the campaign belong here as plain contents.
       </p>
-      <ArticleTable
-        headers={["Choice", "What to show", "Common failure"]}
-        rows={[
-          ["Standard vs deluxe", "Exact extra components and material differences", "Using names without a contents comparison"],
-          ["Core game vs bundle", "Every included product and bundle saving", "Treating the bundle like a pledge tier"],
-          ["Language", "Language of cards, rules and packaging", "Hiding language in a small variant label"],
-          ["Expansion", "Required base product and compatibility", "Assuming every visitor already owns the core game"],
-          ["Preorder", "Expected delivery window and cancellation terms", "Showing only a generic stock badge"],
-        ]}
-      />
-
-      <h2 id="proof">5. Reviews, delivery and return policies</h2>
       <ul className="article-checklist">
-        <li>Reviews, awards or campaign proof are specific and attributable</li>
-        <li>How to play video or rulebook is available when it reduces uncertainty</li>
-        <li>Shipping timing and regions are easy to find</li>
-        <li>Returns, damaged items and replacement policy are linked</li>
-        <li>Preorder and backorder language is repeated near the purchase action</li>
-        <li>FAQ answers product specific objections rather than repeating general policies</li>
-        <li>Related products distinguish expansions, accessories and true alternatives</li>
-      </ul>
-
-      <h2 id="mobile">6. Mobile UX, accessibility and search</h2>
-      <ul className="article-checklist">
-        <li>No horizontal overflow at common phone and tablet widths</li>
-        <li>Sticky purchase controls never cover essential content</li>
-        <li>Selectors, accordions and thumbnails work with keyboard and touch</li>
-        <li>Color is not the only signal for selection, stock or errors</li>
-        <li>The page has one descriptive H1 and logical heading order</li>
-        <li>Title, description and canonical URL are unique</li>
-        <li>Product schema matches visible name, image, price, currency and availability</li>
-        <li>Breadcrumbs and internal links connect the page to its collection and related products</li>
+        <li>Every component with its quantity</li>
+        <li>Edition differences shown side by side, not hidden in a variant label</li>
+        <li>For expansions, the required base game linked by name</li>
+        <li>For bundles, every included product listed</li>
       </ul>
       <p>
-        Use this page level reference with the broader
-        <Link href="/resources/board-game-shopify-store-checklist"> board game Shopify store checklist</Link>.
-        If the catalog began as campaign rewards, continue with the
-        <Link href="/resources/kickstarter-to-shopify-migration-checklist"> Kickstarter to Shopify migration checklist</Link>.
+        Whether an edition should be a variant or its own product is a catalog
+        decision, covered in{" "}
+        <Link href="/guides/sell-board-game-expansions-add-ons-shopify">how to sell expansions, add ons and bundles on Shopify</Link>.
+      </p>
+
+      <h2 id="proof">Zones 5 to 7: proof, delivery and related products</h2>
+      <p>
+        The lower half of the page handles doubts. Proof answers whether to trust
+        you, delivery answers whether it will arrive, and related products answer
+        what to buy next.
+      </p>
+      <GuideVisual
+        data={{
+          kind: "checklist",
+          title: "The lower page answers the doubts the first screen raised",
+          groups: [
+            { name: "Proof", items: ["Named reviews or awards", "Campaign result, stated accurately", "How to play video or rules"] },
+            { name: "Delivery and returns", items: ["Regions and timing", "Preorder wording repeated", "Damaged item policy linked"] },
+            { name: "Related products", items: ["Expansions for this game", "Accessories that fit", "No cross sells above the contents"] },
+          ],
+          source: "Guildframe product page method",
+        }}
+      />
+      <p>
+        Proof has to be real and attributable. A specific review quote or a stated
+        campaign result does more than a row of generic badges.
+      </p>
+
+      <h2 id="phone">Check the finished page on a phone</h2>
+      <p>
+        Most of these zones fail on small screens first. So we finish every product
+        page with a short phone check before it goes live.
+      </p>
+      <ul className="article-checklist">
+        <li>No sideways scrolling at common phone widths</li>
+        <li>Sticky buy buttons never cover the delivery line or selector</li>
+        <li>Selectors and thumbnails work with touch and keyboard</li>
+        <li>Stock and selection are not shown by color alone</li>
+        <li>Product structured data matches the visible name, price and availability</li>
+      </ul>
+      <p>
+        This page covers one product. For the whole store, use the{" "}
+        <Link href="/resources/board-game-shopify-store-checklist">board game Shopify store checklist</Link>,
+        and for what the theme has to support, see{" "}
+        <Link href="/shopify-theme-for-board-games">Shopify theme setup for board games</Link>.
+        If you want the product pages written from your campaign material, our{" "}
+        <Link href="/post-campaign-support">post campaign support</Link>{" "}
+        covers product content, with store setup scoped through the{" "}
+        <Link href="/done-for-you-shopify-store">store planning brief</Link>.
       </p>
     </SeoArticlePage>
   );

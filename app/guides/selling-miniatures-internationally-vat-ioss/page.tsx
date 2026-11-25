@@ -6,15 +6,17 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import { contentDates } from "../../content-dates";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
-  title: "Selling Miniatures Internationally: VAT and IOSS",
+  title: "Selling Miniatures Internationally: VAT & IOSS",
   description:
     "Plan international Shopify sales for miniatures, terrain and tabletop games with shipping zones, HS codes, EU VAT, IOSS, duties and clear delivery terms.",
   path: "/guides/selling-miniatures-internationally-vat-ioss",
   kind: "article",
   publishedTime: "2026-07-23",
-  modifiedTime: "2026-10-28",
+  modifiedTime: contentDates.internationalVatIoss,
   keywords: [
     "selling miniatures internationally VAT IOSS",
     "Shopify EU VAT miniatures",
@@ -44,6 +46,11 @@ const faqs = [
     answer:
       "Yes. EU guidance states that the previous customs duty exemption for low value imports ended on July 1, 2026, with a temporary €3 duty for qualifying B2C consignments valued at €150 or less. The declared item or line grouping affects the charge; it is not automatically €3 for each miniature. Confirm current treatment with official sources and a customs specialist before shipping.",
   },
+  {
+    question: "Do I have to charge VAT on my Kickstarter?",
+    answer:
+      "It depends on where your business is registered and where you ship, so that part is a question for your tax adviser, and this guide is not tax advice. What changed on April 13, 2026 is the route. In Kickstarter's pledge manager you choose whether Kickstarter collects and remits VAT for you or you handle it with your own systems, and Kickstarter still collects applicable US and Canadian taxes where required.",
+  },
 ];
 
 export default function SellingMiniaturesInternationallyPage() {
@@ -55,7 +62,7 @@ export default function SellingMiniaturesInternationallyPage() {
       description="Plan international miniature sales by checking destination markets, package data, VAT, customs duties and who pays import charges."
       answer="Before selling miniatures internationally, confirm the markets you can serve and record packed weights, dimensions, HS codes and country of origin. Agree who pays import charges, check VAT and IOSS requirements with an adviser, configure shipping and taxes, then test orders for each region."
       published="2026-07-23"
-      updated="2026-10-28"
+      updated={contentDates.internationalVatIoss}
       readTime="9 minute read"
       faqs={faqs}
       sources={[
@@ -79,11 +86,17 @@ export default function SellingMiniaturesInternationallyPage() {
           publisher: "Your Europe",
           href: "https://europa.eu/youreurope/business/taxation/vat/one-stop-shop/index_en.htm",
         },
+        {
+          label: "VAT Flexibility in Pledge Manager (release note, April 13, 2026)",
+          publisher: "Kickstarter",
+          href: "https://start.kickstarter.com/kickstarter-release-notes/vat-flexibility-in-pledge-manager",
+        },
       ]}
       toc={[
         { id: "decisions", label: "Make the decisions first" },
         { id: "data", label: "Prepare product data" },
         { id: "vat", label: "Understand VAT and IOSS" },
+        { id: "kickstarter-vat", label: "VAT on a Kickstarter" },
         { id: "shipping", label: "Configure shipping" },
         { id: "customer", label: "Write customer promises" },
         { id: "test", label: "Test international orders" },
@@ -141,10 +154,41 @@ export default function SellingMiniaturesInternationallyPage() {
         customs duty exemption for low value ecommerce imports ended. A
         €3 temporary duty applies to qualifying B2C consignments valued at €150 or less. Its calculation depends on the declared items and grouping of declaration lines; do not assume it is charged separately for every sculpt.
       </p>
+      <GuideVisual
+        data={{
+          kind: "stats",
+          title: "Low value EU imports now carry a duty, counted per declaration line",
+          stats: [
+            { value: "€3", label: "Temporary customs duty", note: "Applied per declaration line in current practice" },
+            { value: "€150", label: "Consignment value ceiling", note: "B2C distance sales at or below this value" },
+            { value: "July 1, 2026", label: "Duty starts", note: "Planned to run until July 1, 2028" },
+            { value: "November 1, 2026", label: "Product identifiers required", note: "For import distance sales declarations" },
+          ],
+          source: "European Commission, Access2Markets customs guidance, checked November 25, 2026",
+        }}
+      />
       <p>
         This can materially affect orders containing several miniature packs or add
         ons. Do not publish a blanket duties included promise until a tax and customs
         specialist confirms the model, registrations and carrier support.
+      </p>
+
+      <h2 id="kickstarter-vat">VAT when the miniatures come from a Kickstarter</h2>
+      <p>
+        Creators often ask whether they have to charge VAT on the campaign itself.
+        That depends on where your business is registered and where you ship, so
+        it is a question for your tax adviser, and this guide is not tax advice.
+        What changed on April 13, 2026 is the route. In Kickstarter&apos;s pledge
+        manager you choose whether Kickstarter collects and remits VAT for you or
+        you handle it with your own systems, and Kickstarter still collects
+        applicable US and Canadian taxes where required.
+      </p>
+      <p>
+        Whichever route you pick, we make sure the reward prices say clearly
+        whether VAT is included, so backers in the UK and EU are not surprised at
+        checkout. Our{" "}
+        <Link href="/guides/kickstarter-fees">Kickstarter fees guide</Link> shows
+        how that choice sits next to the platform fees in your budget.
       </p>
 
       <h2 id="shipping">Configure markets, shipping and duties together</h2>
@@ -165,7 +209,18 @@ export default function SellingMiniaturesInternationallyPage() {
       </p>
       <p>
         Use the <Link href="/resources/board-game-shopify-store-checklist">board game Shopify store checklist</Link>
-        to review the remaining catalog, policy, mobile and checkout work.
+        to review the remaining catalog, policy, mobile and checkout work. When
+        the miniatures came from a campaign, the{" "}
+        <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link>{" "}
+        shows where shipping zones and taxes get set up, because backer orders
+        and store orders share them.
+      </p>
+      <p>
+        We write the delivery and customs wording for product pages and backer
+        updates as part of <Link href="/post-campaign-support">post campaign support</Link>,
+        and scope store setup through the{" "}
+        <Link href="/done-for-you-shopify-store">store planning brief</Link>. Your
+        tax adviser still confirms the registrations.
       </p>
 
       <h2 id="test">Test representative international orders</h2>
@@ -181,7 +236,7 @@ export default function SellingMiniaturesInternationallyPage() {
         This guide supports store planning and does not provide tax, customs or legal
         advice. Confirm the live rules for your business and destinations before launch.
       </ArticleCallout>
-<h2 id="november-identifiers">Prepare for the November 2026 identifier requirements</h2><p>European Commission guidance schedules product-identifier requirements for relevant import distance sales from November 1, 2026. Before shipping, ask your carrier or customs declarant which merchant and manufacturer identifiers it needs, how those fields should be transmitted, and how to handle an item without a standardized identifier.</p><p>This depends on the import arrangement. Confirm the current requirements for your shipments using <a href="https://trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments">the Commission&apos;s customs guidance</a> and your customs adviser.</p>
+<h2 id="november-identifiers">Prepare for the November 2026 identifier requirements</h2><p>European Commission guidance schedules product identifier requirements for relevant import distance sales from November 1, 2026. Before shipping, ask your carrier or customs declarant which merchant and manufacturer identifiers it needs, how those fields should be transmitted, and how to handle an item without a standardized identifier.</p><p>This depends on the import arrangement. Confirm the current requirements for your shipments using <a href="https://trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments">the Commission&apos;s customs guidance</a> and your customs adviser.</p>
     </SeoArticlePage>
   );
 }

@@ -5,44 +5,51 @@ import {
   ArticleTable,
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
+import { GuideVisual } from "../../components/GuideVisual";
 import { pageMetadata } from "../../site-config";
-import {contentDates} from "../../content-dates";
+import { contentDates } from "../../content-dates";
 
 export const metadata = pageMetadata({
   title: "Kickstarter to Shopify Migration Guide",
   description:
-    "A practical Kickstarter to Shopify migration guide covering products, campaign content, operations, testing and storefront launch.",
+    "Move from Kickstarter to Shopify by sorting what moves, what stays and what you rebuild, including Kickstarter's official Shopify app for backer orders.",
   path: "/guides/move-from-kickstarter-to-shopify",
   kind: "article",
   publishedTime: "2026-07-16",
   modifiedTime: contentDates.moveFromKickstarter,
   keywords: [
+    "move from Kickstarter to Shopify",
     "Kickstarter to Shopify migration guide",
+    "Kickstarter Shopify app",
     "migrate Kickstarter products to Shopify",
-    "set up Shopify after Kickstarter",
   ],
 });
 
 const faqs = [
   {
-    question: "Can I move Kickstarter backers into Shopify automatically?",
+    question: "Does Kickstarter have an official Shopify app?",
     answer:
-      "Treat backer data carefully and follow the permissions and privacy terms attached to it. Shopify should become the store for new and permitted customer activity, while Kickstarter remains an important channel for campaign updates and backer communication.",
+      "Yes. Kickstarter, PBC listed a Kickstarter app on the Shopify App Store on July 31, 2026. It sends finalized Pledge Manager orders to Shopify, matches rewards to products and variants already in your store, and syncs tracking numbers back to Kickstarter.",
   },
   {
-    question: "Should I open Shopify before Kickstarter fulfillment is complete?",
+    question: "Can I move Kickstarter backers into Shopify as customers?",
     answer:
-      "You can prepare or open the store before fulfillment is complete if availability, delivery timing and the distinction between backer rewards and new orders are unmistakably clear. Avoid creating an expectation that store customers will ship ahead of backers unless that is the plan you have confirmed.",
+      "Backer orders can reach Shopify through the app for fulfillment. That is different from adding backers to your marketing list. Follow the permissions attached to the backer data, and invite backers to join your store list rather than subscribing them yourself.",
   },
   {
     question: "Does Shopify replace a pledge manager?",
     answer:
-      "Usually not. A pledge manager can handle surveys, upgrades, add ons and fulfillment data for backers. Shopify is designed for ongoing ecommerce, product discovery, checkout and repeat customer relationships.",
+      "Usually not. The pledge manager still collects surveys, shipping details, upgrades and add ons from backers. Shopify becomes the permanent store for new buyers, and with the Kickstarter app it can also receive finalized backer orders for fulfillment.",
   },
   {
-    question: "How long does a Kickstarter to Shopify migration take?",
+    question: "What if I used BackerKit or Gamefound instead of Kickstarter's Pledge Manager?",
     answer:
-      "A focused catalog with final assets can be prepared quickly. Larger catalogs, complex variants, international tax, preorder rules or fulfillment integrations require more planning. Agree timing with your developer after the brief and final assets are reviewed.",
+      "The Kickstarter app sends orders from Kickstarter's own Pledge Manager. If your backer orders live in another pledge manager, check that tool's own Shopify connection or export, and decide which system ships each order before you open the store.",
+  },
+  {
+    question: "Should I copy my campaign page into Shopify?",
+    answer:
+      "No. Reuse the artwork, gameplay explanation and creator story, then rewrite them for a buyer who has never seen the campaign. Reward tiers become products, variants and bundles, and the campaign FAQ becomes product and policy answers.",
   },
 ];
 
@@ -52,13 +59,23 @@ export default function MoveKickstarterToShopifyGuide() {
       slug="move-from-kickstarter-to-shopify"
       category="Kickstarter to Shopify"
       title="Kickstarter to Shopify Migration Guide"
-      description="Prepare a Shopify store using your campaign artwork and product details. Keep new store orders separate from the backer rewards you still need to deliver."
-      answer="To move from Kickstarter to Shopify, list the products you will sell, reuse the campaign artwork and rewrite it for product pages. Set up payments, shipping, taxes and inventory, then place test orders. Keep campaign rewards and new store orders in separate workflows."
+      description="Sort your campaign into what moves to Shopify, what stays on Kickstarter and what you rebuild for new buyers, so backer orders and store orders never get mixed up."
+      answer="To move from Kickstarter to Shopify, sort everything into three groups: what moves into Shopify, what stays on Kickstarter and what you rebuild for new buyers. Backer orders can now flow into Shopify through Kickstarter's official app, while reward tiers and campaign copy need rewriting as store products."
       published="2026-07-16"
       updated={contentDates.moveFromKickstarter}
-      readTime="9 minute read"
+      readTime="8 minute read"
       faqs={faqs}
       sources={[
+        {
+          label: "Kickstarter app for Shopify",
+          publisher: "Shopify App Store",
+          href: "https://apps.shopify.com/kickstarter",
+        },
+        {
+          label: "Kickstarter release notes",
+          publisher: "Kickstarter",
+          href: "https://start.kickstarter.com/kickstarter-release-notes",
+        },
         {
           label: "How to transition from Kickstarter to Shopify",
           publisher: "Shopify",
@@ -69,181 +86,199 @@ export default function MoveKickstarterToShopifyGuide() {
           publisher: "Shopify Help Center",
           href: "https://help.shopify.com/en/manual/products",
         },
-        {
-          label: "Collections",
-          publisher: "Shopify Help Center",
-          href: "https://help.shopify.com/en/manual/products/collections",
-        },
       ]}
       toc={[
-        { id: "roles", label: "Understand each platform's role" },
-        { id: "prepare", label: "Prepare products and operations" },
-        { id: "content", label: "Turn campaign content into store content" },
-        { id: "build", label: "Build the Shopify storefront" },
-        { id: "test", label: "Test before launch" },
-        { id: "launch", label: "Launch without confusing backers" },
-        { id: "checklist", label: "Migration checklist" },
+        { id: "three-groups", label: "What moves, stays or gets rebuilt" },
+        { id: "kickstarter-app", label: "Kickstarter's Shopify app" },
+        { id: "backer-data", label: "Backer data and permission" },
+        { id: "content", label: "Rewrite campaign content" },
+        { id: "announce", label: "Tell backers first" },
+        { id: "next", label: "Where the rest of the work lives" },
         { id: "faq", label: "Quick answers" },
       ]}
     >
       <ArticleDefinition term="Kickstarter to Shopify migration">
-        The operational move from a time limited crowdfunding campaign to a
-        permanent Shopify catalog and buying process. It does not mean copying
-        backer data or campaign reward logic into Shopify without review.
+        Moving a funded tabletop project from a time limited campaign to a
+        permanent store. It covers which orders, products and content move into
+        Shopify, which stay with the campaign, and which you rebuild for buyers
+        who never saw the campaign page.
       </ArticleDefinition>
       <p>
-        If your campaign has just closed, begin with
-        <Link href="/guides/what-happens-after-kickstarter-is-funded"> what happens after a Kickstarter is funded</Link> before moving into storefront implementation.
+        If your campaign closed this week, start with{" "}
+        <Link href="/guides/what-happens-after-kickstarter-is-funded">what happens after a Kickstarter is funded</Link>.
+        This guide picks up when you are ready to decide what Shopify takes on.
       </p>
-      <h2 id="roles">1. Understand what Kickstarter and Shopify each do</h2>
+
+      <h2 id="three-groups">What moves, what stays and what you rebuild</h2>
       <p>
-        Kickstarter is where you present a project, gather pledges and communicate
-        with backers around a campaign. Shopify is where you run an ongoing
-        ecommerce business. The move is not a literal transfer of the campaign
-        page. It is a change from a time bound funding experience to a permanent
-        product and customer experience.
+        The fastest way to plan the move is to sort every part of the campaign
+        into one of three groups. We do this on a single sheet with the creator
+        before anyone opens the Shopify admin, because it settles most of the
+        later questions.
       </p>
-      <p>
-        A pledge manager may sit between those stages. It can collect surveys,
-        shipping choices, upgrades and add ons from backers. Shopify can then
-        become the public store for new orders, repeat purchases and future
-        releases. Shopify also publishes a useful overview of the broader
-        <a href="https://www.shopify.com/ca/blog/how-to-transition-from-kickstarter-to-shopify" target="_blank" rel="noreferrer"> Kickstarter to Shopify transition</a>.
-      </p>
-      <ArticleTable
-        caption="Kickstarter, pledge manager and Shopify roles"
-        headers={["System", "Best at", "Not primarily designed for"]}
-        rows={[
-          ["Kickstarter", "Funding a defined creative project", "Running a permanent product catalog"],
-          ["Pledge manager", "Backer surveys, upgrades and fulfillment data", "Long term brand discovery and retail browsing"],
-          ["Shopify", "Ongoing products, checkout, customers and content", "Managing the original crowdfunding campaign"],
-        ]}
+      <GuideVisual
+        data={{
+          kind: "compare",
+          title: "Most campaign material gets rebuilt, not moved",
+          columns: [
+            {
+              name: "Moves into Shopify",
+              points: [
+                "Finalized Pledge Manager orders, through Kickstarter's app",
+                "Approved artwork, renders and component photos",
+                "Final product names, SKUs and prices",
+              ],
+              verdict: "Moves once the store products exist",
+            },
+            {
+              name: "Stays on Kickstarter",
+              points: [
+                "Campaign page and backer updates",
+                "Backer surveys, upgrades and add ons",
+                "Refunds and messages about rewards",
+              ],
+              verdict: "Backers keep one place to ask",
+            },
+            {
+              name: "Rebuilt for the store",
+              points: [
+                "Reward tiers as products, variants and bundles",
+                "Campaign FAQ as product and policy answers",
+                "Delivery wording for new buyers",
+              ],
+              verdict: "Written for someone who never saw the campaign",
+              highlight: true,
+            },
+          ],
+          caption: "Sources: Kickstarter app listing on the Shopify App Store; Guildframe planning method.",
+        }}
       />
+      <p>
+        Most of the work sits in the third group. A new buyer cannot read a pledge
+        tier chart, so the rewards need turning into products a stranger can
+        choose between. That&apos;s why the migration takes longer than people
+        expect even when the artwork is final.
+      </p>
+
+      <h2 id="kickstarter-app">Using Kickstarter&apos;s Shopify app for backer orders</h2>
+      <p>
+        Kickstarter, PBC listed an official Kickstarter app on the Shopify App
+        Store on July 31, 2026. It changes the migration because backer orders
+        no longer need spreadsheet exports to reach the store that ships them.
+      </p>
+      <GuideVisual
+        data={{
+          kind: "steps",
+          title: "The app only works after your store products exist",
+          steps: [
+            { label: "Create the products", detail: "Add every product and variant a reward contains." },
+            { label: "Map each reward", detail: "Match Kickstarter rewards to Shopify products and variants." },
+            { label: "Finalize backer orders", detail: "Backers complete the Pledge Manager." },
+            { label: "Sync or export in segments", detail: "Send all orders, or a group at a time." },
+            { label: "Ship and sync tracking", detail: "Shopify tracking numbers flow back to Kickstarter." },
+          ],
+          source: "Kickstarter app listing, Shopify App Store",
+        }}
+      />
+      <p>
+        The listing describes three jobs. The app sends finalized Pledge Manager
+        orders to Shopify, matches rewards to existing products and variants, and
+        syncs tracking numbers back to Kickstarter. It does not create your
+        products, so the catalog has to be built first.
+      </p>
       <ArticleCallout>
-        <strong>The cleanest model:</strong> keep campaign promises and backer
-        communication in the right campaign systems. Use Shopify as the clear,
-        permanent destination for commerce after funding.
+        <strong>The honest limit:</strong> the app reads orders from
+        Kickstarter&apos;s own Pledge Manager. If your backers used BackerKit,
+        Gamefound or another pledge manager, compare those routes in{" "}
+        <Link href="/guides/backerkit-vs-shopify-vs-gamefound">BackerKit vs Shopify vs Gamefound</Link>{" "}
+        before planning the sync.
       </ArticleCallout>
-
-      <h2 id="prepare">2. Confirm products, prices and delivery details</h2>
       <p>
-        A beautiful theme cannot fix unclear products or delivery promises. Before
-        building pages, decide exactly what a new customer can buy and what happens
-        after checkout.
-      </p>
-      <h3>Turn pledge rewards into retail products</h3>
-      <p>
-        Campaign rewards are often bundles built around pledge logic. Store
-        products should be understandable without the campaign tier chart. Separate
-        the core game, deluxe edition, expansions, accessories and bundles where
-        customers need independent choices. Keep true bundles where the combination
-        has a clear value.
-      </p>
-      <p>
-        Shopify products can carry descriptions, media, prices, inventory,
-        variants, tags and metafields. Use those native product facts as the stable
-        catalog layer, then let the theme turn them into a clear buying experience.
-      </p>
-      <ul>
-        <li>Give each product a stable name, price, SKU and inventory rule.</li>
-        <li>Define variants such as language, edition, format, scale or finish.</li>
-        <li>State what is included using a scannable list.</li>
-        <li>Explain preorder or backorder timing beside the purchase action.</li>
-        <li>Separate new retail orders from unfulfilled backer rewards operationally.</li>
-      </ul>
-      <h3>Confirm shipping, payments and policies</h3>
-      <p>
-        Confirm shipping regions, tax settings, return policy, customer support
-        address, payment methods and inventory location. If fulfillment is still in
-        progress, write one plain language status statement that can appear on every
-        relevant product page.
+        So the app pulls store setup earlier. You need your products mapped before
+        the first backer orders sync, which the{" "}
+        <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link>{" "}
+        puts in order around campaign close.
       </p>
 
-      <h2 id="content">3. Turn campaign content into store content</h2>
+      <h2 id="backer-data">Keep backer data and marketing permission separate</h2>
       <p>
-        Store customers need the product contents, edition differences, price and delivery status. Keep useful gameplay explanations from the campaign and adapt them to that purchase.
+        An order in Shopify is not the same as permission to email someone.
+        Backer orders that arrive for fulfillment still carry the terms the backer
+        agreed to on Kickstarter.
       </p>
       <ArticleTable
-        caption="How to adapt campaign assets for a permanent store"
-        headers={["Campaign asset", "Store destination", "Recommended change"]}
+        caption="What each kind of backer information is for"
+        headers={["Information", "Use it for", "Do not use it for"]}
         rows={[
-          ["Hero art and promise", "Homepage or collection hero", "Shorten it and add a direct shopping path"],
-          ["Reward tiers", "Products, variants and bundles", "Rewrite around customer choices, not pledge levels"],
-          ["How to play", "Product page and supporting guide", "Keep the clearest proof and remove campaign repetition"],
-          ["Creator story", "About or campaign story page", "Preserve trust while adding ongoing brand context"],
-          ["Campaign FAQ", "Product FAQ and policy pages", "Update delivery, returns and availability"],
-          ["Updates", "News or journal", "Republish only evergreen, customer relevant material"],
+          ["Synced Pledge Manager order", "Picking, packing and tracking the reward", "Adding the backer to a store newsletter"],
+          ["Backer report", "Backer and fulfillment management", "Building a customer list without consent"],
+          ["Store signup", "Store news, restocks and new releases", "Changing what a backer was promised"],
         ]}
       />
       <p>
-        Do not paste the full campaign page into a product template. Build a shorter
-        decision path. Lead with the product, show the most useful media, explain
-        editions, establish proof, answer objections and repeat the buying action at
-        natural points.
+        We invite backers to the store through a Kickstarter update instead. They
+        choose to follow, and your list starts with people who asked to hear from you.
       </p>
 
-      <h2 id="build">4. Help shoppers find the right products</h2>
+      <h2 id="content">Rewrite campaign content for store buyers</h2>
       <p>
-        Start with the smallest complete site. A focused tabletop store usually
-        needs a homepage, collection or catalog, product pages, campaign story or
-        about page, FAQ, contact, shipping policy, returns policy and privacy terms.
+        A campaign page sells a promise to people who arrive with context. A store
+        page sells a finished box to someone who may have found it through search,
+        so every asset needs a new job.
+      </p>
+      <ArticleTable
+        caption="Where each campaign asset goes in the store"
+        headers={["Campaign asset", "Store destination", "What changes"]}
+        rows={[
+          ["Hero art and promise", "Homepage or collection header", "Shorter, with a direct path to the products"],
+          ["Reward tiers", "Products, variants and bundles", "Organized around buyer choices, not pledge levels"],
+          ["How to play", "Product page and a rules page", "Keep the clearest explanation, drop the campaign repetition"],
+          ["Creator story", "About page", "Keep the trust, add what you are making next"],
+          ["Campaign FAQ", "Product FAQ and policy pages", "Updated for delivery, returns and stock"],
+          ["Stretch goal graphic", "Contents list on the product page", "Stretch goal items listed as box contents"],
+        ]}
+      />
+      <p>
+        Turning reward tiers into products is its own decision, covered in{" "}
+        <Link href="/guides/sell-board-game-expansions-add-ons-shopify">how to sell expansions, add ons and bundles on Shopify</Link>.
+        The page each product lands on is covered by the{" "}
+        <Link href="/resources/board-game-product-page-checklist">board game product page checklist</Link>.
+      </p>
+
+      <h2 id="announce">Tell backers about the store before new buyers</h2>
+      <p>
+        Backers and new buyers need different messages, and the order matters.
+        A backer who learns about the store from an ad may think retail buyers
+        are being shipped first.
       </p>
       <ol>
-        <li><strong>Create products first.</strong> Navigation and homepage sections should point to real product destinations.</li>
-        <li><strong>Choose a theme that supports the content.</strong> Look for strong product media, flexible sections, mobile clarity and readable long form layouts.</li>
-        <li><strong>Build collections around customer language.</strong> Use labels such as Core Games, Expansions, Miniatures or Adventures rather than internal campaign terminology.</li>
-        <li><strong>Connect operations.</strong> Configure checkout, payments, inventory, shipping, taxes, policies and essential apps.</li>
-        <li><strong>Add analytics and search tools.</strong> Prepare measurement before the first public store visit.</li>
+        <li><strong>Backer update first.</strong> Say why the store exists, that rewards ship as planned and where to ask about a pledge.</li>
+        <li><strong>Store page second.</strong> Say what is available now, what is a preorder and when each ships.</li>
+        <li><strong>One support route each.</strong> Pledge questions go to the campaign; store orders go to store support.</li>
       </ol>
       <p>
-        Use the <Link href="/kickstarter-to-shopify">Kickstarter to Shopify planning page</Link> to map the products, editions and campaign content your store needs.
-      </p>
-      <p>
-        Use the <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify launch timeline</Link> when you need to sequence this work around campaign close, asset delivery and store testing.
+        Clear timing protects trust better than clever launch copy, so we write
+        the backer update before the store announcement.
       </p>
 
-      <h2 id="test">5. Test the full buying experience</h2>
+      <h2 id="next">Where the rest of the work lives</h2>
       <p>
-        Test with the same seriousness as a campaign launch. Open every key page on a
-        phone. Check menus, image crops, variant selectors, accordions, forms and
-        sticky buttons. Place a test order from product page to confirmation. Verify
-        emails, taxes, shipping options, inventory changes and refund procedures.
+        This guide covers the move itself. The build, the dates and the final
+        checks each have their own page, so you can work through them in order.
       </p>
       <ul>
-        <li>Every product has a unique title and useful meta description.</li>
-        <li>Images use descriptive alt text and sensible file sizes.</li>
-        <li>Only one clear H1 appears on each page.</li>
-        <li>Canonical URLs, sitemap and robots rules are present.</li>
-        <li>Product, organization, article and FAQ structured data match visible content.</li>
-        <li>No campaign era delivery statement remains accidentally unchanged.</li>
-      </ul>
-
-      <h2 id="launch">6. Launch without confusing existing backers</h2>
-      <p>
-        New customers and backers have different context. Tell backers why the store
-        exists, whether it changes fulfillment and which support channel to use.
-        Tell new customers what is available now and when it ships. If the store is
-        accepting preorders, use that word plainly near the price and checkout path.
-      </p>
-      <ArticleCallout>
-        Avoid language that makes an unfulfilled backer think retail customers have
-        silently moved ahead of them. Clear timing protects trust better than clever
-        launch copy.
-      </ArticleCallout>
-
-      <h2 id="checklist">Kickstarter to Shopify migration checklist</h2>
-      <ul className="article-checklist">
-        <li>Final product names, prices, SKUs and variants approved</li>
-        <li>Backer rewards separated from new retail orders</li>
-        <li>Campaign art, copy and FAQs audited for reuse</li>
-        <li>Homepage, products, catalog, about, FAQ and policies complete</li>
-        <li>Shipping, tax, payments, inventory and support configured</li>
-        <li>Desktop and mobile buying paths tested</li>
-        <li>Search metadata, schema, sitemap and internal links checked</li>
-        <li>Backer announcement and new customer launch message prepared</li>
+        <li>The order of the work around campaign close: <Link href="/guides/kickstarter-to-shopify-launch-timeline">launch timeline</Link>.</li>
+        <li>A task list you can tick off: <Link href="/resources/kickstarter-to-shopify-migration-checklist">Kickstarter to Shopify migration checklist</Link>.</li>
+        <li>What the theme has to show: <Link href="/shopify-theme-for-board-games">Shopify theme setup for board games</Link>.</li>
+        <li>The final store test: <Link href="/resources/board-game-shopify-store-checklist">board game Shopify store checklist</Link>.</li>
       </ul>
       <p>
-        Keep the useful campaign artwork and product explanations. Adapt the pages so a new customer can choose a product without knowing the pledge tiers.
+        Doing the move yourself is realistic when the catalog is small and you
+        have time to rewrite the content. When you would rather hand over the
+        backer communication and product content, our{" "}
+        <Link href="/post-campaign-support">post campaign support</Link>{" "}
+        covers it, with optional store setup scoped through the{" "}
+        <Link href="/done-for-you-shopify-store">done for you Shopify store</Link> brief.
       </p>
     </SeoArticlePage>
   );

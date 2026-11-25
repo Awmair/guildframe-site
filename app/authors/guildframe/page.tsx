@@ -5,6 +5,7 @@ import { absoluteUrl, pageMetadata } from "../../site-config";
 import { authorId } from "../../seo-entities";
 import { contentDates } from "../../content-dates";
 import { launchGuides } from "../../launch-guides";
+import { Icon, Roll } from "../../components/chrome/Icon";
 
 export const metadata = pageMetadata({
   title: "Umair: Campaign Designer & Guide Author",
@@ -42,6 +43,7 @@ export default function GuildframeAuthorPage() {
         { id: "what-i-work-on", label: "What I work on" },
         { id: "how-i-write", label: "How I write the guides" },
         { id: "campaign-design-guides", label: "Campaign design guides" },
+        { id: "work-with-me", label: "Work with me" },
       ]}
     >
       <section id="what-i-work-on">
@@ -59,6 +61,11 @@ export default function GuildframeAuthorPage() {
         <h2>Campaign design guides</h2>
         <ul className="st-link-list">{launchGuides.map(g=><li key={g.slug}><Link href={`/guides/${g.slug}`}>{g.title}</Link></li>)}</ul>
         <p>Find the after funding articles in <Link href="/guides">all guides</Link> and the reusable <Link href="/resources">campaign worksheets and store checklists</Link>.</p>
+      </section>
+      <section id="work-with-me">
+        <h2>Work with me on your launch</h2>
+        <p>If a guide answered your question and you would like help with the work itself, see how to <Link href="/buy">start your tabletop launch project</Link>. We agree the services, fees and schedule in writing before anything begins, and creative enquiries can start with a free opening mockup.</p>
+        <div className="st-actions"><a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my project" data-analytics-location="author closing"><Roll>Discuss my project</Roll><Icon name="arrow" /></a></div>
       </section>
     </TrustPage>
   </>;

@@ -7,6 +7,7 @@ import {
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
 import {contentDates} from "../../content-dates";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "Shopify Developer vs DIY Theme",
@@ -55,7 +56,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
       category="Shopify build comparison"
       title="Shopify Developer vs DIY Theme: Which Is Right for Your Tabletop Store?"
       description="Compare building a tabletop Shopify store yourself with hiring a developer. Check who will handle products, page content, checkout setup and testing."
-      answer="Use a DIY Shopify theme if your products and artwork are ready and you have time to configure and test the store. Hire a developer when the catalogue, integrations or deadline need more support. Compare written scopes so you know who handles content, setup and launch checks."
+      answer="Use a DIY Shopify theme if your products and artwork are ready and you have time to configure and test the store. Hire a developer when the catalog, integrations or deadline need more support. Compare written scopes so you know who handles content, setup and launch checks."
       published="2026-07-21"
       updated={contentDates.shopifyDeveloperVsDiyTheme}
       readTime="8 minute read"
@@ -132,6 +133,19 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         ]}
       />
 
+      <GuideVisual
+        data={{
+          kind: "compare",
+          title: "Either way, you still supply the facts and approve the store",
+          columns: [
+            { name: "DIY theme", points: ["You plan the catalog", "You enter products and test", "You maintain the store"], verdict: "Fits a mapped catalog and spare time" },
+            { name: "Shopify developer", points: ["Plans the structure with you", "Adapts the theme to your brand", "Hands over access and training"], verdict: "Fits editions, integrations or a firm date", highlight: true },
+            { name: "Split the work", points: ["You configure the theme", "Help with copy, art or one integration", "One named person runs the final test"], verdict: "Fits a team with some time" },
+          ],
+          source: "Guildframe comparison; Shopify Partner hiring guidance",
+        }}
+      />
+
       <h2 id="diy">When to build the store yourself</h2>
       <p>
         A premium theme is the efficient route when the store does not need a new
@@ -147,7 +161,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         <li>Your launch date gives you enough time to build and test carefully.</li>
         <li>You want to minimize the upfront cash cost.</li>
       </ul>
-      <p>Use the free <Link href="/resources/board-game-shopify-store-checklist">store checklist</Link> to organise your catalogue and compare the build responsibilities before choosing a route.</p>
+      <p>Use the free <Link href="/resources/board-game-shopify-store-checklist">store checklist</Link> to organize your catalog and compare the build responsibilities before choosing a route.</p>
 
       <h2 id="developer">When to hire a Shopify developer</h2>
       <p>
@@ -166,7 +180,7 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         <li>You have a firm launch date and limited internal time.</li>
         <li>You want mobile, navigation, product and checkout flows tested before handoff.</li>
       </ul>
-      <p>Shopify recommends defining requirements, budget, timing and expected outcomes before contacting a Partner. Ask for a written quote that matches your catalogue and operational needs.</p>
+      <p>Shopify recommends defining requirements, budget, timing and expected outcomes before contacting a Partner. Ask for a written quote that matches your catalog and operational needs.</p>
       <ArticleCallout>Agree the project scope, review process and timing with the developer before committing.</ArticleCallout>
 
       <h2 id="cost">Compare setup costs and your team’s time</h2>
@@ -190,20 +204,20 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         ]}
       />
       <p>
-        A DIY theme can cost less if you have the time to configure it. Hiring a developer can free your team to handle production, fulfilment, marketing and the next release.
+        A DIY theme can cost less if you have the time to configure it. Hiring a developer can free your team to handle production, fulfillment, marketing and the next release.
       </p>
 
       <h2 id="brief">Compare written scopes using one sample product</h2>
       <p>
         Give each potential builder the same example: a base game with two
         editions, a compatible expansion and confirmed delivery terms. Ask how
-        they would organise the products and demonstrate the purchase path on a
+        they would organize the products and demonstrate the purchase path on a
         phone. Their answer should make the required work easier to quote.
       </p>
       <ul>
         <li>Name the products, pages and custom sections included in the build.</li>
         <li>List who supplies copy, artwork, policies and product data.</li>
-        <li>Identify app subscriptions, theme licences and integration charges separately.</li>
+        <li>Identify app subscriptions, theme licenses and integration charges separately.</li>
         <li>Define test orders, shipping cases and notification checks before launch.</li>
         <li>Agree the revision process, publication approval and support period.</li>
         <li>Confirm the store owner receives access, documentation and the agreed source files.</li>
@@ -214,16 +228,16 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         Record who tests the completed store when several people contribute.
       </p>
       <aside className="article-next-step">
-        <h2>Need help with the campaign-to-store handoff?</h2>
+        <h2>Need help handing the campaign over to a store?</h2>
         <p>
           Guildframe can scope the product content, artwork adaptation and
-          post-campaign communication. Optional Shopify planning and setup need a
-          separate brief, with the catalogue, responsibilities and launch checks
+          post campaign communication. Optional Shopify planning and setup need a
+          separate brief, with the catalog, responsibilities and launch checks
           agreed before work starts.
         </p>
         <p>
           <Link href="/done-for-you-shopify-store" data-analytics-event="service_interest" data-analytics-label="Scope my Shopify store" data-analytics-location="developer versus DIY guide">See what to include in your store brief</Link>{" "}
-          or review <Link href="/post-campaign-support">post-campaign support</Link>.
+          or review <Link href="/post-campaign-support">post campaign support</Link>.
         </p>
       </aside>
 
@@ -239,10 +253,12 @@ export default function ShopifyDeveloperVsDiyThemeGuide() {
         If you are building yourself, start with the{" "}
         <Link href="/guides/best-shopify-themes-for-board-games">theme comparison</Link>{" "}
         and <Link href="/resources/board-game-shopify-store-checklist">store checklist</Link>.
-        If you hire help, use the same checklist to agree who owns the catalogue,
+        If you hire help, use the same checklist to agree who owns the catalog,
         content, testing and publication tasks. The{" "}
         <Link href="/guides/kickstarter-to-shopify-launch-timeline">Kickstarter to Shopify timeline</Link>{" "}
-        shows where those tasks fit around campaign fulfilment.
+        shows where those tasks fit around campaign fulfillment, and the{" "}
+        <Link href="/guides/move-from-kickstarter-to-shopify">migration guide</Link>{" "}
+        sorts what moves from the campaign into the store.
       </p>
       <ArticleCallout>
         Choose a theme if you’ll do the setup yourself. If you hire a developer, agree which parts of the finished store they’re responsible for.

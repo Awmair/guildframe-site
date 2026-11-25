@@ -7,11 +7,12 @@ import {
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
 import { contentDates } from "../../content-dates";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "6 Best Shopify Themes for Board Games in 2026",
   description:
-    "Compare six Shopify themes for board games by price, catalogue needs and setup work. Includes a practical trial checklist for editions and expansions.",
+    "Compare six Shopify themes for board games by price, catalog needs and setup work. Includes a practical trial checklist for editions and expansions.",
   path: "/guides/best-shopify-themes-for-board-games",
   kind: "article",
   publishedTime: "2026-07-16",
@@ -43,7 +44,7 @@ const faqs = [
   {
     question: "Is Guildframe unbiased in this comparison?",
     answer:
-      "Guildframe offers tabletop campaign and post-campaign support, including optional store planning under a separate brief. This is an editorial comparison of themes from Shopify and other developers, based on their official listings. Check the linked listings and test your own products before buying.",
+      "Guildframe offers tabletop campaign and post campaign support, including optional store planning under a separate brief. This is an editorial comparison of themes from Shopify and other developers, based on their official listings. Check the linked listings and test your own products before buying.",
   },
 ];
 
@@ -53,8 +54,8 @@ export default function BestThemesGuide() {
       slug="best-shopify-themes-for-board-games"
       category="Board game Shopify themes"
       title="6 Best Shopify Themes for Board Games and Tabletop Stores in 2026"
-      description="Compare six Shopify themes for board game stores by catalogue size, product information and the setup work they need."
-      answer="This comparison covers Horizon and Dawn for free starting points, Novaplay for larger game catalogues, Playtime for cards and collectibles, Sunrise for a bright storefront and Boost for promotional layouts. Test a real game product in a theme trial before choosing."
+      description="Compare six Shopify themes for board game stores by catalog size, product information and the setup work they need."
+      answer="This comparison covers Horizon and Dawn for free starting points, Novaplay for larger game catalogs, Playtime for cards and collectibles, Sunrise for a bright storefront and Boost for promotional layouts. Test a real game product in a theme trial before choosing."
       published="2026-07-16"
       updated={contentDates.bestBoardGameThemes}
       readTime="10 minute read"
@@ -112,7 +113,7 @@ export default function BestThemesGuide() {
       ]}
     >
       <ArticleCallout>
-        <strong>Disclosure:</strong> Guildframe publishes this guide and offers tabletop campaign and post-campaign support. The themes below are from Shopify or other developers. This comparison uses official listings; it does not report performance tests or sales results.
+        <strong>Disclosure:</strong> Guildframe publishes this guide and offers tabletop campaign and post campaign support. The themes below are from Shopify or other developers. This comparison uses official listings; it does not report performance tests or sales results.
       </ArticleCallout>
 
       <ArticleDefinition term="Board game Shopify theme">
@@ -148,6 +149,18 @@ export default function BestThemesGuide() {
           ["Boost", "$380", "Promotion led stores with broad catalogs", "Not designed specifically around tabletop product logic"],
           ["Dawn", "Free", "Lean launches and hands on teams", "Requires more art direction and custom setup"],
         ]}
+      />
+      <GuideVisual
+        data={{
+          kind: "compare",
+          title: "Catalog size decides the shortlist before price does",
+          columns: [
+            { name: "Small catalog", points: ["Horizon, free and flexible", "Dawn, free and lean", "Sunrise, bright and simple"], verdict: "One game and a few extras" },
+            { name: "Large catalog", points: ["Novaplay for game and hobby lines", "Boost for promotion led stores"], verdict: "Many games, expansions and accessories", highlight: true },
+            { name: "Cards and collectibles", points: ["Playtime for trading cards", "Playful retail layouts"], verdict: "Singles, sealed product and accessories" },
+          ],
+          source: "Shopify Theme Store listings",
+        }}
       />
       <p>
         Shortlisting a theme for your own game? Use the free{" "}
@@ -264,6 +277,8 @@ export default function BestThemesGuide() {
       <p>
         The theme should also support the catalog choices in our guide to
         <Link href="/guides/sell-board-game-expansions-add-ons-shopify"> selling expansions, add ons and bundles on Shopify</Link>.
+        For the four things every board game theme has to display, whichever
+        one you pick, see <Link href="/shopify-theme-for-board-games">Shopify theme setup for board games</Link>.
       </p>
 
       <ArticleCallout>
@@ -276,7 +291,7 @@ export default function BestThemesGuide() {
 
       <h2 id="trial">Test one real game before buying the theme</h2>
       <p>
-        Use the same sample catalogue in each trial: a base game with standard and
+        Use the same sample catalog in each trial: a base game with standard and
         deluxe editions, one compatible expansion and one product with a different
         delivery window. Add your actual artwork and product facts.
       </p>
@@ -296,7 +311,7 @@ export default function BestThemesGuide() {
         Check preorder configuration separately from the theme. Shopify&apos;s
         preorder purchase options require a preorder app and a supported payment
         provider. A feature on a theme listing does not establish your payment or
-        fulfilment workflow. See the{" "}
+        fulfillment workflow. See the{" "}
         <Link href="/guides/sell-board-game-preorders-on-shopify">Shopify preorder guide</Link>{" "}
         before taking orders.
       </p>
@@ -305,12 +320,12 @@ export default function BestThemesGuide() {
         <h2>Need help turning campaign assets into a store?</h2>
         <p>
           Guildframe can scope product content, campaign artwork adaptation and
-          the post-campaign handoff. Optional Shopify planning and setup need a
-          separate brief covering your catalogue, required features and operations.
+          the post campaign handoff. Optional Shopify planning and setup need a
+          separate brief covering your catalog, required features and operations.
         </p>
         <p>
           <Link href="/done-for-you-shopify-store" data-analytics-event="service_interest" data-analytics-label="Plan my Shopify store" data-analytics-location="theme comparison">Plan your store brief</Link>{" "}
-          or review <Link href="/post-campaign-support">post-campaign support</Link>.
+          or review <Link href="/post-campaign-support">post campaign support</Link>.
           Preparing a new crowdfunding launch as well? See the{" "}
           <Link href="/kickstarter-launch-services">launch services</Link>.
         </p>
@@ -327,6 +342,8 @@ export default function BestThemesGuide() {
       <p>
         If you’re deciding whether to configure a theme yourself or hire a
         specialist, use our <Link href="/guides/shopify-developer-vs-diy-theme">Shopify developer versus DIY theme comparison</Link>.
+        Once the theme is chosen, set up each product with the{" "}
+        <Link href="/resources/board-game-product-page-checklist">board game product page checklist</Link>.
       </p>
       <ArticleCallout>
         Try the theme with your own game before choosing it. Check that customers can understand the editions and your team can update the pages.

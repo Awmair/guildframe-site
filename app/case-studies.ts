@@ -14,7 +14,7 @@ const projectNotes = [
     contributionSummary: "Visual direction and campaign presentation",
     proofViews: [
       { title: "Products before the explanation", copy: "The packaged scents and ScentEngine sit together in the foreground. They give a visitor a physical product to look at while the copy introduces the idea.", alt: "Detail of the packaged ScentedRealms scents and ScentEngine in the campaign artwork", position: "50% 78%", scale: 1.18 },
-      { title: "The product carries the fantasy artwork", copy: "The illustrated packaging carries the setting into the composition. The surrounding dark colour and red frame leave the collection visible as one offer.", alt: "Detail of the fantasy artwork on ScentedRealms packaging", position: "57% 49%", scale: 1.12 },
+      { title: "The product carries the fantasy artwork", copy: "The illustrated packaging carries the setting into the composition. The surrounding dark color and red frame leave the collection visible as one offer.", alt: "Detail of the fantasy artwork on ScentedRealms packaging", position: "57% 49%", scale: 1.12 },
     ],
     seoTitle: "ScentedRealms Kickstarter Campaign Design Case Study",
     description: "How Umair presented ScentedRealms on Kickstarter: fantasy art direction, the ScentEngine and a scent collection for tabletop roleplaying sessions.",
@@ -24,7 +24,7 @@ const projectNotes = [
     decisions: [
       { title: "Introduce the product and the setting together", copy: "The opening artwork places the ScentEngine and scent products in the foreground. A visitor can see a physical product while the illustrated packaging establishes the kind of tabletop experience it belongs to." },
       { title: "Keep the collection visible", copy: "The image groups the packaged products and individual scent items. Showing them together gives the collection a physical scale and helps explain an offer that would be difficult to describe with a setting illustration alone." },
-      { title: "Give the page a consistent visual direction", copy: "The red frame, dark background and fantasy colour carry the product identity into the campaign presentation. Product labels still need enough space to be read; atmosphere should support the explanation." },
+      { title: "Give the page a consistent visual direction", copy: "The red frame, dark background and fantasy color carry the product identity into the campaign presentation. Product labels still need enough space to be read; atmosphere should support the explanation." },
     ],
     lesson: "An unfamiliar RPG accessory needs a product explanation before a reward comparison. Show what it is, where it sits in a session and what a backer receives. The same approach helps with sound tools, gaming tables and other products that change how a group plays.",
     imageContext: "Campaign artwork: the ScentEngine, packaged scents and fantasy collection in one opening composition.",
@@ -68,15 +68,15 @@ const projectNotes = [
     contributionSummary: "Campaign presentation of features and storage options",
     proofViews: [
       { title: "Name, promise and an open box", copy: "The CITADEL DECK BLOCK name and the line \"Deck protection like never before\" sit beside a small opened box, so the header shows the inside as well as the cover.", alt: "Detail of the Quiver logo, the CITADEL DECK BLOCK name and a small opened red box in Quiver Time's campaign header", position: "0% 50%", scale: 1.04 },
-      { title: "The product and the early result", copy: "The red leather CITADEL with its Quiver strap fills the centre, beside a badge reporting 100% funded within 6 days. The product, branding and photography belong to Quiver Time.", alt: "Detail of the red leather CITADEL Deck Block and the 100% funded within 6 days badge in Quiver Time's campaign header", position: "100% 50%", scale: 1.04 },
+      { title: "The product and the early result", copy: "The red leather CITADEL with its Quiver strap fills the center, beside a badge reporting 100% funded within 6 days. The product, branding and photography belong to Quiver Time.", alt: "Detail of the red leather CITADEL Deck Block and the 100% funded within 6 days badge in Quiver Time's campaign header", position: "100% 50%", scale: 1.04 },
     ],
     seoTitle: "Quiver Time CITADEL Kickstarter Campaign Design Case Study",
     description: "Quiver Time CITADEL campaign presentation by Umair: explaining a card storage accessory through its cover, divider, compartments and everyday use.",
     headline: "Making a card storage product easy to understand.",
-    brief: "Quiver Time's CITADEL Deck Block is a storage accessory for cards, dice, tokens and coins. The campaign needed to explain its physical features and organisation options so a player could decide whether it suited their collection.",
+    brief: "Quiver Time's CITADEL Deck Block is a storage accessory for cards, dice, tokens and coins. The campaign needed to explain its physical features and organization options so a player could decide whether it suited their collection.",
     role: "I designed the campaign presentation around the magnetic cover, flexible divider and storage options. Quiver Time supplied the product and its photography. The image shown here is the campaign header from Quiver Time's Kickstarter page, credited to Quiver Time.",
     decisions: [
-      { title: "Start with how a player uses it", copy: "A storage accessory is easier to evaluate when the page explains what goes inside and how the compartments are used. The campaign presentation centred on the cover, divider and storage options, giving each feature a practical job in the story." },
+      { title: "Start with how a player uses it", copy: "A storage accessory is easier to evaluate when the page explains what goes inside and how the compartments are used. The campaign presentation centered on the cover, divider and storage options, giving each feature a practical job in the story." },
       { title: "Put compatibility near the product information", copy: "Card players need fit and capacity information before choosing a storage product. That information belongs beside the product and reward explanation, using the creator's confirmed specifications rather than an assumption that every deck will fit." },
       { title: "Keep the creator's imagery distinct from the design work", copy: "The header image comes from Quiver Time's Kickstarter page and shows the red leather CITADEL with the Quiver logo. The product and its photography are Quiver Time's work. My contribution was the way the campaign explained the product, its features and the offer." },
     ],

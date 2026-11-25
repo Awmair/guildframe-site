@@ -7,6 +7,7 @@ import {
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
 import { contentDates } from "../../content-dates";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "Build a Tabletop Shopify Store With AI",
@@ -14,7 +15,7 @@ export const metadata = pageMetadata({
     "What AI coding tools can and cannot do when you build a board game, TTRPG or miniatures Shopify store, and the catalog decisions no model can make for you.",
   path: "/guides/build-a-tabletop-shopify-store-with-ai",
   kind: "article",
-  publishedTime: contentDates.buildWithAi,
+  publishedTime: "2026-10-28",
   modifiedTime: contentDates.buildWithAi,
   keywords: [
     "build a Shopify store with AI",
@@ -29,7 +30,7 @@ const faqs = [
   {
     question: "Can AI build a complete Shopify theme from scratch?",
     answer:
-      "It can generate the files, and that is not the same as a finished storefront. AI coding tools produce workable Liquid sections, templates and CSS, but you still have to decide the catalog structure, verify the settings schema is operable by a merchant, check accessibility and mobile behaviour, and confirm every platform detail against current Shopify documentation. Treat the output as a first draft written by someone fast who has never seen your product line.",
+      "It can generate the files, and that is not the same as a finished storefront. AI coding tools produce workable Liquid sections, templates and CSS, but you still have to decide the catalog structure, verify the settings schema is operable by a merchant, check accessibility and mobile behavior, and confirm every platform detail against current Shopify documentation. Treat the output as a first draft written by someone fast who has never seen your product line.",
   },
   {
     question: "Is it safe to use AI generated Liquid on a live store?",
@@ -44,7 +45,7 @@ const faqs = [
   {
     question: "How much does building it yourself with AI actually save?",
     answer:
-      "You save the build fee and pay in time and risk. The generation is fast, and the catalog modelling, testing, accessibility work and fixing what the model got wrong are not. If your catalog is a single game with two editions, building it yourself is realistic. If it has multiple editions, expansions, add ons and a fixed launch date, the time cost usually exceeds what people expect.",
+      "You save the build fee and pay in time and risk. The generation is fast, and the catalog modeling, testing, accessibility work and fixing what the model got wrong are not. If your catalog is a single game with two editions, building it yourself is realistic. If it has multiple editions, expansions, add ons and a fixed launch date, the time cost usually exceeds what people expect.",
   },
 ];
 
@@ -56,7 +57,7 @@ export default function BuildWithAiGuidePage() {
       title="Build a Tabletop Shopify Store With AI"
       description="Use AI coding tools for Shopify theme work, then check the code, editor settings and product data before publishing."
       answer="AI coding tools can draft Shopify Liquid sections, product copy and structured data. Theme code cannot modify Shopify checkout. You still need to define editions, expansions, compatibility and delivery terms, then verify the generated code against Shopify documentation and test the store."
-      published={contentDates.buildWithAi}
+      published="2026-10-28"
       updated={contentDates.buildWithAi}
       readTime="9 minute read"
       faqs={faqs}
@@ -80,6 +81,11 @@ export default function BuildWithAiGuidePage() {
           label: "Dawn theme repository",
           publisher: "Shopify on GitHub",
           href: "https://github.com/Shopify/dawn",
+        },
+        {
+          label: "Kickstarter app for Shopify",
+          publisher: "Shopify App Store",
+          href: "https://apps.shopify.com/kickstarter",
         },
       ]}
       toc={[
@@ -162,7 +168,7 @@ export default function BuildWithAiGuidePage() {
         rows={[
           ["Settings schema", "Invented setting types and keys that the theme editor rejects", "Validate the schema before previewing, and open every section in the editor"],
           ["Empty states", "A block that renders an empty container when its metafield is unset", "Preview every section on a product that has none of the optional data"],
-          ["Mobile behaviour", "Layouts built desktop first that overflow below 400 pixels", "Check every new section at 390 pixels wide before accepting it"],
+          ["Mobile behavior", "Layouts built desktop first that overflow below 400 pixels", "Check every new section at 390 pixels wide before accepting it"],
           ["Accessibility", "Missing labels, unreachable controls and decorative markup announced to screen readers", "Tab through each section, and confirm every control is reachable and named"],
           ["Structured data", "Fabricated review counts and ratings on products that have neither", "Search generated markup for aggregateRating and remove it unless the reviews are real"],
           ["Platform drift", "Code written against an older Shopify API or theme architecture", "Install the Shopify AI Toolkit so the tool validates against current schemas"],
@@ -267,6 +273,22 @@ export default function BuildWithAiGuidePage() {
         </li>
       </ol>
 
+      <GuideVisual
+        data={{
+          kind: "steps",
+          title: "Safety comes from the setup, not the model",
+          steps: [
+            { label: "Development theme", detail: "Never let the tool edit the live theme." },
+            { label: "Shopify CLI", detail: "Pull, preview locally, push on purpose." },
+            { label: "Git", detail: "Read every diff and revert cleanly." },
+            { label: "Shopify AI Toolkit", detail: "Current docs, validated Liquid and GraphQL." },
+            { label: "Theme foundation", detail: "Dawn or Horizon as the base." },
+            { label: "Project rules file", detail: "Your metafields and the files it must not touch." },
+          ],
+          source: "Shopify AI Toolkit documentation; Dawn theme repository",
+        }}
+      />
+
       <h2 id="sample-prompts">Three prompts to start with</h2>
       <p>
         These are written to be used as they are. Each one includes what it gets
@@ -342,7 +364,7 @@ export default function BuildWithAiGuidePage() {
           accurately.
         </li>
         <li>
-          Your launch date is fixed and tied to fulfilment or a campaign update.
+          Your launch date is fixed and tied to fulfillment or a campaign update.
         </li>
         <li>
           Your catalog has more than roughly twenty products with edition and
@@ -354,11 +376,11 @@ export default function BuildWithAiGuidePage() {
         </li>
         <li>
           You are about to publish a delivery promise you have not checked
-          against your actual fulfilment schedule.
+          against your actual fulfillment schedule.
         </li>
       </ul>
       <p>
-        Check the delivery promise against your fulfilment schedule before publishing. Use the{" "}
+        Check the delivery promise against your fulfillment schedule before publishing. Use the{" "}
         <Link href="/done-for-you-shopify-store">
           store planning page
         </Link>{" "}
@@ -367,6 +389,17 @@ export default function BuildWithAiGuidePage() {
           the cost guide
         </Link>{" "}
         sets out what each route actually costs.
+      </p>
+      <p>
+        Whichever way you build, check the generated pages against the{" "}
+        <Link href="/resources/board-game-product-page-checklist">board game product page checklist</Link>{" "}
+        and the four needs in{" "}
+        <Link href="/shopify-theme-for-board-games">Shopify theme setup for board games</Link>.
+        If backer rewards will ship through the store, Kickstarter&apos;s official
+        Shopify app maps rewards to products and variants that already exist, so
+        build the catalog before the first sync. Our{" "}
+        <Link href="/post-campaign-support">post campaign support</Link> covers the
+        backer side of that handoff.
       </p>
     </SeoArticlePage>
   );

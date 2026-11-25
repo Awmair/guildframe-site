@@ -123,6 +123,7 @@ export default function ResourcesPage() {
             <Link href="/guides/best-shopify-themes-for-board-games">Theme comparison</Link>
             <Link href="/shopify-theme-for-ttrpg">RPG store planning</Link>
             <Link href="/editorial-policy">Editorial policy</Link>
+            <Link href="/buy">Start your launch project</Link>
           </nav>
         </section>
       </main>

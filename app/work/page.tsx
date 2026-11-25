@@ -9,13 +9,23 @@ import { absoluteUrl, pageMetadata } from "../site-config";
 import { caseStudies, workDate } from "../case-studies";
 import { beyondTabletop } from "../past-work";
 import { formatContentDate } from "../content-dates";
+import { GuideVisual, type GuideVisualData } from "../components/GuideVisual";
 
 export const metadata = pageMetadata({ title: "Tabletop Kickstarter Campaign Design Case Studies", description: "Campaign design for ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers: Umair's contribution, design choices and the published pages.", path: "/work" });
+
+// Built from the case study data, so the categories and roles always match the cards below.
+const categoryVisual: GuideVisualData = {
+  kind: "compare",
+  title: "Four case studies cover four tabletop categories",
+  columns: caseStudies.map(project => ({ name: project.category, points: [project.name, project.contributionSummary] })),
+  caption: "Each case study links to the published Kickstarter campaign. Funding totals are the creators' results.",
+};
 
 const nextLinks = [
   { href: "/campaign-creative", label: "Discuss creative production" },
   { href: "/campaign-design", label: "Explore campaign page design" },
   { href: "/kickstarter-launch-services", label: "Explore full launch support" },
+  { href: "/buy", label: "Start your launch project" },
 ];
 
 export default function WorkPage() {
@@ -33,7 +43,7 @@ export default function WorkPage() {
           <h1 className="wk-title" data-reveal="lines"><span className="w-line"><span>Tabletop campaign</span></span> <span className="w-line"><span><em>design case studies.</em></span></span></h1>
           <div className="wk-hero-foot">
             <div className="wk-hero-lead" data-reveal="rise">
-              <p>RPG accessories, modular terrain and card storage. Each case study shows the project, my contribution and the design choices behind the campaign presentation.</p>
+              <p>A survival horror board game, an RPG accessory, modular terrain and card storage. Each case study shows the project, my contribution and the design choices behind the campaign presentation.</p>
               <p className="wk-updated">Updated <time dateTime={workDate}>{formatContentDate(workDate)}</time></p>
             </div>
             <div className="wk-total" data-reveal="rise">
@@ -44,6 +54,10 @@ export default function WorkPage() {
           </div>
         </div>
       </header>
+
+      <section className="wk-wrap" aria-label="Case studies by category">
+        <GuideVisual data={categoryVisual} />
+      </section>
 
       <section className="wk-deck" aria-label="Client case studies">
         {caseStudies.map((project, index) => <article className="wk-card" aria-labelledby={`project-${project.slug}`} key={project.slug} style={{ "--tone": caseTones[project.slug] ?? caseTones["scented-realms"], "--stack": index } as React.CSSProperties}>
@@ -71,7 +85,7 @@ export default function WorkPage() {
         <div className="wk-wrap">
           <div className="wk-beyond-head">
             <h2 className="wk-h2" id="beyond-title" data-reveal="lines"><span className="w-line"><span>Beyond <em>tabletop</em></span></span></h2>
-            <p>Client campaigns outside games. The totals are public Kickstarter figures and are my clients’ results.</p>
+            <p>Client campaigns outside games. The totals are public Kickstarter figures and are my clients’ results. Planning a product of your own? See <Link className="w-link" href="/kickstarter-product-campaign-design">Kickstarter campaign design for product launches</Link>.</p>
           </div>
           <ul className="wk-beyond-list">{beyondTabletop.map(item => <li className="wk-mini" key={item.name}>
             <a className="wk-mini-media" href={item.href} target="_blank" rel="noopener noreferrer" tabIndex={-1} aria-hidden="true" data-cursor-label="View on Kickstarter" data-reveal="media">

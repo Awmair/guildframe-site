@@ -1,0 +1,163 @@
+import type { LaunchGuide } from "../launch-guides";
+
+export const guide: LaunchGuide = {
+  published: "2026-11-25",
+  updated: "2026-11-25",
+  slug: "board-game-tariffs-shipping-us",
+  title: "Board Game Tariffs and US Shipping in 2026: What Creators Need to Know",
+  seoTitle: "Board Game Tariffs and US Shipping in 2026",
+  description: "What 2026 US tariff changes mean for board game creators: the IEEPA ruling, Section 301 at 12.5% on China, the end of de minimis and reward pricing.",
+  tag: "Tariffs & shipping",
+  servicePath: "/kickstarter-launch-services",
+  serviceLabel: "Kickstarter launch services for tabletop games",
+  answer: "The Supreme Court struck down the IEEPA tariffs on February 20, 2026, but board games made in China still face a 12.5% Section 301 tariff from July 24, 2026. De minimis has been suspended since August 29, 2025, so small parcels to US backers owe duty too, and the exemption ends by law on July 1, 2027.",
+  relatedSlugs: ["kickstarter-shipping-delivery-page", "board-game-kickstarter-reward-pricing", "kickstarter-stretch-goals-planning"],
+  sources: [
+    { label: "A breakdown of the court's tariff decision", publisher: "SCOTUSblog", href: "https://www.scotusblog.com/2026/02/a-breakdown-of-the-courts-tariff-decision/" },
+    { label: "US administration rebuilds global tariff program under Section 301", publisher: "Morgan Lewis", href: "https://www.morganlewis.com/pubs/2026/07/us-administration-rebuilds-global-tariff-program-under-section-301" },
+    { label: "US imposes Section 301 forced labor tariffs on 60 economies", publisher: "Thomson Reuters", href: "https://www.thomsonreuters.com/en-us/help/onesource-global-trade/regulatory-insights/2026/july-24th/us-imposes-section-301-forced-labor-tariffs-60" },
+    { label: "Indefinite suspension of the de minimis exemption for mail shipments and new postal informal entry", publisher: "Federal Register", href: "https://www.federalregister.gov/documents/2026/06/24/2026-12669/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry" },
+    { label: "Indefinite suspension of the de minimis exemption for all other modes", publisher: "Federal Register", href: "https://www.federalregister.gov/documents/2026/06/24/2026-12670/indefinite-suspension-of-the-de-minimis-exemption-for-merchandise-arriving-through-all-modes-other" },
+    { label: "Now live: the Kickstarter Tariff Manager", publisher: "Kickstarter", href: "https://updates.kickstarter.com/first-look-the-kickstarter-tariff-manager/" },
+    { label: "Can I charge a tariff surcharge through the pledge manager?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236621-can-i-charge-a-tariff-surcharge-through-the-pledge-manager" },
+    { label: "Navigating tariffs and shipping costs: tips for Kickstarter creators", publisher: "Kickstarter", href: "https://updates.kickstarter.com/navigating-tariffs-and-shipping-costs-tips-for-kickstarter-creators/" },
+    { label: "Selling miniatures internationally: VAT and IOSS", publisher: "Guildframe", href: "/guides/selling-miniatures-internationally-vat-ioss" },
+  ],
+  sections: [
+    {
+      id: "short-version",
+      title: "The short version for creators shipping to the US",
+      paragraphs: [
+        "US tariffs on board games changed three times between 2025 and 2026, and most of the headlines covered only one of those changes. Here is where things stand on November 25, 2026.",
+        "The Supreme Court ruled on February 20, 2026, that the president can't impose tariffs under IEEPA, the emergency powers law behind the 2025 tariffs. Then, from July 24, 2026, a new Section 301 tariff of 12.5% applies to goods from China, where many tabletop print runs are made. Separately, the de minimis exemption that let small parcels in duty free has been suspended since August 29, 2025. A 2025 law ends it for good on July 1, 2027.",
+        "This guide is not legal or customs advice. Tariff rules change quickly and depend on your product codes, so confirm every figure with your freight forwarder or customs broker before you set a reward price.",
+      ],
+      source: 0,
+    },
+    {
+      id: "timeline",
+      title: "How US tariffs on board games changed, 2025 to 2027",
+      paragraphs: [
+        "It helps to see the dates in order, because a campaign that funded in 2025 and ships in 2027 can cross four different rule sets. We check this timeline with every client whose rewards land in a US warehouse.",
+        "Each date below comes from a court decision, a Federal Register rule or Kickstarter's own announcement. The highlighted dates are the ones that change what you owe today.",
+      ],
+      visual: {
+        kind: "timeline",
+        title: "Five of these dates still change what a US shipment costs",
+        events: [
+          { when: "Apr 2025", label: "Kickstarter Tariff Manager launches", detail: "Surcharges for US backers in the Pledge Manager" },
+          { when: "Jul 4, 2025", label: "Law sets de minimis to end", detail: "Termination effective July 1, 2027" },
+          { when: "Aug 29, 2025", label: "De minimis suspended", detail: "Parcels of $800 or less lose duty free entry", highlight: true },
+          { when: "Feb 20, 2026", label: "Supreme Court strikes down IEEPA tariffs", detail: "Ruled 6 to 3", highlight: true },
+          { when: "Feb 24, 2026", label: "Temporary 10% Section 122 tariff", detail: "Limited by law to 150 days" },
+          { when: "Jun 24, 2026", label: "CBP publishes de minimis rules", detail: "Courier and cargo entry rules apply at once" },
+          { when: "Jul 24, 2026", label: "Section 301 at 12.5% on China", detail: "Postal informal entry starts the same day", highlight: true },
+          { when: "Jul 1, 2027", label: "De minimis ends by law", detail: "No return to the old exemption", highlight: true },
+        ],
+        source: "SCOTUSblog, Morgan Lewis, Federal Register and Kickstarter, checked November 25, 2026",
+      },
+      source: 3,
+    },
+    {
+      id: "supreme-court",
+      title: "What the Supreme Court ruling changed, and what it didn't",
+      paragraphs: [
+        "The February 20, 2026, decision in Learning Resources v. Trump removed one legal basis for tariffs, not tariffs as a whole. Six justices held that IEEPA does not authorize the president to impose tariffs, and three dissented.",
+        "Four days later, on February 24, 2026, a 10% global tariff took effect under Section 122, a different law that caps such tariffs at 15% and 150 days. That tariff expired when the new Section 301 duties began on July 24, 2026.",
+        "The ruling itself set out no refund process for IEEPA duties already paid. If you imported a print run in 2025, ask your customs broker whether any refund claim applies to your entries. So the honest summary for creators is that the ruling changed which tariff applies, while US imports still carry tariffs.",
+      ],
+      source: 0,
+    },
+    {
+      id: "section-301",
+      title: "Section 301 at 12.5% on board games made in China",
+      paragraphs: [
+        "The tariff that matters most for a tabletop print run right now is the Section 301 action that took effect at 12:01 a.m. Eastern time on July 24, 2026. It covers goods from 60 economies, with a 10% rate for some of them and a flat 12.5% rate for the rest, including China.",
+        "The sources we checked don't say how this new duty interacts with the older Section 301 tariffs already on many Chinese goods. They do say importers should update landed costs with any other duties, fees or trade remedies that apply. That's why we never quote a single tariff percentage to a client as their total.",
+        "Your broker works out the full stack from the product code for each item, usually called the HTS code, and the country of origin. Board games, card games, dice, miniatures and printed books can fall under different codes. So ask for the rate on each reward's contents, not one rate for the whole shipment.",
+      ],
+      source: 2,
+    },
+    {
+      id: "de-minimis",
+      title: "De minimis is gone, so small parcels pay duty too",
+      paragraphs: [
+        "De minimis used to let parcels worth $800 or less enter the US without duty, and many creators outside the US relied on it to post rewards straight to backers. That exemption has been suspended since August 29, 2025.",
+        "On June 24, 2026, CBP published two rules in the Federal Register. The first applies to courier and cargo shipments from that day, and those parcels must now go through formal or informal entry. The second creates a new postal informal entry for mail shipments of $2,500 or less, effective July 24, 2026.",
+        "Under the postal process, the filer must be the owner or purchaser of the goods, or a licensed customs broker acting for them, and must hold a customs bond. Duties are paid through Pay.gov and are no longer collected from the backer at delivery. The One Big Beautiful Bill Act, enacted on July 4, 2025, ends the exemption by law on July 1, 2027.",
+        "This matters most if you ship parcels into the US from a warehouse abroad, such as an EU or UK fulfillment partner, or post late pledges and replacement parts yourself. If you sell in the other direction, our guide to [selling miniatures internationally with VAT and IOSS](/guides/selling-miniatures-internationally-vat-ioss) covers what changes for backers in Europe and the UK.",
+      ],
+      source: 3,
+    },
+    {
+      id: "recover-the-cost",
+      title: "Where the tariff cost can sit in your campaign",
+      paragraphs: [
+        "Every dollar of duty has to be paid by someone, so the real decision is where it appears for the backer. There are three places it can sit, and each has a timing rule.",
+        "Kickstarter's own tariff guidance says pledged rewards can't have their price changed during a live campaign. So once you launch, the reward price is fixed for existing backers, and any new cost moves into shipping or a surcharge.",
+        "The Kickstarter Tariff Manager, launched in April 2025, adds a per item tariff surcharge in the Kickstarter Pledge Manager. You request it through a banner on the pledge manager page. The charge then shows as a separate line on the backer's payment page, and the money is included in your payout. It can only be applied to backers with a US shipping address. Kickstarter says backers who won't pay it should work with you on a changed pledge, a refund or another fix.",
+      ],
+      visual: {
+        kind: "compare",
+        title: "Each option has a deadline, so choose before launch",
+        columns: [
+          { name: "In the reward price", points: ["Set before launch", "Can't change for pledged backers once live", "Simplest for backers to understand"], verdict: "Best when the duty is already known", highlight: true },
+          { name: "In the shipping charge", points: ["Collected later in a pledge manager", "Can differ by region", "Set closer to fulfillment"], verdict: "Best when costs may still move" },
+          { name: "Tariff Manager surcharge", points: ["Kickstarter Pledge Manager only", "US shipping addresses only", "Enabled on request"], verdict: "Best for a cost that arrived after funding" },
+        ],
+        source: "Kickstarter tariff guidance and Tariff Manager help article",
+      },
+      source: 5,
+    },
+    {
+      id: "pricing-steps",
+      title: "How to price rewards around tariffs",
+      paragraphs: [
+        "Tariffs belong in the same sum as your print cost and freight, worked out before the reward tiers are final. We build reward pricing in this order with every client who ships to the US.",
+        "Here is a worked example, for illustration only. If a game costs $12 per copy at the factory and duty is charged on that $12, the 12.5% Section 301 rate alone adds $1.50 per copy. Your broker tells you the real value and the full rate, which may be higher.",
+        "Our guide to [pricing Kickstarter rewards for a board game](/guides/board-game-kickstarter-reward-pricing) covers fees, margins and bundle tiers. Put the tariff line into that model rather than adding it on top later.",
+      ],
+      visual: {
+        kind: "steps",
+        title: "Work the tariff into the reward price before launch",
+        steps: [
+          { label: "Get the HTS code for each item", detail: "From your customs broker or freight forwarder" },
+          { label: "Ask for the full duty stack", detail: "Section 301 plus any older or other duties" },
+          { label: "Confirm the value duty is charged on", detail: "Ask your broker, don't guess" },
+          { label: "Add the landed cost per copy", detail: "Factory, freight, duty, broker and fulfillment" },
+          { label: "Choose where the cost sits", detail: "Reward price, shipping or a surcharge" },
+          { label: "Recheck before the pledge manager opens", detail: "Rates can change between funding and shipping" },
+        ],
+        caption: "Example figures on this page are illustrative. Confirm your own numbers with your broker.",
+      },
+    },
+    {
+      id: "backer-page",
+      title: "Explain tariffs on your shipping page in plain words",
+      paragraphs: [
+        "Backers accept a tariff line far more readily when they've read about it before they pledge. Kickstarter's tariff advice to creators puts transparency first, because trust holds a community together through a price change.",
+        "On the campaign page, we write a short tariff note next to the shipping table. It says where the game is made, whether US duty is included in the reward price or collected later, and the date the estimate was checked. Our guide to [explaining Kickstarter shipping costs and delivery](/guides/kickstarter-shipping-delivery-page) shows how that note fits with regional rates and delivery dates.",
+        "Keep the wording factual and dated. A backer who reads 'US duty estimate checked November 25, 2026, confirmed with our broker' trusts the number more than a vague warning about tariffs.",
+      ],
+      source: 7,
+    },
+    {
+      id: "how-we-help",
+      title: "Where we help, and where your broker does",
+      paragraphs: [
+        "A tariff plan has two halves, and they need different experts. Your customs broker or freight forwarder owns the product codes, the entries, the bond and the duty itself.",
+        "We own the campaign side. As part of launch planning, we build reward tiers, the shipping section and the backer messaging around the landed cost your broker confirms. Then the page, the pledge manager and your updates all tell backers the same thing.",
+        "If you're planning a US launch and want that side handled, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) cover planning, the campaign page and live campaign management. Send us your game and your shipping plan, and we'll show you where the tariff fits.",
+      ],
+    },
+  ],
+  faqs: [
+    { question: "Are board games from China still tariffed after the Supreme Court ruling?", answer: "Yes. The February 2026 ruling ended tariffs under IEEPA only. From July 24, 2026, goods from China face a 12.5% Section 301 tariff, and other duties may also apply to your product codes." },
+    { question: "What tariff applies to board games made in China in 2026?", answer: "The new Section 301 action sets 12.5% on goods from China from July 24, 2026. Older Section 301 duties or other duties may stack on top, so ask your customs broker for the full rate on each HTS code." },
+    { question: "Does de minimis still apply to Kickstarter rewards shipped to the US?", answer: "No. The $800 de minimis exemption has been suspended since August 29, 2025, and the law ends it on July 1, 2027. Small parcels to US backers now go through formal or informal entry." },
+    { question: "Can I add a tariff charge after my Kickstarter has funded?", answer: "Yes, if you use the Kickstarter Pledge Manager. Its Tariff Manager adds a per item surcharge, enabled on request, and it only applies to backers with a US shipping address." },
+    { question: "Can I raise my reward prices during a live campaign?", answer: "Kickstarter says pledged rewards can't change price during a live campaign. You can adjust shipping collected later in a pledge manager instead, so set tariff costs before launch where you can." },
+    { question: "Who pays duty on rewards mailed to US backers?", answer: "Under the postal rule effective July 24, 2026, the filer is the owner or purchaser, or their licensed customs broker, and duty is paid through Pay.gov. It isn't collected from the backer at delivery." },
+    { question: "Is this guide legal or customs advice?", answer: "No. It summarizes public sources checked on November 25, 2026. Confirm every rate and rule with your freight forwarder or customs broker before you price rewards or ship." },
+  ],
+};

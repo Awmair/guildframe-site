@@ -35,7 +35,7 @@ const afterFundingGuides = [
   },
   {
     title: "Best Shopify Themes for Board Games and Tabletop Creators",
-    copy: "Compare Shopify themes by catalogue fit, features and the work needed to set them up.",
+    copy: "Compare Shopify themes by catalog fit, features and the work needed to set them up.",
     href: "/guides/best-shopify-themes-for-board-games",
     tag: "Theme comparison",
   },
@@ -95,7 +95,9 @@ const afterFundingGuides = [
   },
 ];
 
-const campaignGuides = launchGuides.map(g=>({title:g.title,copy:g.description,href:`/guides/${g.slug}`,tag:g.tag}));
+// The A to Z guide is pinned first as the starting point for new creators.
+const startHere = { title: "The Complete Guide to Launching a Tabletop Kickstarter, A to Z", copy: "Every stage of a tabletop Kickstarter in order, from a tested prototype to delivery, with a plain answer for each and the guide that goes deeper.", href: "/guides/how-to-launch-a-board-game-on-kickstarter", tag: "Start here" };
+const campaignGuides = [startHere, ...launchGuides.map(g=>({title:g.title,copy:g.description,href:`/guides/${g.slug}`,tag:g.tag}))];
 const guides=[...campaignGuides,...afterFundingGuides];
 
 const guideFilters = [
@@ -190,7 +192,7 @@ export default function GuidesPage() {
           <nav className="guide-start-here gd-deal" aria-label="Start with the decision you need to make" data-reveal="rise">
             <Link href="/guides/board-game-kickstarter-marketing-plan" data-title="Marketing plan"><span>Make the plan</span><strong>What needs to happen before launch?</strong><p>Put the product, audience and campaign in a practical order.</p><Icon name="arrow" size={20}/></Link>
             <Link href="/guides/choose-board-game-kickstarter-marketing-agency" data-title="Compare campaign help"><span>Compare campaign help</span><strong>Which work should you hire for?</strong><p>Compare deliverables, fees and responsibilities before choosing an agency.</p><Icon name="arrow" size={20}/></Link>
-            <Link href="/guides/best-shopify-themes-for-board-games" data-title="Shopify themes"><span>Plan your store</span><strong>Which Shopify theme fits your games?</strong><p>Compare themes against your catalogue, budget and setup work.</p><Icon name="arrow" size={20}/></Link>
+            <Link href="/guides/best-shopify-themes-for-board-games" data-title="Shopify themes"><span>Plan your store</span><strong>Which Shopify theme fits your games?</strong><p>Compare themes against your catalog, budget and setup work.</p><Icon name="arrow" size={20}/></Link>
           </nav>
         </header>
 
@@ -206,7 +208,7 @@ export default function GuidesPage() {
               </section>)}
             </div>
             <section className="gd-group gd-group--after" id="after-funding" aria-labelledby="after-funding-title" data-guide-heading="after-funding-guides">
-              <div className="gd-group-head"><h2 className="gd-group-title" id="after-funding-title">After funding</h2><p>Plan fulfilment, ongoing orders and a permanent home for the game.</p></div>
+              <div className="gd-group-head"><h2 className="gd-group-title" id="after-funding-title">After funding</h2><p>Plan fulfillment, ongoing orders and a permanent home for the game.</p></div>
               <div className="guides-grid gd-rows" id="after-funding-guides" aria-label="After funding guides">{afterFundingGuides.map((guide, index) => <GuideRow guide={guide} index={index + campaignGuides.length} stage="after" key={guide.href}/>)}</div>
             </section>
             <p className="gf-library-art-note">Guide illustrations show original fictional game concepts.</p>
@@ -224,6 +226,8 @@ export default function GuidesPage() {
             <Link href="/miniatures-kickstarter-campaign-design">Miniatures</Link>
             <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
             <Link href="/resources">Checklists and references</Link>
+            <Link href="/kickstarter-launch-services">Kickstarter launch services</Link>
+            <Link href="/buy">Start your launch project</Link>
           </nav>
         </section>
       </main>

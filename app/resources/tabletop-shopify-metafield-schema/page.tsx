@@ -6,6 +6,7 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { pageMetadata } from "../../site-config";
+import { GuideVisual } from "../../components/GuideVisual";
 import { contentDates } from "../../content-dates";
 
 export const metadata = pageMetadata({
@@ -59,7 +60,7 @@ export default function TabletopMetafieldSchemaPage() {
       category="Tabletop product data"
       title="Tabletop Shopify Metafield Schema"
       description="Define Shopify metafields for player count, components, format, compatibility, scale and delivery information."
-      answer="Use Shopify metafields to store tabletop product details separately from the description. This proposed schema covers board games, card games, RPG books, miniatures and terrain. Use the relevant fields for your catalogue and connect them to the theme sections and filters that display them."
+      answer="Use Shopify metafields to store tabletop product details separately from the description. This proposed schema covers board games, card games, RPG books, miniatures and terrain. Use the relevant fields for your catalog and connect them to the theme sections and filters that display them."
       published={contentDates.metafieldSchema}
       updated={contentDates.metafieldSchema}
       readTime="7 minute reference"
@@ -118,6 +119,19 @@ export default function TabletopMetafieldSchemaPage() {
         namespace keeps the fields grouped in the Shopify admin and makes them
         easy to identify in theme code.
       </p>
+      <GuideVisual
+        data={{
+          kind: "stats",
+          title: "Start with 9 shared fields, then add only the block for your category",
+          stats: [
+            { value: "9", label: "Shared fields", note: "Edition, release status, delivery, customs" },
+            { value: "10", label: "Board and card game fields", note: "Player count, playtime, components" },
+            { value: "7", label: "TTRPG fields", note: "Format, page count, game system" },
+            { value: "8", label: "Miniatures and terrain fields", note: "Scale, material, assembly, files" },
+          ],
+          caption: "Counts of the fields defined in the tables on this page, all in the tabletop namespace.",
+        }}
+      />
       <ul>
         <li>
           <strong>Namespace:</strong> <code>tabletop</code>
@@ -158,7 +172,7 @@ export default function TabletopMetafieldSchemaPage() {
         <code>expected_delivery</code> becomes a promise the moment it appears
         next to a buy button, and <code>hs_code</code> with{" "}
         <code>country_of_origin</code> drives customs treatment. Populate both
-        from your actual fulfilment and shipping data, never from an estimate a
+        from your actual fulfillment and shipping data, never from an estimate a
         model produced. See{" "}
         <Link href="/guides/selling-miniatures-internationally-vat-ioss">
           the international selling guide
@@ -194,7 +208,7 @@ export default function TabletopMetafieldSchemaPage() {
           ["game_system", "Single line text", "The ruleset this product is written for"],
           ["setting", "Single line text", "The world or campaign setting"],
           ["reading_order", "Integer", "Where this sits in a series, so new players know where to start"],
-          ["digital_delivery", "True or false", "Whether a file is delivered, which changes fulfilment and tax treatment"],
+          ["digital_delivery", "True or false", "Whether a file is delivered, which changes fulfillment and tax treatment"],
           ["player_facing", "True or false", "Player material or game master material"],
         ]}
       />
@@ -211,7 +225,7 @@ export default function TabletopMetafieldSchemaPage() {
           ["base_size_mm", "Integer", "Base diameter, a genuine compatibility question"],
           ["primed", "True or false", "Whether the model ships primed"],
           ["painted", "True or false", "Whether the model ships painted"],
-          ["print_ready_files", "True or false", "Whether digital files are included, which changes fulfilment"],
+          ["print_ready_files", "True or false", "Whether digital files are included, which changes fulfillment"],
         ]}
       />
 
@@ -254,6 +268,18 @@ export default function TabletopMetafieldSchemaPage() {
         </Link>
         .
       </p>
+      <aside className="article-next-step">
+        <h2>Moving from a funded campaign to a store?</h2>
+        <p>
+          This schema works best when the product facts come straight from your
+          campaign: the same editions, contents and delivery terms backers saw.
+          Our{" "}
+          <Link href="/post-campaign-support">post campaign support</Link>{" "}
+          covers that handoff, and our{" "}
+          <Link href="/done-for-you-shopify-store">done for you Shopify store</Link>{" "}
+          service can set the fields up for you.
+        </p>
+      </aside>
     </SeoArticlePage>
   );
 }

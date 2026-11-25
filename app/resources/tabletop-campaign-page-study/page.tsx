@@ -7,6 +7,7 @@ import {
   SeoArticlePage,
 } from "../../components/SeoArticlePage";
 import { JsonLd } from "../../components/JsonLd";
+import { GuideVisual } from "../../components/GuideVisual";
 import { contentDates, formatContentDate } from "../../content-dates";
 import {
   campaignPageStudy,
@@ -19,12 +20,13 @@ import { absoluteUrl, pageMetadata } from "../../site-config";
 
 const path = "/resources/tabletop-campaign-page-study";
 const title = "Tabletop Campaign Page Study: 25 Public Examples";
+const seoTitle = "Tabletop Campaign Page Study: 25 Examples";
 const description =
   "Explore 25 public tabletop campaign examples covering gameplay, reward choices, shipping and previews, with source notes, unknowns and a downloadable CSV.";
 const reviewDate = contentDates.campaignPageStudy;
 
 export const metadata = pageMetadata({
-  title,
+  title: seoTitle,
   description,
   path,
   kind: "article",
@@ -78,6 +80,9 @@ function Evidence({ observation, fallbackUrl, sourceLabel }: { observation: Camp
 export default function TabletopCampaignPageStudyPage() {
   const textCount = campaignPageStudy.filter((row) => row.sourceAccess === "campaign_text").length;
   const limitedCount = campaignPageStudy.length - textCount;
+  const observedCount = (key: (typeof fields)[number]["key"]) => campaignPageStudy.filter((row) => row[key].status === "observed").length;
+  const observedBars = fields.map((field) => ({ label: field.label, value: observedCount(field.key), display: `${observedCount(field.key)} of ${campaignPageStudy.length}` }));
+  const topField = observedBars.reduce((best, bar) => (bar.value > best.value ? bar : best));
 
   return (
     <>
@@ -97,7 +102,7 @@ export default function TabletopCampaignPageStudyPage() {
           temporalCoverage: campaignStudyCaptureDate,
           isAccessibleForFree: true,
           measurementTechnique:
-            "Manual review of retrieved public campaign text, selected native reward lists and one labelled creator source. Coding uses observed, unknown and not applicable. Image contents, linked file permissions and rendered mobile views were not tested. Two campaign bodies were unavailable and remain in the sample.",
+            "Manual review of retrieved public campaign text, selected native reward lists and one labeled creator source. Coding uses observed, unknown and not applicable. Image contents, linked file permissions and rendered mobile views were not tested. Two campaign bodies were unavailable and remain in the sample.",
           variableMeasured: fields.map((field) => field.label),
           isBasedOn: campaignPageStudy.map((row) => row.campaignUrl),
           distribution: {
@@ -164,7 +169,7 @@ export default function TabletopCampaignPageStudyPage() {
           The sample contains six board games, two card game projects, seven
           tabletop RPGs, five miniature or terrain projects and five accessories.
           It includes a cancelled campaign and both older and recent projects.
-          Selection favoured product variety and sources that could be inspected.
+          Selection favored product variety and sources that could be inspected.
           Search terms also included the features being studied, so these counts
           cannot estimate their prevalence across crowdfunding.
         </p>
@@ -177,6 +182,15 @@ export default function TabletopCampaignPageStudyPage() {
             String(campaignPageStudy.filter((row) => row[field.key].status === "unknown").length),
             String(campaignPageStudy.filter((row) => row[field.key].status === "not_applicable").length),
           ])}
+        />
+        <GuideVisual
+          data={{
+            kind: "bars",
+            title: `${topField.label} was observed most often, in ${topField.display} campaigns; mobile legibility was never inspected`,
+            bars: observedBars.map((bar) => ({ ...bar, highlight: bar.label === topField.label })),
+            caption: "Observed means the reviewed public text established the feature. Unknown and not applicable entries are excluded, and the sample cannot estimate how common a feature is.",
+            source: `Guildframe campaign page study, captured ${formatContentDate(campaignStudyCaptureDate)}`,
+          }}
         />
 
         <h2 id="examples">Five examples to use in a campaign brief</h2>
@@ -206,7 +220,7 @@ export default function TabletopCampaignPageStudyPage() {
           <a href={campaignPageStudy[7].campaignUrl}> Riposte! and Cell Block 18</a>{" "}
           also states when shipping and tax are collected. These are historical
           wording examples. Confirm your own destinations, assumptions and fee
-          timing with the person handling fulfilment before using the{" "}
+          timing with the person handling fulfillment before using the{" "}
           <Link href="/guides/kickstarter-shipping-delivery-page">shipping page guide</Link>.
         </p>
         <h3>Say what a preview contains and how finished it is</h3>
@@ -312,7 +326,7 @@ export default function TabletopCampaignPageStudyPage() {
           This is a single review of accessible text, with no second reviewer or
           visual scoring. Source availability and discovery terms affect what can
           be observed. The review contains no funding outcome dataset, traffic,
-          conversion, advertising or fulfilment measurements. It cannot establish
+          conversion, advertising or fulfillment measurements. It cannot establish
           which presentation choices cause a campaign to fund.
         </p>
 
@@ -342,8 +356,12 @@ export default function TabletopCampaignPageStudyPage() {
           <p>
             Guildframe&apos;s <Link href="/campaign-design">campaign design service</Link>{" "}
             can help turn confirmed product facts into copy and graphics. See the{" "}
-            <Link href="/work">three campaign design case studies</Link> for that
+            <Link href="/work">four campaign design case studies</Link> for that
             separate creative work.
+          </p>
+          <p>
+            Ready to start? <Link href="/buy">Book your campaign page</Link> or
+            ask for a free opening mockup built from your own artwork.
           </p>
         </aside>
       </SeoArticlePage>

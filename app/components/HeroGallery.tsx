@@ -9,7 +9,7 @@ const concepts = [
   { image: "trading-card-game", name: "Starbound", category: "Trading card games", alt: "Original Starbound trading card game concept with a celestial deck box and illustrated foil cards" },
   { image: "rpg-book", name: "Moth & Moon", category: "Tabletop RPGs", alt: "Original Moth and Moon folk horror RPG concept with a green clothbound book, adventure zine and character sheets" },
   { image: "miniature-terrain", name: "Orbital Outpost", category: "Miniatures & terrain", alt: "Original Orbital Outpost miniature game concept with a lunar box, sculpted mech and modular terrain" },
-  { image: "dice-accessories", name: "Prismatic", category: "Dice & accessories", alt: "Original Prismatic accessories concept with jewel coloured dice, coral suede tray and petrol presentation box" },
+  { image: "dice-accessories", name: "Prismatic", category: "Dice & accessories", alt: "Original Prismatic accessories concept with jewel colored dice, coral suede tray and petrol presentation box" },
 ] as const;
 
 /** One foreground product, with the remaining concepts orbiting behind it. */

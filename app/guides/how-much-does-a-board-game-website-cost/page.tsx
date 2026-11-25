@@ -6,6 +6,7 @@ import {
 } from "../../components/SeoArticlePage";
 import { contentDates } from "../../content-dates";
 import { pageMetadata } from "../../site-config";
+import { GuideVisual } from "../../components/GuideVisual";
 
 export const metadata = pageMetadata({
   title: "How Much Does a Board Game Website Cost?",
@@ -48,7 +49,7 @@ export default function BoardGameWebsiteCostPage() {
       category="Board game website cost"
       title="How Much Does a Board Game Website Cost?"
       description="Budget for a board game website by separating the Shopify plan, theme or development, product content and ongoing costs."
-      answer="A board game store budget includes the platform, domain, theme or development, product setup, payment processing and any paid apps. A free theme reduces the theme cost, but you still need to prepare the content and test the store. Get a quote based on your catalogue and required integrations."
+      answer="A board game store budget includes the platform, domain, theme or development, product setup, payment processing and any paid apps. A free theme reduces the theme cost, but you still need to prepare the content and test the store. Get a quote based on your catalog and required integrations."
       published="2026-07-23"
       updated={contentDates.boardGameWebsiteCost}
       readTime="7 minute read"
@@ -68,6 +69,11 @@ export default function BoardGameWebsiteCostPage() {
           label: "Adding and buying Shopify themes",
           publisher: "Shopify Help Center",
           href: "https://help.shopify.com/en/manual/online-store/themes/adding-themes",
+        },
+        {
+          label: "Kickstarter app for Shopify",
+          publisher: "Shopify App Store",
+          href: "https://apps.shopify.com/kickstarter",
         },
       ]}
       toc={[
@@ -91,7 +97,7 @@ export default function BoardGameWebsiteCostPage() {
         ]}
       />
       <p>
-        Check Shopify&apos;s pricing page for your business location and billing term. Record the subscription, payment processing, any third-party transaction charges and paid apps separately; a theme purchase does not cover those costs.
+        Check Shopify&apos;s pricing page for your business location and billing term. Record the subscription, payment processing, any third party transaction charges and paid apps separately; a theme purchase does not cover those costs.
       </p>
 
       <h2 id="routes">Compare the three practical build routes</h2>
@@ -103,6 +109,19 @@ export default function BoardGameWebsiteCostPage() {
           ["Premium theme", "Current theme price", "Products, content, configuration, testing and publication"],
           ["Custom developer build", "Written quote for your scope", "Final assets, approvals, Shopify and third party costs"],
         ]}
+      />
+      <GuideVisual
+        data={{
+          kind: "compare",
+          title: "A cheaper theme moves the cost into your own time",
+          columns: [
+            { name: "Free theme", points: ["No theme purchase", "You plan, design and enter products", "You test every buying path"], verdict: "Lowest cash, most hours" },
+            { name: "Premium theme", points: ["One theme price", "More built in sections", "You still configure and test"], verdict: "Some cash, fewer hours", highlight: true },
+            { name: "Developer build", points: ["Written quote for your scope", "Structure and setup done for you", "You supply assets and approve"], verdict: "Most cash, fewest hours" },
+          ],
+          caption: "Every route still pays the Shopify plan, payment processing and any paid apps.",
+          source: "Shopify pricing and theme documentation",
+        }}
       />
       <p>
         The cheapest route is not always the lowest total cost. Include the hours
@@ -122,7 +141,9 @@ export default function BoardGameWebsiteCostPage() {
         <li>Ongoing design and development support</li>
       </ul>
       <ArticleCallout>
-        Paid apps should solve a confirmed operating requirement. Do not install a
+        Not every useful app costs money. Kickstarter&apos;s official Shopify app,
+        listed on July 31, 2026, shows as free on its Shopify App Store listing
+        and moves finalized Pledge Manager orders into the store. Paid apps should solve a confirmed operating requirement. Do not install a
         large app stack before the catalog, preorder model and fulfillment workflow
         are decided.
       </ArticleCallout>
@@ -152,7 +173,16 @@ export default function BoardGameWebsiteCostPage() {
         yourself. Hire a specialist when the team needs a finished result, has a firm
         launch date or cannot spare the time required for structure, content entry and testing.
       </p>
-      <p>Use the free <Link href="/resources/board-game-shopify-store-checklist">store checklist</Link> to organise your catalogue and compare the build responsibilities before choosing a route.</p>
+      <p>Use the free <Link href="/resources/board-game-shopify-store-checklist">store checklist</Link> to organize your catalog and compare the build responsibilities before choosing a route.</p>
+      <p>
+        The <Link href="/guides/shopify-developer-vs-diy-theme">Shopify developer vs DIY theme</Link>{" "}
+        comparison helps you split the work, and{" "}
+        <Link href="/shopify-theme-for-board-games">Shopify theme setup for board games</Link>{" "}
+        lists what any theme has to show. When you want a quote for the store
+        work, send the catalog through the{" "}
+        <Link href="/done-for-you-shopify-store">store planning brief</Link>; the
+        backer side sits under <Link href="/post-campaign-support">post campaign support</Link>.
+      </p>
     </SeoArticlePage>
   );
 }
