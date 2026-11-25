@@ -88,7 +88,7 @@ export const boardGameContent = storeContent(
         { label: "Mark one item as a preorder", detail: "Is the delivery wording visible beside the button?" },
         { label: "Open the cart with both", detail: "Can a buyer tell what ships now and what ships later?" },
       ],
-      source: "Guildframe theme review method",
+      source: "Guildframe review method for store themes",
     },
     steps: [
       { title: "Send the catalogue", copy: "Share the campaign link, the products that stay on sale and any theme you are already trying." },
