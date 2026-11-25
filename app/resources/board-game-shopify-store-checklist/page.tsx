@@ -7,7 +7,7 @@ import { GuideVisual } from "../../components/GuideVisual";
 export const metadata = pageMetadata({
   title: "Board Game Shopify Store Checklist",
   description:
-    "A whole store board game Shopify checklist covering catalogue, pages, payments, shipping, backer order sync, phone checks, search and a final test order.",
+    "A whole store board game Shopify checklist covering catalog, pages, payments, shipping, backer order sync, phone checks, search and a final test order.",
   path: "/resources/board-game-shopify-store-checklist",
   kind: "article",
   publishedTime: "2026-07-17",
@@ -42,7 +42,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
       category="Board game ecommerce"
       title="Board Game Shopify Store Checklist"
       description="Check products, page content, shipping, checkout, mobile layouts and search settings before opening your board game store."
-      answer="Before launching a board game Shopify store, check five areas across the whole store: catalogue, store pages, payments and shipping, phone layouts and search settings. Then place a full test order. If backer rewards ship through Kickstarter's Shopify app, check that every reward maps to a product too."
+      answer="Before launching a board game Shopify store, check five areas across the whole store: catalog, store pages, payments and shipping, phone layouts and search settings. Then place a full test order. If backer rewards ship through Kickstarter's Shopify app, check that every reward maps to a product too."
       published="2026-07-17"
       updated={contentDates.storeChecklist}
       readTime="7 minute reference"
@@ -75,7 +75,7 @@ export default function BoardGameShopifyStoreChecklistPage() {
           kind: "checklist",
           title: "Five areas to clear before the store password comes off",
           groups: [
-            { name: "Catalogue", items: ["Stable titles, prices and SKUs", "Expansions separate from core games", "Rewards mapped if backer orders sync"] },
+            { name: "Catalog", items: ["Stable titles, prices and SKUs", "Expansions separate from core games", "Rewards mapped if backer orders sync"] },
             { name: "Store pages", items: ["Homepage points to a product", "About, FAQ and contact", "Shipping, returns and privacy"] },
             { name: "Payments and shipping", items: ["Test mode off at launch", "Zones and rates verified", "Tax settings match markets"] },
             { name: "Phone", items: ["No sideways scrolling", "Art not cropped badly", "Buttons easy to reach"] },

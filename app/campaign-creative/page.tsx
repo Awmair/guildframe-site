@@ -17,7 +17,7 @@ const description = "Kickstarter campaign creative for tabletop games: scripts, 
 const faqs = [
   { question: "What can creative production include?", answer: "Scripts and storyboards, product renders, motion graphics, short video edits and still or motion ad variants. The brief names the assets, lengths, formats, review rounds and source files included. Product renders depend on the models and reference material available." },
   { question: "How is this different from campaign page design?", answer: "Creative production covers a defined set of assets for your campaign, prelaunch or ads. Campaign page design covers the copy, section layout, graphics and reward comparisons for a complete Kickstarter or Gamefound page. You can book either service or agree a combined scope." },
-  { question: "Can the creative match a bright or playful game?", answer: "Yes. The game's artwork and audience set the direction. A party game, family game, card game, RPG book and terrain range can each need a different approach to colour, type, pacing and explanation. Share your existing art and a few references with the brief." },
+  { question: "Can the creative match a bright or playful game?", answer: "Yes. The game's artwork and audience set the direction. A party game, family game, card game, RPG book and terrain range can each need a different approach to color, type, pacing and explanation. Share your existing art and a few references with the brief." },
   { question: "How much does creative production cost?", answer: "Creative production is quoted after reviewing the assets and delivery needs. A set of still ad variants needs a different scope from a scripted product video or new renders. The proposal lists production fees, any outside costs and the work you receive. Ad management and media spend are agreed separately." },
   { question: "Can you make a product render before the game is manufactured?", answer: "Yes, if you have 3D models or clear reference photos and confirmed dimensions. We label renders and prototype images as such on the page, so backers can tell them apart from photos of the finished product." },
   { question: "What should I send to start?", answer: "Send a short project summary, your artwork or product photos, any usable models or footage, the proposed rewards and the places the creative will appear. Include your target date and identify anything still in development. We can then agree the deliverables and review schedule." },
@@ -127,7 +127,7 @@ export default function CampaignCreativePage() {
           <h2 id="creative-style-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Creative that follows</span></span> <span className="w-line"><span><em>your game&apos;s style</em></span></span></h2>
           <div className="cc-head-side">
             <p>A bright family game needs a different approach from a tactical miniature range or a quiet RPG book. Share the art, the audience and the part of the game people need to understand.</p>
-            <p>Colour, type, pacing and product presentation follow that brief. Party games, TCGs, strategy games, books and accessories all belong in the conversation.</p>
+            <p>Color, type, pacing and product presentation follow that brief. Party games, TCGs, strategy games, books and accessories all belong in the conversation.</p>
             <Link className="w-link" href="/work" data-title="Work">Explore the actual client projects</Link>
           </div>
         </div>

@@ -19,7 +19,7 @@ const paths=[
  {href:"/guides/kickstarter-referral-tags-tracking",label:"Track your campaign links",description:"Keep traffic, pledges and collected revenue separate."},
  {href:"/guides/board-game-reviewer-outreach",label:"Plan reviewer previews",description:"Prepare prototypes, permissions and a realistic schedule."},
  {href:"/guides/board-game-kickstarter-launch-day-checklist",label:"Prepare launch day",description:"Give publication, announcements and support clear owners."},
- {href:"/guides/board-game-pledge-manager-checklist",label:"Test your pledge manager",description:"Check orders, payments and fulfilment exports."},
+ {href:"/guides/board-game-pledge-manager-checklist",label:"Test your pledge manager",description:"Check orders, payments and fulfillment exports."},
  {href:"/guides/board-game-kickstarter-marketing-plan",label:"Build your launch plan",description:"Put the work in order and name the owners."},
  {href:"/guides/kickstarter-advertising-budget-board-games",label:"Check your campaign budget",description:"Separate reward costs, service fees and ad spend."},
  {href:"/guides/board-game-kickstarter-page-checklist",label:"Review the campaign page",description:"Test what a new backer can understand."},

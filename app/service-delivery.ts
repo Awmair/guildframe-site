@@ -25,7 +25,7 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
     handoff: "Your accounts and contacts stay yours. The proposal lists final files, editable sources, support dates, reporting and any separately priced suppliers or software.",
     proof: ["cryptic-explorers", "futureproof-terrain", "quiver-time", "scented-realms"],
     faqs: [
-      { question: "What do Kickstarter launch services include?", answer: "Launch planning, prelaunch pages and email, campaign copy and graphics, paid ads and live support, each with named deliverables. You can book all of it as full campaign support or only the stages you are missing. Manufacturing, freight and fulfilment stay with your suppliers." },
+      { question: "What do Kickstarter launch services include?", answer: "Launch planning, prelaunch pages and email, campaign copy and graphics, paid ads and live support, each with named deliverables. You can book all of it as full campaign support or only the stages you are missing. Manufacturing, freight and fulfillment stay with your suppliers." },
       { question: "How far before launch should I get in touch?", answer: "Send the brief while the date is still flexible. I review the assets and unfinished work before proposing a schedule. If a date is already public, include it so we can identify what can realistically be finished." },
       { question: "Can my existing illustrator or marketing team stay involved?", answer: "Yes. Tell me who is already doing the work. We can split responsibilities and agree who supplies, reviews and publishes each item." },
     ],
@@ -70,7 +70,7 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
     steps: [
       { title: "Check the launch", copy: "Review the page, reward names, links and launch email. Confirm the person who publishes and the spend limits already approved." },
       { title: "Keep information current", copy: "Draft updates and recurring answers from facts you confirm. Refresh the agreed graphics when a reward or milestone changes." },
-      { title: "Close with a clear handoff", copy: "Prepare the close update, organise the final files and list outstanding tasks. Identify who owns the next production and backer communication." },
+      { title: "Close with a clear handoff", copy: "Prepare the close update, organize the final files and list outstanding tasks. Identify who owns the next production and backer communication." },
     ],
     inputs: "Campaign access, approved copy, reward and delivery facts, publishing contacts, support dates and expected working hours.",
     handoff: "Approved update drafts, scoped creative changes, the agreed report and a task list. Production decisions and promises require your confirmation.",
@@ -90,7 +90,7 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
       { title: "Review the platform preview", copy: "Check the story and rewards in Gamefound's workflow. You approve prices, shipping, tax settings and publication." },
     ],
     inputs: "A project link, platform status, artwork, products, reward details and a creator contact who can confirm the project settings.",
-    handoff: "Platform ready creative and agreed launch communication. Gamefound fees, media spend, manufacturing and fulfilment are separate project costs.",
+    handoff: "Platform ready creative and agreed launch communication. Gamefound fees, media spend, manufacturing and fulfillment are separate project costs.",
     proof: ["futureproof-terrain", "cryptic-explorers"],
     faqs: [
       { question: "Should my first game launch on Gamefound or Kickstarter?", answer: "It depends on where your audience already backs projects, your category and how you plan to run the pledge manager. We look at those with you before choosing, and our Kickstarter or Gamefound guide sets out the differences." },
@@ -104,10 +104,10 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
     steps: [
       { title: "Review what is outstanding", copy: "List survey questions, unconfirmed products, required graphics and the next production milestone." },
       { title: "Prepare the content", copy: "Use the same reward names and contents in updates, pledge manager descriptions and late pledge creative." },
-      { title: "Hand over the next stage", copy: "Organise files, draft the agreed communication and identify who maintains the products and answers delivery questions." },
+      { title: "Hand over the next stage", copy: "Organize files, draft the agreed communication and identify who maintains the products and answers delivery questions." },
     ],
     inputs: "Final rewards, current production information, your pledge manager choice, confirmed delivery assumptions and the remaining task list.",
-    handoff: "The content and assets listed in the brief. Shopify planning is optional; fulfilment and manufacturing remain with their appointed suppliers.",
+    handoff: "The content and assets listed in the brief. Shopify planning is optional; fulfillment and manufacturing remain with their appointed suppliers.",
     proof: ["quiver-time"],
     faqs: [
       { question: "Can you help after the campaign has already ended?", answer: "Yes. Share the campaign, current platform setup and outstanding work. We can scope communication, pledge manager content, late pledge assets or a separate store project." },
@@ -131,8 +131,8 @@ const categories = [
   { slug: "board-game-kickstarter-campaign-design", title: "Show a turn before asking someone to choose an edition.", example: "A strategy game needs a decision a player can follow. A party game may need only a short sample round. We choose the explanation around your actual rules.", input: "Rules, player count, play time, component images and the differences between base, deluxe and expansion rewards.", focus: "A readable gameplay example, component presentation and reward comparisons using the same names throughout.", proof: ["cryptic-explorers"] },
   { slug: "card-game-kickstarter-campaign-design", title: "Let a visitor read the cards and follow a round.", example: "A party deck, deckbuilder and TCG need different explanations. Sample cards should establish what players do before pack or bundle choices complicate the offer.", input: "Representative cards, a sample round, deck and pack contents, rules and confirmed edition details.", focus: "Legible card examples, a clear play sequence and reward contents that distinguish complete decks from packs and optional extras.", proof: ["quiver-time"] },
   { slug: "ttrpg-kickstarter-campaign-design", title: "Show the kind of session your book makes possible.", example: "Introduce the premise, a playable situation and readable interior pages. State whether the project is a complete game or needs another system.", input: "Cover and interior art, sample spreads, system requirements, format, binding and the PDF and print rewards.", focus: "Setting and gameplay explanation, readable samples and clear comparisons of digital and physical editions.", proof: ["scented-realms"] },
-  { slug: "miniatures-kickstarter-campaign-design", title: "Make physical models and printable files easy to distinguish.", example: "An assembled terrain view answers a different question from a parts spread. Put the views together, then state what each physical set or digital reward contains.", input: "Renders or photographs, scale, dimensions, set contents, assembly details and the actual licence terms for files.", focus: "Labelled product views, set comparisons and clear physical or digital reward information.", proof: ["futureproof-terrain"] },
-  { slug: "tabletop-accessories-campaign-design", title: "Show the product in use, then answer the fit questions.", example: "A dice tray, card organiser and RPG accessory need more than a finish shot. Explain dimensions, materials, compatibility and the parts included in each choice.", input: "Product photographs, measurements, materials, compatibility notes, finish choices and bundle contents.", focus: "Product explanations and reward graphics based on confirmed specifications, with each colour or size named consistently.", proof: ["quiver-time", "scented-realms"] },
+  { slug: "miniatures-kickstarter-campaign-design", title: "Make physical models and printable files easy to distinguish.", example: "An assembled terrain view answers a different question from a parts spread. Put the views together, then state what each physical set or digital reward contains.", input: "Renders or photographs, scale, dimensions, set contents, assembly details and the actual license terms for files.", focus: "Labeled product views, set comparisons and clear physical or digital reward information.", proof: ["futureproof-terrain"] },
+  { slug: "tabletop-accessories-campaign-design", title: "Show the product in use, then answer the fit questions.", example: "A dice tray, card organizer and RPG accessory need more than a finish shot. Explain dimensions, materials, compatibility and the parts included in each choice.", input: "Product photographs, measurements, materials, compatibility notes, finish choices and bundle contents.", focus: "Product explanations and reward graphics based on confirmed specifications, with each color or size named consistently.", proof: ["quiver-time", "scented-realms"] },
   { slug: "gamefound-campaign-design", title: "Keep story graphics and Gamefound rewards in agreement.", example: "Plan the campaign story alongside the reward choices. A visitor should find the same product names, quantities and edition differences in both places.", input: "Your Gamefound project, story outline, product art, reward contents and current platform stage.", focus: "Story sections, reward comparisons and a review in Gamefound's preview using settings you confirm.", proof: ["futureproof-terrain", "cryptic-explorers"] },
 ];
 const pageSteps: GuideVisualData = { kind: "steps", title: "A campaign page project runs in five steps, starting free", steps: [
@@ -194,9 +194,9 @@ const creativeExtras: Record<string, CreativeExtra> = {
   },
   "miniatures-kickstarter-campaign-design": {
     proofCopy: "FutureProof Terrain from Snot Goblin Gaming is our terrain example. Umair designed the campaign presentation around an assembled building set beside its separate walls and floors, so a wargamer could see what a set builds and how it packs away.",
-    faq: { question: "Can the page explain STL licences?", answer: "Yes. We put the licence terms you supply into plain words beside the digital rewards, such as personal printing or commercial use. You confirm the actual terms before launch." },
+    faq: { question: "Can the page explain STL licenses?", answer: "Yes. We put the license terms you supply into plain words beside the digital rewards, such as personal printing or commercial use. You confirm the actual terms before launch." },
     checklist: { kind: "checklist", title: "A miniatures page has to separate models from files", groups: [
-      { name: "You send", items: ["Renders or photos, marked as such", "Scale and dimensions", "Set contents and sculpt list", "Licence terms for STL files"] },
+      { name: "You send", items: ["Renders or photos, marked as such", "Scale and dimensions", "Set contents and sculpt list", "License terms for STL files"] },
       { name: "We show", items: ["Assembled views beside the parts", "Physical sets apart from digital files", "Scale references in the images", "Labels on anything shown for context"] },
     ] },
     guides: { intro: "These guides cover miniatures, STL and terrain pages, from reward formats to delivery.", links: [
@@ -211,8 +211,8 @@ const creativeExtras: Record<string, CreativeExtra> = {
     proofCopy: "Quiver Time's CITADEL Deck Block and ScentedRealms are both accessory campaigns. One needed capacity and fit explained beside the photography, the other needed an unfamiliar product placed inside a game session. Each case study explains Umair's part.",
     faq: { question: "What photos work best for an accessory campaign?", answer: "Photos of the product in use at the table, close ups of the finish and one shot with something familiar for scale. We label any game or dice shown only for context." },
     checklist: { kind: "checklist", title: "An accessory page sells on fit as much as finish", groups: [
-      { name: "You send", items: ["Product photos in use", "Measurements and materials", "Checked compatibility notes", "Colour, size and bundle contents"] },
-      { name: "We show", items: ["The product at work on the table", "Dimensions beside the images", "Each colour and size named the same way", "Context items labelled as not included"] },
+      { name: "You send", items: ["Product photos in use", "Measurements and materials", "Checked compatibility notes", "Color, size and bundle contents"] },
+      { name: "We show", items: ["The product at work on the table", "Dimensions beside the images", "Each color and size named the same way", "Context items labeled as not included"] },
     ] },
     guides: { intro: "These guides cover accessory pages, from reward graphics to the cost of shipping physical products.", links: [
       { slug: "terrain-and-dice-kickstarter-launch-guide", label: "Terrain and dice launch guide" },
@@ -255,7 +255,7 @@ for (const c of categories) {
 }
 
 /*
- * Service hub additions (SEO pass, 25 Nov 2026): named proof, two infographics
+ * Service hub additions (SEO pass, November 25, 2026): named proof, two infographics
  * per page and the guides for each page's stage. Every figure is a Guildframe
  * price or a public result already shown in app/case-studies.ts.
  */
@@ -405,7 +405,7 @@ const launchExtras: Record<string, Pick<ServiceDelivery, "proofCopy" | "visualsI
       ]),
       { kind: "checklist", title: "We prepare the content, your suppliers own the delivery", groups: [
         { name: "We prepare", items: ["Backer update drafts", "Pledge manager descriptions and graphics", "Late pledge product presentation", "Store planning when scoped"] },
-        { name: "Your suppliers own", items: ["Manufacturing progress", "Freight, customs and taxes", "Fulfilment and delivery dates"] },
+        { name: "Your suppliers own", items: ["Manufacturing progress", "Freight, customs and taxes", "Fulfillment and delivery dates"] },
       ] },
     ],
     guides: { intro: "These guides cover the months after funding, from choosing a pledge manager to moving late orders into a store.", links: [

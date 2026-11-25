@@ -29,7 +29,7 @@ const pieces: Piece[] = [
   { src: "/images/world/pawn-v1.webp", width: 239, height: 411, alt: "", kind: "token", x: 77, y: 46, w: 4, m: [48.5, 38, 11], r: 0 },
   { src: "/images/world/standee-cart-v1.webp", width: 463, height: 457, alt: "", kind: "standee", x: 86, y: 60, w: 10, m: null, r: -4 },
   { src: "/images/work/futureproof-480w.webp", width: 480, height: 270, alt: "FutureProof Terrain campaign artwork", kind: "print", caption: "FutureProof Terrain, client work", x: 26, y: 72, w: 17, m: [30, 72, 50], r: -4, low: true },
-  { src: "/images/hero/dice-accessories-480w.webp", width: 640, height: 640, alt: "Prismatic, a dice accessories concept with jewel coloured dice and a coral tray", kind: "concept", caption: "Studio concept", x: 5, y: 68, w: 13, m: [68, 40, 30], r: 6, low: true },
+  { src: "/images/hero/dice-accessories-480w.webp", width: 640, height: 640, alt: "Prismatic, a dice accessories concept with jewel colored dice and a coral tray", kind: "concept", caption: "Studio concept", x: 5, y: 68, w: 13, m: [68, 40, 30], r: 6, low: true },
   { src: "/images/world/standee-shop-v1.webp", width: 490, height: 479, alt: "", kind: "standee", x: 46, y: 73, w: 10, m: [2, 73, 26], r: 2 },
   { src: "/images/world/standee-post-v1.webp", width: 345, height: 497, alt: "", kind: "standee", x: 60, y: 71, w: 7, m: null, r: -5 },
 ];

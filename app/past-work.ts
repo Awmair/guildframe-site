@@ -23,7 +23,7 @@ export const pastWork = [
     name: "Quiver Time",
     category: "Card game accessories",
     title: "CITADEL Deck Block",
-    description: "A card organiser for decks, dice, tokens and coins. I designed the campaign presentation around the magnetic cover, flexible divider and storage options so players could see how it works.",
+    description: "A card organizer for decks, dice, tokens and coins. I designed the campaign presentation around the magnetic cover, flexible divider and storage options so players could see how it works.",
     image: "quiver-time",
     alt: "Quiver Time’s Kickstarter header image with the red leather CITADEL Deck Block, the Quiver logo and a badge reading 100% funded within 6 days",
     imageNote: "Campaign header image courtesy of Quiver Time",
@@ -50,7 +50,7 @@ export const campaignResults: Record<string, { total: string; creator: string }>
 export const beyondTabletop = [
   {
     name: "Secubix",
-    line: "A parking surveillance system for Vespas from Vienna. It records the licence plate of a car that hits your parked Vespa.",
+    line: "A parking surveillance system for Vespas from Vienna. It records the license plate of a car that hits your parked Vespa.",
     role: "Market research, copy written from the product features and a theme matched to the brand, from product images and a short brief.",
     result: "90 backers pledged €32,218",
     image: "secubix",

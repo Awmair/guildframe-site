@@ -14,7 +14,7 @@ const walkthroughs = {
     steps: [
       { title: "Introduce an unfamiliar RPG accessory", start: 0, copy: "ScentedRealms brings fantasy scents to a roleplaying table. For its Kickstarter campaign, Umair developed the visual direction and campaign presentation. The first job was to make an unfamiliar accessory understandable.", position: "50% 50%", scale: 1 },
       { title: "Keep the physical products visible", start: 14.4, copy: "The opening composition puts the physical products in the foreground. Visitors can see the ScentEngine, the packaged scents and the wider collection, while the fantasy imagery establishes the setting.", position: "50% 77%", scale: 1.14 },
-      { title: "Bring the collection into one composition", start: 26.8, copy: "Grouping the products gives the collection a visible scale. The red frame, dark background and fantasy colour keep the presentation consistent, while the products remain the focus.", position: "50% 65%", scale: 1.06 },
+      { title: "Bring the collection into one composition", start: 26.8, copy: "Grouping the products gives the collection a visible scale. The red frame, dark background and fantasy color keep the presentation consistent, while the products remain the focus.", position: "50% 65%", scale: 1.06 },
       { title: "Explain the product, its use and the reward", start: 38.1, copy: "For a launch like this, the page needs to explain what the accessory is, how it fits into a session and what a backer receives. Umair's contribution was the campaign presentation. The product, identity and supplied imagery belong to the creator.", position: "50% 50%", scale: 1 },
     ],
   },

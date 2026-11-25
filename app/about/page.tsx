@@ -5,7 +5,21 @@ import {StudioDesk} from "../components/studio/StudioDesk";
 import {Icon, Roll} from "../components/chrome/Icon";
 import {absoluteUrl,pageMetadata} from "../site-config";
 import {contentDates} from "../content-dates";
+import {GuideVisual,type GuideVisualData} from "../components/GuideVisual";
 export const metadata=pageMetadata({title:"About Guildframe",description:"Meet Umair, the designer and paid advertising specialist behind Guildframe. Kickstarter and Gamefound launch services for games, RPGs and miniatures.",path:"/about"});
+
+const projectSteps: GuideVisualData = {
+  kind: "steps",
+  title: "Every project is scoped in writing before the work starts",
+  steps: [
+    { label: "Send the project", detail: "Your artwork, rules and the date you have in mind" },
+    { label: "Check the inputs", detail: "Assets, audience and launch date reviewed together" },
+    { label: "Agree the scope", detail: "Deliverables, fees, ad budget and reviews in writing" },
+    { label: "Build and review", detail: "The agreed review rounds before anything goes live" },
+    { label: "Launch and hand off", detail: "Live support if booked, then the agreed handoff" },
+  ],
+  caption: "How a project with Umair runs. For creative work, a free mockup of one opening section comes before any booking.",
+};
 
 const portrait = <figure className="st-portrait">
   <div className="st-portrait-frame" data-reveal="media">
@@ -29,8 +43,8 @@ export default function Page(){return <>
     aside={portrait}
   >
     <section><h2>The game <em>comes first.</em></h2><p>I work with board game publishers, card game creators, RPG writers and people making miniatures, terrain and tabletop accessories. The campaign needs to explain their project to someone who has never seen it before.</p><p>My work brings campaign creative and paid advertising together. Guildframe also offers launch planning, prelaunch pages and email, live campaign support and the agreed handoff after funding. You can book a specific part or a broader engagement.</p><p>Outside tabletop, I also design Kickstarter campaigns for tech gadgets, design and lifestyle products and books. See <Link href="/kickstarter-product-campaign-design">Kickstarter campaign design for product launches</Link>.</p></section>
-    <section><h2>Work directly <em>with me.</em></h2><p>I lead the creative and advertising work. We start by checking your assets, audience and intended date, then put the deliverables, fees, budget and review process in writing. If work needs another specialist, that responsibility is named in the scope.</p><p><Link href="/kickstarter-launch-services">Explore the launch services</Link> or email <a href="mailto:umair@guildframe.com">umair@guildframe.com</a>. For creative enquiries, you can request a <a href="#start-project">free mockup of one opening campaign section</a> before booking.</p></section>
-    <section><h2>The work <em>you can check.</em></h2><p>The <Link href="/#past-work">Past work section</Link> shows creative work for ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers, with links to their Kickstarter campaigns. The reviews refer to that creative work. Concept mockups show other visual directions and are labelled as concepts.</p><p>Those projects demonstrate design work. Guildframe does not claim their total funding as an advertising result or promise the same outcome for another campaign.</p></section>
+    <section><h2>Work directly <em>with me.</em></h2><p>I lead the creative and advertising work. We start by checking your assets, audience and intended date, then put the deliverables, fees, budget and review process in writing. If work needs another specialist, that responsibility is named in the scope.</p><GuideVisual data={projectSteps}/><p><Link href="/kickstarter-launch-services">Explore the launch services</Link> or email <a href="mailto:umair@guildframe.com">umair@guildframe.com</a>. For creative enquiries, you can request a <a href="#start-project">free mockup of one opening campaign section</a> before booking.</p></section>
+    <section><h2>The work <em>you can check.</em></h2><p>The <Link href="/#past-work">Past work section</Link> shows creative work for ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers, with links to their Kickstarter campaigns. The reviews refer to that creative work. Concept mockups show other visual directions and are labeled as concepts.</p><p>Those projects demonstrate design work. Guildframe does not claim their total funding as an advertising result or promise the same outcome for another campaign.</p></section>
     <section><h2>Useful guidance <em>for your next decision.</em></h2><p>The <Link href="/guides">launch guides</Link> cover prelaunch marketing, email, ad budgets, page readiness, rewards and campaign communication. Older after funding articles remain available at their original URLs. The <Link href="/editorial-policy">editorial policy</Link> explains how sources and recommendations are handled.</p></section>
     <section><h2>Ready to talk <em>about your game?</em></h2><p>See how to <Link href="/buy">start your tabletop launch project</Link>, with the services, fees and schedule we agree before work begins, or compare the <Link href="/kickstarter-launch-services">Kickstarter launch services for tabletop games</Link>. Send your project when you are ready and I will reply with next steps.</p><div className="st-actions"><a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my project" data-analytics-location="about closing"><Roll>Discuss my project</Roll><Icon name="arrow"/></a></div></section>
   </TrustPage>

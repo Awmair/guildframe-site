@@ -60,7 +60,7 @@ export default function TabletopMetafieldSchemaPage() {
       category="Tabletop product data"
       title="Tabletop Shopify Metafield Schema"
       description="Define Shopify metafields for player count, components, format, compatibility, scale and delivery information."
-      answer="Use Shopify metafields to store tabletop product details separately from the description. This proposed schema covers board games, card games, RPG books, miniatures and terrain. Use the relevant fields for your catalogue and connect them to the theme sections and filters that display them."
+      answer="Use Shopify metafields to store tabletop product details separately from the description. This proposed schema covers board games, card games, RPG books, miniatures and terrain. Use the relevant fields for your catalog and connect them to the theme sections and filters that display them."
       published={contentDates.metafieldSchema}
       updated={contentDates.metafieldSchema}
       readTime="7 minute reference"
@@ -172,7 +172,7 @@ export default function TabletopMetafieldSchemaPage() {
         <code>expected_delivery</code> becomes a promise the moment it appears
         next to a buy button, and <code>hs_code</code> with{" "}
         <code>country_of_origin</code> drives customs treatment. Populate both
-        from your actual fulfilment and shipping data, never from an estimate a
+        from your actual fulfillment and shipping data, never from an estimate a
         model produced. See{" "}
         <Link href="/guides/selling-miniatures-internationally-vat-ioss">
           the international selling guide
@@ -208,7 +208,7 @@ export default function TabletopMetafieldSchemaPage() {
           ["game_system", "Single line text", "The ruleset this product is written for"],
           ["setting", "Single line text", "The world or campaign setting"],
           ["reading_order", "Integer", "Where this sits in a series, so new players know where to start"],
-          ["digital_delivery", "True or false", "Whether a file is delivered, which changes fulfilment and tax treatment"],
+          ["digital_delivery", "True or false", "Whether a file is delivered, which changes fulfillment and tax treatment"],
           ["player_facing", "True or false", "Player material or game master material"],
         ]}
       />
@@ -225,7 +225,7 @@ export default function TabletopMetafieldSchemaPage() {
           ["base_size_mm", "Integer", "Base diameter, a genuine compatibility question"],
           ["primed", "True or false", "Whether the model ships primed"],
           ["painted", "True or false", "Whether the model ships painted"],
-          ["print_ready_files", "True or false", "Whether digital files are included, which changes fulfilment"],
+          ["print_ready_files", "True or false", "Whether digital files are included, which changes fulfillment"],
         ]}
       />
 

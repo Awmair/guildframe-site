@@ -6,7 +6,7 @@ export const marketingGuides: LaunchGuide[] = [
     "seoTitle": "Board Game Kickstarter Marketing Plan: 5 Phases",
     "description": "How to market a board game on Kickstarter, phase by phase: the pitch, a prelaunch audience, ad tests, reviewer previews, launch week and the live campaign.",
     "tag": "Launch marketing",
-    "answer": "To market a board game on Kickstarter, settle a clear pitch and priced rewards first. Then spend six to eight weeks building an email list and Kickstarter followers, testing ads on a capped budget and lining up reviewer previews. Launch to that warm audience, and keep updates, ads and community posts going until the campaign closes.",
+    "answer": "To market a board game on Kickstarter, settle a clear pitch and priced rewards first. Then start an email list at least 3 months before launch, open the Kickstarter prelaunch page 6 to 12 weeks out, test ads on a capped budget and line up reviewer previews. Launch to that warm audience, and keep updates, ads and community posts going until the campaign closes.",
     "sections": [
       {
         "id": "positioning",
@@ -37,7 +37,7 @@ export const marketingGuides: LaunchGuide[] = [
         "id": "phases",
         "title": "The plan in five phases",
         "paragraphs": [
-          "We run board game marketing in five phases, and each one has a check before the next begins. This eight week example assumes you already have a playable prototype, usable artwork and reward cost estimates. If those inputs are missing, move the dates instead of skipping the checks.",
+          "We run board game marketing in five phases, and each one has a check before the next begins. This eight week example covers the last eight weeks before launch, and it assumes you already have a playable prototype, usable artwork, reward cost estimates and an email signup that opened a month or more earlier. It fits our house timeline, where the email list starts 3 months or more before launch, the prelaunch page opens 6 to 12 weeks out and the project goes to review at least 2 weeks before the date. If those inputs are missing, move the dates instead of skipping the checks.",
           "Give each row an owner and a review date. You can do the work in house or bring in help for single stages. The useful question at each review is whether the next phase has what it needs.",
           "Kickstarter's own advice is to start planning promotion as soon as you decide to run a project, beginning with the community you already have."
         ],
@@ -47,15 +47,15 @@ export const marketingGuides: LaunchGuide[] = [
           "steps": [
             {
               "label": "Foundation",
-              "detail": "Pitch, rewards and costs settled before week 8"
+              "detail": "Pitch, rewards, costs and email signup settled before week 8"
             },
             {
               "label": "Audience",
-              "detail": "Weeks 8 to 5: landing page, email list and followers"
+              "detail": "Weeks 8 to 5: prelaunch page, list growth and followers"
             },
             {
               "label": "Proof",
-              "detail": "Weeks 4 to 1: capped ad tests, previews and the final page"
+              "detail": "Weeks 4 to 1: capped ad tests, review submission and the final page"
             },
             {
               "label": "Launch",
@@ -82,17 +82,17 @@ export const marketingGuides: LaunchGuide[] = [
             ],
             [
               "Weeks 6 to 5",
-              "Build the landing page, signup route and welcome email",
+              "Open the prelaunch page and point the landing page, signup route and welcome email at it",
               "Does a real test signup receive the promised material?"
             ],
             [
               "Weeks 4 to 3",
-              "Run capped creative tests and finish page copy and reward graphics",
+              "Run capped creative tests, finish page copy and reward graphics, then submit for Kickstarter review",
               "Do visitors engage, and are the campaign facts settled?"
             ],
             [
               "Weeks 2 to 1",
-              "Review the platform preview, launch email, spending rules and support plan",
+              "Answer any review changes, then check the platform preview, launch email, spending rules and support plan",
               "Are publishing, budget and open risks approved?"
             ],
             [
@@ -263,7 +263,7 @@ export const marketingGuides: LaunchGuide[] = [
     "faqs": [
       {
         "question": "How long should I market a board game before Kickstarter?",
-        "answer": "We plan six to eight weeks of audience building once the pitch, rewards and costs are settled, so about 90 days in total for a first game. Existing audience, assets and testing needs change that, so set review checks before committing to a public date."
+        "answer": "We start the email list 3 months or more before launch, once the pitch, rewards and costs are settled, and open the prelaunch page 6 to 12 weeks out. That makes about 90 days or more for a first game. Existing audience, assets and testing needs change that, so set review checks before committing to a public date."
       },
       {
         "question": "What is the best way to market a board game on Kickstarter?",
@@ -279,7 +279,7 @@ export const marketingGuides: LaunchGuide[] = [
       },
       {
         "question": "What if I only have a month before launch?",
-        "answer": "A month is enough to finish the page, run one capped ad test and tell the people who already know your game. It is not enough to build a new audience from nothing, because we plan six to eight weeks for that alone. If your list and followers are still small, moving the date is usually cheaper than a weak launch."
+        "answer": "A month is enough to finish the page, run one capped ad test and tell the people who already know your game. It is not enough to build a new audience from nothing, because we plan 3 months or more for that alone. If your list and followers are still small, moving the date is usually cheaper than a weak launch."
       }
     ],
     "sources": [
@@ -444,7 +444,7 @@ export const marketingGuides: LaunchGuide[] = [
       },
       {
         "id": "handoff",
-        "title": "Keep the accounts and messages organised",
+        "title": "Keep the accounts and messages organized",
         "paragraphs": [
           "The creator should own the landing page, contact list and email account. Agree who drafts messages, who confirms product facts and who presses send. Store the approved sequence and reporting definitions with the launch brief.",
           "At campaign close, review what the contacts expected to receive before changing the email plan. Backer updates, new project announcements and store promotions may need different audiences and expectations."
@@ -568,7 +568,7 @@ export const marketingGuides: LaunchGuide[] = [
       },
       {
         "id": "leads",
-        "title": "Keep prelaunch lead cost separate from backing behaviour",
+        "title": "Keep prelaunch lead cost separate from backing behavior",
         "paragraphs": [
           "If an illustrative test spends $500 and records 100 valid signups, its cost per signup is $5. That does not establish a cost per backer. Some contacts will never pledge, some may arrive through other channels and some may choose different rewards.",
           "Review consent, delivery, engagement and campaign visits alongside cost. A large list with little interest can be less useful than a smaller group that understands the game. Avoid applying an assumed lead to backer conversion rate as though it were measured evidence."
@@ -678,7 +678,7 @@ export const marketingGuides: LaunchGuide[] = [
         "id": "how-often",
         "title": "How often to post Kickstarter updates",
         "paragraphs": [
-          "Kickstarter does not set a required frequency during the campaign. Its help center says some creators post every day and some post more sporadically. After funding, it expects at least one new update a month until rewards are delivered.",
+          "Kickstarter does not set a required frequency during the campaign. Its Help Center says some creators post every day and some post more sporadically. After funding, it expects at least one new update a month until rewards are delivered.",
           "There is also a backstop. Once a project goes more than four weeks without an update and rewards are not yet fulfilled, backers can send an anonymous update request, and Kickstarter emails the creator. So the monthly rhythm after funding is the floor, not a target.",
           "During the campaign we plan one useful update every three to five days, with extra posts around the moments backers care about. The timeline below is the rhythm we use for a 30 day campaign. Skip a slot rather than post filler, because an update that says nothing teaches backers to stop opening them."
         ],
@@ -697,7 +697,7 @@ export const marketingGuides: LaunchGuide[] = [
             { "when": "Close", "label": "Thank you and next steps", "detail": "The result, the survey plan and the next update date", "highlight": true },
             { "when": "After funding", "label": "At least monthly", "detail": "Kickstarter's minimum until rewards are delivered" }
           ],
-          "caption": "Guildframe's recommendation, not a Kickstarter rule. The monthly minimum after funding comes from Kickstarter's help center.",
+          "caption": "Guildframe's recommendation, not a Kickstarter rule. The monthly minimum after funding comes from Kickstarter's Help Center.",
           "source": "Kickstarter Help Center"
         }
       },
@@ -766,7 +766,7 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Use this template when something is late",
         "paragraphs": [
           "Delay updates are the hardest to write, and silence is what worries backers most. Kickstarter's handbook says backers worry when they don't hear from you, and it encourages creators to share delays or changes to the plan. We use the same six part structure for every delay update so nothing important is left out.",
-          "Here is a short example for a card game. \"Our card proofs came back with a colour shift on the night deck, so the printer is running a second proof. That moves our delivery estimate from March to April or May. Everything else is on schedule. We'll post photos of the new proofs next Friday, even if the fix isn't final.\" Send it as soon as the facts are confirmed, then keep the promise about when backers will hear next."
+          "Here is a short example for a card game. \"Our card proofs came back with a color shift on the night deck, so the printer is running a second proof. That moves our delivery estimate from March to April or May. Everything else is on schedule. We'll post photos of the new proofs next Friday, even if the fix isn't final.\" Send it as soon as the facts are confirmed, then keep the promise about when backers will hear next."
         ],
         "list": [
           "What happened, in one sentence, and which rewards it affects",

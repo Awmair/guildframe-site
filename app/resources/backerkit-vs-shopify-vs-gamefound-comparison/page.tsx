@@ -86,9 +86,9 @@ export default function PlatformComparisonMatrixPage() {
           kind: "compare",
           title: "Two platforms manage backers; only Shopify runs the permanent store",
           columns: [
-            { name: "BackerKit", points: ["Crowdfunding and pledge management", "Surveys, upgrades and add ons", "Backer fulfilment data"], verdict: "Owns backer workflows" },
+            { name: "BackerKit", points: ["Crowdfunding and pledge management", "Surveys, upgrades and add ons", "Backer fulfillment data"], verdict: "Owns backer workflows" },
             { name: "Gamefound", points: ["Tabletop crowdfunding platform", "Pledge manager built in", "Campaign focused presentation"], verdict: "Owns campaign pledges" },
-            { name: "Shopify", points: ["Permanent catalogue and checkout", "Inventory and repeat customers", "Themes, collections and content"], verdict: "Owns new retail orders", highlight: true },
+            { name: "Shopify", points: ["Permanent catalog and checkout", "Inventory and repeat customers", "Themes, collections and content"], verdict: "Owns new retail orders", highlight: true },
           ],
           source: "BackerKit, Gamefound and Shopify documentation listed below",
         }}
@@ -136,7 +136,7 @@ export default function PlatformComparisonMatrixPage() {
       <ArticleTable
         headers={["Creator situation", "Practical stack", "Ownership rule"]}
         rows={[
-          ["Kickstarter campaign using Kickstarter's Pledge Manager", "Kickstarter plus Shopify through Kickstarter's app", "The Pledge Manager owns backer choices; finalized orders sync to Shopify for fulfilment and tracking syncs back"],
+          ["Kickstarter campaign using Kickstarter's Pledge Manager", "Kickstarter plus Shopify through Kickstarter's app", "The Pledge Manager owns backer choices; finalized orders sync to Shopify for fulfillment and tracking syncs back"],
           ["BackerKit campaign with ongoing retail", "BackerKit plus Shopify", "BackerKit owns campaign and backer workflows; Shopify owns new retail orders"],
           ["Gamefound campaign with permanent brand store", "Gamefound plus Shopify", "Gamefound owns campaign pledges; Shopify owns the long term catalog"],
           ["Campaign fulfilled and no pledge manager needed", "Shopify", "Shopify becomes the clear commerce source of truth"],

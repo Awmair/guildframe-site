@@ -117,7 +117,7 @@ export const campaignPageStudy: CampaignStudyRecord[] = [
     },
     "preview": {
       "status": "observed",
-      "note": "A linked rules document is explicitly labelled as still in development."
+      "note": "A linked rules document is explicitly labeled as still in development."
     },
     "mobile": {
       "status": "unknown",
@@ -226,7 +226,7 @@ export const campaignPageStudy: CampaignStudyRecord[] = [
     "scopeNote": "Campaign story and native reward listings were retrieved. Rulebook link presence was recorded; file access was not tested.",
     "explanation": {
       "status": "observed",
-      "note": "The story explains revealing cards, stopping, cave ins, attacks, defence and scoring."
+      "note": "The story explains revealing cards, stopping, cave ins, attacks, defense and scoring."
     },
     "rewards": {
       "status": "observed",
@@ -235,7 +235,7 @@ export const campaignPageStudy: CampaignStudyRecord[] = [
     },
     "shipping": {
       "status": "observed",
-      "note": "The story describes combined fulfilment and conditional shipping discounts across participating campaigns."
+      "note": "The story describes combined fulfillment and conditional shipping discounts across participating campaigns."
     },
     "preview": {
       "status": "observed",
@@ -435,7 +435,7 @@ export const campaignPageStudy: CampaignStudyRecord[] = [
     "platform": "BackerKit",
     "campaignUrl": "https://www.backerkit.com/c/projects/aleksandra-stasica-fedetibaldo/liquid-euphoria-a-cairn-rpg-adventure",
     "sourceAccess": "campaign_text",
-    "scopeNote": "Campaign story text was retrieved, including product formats and fulfilment terms.",
+    "scopeNote": "Campaign story text was retrieved, including product formats and fulfillment terms.",
     "explanation": {
       "status": "observed",
       "note": "The story identifies the Cairn 2E requirement, adventure premise and dungeon contents."
@@ -480,7 +480,7 @@ export const campaignPageStudy: CampaignStudyRecord[] = [
     },
     "preview": {
       "status": "observed",
-      "note": "Labelled example page spreads are embedded, with a warning that designs are not final."
+      "note": "Labeled example page spreads are embedded, with a warning that designs are not final."
     },
     "mobile": {
       "status": "unknown",
@@ -771,7 +771,7 @@ export const campaignPageStudy: CampaignStudyRecord[] = [
     "platform": "BackerKit",
     "campaignUrl": "https://www.backerkit.com/c/projects/d-arcangel-productions/headless-horseman-dice",
     "sourceAccess": "campaign_text",
-    "scopeNote": "Campaign story text was retrieved. Platform fulfilment labels do not establish shipping cost information.",
+    "scopeNote": "Campaign story text was retrieved. Platform fulfillment labels do not establish shipping cost information.",
     "explanation": {
       "status": "not_applicable",
       "note": "This is a dice accessory; the story identifies the theme and an optional dice bag."
