@@ -29,6 +29,7 @@ export function SeoFooter() {
           <Link href="/kickstarter-campaign-management">Campaign management</Link>
           <Link href="/gamefound-launch-services">Gamefound launches</Link>
           <Link href="/post-campaign-support">After the campaign</Link>
+          <Link href="/kickstarter-product-campaign-design">Product campaigns</Link>
         </nav>
         <nav aria-label="Guildframe resources">
           <strong>Guides and studio</strong>
