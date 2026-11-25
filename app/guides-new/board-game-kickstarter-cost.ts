@@ -14,8 +14,8 @@ export const guide: LaunchGuide = {
   serviceLabel: "Kickstarter launch services for tabletop games",
   sources: [
     { label: "Kickstarter fees for creators", publisher: "Kickstarter", href: "https://www.kickstarter.com/help/fees" },
-    { label: "Why Kickstarter campaigns fail after funding, and how to avoid it (3 June 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/why-kickstarter-campaigns-fail-after-funding-and-how-to-avoid-it/" },
-    { label: "How to market a tabletop game in 7 steps (20 February 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/how-to-market-a-tabletop-game-in-7-steps/" },
+    { label: "Why Kickstarter campaigns fail after funding, and how to avoid it (June 3, 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/why-kickstarter-campaigns-fail-after-funding-and-how-to-avoid-it/" },
+    { label: "How to market a tabletop game in 7 steps (February 20, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/how-to-market-a-tabletop-game-in-7-steps/" },
     { label: "Crowdfunding marketing agency cost: an honest buyer's guide (2026)", publisher: "BoostYourCampaign", href: "https://www.boostyourcampaign.com/kickstarter-marketing/kickstarter-marketing-agency-pricing-2026" },
     { label: "Guildframe launch services and packages", publisher: "Guildframe", href: "/kickstarter-launch-services" },
   ],
@@ -81,7 +81,7 @@ export const guide: LaunchGuide = {
           { label: "Kickstarter and payment fees", share: 2550, display: "$2,550" },
         ],
         caption: "Illustrative example, not an average. Fees use Kickstarter's US rates of 5% plus 3% and $0.20 a pledge. The 20% reserve is the low end of the 20 to 30 percent Kickstarter suggests.",
-        source: "Kickstarter fee page and Kickstarter blog (3 June 2026), checked 25 Nov 2026",
+        source: "Kickstarter fee page and Kickstarter blog (June 3, 2026), checked November 25, 2026",
       },
     },
     {
@@ -142,7 +142,7 @@ export const guide: LaunchGuide = {
       title: "Build your own budget, and where we fit",
       paragraphs: [
         "You can build this budget yourself in an afternoon with a spreadsheet and two columns. Fill in what you can price today, mark the rest as a question, and get quotes for the biggest lines first.",
-        "The honest limit of doing it alone is experience, because a first budget can't flag the lines you didn't know existed. When we plan a launch with you, the budget, goal, reward prices and page are built together, so a change in one shows up in the others. That's what our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) cover. Manufacturing, shipping and ad spend stay yours, and we don't give tax advice.",
+        "Where a solo budget falls short is experience, because a first budget can't flag the lines you didn't know existed. When we plan a launch with you, the budget, goal, reward prices and page are built together, so a change in one shows up in the others. That's what our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) cover. Manufacturing, shipping and ad spend stay yours, and we don't give tax advice.",
       ],
       source: 4,
       visual: {
@@ -155,7 +155,7 @@ export const guide: LaunchGuide = {
           { label: "Add a reserve", detail: "Kickstarter suggests starting at 20 to 30 percent" },
           { label: "Set the goal from the total", detail: "Then price each reward from it" },
         ],
-        source: "Kickstarter fee page and Kickstarter blog (3 June 2026), checked 25 Nov 2026",
+        source: "Kickstarter fee page and Kickstarter blog (June 3, 2026), checked November 25, 2026",
       },
     },
   ],

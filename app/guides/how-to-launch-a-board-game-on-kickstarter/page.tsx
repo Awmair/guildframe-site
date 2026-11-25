@@ -33,17 +33,17 @@ export const metadata = pageMetadata({
 
 const sources = [
   {
-    label: "From Concept to Fulfillment: The Complete Kickstarter Journey (9 September 2026)",
+    label: "From Concept to Fulfillment: The Complete Kickstarter Journey (September 9, 2026)",
     publisher: "Kickstarter",
     href: "https://updates.kickstarter.com/from-concept-to-fulfillment-the-complete-kickstarter-journey/",
   },
   {
-    label: "Why Kickstarter Campaigns Fail After Funding (And How to Avoid It) (3 June 2026)",
+    label: "Why Kickstarter Campaigns Fail After Funding (And How to Avoid It) (June 3, 2026)",
     publisher: "Kickstarter",
     href: "https://updates.kickstarter.com/why-kickstarter-campaigns-fail-after-funding-and-how-to-avoid-it/",
   },
   {
-    label: "How To Market a Tabletop Game in 7 Steps (20 February 2025)",
+    label: "How To Market a Tabletop Game in 7 Steps (February 20, 2025)",
     publisher: "Kickstarter",
     href: "https://updates.kickstarter.com/how-to-market-a-tabletop-game-in-7-steps/",
   },
@@ -53,7 +53,7 @@ const sources = [
     href: "https://www.kickstarter.com/help/fees",
   },
   {
-    label: "Kickstarter is the biggest platform for games (5 February 2025)",
+    label: "Kickstarter is the biggest platform for games (February 5, 2025)",
     publisher: "Kickstarter",
     href: "https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/",
   },
@@ -103,7 +103,7 @@ const sources = [
     href: "https://help.kickstarter.com/en-us/articles/16236621-can-i-charge-a-tariff-surcharge-through-the-pledge-manager",
   },
   {
-    label: "VAT Flexibility in Pledge Manager (release note, 13 April 2026)",
+    label: "VAT Flexibility in Pledge Manager (release note, April 13, 2026)",
     publisher: "Kickstarter",
     href: "https://start.kickstarter.com/kickstarter-release-notes/vat-flexibility-in-pledge-manager",
   },
@@ -130,10 +130,11 @@ const timeline: GuideVisualData = {
   events: [
     { when: "6 to 12 months before", label: "Finish the game", detail: "Playtest, start final art, ask manufacturers for quotes" },
     { when: "4 to 6 months before", label: "Set the numbers", detail: "Budget, funding goal, reward prices and platform" },
-    { when: "3 to 4 months before", label: "Open the doors", detail: "Prelaunch page and email signup live, start showing the game" },
+    { when: "3 months or more before", label: "Start the email list", detail: "Email signup live, start showing the game" },
     { when: "2 to 3 months before", label: "Build the page", detail: "Page design, video, prototypes out to reviewers" },
+    { when: "6 to 12 weeks before", label: "Open the Kickstarter prelaunch page", detail: "First time creators need review approval before it goes live" },
     { when: "4 to 6 weeks before", label: "Test and share", detail: "Small capped ad tests if you use ads, preview link out for feedback" },
-    { when: "1 to 2 weeks before", label: "Submit for review", detail: "Review takes up to 3 business days, launch emails written" },
+    { when: "2 weeks before at the latest", label: "Submit for review", detail: "Up to 3 business days, plus up to 3 more after changes" },
     { when: "Launch day", label: "Press launch yourself", detail: "Kickstarter emails your prelaunch followers", highlight: true },
     { when: "Live campaign", label: "Run the campaign", detail: "1 to 60 days allowed, 30 days or less recommended" },
     { when: "0 to 2 months after", label: "Collect and confirm", detail: "Payout begins 14 days after the deadline, then late pledges and the pledge manager" },
@@ -142,7 +143,7 @@ const timeline: GuideVisualData = {
   ],
   caption:
     "Guildframe example timeline, adjust to your project. The months before launch are our planning ranges for a first board game, not a Kickstarter rule. Review time, campaign length, payout timing and the twelve month delivery window come from Kickstarter.",
-  source: "Kickstarter Support and the Kickstarter blog (June and September 2026), checked 25 Nov 2026",
+  source: "Kickstarter Support and the Kickstarter blog (June and September 2026), checked November 25, 2026",
 };
 
 const benchmark: GuideVisualData = {
@@ -156,7 +157,7 @@ const benchmark: GuideVisualData = {
   ],
   caption:
     "These figures cover every tabletop project, including small zines and repeat creators with large lists, so they describe the category, not your odds.",
-  source: "Kickstarter, February 2025, checked 25 Nov 2026",
+  source: "Kickstarter, February 2025, checked November 25, 2026",
 };
 
 const budget: GuideVisualData = {
@@ -173,7 +174,7 @@ const budget: GuideVisualData = {
   ],
   caption:
     "Illustrative example, not an average. Only two figures come from a source. Kickstarter says it and its payment partners take 8 to 10 percent of funds, and it suggests a buffer of 20 to 30 percent on your fulfillment estimate. The fees use the US rates (5% plus 3% and $0.20 per pledge), and our 20% reserve of the raise covers that buffer. Every other share is a Guildframe example, the same one used in our board game cost guide.",
-  source: "Kickstarter blog, June 2026, checked 25 Nov 2026",
+  source: "Kickstarter blog, June 2026, checked November 25, 2026",
 };
 
 const afterFunding: GuideVisualData = {
@@ -186,7 +187,7 @@ const afterFunding: GuideVisualData = {
     { label: "Manufacturing and freight", detail: "Sample checked, files approved, freight booked" },
     { label: "Delivery", detail: "About twelve months after the campaign with an overseas factory" },
   ],
-  source: "Kickstarter Support and the Kickstarter blog, checked 25 Nov 2026",
+  source: "Kickstarter Support and the Kickstarter blog, checked November 25, 2026",
 };
 
 type Chapter = {
@@ -392,7 +393,7 @@ const stages: Stage[] = [
         title: "What is a prelaunch page and how many followers do I need?",
         paragraphs: [
           "A prelaunch page is a Kickstarter page that goes up before the campaign, with a button that lets people follow it. When you launch, Kickstarter sends a launch email to every follower.",
-          "Put it up early, usually months before launch, and send everyone who shows interest to it. Pair it with an email signup you own, because Kickstarter's launch email is one message, while your own list can hear from you every week.",
+          "In our planning example it opens 6 to 12 weeks before launch, and first time creators need review approval before it can go live. Send everyone who shows interest to it. Pair it with an email signup you own, started 3 months or more before launch, because Kickstarter's launch email is one message, while your own list can hear from you every week.",
           "Followers are also your best readiness signal. The count, and how fast it grows, tells you whether launch day will start strong or quiet. Our [followers guide](/guides/kickstarter-followers-before-launch) covers the targets and the conversion to expect, so we won't repeat them here.",
           "If the follower count barely moves for weeks, fix the audience before you fix the date.",
         ],
@@ -447,7 +448,7 @@ const stages: Stage[] = [
         title: "When should I launch?",
         paragraphs: [
           "Launch when the audience and the page are both ready, not when you are tired of waiting. A date fixed before the followers and the page are there is one of the most common reasons we see first campaigns start slowly.",
-          "Work backwards from the date. Kickstarter review can take up to three business days, and another three or longer if it asks for changes, so submit at least a week or two early. Then check the date against conventions, holidays or anything else that would pull your backers away.",
+          "Work backwards from the date. Kickstarter review can take up to three business days, and up to three more if it asks for changes, so we submit at least two weeks before the launch date. Then check the date against conventions, holidays or anything else that would pull your backers away.",
           "Kickstarter allows a campaign of 1 to 60 days and recommends 30 days or less. Its own example plan launches at 11 am Eastern.",
           "A short, full campaign reads better to a new visitor than a long, quiet one.",
         ],
@@ -462,7 +463,7 @@ const stages: Stage[] = [
         title: "What happens on launch day?",
         paragraphs: [
           "On launch day you press the launch button yourself, Kickstarter emails your followers, and the first wave of backers arrives. Kickstarter says launching is a manual process, so approval does not publish the campaign for you.",
-          "The first day or two set the tone for the whole campaign. In our experience, backers are more willing to join a project that is already moving towards its goal, so write everything you can beforehand. That covers the launch email, the social posts, the first update and replies to the questions you expect.",
+          "The first day or two set the tone for the whole campaign. In our experience, backers are more willing to join a project that is already moving toward its goal, so write everything you can beforehand. That covers the launch email, the social posts, the first update and replies to the questions you expect.",
           "Then spend the day answering comments and messages quickly and checking the page on a phone. A mistake caught in the first hour costs far less than one caught on day three.",
           "Launch day is for running the plan, not writing it.",
         ],
@@ -491,7 +492,7 @@ const stages: Stage[] = [
         paragraphs: [
           "If the campaign is struggling, you can push harder with the time left, cancel and relaunch later, or let it run to the end. Which one is right depends on how far you are from the goal and how much time remains.",
           "Most reasons a campaign struggles were visible before launch. A small audience, a price that doesn't match the game, a page that is hard to read or a goal set too high usually show up first as a quiet prelaunch.",
-          "Cancelling is not a disaster. Because Kickstarter is all or nothing, nobody is charged for a campaign that doesn't fund, and a relaunch with a bigger list, a clearer page and a sharper price can do much better.",
+          "Canceling is not a disaster. Because Kickstarter is all or nothing, nobody is charged for a campaign that doesn't fund, and a relaunch with a bigger list, a clearer page and a sharper price can do much better.",
           "Treat a weak prelaunch as the warning, and you rarely need the emergency options.",
         ],
         nextLead: "For the failure reasons and the relaunch decision, read",
@@ -564,7 +565,7 @@ const stages: Stage[] = [
         title: "What about VAT and tariffs?",
         paragraphs: [
           "VAT and tariffs change what backers pay and what you keep, so they belong in the plan from the start. We don't give tax advice, so treat this chapter as a map and take the decisions to an accountant or customs broker.",
-          "For VAT, Kickstarter changed its pledge manager on 13 April 2026. Creators can now let Kickstarter collect VAT for them or handle it through their own systems, and projects with VAT included in their prices can now use the pledge manager. On the page, the job is to say clearly whether prices include VAT.",
+          "For VAT, Kickstarter changed its pledge manager on April 13, 2026. Creators can now let Kickstarter collect VAT for them or handle it through their own systems, and projects with VAT included in their prices can now use the pledge manager. On the page, the job is to say clearly whether prices include VAT.",
           "For US tariffs, Kickstarter's Tariff Manager lets accepted creators add a tariff surcharge to orders in its pledge manager. It applies only to backers with a US shipping address, and backers see the total at checkout. US tariff rules have changed more than once since 2025, so check the current position close to fulfillment.",
           "Price for the rules that apply when you ship, not the ones in place when you launch.",
         ],
@@ -624,7 +625,7 @@ const faqs = [
   {
     question: "How do I launch a board game on Kickstarter step by step?",
     answer:
-      "Finish and test the game, get a manufacturing quote, build a budget, then set the funding goal and reward prices. Put up a prelaunch page and build an audience for months. Design the campaign page, submit it for review and launch it yourself. After the campaign, collect payments, run a pledge manager, manufacture and ship.",
+      "Finish and test the game, get a manufacturing quote, build a budget, then set the funding goal and reward prices. Start an email list 3 months or more before launch and open the Kickstarter prelaunch page 6 to 12 weeks out. Design the campaign page, submit it for review at least two weeks before launch and press launch yourself. After the campaign, collect payments, run a pledge manager, manufacture and ship.",
   },
   {
     question: "How long does it take to launch a Kickstarter from start to finish?",
@@ -644,7 +645,7 @@ const faqs = [
   {
     question: "Do I need an audience before I launch?",
     answer:
-      "Yes. Kickstarter emails your prelaunch followers when you go live, but you should not count on the platform to bring a crowd to a project nobody knows about. Build followers and an email list for months before launch, and use the follower count to judge whether you are ready.",
+      "Yes. Kickstarter emails your prelaunch followers when you go live, but you should not count on the platform to bring a crowd to a project nobody knows about. Start your email list 3 months or more before launch, open the prelaunch page 6 to 12 weeks out, and use the follower count to judge whether you are ready.",
   },
   {
     question: "What fees does Kickstarter take from a board game campaign?",
@@ -659,7 +660,7 @@ const faqs = [
   {
     question: "Can I do the whole Kickstarter myself?",
     answer:
-      "Yes, and many creators do. The honest limit is time, because a first campaign makes you designer, copywriter, marketer and support desk at once. If you get help, you can hand over the page, the ads or the live campaign and keep the game and the decisions.",
+      "Yes, and many creators do. Expect it to take most of your spare time, because a first campaign makes you designer, copywriter, marketer and support desk at once. If you get help, you can hand over the page, the ads or the live campaign and keep the game and the decisions.",
   },
   {
     question: "What is the hardest part of a board game Kickstarter?",
@@ -854,9 +855,9 @@ export default function HowToLaunchABoardGameOnKickstarterPage() {
       <section aria-labelledby="help">
         <h2 id="help">Where can Guildframe help at each stage?</h2>
         <p>
-          You can run every stage yourself, and plenty of creators do. The honest limit is time and
-          practice, because a first campaign asks you to be designer, copywriter, marketer and support
-          desk at once, in the same months you want to spend finishing the game.
+          You can run every stage yourself, and plenty of creators do. What makes it hard is doing every
+          job for the first time, because a first campaign asks you to be designer, copywriter, marketer
+          and support desk at once, in the same months you want to spend finishing the game.
         </p>
         <p>
           We plan, design, advertise and run tabletop launches on Kickstarter and Gamefound. Before

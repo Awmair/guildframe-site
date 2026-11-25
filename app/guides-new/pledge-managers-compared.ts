@@ -28,8 +28,8 @@ export const guide: LaunchGuide = {
       title: "What a pledge manager does after funding",
       paragraphs: [
         "A pledge manager is the system that sits between a funded campaign and a shipped box. The campaign records each pledge, but it does not yet know which language edition someone wants or where they will live when the game ships.",
-        "The pledge manager sends each backer a survey, records their choices and sells extras. It then charges what is still owed and exports clean orders to your fulfilment partner. Most tools also let new backers buy in after the campaign ends.",
-        "How much you need depends on your rewards. A campaign with one book, shipping charged at pledge and no extras needs far less than a game with three languages and a miniatures add on. That's why we start from your messiest order, not from a vendor's feature list.",
+        "The pledge manager sends each backer a survey, records their choices and sells extras. It then charges what is still owed and exports clean orders to your fulfillment partner. Most tools also let new backers buy in after the campaign ends.",
+        "How much you need depends on your rewards. A campaign with one book, shipping charged at pledge and no extras needs far less than a game with three languages and a miniatures add on. That's why we start from your messiest order, not from a vendor's feature list, and our guide on [what happens after Kickstarter is funded](/guides/what-happens-after-kickstarter-is-funded) shows where this step sits.",
         "Every tool in this guide covers the same core jobs, roughly in this order.",
       ],
       list: [
@@ -83,8 +83,8 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "Gamefound treats the pledge manager as one stage of a single system, which is its main appeal. After crowdfunding you can open an optional Late Pledge stage, then the pledge manager. There, backers finalize choices, add shipping details and pay outstanding amounts such as shipping or add ons.",
         "Late Pledge collects new pledges before shipping costs are set, and you can skip it. The pledge manager launches once shipping is set up. Gamefound also accepts campaigns funded elsewhere. You enter your funding, backer count and currency, then submit the project for review.",
-        "For projects funded on Gamefound, there is no charge for managing pledges you already raised. Gamefound takes 5% of each payment collected in the pledge manager, plus processing of 3% and 0.20 per transaction in project currency.",
-        "That makes it a strong fit if you launched on Gamefound or want backers in one familiar account. For a Kickstarter campaign, confirm the rate on your project before you plan around it.",
+        "For projects funded on Gamefound, there is no charge for managing pledges you already raised. Gamefound takes 5% of each payment collected in the pledge manager, plus processing of 3% and 0.2 per transaction in project currency, which Gamefound gives as $0.2 when the project currency is dollars.",
+        "That makes it a strong fit if you launched on Gamefound or want backers in one familiar account, and our guide to [Kickstarter vs Gamefound](/guides/kickstarter-vs-gamefound) covers that platform choice. For a Kickstarter campaign, confirm the rate on your project before you plan around it.",
       ],
       source: 5,
     },
@@ -113,7 +113,7 @@ export const guide: LaunchGuide = {
         columns: [
           { name: "Kickstarter", points: ["Kickstarter projects only", "No upfront cost", "5% on funds collected through it, except taxes", "US processing: 3% + $0.20 per pledge"] },
           { name: "BackerKit", points: ["Campaigns from other platforms, or its own", "Campaign fee of 2% or less", "3.5% on post campaign sales", "DriveThruRPG delivery since October 2026"] },
-          { name: "Gamefound", points: ["Gamefound campaigns, and external ones after review", "No fee for managing pledges on Gamefound projects", "5% on new payments plus 3% and 0.20 processing", "Optional Late Pledge stage"] },
+          { name: "Gamefound", points: ["Gamefound campaigns, and external ones after review", "No fee for managing pledges on Gamefound projects", "5% on new payments, plus 3% + 0.2 per transaction in project currency", "Optional Late Pledge stage"] },
           { name: "PledgeBox", points: ["Kickstarter and Indiegogo campaigns", "0% on funds already raised", "3% on survey payments, 5% on its preorder store", "Processing billed separately"] },
         ],
         caption: "Fees as each vendor publishes them. Confirm the rate on your own project before you commit.",
@@ -124,9 +124,9 @@ export const guide: LaunchGuide = {
       id: "which-fits",
       title: "Which pledge manager fits your campaign",
       paragraphs: [
-        "The right pick follows from where you funded and how complicated your orders are. Use the checklist below with your reward list and your fulfilment partner's import format open.",
-        "Before you sign anything, build one test order with a base game, an expansion and a language choice, then change the destination country. Our board game pledge manager checklist walks through that test step by step.",
-        "We prepare the content that goes into whichever tool you choose, including reward names, product descriptions, add on graphics, survey wording and late pledge pages. You keep control of the settings, prices, shipping and tax. That work sits in our post campaign support service, so a funded campaign keeps the same clear voice all the way to delivery.",
+        "The right pick follows from where you funded and how complicated your orders are. Use the checklist below with your reward list and your fulfillment partner's import format open.",
+        "Before you sign anything, build one test order with a base game, an expansion and a language choice, then change the destination country. Our [board game pledge manager checklist](/guides/board-game-pledge-manager-checklist) walks through that test step by step.",
+        "We prepare the content that goes into whichever tool you choose, including reward names, product descriptions, add on graphics, survey wording and late pledge pages. You keep control of the settings, prices, shipping and tax. That work sits in our [post campaign support](/post-campaign-support) service, so a funded campaign keeps the same clear voice all the way to delivery.",
       ],
       visual: {
         kind: "checklist",
@@ -142,7 +142,7 @@ export const guide: LaunchGuide = {
   ],
   faqs: [
     { question: "Do I need a pledge manager for a small campaign?", answer: "Not always a separate one. If you have one reward, shipping charged at pledge and no add ons, a simple survey may be enough. Once you sell extras, collect shipping later or offer several editions, a pledge manager saves you from fixing orders by hand." },
-    { question: "What is a pledge manager?", answer: "A pledge manager is the system you use after funding to survey backers, sell add ons and upgrades, collect shipping and tax, lock addresses and export orders to fulfilment." },
+    { question: "What is a pledge manager?", answer: "A pledge manager is the system you use after funding to survey backers, sell add ons and upgrades, collect shipping and tax, lock addresses and export orders to fulfillment." },
     { question: "Is Kickstarter's Pledge Manager free?", answer: "There is no upfront cost. Kickstarter takes 5% on all funds collected through it except taxes, and card processing applies, which in the US is 3% and $0.20 per pledge, to the full payment." },
     { question: "How much does BackerKit charge?", answer: "BackerKit publishes a campaign fee of 2% or less, lower as you raise more, plus a 3.5% transaction fee on post campaign sales such as add ons and preorders. The campaign fee is waived if you launched on BackerKit." },
     { question: "Can I use Gamefound's pledge manager after a Kickstarter campaign?", answer: "Yes. Gamefound accepts campaigns funded elsewhere after a review. You enter your funding, backer count and currency, then launch the pledge manager once shipping is set up." },

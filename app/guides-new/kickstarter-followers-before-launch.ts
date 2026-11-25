@@ -76,7 +76,7 @@ export const guide: LaunchGuide = {
         "Here's how we run the numbers for a creator. This example is illustrative, so replace each input with your own goal and reward prices. Imagine a card game with a $15,000 funding goal and an expected average pledge of $50, including shipping collected at pledge.",
         "First we divide the goal by the average pledge, which gives 300 backers. Then we divide those 300 backers by each conversion rate. At 10% you would need 3,000 followers. At 20 to 25% you would need 1,200 to 1,500. At 32% you would need about 940.",
         "We like the low case to cover the goal from followers and your own email list together. LaunchBoom says 20 to 40% of funding often comes directly from the platform itself, but we leave that out of the goal math because you cannot plan when it arrives. If the low case leaves a gap, you can grow the audience, extend the prelaunch or revisit the goal.",
-        "Our guide to setting a funding goal shows how to build that goal from production costs. Then the follower target rests on a real budget rather than a hopeful round number.",
+        "Our guide to [setting a funding goal](/guides/board-game-kickstarter-funding-goal) shows how to build that goal from production costs. Then the follower target rests on a real budget rather than a hopeful round number.",
       ],
       visual: {
         kind: "bars",
@@ -112,7 +112,7 @@ export const guide: LaunchGuide = {
       id: "grow",
       title: "How we grow followers before launch",
       paragraphs: [
-        "Growing followers is steady weekly work rather than one big push. Kickstarter recommends sharing the prelaunch page at least one week before launch, and first time creators only get the Promotion tab after project approval. LaunchBoom suggests a standard prelaunch of two to four months for a product launch.",
+        "Growing followers is steady weekly work rather than one big push. Kickstarter recommends sharing the prelaunch page at least one week before launch, and first time creators only get the Promotion tab after project approval. LaunchBoom suggests a standard prelaunch of two to four months for a product launch. Our own planning example starts the email list 3 months or more before launch and opens the Kickstarter prelaunch page 6 to 12 weeks out, so a first time creator submits for review before that window opens.",
         "If you are starting from almost nothing, the first followers are the people who have already played the game, such as playtesters and friends from your game nights. Send them the prelaunch page and ask them to click Notify me on launch. Our guide on [how to get Kickstarter backers](/guides/how-to-get-kickstarter-backers) covers where the next ones come from, one source at a time.",
         "We usually plan the prelaunch around the steps below. Each one gives people a reason to follow that goes beyond a countdown, and each one can be measured.",
       ],
@@ -120,7 +120,7 @@ export const guide: LaunchGuide = {
         kind: "steps",
         title: "Followers grow fastest when every step gives people a reason to care",
         steps: [
-          { label: "Get the prelaunch page live early", detail: "Submit for review in time, then share the page as soon as it is approved." },
+          { label: "Get the prelaunch page live early", detail: "Our example opens it 6 to 12 weeks before launch, after review approval for a first project." },
           { label: "Send your own list to it", detail: "Ask email subscribers and community members to click Notify me on launch." },
           { label: "Show the game in play", detail: "A sample turn, rules preview or playable demo gives people something to judge." },
           { label: "Post a few useful prelaunch updates", detail: "Updates notify current followers, so save them for real news." },
@@ -136,7 +136,7 @@ export const guide: LaunchGuide = {
       title: "Read the count weekly and set the launch date from it",
       paragraphs: [
         "The follower number becomes useful once you compare it with your scenarios every week. Kickstarter only shows the follower count on the public page once 10 or more people have opted in to a launch notification.",
-        "Kickstarter does not let you message prelaunch followers directly. Instead, a prelaunch update notifies everyone currently following the page. That makes your own email list important too, because you control when and how often you write to it.",
+        "Kickstarter does not let you message prelaunch followers directly. Instead, a prelaunch update notifies everyone currently following the page. That makes your own email list important too, because you control when and how often you write to it, and our [prelaunch email list guide](/guides/kickstarter-prelaunch-email-list) covers the setup.",
         "Two weeks before your planned date, we check whether the low case covers the goal. If it doesn't, moving the launch by a few weeks usually costs less than a slow first day. A date you can meet beats a countdown you can't.",
       ],
       source: 1,
@@ -146,7 +146,7 @@ export const guide: LaunchGuide = {
       title: "Where Guildframe fits in your prelaunch",
       paragraphs: [
         "We plan and run prelaunches for tabletop creators for a living, so this math is part of every launch plan we write. You can do it yourself with a spreadsheet and the figures above. The hard part is the weekly work of growing a warm audience while you finish the game.",
-        "Our prelaunch service starts with an audience brief and a landing page with a signup flow in your own accounts. We add a welcome email and prelaunch sequence, tracking, and paid creative tests with spend limits you approve. It ends with a launch readiness review, and ad spend and email software are budgeted separately from the service fee. If you want a second opinion on your follower target, share your goal, average pledge and current count with us through our Kickstarter prelaunch marketing service.",
+        "Our prelaunch service starts with an audience brief and a landing page with a signup flow in your own accounts. We add a welcome email and prelaunch sequence, tracking, and paid creative tests with spend limits you approve. It ends with a launch readiness review, and ad spend and email software are budgeted separately from the service fee. If you want a second opinion on your follower target, share your goal, average pledge and current count with us through our [Kickstarter prelaunch marketing](/kickstarter-prelaunch-marketing) service.",
       ],
     },
   ],
@@ -165,7 +165,7 @@ export const guide: LaunchGuide = {
     },
     {
       question: "How long should a Kickstarter prelaunch run?",
-      answer: "Kickstarter recommends sharing the prelaunch page at least one week before launch. LaunchBoom suggests a standard prelaunch of two to four months. We set the length by how long it takes your low case to cover the goal.",
+      answer: "Kickstarter recommends sharing the prelaunch page at least one week before launch. LaunchBoom suggests a standard prelaunch of two to four months. Our planning example starts the email list 3 months or more ahead and opens the Kickstarter prelaunch page 6 to 12 weeks before launch, then we adjust the length by how long it takes your low case to cover the goal.",
     },
     {
       question: "Can I message my Kickstarter followers before launch?",

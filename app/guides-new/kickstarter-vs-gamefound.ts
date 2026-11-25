@@ -23,9 +23,9 @@ export const guide: LaunchGuide = {
   sections: [
     {
       id: "short-answer",
-      title: "The short answer for most creators",
+      title: "Your audience decides more than the platform",
       paragraphs: [
-        "The honest answer is that your own audience matters more than the platform you pick. Kickstarter and Gamefound both take 5% of the money you collect, so the choice rests on who your backers are and how you want to run the months after funding.",
+        "Your own audience matters more than the platform you pick. Kickstarter and Gamefound both take 5% of the money you collect, so the choice rests on who your backers are and how you want to run the months after funding.",
         "Kickstarter is a general crowdfunding site, so your game sits beside books, films and gadgets, and people browsing for those can find it too. Gamefound is built for tabletop. Stretch goals, a Late Pledge stage, a pledge manager and its own ad service all live in one system.",
         "We build campaign pages, prelaunch email and paid ads for both platforms, so this guide is about fit rather than loyalty. Start from your backers, then let the platform follow.",
       ],
@@ -35,7 +35,7 @@ export const guide: LaunchGuide = {
       title: "Fees are almost the same, so look at the extras",
       paragraphs: [
         "Fees are the first thing most creators compare, and the headline numbers are nearly identical. Kickstarter collects a 5% fee on the funds you raise, and its payment processor charges 3% and $0.20 per pledge on top in the US.",
-        "Gamefound also takes 5% of the collected amount, plus a payment processing fee on each transaction. Its pledge manager charges nothing for managing pledges you already raised. On new payments collected there, it takes 5% plus processing of 3% and 0.20 per transaction in your project currency.",
+        "Gamefound also takes 5% of the collected amount, plus a payment processing fee on each transaction. Its pledge manager charges nothing for managing pledges you already raised. On new payments collected there, it takes 5% plus processing of 3% and 0.2 per transaction in your project currency, which Gamefound gives as $0.2 when the project currency is dollars.",
         "Kickstarter's own Pledge Manager uses the same fees as a successful project. That means 5% on all funds except taxes, with card processing charged on the full payment, tax included.",
         "So the real money differences sit elsewhere, in ad service fees and in how much you sell after the campaign. Model those with your own reward prices before you call either platform cheaper.",
       ],
@@ -46,7 +46,7 @@ export const guide: LaunchGuide = {
           { value: "5%", label: "Kickstarter platform fee", note: "On funds collected, plus US processing of 3% + $0.20 per pledge" },
           { value: "5%", label: "Gamefound platform fee", note: "On the collected amount, plus processing per transaction" },
           { value: "5%", label: "Kickstarter Pledge Manager", note: "On all funds except taxes, plus processing" },
-          { value: "5% + 3%", label: "Gamefound pledge manager", note: "On new payments only, plus 0.20 per transaction" },
+          { value: "5% + 3%", label: "Gamefound pledge manager", note: "On new payments only, plus 0.2 per transaction in project currency" },
         ],
         source: "Kickstarter and Gamefound fee pages, checked November 25, 2026",
       },
@@ -69,8 +69,8 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "What happens after funding used to be the clearest gap between the two, and it has narrowed. Gamefound runs the whole journey in one system. You crowdfund, open an optional Late Pledge stage, then move to a pledge manager where backers confirm choices, add shipping details and pay what is still owed.",
         "The Late Pledge stage takes new pledges after funding, before shipping costs are set. You can skip it and go straight to the pledge manager, which you launch once shipping is set up. Gamefound also accepts campaigns funded on other platforms into its pledge manager after a review.",
-        "Kickstarter now has Late Pledges and its own Pledge Manager, priced like the campaign itself. You can also use a separate tool such as BackerKit or PledgeBox. Our pledge managers compared guide sets all four side by side, with the fees each one publishes.",
-        "So a Kickstarter launch no longer forces a second platform after funding, and a Gamefound launch keeps everything under one login. Choose the route your fulfilment partner can work with.",
+        "Kickstarter now has Late Pledges and its own Pledge Manager, priced like the campaign itself. You can also use a separate tool such as BackerKit or PledgeBox. Our [pledge manager comparison](/guides/pledge-managers-compared) sets all four side by side, with the fees each one publishes.",
+        "So a Kickstarter launch no longer forces a second platform after funding, and a Gamefound launch keeps everything under one login. Choose the route your fulfillment partner can work with.",
       ],
       source: 5,
     },
@@ -100,7 +100,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "Gamefound announced its purchase of Indiegogo on July 24, 2025, and creators still ask what it changes. By the companies' own figures, Indiegogo brings a community of 38 million members and nearly $3 billion in historical funding.",
         "Gamefound said it will continue as a dedicated tabletop platform, and that Gamefound campaigns will be featured on Indiegogo for extra exposure. That is a stated plan, not a published traffic number for tabletop projects.",
-        "Our honest read is that this makes Gamefound a bigger company with a wider reach. It does not yet tell you how many Indiegogo visitors will see your board game. We would not pick Gamefound for this alone, but it is a fair point in its favour over the long run.",
+        "Our honest read is that this makes Gamefound a bigger company with a wider reach. It does not yet tell you how many Indiegogo visitors will see your board game. We would not pick Gamefound for this alone, but it is a fair point in its favor over the long run.",
       ],
       source: 4,
     },
@@ -136,17 +136,17 @@ export const guide: LaunchGuide = {
       id: "checklist",
       title: "Check your answers before you commit",
       paragraphs: [
-        "A short checklist keeps the decision honest, because it moves the question from opinion to your own facts. Work through the groups below with your list size, reward prices and fulfilment plan in front of you.",
-        "Once you pick, the campaign page needs adapting to that editor. Gamefound separates story and reward sections by campaign stage, while Kickstarter has its own prelaunch page and preview link. Our guide to Kickstarter vs Gamefound page design covers those differences.",
-        "If you want one team to plan the launch, build the page, run the ads and support the live campaign, that is what our Gamefound launch services cover. The same work applies on Kickstarter, and you keep control of your project settings throughout.",
+        "A short checklist keeps the decision honest, because it moves the question from opinion to your own facts. Work through the groups below with your list size, reward prices and fulfillment plan in front of you.",
+        "Once you pick, the campaign page needs adapting to that editor. Gamefound separates story and reward sections by campaign stage, while Kickstarter has its own prelaunch page and preview link. Our guide to [Kickstarter vs Gamefound page design](/guides/kickstarter-vs-gamefound-campaign-page-design) covers those differences.",
+        "If you want one team to plan the launch, build the page, run the ads and support the live campaign, that is what our [Gamefound launch services](/gamefound-launch-services) cover. The same work applies on Kickstarter, and you keep control of your project settings throughout.",
       ],
       visual: {
         kind: "checklist",
         title: "Audience, money and the months after funding decide the platform",
         groups: [
           { name: "Your audience", items: ["Where do your current followers already back projects?", "Does your game appeal beyond hobby gamers?", "How many email subscribers will see launch day?"] },
-          { name: "Your money", items: ["Have you modelled 5% plus processing on your real reward prices?", "Which ad route fits your budget and your need for data?", "Will you sell add ons and late pledges after funding?"] },
-          { name: "After the campaign", items: ["Which pledge manager can your fulfilment partner import?", "Who handles surveys, shipping charges and tax?", "Do you want one platform login from launch to delivery?"] },
+          { name: "Your money", items: ["Have you modeled 5% plus processing on your real reward prices?", "Which ad route fits your budget and your need for data?", "Will you sell add ons and late pledges after funding?"] },
+          { name: "After the campaign", items: ["Which pledge manager can your fulfillment partner import?", "Who handles surveys, shipping charges and tax?", "Do you want one platform login from launch to delivery?"] },
         ],
       },
     },

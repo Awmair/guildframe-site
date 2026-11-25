@@ -14,10 +14,10 @@ export const guide: LaunchGuide = {
   relatedSlugs: ["board-game-kickstarter-page-checklist", "board-game-kickstarter-gameplay-rulebook", "kickstarter-reward-tier-graphics", "when-to-hire-kickstarter-campaign-designer"],
   sources: [
     { label: "What information should I share on my project page?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236738-what-information-should-i-share-on-my-project-page" },
-    { label: "How to tell your campaign story (9 Feb 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-lessons/how-to-tell-your-campaign-story/" },
-    { label: "Guide to the Kickstarter campaign page (9 Feb 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-lessons/guide-to-kickstarter-campaign-page/" },
+    { label: "How to tell your campaign story (February 9, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-lessons/how-to-tell-your-campaign-story/" },
+    { label: "Guide to the Kickstarter campaign page (February 9, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-lessons/guide-to-kickstarter-campaign-page/" },
     { label: "How to make a great project image", publisher: "Kickstarter", href: "https://www.kickstarter.com/help/images" },
-    { label: "12 things you must do before launching on Kickstarter (13 Feb 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/12-things-you-must-do-before-launching-on-kickstarter/" },
+    { label: "12 things you must do before launching on Kickstarter (February 13, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/12-things-you-must-do-before-launching-on-kickstarter/" },
     { label: "Cryptic Explorers campaign case study", publisher: "Guildframe", href: "https://guildframe.com/work/cryptic-explorers" },
     { label: "FutureProof Terrain campaign case study", publisher: "Guildframe", href: "https://guildframe.com/work/futureproof-terrain" },
     { label: "Quiver Time campaign case study", publisher: "Guildframe", href: "https://guildframe.com/work/quiver-time" },
@@ -28,7 +28,7 @@ export const guide: LaunchGuide = {
       title: "What a good Kickstarter page does",
       paragraphs: [
         "A good Kickstarter page lets a stranger understand your game, trust you and choose a reward without needing you beside them. That's the whole job, and every design choice on the page either helps it or gets in the way.",
-        "Kickstarter's own help centre says a page should show what you're making, how you plan to make it happen, the progress so far, your budget and your story. For a board game, that becomes four questions a backer asks in order. Treat the page as an explanation first, and let your artwork make it look good.",
+        "Kickstarter's own Help Center says a page should show what you're making, how you plan to make it happen, the progress so far, your budget and your story. For a board game, that becomes four questions a backer asks in order. Treat the page as an explanation first, and let your artwork make it look good.",
         "If you're earlier than the page stage, the whole process is in our guide on [how to launch a board game on Kickstarter](/guides/how-to-launch-a-board-game-on-kickstarter). Come back here once you have art and rules to work with.",
       ],
       source: 0,
@@ -38,7 +38,7 @@ export const guide: LaunchGuide = {
       title: "The order a backer reads your page in",
       paragraphs: [
         "Backers read from the top, and many decide early whether to keep scrolling. That's why the order of your sections matters more than any single graphic.",
-        "Kickstarter's story guide says to put the most important information at the top and organise the rest into short sections with clear headings. We build every campaign page around the same five steps, because they match the questions people actually ask.",
+        "Kickstarter's story guide says to put the most important information at the top and organize the rest into short sections with clear headings. We build every campaign page around the same five steps, because they match the questions people actually ask.",
         "If a section doesn't answer one of these questions, it probably belongs lower down or nowhere at all.",
       ],
       visual: {
@@ -47,7 +47,7 @@ export const guide: LaunchGuide = {
         steps: [
           { label: "What is it?", detail: "Project image, title, subtitle, opening section" },
           { label: "How does it play?", detail: "One sample turn and a short video" },
-          { label: "What do I get?", detail: "Labelled components and a reward comparison" },
+          { label: "What do I get?", detail: "Labeled components and a reward comparison" },
           { label: "Can I trust you?", detail: "Who you are, playtest proof, honest risks" },
           { label: "How do I pledge?", detail: "Rewards with prices and the shipping plan" },
         ],
@@ -93,7 +93,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "A first time creator has no track record, so the page has to do the work a reputation would normally do. Small, honest details do more here than big claims.",
         "Say who you are in a few sentences, show the game being played and add a playtester or previewer quote if you have one. Then write a real risks section, which Kickstarter describes as the place to explain possible obstacles and how you plan to handle them, adding that transparency builds trust with backers.",
-        "If your images show a prototype, label them as a prototype. Our guide to [labelling prototypes and writing the risks section](/guides/kickstarter-prototype-risks-disclosure) covers the wording. Honesty about what's unfinished reads as confidence, and backers notice.",
+        "If your images show a prototype, label them as a prototype. Our guide to [labeling prototypes and writing the risks section](/guides/kickstarter-prototype-risks-disclosure) covers the wording. Honesty about what's unfinished reads as confidence, and backers notice.",
       ],
       source: 2,
     },
@@ -107,7 +107,7 @@ export const guide: LaunchGuide = {
       ],
       list: [
         "Pick two fonts at most and use them the same way in every header.",
-        "Take your colours from the box art so every section feels like the same game.",
+        "Take your colors from the box art so every section feels like the same game.",
         "Use real photos of your prototype, well lit, with a plain background.",
         "Keep text inside images large enough to read on a phone without zooming.",
         "Type prices, contents and player counts as page text as well as showing them in graphics.",
@@ -117,7 +117,7 @@ export const guide: LaunchGuide = {
         title: "A page looks professional when these stay the same everywhere",
         groups: [
           { name: "Type", items: ["Two fonts at most", "Same header style in every section", "Readable on a phone"] },
-          { name: "Images", items: ["Colours from the box art", "Real photos, well lit", "Prototypes labelled"] },
+          { name: "Images", items: ["Colors from the box art", "Real photos, well lit", "Prototypes labeled"] },
           { name: "Facts", items: ["Prices typed as text", "Same product names everywhere", "Counts match the rewards"] },
         ],
         caption: "Guildframe's design habits for creators building their own page.",
@@ -152,9 +152,9 @@ export const guide: LaunchGuide = {
     },
     {
       id: "diy-or-help",
-      title: "Doing it yourself or getting help",
+      title: "Designing it yourself, or handing it to us",
       paragraphs: [
-        "Plenty of creators design a good first page themselves using everything above. The honest limit is time and distance, because layout, copy and reward graphics take weeks, and it's hard to see your own page the way a stranger does.",
+        "Plenty of creators design a good first page themselves using everything above. What usually runs out is time and distance, because layout, copy and reward graphics take weeks, and it's hard to see your own page the way a stranger does.",
         "This is the work Umair has done for ten years. Our campaign page package is $1,800. It covers your Kickstarter or Gamefound page from the first line of copy to the published page, including page structure, campaign copy, section graphics and reward presentation using your artwork. Full campaign support is $5,900 and adds the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff. Ad spend, software and platform fees are separate.",
         "If you're unsure, our guides on [when to hire a campaign designer](/guides/when-to-hire-kickstarter-campaign-designer) and [what campaign design costs](/guides/board-game-kickstarter-campaign-design-cost) help you decide. You can also see the four [campaigns in our case studies](/work).",
         "The lowest risk first step is a free opening mockup. We design one opening section of your page using your own artwork, with no payment and no obligation. Request it through our [Kickstarter campaign design](/campaign-design) page.",
@@ -172,10 +172,10 @@ export const guide: LaunchGuide = {
     },
   ],
   faqs: [
-    { question: "How do I design a Kickstarter page with no design experience?", answer: "Answer four questions in order: what the game is, how it plays, what backers get and why they can trust you. Use two fonts at most, take colours from your box art, use real labelled photos and check every graphic on a phone." },
+    { question: "How do I design a Kickstarter page with no design experience?", answer: "Answer four questions in order: what the game is, how it plays, what backers get and why they can trust you. Use two fonts at most, take colors from your box art, use real labeled photos and check every graphic on a phone." },
     { question: "What should I put at the top of my Kickstarter page?", answer: "A clean project image of the game, your game's name as the title and a one line subtitle saying what kind of game it is. Then an opening section with player count, play time and age." },
     { question: "How long should a Kickstarter page be?", answer: "There's no set length, and Kickstarter's guides don't give one. A page is long enough when a stranger can say what the game is, how it plays, what they get and why to trust you." },
-    { question: "What program do people use to make Kickstarter graphics?", answer: "Use whatever layout or image app you already know. The tool matters less than consistent fonts, colours and labels, and text large enough to read on a phone." },
+    { question: "What program do people use to make Kickstarter graphics?", answer: "Use whatever layout or image app you already know. The tool matters less than consistent fonts, colors and labels, and text large enough to read on a phone." },
     { question: "Should the text be in images or typed into the page?", answer: "Both, for the facts that matter. Kickstarter advises that your text carries the key information for people using screen readers, so type prices, contents and player counts into the page and let graphics support them." },
     { question: "Can I use photos of my prototype on the page?", answer: "Yes. Use real, well lit photos on a plain background and label them as a prototype. Honesty about what's unfinished builds trust with backers." },
     { question: "How much does it cost to have someone design my Kickstarter page?", answer: "Guildframe's campaign page package is a fixed $1,800 and full campaign support is $5,900. Ad spend, software and platform fees are separate, and you can start with a free opening mockup that has no payment or obligation." },

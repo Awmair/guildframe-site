@@ -13,18 +13,18 @@ export const guide: LaunchGuide = {
   answer: "Your game is ready for Kickstarter when strangers have played it from the written rules and you have a prototype you can photograph. You also need enough finished art to show the final look, real quotes for making and shipping it, and people waiting to back it, which usually takes longest.",
   relatedSlugs: ["kickstarter-prototype-risks-disclosure", "board-game-kickstarter-funding-goal", "kickstarter-followers-before-launch", "board-game-kickstarter-gameplay-rulebook"],
   sources: [
-    { label: "How to playtest your board game before you launch on Kickstarter (14 May 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/how-to-playtest-your-board-game-before-you-launch-on-kickstarter/" },
-    { label: "How to tell your campaign story (9 Feb 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-lessons/how-to-tell-your-campaign-story/" },
+    { label: "How to playtest your board game before you launch on Kickstarter (May 14, 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/how-to-playtest-your-board-game-before-you-launch-on-kickstarter/" },
+    { label: "How to tell your campaign story (February 9, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/kickstarter-lessons/how-to-tell-your-campaign-story/" },
     { label: "What are the rules for hardware and product design projects?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236428-what-are-the-rules-for-hardware-and-product-design-projects" },
-    { label: "Why Kickstarter campaigns fail after funding, and how to avoid it (3 Jun 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/why-kickstarter-campaigns-fail-after-funding-and-how-to-avoid-it/" },
-    { label: "From concept to fulfillment: the complete Kickstarter journey (9 Sep 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/from-concept-to-fulfillment-the-complete-kickstarter-journey/" },
-    { label: "12 things you must do before launching on Kickstarter (13 Feb 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/12-things-you-must-do-before-launching-on-kickstarter/" },
-    { label: "How to market a tabletop game in 7 steps (20 Feb 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/how-to-market-a-tabletop-game-in-7-steps/" },
+    { label: "Why Kickstarter campaigns fail after funding, and how to avoid it (June 3, 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/why-kickstarter-campaigns-fail-after-funding-and-how-to-avoid-it/" },
+    { label: "From concept to fulfillment: the complete Kickstarter journey (September 9, 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/from-concept-to-fulfillment-the-complete-kickstarter-journey/" },
+    { label: "12 things you must do before launching on Kickstarter (February 13, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/12-things-you-must-do-before-launching-on-kickstarter/" },
+    { label: "How to market a tabletop game in 7 steps (February 20, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/how-to-market-a-tabletop-game-in-7-steps/" },
   ],
   sections: [
     {
       id: "short-answer",
-      title: "The short answer: four things need to be true",
+      title: "Four signs your game is ready",
       paragraphs: [
         "Your game is ready for Kickstarter when four things are true at once. The game works, it looks like itself, the numbers add up and people are waiting for it. Miss one and the campaign usually shows it on day one.",
         "We tell creators kindly when they're early, because a campaign page can't hide an unfinished game. Kickstarter's own story guide says backers want to know a project is well planned and achievable, including its current stage of development. That's a high bar for a first game, and it's reachable.",
@@ -68,7 +68,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "Yes, most tabletop games launch with a prototype, and backers expect it. What matters is that you label it honestly.",
         "Kickstarter's hardware and product design rules require working prototypes and don't allow photorealistic renderings. That article applies to the hardware and product design categories and doesn't mention games, so check the rules for the category you'll actually launch in before planning your images.",
-        "Then label each image as a prototype, render or final artwork, and say what's still changing. Our guide to [labelling prototypes and writing the risks section](/guides/kickstarter-prototype-risks-disclosure) covers the wording. A clearly labelled prototype builds more trust than a polished image nobody believes.",
+        "Then label each image as a prototype, render or final artwork, and say what's still changing. Our guide to [labeling prototypes and writing the risks section](/guides/kickstarter-prototype-risks-disclosure) covers the wording. A clearly labeled prototype builds more trust than a polished image nobody believes.",
       ],
       source: 2,
     },
@@ -77,7 +77,7 @@ export const guide: LaunchGuide = {
       title: "The numbers you need first",
       paragraphs: [
         "This is the part first timers skip most, and it's the one that hurts most later. You need real quotes before you set a goal or a price.",
-        "Ask a manufacturer to quote your smallest realistic print run in writing. Kickstarter's June 2026 post on failure after funding advises getting real fulfillment quotes before you finalise reward prices. It adds that Kickstarter and payment partners take 8 to 10 percent of funds, and suggests a contingency of 20 to 30 percent as a starting point.",
+        "Ask a manufacturer to quote your smallest realistic print run in writing. Kickstarter's June 2026 post on failure after funding advises getting real fulfillment quotes before you finalize reward prices. It adds that Kickstarter and payment partners take 8 to 10 percent of funds, and suggests a contingency of 20 to 30 percent as a starting point.",
         "The same post says overseas manufacturing usually takes about twelve months from campaign end to delivery. So your numbers also tell you how long backers will wait. Our guides to [setting your funding goal](/guides/board-game-kickstarter-funding-goal), [Kickstarter fees](/guides/kickstarter-fees) and [what it costs to launch a board game on Kickstarter](/guides/board-game-kickstarter-cost) take each piece in turn.",
         "With written quotes in hand, your goal stops being a guess. That alone puts you ahead of many first campaigns.",
       ],
@@ -88,7 +88,7 @@ export const guide: LaunchGuide = {
       title: "The people you need first",
       paragraphs: [
         "A finished game with nobody waiting still struggles, because a new creator can't count on Kickstarter to fill an empty first day. Building those people takes months, so start early.",
-        "Kickstarter's September 2026 journey post recommends activating your prelaunch page right away, so it gathers followers while you build everything else. Pair it with an email signup and show the game somewhere every week. Our guides on [how many followers you need before launch](/guides/kickstarter-followers-before-launch) and [how to get your first Kickstarter backers](/guides/how-to-get-kickstarter-backers) cover the targets and the sources.",
+        "Kickstarter's September 2026 journey post recommends activating your prelaunch page right away, so it gathers followers while you build everything else. For a first time creator that page only opens after review approval, so our planning example starts the email list 3 months or more before launch and opens the Kickstarter prelaunch page 6 to 12 weeks out. Show the game somewhere every week in between. Our guides on [how many followers you need before launch](/guides/kickstarter-followers-before-launch) and [how to get your first Kickstarter backers](/guides/how-to-get-kickstarter-backers) cover the targets and the sources.",
         "Reviews aren't required before launch, but an outside voice is the cheapest trust a new creator can add. Our guide to [board game reviewer outreach](/guides/board-game-reviewer-outreach) explains how to ask. Start the people work now, even if the game needs more time.",
       ],
       source: 4,
@@ -134,16 +134,16 @@ export const guide: LaunchGuide = {
       title: "Not ready yet? What to do in the next three months",
       paragraphs: [
         "Not being ready is normal, and finding out now is far cheaper than finding out on launch day. Three focused months can close most of the gap.",
-        "Kickstarter's tabletop marketing guide encourages building a rough prototype quickly and testing it early, and that's where most first games still are. So spend the first month on blind tests and rules fixes, the second on cover art and quotes, and the third on your prelaunch page and showing the game. When you're picking a date, our guide on [when to launch a Kickstarter](/guides/when-to-launch-a-kickstarter) helps you choose.",
+        "Kickstarter's tabletop marketing guide encourages building a rough prototype quickly and testing it early, and that's where most first games still are. So spend the first month on blind tests and rules fixes while an email signup goes live, the second on cover art and quotes, and the third on showing the game every week. When you're picking a date, our guide on [when to launch a Kickstarter](/guides/when-to-launch-a-kickstarter) helps you choose.",
         "We help creators at exactly this point. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) start with an asset review and a launch schedule with named responsibilities. Once your art is ready, you can also ask for a free opening mockup of your campaign page, with no payment or obligation.",
       ],
       visual: {
         kind: "timeline",
         title: "Example: three months from almost ready to ready",
         events: [
-          { when: "Month 1", label: "Fix the game", detail: "Blind tests and rules changes" },
+          { when: "Month 1", label: "Fix the game, open the list", detail: "Blind tests, rules changes, email signup live" },
           { when: "Month 2", label: "Set the look and the numbers", detail: "Cover art, a few final pieces, written quotes" },
-          { when: "Month 3", label: "Gather people", detail: "Prelaunch page live, email signup, weekly posts" },
+          { when: "Month 3", label: "Gather people", detail: "Weekly posts, plan the Kickstarter prelaunch page" },
           { when: "Then", label: "Pick a launch date", detail: "Once all four groups are true", highlight: true },
         ],
         caption: "Illustrative Guildframe plan for a creator with a working prototype. Your own timing depends on your game.",
@@ -154,7 +154,7 @@ export const guide: LaunchGuide = {
   faqs: [
     { question: "Can I launch a Kickstarter with only a prototype?", answer: "Yes, most tabletop games launch with a prototype. Label each image honestly as a prototype, render or final artwork. Then check the rules for your category, because Kickstarter's hardware and product design rules require working prototypes and ban photorealistic renderings." },
     { question: "How much of the art has to be finished before Kickstarter?", answer: "Enough to show what the final game looks like, which means finished cover or box art, a handful of final components and one consistent style. The rest can be funded by the campaign if the page says what's final." },
-    { question: "Do I need a manufacturer before I launch?", answer: "You need a written quote for your smallest realistic print run, plus fulfillment quotes. Kickstarter advises getting real fulfillment quotes before you finalise reward prices." },
+    { question: "Do I need a manufacturer before I launch?", answer: "You need a written quote for your smallest realistic print run, plus fulfillment quotes. Kickstarter advises getting real fulfillment quotes before you finalize reward prices." },
     { question: "How much playtesting is enough?", answer: "There's no set number. We look for strangers finishing the game from the written rules and your last few sessions changing only small things. Kickstarter's playtesting guide recommends blind tests near the end of development." },
     { question: "Do I need reviews before launching my Kickstarter?", answer: "No, reviews aren't required. But an outside voice is the cheapest trust a new creator can add to the page." },
     { question: "How do I know my game is not ready yet?", answer: "If strangers can't play it from the written rules, you have no written quote, or nobody is waiting to back it, it's not ready yet. Each gap is a task you can usually close in a few focused months." },

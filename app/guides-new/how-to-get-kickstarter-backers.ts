@@ -76,7 +76,7 @@ export const guide: LaunchGuide = {
       title: "Show the game in person",
       paragraphs: [
         "Nothing turns a stranger into a follower faster than a game they've just enjoyed. Game nights, store demos and conventions are slow to scale, but each person who plays and asks where to follow is worth chasing.",
-        "If a big show is within reach, plan it around your campaign. A show a few months before launch gives you followers, while a show during the campaign gives you pledges and a story for an update. These are the next dates for four major shows, checked on each organiser's site when we updated this guide.",
+        "If a big show is within reach, plan it around your campaign. A show a few months before launch gives you followers, while a show during the campaign gives you pledges and a story for an update. These are the next dates for four major shows, checked on each organizer's site when we updated this guide.",
       ],
       list: [
         "PAX Unplugged, Philadelphia, December 4 to 6, 2026",
@@ -93,7 +93,7 @@ export const guide: LaunchGuide = {
           { when: "Aug 5 to 8, 2027", label: "Gen Con", detail: "Indianapolis", highlight: true },
           { when: "Oct 21 to 24, 2027", label: "SPIEL Essen", detail: "Essen, Germany" },
         ],
-        caption: "Dates as published by each organiser on November 25, 2026. Check again before you book travel.",
+        caption: "Dates as published by each organizer on November 25, 2026. Check again before you book travel.",
         source: "PAX Unplugged; UK Games Expo; Gen Con; SPIEL Essen",
       },
     },
@@ -102,7 +102,7 @@ export const guide: LaunchGuide = {
       title: "Turn interest into a follow you can use",
       paragraphs: [
         "Interest fades fast unless it lands somewhere. That's why every ring of people needs the same two places to go. One is your Kickstarter prelaunch page and the other is your own email signup.",
-        "The prelaunch page matters because Kickstarter emails followers when the project goes live. On average, 32% of prelaunch followers pledge once it does, compared with 17% of people who follow after launch. Kickstarter recommends setting up and sharing the page at least one week before your launch date, and the follower count shows on the page once ten or more people opt in.",
+        "The prelaunch page matters because Kickstarter emails followers when the project goes live. On average, 32% of prelaunch followers pledge once it does, compared with 17% of people who follow after launch. Kickstarter recommends setting up and sharing the page at least one week before your launch date, and the follower count shows on the page once ten or more people opt in. Our own planning example opens it 6 to 12 weeks before launch, with the email list started 3 months or more ahead.",
         "The email list matters because you control it. You can send a rules preview, a launch reminder and a last day nudge whenever you choose. Setup and sequences live in our [prelaunch email list guide](/guides/kickstarter-prelaunch-email-list), and the page itself in our [Kickstarter prelaunch page guide](/guides/kickstarter-prelaunch-page-guide). Before you ask anyone to follow, have these three things ready.",
       ],
       visual: {
