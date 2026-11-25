@@ -6,6 +6,8 @@ import {contentDates} from "./content-dates";
 import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
 import {decisionGuides} from "./launch-decision-guides";
+import {guide as ngKickstarterVsGamefound} from "./guides-new/kickstarter-vs-gamefound";
+import {guide as ngPledgeManagersCompared} from "./guides-new/pledge-managers-compared";
 import {guide as ngBoardGameTariffsShippingUs} from "./guides-new/board-game-tariffs-shipping-us";
 import {guide as ngKickstarterAgencyCost} from "./guides-new/kickstarter-agency-cost";
 import {guide as ngKickstarterFees} from "./guides-new/kickstarter-fees";
@@ -28,6 +30,8 @@ const originalLaunchGuides:LaunchGuide[]=[
   ngKickstarterFees,
   ngKickstarterFollowersBeforeLaunch,
   ngKickstarterImageSizes,
+  ngKickstarterVsGamefound,
+  ngPledgeManagersCompared,
   ngTcgKickstarterLaunchGuide,
   ngTerrainAndDiceKickstarterLaunchGuide,
   ngTtrpgKickstarterLaunchGuide,
