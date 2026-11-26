@@ -9,7 +9,7 @@ export const guide: LaunchGuide = {
   description: "How to launch a Kickstarter campaign for a product, book or creative project: rules, budget, page, rewards, shipping, prelaunch, launch day and delivery.",
   tag: "Start here",
   answer: "To launch a Kickstarter campaign, check that your project fits Kickstarter's rules, set a funding goal from a real budget, build a page with clear rewards and shipping, grow a prelaunch audience, then submit for review and click Launch yourself. Most first time creators need about three months of preparation, and delivering physical rewards after funding often takes about a year.",
-  relatedSlugs: ["kickstarter-campaign-timeline", "kickstarter-campaign-cost", "kickstarter-approval-time", "kickstarter-for-beginners", "why-kickstarter-campaigns-fail"],
+  relatedSlugs: ["kickstarter-campaign-timeline", "kickstarter-campaign-cost", "kickstarter-review-launch-timeline", "kickstarter-for-beginners", "why-kickstarter-campaigns-fail"],
   servicePath: "/kickstarter-launch-services",
   serviceLabel: "Kickstarter launch services",
   sources: [
@@ -69,7 +69,7 @@ export const guide: LaunchGuide = {
           ["Prototype and quotes", "Weeks to months, depending on the product", "[Kickstarter prototype rules](/guides/kickstarter-prototype-rules)"],
           ["Page, video and rewards", "3 to 5 weeks", "[How to design a Kickstarter page](/guides/how-to-design-a-kickstarter-page)"],
           ["Prelaunch audience", "6 to 12 weeks, running alongside the page", "[How to market a Kickstarter](/guides/how-to-market-a-kickstarter)"],
-          ["Review and launch", "About 2 weeks of buffer", "[Kickstarter approval time](/guides/kickstarter-approval-time)"],
+          ["Review and launch", "About 2 weeks of buffer", "[Kickstarter approval time](/guides/kickstarter-review-launch-timeline)"],
           ["Campaign and fulfillment", "30 days live, then about a year to deliver", "[Kickstarter campaign timeline](/guides/kickstarter-campaign-timeline)"],
         ],
       },
@@ -398,7 +398,7 @@ export const guide: LaunchGuide = {
       title: "Submit for review and launch your Kickstarter",
       paragraphs: [
         "Some projects are approved automatically, and the rest go to manual review, which Kickstarter says can take up to 3 business days. If changes are requested, allow another 3 business days or longer.",
-        "Approval doesn't publish anything, because launching is a manual click and can't be scheduled. Our guide to [how long Kickstarter takes to approve a project](/guides/kickstarter-approval-time) covers delays and rejections. Once you are approved, we run this check in launch week:",
+        "Approval doesn't publish anything, because launching is a manual click and can't be scheduled. Our guide to [how long Kickstarter takes to approve a project](/guides/kickstarter-review-launch-timeline) covers delays and rejections. Once you are approved, we run this check in launch week:",
       ],
       list: [
         "Open the preview on a phone and a desktop and read it as a stranger would",

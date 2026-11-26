@@ -376,7 +376,7 @@ export const guide: LaunchGuide = {
       title: "Review, launch day and the first 48 hours",
       paragraphs: [
         "Kickstarter reviews projects in up to 3 business days, and changes add another 3 business days or more. Launching is manual, so you press the button yourself once approved.",
-        "Campaigns can run for up to 60 days, but Kickstarter recommends 30 days or less. Our [Kickstarter approval time guide](/guides/kickstarter-approval-time) and [campaign timeline](/guides/kickstarter-campaign-timeline) help you plan around both.",
+        "Campaigns can run for up to 60 days, but Kickstarter recommends 30 days or less. Our [Kickstarter approval time guide](/guides/kickstarter-review-launch-timeline) and [campaign timeline](/guides/kickstarter-campaign-timeline) help you plan around both.",
         "Pick the length before review, then plan launch week hour by hour. The table shows what we watch in the first two days of a product campaign.",
       ],
       source: 4,

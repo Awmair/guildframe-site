@@ -18,6 +18,8 @@ export type GuideLayer = {
   sections?: Record<string, SectionLayer>;
   insertAfter?: Record<string, LaunchSection[]>;
   updated?: string;
+  faqs?: {question: string; answer: string}[];
+  sources?: {label: string; publisher: string; href: string}[];
 };
 
 import {visualLayers} from "./guide-visual-layer-data";
@@ -39,5 +41,7 @@ export function applyVisualLayer(guide: LaunchGuide): LaunchGuide {
     if (extra) sections.push(...extra);
   }
   const updated = layer.updated && (!guide.updated || layer.updated > guide.updated) ? layer.updated : guide.updated;
-  return {...guide, sections, updated};
+  const sources = layer.sources ? [...guide.sources, ...layer.sources.filter(x => !guide.sources.some(y => y.href === x.href))] : guide.sources;
+  const faqs = layer.faqs ? [...guide.faqs, ...layer.faqs.filter(x => !guide.faqs.some(y => y.question === x.question))] : guide.faqs;
+  return {...guide, sections, updated, sources, faqs};
 }

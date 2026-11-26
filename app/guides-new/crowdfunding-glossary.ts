@@ -81,7 +81,7 @@ export const guide: LaunchGuide = {
       list: [
         "New to the platform? Start with [Kickstarter for beginners](/guides/kickstarter-for-beginners).",
         "Choosing between platforms: [Kickstarter vs Indiegogo](/guides/kickstarter-vs-indiegogo).",
-        "Review timing in detail: [Kickstarter approval time](/guides/kickstarter-approval-time).",
+        "Review timing in detail: [Kickstarter approval time](/guides/kickstarter-review-launch-timeline).",
         "How often projects fund by category: [Kickstarter statistics by category](/guides/kickstarter-statistics-by-category).",
       ],
       source: 1,

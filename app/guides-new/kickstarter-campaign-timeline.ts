@@ -9,7 +9,7 @@ export const guide: LaunchGuide = {
   description: "A Kickstarter campaign timeline, week by week: 12 weeks from brief to launch, 30 days live, then payout and about a year to deliver physical rewards.",
   tag: "Start here",
   answer: "A realistic Kickstarter campaign timeline is about 12 weeks from brief to launch once you have a working prototype and production quotes, then around 30 days live, 14 days of pledge collection and about a year to deliver physical rewards. We send the project to review in week 6, so approval and the Kickstarter prelaunch page land well before launch day.",
-  relatedSlugs: ["how-to-launch-a-kickstarter-campaign", "kickstarter-approval-time", "when-to-launch-a-kickstarter", "what-happens-after-kickstarter-is-funded", "kickstarter-campaign-cost"],
+  relatedSlugs: ["how-to-launch-a-kickstarter-campaign", "kickstarter-review-launch-timeline", "when-to-launch-a-kickstarter", "what-happens-after-kickstarter-is-funded", "kickstarter-campaign-cost"],
   servicePath: "/kickstarter-launch-services",
   serviceLabel: "Kickstarter launch services",
   sources: [
