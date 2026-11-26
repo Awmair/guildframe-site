@@ -25,14 +25,32 @@ This supplemental summary does not replace the HTML pages or sitemap.
 
 
 
+
+
+
 ## Start here: first campaigns for products, games and books
 
-- [What to Send Your Campaign Designer: The Brief Checklist](https://guildframe.com/guides/kickstarter-campaign-brief): The brief checklist Guildframe sends after every enquiry: summary, labeled files, product facts, reward sheet, production status, audience numbers, platform, dates and one approver.
-- [How to Set Your Kickstarter Funding Goal](https://guildframe.com/guides/kickstarter-funding-goal): Set the goal from what it costs to deliver every reward, divide by the share kept after Kickstarter's 5% fee and processing, then check the backer count. The goal cannot change after launch.
-- [How Much Does a Kickstarter Campaign Cost for a Product?](https://guildframe.com/guides/kickstarter-product-campaign-cost): Costs paid before launch and costs taken from pledges, with a worked fee example and Guildframe's fixed prices: 1,800 US dollars for the campaign page, 5,900 US dollars for full campaign support.
-- [Kickstarter vs Indiegogo in 2026: Which One for Your Product](https://guildframe.com/guides/kickstarter-vs-indiegogo): Both charge 5% plus 3% and 0.20 per pledge, and both are goal based since Indiegogo ended flexible funding for new campaigns on October 16, 2025.
-- [What Goes on a Product Kickstarter Page, Section by Section](https://guildframe.com/guides/product-kickstarter-page): The sections of a product page in reading order, including Kickstarter's working prototype rule for hardware and product design.
-- [Launching Version Two: How to Crowdfund the Next Model of Your Product](https://guildframe.com/guides/kickstarter-version-two): Crowdfunding the next model of a product already on sale. Kickstarter does not allow an existing product as the end goal, but it can be a reward.
+- [How to Launch a Kickstarter Campaign: The Complete A to Z Guide for Any Project](https://guildframe.com/guides/how-to-launch-a-kickstarter-campaign): How to launch a Kickstarter campaign for a product, book or creative project: rules, budget, page, rewards, shipping, prelaunch, launch day and delivery.
+- [What to Send Your Campaign Designer: The Brief Checklist](https://guildframe.com/guides/kickstarter-campaign-brief): A Kickstarter campaign brief checklist for products, games and books: the facts, files, rewards and dates a campaign designer needs before work starts.
+- [How to Set Your Kickstarter Funding Goal](https://guildframe.com/guides/kickstarter-funding-goal): Set a Kickstarter funding goal from what it costs to deliver, plus fees and a reserve, then check it against how many backers you can reach. Worked example.
+- [What Goes on a Product Kickstarter Page, Section by Section](https://guildframe.com/guides/product-kickstarter-page): The sections of a product Kickstarter page in the order backers read them: opening, how it works, specs, prototype, rewards, shipping, risks and FAQ.
+- [How to Launch a Product on Kickstarter: The A to Z Guide (2026)](https://guildframe.com/guides/how-to-launch-a-product-on-kickstarter): How to launch a product on Kickstarter, from prototype rules and factory quotes to pricing, shipping, prelaunch, launch week and fulfillment.
+- [Tech Kickstarter Launch Guide: How to Launch a Gadget on Kickstarter](https://guildframe.com/guides/tech-gadget-kickstarter-launch-guide): A tech Kickstarter launch from prototype to delivery: hardware rules, FCC and CE basics, battery shipping, factory test stages and an honest delivery plan.
+- [How to Launch a Book on Kickstarter: The A to Z Guide for Authors](https://guildframe.com/guides/how-to-launch-a-book-on-kickstarter): How to launch a book on Kickstarter, from print quotes, ISBNs and ebook rewards to media mail, signed editions and the Publishing and Comics categories.
+- [Watch Kickstarter Campaign and Fashion Launch Guide: Watches, Bags, Apparel and Jewelry](https://guildframe.com/guides/watch-fashion-accessories-kickstarter-guide): Plan a watch Kickstarter campaign or fashion launch: samples, MOQs, size curves in pledges, color add ons, provable material claims, returns and photography.
+- [Creative Project Kickstarter Guide: Art, Music, Film, Events and Community Projects](https://guildframe.com/guides/creative-project-kickstarter-guide): A creative project Kickstarter guide for artists, musicians, filmmakers and organizers: charity rules, digital and experience rewards, goals and community.
+- [How Much Does a Kickstarter Campaign Cost? A 2026 Budget Guide](https://guildframe.com/guides/kickstarter-campaign-cost): How much a Kickstarter campaign costs: fees, samples, photos, page design, ads, shipping, pledge manager and taxes, with three example budgets by size.
+- [Kickstarter vs Indiegogo in 2026: Fees, Rules and Which to Choose](https://guildframe.com/guides/kickstarter-vs-indiegogo): Kickstarter vs Indiegogo in 2026: the same 5% fee, all or nothing on both, Indiegogo now runs on Gamefound, plus Express mode and a verdict by situation.
+- [Kickstarter Campaign Timeline: A 12 Week Plan From Brief to Launch and Delivery](https://guildframe.com/guides/kickstarter-campaign-timeline): A Kickstarter campaign timeline, week by week: 12 weeks from brief to launch, 30 days live, then payout and about a year to deliver physical rewards.
+- [Kickstarter for Existing Products: Launching Version Two or a New Edition](https://guildframe.com/guides/kickstarter-for-existing-products): Can you Kickstart an existing product? Yes, if the campaign makes something new. Rules, past backers, upgrade pricing and cash flow for version two.
+- [How to Relaunch a Failed Kickstarter: What to Do Next](https://guildframe.com/guides/relaunch-failed-kickstarter): Your Kickstarter failed, so what next? Diagnose traffic, conversion, goal and price, decide when to cancel early, and relaunch without losing your backers.
+- [Kickstarter Prototype Requirements and Rules for Renders (2026)](https://guildframe.com/guides/kickstarter-prototype-rules): Kickstarter prototype requirements from its own help center: working prototypes, the real prototype video, the render ban, AI disclosure and review.
+- [Kickstarter Product Photography: Shot List, Renders and GIFs](https://guildframe.com/guides/kickstarter-product-photography): Kickstarter product photography made simple: photos versus renders, a full shot list, lifestyle and studio shots, GIFs and what to brief a photographer.
+- [Manufacturing Quotes Before Kickstarter: MOQ, Samples and Landed Cost](https://guildframe.com/guides/manufacturing-quotes-before-kickstarter): Get a manufacturing quote before Kickstarter: what to send a factory, quotes at several quantities, MOQ, samples, landed cost and how it sets your goal.
+- [Kickstarter Shipping and Fulfillment for Physical Products (2026)](https://guildframe.com/guides/kickstarter-shipping-physical-products): Kickstarter shipping for physical products: charge now or later, regions, fulfillment centers, customs, VAT, the pledge manager and US de minimis in 2026.
+- [How to Price Kickstarter Rewards for a Physical Product](https://guildframe.com/guides/kickstarter-reward-pricing-physical-products): How to price Kickstarter rewards for a physical product: landed cost, fees, shipping, early bird and bundles, with a worked example on a $79 product.
+- [Kickstarter Statistics by Category: Success Rates and Average Raise (2026)](https://guildframe.com/guides/kickstarter-statistics-by-category): Kickstarter statistics by category: success rates, the average and median raise, funding brackets and 2026 dollars per category, each dated and sourced.
+- [Crowdfunding Glossary: 72 Kickstarter Terms in Plain Words](https://guildframe.com/guides/crowdfunding-glossary): A crowdfunding glossary of 72 Kickstarter terms in plain words, grouped by platform, page, money, marketing, after funding and shipping, with guide links.
 
 ## Start here: launching a tabletop Kickstarter
 
@@ -149,7 +167,7 @@ Dataset: https://guildframe.com/data/kickstarter-tabletop-games-benchmark-2024.c
 
 ## Case studies
 
-- [Tabletop Kickstarter Campaign Design Case Studies](https://guildframe.com/work): all seven client campaigns, filterable by Products, Tabletop and Books.
+- [Tabletop Kickstarter Campaign Design Case Studies](https://guildframe.com/work)
 - [ScentedRealms Kickstarter Campaign Design Case Study](https://guildframe.com/work/scented-realms)
 - [FutureProof Terrain Kickstarter Campaign Design Case Study](https://guildframe.com/work/futureproof-terrain)
 - [Quiver Time CITADEL Kickstarter Campaign Design Case Study](https://guildframe.com/work/quiver-time)

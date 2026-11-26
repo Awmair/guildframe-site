@@ -8,6 +8,8 @@ import { launchGuides, launchGuideDate } from "../../launch-guides";
 import { pageMetadata } from "../../site-config";
 import { SeoArticlePage, ArticleTable } from "../../components/SeoArticlePage";
 import { GuideVisual } from "../../components/GuideVisual";
+
+const plainText = (t: string) => t.replace(/\[([^\]]+)\]\((\/[^)\s]*)\)/g, "$1");
 import { GuideInlineText } from "../../components/GuideInlineText";
 
 export const dynamicParams = false;
@@ -27,13 +29,15 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const related = g.relatedSlugs.map(slug => launchGuides.find(guide => guide.slug === slug)).filter(guide => guide !== undefined);
   const showEconomics = g.slug === "kickstarter-advertising-budget-board-games";
   const toc = [...g.sections.map(s => ({ id: s.id, label: s.title })), ...(showEconomics ? [{id:"advertising-calculator",label:"Try the ad budget calculator"}] : [])];
-  return <SeoArticlePage slug={g.slug} title={g.title} description={g.description} category={g.tag} answer={g.answer} published={g.published ?? launchGuideDate} updated={g.updated ?? launchGuideDate} readTime={`${Math.max(1, Math.ceil(words / 200))} min read`} toc={toc} faqs={g.faqs} sources={g.sources} related={related.map(guide => ({ href: `/guides/${guide.slug}`, label: guide.title }))}>
+  return <SeoArticlePage slug={g.slug} title={g.title} description={g.description} category={g.tag} answer={g.answer} published={g.published ?? launchGuideDate} updated={g.updated ?? launchGuideDate} readTime={`${Math.max(1, Math.ceil(words / 200))} min read`} toc={toc} faqs={g.faqs.map(f => ({ question: plainText(f.question), answer: plainText(f.answer) }))} sources={g.sources} related={related.map(guide => ({ href: `/guides/${guide.slug}`, label: guide.title }))}>
     {g.sections.map(s => <section key={s.id}>
       <h2 id={s.id}>{s.title}</h2>
       {s.paragraphs.map(p => <p key={p}><GuideInlineText text={p} /></p>)}
       {s.list && <ul>{s.list.map(x => <li key={x}><GuideInlineText text={x} /></li>)}</ul>}
       {s.visual && <GuideVisual data={s.visual} />}
-      {s.table && <ArticleTable caption={s.title} headers={s.table.headers} rows={s.table.rows} />}
+      {s.visuals?.map((v, vi) => <GuideVisual key={vi} data={v} />)}
+      {s.table && <ArticleTable caption={s.title} headers={s.table.headers} rows={s.table.rows.map(r => r.map(plainText))} />}
+      {s.takeaway && <p className="gv-takeaway"><strong>Key takeaway</strong> <GuideInlineText text={s.takeaway} /></p>}
       {s.source !== undefined && <p className="article-source-note">Source: <a href={g.sources[s.source].href}>{g.sources[s.source].label}</a>.</p>}
     </section>)}
     {g.slug === "board-game-kickstarter-funding-goal" && <FundingCalculator />}

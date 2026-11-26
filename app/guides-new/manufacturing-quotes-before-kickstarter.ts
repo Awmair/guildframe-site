@@ -1,0 +1,208 @@
+import type { LaunchGuide } from "../launch-guides";
+
+export const guide: LaunchGuide = {
+  published: "2026-11-26",
+  updated: "2026-11-26",
+  slug: "manufacturing-quotes-before-kickstarter",
+  title: "Manufacturing Quotes Before Kickstarter: MOQ, Samples and Landed Cost",
+  seoTitle: "Manufacturing Quotes Before Kickstarter: A Guide",
+  description: "Get a manufacturing quote before Kickstarter: what to send a factory, quotes at several quantities, MOQ, samples, landed cost and how it sets your goal.",
+  tag: "Products",
+  answer: "Get a manufacturing quote before Kickstarter at three or more quantities, with tooling, samples and packaging on separate lines and a clear note of where the price ends. Then add freight, duty, fulfillment and fees to reach landed cost, and set a funding goal that covers the minimum order even if fewer backers pledge.",
+  relatedSlugs: ["tech-gadget-kickstarter-launch-guide", "kickstarter-campaign-cost", "kickstarter-reward-pricing-physical-products", "kickstarter-shipping-physical-products", "how-to-launch-a-product-on-kickstarter"],
+  servicePath: "/kickstarter-product-campaign-design",
+  serviceLabel: "Kickstarter campaign design for products",
+  sources: [
+    { label: "How to Launch a Product on Kickstarter, Part 1: Creating Your Prototype and Manufacturing Plan", publisher: "Kickstarter", href: "https://updates.kickstarter.com/how-to-launch-a-product-on-kickstarter-part-1-creating-your-prototype-and-manufacturing-plan/" },
+    { label: "How to set the right funding goal for your Kickstarter campaign", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236709-how-to-set-the-right-funding-goal-for-your-kickstarter-campaign" },
+    { label: "What are the fees?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236674-what-are-the-fees" },
+    { label: "Developing Your Sample and Prototype (LaunchBoom lesson, February 9, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/launchboom-lessons/developing-your-sample-prototype/" },
+    { label: "Understanding Your Costs and MOQs (LaunchBoom lesson, February 9, 2025)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/launchboom-lessons/understanding-your-costs-and-moqs/" },
+    { label: "Partner Case Study: What It Takes to Actually Build What You Promised (April 28, 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/partner-case-study-what-it-takes-to-actually-build-what-you-promised/" },
+    { label: "Can I charge a tariff surcharge through the pledge manager?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236621-can-i-charge-a-tariff-surcharge-through-the-pledge-manager" },
+  ],
+  sections: [
+    {
+      id: "why-quote-first",
+      title: "Why you need a manufacturing quote before Kickstarter",
+      paragraphs: [
+        "A manufacturing quote before Kickstarter is the number every other number depends on. Kickstarter's product guide says that without research you are guessing how much each product will cost to make and how long it will take.",
+        "Kickstarter also advises a goal that lets you fulfill every reward if you raise exactly 100%. You cannot test that without a real quote, and suppliers often add a minimum order quantity on top. One quote feeds four decisions on your page:",
+      ],
+      source: 0,
+      list: [
+        "The funding goal, which has to cover the minimum order and every reward",
+        "Reward prices, built up from landed cost rather than the factory price",
+        "The delivery date, set from lead times and sample rounds",
+        "Variants and add ons, limited by what the MOQ allows",
+      ],
+      takeaway: "Get a manufacturing quote before Kickstarter, not after. Your goal, reward prices and delivery date all come from it.",
+    },
+    {
+      id: "rfq-pack",
+      title: "What to send a factory to get an accurate quote",
+      paragraphs: [
+        "Factories quote what you describe, so a vague request gets a vague price. A Kickstarter partner case study puts it plainly: a factory will make whatever you ask for, so the request has to be right.",
+        "We help creators put together a short request for quote pack. These are the items a factory needs to price your product properly:",
+      ],
+      source: 5,
+      visual: {
+        kind: "checklist",
+        title: "A complete quote request covers product, order and compliance",
+        groups: [
+          { name: "Product", items: ["Drawings or CAD files, with the revision noted", "Bill of materials", "Materials, finishes and color references", "Photos and video of the working prototype"] },
+          { name: "Order", items: ["Three or more quantities to price", "Packaging and insert specification", "Target ship date", "Where you want the price to end, such as the factory or the port"] },
+          { name: "Compliance", items: ["Certifications the product needs", "Labels and markings on product and box", "Test reports the factory can supply"] },
+        ],
+      },
+      takeaway: "Send every factory the same complete pack, so the quotes you get back can be compared line by line.",
+    },
+    {
+      id: "quantities",
+      title: "Ask for quotes at several quantities",
+      paragraphs: [
+        "Unit prices fall as quantities rise, because setup, tooling and labor spread across more units. So we ask for at least three price points that match three campaign outcomes: your goal, your expected result and a strong result.",
+        "That turns the quote into a plan. If the campaign lands between two price points, you already know your margin at each one.",
+      ],
+      visual: {
+        kind: "bars",
+        title: "Example: unit price drops as the order grows",
+        unit: "$",
+        bars: [
+          { label: "500 units", value: 24.5, display: "$24.50" },
+          { label: "1,000 units", value: 18.2, display: "$18.20", highlight: true },
+          { label: "3,000 units", value: 14.8, display: "$14.80" },
+        ],
+        caption: "Hypothetical quote for a small consumer product, packaging included, tooling quoted separately.",
+      },
+      takeaway: "Ask for manufacturing quotes at your goal quantity, your expected quantity and a strong result. Then every funding outcome already has a known unit price.",
+    },
+    {
+      id: "moq",
+      title: "MOQ: what the minimum order does to your goal",
+      paragraphs: [
+        "A minimum order quantity, or MOQ, is the smallest run a factory will accept. Kickstarter's product guide notes that suppliers may have MOQs you need to meet, and its partner lessons treat MOQ as a core cost question.",
+        "The MOQ matters because your goal has to fund the whole run, not just the units backers buy. Any gap becomes stock you hold and sell later. This check catches the usual problems in a quote:",
+      ],
+      source: 0,
+      visual: {
+        kind: "flow",
+        title: "Is this quote ready to build a goal from?",
+        start: "A factory quote arrives",
+        nodes: [
+          { question: "Does it price at least three quantities?", yes: "Compare the price breaks", no: "Ask again at your goal, expected and strong quantities" },
+          { question: "Is the MOQ at or below the units your goal will pay for?", yes: "Check the cost lines next", no: "Negotiate the MOQ, accept a higher unit price or fund the extra stock" },
+          { question: "Are tooling, samples and packaging on separate lines?", yes: "Check the trade terms next", no: "Ask for each line separately so quotes compare fairly" },
+          { question: "Does it say where the price ends, such as EXW at the factory or FOB at the port?", yes: "Add freight and duty to reach landed cost", no: "Ask which trade term applies" },
+          { question: "Is the quote still valid when your campaign and pledge manager close?", yes: "Build the goal from it", no: "Ask for a validity date that covers both" },
+        ],
+        end: "Ready to set the funding goal",
+        caption: "Our quote check. EXW and FOB are standard trade terms that say where the factory price stops.",
+      },
+      takeaway: "Your funding goal must pay for the whole minimum order. If the MOQ is above the backers you can reach, fix that before launch, not after.",
+    },
+    {
+      id: "samples",
+      title: "Samples before and after you launch",
+      paragraphs: [
+        "Samples are how you check the factory can build what you designed. Kickstarter's partner lesson on prototypes describes three kinds, and each one answers a different question.",
+        "Ask every factory for the sample cost and lead time in writing. Each sample round adds weeks, so every round belongs in your delivery date.",
+      ],
+      source: 3,
+      visual: {
+        kind: "steps",
+        title: "Three samples stand between your prototype and backers' boxes",
+        steps: [
+          { label: "Development sample", detail: "Early build for testing and refining. It helps set cost estimates, lead times and feasibility" },
+          { label: "Preproduction sample", detail: "Built with final materials and specs. You approve it before mass production" },
+          { label: "Preshipment sample", detail: "Pulled from the production line to confirm consistency before shipping" },
+        ],
+        source: "Kickstarter partner lesson, February 2025",
+      },
+      takeaway: "Get a development sample before launch if you can, and plan the preproduction and preshipment samples into your delivery date.",
+    },
+    {
+      id: "landed-cost",
+      title: "Landed cost: from factory price to your warehouse",
+      paragraphs: [
+        "The factory price is only the first line. Landed cost is what one unit costs once it reaches the warehouse that ships to backers: product, packaging, freight, duty, customs fees and insurance.",
+        "Duty depends on the product's tariff code and the country it ships into, so ask your freight forwarder for a written estimate. For US backers, Kickstarter's Tariff Manager lets accepted creators add a tariff surcharge in its pledge manager. Our [shipping guide for physical products](/guides/kickstarter-shipping-physical-products) covers the last leg to backers.",
+      ],
+      source: 6,
+      visual: {
+        kind: "split",
+        title: "Example: a $18.20 factory price lands at $21.30",
+        total: "Example: landed cost per unit, 1,000 unit order",
+        parts: [
+          { label: "Factory price", share: 16.4, display: "$16.40" },
+          { label: "Retail packaging", share: 1.8, display: "$1.80" },
+          { label: "Sea freight to the warehouse", share: 1.9, display: "$1.90" },
+          { label: "Duty, customs fees and insurance", share: 1.2, display: "$1.20" },
+        ],
+        caption: "Hypothetical numbers. Shipping from the warehouse to each backer is priced separately.",
+      },
+      takeaway: "Price every reward from landed cost, not from the factory price. The gap between the two is often what turns a funded campaign into a loss.",
+    },
+    {
+      id: "goal",
+      title: "How manufacturing quotes shape your funding goal",
+      paragraphs: [
+        "Once you have landed cost and the MOQ, the goal is arithmetic. Kickstarter takes a 5% fee on funds collected and payment processing adds about 3% plus $0.20 per pledge for a US project ([Kickstarter fees explained](/guides/kickstarter-fees)), so we divide what you need by the share you keep.",
+        "Here is the full chain on the example product, with every number labeled as an example. Our [campaign cost guide](/guides/kickstarter-campaign-cost) and [reward pricing guide](/guides/kickstarter-reward-pricing-physical-products) cover the other lines:",
+      ],
+      source: 1,
+      visual: {
+        kind: "steps",
+        title: "Example: a 1,000 unit MOQ sets a goal of about $35,200",
+        steps: [
+          { label: "Production at MOQ", detail: "1,000 units at $18.20 = $18,200" },
+          { label: "Tooling and samples", detail: "$6,000 tooling plus $1,800 samples and testing" },
+          { label: "Freight and duty to the warehouse", detail: "1,000 units at $3.10 = $3,100" },
+          { label: "Reserve", detail: "About 10%, rounding the need to $32,000" },
+          { label: "Divide by the share you keep", detail: "$32,000 divided by 0.91 is about $35,200" },
+          { label: "Check the backer count", detail: "At $59 a pledge, that is about 600 backers for 1,000 units" },
+        ],
+        caption: "Hypothetical example. Fees assume 5% plus about 4% processing. The 400 units left over become stock to sell later.",
+        source: "Kickstarter fees and funding goal help articles, checked November 26, 2026",
+      },
+      takeaway: "Build the goal from the full minimum order, tooling, samples, freight, a reserve and fees. Then check how many backers that goal needs, and whether you can reach them.",
+    },
+    {
+      id: "compare-quotes",
+      title: "Compare quotes line by line",
+      paragraphs: [
+        "The lowest unit price is not always the cheapest quote. Tooling, MOQ, sample costs and where the price ends can swing the real total by thousands.",
+        "Example: two hypothetical quotes for the same product, side by side.",
+      ],
+      table: {
+        headers: ["Line", "Quote A", "Quote B", "Why it matters"],
+        rows: [
+          ["Unit price at 1,000", "$17.90", "$18.20", "Looks cheaper at first glance"],
+          ["MOQ", "2,000 units", "1,000 units", "Quote A doubles the order your goal must fund"],
+          ["Tooling", "Spread into the unit price", "$6,000, molds owned by you", "Owning the molds lets you move factories"],
+          ["Samples", "$400, 3 weeks", "$800, 2 weeks", "Lead time changes your delivery date"],
+          ["Price ends at", "EXW, at the factory", "FOB, at the port", "EXW leaves inland freight to you"],
+          ["Valid for", "30 days", "90 days", "A short validity can expire mid campaign"],
+        ],
+      },
+      takeaway: "Compare manufacturing quotes on MOQ, tooling ownership, sample lead time, trade terms and validity, not just the unit price. In this example, Quote B costs less once the MOQ is counted.",
+    },
+    {
+      id: "how-we-help",
+      title: "How we use your quotes on the page",
+      paragraphs: [
+        "We do not source factories, but we build the page and the numbers around your quotes. That means reward prices, the funding goal, the delivery timeline and an honest production section that backers can check.",
+        "That work sits in our [Kickstarter campaign design for products](/kickstarter-product-campaign-design). If you want to see the approach first, we design the opening section of your page for free, with no obligation.",
+      ],
+      takeaway: "Bring real quotes and we build a page backers can trust. A goal set from quotes is the single best protection against funding at a loss.",
+    },
+  ],
+  faqs: [
+    { question: "Do I need a manufacturing quote before launching on Kickstarter?", answer: "Yes. Kickstarter advises a goal that lets you fulfill every reward if you raise exactly 100%, and you cannot test that without a real quote, the minimum order quantity and the landed cost." },
+    { question: "How many quantities should I ask a factory to quote?", answer: "At least three: the quantity your goal pays for, your expected result and a strong result. Then every funding outcome has a known unit price and margin." },
+    { question: "What is MOQ and how does it affect my Kickstarter goal?", answer: "MOQ is the minimum order quantity a factory accepts. Your goal has to pay for the whole run, so if the MOQ is 1,000 units and you expect 600 backers, the goal funds 400 units of stock you sell later." },
+    { question: "What is landed cost?", answer: "Landed cost is what one unit costs once it reaches the warehouse that ships to backers: factory price, packaging, freight, duty, customs fees and insurance. Price rewards from landed cost, not the factory price." },
+    { question: "Should I get samples before my Kickstarter campaign?", answer: "Get at least a development sample if you can. It helps set cost estimates, lead times and feasibility, and the preproduction and preshipment samples then belong in your delivery date." },
+    { question: "How long should a manufacturing quote be valid?", answer: "Long enough to cover your campaign and pledge manager. Ask the factory for a validity date that reaches past both, because prices can change before you place the order." },
+  ],
+};

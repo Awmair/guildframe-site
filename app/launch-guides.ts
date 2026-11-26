@@ -2,10 +2,29 @@ import type {GuideVisualData} from "./components/GuideVisual";
 import {growthGuides} from "./launch-growth-guides";
 import {reviseLaunchGuide} from "./launch-guide-revisions";
 import {reviseBuyerGuide} from "./growth-buyer-revisions";
+import {applyVisualLayer} from "./guide-visual-layer";
 import {contentDates} from "./content-dates";
 import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
 import {decisionGuides} from "./launch-decision-guides";
+import {guide as ngCreativeProjectKickstarterGuide} from "./guides-new/creative-project-kickstarter-guide";
+import {guide as ngCrowdfundingGlossary} from "./guides-new/crowdfunding-glossary";
+import {guide as ngHowToLaunchABookOnKickstarter} from "./guides-new/how-to-launch-a-book-on-kickstarter";
+import {guide as ngHowToLaunchAKickstarterCampaign} from "./guides-new/how-to-launch-a-kickstarter-campaign";
+import {guide as ngHowToLaunchAProductOnKickstarter} from "./guides-new/how-to-launch-a-product-on-kickstarter";
+import {guide as ngKickstarterCampaignCost} from "./guides-new/kickstarter-campaign-cost";
+import {guide as ngKickstarterCampaignTimeline} from "./guides-new/kickstarter-campaign-timeline";
+import {guide as ngKickstarterForExistingProducts} from "./guides-new/kickstarter-for-existing-products";
+import {guide as ngKickstarterProductPhotography} from "./guides-new/kickstarter-product-photography";
+import {guide as ngKickstarterPrototypeRules} from "./guides-new/kickstarter-prototype-rules";
+import {guide as ngKickstarterRewardPricingPhysicalProducts} from "./guides-new/kickstarter-reward-pricing-physical-products";
+import {guide as ngKickstarterShippingPhysicalProducts} from "./guides-new/kickstarter-shipping-physical-products";
+import {guide as ngKickstarterStatisticsByCategory} from "./guides-new/kickstarter-statistics-by-category";
+import {guide as ngKickstarterVsIndiegogo} from "./guides-new/kickstarter-vs-indiegogo";
+import {guide as ngManufacturingQuotesBeforeKickstarter} from "./guides-new/manufacturing-quotes-before-kickstarter";
+import {guide as ngRelaunchFailedKickstarter} from "./guides-new/relaunch-failed-kickstarter";
+import {guide as ngTechGadgetKickstarterLaunchGuide} from "./guides-new/tech-gadget-kickstarter-launch-guide";
+import {guide as ngWatchFashionAccessoriesKickstarterGuide} from "./guides-new/watch-fashion-accessories-kickstarter-guide";
 import {generalGuides} from "./launch-guides-general";
 import {guide as ngBoardGameKickstarterCost} from "./guides-new/board-game-kickstarter-cost";
 import {guide as ngHowToDesignAKickstarterPage} from "./guides-new/how-to-design-a-kickstarter-page";
@@ -25,7 +44,7 @@ import {guide as ngKickstarterImageSizes} from "./guides-new/kickstarter-image-s
 import {guide as ngTcgKickstarterLaunchGuide} from "./guides-new/tcg-kickstarter-launch-guide";
 import {guide as ngTerrainAndDiceKickstarterLaunchGuide} from "./guides-new/terrain-and-dice-kickstarter-launch-guide";
 import {guide as ngTtrpgKickstarterLaunchGuide} from "./guides-new/ttrpg-kickstarter-launch-guide";
-export type LaunchSection={id:string;title:string;paragraphs:string[];list?:string[];table?:{headers:string[];rows:string[][]};source?:number;visual?:GuideVisualData};
+export type LaunchSection={id:string;title:string;paragraphs:string[];list?:string[];table?:{headers:string[];rows:string[][]};source?:number;visual?:GuideVisualData;visuals?:GuideVisualData[];takeaway?:string};
 export type LaunchGuide={published?:string;updated?:string;slug:string;title:string;seoTitle?:string;relatedSlugs:string[];servicePath:string;serviceLabel:string;description:string;tag:string;answer:string;sections:LaunchSection[];faqs:{question:string;answer:string}[];sources:{label:string;publisher:string;href:string}[]};
 export const launchGuideDate="2026-09-30";
 const originalLaunchGuides:LaunchGuide[]=[
@@ -36,20 +55,38 @@ const originalLaunchGuides:LaunchGuide[]=[
   // seo-pass-2026-11-25 new guides
   ngBoardGameKickstarterCost,
   ngBoardGameTariffsShippingUs,
+  ngCreativeProjectKickstarterGuide,
+  ngCrowdfundingGlossary,
   ngHowToDesignAKickstarterPage,
   ngHowToGetKickstarterBackers,
+  ngHowToLaunchABookOnKickstarter,
+  ngHowToLaunchAKickstarterCampaign,
+  ngHowToLaunchAProductOnKickstarter,
   ngHowToMarketAKickstarter,
   ngIsMyGameReadyForKickstarter,
   ngKickstarterAgencyCost,
+  ngKickstarterCampaignCost,
+  ngKickstarterCampaignTimeline,
   ngKickstarterFees,
   ngKickstarterFollowersBeforeLaunch,
   ngKickstarterForBeginners,
+  ngKickstarterForExistingProducts,
   ngKickstarterImageSizes,
+  ngKickstarterProductPhotography,
+  ngKickstarterPrototypeRules,
+  ngKickstarterRewardPricingPhysicalProducts,
+  ngKickstarterShippingPhysicalProducts,
+  ngKickstarterStatisticsByCategory,
   ngKickstarterVsGamefound,
+  ngKickstarterVsIndiegogo,
+  ngManufacturingQuotesBeforeKickstarter,
   ngPledgeManagersCompared,
+  ngRelaunchFailedKickstarter,
   ngTcgKickstarterLaunchGuide,
+  ngTechGadgetKickstarterLaunchGuide,
   ngTerrainAndDiceKickstarterLaunchGuide,
   ngTtrpgKickstarterLaunchGuide,
+  ngWatchFashionAccessoriesKickstarterGuide,
   ngWhenToLaunchAKickstarter,
   ngWhyKickstarterCampaignsFail,
   // general guides for products, games and books (strategy section 5)
@@ -1415,4 +1452,4 @@ const originalLaunchGuides:LaunchGuide[]=[
 ];
 
 const growthUpdatedSlugs = new Set(["choose-board-game-kickstarter-marketing-agency", "board-game-kickstarter-campaign-design-cost", "kickstarter-prelaunch-email-list", "kickstarter-campaign-video-planning", "kickstarter-advertising-budget-board-games"]);
-export const launchGuides = originalLaunchGuides.map(reviseLaunchGuide).map(reviseBuyerGuide).map(guide => growthUpdatedSlugs.has(guide.slug) && !(guide.updated && guide.updated > contentDates.growthReview) ? {...guide, updated:contentDates.growthReview} : guide);
+export const launchGuides = originalLaunchGuides.map(reviseLaunchGuide).map(reviseBuyerGuide).map(guide => growthUpdatedSlugs.has(guide.slug) && !(guide.updated && guide.updated > contentDates.growthReview) ? {...guide, updated:contentDates.growthReview} : guide).map(applyVisualLayer);
