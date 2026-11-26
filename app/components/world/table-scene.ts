@@ -302,7 +302,7 @@ export function mountTable({ host, labels, caption, onReady, onHover, onOverview
     camera.aspect = width / height;
     const aspect = width / height;
     const wide = Math.max(0, aspect - 1.6), tall = Math.max(0, 1.6 - aspect);
-    rig.radius = 8.4 + wide * 2.27 + tall * 5.5;
+    rig.radius = 8.4 + wide * 1.2 + tall * 5.5;
     rig.polar = 0.92 + wide * 0.08;
     rig.target.x = -0.4 - wide * 0.98 + tall * 0.25;
     rig.target.z = -1.0 + wide * 0.35;
