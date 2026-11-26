@@ -232,9 +232,9 @@ export const guide: LaunchGuide = {
       title: "How we help you choose and launch",
       paragraphs: [
         "We are a studio with two published packages, Umair and his team, and we write, design and launch campaigns on Kickstarter, Indiegogo and Gamefound. We have no commission on either platform, so the advice follows your product and your stock.",
-        "Our [Kickstarter launch services](/kickstarter-launch-services) cover the platform choice, the page and the launch plan. If you want to see the work first, we design the opening section of your page for free, with no obligation.",
+        "Our [Kickstarter launch services](/kickstarter-launch-services) cover the platform choice, the page and the launch plan. To talk it through first, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
-      takeaway: "Tell us about your product and stock, and we will say which platform fits and why. Start with the free opening mockup.",
+      takeaway: "Tell us about your product and stock, and we will say which platform fits and why. Start by sharing your project through the enquiry form.",
     },
   ],
   faqs: [

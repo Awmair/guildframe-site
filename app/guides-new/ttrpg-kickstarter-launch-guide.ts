@@ -132,7 +132,7 @@ export const guide: LaunchGuide = {
       title: "Where Guildframe fits in your RPG launch",
       paragraphs: [
         "We design and run tabletop launches for a living, and TTRPGs are one of our core categories. Our [ScentedRealms campaign](/work/scented-realms), for example, introduced a new accessory for the RPG table. You can run a small zine launch yourself with this guide, a free sample and steady weekly posting. The catch is that writing, layout and audience building all want your evenings at once, and the audience work is the part that slips.",
-        "Our [TTRPG campaign page design](/ttrpg-kickstarter-campaign-design) covers page structure, copy and section graphics built from your artwork, with sample spreads and reward tiers laid out for print and PDF. For a full launch, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) add prelaunch, paid advertising and live campaign support. Send us your premise and a sample spread, and we'll start with a free opening mockup.",
+        "Our [TTRPG campaign page design](/ttrpg-kickstarter-campaign-design) covers page structure, copy and section graphics built from your artwork, with sample spreads and reward tiers laid out for print and PDF. For a full launch, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) add prelaunch, paid advertising and live campaign support. Send us your premise and a sample spread through the [enquiry form](/buy), and we'll agree the scope in writing.",
       ],
       source: 8,
     },

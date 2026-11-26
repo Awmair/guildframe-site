@@ -139,7 +139,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "You can plan most of this yourself if you have clean photography, confirmed dimensions and a fulfillment quote. Where creators usually run short is the sequencing. A folder of renders and test prints has to become a page that answers size, fit and contents in the right order on a phone.",
         "That's the work we do for terrain, dice and accessory launches. We plan the page structure, write the campaign copy, design the scale and assembly graphics, and build reward and add on comparisons from your confirmed contents. Your product design, photography and production quotes stay yours, and we label them as they are.",
-        "If you want to see how your product would open the page, ask for a free opening mockup using your artwork. For the full launch, from prelaunch to the live campaign, see our [Kickstarter launch services for tabletop games](/kickstarter-launch-services), or go straight to our [campaign design for miniatures and terrain](/miniatures-kickstarter-campaign-design).",
+        "To talk through your product and artwork, share your project through the [enquiry form](/buy). For the full launch, from prelaunch to the live campaign, see our [Kickstarter launch services for tabletop games](/kickstarter-launch-services), or go straight to our [campaign design for miniatures and terrain](/miniatures-kickstarter-campaign-design).",
       ],
       source: 8,
     },

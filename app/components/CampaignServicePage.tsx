@@ -38,7 +38,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
  const isProduct = page.variant === "product";
  const landmark = landmarks.find(mark => mark.href === `/${page.slug}`);
  const next = nextLandmark(page);
- const commonFaqs=campaignFaqs.filter(f=>["How much does a full launch cost?","Can I hire you just for design or ads?","How does the free mockup work?","Do I keep my accounts, contacts and files?","Do you handle manufacturing and shipping?"].includes(f.question));
+ const commonFaqs=campaignFaqs.filter(f=>["How much does a full launch cost?","Can I hire you just for design or ads?","Do you film the campaign video?","Do I keep my accounts, contacts and files?","Do you handle manufacturing and shipping?"].includes(f.question));
  const delivery=isProduct?productCampaignDelivery:serviceDelivery[page.slug]??creativeDelivery[page.slug];
  const allFaqs=[...new Map([...(delivery?.faqs??[]),...(categoryFaqs[page.slug]??[]),...commonFaqs].map(f=>[f.question,f])).values()];
  const faqs=isProduct?(delivery?.faqs??[]):isDesign?allFaqs:allFaqs.slice(0,7);
@@ -46,7 +46,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
  const pillarHub=isHub||isDesign?null:isLaunch?{href:`/${hubSlug}`,label:"Kickstarter launch services"}:{href:"/campaign-design",label:"Kickstarter campaign design"};
  const productOffers=isProduct?{serviceType:"Kickstarter campaign design and launch support for products"}:{};
  const service=isLaunch?launchService(page.slug,page.title,page.description):{...campaignService(isDesign),"@id":absoluteUrl(`/${page.slug}#service`),name:page.title,url:absoluteUrl(`/${page.slug}`),description:page.description,...productOffers};
- const ctaLabel = isLaunch ? "Discuss my launch" : "Get my free mockup";
+ const ctaLabel = isLaunch ? "Discuss my launch" : "Plan my campaign";
  const [imageWidth, imageHeight] = page.heroImage ? [page.heroImage.width, page.heroImage.height] : imageSize(page.image);
 
  return <><JsonLd data={{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":absoluteUrl(`/${page.slug}`),name:page.title,url:absoluteUrl(`/${page.slug}`),description:page.description,dateModified:modified,isPartOf:{"@id":absoluteUrl("/#website")},inLanguage:"en",mainEntity:{"@id":service["@id"]},breadcrumb:{"@id":absoluteUrl(`/${page.slug}#breadcrumb`)}},service,{"@type":"BreadcrumbList","@id":absoluteUrl(`/${page.slug}#breadcrumb`),itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:absoluteUrl("/")},{"@type":"ListItem",position:2,name:page.title,item:absoluteUrl(`/${page.slug}`)}]},{"@type":"FAQPage",mainEntity:faqs.map(f=>({"@type":"Question",name:f.question,acceptedAnswer:{"@type":"Answer",text:f.answer}}))}]}}/>
@@ -63,7 +63,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
     <div className="sv-hero-side" data-reveal="rise">
      <p>{page.lead ?? page.description}</p>
      <div className="sv-actions">
-      <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label={isLaunch?"Discuss my launch":"Free opening mockup"} data-analytics-location={page.slug}><Roll>{ctaLabel}</Roll><Icon name="arrow"/></a>
+      <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label={isLaunch?"Discuss my launch":"Plan my campaign"} data-analytics-location={page.slug}><Roll>{ctaLabel}</Roll><Icon name="arrow"/></a>
       <a className="w-link" href={isDesign || isProduct ? "#pricing" : isHub ? "#track" : "#scope"}>{isDesign || isProduct ? "See the price" : isHub ? "See every service" : "See the scope"}</a>
      </div>
     </div>
@@ -177,7 +177,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
      <div className="sv-tier-figure">
       <h2 id="design-price-title">{launchReady.name}: the strategy, the page and the video</h2>
       <p className="sv-price"><span className="sv-price-n">{launchReady.priceText}</span> <span className="sv-price-unit">USD per campaign</span></p>
-      <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Request a free mockup" data-analytics-location="campaign-design pricing"><Roll>Request a free mockup</Roll><Icon name="arrow"/></a>
+      <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Creator Launch" data-analytics-location="campaign-design pricing"><Roll>Plan my creator launch</Roll><Icon name="arrow"/></a>
      </div>
      <div className="sv-tier-body">
       <p>One Kickstarter, Indiegogo or Gamefound campaign, from a locked strategy to a page and video ready to launch. {videoNote}</p>
@@ -216,7 +216,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
       <span className="sv-package-name">{pack.name}</span>
       <span className="sv-package-price">{pack.priceText}</span>
       <span className="sv-package-copy">{pack.summary} Includes {pack.groups.map(group => group.title.toLowerCase()).join(", ").replace(/, ([^,]*)$/, " and $1")}.</span>
-      <span className="sv-package-go">{index ? "Start with the brand" : "Get launch ready"}<Icon name="arrow"/></span>
+      <span className="sv-package-go">{index ? "Plan my founder launch" : "Plan my creator launch"}<Icon name="arrow"/></span>
      </a>)}
     </div>
    </div>
@@ -287,8 +287,8 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
    <div className="w-wrap-wide">
     <div className="sv-beyond">
      <h2 id="book-title" className="w-h2">{isProduct ? "Tell us about your product" : isLaunch ? "Tell us about your launch" : "See your page before you book"}</h2>
-     <p>{isProduct ? "Send your product, images and target date through the booking page, or ask for the free opening mockup first. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : isLaunch ? "Send your project, artwork and target date through the booking page. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : "Book Launch Ready or Brand to Launch, or ask for the free opening mockup first. We design one opening section from your artwork, with no payment and no obligation to book."}</p>
-     <div className="sv-actions"><Link className="w-btn w-btn--coral" href="/buy"><Roll>{isLaunch || isProduct ? "Start your project" : "Book or request a mockup"}</Roll><Icon name="arrow"/></Link></div>
+     <p>{isProduct ? "Send your product, images and target date through the booking page. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : isLaunch ? "Send your project, artwork and target date through the booking page. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : "Send your project, artwork and target date. We reply with the package that fits, the schedule and a written proposal, and nothing is billed until you approve it."}</p>
+     <div className="sv-actions"><Link className="w-btn w-btn--coral" href="/buy"><Roll>{isLaunch || isProduct ? "Start your project" : "Start your project"}</Roll><Icon name="arrow"/></Link></div>
     </div>
    </div>
   </section>}

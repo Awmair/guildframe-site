@@ -411,17 +411,16 @@ export const guide: LaunchGuide = {
         title: "What you bring, and what we can take off your plate",
         columns: [
           { name: "You bring", points: ["The finished manuscript and cover", "Print quotes, or the specification you want", "Your readers and your story as an author"] },
-          { name: "Launch Ready, $2,500", points: ["A locked launch strategy, goal and reward tiers", "One Kickstarter page built from your book images, with copy and format graphics", "A campaign video edited from your book images and videos"], highlight: true },
-          { name: "Brand to Launch, $3,500", points: ["Everything in Launch Ready", "Logo, palette, typefaces and a short brand guide", "A professional website of up to five pages"], verdict: "Ads, prelaunch emails, live campaign management, platform fees and printing are separate" },
+          { name: "Creator Launch, $2,500", points: ["A locked launch strategy, goal and reward tiers", "One Kickstarter page built from your book images, with copy and format graphics", "A campaign video edited from your book images and videos"], highlight: true },
+          { name: "Founder Launch, $3,500", points: ["Everything in Creator Launch", "Logo, palette, typefaces and a short brand guide", "A professional website of up to five pages"], verdict: "Ads, prelaunch emails, live campaign management, platform fees and printing are separate" },
         ],
       },
       list: [
         "Ten years of campaign design and 252 client reviews averaging 5.0",
         "Campaigns we worked on raised more than $5M combined, which is our clients' result",
-        "A free opening mockup: we design the opening section of your page, with no obligation",
         "See [Kickstarter campaign design for products](/kickstarter-product-campaign-design) for the full scope, or [book a call](/buy)",
       ],
-      takeaway: "If you want a book campaign page built for you, start with Kickstarter campaign design for products and ask for the free opening mockup.",
+      takeaway: "If you want a book campaign page built for you, start with Kickstarter campaign design for products and book a 30 minute call.",
     },
   ],
   faqs: [

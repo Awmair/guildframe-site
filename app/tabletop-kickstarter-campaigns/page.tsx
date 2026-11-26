@@ -157,8 +157,8 @@ export default function TabletopHub() {
         <div className="w-wrap-wide">
           <div className="sv-beyond">
             <h2 id="tabletop-next-title" className="w-h2">See your page before you book</h2>
-            <p>Send your game summary and usable artwork. We design one opening section of your campaign page as a free mockup, with no payment and no obligation to book.</p>
-            <div className="sv-actions"><a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Free opening mockup" data-analytics-location="tabletop hub closing"><Roll>Request a free mockup</Roll><Icon name="arrow"/></a></div>
+            <p>Send your game summary, artwork and target date. We reply with the package that fits, the schedule and a written proposal, and nothing is billed until you approve it.</p>
+            <div className="sv-actions"><a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Plan my campaign" data-analytics-location="tabletop hub closing"><Roll>Plan my campaign</Roll><Icon name="arrow"/></a></div>
           </div>
           <nav className="sv-related" aria-label="Related services">
             <Link href="/kickstarter-launch-services">Full launch services</Link>

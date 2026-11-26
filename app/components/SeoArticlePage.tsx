@@ -260,7 +260,7 @@ export function SeoArticlePage({
             <p>
               {isStoreGuide
                 ? "Share your campaign, product list and what you need help with. Guildframe can prepare product content and the campaign handoff, with Shopify planning and setup scoped separately. We agree the work and responsibilities before quoting."
-                : "Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for products, tabletop games and books. Share your project and launch plans to agree a scope. A free opening mockup is available for creative enquiries."}
+                : "Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for products, tabletop games and books. Share your project and launch plans to agree a scope."}
             </p>
             <div className="article-cta-actions">
               <Link
@@ -277,10 +277,10 @@ export function SeoArticlePage({
                 className="w-btn w-btn--ghost"
                 href={isStoreGuide ? "/resources/board-game-shopify-store-checklist" : "#start-project"}
                 data-analytics-event="service_interest"
-                data-analytics-label={isStoreGuide ? "Tabletop store checklist" : "Get my free mockup"}
+                data-analytics-label={isStoreGuide ? "Tabletop store checklist" : "Plan my campaign"}
                 data-analytics-location="article CTA"
               >
-                <Roll>{isStoreGuide ? "Use the store checklist" : "Get my free mockup"}</Roll>
+                <Roll>{isStoreGuide ? "Use the store checklist" : "Plan my campaign"}</Roll>
               </Link>
             </div>
           </div>

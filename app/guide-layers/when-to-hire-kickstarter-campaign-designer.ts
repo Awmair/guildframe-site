@@ -4,7 +4,7 @@ export const layer: GuideLayer = {
   updated: "2026-11-26",
   sections: {
     readiness: {
-      takeaway: "You can hire a Kickstarter campaign designer before the game is finished. The opening mockup can start once the premise and art direction are settled.",
+      takeaway: "You can hire a Kickstarter campaign designer before the game is finished. Planning can start once the premise and art direction are settled.",
     },
     inputs: {
       takeaway: "List every missing asset and who supplies it before you agree a design date. Decide whether the schedule starts at booking or when assets arrive.",
@@ -29,7 +29,7 @@ export const layer: GuideLayer = {
         "Building your own page is a fair choice when someone on the team has the time and the design skills. The honest limit is hours, because layout, graphics, exports and phone checks compete with production, community and prelaunch work in the same weeks.",
         "You can also do both in order. Draft the page yourself with our guide on [how to design a Kickstarter page](/guides/how-to-design-a-kickstarter-page), then bring in a designer for the graphics and final layout.",
         "A designer is worth it when the draft is close but does not read well on a phone, or when those hours are needed elsewhere. Either way, your draft makes a better brief.",
-        "When you hire us, you still own the facts: rules, rewards, prices and delivery. We plan the page, write the copy and build the graphics from your artwork, and both packages, Launch Ready at $2,500 and Brand to Launch at $3,500, are priced on our [campaign design](/campaign-design) page.",
+        "When you hire us, you still own the facts: rules, rewards, prices and delivery. We plan the page, write the copy and build the graphics from your artwork, and both packages, Creator Launch at $2,500 and Founder Launch at $3,500, are priced on our [campaign design](/campaign-design) page.",
         "If you're weighing a full agency instead, our guide to [Kickstarter agency cost](/guides/kickstarter-agency-cost) covers that decision.",
       ],
       visuals: [
@@ -51,7 +51,7 @@ export const layer: GuideLayer = {
       paragraphs: [
         "Kickstarter recommends sharing a prelaunch page at least one week before launch, so people can follow the project and get a launch notification. We treat that week as a floor, and in our planning example the page opens 6 to 12 weeks before launch.",
         "Prepare it alongside the full campaign story, not after it. Check that the title and main image explain the project while the longer page is being designed.",
-        "Once you have a summary and artwork, request a free opening mockup through our [campaign design](/campaign-design) page. We agree the full scope and timing before any work starts.",
+        "Once you have a summary and artwork, share your project through our [campaign design](/campaign-design) page. We agree the full scope and timing before any work starts.",
       ],
       visuals: [
         {

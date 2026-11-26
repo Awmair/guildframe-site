@@ -10,7 +10,7 @@ import { contentDates } from "./content-dates";
  *
  * Every platform figure below was checked on November 26, 2026 against the
  * source listed in the guide. Studio prices are Guildframe's own, from
- * app/packages.ts: Launch Ready at $2,500 and Brand to Launch at $3,500.
+ * app/packages.ts: Creator Launch at $2,500 and Founder Launch at $3,500.
  */
 
 const date = contentDates.generalGuides;
@@ -163,7 +163,7 @@ export const generalGuides: LaunchGuide[] = [
         title: "What you do not need yet",
         paragraphs: [
           "First time creators often wait for things a designer can handle or that come later. You do not need polished copy, a finished video, a website or a perfect logo before you send the brief. Rough notes are enough for copy, because writing the page is part of the work.",
-          "Our Launch Ready package is $2,500 and covers the launch strategy, the campaign page with its copy, graphics and setup, and the campaign video, made from the product images and videos you provide. Brand to Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, prelaunch email campaigns, live campaign management and platform fees are quoted separately on top of either package. The full scope is on our [pricing page](/campaign-design#pricing).",
+          "Our Creator Launch package is $2,500 and covers the launch strategy, the campaign page with its copy, graphics and setup, and the campaign video, made from the product images and videos you provide. Founder Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, prelaunch email campaigns, live campaign management and platform fees are quoted separately on top of either package. The full scope is on our [pricing page](/campaign-design#pricing).",
         ],
         source: 4,
       },
@@ -171,7 +171,7 @@ export const generalGuides: LaunchGuide[] = [
         id: "next",
         title: "What happens after you send it",
         paragraphs: [
-          "We read the brief, reply with any questions and then agree the scope, the price and the dates in writing before any work starts. If you would like to see a direction first, we design the opening section of your page for free, with no payment or obligation to book.",
+          "We read the brief, reply with any questions and then agree the scope, the price and the dates in writing before any work starts. If you would like to talk it through first, book a 30 minute call.",
           "Product creators can see how we approach their category on our [product campaign page](/kickstarter-product-campaign-design). When the brief is ready, or even half ready, send it through the [project enquiry form](/guides/kickstarter-campaign-brief#start-project) at the bottom of this page.",
         ],
         visual: {
@@ -181,7 +181,7 @@ export const generalGuides: LaunchGuide[] = [
             { label: "Send the brief", detail: "Whatever you have, with the gaps marked" },
             { label: "Questions", detail: "We ask about anything unclear or missing" },
             { label: "Scope in writing", detail: "Sections, files, price and dates agreed" },
-            { label: "Free opening mockup", detail: "Optional, before you book" },
+            { label: "Work starts", detail: "Once you approve the written scope" },
           ],
           caption: "The order we follow for every enquiry.",
         },
@@ -304,8 +304,8 @@ export const generalGuides: LaunchGuide[] = [
         id: "our-page-package",
         title: "What our packages cover",
         paragraphs: [
-          "Our Launch Ready package is $2,500. It covers the launch strategy, the page structure in this order, the copy written from your confirmed specifications, the section graphics built from your product images, the reward setup and the campaign video. Brand to Launch at $3,500 adds branding and a professional website. Prelaunch emails, ads and live campaign management are quoted separately on top of either package.",
-          "Start with our [brief checklist](/guides/kickstarter-campaign-brief) to gather what we need, see our [product campaign page](/kickstarter-product-campaign-design) and [pricing](/campaign-design#pricing), or ask for a free opening section through the [enquiry form](/guides/product-kickstarter-page#start-project).",
+          "Our Creator Launch package is $2,500. It covers the launch strategy, the page structure in this order, the copy written from your confirmed specifications, the section graphics built from your product images, the reward setup and the campaign video. Founder Launch at $3,500 adds branding and a professional website. Prelaunch emails, ads and live campaign management are quoted separately on top of either package.",
+          "Start with our [brief checklist](/guides/kickstarter-campaign-brief) to gather what we need, see our [product campaign page](/kickstarter-product-campaign-design) and [pricing](/campaign-design#pricing), or share your project through the [enquiry form](/guides/product-kickstarter-page#start-project).",
         ],
         source: 4,
       },
@@ -426,7 +426,7 @@ export const generalGuides: LaunchGuide[] = [
         title: "If you miss the goal, and where we help",
         paragraphs: [
           "If the campaign ends short, backers are not charged and Kickstarter takes no fees. You can relaunch as a new project with a new URL and a different title, copying content and rewards from the first one, but pledges do not carry over.",
-          "We set the goal with you as part of the launch strategy in both packages, in the same sheet as the reward tiers and pricing plan. Launch Ready is $2,500 for the strategy, campaign page and video, and Brand to Launch is $3,500 and adds branding and a website. See the [pricing](/campaign-design#pricing) or send your numbers through the [enquiry form](/guides/kickstarter-funding-goal#start-project) and we will look at them with you.",
+          "We set the goal with you as part of the launch strategy in both packages, in the same sheet as the reward tiers and pricing plan. Creator Launch is $2,500 for the strategy, campaign page and video, and Founder Launch is $3,500 and adds branding and a website. See the [pricing](/campaign-design#pricing) or send your numbers through the [enquiry form](/guides/kickstarter-funding-goal#start-project) and we will look at them with you.",
         ],
         source: 4,
       },

@@ -105,7 +105,7 @@ export const guide: LaunchGuide = {
       title: "Kickstarter pricing for page design: four ways to pay",
       paragraphs: [
         "Page design is where Kickstarter pricing varies most, because the same job can be bought four different ways. You can build it yourself, hire a freelancer, buy a package from a studio like us, or sign with an agency that takes a commission.",
-        "Our Launch Ready package is $2,500 for the strategy, campaign page and video; Brand to Launch is $3,500 and adds branding and a website. Ad spend, ad management, prelaunch emails, live campaign management, software, platform fees and production stay separate, and other providers price their own scope, so compare the full list of work.",
+        "Our Creator Launch package is $2,500 for the strategy, campaign page and video; Founder Launch is $3,500 and adds branding and a website. Ad spend, ad management, prelaunch emails, live campaign management, software, platform fees and production stay separate, and other providers price their own scope, so compare the full list of work.",
       ],
       visual: {
         kind: "compare",
@@ -113,7 +113,7 @@ export const guide: LaunchGuide = {
         columns: [
           { name: "Do it yourself", points: ["Your time and a design tool", "Full control", "Hardest part is the copy and layout"], verdict: "Cash cost near zero" },
           { name: "Freelancer", points: ["Price set by each designer", "Scope varies a lot", "You manage the brief"], verdict: "Quote by quote" },
-          { name: "Guildframe", points: ["Launch Ready: strategy, page and video from your product images and videos", "Brand to Launch adds branding and a website", "No commission"], verdict: "$2,500 or $3,500", highlight: true },
+          { name: "Guildframe", points: ["Creator Launch: strategy, page and video from your product images and videos", "Founder Launch adds branding and a website", "No commission"], verdict: "$2,500 or $3,500", highlight: true },
           { name: "Commission agency", points: ["Share of funds raised", "Often bundles ads", "Cost grows with your total"], verdict: "Varies with the raise" },
         ],
         caption: "Our prices are set per package. Ad spend, ad management, software, platform fees and production are always separate.",
@@ -197,7 +197,7 @@ export const guide: LaunchGuide = {
           ["Example product", "$25 book or small accessory", "$60 everyday product", "$150 gadget"],
           ["Prototypes and samples", "$300", "$1,500", "$6,000"],
           ["Photos and video", "$250", "$2,000", "$6,000"],
-          ["Page design", "$0, built yourself", "$2,500 Launch Ready", "$3,500 Brand to Launch"],
+          ["Page design", "$0, built yourself", "$2,500 Creator Launch", "$3,500 Founder Launch"],
           ["Ads and prelaunch", "$500", "$3,000", "$15,000"],
           ["Software and tools", "$100", "$300", "$600"],
           ["Before launch total", "$1,150", "$9,300", "$31,100"],
@@ -245,16 +245,16 @@ export const guide: LaunchGuide = {
       title: "Where we fit in your Kickstarter budget",
       paragraphs: [
         "We are a studio with two published packages, Umair and his team, with ten years of campaign design behind us and 252 client reviews averaging 5.0. Our fee sits on one line of your budget and never grows with your raise.",
-        "Our [Kickstarter launch services](/kickstarter-launch-services) cover the strategy, the page and the video, with prelaunch and the live campaign quoted separately. If you want to see our work on your product first, we design the opening section of your page for free, with no obligation.",
+        "Our [Kickstarter launch services](/kickstarter-launch-services) cover the strategy, the page and the video, with prelaunch and the live campaign quoted separately. To talk through your numbers first, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
-      takeaway: "Know your two budgets before you spend on anything. Then ask for the free opening mockup and see whether a $2,500 Launch Ready package fits your numbers.",
+      takeaway: "Know your two budgets before you spend on anything. Then book a 30 minute call and see whether a $2,500 Creator Launch package fits your numbers.",
     },
   ],
   faqs: [
     { question: "How much does it cost to start a Kickstarter?", answer: "Nothing to list. The costs are fees of about 8 to 10 percent if you fund, plus what you spend before launch on samples, photos, page design and ads." },
     { question: "What does Kickstarter charge?", answer: "Kickstarter takes 5% of the funds raised, and US payment processing adds 3% plus $0.20 per pledge. Pledges under $10 pay 5% plus $0.05, and there are no fees if the project doesn't fund." },
     { question: "How much should I spend on Kickstarter ads?", answer: "Start small and scale what works. A Kickstarter blog budget guide from 2022 suggests first time creators start around $5 a day. We raise spend only on ads that bring signups at a cost the budget allows." },
-    { question: "How much does Kickstarter page design cost?", answer: "It ranges from your own time to a share of the raise. Our Launch Ready package is $2,500 for the strategy, page and video, and Brand to Launch is $3,500 with branding and a website, with ad spend, ad management, software, platform fees and production separate." },
+    { question: "How much does Kickstarter page design cost?", answer: "It ranges from your own time to a share of the raise. Our Creator Launch package is $2,500 for the strategy, page and video, and Founder Launch is $3,500 with branding and a website, with ad spend, ad management, software, platform fees and production separate." },
     { question: "How big a reserve should I keep?", answer: "Kickstarter's June 2026 guide says 20 to 30 percent is a good place to start. We build it into the goal so the reserve is funded, not hoped for." },
     { question: "Do I pay tax on Kickstarter money?", answer: "Possibly. The IRS says crowdfunding money may count as gross income depending on the facts, so ask an accountant before you set the goal." },
   ],

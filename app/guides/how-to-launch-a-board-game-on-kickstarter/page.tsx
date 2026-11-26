@@ -357,7 +357,7 @@ const stages: Stage[] = [
           "A good campaign page answers four questions in the order a backer asks them. What is this game, how does it play, what do I get, and why should I trust you?",
           "The top needs a clear project image, a title and subtitle that say what kind of game it is, and an opening section that shows the game on the table. Below that comes one turn of play rather than the whole rulebook, then everything in the box and a reward comparison.",
           "Most first pages go wrong with walls of text, tiny type inside images that nobody can read on a phone, and prices that sit far from the rewards they describe. Graphics should also be sized for Kickstarter's layout, and our [image sizes guide](/guides/kickstarter-image-sizes) lists the current numbers.",
-          "Page design is the work we do most. We offer a free opening mockup of the top section using your own artwork, so you can see the difference before you pay anything.",
+          "Page design is the work we do most. Umair and his team build the page from your own artwork, and the scope is agreed in writing before you pay anything.",
           "Before launch, run the finished page against our [board game page checklist](/guides/board-game-kickstarter-page-checklist).",
         ],
         nextLead: "To build the page section by section, read",
@@ -612,7 +612,7 @@ const stages: Stage[] = [
 const helpRows: { stage: string; you: string; we: string; href: string; hub: string }[] = [
   { stage: "Planning, costs, goal and pricing", you: "The game, the quotes and the numbers", we: "Launch planning, scope and a schedule with named owners", href: "/kickstarter-launch-services", hub: "Kickstarter launch services for tabletop games" },
   { stage: "Platform choice", you: "Deciding on Kickstarter or Gamefound", we: "Gamefound story page, rewards, prelaunch and ads", href: "/gamefound-launch-services", hub: "Gamefound launch services" },
-  { stage: "The campaign page", you: "Art, rules and product facts", we: "Page design and copy, starting with a free opening mockup", href: "/campaign-design", hub: "Kickstarter campaign design" },
+  { stage: "The campaign page", you: "Art, rules and product facts", we: "Page design and copy, built from your artwork", href: "/campaign-design", hub: "Kickstarter campaign design" },
   { stage: "Video and visuals", you: "Footage and the prototype", we: "Renders, motion and ad variants", href: "/campaign-creative", hub: "Kickstarter campaign creative" },
   { stage: "Prelaunch and marketing", you: "Showing up in your community", we: "Prelaunch page, signup flow and email sequence", href: "/kickstarter-prelaunch-marketing", hub: "Kickstarter prelaunch marketing" },
   { stage: "Ads", you: "The ad budget and your own ad account", we: "Ad creative, capped tests and clear reports", href: "/kickstarter-advertising", hub: "Kickstarter advertising" },
@@ -890,7 +890,7 @@ export default function HowToLaunchABoardGameOnKickstarterPage() {
           </table>
         </div>
         <p>
-          Our prices are set per package. Launch Ready is $2,500 and covers the launch strategy, the
+          Our prices are set per package. Creator Launch is $2,500 and covers the launch strategy, the
           campaign page and the campaign video, made from the images and videos you provide. Brand to
           Launch is $3,500 and adds branding and a professional website. Ad spend, ad management,
           prelaunch emails, live campaign management, software, platform fees and production are quoted
@@ -906,19 +906,17 @@ export default function HowToLaunchABoardGameOnKickstarterPage() {
         <h2 id="next-step">What should I do next?</h2>
         <p>
           Pick the chapter that worries you most and read its guide first. When you want to talk about
-          your own game, there are two easy ways to start, and neither asks for payment up front.
+          your own game, there are two easy ways to start.
         </p>
         <p>
-          The lowest risk first step is the free opening mockup. We design one opening campaign section
-          using your artwork, with no payment and no obligation to book, so you can judge the work on
-          your own game. If you already know what you need, start a project and we will reply with a
-          scope for your launch.
+          If you would like to talk it through first, book a 30 minute call. If you already know what
+          you need, start a project and we will reply with a scope for your launch.
         </p>
         <ArticleCallout>
           <strong>Ready to plan your launch?</strong>
           <p>
             <Link href="/buy">Start your tabletop launch project</Link> or{" "}
-            <a href="#start-project">request a free opening mockup</a> using your artwork. To see
+            <a href="#start-project">book a 30 minute call</a> to talk it through. To see
             everything a full launch includes, read about our{" "}
             <Link href="/kickstarter-launch-services">Kickstarter launch services for tabletop games</Link>.
           </p>

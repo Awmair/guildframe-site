@@ -166,7 +166,7 @@ export const guide: LaunchGuide = {
       title: "Where to go next",
       paragraphs: [
         "You don't need every answer before you start, only the next one, so pick the step that matches where you are.",
-        "If you want the whole map, our guide on [how to launch a board game on Kickstarter](/guides/how-to-launch-a-board-game-on-kickstarter) walks from prototype to delivery in order. If you want a second pair of eyes, we do this for a living. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) cover planning, the page, prelaunch and the live campaign, and we can design one [opening campaign section](/campaign-design) from your artwork as a free mockup, with no payment or obligation.",
+        "If you want the whole map, our guide on [how to launch a board game on Kickstarter](/guides/how-to-launch-a-board-game-on-kickstarter) walks from prototype to delivery in order. If you want a second pair of eyes, we do this for a living. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) cover planning, the page, prelaunch and the live campaign. When you are ready, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
     },
   ],

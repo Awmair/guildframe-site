@@ -108,7 +108,7 @@ export const guide: LaunchGuide = {
       title: "What help costs if you hire it",
       paragraphs: [
         "You don't have to hire anyone to launch on Kickstarter, and plenty of first games are built by the creator alone. If you do want help, compare published prices rather than vague quotes.",
-        "Our own prices are public. Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video, made from the images and videos you provide. Brand to Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, prelaunch emails, live campaign management, software, platform fees and production are quoted or paid separately. For comparison, BoostYourCampaign publishes full marketing packages at $3,499 to $6,997 flat in its 2026 pricing guide.",
+        "Our own prices are public. Creator Launch is $2,500 and covers the launch strategy, the campaign page and the campaign video, made from the images and videos you provide. Founder Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, prelaunch emails, live campaign management, software, platform fees and production are quoted or paid separately. For comparison, BoostYourCampaign publishes full marketing packages at $3,499 to $6,997 flat in its 2026 pricing guide.",
         "Our guides to [Kickstarter agency cost](/guides/kickstarter-agency-cost) and [campaign design cost](/guides/board-game-kickstarter-campaign-design-cost) compare pricing models and what a fair quote includes. Whoever you choose, put the fee in the before launch column, because the work happens before the campaign money arrives.",
       ],
       source: 3,
@@ -166,6 +166,6 @@ export const guide: LaunchGuide = {
     { question: "How much of the funding do I actually keep?", answer: "Kickstarter says it and its payment partners take 8 to 10 percent of funds. In our illustrative example, a $30,000 US campaign at $40 a pledge pays about $2,550 in fees, and a 20% reserve leaves about $21,450 to make and ship the game." },
     { question: "Do I pay Kickstarter anything if I don't reach my goal?", answer: "No. Kickstarter says there are no fees if funding isn't successful. You still carry whatever you spent before launch." },
     { question: "How much should I keep back in case things go wrong?", answer: "Kickstarter's June 2026 guide suggests 20 to 30 percent as a good place to start. We plan the reserve into the goal, so it is funded rather than hoped for." },
-    { question: "Is it cheaper to do everything myself?", answer: "It costs less money and more time. Plenty of first games are built by the creator alone. If you compare help, use published prices: ours are $2,500 for Launch Ready and $3,500 for Brand to Launch, with ad spend, ad management and production separate." },
+    { question: "Is it cheaper to do everything myself?", answer: "It costs less money and more time. Plenty of first games are built by the creator alone. If you compare help, use published prices: ours are $2,500 for Creator Launch and $3,500 for Founder Launch, with ad spend, ad management and production separate." },
   ],
 };

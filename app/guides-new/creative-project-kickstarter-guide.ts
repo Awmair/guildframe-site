@@ -411,7 +411,7 @@ export const guide: LaunchGuide = {
         kind: "compare",
         title: "Where we help a creative project, and where we are not the right fit",
         columns: [
-          { name: "Where we fit", points: ["The launch strategy, campaign page, copy and reward tiers", "Reward pricing and the fee math", "The campaign video, edited from your images and videos"], verdict: "Launch Ready $2,500, Brand to Launch $3,500", highlight: true },
+          { name: "Where we fit", points: ["The launch strategy, campaign page, copy and reward tiers", "Reward pricing and the fee math", "The campaign video, edited from your images and videos"], verdict: "Creator Launch $2,500, Founder Launch $3,500", highlight: true },
           { name: "Where we do not", points: ["Producing your film, album, artwork or event", "Fundraising for a general cause", "Grant writing or charity campaigns", "Projects where our fee would be a big share of a small goal"], verdict: "Use the free guides, or a local arts organization" },
         ],
       },
@@ -420,9 +420,9 @@ export const guide: LaunchGuide = {
         "Campaigns we worked on raised more than $5M combined, which is our clients' result",
         "No commission, no ad agency retainers and no funding guarantees",
         "Ad spend, software, platform fees and production are separate from our fee",
-        "See [Kickstarter launch services](/kickstarter-launch-services), and ask for a free opening mockup of your page with no obligation",
+        "See [Kickstarter launch services](/kickstarter-launch-services), or [book a call](/buy)",
       ],
-      takeaway: "If your creative project needs a strong page and a clear reward structure, start with Kickstarter launch services and ask for the free opening mockup.",
+      takeaway: "If your creative project needs a strong page and a clear reward structure, start with Kickstarter launch services and book a 30 minute call.",
     },
   ],
   faqs: [

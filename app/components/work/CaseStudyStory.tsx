@@ -147,10 +147,10 @@ export function CaseStudyStory({ project: p, path, title, published, updated, re
         <div className="wk-wrap wk-cta">
           <h2 className="wk-h2">Need help preparing <em>your launch?</em></h2>
           <div>
-            <p>Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for tabletop projects. Share your game and launch plans to agree a scope. A free opening mockup is available for creative enquiries.</p>
+            <p>Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for tabletop projects. Share your game and launch plans to agree a scope.</p>
             <div className="wk-cta-actions">
               <Link className="w-btn" href={servicePath} data-analytics-event="service_interest" data-analytics-label={serviceLabel} data-analytics-location="article CTA">{serviceLabel}<Icon name="arrow" /></Link>
-              <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Get my free mockup" data-analytics-location="article CTA">Get my free mockup<Icon name="arrow" /></a>
+              <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Plan my campaign" data-analytics-location="article CTA">Plan my campaign<Icon name="arrow" /></a>
             </div>
           </div>
         </div>

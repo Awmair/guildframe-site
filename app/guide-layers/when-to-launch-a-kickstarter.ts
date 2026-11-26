@@ -102,7 +102,7 @@ export const layer: GuideLayer = {
       paragraphs: [
         "You can plan all of this yourself with a calendar and the three signals. What a first timer can't plan for yet is how long each job really takes, so the runway often comes up short.",
         "When we plan a launch with you, we set the date from readiness, build the backward plan and keep it updated as the work moves. That's part of our [Kickstarter launch services for tabletop games](/kickstarter-launch-services).",
-        "Launch Ready, at $2,500, covers the launch strategy and timeline, the campaign page and the campaign video; Brand to Launch, at $3,500, adds branding and a website. Prelaunch emails, ads and live campaign management are quoted separately on top of either. If you're not sure you're ready, [tell us where you are](/buy#start-project) and we'll give you an honest read.",
+        "Creator Launch, at $2,500, covers the launch strategy and timeline, the campaign page and the campaign video; Founder Launch, at $3,500, adds branding and a website. Prelaunch emails, ads and live campaign management are quoted separately on top of either. If you're not sure you're ready, [tell us where you are](/buy#start-project) and we'll give you an honest read.",
       ],
       takeaway: "We set your Kickstarter launch date from readiness and keep the backward plan current. Tell us where you are for an honest read.",
     },

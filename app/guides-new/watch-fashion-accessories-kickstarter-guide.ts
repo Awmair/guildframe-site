@@ -397,17 +397,17 @@ export const guide: LaunchGuide = {
         title: "What you bring, and what we take on",
         columns: [
           { name: "You bring", points: ["Samples and your product photos", "The factory quote, MOQ and sizes", "Documents behind every material claim"] },
-          { name: "Launch Ready, $2,500", points: ["A locked launch strategy, goal and reward tiers", "One Kickstarter page built from your product images, with copy, size charts and reward graphics", "A campaign video edited from your product images and videos"], highlight: true },
-          { name: "Brand to Launch, $3,500", points: ["Everything in Launch Ready", "Logo, palette, typefaces and a short brand guide", "A professional website of up to five pages"], verdict: "Ads, prelaunch emails, live campaign management, platform fees and production are separate" },
+          { name: "Creator Launch, $2,500", points: ["A locked launch strategy, goal and reward tiers", "One Kickstarter page built from your product images, with copy, size charts and reward graphics", "A campaign video edited from your product images and videos"], highlight: true },
+          { name: "Founder Launch, $3,500", points: ["Everything in Creator Launch", "Logo, palette, typefaces and a short brand guide", "A professional website of up to five pages"], verdict: "Ads, prelaunch emails, live campaign management, platform fees and production are separate" },
         ],
       },
       list: [
         "Ten years of campaign design and 252 client reviews averaging 5.0",
         "Campaigns we worked on raised more than $5M combined, which is our clients' result",
         "Not the right fit for a $500K launch with a big media budget",
-        "See [Kickstarter campaign design for products](/kickstarter-product-campaign-design), and ask for a free opening mockup of your page with no obligation",
+        "See [Kickstarter campaign design for products](/kickstarter-product-campaign-design), or [book a call](/buy)",
       ],
-      takeaway: "If you want your watch or fashion page built for you, start with Kickstarter campaign design for products and ask for the free opening mockup.",
+      takeaway: "If you want your watch or fashion page built for you, start with Kickstarter campaign design for products and book a 30 minute call.",
     },
   ],
   faqs: [

@@ -246,7 +246,7 @@ export const guide: LaunchGuide = {
         "Budget from money you actually collect, since some pledges fail at the end.",
         "Turn on late pledges before the campaign ends, at about 10% above the campaign price.",
         "Read our [A to Z guide on how to launch a product on Kickstarter](/guides/how-to-launch-a-product-on-kickstarter) for where pricing sits in the plan.",
-        "We build reward sections as part of both our packages, from $2,500; see [Kickstarter campaign design for products](/kickstarter-product-campaign-design) and ask for a free opening mockup.",
+        "We build reward sections as part of both our packages, from $2,500; see [Kickstarter campaign design for products](/kickstarter-product-campaign-design) or [book a call](/buy).",
       ],
       takeaway: "A reward price is ready when it survives a cost rise, a weak ad week and the fees, and still looks like a deal against retail.",
     },

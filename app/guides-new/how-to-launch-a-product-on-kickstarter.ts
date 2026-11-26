@@ -452,18 +452,17 @@ export const guide: LaunchGuide = {
         title: "Three ways to launch a product on Kickstarter",
         columns: [
           { name: "Do it yourself", points: ["You write, design and build the page", "You run prelaunch and ads", "Costs your time"], verdict: "Fine with time and design skills" },
-          { name: "Launch Ready", points: ["A locked launch strategy", "One Kickstarter page from your product images, built on the platform", "A campaign video from your images and videos"], verdict: "$2,500", highlight: true },
-          { name: "Brand to Launch", points: ["Everything in Launch Ready", "Logo, palette and a short brand guide", "A professional website of up to five pages"], verdict: "$3,500" },
+          { name: "Creator Launch", points: ["A locked launch strategy", "One Kickstarter page from your product images, built on the platform", "A campaign video from your images and videos"], verdict: "$2,500", highlight: true },
+          { name: "Founder Launch", points: ["Everything in Creator Launch", "Logo, palette and a short brand guide", "A professional website of up to five pages"], verdict: "$3,500" },
         ],
         caption: "Ad spend, ad management, prelaunch emails, live campaign management, software, platform fees and production are separate in every option.",
       },
       list: [
         "We're a good fit for everyday products, accessories and lifestyle goods with a working prototype.",
         "We're not the right fit for a $500K hardware launch with a big media budget.",
-        "We start with a free opening mockup: the first section of your page, designed for free, no obligation.",
         "See our [Kickstarter campaign design for products](/kickstarter-product-campaign-design) for scope, or [book a call](/buy).",
       ],
-      takeaway: "If you'd rather not learn every stage on your own launch, ask for the free opening mockup and see your product's first screen before you commit to anything.",
+      takeaway: "If you'd rather not learn every stage on your own launch, book a 30 minute call and talk through your product before you commit to anything.",
     },
   ],
   faqs: [

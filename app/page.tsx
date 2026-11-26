@@ -19,8 +19,7 @@ const homeFaqs = [
   { question: "How much will the project cost?", answer: `${priceSentence} Both start with a launch strategy we agree with you. Ad spend, ad management and other third party costs are quoted separately.` },
   { question: "Do you only work on games?", answer: "No. We launch everyday products, tabletop games and books. Past work includes a security system for Vespas, an Italian designed watch, a novel and four tabletop campaigns. Tabletop is a specialty, so game creators also get genre pages and guides written for them." },
   { question: "We already have artwork or product images. Can you work with them?", answer: "Yes. Bring your artwork, product photos or renders, the project details and any brand direction. We write the copy and design the campaign graphics around those assets. Any new illustration, 3D or video work is confirmed separately in the brief." },
-  { question: "What is the difference between the two packages?", answer: "Launch Ready is for creators who already have a brand and a website: it covers the launch strategy, the campaign page and the campaign video. Brand to Launch is for founders starting from scratch and adds the branding and a professional website. Prelaunch, paid advertising and live campaign management can be added to either." },
-  { question: "How does the free opening mockup work?", answer: "Send a short description of your project and usable artwork or product images. We design one opening campaign section so you can see a direction before booking. There is no payment or obligation." },
+  { question: "What is the difference between the two packages?", answer: "Creator Launch is for creators who already have a brand and a website: it covers the launch strategy, the campaign page and the campaign video. Founder Launch is for founders starting from scratch and adds the branding and a professional website. Prelaunch, paid advertising and live campaign management can be added to either." },
   { question: "Do I keep my accounts, contacts and files?", answer: "Yes. Your campaign and marketing accounts stay yours. The brief lists the final files and editable sources we hand over." },
   { question: "Can you guarantee the campaign will fund?", answer: "No. Nobody can honestly guarantee funding. The product, audience, pricing and fulfillment plan all affect the result. We agree the work, budget and measures of progress before the project starts." },
 ];
@@ -78,8 +77,8 @@ export default function Home() {
           <div className="h-pricing-head">
             <h2 id="pricing-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Two packages,</span></span> <span className="w-line"><span><em>campaign ready</em></span></span></h2>
             <div>
-              <p>Both start with planning: we lock down the strategy with you before anything is designed. Not sure yet? Send your product images or artwork and we will design one opening section of your page at no cost.</p>
-              <a className="w-link" href="#start-project">Request a free mockup</a>
+              <p>Both start with planning: we lock down the strategy with you before anything is designed. Not sure which one fits? Tell us about your project and we will recommend one.</p>
+              <a className="w-link" href="#start-project">Ask which package fits</a>
             </div>
           </div>
           <PackageTiers location="homepage pricing"/>

@@ -215,7 +215,7 @@ export const guide: LaunchGuide = {
       title: "How we help with a Kickstarter relaunch",
       paragraphs: [
         "We are a studio with two published packages, Umair and his team, and a relaunch is work we know well. We read the old campaign's numbers, name the cause, then rebuild the page, the goal and the prelaunch around it.",
-        "Our [Kickstarter launch services](/kickstarter-launch-services) cover the full relaunch. To see the change before you commit, we design the new opening section of your page for free, with no obligation.",
+        "Our [Kickstarter launch services](/kickstarter-launch-services) cover the full relaunch. To talk through what went wrong before you commit, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
       takeaway: "A failed Kickstarter gives you data most first launches never get. Send us the old link and we will tell you what we would change first.",
     },

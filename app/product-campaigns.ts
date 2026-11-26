@@ -24,9 +24,9 @@ export const productCampaignPage: CampaignPage = {
   heroImage: { src: `/images/work/${raceBox.image}.webp`, width: 1400, height: 788, note: "Client work: the RaceBox campaign image" },
   alt: raceBox.alt,
   lead: "Kickstarter campaign design for a product is the page copy, product creative and reward setup that show backers what you made and why it is worth backing. Umair and his team build that page for gadgets, everyday products, watches and books, on Kickstarter or Indiegogo, and can run the ads and the live campaign around it.",
-  price: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. The video is made from your own product images and footage. Brand to Launch is $3,500 and adds branding and a professional website. Prelaunch, paid ads and live campaign management are quoted on top. Ad spend, software and platform fees are separate, and you pay them in your own accounts.",
+  price: "Creator Launch is $2,500 and covers the launch strategy, the campaign page and the campaign video. The video is made from your own product images and footage. Founder Launch is $3,500 and adds branding and a professional website. Prelaunch, paid ads and live campaign management are quoted on top. Ad spend, software and platform fees are separate, and you pay them in your own accounts.",
   introTitle: "A product page that explains the product before the price.",
-  intro: "A backer needs to see what the product does, how it gets used and what arrives in each reward. We plan that page with you, write the copy from your confirmed specifications and design the graphics from your product images. You can ask for a free opening mockup first, so you see a direction before you book.",
+  intro: "A backer needs to see what the product does, how it gets used and what arrives in each reward. We plan that page with you, write the copy from your confirmed specifications and design the graphics from your product images.",
   details: [
     "Campaign page copy written from your product features and confirmed specifications",
     "Page design and section graphics built from your product photos, renders and brand",
@@ -43,23 +43,23 @@ export const productCampaignPage: CampaignPage = {
 
 const productSteps: GuideVisualData = {
   kind: "steps",
-  title: "A product campaign runs in five steps, starting with a free mockup",
+  title: "A product campaign runs in five steps, starting with the strategy",
   steps: [
-    { label: "Free opening mockup", detail: "One opening section from your product images, with no payment" },
+    { label: "Lock the strategy", detail: "Audience, goal, rewards and timeline signed off" },
     { label: "Agree the proposal", detail: "Sections, creative, ad scope, files and dates in writing" },
     { label: "Copy and graphics", detail: "Written from the specifications you confirm" },
     { label: "Build on the platform", detail: "Kickstarter or Indiegogo, reward tiers checked on a phone" },
     { label: "Launch and live support", detail: "Capped ads and backer updates, with full support" },
   ],
-  caption: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website.",
+  caption: "Creator Launch is $2,500 and covers the launch strategy, the campaign page and the campaign video. Founder Launch is $3,500 and adds branding and a professional website.",
 };
 
 const productCompare: GuideVisualData = {
   kind: "compare",
   title: "Most product campaigns fit one of two packages",
   columns: [
-    { name: "Launch Ready, $2,500", points: ["Launch strategy agreed before design", "Copy and graphics from your product images", "Page and rewards set up on the platform", "Campaign video from your own footage"], verdict: "Suits creators who already have a brand and a website" },
-    { name: "Brand to Launch, $3,500", highlight: true, points: ["Everything in Launch Ready", "Logo, palette, type and a brand guide", "A professional website up to five pages", "Email sign up for your launch list"], verdict: "Suits a founder starting the brand and the launch together" },
+    { name: "Creator Launch, $2,500", points: ["Launch strategy agreed before design", "Copy and graphics from your product images", "Page and rewards set up on the platform", "Campaign video from your own footage"], verdict: "Suits creators who already have a brand and a website" },
+    { name: "Founder Launch, $3,500", highlight: true, points: ["Everything in Creator Launch", "Logo, palette, type and a brand guide", "A professional website up to five pages", "Email sign up for your launch list"], verdict: "Suits a founder starting the brand and the launch together" },
     { name: "A commission agency", points: ["Goals above $200,000", "Large media budgets and teams", "Fees tied to the pledges raised", "Deep hardware launch experience"], verdict: "Usually the better fit for big hardware launches" },
   ],
   caption: "Ad spend, software and platform fees are separate on both packages.",
@@ -80,7 +80,7 @@ export const productProofIntro = "Product and book campaigns we have worked on. 
 
 export const productCampaignDelivery: ServiceDelivery = {
   title: "From product facts to a page ready to publish.",
-  intro: "Start with one free opening mockup if you want to see a direction. The proposal then names the page sections, creative, ad scope, review dates and final files.",
+  intro: "We start by locking down the launch strategy with you. The proposal then names the page sections, creative, ad scope, review dates and final files.",
   steps: [
     { title: "Bring the product facts", copy: "Send product photos or renders, specifications, materials, reward contents, prices and a target date. Mark prototypes and anything still changing." },
     { title: "Build the page and creative", copy: "We write the copy, design the section graphics and set up the reward tiers. Ad creative and prelaunch work follow when they are in the scope." },
@@ -90,15 +90,15 @@ export const productCampaignDelivery: ServiceDelivery = {
   handoff: "Your Kickstarter project, ad account and contacts stay yours. The brief lists the final files, editable sources, revision rounds and support dates.",
   proof: [],
   proofCopy: "Before Guildframe, Umair spent ten years designing campaigns, with 252 client reviews averaging 5.0. Product work includes two campaigns for RaceBox: a GPS drag meter and lap timer, then RaceBox Micro, which 1,013 backers pledged $122,811 to. It also includes Secubix, a parking surveillance system for Vespas, the TubRing drain protector, the Bacàn watch and the novel A World Without Men. Their public totals are shown below as the creators' results.",
-  visualsIntro: "Every product project can start with a free mockup and ends with a page ready for you to publish. Here is the route, then the two ways to book it.",
+  visualsIntro: "Every product project starts with a locked strategy and ends with a campaign ready for you to launch. Here is the route, then the two ways to book it.",
   visuals: [productSteps, productCompare],
   faqs: [
-    { question: "How much does Kickstarter campaign design cost for a product?", answer: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website. Prelaunch, paid ads and live campaign management are quoted on top. Ad spend, software and platform fees are separate." },
+    { question: "How much does Kickstarter campaign design cost for a product?", answer: "Creator Launch is $2,500 and covers the launch strategy, the campaign page and the campaign video. Founder Launch is $3,500 and adds branding and a professional website. Prelaunch, paid ads and live campaign management are quoted on top. Ad spend, software and platform fees are separate." },
     { question: "Do you only work on tabletop games?", answer: "No. We launch everyday products, tabletop games and books. Past work includes the RaceBox drag meter and lap timer, a parking surveillance system for Vespas, a bathtub drain protector, an Italian designed watch and a novel. Tabletop is a specialty, so some of our guides are written for game creators." },
     { question: "Do you work on Indiegogo?", answer: "Yes. We design campaign pages for Kickstarter and Indiegogo, and for Gamefound if you are launching a game. Tell us which platform you are leaning towards and we will plan the page for it." },
     { question: "Is this right for a large hardware launch?", answer: "Usually not. If your goal is above $200,000 and you plan a large ad budget, a commission based agency with a media team is a better fit. We suit smaller product campaigns that need a strong page and modest, carefully tested ads." },
     { question: "Can you work from renders before the final product exists?", answer: "Yes. We label renders and prototypes clearly on the page, so backers know what they are looking at. You confirm the specifications and any changes before launch." },
-    { question: "How does the free mockup work for a product?", answer: "We design one opening campaign section from your product images and description. There is no payment and no obligation to book. It shows you a direction before you decide." },
+    { question: "Do you film the product for the video?", answer: "No. We make the campaign video from the product images and videos you provide, with motion graphics, captions and licensed music. If you need new footage, we can tell you what to shoot." },
     { question: "Do you handle manufacturing, certification or shipping?", answer: "No. Those stay with you and your suppliers. We turn the facts they confirm into clear page copy, reward graphics and backer updates." },
   ],
   guides: {

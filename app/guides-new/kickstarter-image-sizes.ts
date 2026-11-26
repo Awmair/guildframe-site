@@ -140,7 +140,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "Every spec above only helps if the files that reach the editor actually match it. We run the same short checklist on every campaign before upload, grouped by stage.",
         "Upload one finished section and one reward image to the draft early, then check them in the preview on a phone. That catches a wrong crop or a blurry export while it's still a small fix.",
-        "If you'd rather hand this whole job over, our [Kickstarter and Gamefound campaign design](/campaign-design) service builds the page, the graphics and every export to these specs. You can start with a free opening mockup that uses your own artwork.",
+        "If you'd rather hand this whole job over, our [Kickstarter and Gamefound campaign design](/campaign-design) service builds the page, the graphics and every export to these specs. When you are ready, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
       visual: {
         kind: "checklist",

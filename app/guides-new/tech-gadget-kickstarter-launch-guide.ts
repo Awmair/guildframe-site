@@ -350,7 +350,7 @@ export const guide: LaunchGuide = {
         kind: "compare",
         title: "Match the partner to the size of the launch",
         columns: [
-          { name: "Package studio (Guildframe)", points: ["Launch Ready: $2,500 for the strategy, page and video", "Brand to Launch: $3,500, adding branding and a website", "Ad spend and ad management sit outside our fee", "No commission and no funding guarantee"], verdict: "Fits focused gadgets and first launches", highlight: true },
+          { name: "Package studio (Guildframe)", points: ["Creator Launch: $2,500 for the strategy, page and video", "Founder Launch: $3,500, adding branding and a website", "Ad spend and ad management sit outside our fee", "No commission and no funding guarantee"], verdict: "Fits focused gadgets and first launches", highlight: true },
           { name: "Commission agency with a media team", points: ["Fee tied to funds raised", "Large daily ad buying and testing", "Media team and press outreach"], verdict: "Fits $500,000 launches with a big media budget" },
         ],
         caption: "Guildframe prices as of November 2026. Agency terms vary, so compare written proposals.",
@@ -404,7 +404,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "The campaign ending starts the harder half of a tech Kickstarter launch. You lock variants and addresses in a pledge manager, place the production order and post updates as each stage passes.",
         "Kickstarter says its biggest expectation of creators is regular updates. For a gadget, that means photos of test units, certification progress and factory checks on a steady rhythm.",
-        "Our [Kickstarter campaign design for products](/kickstarter-product-campaign-design) covers the page and launch, and we can design the opening section of your page for free, with no obligation. After funding, [post campaign support](/post-campaign-support), [what happens after funding](/guides/what-happens-after-kickstarter-is-funded) and [pledge managers compared](/guides/pledge-managers-compared) cover the next steps.",
+        "Our [Kickstarter campaign design for products](/kickstarter-product-campaign-design) covers the page and launch, and you can [book a call](/buy) to talk through your product. After funding, [post campaign support](/post-campaign-support), [what happens after funding](/guides/what-happens-after-kickstarter-is-funded) and [pledge managers compared](/guides/pledge-managers-compared) cover the next steps.",
       ],
       source: 15,
       takeaway: "After funding, keep backers close with regular updates on tests, certification and the factory. A delay you explain early worries backers far less than silence.",
@@ -417,6 +417,6 @@ export const guide: LaunchGuide = {
     { question: "Can I ship a gadget with a lithium battery to backers?", answer: "Yes, with planning. Each lithium cell or battery must be of a type proven to meet the UN 38.3 tests, and carriers add their own rules, so your fulfillment partner must confirm they accept your battery for every region." },
     { question: "What do EVT, DVT and PVT mean?", answer: "They are the three test builds between a prototype and mass production. EVT checks the engineering works, DVT checks the final design passes reliability and certification testing, and PVT checks the factory line can build it at speed." },
     { question: "How long does a Kickstarter hardware campaign take to deliver?", answer: "It depends on your stage at launch. Kickstarter says delays of more than six months are not uncommon for new products, so we set the estimated delivery date from the slowest stage, usually certification and first production, plus a buffer." },
-    { question: "Is Guildframe the right fit for a $500,000 hardware launch?", answer: "Usually not. A launch that size with a big media budget tends to need a commission agency with a media team. We are a studio with two packages: $2,500 for Launch Ready and $3,500 for Brand to Launch, with ad spend and ad management separate." },
+    { question: "Is Guildframe the right fit for a $500,000 hardware launch?", answer: "Usually not. A launch that size with a big media budget tends to need a commission agency with a media team. We are a studio with two packages: $2,500 for Creator Launch and $3,500 for Founder Launch, with ad spend and ad management separate." },
   ],
 };

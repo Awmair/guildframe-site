@@ -44,6 +44,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     {showEconomics && <LaunchEconomicsCalculator />}
     {g.slug === "kickstarter-prelaunch-email-list" && <p>Check whether the audience you can afford supports your rewards with the <Link href="/guides/kickstarter-advertising-budget-board-games#advertising-calculator">advertising budget calculator</Link>.</p>}
     <GuideProjectExample slug={g.slug} />
-    <aside className="article-callout article-callout--service"><strong>Need help with this part of your launch?</strong><p><Link href={g.servicePath}>{g.serviceLabel}</Link>. Share your project and the work you need help with to agree a scope. You can also request a free opening mockup using your artwork.</p></aside>
+    <aside className="article-callout article-callout--service"><strong>Need help with this part of your launch?</strong><p><Link href={g.servicePath}>{g.serviceLabel}</Link>. Share your project and the work you need help with to agree a scope, or book a 30 minute call.</p></aside>
   </SeoArticlePage>;
 }

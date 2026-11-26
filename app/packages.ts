@@ -1,7 +1,7 @@
 /** Guildframe's two packages. One source for every price and scope on the site. */
 export type PackageGroup = { title: string; items: readonly string[] };
 export type LaunchPackage = {
-  slug: "launch-ready" | "brand-to-launch";
+  slug: "creator-launch" | "founder-launch";
   name: string;
   audience: string;
   price: number;
@@ -26,7 +26,7 @@ export const pageGroup: PackageGroup = {
   items: [
     "Copywriting: the story, product sections, rewards, FAQ, and risks and challenges",
     "Graphics: header, section graphics, feature and comparison graphics, reward and stretch goal graphics",
-    "Setup: the page built on Kickstarter, Indiegogo or Gamefound, with rewards, add-ons and shipping set up",
+    "Setup: the page built on Kickstarter, Indiegogo or Gamefound, with rewards, add ons and shipping set up",
     "Delivered campaign ready, for you to review and submit",
   ],
 };
@@ -63,8 +63,8 @@ export const websiteGroup: PackageGroup = {
 
 export const packages: readonly LaunchPackage[] = [
   {
-    slug: "launch-ready",
-    name: "Launch Ready",
+    slug: "creator-launch",
+    name: "Creator Launch",
     audience: "For creators",
     price: 2500,
     priceText: "$2,500",
@@ -72,12 +72,12 @@ export const packages: readonly LaunchPackage[] = [
     groups: [planningGroup, pageGroup, videoGroup],
   },
   {
-    slug: "brand-to-launch",
-    name: "Brand to Launch",
+    slug: "founder-launch",
+    name: "Founder Launch",
     audience: "For founders",
     price: 3500,
     priceText: "$3,500",
-    summary: "Everything in Launch Ready, plus the brand and a professional website.",
+    summary: "Everything in Creator Launch, plus the brand and a professional website.",
     groups: [planningGroup, brandGroup, pageGroup, videoGroup, websiteGroup],
   },
 ];
@@ -91,4 +91,4 @@ export const videoNote = "We make the video from the product images and videos y
 export const outsideNote = "Ad spend, ad management, prelaunch email campaigns, live campaign management and platform fees are outside both packages and quoted separately if you want them.";
 
 /** One sentence for FAQs, meta copy and guides. */
-export const priceSentence = "Launch Ready is $2,500 and covers the strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website.";
+export const priceSentence = "Creator Launch is $2,500 and covers the strategy, the campaign page and the campaign video. Founder Launch is $3,500 and adds branding and a professional website.";

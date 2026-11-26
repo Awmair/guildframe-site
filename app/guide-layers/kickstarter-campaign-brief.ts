@@ -88,8 +88,8 @@ export const layer: GuideLayer = {
     "not-yet": {
       paragraphs: [
         "First time creators often wait for things a designer can handle or that come later. You do not need polished copy, a finished video, a website or a perfect logo before you send the brief. Rough notes are enough for copy, because writing the page is part of the work.",
-        "Our Launch Ready package is $2,500 and covers the launch strategy, the campaign page with its copy, graphics and setup, and the campaign video, made from the product images and videos you provide.",
-        "Brand to Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, prelaunch email campaigns, live campaign management and platform fees are quoted separately on top of either package, and the full scope is on our [pricing page](/campaign-design#pricing).",
+        "Our Creator Launch package is $2,500 and covers the launch strategy, the campaign page with its copy, graphics and setup, and the campaign video, made from the product images and videos you provide.",
+        "Founder Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, prelaunch email campaigns, live campaign management and platform fees are quoted separately on top of either package, and the full scope is on our [pricing page](/campaign-design#pricing).",
       ],
       visuals: [
         {
@@ -104,7 +104,7 @@ export const layer: GuideLayer = {
       takeaway: "You do not need polished copy, a video, a website or a perfect logo before sending a Kickstarter campaign brief. Send the facts and the rough notes, and the page writing follows.",
     },
     "next": {
-      takeaway: "After you send the brief, we agree scope, price and dates in writing before work starts. You can ask for a free opening section first, with no obligation to book.",
+      takeaway: "After you send the brief, we agree scope, price and dates in writing before work starts. If you would like to talk it through first, book a 30 minute call.",
     },
   },
 };

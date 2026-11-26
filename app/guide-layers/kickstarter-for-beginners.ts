@@ -108,9 +108,9 @@ export const layer: GuideLayer = {
         "You don't need every answer before you start, only the next one, so pick the step that matches where you are.",
         "If you want the whole map, our guide on [how to launch a board game on Kickstarter](/guides/how-to-launch-a-board-game-on-kickstarter) walks from prototype to delivery in order.",
         "If you want a second pair of eyes, we do this for a living. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) cover planning, the page, prelaunch and the live campaign.",
-        "We can also design one [opening campaign section](/campaign-design) from your artwork as a free mockup, with no payment or obligation.",
+        "When you are ready, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
-      takeaway: "Start with the next question, not every question. The tabletop A to Z guide gives the whole map, and a free opening mockup is a low risk first step.",
+      takeaway: "Start with the next question, not every question. The tabletop A to Z guide gives the whole map, and a 30 minute call is an easy first step.",
     },
   },
 };

@@ -13,7 +13,7 @@ export const tabletopHub = {
   lead: "Tabletop is our specialty. Umair and his team plan, write, design and launch Kickstarter and Gamefound campaigns for board games, card games, tabletop RPGs, miniatures and accessories, from the first brief to the backer updates after funding.",
   intro: [
     "A backer has to understand how your game plays before they compare rewards. So the page shows a turn, the components and the decisions players make, then lays out each edition and add on with the same names from the first image to the last reward.",
-    "The services are the same ones every project gets: Launch Ready at $2,500 for the strategy, the campaign page and the video, or Brand to Launch at $3,500 with branding and a website as well. Prelaunch, paid ads and live campaign management are quoted on top. What changes for tabletop is the craft inside them, and the genre pages below show it for each kind of game.",
+    "The services are the same ones every project gets: Creator Launch at $2,500 for the strategy, the campaign page and the video, or Founder Launch at $3,500 with branding and a website as well. Prelaunch, paid ads and live campaign management are quoted on top. What changes for tabletop is the craft inside them, and the genre pages below show it for each kind of game.",
   ],
   scope: [
     "A gameplay explanation with a sample turn or round",
@@ -73,7 +73,7 @@ export const tabletopHub = {
     { question: "Do you still specialize in tabletop games?", answer: "Yes. Tabletop is our specialty and has its own genre pages, case studies and guides. We also launch everyday products and books, and the same services and prices apply to every project." },
     { question: "Which tabletop genres do you work on?", answer: "Board games, card games and TCGs, tabletop RPGs, miniatures and terrain, and dice and accessories. Each genre page lists what we show on the page and the artwork to send." },
     { question: "Do you work on Gamefound as well as Kickstarter?", answer: "Yes. We design and launch campaigns on both. The Gamefound pages explain how the story, rewards and campaign stages change the work." },
-    { question: "How much does a tabletop campaign cost?", answer: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website. Prelaunch, paid ads and live campaign management are quoted on top. Ad spend, software and platform fees are separate." },
-    { question: "What should I send for a free mockup?", answer: "A short summary of your game and usable artwork, such as the box art or a few components. We design one opening section of your page, with no payment and no obligation to book." },
+    { question: "How much does a tabletop campaign cost?", answer: "Creator Launch is $2,500 and covers the launch strategy, the campaign page and the campaign video. Founder Launch is $3,500 and adds branding and a professional website. Prelaunch, paid ads and live campaign management are quoted on top. Ad spend, software and platform fees are separate." },
+    { question: "What should I send to get started?", answer: "A short summary of your game, usable artwork such as the box art or a few components, and your target date. We reply with the package that fits and a written proposal." },
   ],
 };

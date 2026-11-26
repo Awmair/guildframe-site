@@ -493,8 +493,8 @@ export const guide: LaunchGuide = {
       title: "Launching your Kickstarter with us",
       paragraphs: [
         "We are Umair and a small team, and we have written and designed campaigns for ten years, with 252 client reviews averaging 5.0. We charge one price per package, take no commission and don't promise funding results.",
-        "Our [Kickstarter launch services](/kickstarter-launch-services) start with Launch Ready at $2,500: the launch strategy, the campaign page built on the platform, and the campaign video, made from the product images and videos you provide. Brand to Launch is $3,500 and adds branding and a professional website.",
-        "Ad spend, ad management, prelaunch email campaigns, live campaign management, software, platform fees and production are quoted or paid separately. If you want to see our work on your project first, ask for the free opening mockup, and we will design the opening section of your page with no obligation.",
+        "Our [Kickstarter launch services](/kickstarter-launch-services) start with Creator Launch at $2,500: the launch strategy, the campaign page built on the platform, and the campaign video, made from the product images and videos you provide. Founder Launch is $3,500 and adds branding and a professional website.",
+        "Ad spend, ad management, prelaunch email campaigns, live campaign management, software, platform fees and production are quoted or paid separately. To talk through your project first, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
       visual: {
         kind: "stats",
@@ -508,7 +508,7 @@ export const guide: LaunchGuide = {
         caption: "These are our clients' results, not a promise. Across ten years, campaigns we worked on raised more than $5M combined.",
       },
       table: {
-        headers: ["What you bring", "What we do in Launch Ready", "What Brand to Launch adds"],
+        headers: ["What you bring", "What we do in Creator Launch", "What Founder Launch adds"],
         rows: [
           ["Product facts, images and prices", "Lock the strategy, goal and reward tiers, then write and design every section", "Logo, wordmark, palette and typefaces"],
           ["Production and shipping quotes", "Build the page on the platform, ready for you to submit", "A short brand guide and logo files"],
@@ -516,7 +516,7 @@ export const guide: LaunchGuide = {
           ["Decisions on rewards and dates", "Check rewards, shipping text and the phone view", "The website connected to your domain"],
         ],
       },
-      takeaway: "You can run every stage in this guide yourself. If you want the strategy, page and video handled for one package price, start with a free opening mockup.",
+      takeaway: "You can run every stage in this guide yourself. If you want the strategy, page and video handled for one package price, share your project through the enquiry form.",
     },
   ],
   faqs: [

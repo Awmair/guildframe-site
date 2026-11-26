@@ -45,7 +45,7 @@ export const layer: GuideLayer = {
         "There is no single fee that covers every tabletop launch. A useful quote lists the work, the months or campaign stages covered and how extra changes are charged.",
         "A starting price may cover one service rather than the whole campaign. Our [Kickstarter agency cost guide](/guides/kickstarter-agency-cost) compares published prices if you want real numbers to test quotes against.",
         "Most agencies charge a fixed fee, a monthly retainer or a commission on pledges. The four steps below turn any of them into one total commitment.",
-        "Guildframe's Launch Ready package is $2,500 for the strategy, campaign page and video; Brand to Launch is $3,500 and adds branding and a website. Ad spend and ad management are quoted separately. A set package price is not right for every launch, but you do know the bill before work starts.",
+        "Guildframe's Creator Launch package is $2,500 for the strategy, campaign page and video; Founder Launch is $3,500 and adds branding and a website. Ad spend and ad management are quoted separately. A set package price is not right for every launch, but you do know the bill before work starts.",
       ],
       visuals: [
         {
@@ -109,10 +109,10 @@ export const layer: GuideLayer = {
       paragraphs: [
         "Send your game summary, platform, current page or project link, usable artwork and possible launch date. Tell Umair what you already have and which work needs an owner. Include a service and media budget if you have set them.",
         "Guildframe quotes prelaunch, creative, paid advertising and live support around that brief. Service fees and ad spend are separate.",
-        "Campaign design can also be booked on its own, with its scope and price on the design page. You can request a free mockup of one opening section, using your artwork, before booking creative work.",
+        "Campaign design can also be booked on its own, with its scope and price on the design page. You can talk through the scope on a 30 minute call before booking creative work.",
         "Everything we offer is listed on our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) page.",
       ],
-      takeaway: "Send your game summary, platform, artwork and launch date, and ask for the free opening mockup before you book creative work.",
+      takeaway: "Send your game summary, platform, artwork and launch date, and talk it through on a 30 minute call before you commit to creative work.",
     },
     "proposal-comparison": {
       paragraphs: [

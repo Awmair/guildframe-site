@@ -192,7 +192,7 @@ export const guide: LaunchGuide = {
       title: "How we use your quotes on the page",
       paragraphs: [
         "We do not source factories, but we build the page and the numbers around your quotes. That means reward prices, the funding goal, the delivery timeline and an honest production section that backers can check.",
-        "That work sits in our [Kickstarter campaign design for products](/kickstarter-product-campaign-design). If you want to see the approach first, we design the opening section of your page for free, with no obligation.",
+        "That work sits in our [Kickstarter campaign design for products](/kickstarter-product-campaign-design). To talk through your product first, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
       takeaway: "Bring real quotes and we build a page backers can trust. A goal set from quotes is the single best protection against funding at a loss.",
     },

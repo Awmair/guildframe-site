@@ -135,7 +135,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "Not being ready is normal, and finding out now is far cheaper than finding out on launch day. Three focused months can close most of the gap.",
         "Kickstarter's tabletop marketing guide encourages building a rough prototype quickly and testing it early, and that's where most first games still are. So spend the first month on blind tests and rules fixes while an email signup goes live, the second on cover art and quotes, and the third on showing the game every week. When you're picking a date, our guide on [when to launch a Kickstarter](/guides/when-to-launch-a-kickstarter) helps you choose.",
-        "We help creators at exactly this point. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) start with an asset review and a launch schedule with named responsibilities. Once your art is ready, you can also ask for a free opening mockup of your campaign page, with no payment or obligation.",
+        "We help creators at exactly this point. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) start with an asset review and a launch schedule with named responsibilities. Once your art is ready, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
       visual: {
         kind: "timeline",

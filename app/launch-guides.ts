@@ -98,7 +98,7 @@ const originalLaunchGuides:LaunchGuide[]=[
     "title": "How Much Does Board Game Kickstarter Campaign Design Cost?",
     "description": "Budget your tabletop Kickstarter page by scope: copy, graphics, artwork, video and launch support. Compare quotes and see Guildframe’s package prices.",
     "tag": "Budget planning",
-    "answer": "Kickstarter campaign design cost depends on how many page sections, reward comparisons and graphics the quote covers, and on whether your artwork is final. Guildframe’s Launch Ready package is $2,500 for the strategy, campaign page and video; Brand to Launch is $3,500 and adds branding and a website. Ad spend, ad management and platform fees are quoted separately.",
+    "answer": "Kickstarter campaign design cost depends on how many page sections, reward comparisons and graphics the quote covers, and on whether your artwork is final. Guildframe’s Creator Launch package is $2,500 for the strategy, campaign page and video; Founder Launch is $3,500 and adds branding and a website. Ad spend, ad management and platform fees are quoted separately.",
     "sources": [
       {
         "label": "Guildframe campaign design scope and price",
@@ -141,16 +141,16 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "price",
         "title": "Separate campaign creative from the full launch budget",
         "paragraphs": [
-          "A design fee and a launch budget are different numbers, so keep them apart from the start. Our Launch Ready package is $2,500. It covers the launch strategy, page structure, campaign copy, section graphics, reward setup and the campaign video, all made from your supplied artwork, images and videos, and we agree the file list, review process and schedule before starting.",
-          "Brand to Launch is $3,500 and adds branding and a professional website. Either way, ad spend, ad management, prelaunch email campaigns, live campaign management, platform fees and any outside production are quoted or budgeted on their own lines. Other designers’ prices depend on their scope, so one published fee is not an industry average. Separate lines are the honest way to compare our quote with anyone else’s."
+          "A design fee and a launch budget are different numbers, so keep them apart from the start. Our Creator Launch package is $2,500. It covers the launch strategy, page structure, campaign copy, section graphics, reward setup and the campaign video, all made from your supplied artwork, images and videos, and we agree the file list, review process and schedule before starting.",
+          "Founder Launch is $3,500 and adds branding and a professional website. Either way, ad spend, ad management, prelaunch email campaigns, live campaign management, platform fees and any outside production are quoted or budgeted on their own lines. Other designers’ prices depend on their scope, so one published fee is not an industry average. Separate lines are the honest way to compare our quote with anyone else’s."
         ],
         "visual": {
           "kind": "compare",
           "title": "Ad spend and platform fees sit outside both package prices",
           "source": "Guildframe campaign design and launch pricing, November 2026",
           "columns": [
-            { "name": "Launch Ready", "points": ["Launch strategy, goal and reward tiers", "Campaign page copy, graphics and setup", "Campaign video from your images and videos"], "verdict": "$2,500" },
-            { "name": "Brand to Launch", "points": ["Everything in Launch Ready", "Logo, palette, typefaces and a short brand guide", "A professional website of up to five pages"], "verdict": "$3,500", "highlight": true },
+            { "name": "Creator Launch", "points": ["Launch strategy, goal and reward tiers", "Campaign page copy, graphics and setup", "Campaign video from your images and videos"], "verdict": "$2,500" },
+            { "name": "Founder Launch", "points": ["Everything in Creator Launch", "Logo, palette, typefaces and a short brand guide", "A professional website of up to five pages"], "verdict": "$3,500", "highlight": true },
             { "name": "Budgeted separately", "points": ["Ad spend and ad management", "Prelaunch emails and live campaign management", "Software and platform fees", "New illustration, filming or photography", "Manufacturing and shipping"], "verdict": "Quoted or paid separately" }
           ]
         },
@@ -162,11 +162,7 @@ const originalLaunchGuides:LaunchGuide[]=[
           "rows": [
             [
               "Strategy, campaign page and video",
-              "Launch Ready at $2,500, or Brand to Launch at $3,500 with branding and a website"
-            ],
-            [
-              "Free opening section mockup",
-              "No payment or obligation to book"
+              "Creator Launch at $2,500, or Founder Launch at $3,500 with branding and a website"
             ],
             [
               "Prelaunch, advertising and live support",
@@ -189,7 +185,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Missing assets can change the workload",
         "paragraphs": [
           "Tell the designer which assets are ready. Final card art, component renders and confirmed rewards are a different starting point from a prototype photo and unfinished rules. Label placeholders and explain which images will be replaced.",
-          "If you can’t yet show the main product clearly, an opening mockup can help identify what’s missing before you pay for the full page. It also gives you a chance to see whether the design suits the game."
+          "If you can’t yet show the main product clearly, list what’s missing before you book the full page, so the scope reflects the work that is actually needed."
         ]
       },
       {
@@ -197,14 +193,14 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Book against a written brief",
         "paragraphs": [
           "Get the sections, output files, review process and timing in writing. Someone who knows the reward prices and production details should check the finished content before launch.",
-          "To start with us, send the game summary, artwork link, platform and planned launch date. You can request a free opening mockup for creative work, or ask about Launch Ready or Brand to Launch. Either way, we put the deliverables, fees and review dates in writing before you commit."
+          "To start with us, send the game summary, artwork link, platform and planned launch date. You can ask about Creator Launch or Founder Launch, or book a 30 minute call. Either way, we put the deliverables, fees and review dates in writing before you commit."
         ]
       }
     ],
     "faqs": [
       {
         "question": "How much does Guildframe charge to design a Kickstarter page?",
-        "answer": "Launch Ready is $2,500 and covers the strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, software, platform fees and outside production are quoted separately, and the free opening mockup carries no payment or obligation."
+        "answer": "Creator Launch is $2,500 and covers the strategy, the campaign page and the campaign video. Founder Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, software, platform fees and outside production are quoted separately."
       },
       {
         "question": "Is one studio’s design fee an industry average?",
@@ -213,10 +209,6 @@ const originalLaunchGuides:LaunchGuide[]=[
       {
         "question": "Does the price include designing the game itself?",
         "answer": "No. Campaign page design presents your game using supplied artwork and confirmed information. New game illustration, rules development and product design are separate work."
-      },
-      {
-        "question": "Can I request a mockup before deciding?",
-        "answer": "Yes. Send your project and artwork through the free mockup form. There is no obligation to book the full campaign."
       }
     ],
     "seoTitle": "Kickstarter Campaign Design Cost: Board Games",
@@ -367,7 +359,7 @@ const originalLaunchGuides:LaunchGuide[]=[
       },
       {
         "question": "Can I get help before the page is finished?",
-        "answer": "Yes. A free Guildframe mockup can explore the opening and identify the assets needed for the full campaign."
+        "answer": "Yes. Share your project through the enquiry form, and we can identify the assets needed for the full campaign."
       }
     ],
     "seoTitle": "Board Game Kickstarter Page Checklist",
@@ -505,19 +497,15 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Agree who reviews the final page",
         "paragraphs": [
           "Choose one person to collect design feedback. If someone else checks rules, rewards or production details, agree how they'll review the page before setting the deadline, because knowing who owns each fact makes corrections faster.",
-          "For a free Guildframe mockup, a game summary, an artwork link, the platform and your launch plans are enough to start. We explore the opening while you prepare the rest, and the full campaign design project starts once we agree the scope, fee and schedule."
+          "To share your project with us, a game summary, an artwork link, the platform and your launch plans are enough to start. The full campaign design project starts once we agree the scope, fee and schedule."
         ],
         "visual": {
           "kind": "steps",
-          "title": "From brief to finished campaign page in five steps",
+          "title": "From brief to finished campaign page in four steps",
           "steps": [
             {
               "label": "You send the brief",
               "detail": "Summary, artwork link, platform and date"
-            },
-            {
-              "label": "Free opening mockup",
-              "detail": "One section, no payment or obligation"
             },
             {
               "label": "Scope agreed",
@@ -538,7 +526,7 @@ const originalLaunchGuides:LaunchGuide[]=[
     ],
     "faqs": [
       {
-        "question": "Do I need all the art finished to request a mockup?",
+        "question": "Do I need all the art finished before I send the brief?",
         "answer": "No. Share enough material to set a direction and label unfinished pieces clearly. Final campaign production needs the artwork that will actually appear."
       },
       {
@@ -909,7 +897,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Build a direction that matches the game",
         "paragraphs": [
           "Take the colors, type and imagery from the game itself. A noir investigation might use restrained color, a whimsical adventure might be brighter and a horror zine may use empty space to build tension. Either way, keep enough contrast and room for the practical details.",
-          "Our campaign design service prepares the page structure, copy and graphics using your artwork. Send a summary, a sample spread and your launch plans for a free mockup of the opening section; new book illustration and video need their own scope. For the wider plan, from audience to pledge manager, see our TTRPG Kickstarter launch guide."
+          "Our campaign design service prepares the page structure, copy and graphics using your artwork. Send a summary, a sample spread and your launch plans to agree the scope; new book illustration and video need their own scope. For the wider plan, from audience to pledge manager, see our TTRPG Kickstarter launch guide."
         ],
         "source": 1
       }
@@ -1105,7 +1093,7 @@ const originalLaunchGuides:LaunchGuide[]=[
       },
       {
         "question": "Does Guildframe charge differently for Gamefound?",
-        "answer": "Both packages cover setup on Kickstarter, Indiegogo or Gamefound: Launch Ready is $2,500 and Brand to Launch is $3,500. The chosen platform, files and scope are confirmed in the brief. Ads, prelaunch emails and live campaign management are quoted separately."
+        "answer": "Both packages cover setup on Kickstarter, Indiegogo or Gamefound: Creator Launch is $2,500 and Founder Launch is $3,500. The chosen platform, files and scope are confirmed in the brief. Ads, prelaunch emails and live campaign management are quoted separately."
       }
     ],
     "seoTitle": "Campaign Page Design: Kickstarter vs Gamefound",
@@ -1256,7 +1244,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Ask a fresh reader to find a reward",
         "paragraphs": [
           "Ask someone to find a specific reward, such as the base game with an expansion or the print book with its PDF. Watch where they hesitate. If they have to search several graphics, make the comparison easier to find and read.",
-          "Check contrast, heading order, links and essential text too. Guildframe reviews the campaign presentation within the agreed brief. A free opening mockup can help establish readable type and layout early."
+          "Check contrast, heading order, links and essential text too. Guildframe reviews the campaign presentation within the agreed brief."
         ],
         "source": 0
       },
@@ -1299,7 +1287,7 @@ const originalLaunchGuides:LaunchGuide[]=[
     "title": "When Should You Hire a Kickstarter Campaign Designer?",
     "description": "Hire a Kickstarter campaign designer once your game summary and usable artwork are ready. Plan assets, rewards and review time before launch.",
     "tag": "Launch timing",
-    "answer": "Hire a Kickstarter campaign designer once you can explain the game, share usable artwork and list draft rewards. You can start an opening mockup earlier, but book the full page around when your assets arrive and leave time to review the preview before launch.",
+    "answer": "Hire a Kickstarter campaign designer once you can explain the game, share usable artwork and list draft rewards. You can start planning earlier, but book the full page around when your assets arrive and leave time to review the preview before launch.",
     "sources": [
       {
         "label": "Setting up a Kickstarter prelaunch page",
@@ -1317,7 +1305,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "readiness",
         "title": "What can start before the game is finished?",
         "paragraphs": [
-          "You don't need a finished game to start. An opening mockup can begin before every reward image and production detail is final, but on the full page, unfinished content means work gets replaced and checked again.",
+          "You don't need a finished game to start. Planning and the page outline can begin before every reward image and production detail is final, but on the full page, unfinished content means work gets replaced and checked again.",
           "If the premise and art direction are settled, we start with the opening and the page outline while you decide the rewards. If the game itself is still changing, settle the brief first and commission the final graphics after."
         ],
         "visual": {
@@ -1326,7 +1314,7 @@ const originalLaunchGuides:LaunchGuide[]=[
           "events": [
             {
               "when": "Premise and art direction set",
-              "label": "Opening mockup and page outline"
+              "label": "Launch plan and page outline"
             },
             {
               "when": "Rewards taking shape",
@@ -1374,7 +1362,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "paragraphs": [
           "Building your own page is a fair choice when someone on the team has the time and the design skills. The honest limit is hours, because layout, graphics, exports and phone checks compete with production, community and prelaunch work in the same weeks.",
           "You can also do both in order. Draft the page yourself with our guide on [how to design a Kickstarter page](/guides/how-to-design-a-kickstarter-page), then bring in a designer for the graphics and final layout. A designer is worth it when the draft is close but does not read well on a phone, or when those hours are needed elsewhere. Either way, your draft makes a better brief.",
-          "When you hire us, you still own the facts: rules, rewards, prices and delivery. We plan the page, write the copy and build the graphics from your artwork, and both packages, Launch Ready at $2,500 and Brand to Launch at $3,500, are priced on our campaign design page. If you're weighing a full agency instead, our guide to Kickstarter agency cost covers that decision."
+          "When you hire us, you still own the facts: rules, rewards, prices and delivery. We plan the page, write the copy and build the graphics from your artwork, and both packages, Creator Launch at $2,500 and Founder Launch at $3,500, are priced on our campaign design page. If you're weighing a full agency instead, our guide to Kickstarter agency cost covers that decision."
         ],
         "visual": {
           "kind": "compare",
@@ -1391,7 +1379,7 @@ const originalLaunchGuides:LaunchGuide[]=[
             {
               "name": "Hire a campaign designer",
               "points": [
-                "Launch Ready from $2,500",
+                "Creator Launch from $2,500",
                 "We plan, write and design from your art",
                 "You confirm facts; we check the preview"
               ],
@@ -1406,7 +1394,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Prepare the public introduction alongside the full campaign",
         "paragraphs": [
           "Kickstarter recommends sharing a prelaunch page at least one week before launch, so people can follow the project and get a launch notification. We treat that week as a floor, and in our planning example the page opens 6 to 12 weeks before launch. Prepare it alongside the full campaign story, not after it.",
-          "Check that the title and main image explain the project while the longer page is being designed. Once you have a summary and artwork, request a free opening mockup through our campaign design page, and we agree the full scope and timing before any work starts."
+          "Check that the title and main image explain the project while the longer page is being designed. Once you have a summary and artwork, share your project through our campaign design page, and we agree the full scope and timing before any work starts."
         ],
         "source": 0
       }
@@ -1426,7 +1414,7 @@ const originalLaunchGuides:LaunchGuide[]=[
       },
       {
         "question": "Is it cheaper to design my own Kickstarter page?",
-        "answer": "It saves the design fee, but the hours move to you: layout, graphics, exports and phone checks. Weigh that time against the $2,500 price of our Launch Ready package and the rest of your launch work."
+        "answer": "It saves the design fee, but the hours move to you: layout, graphics, exports and phone checks. Weigh that time against the $2,500 price of our Creator Launch package and the rest of your launch work."
       },
       {
         "question": "Can I design the page myself first and get help later?",

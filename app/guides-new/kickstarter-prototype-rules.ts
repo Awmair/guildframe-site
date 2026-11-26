@@ -185,8 +185,8 @@ export const guide: LaunchGuide = {
       id: "how-we-help",
       title: "How we prepare a product page for review",
       paragraphs: [
-        "We sort your images by what they show, label every prototype, plan the real prototype video and write the production section before the page goes to review. That is part of our [Kickstarter campaign design for products](/kickstarter-product-campaign-design), and our Launch Ready package, which covers the strategy, the page and the video, is $2,500.",
-        "If you want to see the approach on your own product first, we design the opening section of your page for free, with no obligation. For the whole path from prototype to delivery, read the [tech and gadget launch guide](/guides/tech-gadget-kickstarter-launch-guide).",
+        "We sort your images by what they show, label every prototype, plan the real prototype video and write the production section before the page goes to review. That is part of our [Kickstarter campaign design for products](/kickstarter-product-campaign-design), and our Creator Launch package, which covers the strategy, the page and the video, is $2,500.",
+        "To talk through your own product, share it through the [enquiry form](/buy) or book a 30 minute call. For the whole path from prototype to delivery, read the [tech and gadget launch guide](/guides/tech-gadget-kickstarter-launch-guide).",
       ],
       takeaway: "Meet Kickstarter prototype requirements before you write a word of marketing copy. Then the page has real proof to show.",
     },

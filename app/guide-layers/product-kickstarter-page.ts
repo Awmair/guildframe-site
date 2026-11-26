@@ -116,7 +116,7 @@ export const layer: GuideLayer = {
       takeaway: "Use the team, risks and FAQ sections of a product Kickstarter page to show you can deliver. Name the open steps, disclose any AI use and answer warranty, returns and delivery.",
     },
     "our-page-package": {
-      takeaway: "Our Launch Ready package is $2,500 for the strategy, the campaign video and a product Kickstarter page built in this order. Brand to Launch at $3,500 adds branding and a website.",
+      takeaway: "Our Creator Launch package is $2,500 for the strategy, the campaign video and a product Kickstarter page built in this order. Founder Launch at $3,500 adds branding and a website.",
     },
   },
 };

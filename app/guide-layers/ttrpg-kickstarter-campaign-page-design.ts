@@ -54,7 +54,7 @@ export const layer: GuideLayer = {
     direction: {
       paragraphs: [
         "Take the colors, type and imagery from the game itself, as the three examples below show. Whatever the style, keep enough contrast and room for the practical details.",
-        "Our campaign design service prepares the page structure, copy and graphics using your artwork. Send a summary, a sample spread and your launch plans for a free mockup of the opening section.",
+        "Our campaign design service prepares the page structure, copy and graphics using your artwork. Send a summary, a sample spread and your launch plans through the [enquiry form](/buy) to agree the scope.",
         "New book illustration and video need their own scope. For the wider plan, from audience to pledge manager, see our [TTRPG Kickstarter launch guide](/guides/ttrpg-kickstarter-launch-guide).",
       ],
       visuals: [

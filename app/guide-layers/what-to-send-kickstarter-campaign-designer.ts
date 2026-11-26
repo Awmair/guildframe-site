@@ -35,17 +35,17 @@ export const layer: GuideLayer = {
       visuals: [
         {
           kind: "flow",
-          title: "Start with a free mockup now, or wait for the full design project",
+          title: "Share your project now, or settle the facts first",
           start: "You want a designer to start on your campaign page",
           nodes: [
             {question: "Do you have a short summary and a link to your artwork?", yes: "The opening section has something to work from", no: "Write the pitch and gather the artwork folder first"},
-            {question: "Do you know the platform and your launch plans?", yes: "A free opening mockup can start now", no: "Settle Kickstarter or Gamefound and a rough date first"},
-            {question: "Are the reward sheet and production facts ready to publish?", yes: "Agree scope, fee and schedule for the full page", no: "Take the free opening mockup while you prepare the rest"},
+            {question: "Do you know the platform and your launch plans?", yes: "Share the project and book a 30 minute call", no: "Settle Kickstarter or Gamefound and a rough date first"},
+            {question: "Are the reward sheet and production facts ready to publish?", yes: "Agree scope, fee and schedule for the full page", no: "Agree the launch strategy while you prepare the rest"},
           ],
           end: "The full campaign design project starts once scope, fee and schedule are agreed",
         },
       ],
-      takeaway: "Name one person to collect feedback and agree who owns each fact. A summary, artwork link, platform and launch plan are enough for a free opening mockup.",
+      takeaway: "Name one person to collect feedback and agree who owns each fact. A summary, artwork link, platform and launch plan are enough to share your project and book a call.",
     },
     "working-checklist": {
       takeaway: "Settle the game explanation, artwork folder and reward sheet before the first call. Every fact fixed now saves a revision later.",

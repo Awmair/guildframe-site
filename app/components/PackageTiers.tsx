@@ -1,7 +1,7 @@
 import { Icon, Roll } from "./chrome/Icon";
 import { brandToLaunch, launchReady, outsideNote, videoNote, type LaunchPackage } from "../packages";
 
-/** The two packages as full itemised cards. Brand to Launch lists only what it adds, then points back to Launch Ready. */
+/** The two packages as full itemised cards. Founder Launch lists only what it adds, then points back to Creator Launch. */
 export function PackageTiers({ location }: { location: string }) {
   const tier = (pack: LaunchPackage, wide: boolean, id?: string) => {
     const groups = wide ? pack.groups.filter(group => !launchReady.groups.includes(group)) : pack.groups;
@@ -21,7 +21,7 @@ export function PackageTiers({ location }: { location: string }) {
           ))}
         </div>
         <div className="h-tier-actions">
-          <a className={`w-btn ${wide ? "w-btn--coral" : "w-btn--ink"}`} href="#start-project" data-analytics-event="service_interest" data-analytics-label={pack.name} data-analytics-location={location}><Roll>{wide ? "Start with the brand" : "Get launch ready"}</Roll><Icon name="arrow" /></a>
+          <a className={`w-btn ${wide ? "w-btn--coral" : "w-btn--ink"}`} href="#start-project" data-analytics-event="service_interest" data-analytics-label={pack.name} data-analytics-location={location}><Roll>{wide ? "Plan my founder launch" : "Plan my creator launch"}</Roll><Icon name="arrow" /></a>
         </div>
       </article>
     );

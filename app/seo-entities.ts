@@ -5,7 +5,7 @@ export const authorId = () => absoluteUrl("/authors/guildframe#umair");
 export const campaignService = (includePrice = false) => ({
   "@type": "Service",
   "@id": absoluteUrl("/campaign-design#service"),
-  name: "Guildframe Launch Ready: campaign strategy, page and video",
+  name: "Guildframe Creator Launch: campaign strategy, page and video",
   serviceType: "Crowdfunding campaign strategy, page design and video",
   description: "A locked launch strategy, campaign copy, page graphics, platform setup and a campaign video made from the creator’s own product images and videos.",
   provider: { "@id": absoluteUrl("/#organization") },

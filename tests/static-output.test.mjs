@@ -206,10 +206,9 @@ test("exports the project inquiry form on every public page", async (t) => {
   }
 });
 
-test("routes free mockup calls to one inquiry section", async()=>{
+test("routes project calls to one inquiry section and offers no free mockup", async()=>{
  const home=await readPage("/");
- const calls=[...home.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)].filter(([, ,text])=>/free (?:campaign )?mockup/i.test(text.replace(/<[^>]+>/g," ")));
- assert.ok(calls.length>=1);for(const [,attrs] of calls)assert.match(attrs,/href="#start-project"/);
+ assert.doesNotMatch(visibleText(home),/free (?:opening |campaign )?mockup|opening mockup/i);
  assert.equal((home.match(/<section\b[^>]*id="start-project"/g)||[]).length,1);
  assert.ok(home.indexOf('id="pricing"')<home.indexOf('id="start-project"'));
 });
@@ -414,7 +413,7 @@ test("exports AEO and social metadata", async () => {
 
 test("keeps campaign pricing, recovery and redirects ready",async()=>{
  const home=await readPage("/");const campaign=await readPage("/campaign-design");const buy=await readPage("/buy");
- for(const html of [home,campaign,buy]){assert.match(html,/free mockup/i);assert.doesNotMatch(html,/\$79|\$99|fiverr|checkout pending|within 72 hours/i);}
+ for(const html of [home,campaign,buy]){assert.doesNotMatch(visibleText(html),/free (?:opening |campaign )?mockup/i);assert.doesNotMatch(html,/\$79|\$99|fiverr|checkout pending|within 72 hours/i);}
  assert.match(home,/mailto:umair@guildframe.com/);assert.doesNotMatch(home,/"price":"(?:975|1800|2500)"/);assert.match(campaign,/"priceCurrency":"USD"/);
  assert.match(home,/gfr-home/);assert.match(visibleText(home),/\$2,500/);assert.match(visibleText(home),/\$3,500/);assert.match(visibleText(home),/images and videos you provide/);assert.doesNotMatch(visibleText(home),/\$1,800|\$5,900|fixed price/i);
  const missing=await readFile(new URL("404.html",outputRoot),"utf8");assert.match(missing,/This page could not be found/);assert.match(missing,/content="noindex/);

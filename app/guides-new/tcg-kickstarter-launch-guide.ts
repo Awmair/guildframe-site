@@ -138,7 +138,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "You can sketch the reward ladder and get printer quotes yourself, and you should, because those facts belong to you. Where creators usually run short is turning collation rules, print minimums and reward limits into a page that a new player understands on a phone.",
         "We do that work for card games and TCGs. We plan the page structure, write the campaign copy, design readable card spreads and build reward comparisons that separate starter products, boosters and bundles using your confirmed specifications. Since August 20, 2026, Kickstarter's Pledge Manager can also let backers add products after submitting their order, and we plan that catalog with you.",
-        "To see your cards on the opening section first, request a free opening mockup. For the full launch, from prelaunch to the live campaign, see our [Kickstarter launch services for tabletop games](/kickstarter-launch-services), or go straight to our [card game and TCG campaign design](/card-game-kickstarter-campaign-design).",
+        "To talk through your cards and your launch, share your project through the [enquiry form](/buy). For the full launch, from prelaunch to the live campaign, see our [Kickstarter launch services for tabletop games](/kickstarter-launch-services), or go straight to our [card game and TCG campaign design](/card-game-kickstarter-campaign-design).",
       ],
       source: 6,
     },

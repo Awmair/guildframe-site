@@ -48,7 +48,7 @@ export function SeoFooter() {
           <Link href="/editorial-policy">Editorial policy</Link>
           <Link href="/buy">Before you book</Link>
           <Link href="/kickstarter-to-shopify">Kickstarter to Shopify</Link>
-          <a href="#start-project">Request a free mockup</a>
+          <a href="#start-project">Start a project</a>
         </nav>
       </div>
       <div className="w-footer-word" aria-hidden="true" data-reveal="brand"><BrandLockup className="w-footer-lockup" label="Guildframe" /></div>

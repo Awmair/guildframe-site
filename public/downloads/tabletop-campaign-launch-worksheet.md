@@ -59,6 +59,5 @@ Repeat for every tier and optional extra.
 - Design review and file handoff process:
 - Intended launch date/time zone and schedule dependencies:
 
-Guildframe campaign page copy and graphics: $975 USD for the agreed project.
-Free mockup: one opening campaign section using your supplied artwork.
+Guildframe packages: Creator Launch, $2,500, or Founder Launch, $3,500. Ads, prelaunch emails and live campaign management are quoted on top.
 Contact: umair@guildframe.com

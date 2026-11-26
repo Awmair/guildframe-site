@@ -25,7 +25,7 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
     handoff: "Your accounts and contacts stay yours. The proposal lists final files, editable sources, support dates, reporting and any separately priced suppliers or software.",
     proof: ["cryptic-explorers", "futureproof-terrain", "quiver-time", "scented-realms"],
     faqs: [
-      { question: "What do Kickstarter launch services include?", answer: "Launch planning, prelaunch pages and email, campaign copy and graphics, paid ads and live support, each with named deliverables. Launch Ready and Brand to Launch cover the strategy, the page and the video; prelaunch, ads and live support are quoted on top, so you book only the stages you are missing. Manufacturing, freight and fulfillment stay with your suppliers." },
+      { question: "What do Kickstarter launch services include?", answer: "Launch planning, prelaunch pages and email, campaign copy and graphics, paid ads and live support, each with named deliverables. Creator Launch and Founder Launch cover the strategy, the page and the video; prelaunch, ads and live support are quoted on top, so you book only the stages you are missing. Manufacturing, freight and fulfillment stay with your suppliers." },
       { question: "How far before launch should I get in touch?", answer: "Send the brief while the date is still flexible. We review the assets and unfinished work before proposing a schedule. If a date is already public, include it so we can identify what can realistically be finished." },
       { question: "Can my existing illustrator or marketing team stay involved?", answer: "Yes. Tell us who is already doing the work. We can split responsibilities and agree who supplies, reviews and publishes each item." },
     ],
@@ -119,11 +119,11 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
 
 export const creativeDelivery: Record<string, ServiceDelivery> = {
   "campaign-design": {
-    title: "From your project files to a page ready for review.", intro: "Start with one free opening mockup if you want to see a direction first. The paid design brief then confirms the full page and file handoff.",
+    title: "From your project files to a page ready for review.", intro: "We start by locking down the launch strategy with you. The design brief then confirms the full page, the video and the file handoff.",
     steps: [{ title: "Plan the page", copy: "Review the artwork or product images, specifications, rules or components, and rewards. Agree the outline and identify facts or images that still need supplying." }, { title: "Build the copy and graphics", copy: "Explain how it works and what is included, then make the reward differences easy to compare. Use your artwork to set the visual direction." }, { title: "Check the final presentation", copy: "Review mobile readability, reward names and platform files. Confirm the revision process and editable sources in the brief." }],
     inputs: "A project summary, usable artwork or product images, components, specifications or sample pages, reward contents and a target date. Label prototypes and unfinished specifications.",
     handoff: "The agreed campaign copy, graphics and source files. The design price covers the scoped campaign page; ads, prelaunch, video and new illustration are separate.", proof: ["scented-realms", "futureproof-terrain", "quiver-time"],
-    faqs: [{ question: "What does the free mockup include?", answer: "One opening campaign section using your existing artwork or product images and a short description. It shows a creative direction before booking. It does not include a complete campaign page or new illustration." }, { question: "Who checks the product facts?", answer: "You confirm specifications, rules, contents, reward prices, delivery details and any product claims. We use those approved facts in the campaign copy and graphics." }],
+    faqs: [{ question: "Do you film the campaign video?", answer: "No. We make the video from the product images and videos you provide, with motion graphics, captions and licensed music. Filming and new photography are not part of the packages." }, { question: "Who checks the product facts?", answer: "You confirm specifications, rules, contents, reward prices, delivery details and any product claims. We use those approved facts in the campaign copy and graphics." }],
   },
 };
 
@@ -135,16 +135,16 @@ const categories = [
   { slug: "tabletop-accessories-campaign-design", title: "Show the product in use, then answer the fit questions.", example: "A dice tray, card organizer and RPG accessory need more than a finish shot. Explain dimensions, materials, compatibility and the parts included in each choice.", input: "Product photographs, measurements, materials, compatibility notes, finish choices and bundle contents.", focus: "Product explanations and reward graphics based on confirmed specifications, with each color or size named consistently.", proof: ["quiver-time", "scented-realms"] },
   { slug: "gamefound-campaign-design", title: "Keep story graphics and Gamefound rewards in agreement.", example: "Plan the campaign story alongside the reward choices. A visitor should find the same product names, quantities and edition differences in both places.", input: "Your Gamefound project, story outline, product art, reward contents and current platform stage.", focus: "Story sections, reward comparisons and a review in Gamefound's preview using settings you confirm.", proof: ["futureproof-terrain", "cryptic-explorers"] },
 ];
-const pageSteps: GuideVisualData = { kind: "steps", title: "A campaign page project runs in five steps, starting free", steps: [
-  { label: "Free opening mockup", detail: "One opening section from your artwork, with no payment or obligation." },
+const pageSteps: GuideVisualData = { kind: "steps", title: "A campaign project runs in five steps, starting with the strategy", steps: [
+  { label: "Lock the strategy", detail: "Audience, goal, rewards and timeline agreed and signed off." },
   { label: "Agree the proposal", detail: "Sections, revisions, files and dates in writing." },
   { label: "Plan the page", detail: "Page order, plus the facts and images still missing." },
   { label: "Copy and graphics", detail: "Gameplay, components and reward comparisons from your art." },
   { label: "Build on the platform", detail: "Reward tiers set up and checked on a phone, ready for you to publish." },
-], caption: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website." };
+], caption: "Creator Launch is $2,500 and covers the launch strategy, the campaign page and the campaign video. Founder Launch is $3,500 and adds branding and a professional website." };
 
 type CreativeExtra = { proofCopy: string; faq: { question: string; answer: string }; checklist: GuideVisualData; guides: StageGuides };
-const pageFaq = (kind: string) => ({ question: `How much does ${kind} campaign design cost?`, answer: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. It covers the copy, page graphics, platform setup and a video made from your own product images and footage. Brand to Launch is $3,500 and adds branding and a professional website." });
+const pageFaq = (kind: string) => ({ question: `How much does ${kind} campaign design cost?`, answer: "Creator Launch is $2,500 and covers the launch strategy, the campaign page and the campaign video. It covers the copy, page graphics, platform setup and a video made from your own product images and footage. Founder Launch is $3,500 and adds branding and a professional website." });
 const creativeExtras: Record<string, CreativeExtra> = {
   "board-game-kickstarter-campaign-design": {
     proofCopy: "Cryptic Explorers, an asymmetrical squad tactics and survival horror game for 2 to 4 players from Tempest Tome Games, is our clearest board game example. Umair created the launch facing presentation, which introduces the characters before the rules. The creator's public result is 961 backers pledged $55,686.",
@@ -248,7 +248,7 @@ for (const c of categories) {
     inputs: c.input, handoff: c.focus + " The brief confirms the final files, editable sources, revisions and schedule.", proof: c.proof,
     faqs: [pageFaq(pageKinds[c.slug]), extra.faq],
     proofCopy: extra.proofCopy,
-    visualsIntro: "Every page project starts with a free mockup and ends with a page ready for you to publish. Here is the route, and the facts we need from you along the way.",
+    visualsIntro: "Every project starts with a locked strategy and ends with a campaign ready for you to launch. Here is the route, and the facts we need from you along the way.",
     visuals: [pageSteps, extra.checklist],
     guides: extra.guides,
   };
@@ -267,7 +267,7 @@ const launchExtras: Record<string, Pick<ServiceDelivery, "proofCopy" | "visualsI
     visualsIntro: "Every launch moves through the same five stages, so you always know what comes next. You approve each stage before we start the one after it.",
     visuals: [
       launchSteps("A launch runs in five stages, each approved before the next", [
-        { label: "Send the brief", detail: "Your game, artwork, rewards and target date. Ask for the free opening mockup if you want a preview." },
+        { label: "Send the brief", detail: "Your game, artwork, rewards and target date. We reply with the package that fits." },
         { label: "Agree the proposal", detail: "Deliverables, owners, fees and dates in writing before you pay." },
         { label: "Build the prelaunch", detail: "Signup page, emails and the first capped ad tests in your own accounts." },
         { label: "Finish the campaign page", detail: "Copy, graphics and reward tiers, checked on a phone before Kickstarter review." },
@@ -276,7 +276,7 @@ const launchExtras: Record<string, Pick<ServiceDelivery, "proofCopy" | "visualsI
       { kind: "compare", title: "A package plus launch support takes the work off your desk", columns: [
         { name: "Doing it yourself", points: ["You write the page and design every graphic", "You build the signup page and email sequence", "You learn ad setup, testing and reporting", "You draft every backer update while the campaign is live"], verdict: "Works when you have the time and design skills to spare." },
         { name: "A package plus launch support", highlight: true, points: ["We write and design the page from your artwork", "We build the prelaunch page, signup and emails", "Umair runs the ad creative, tests and reports", "We draft updates and keep the page current"], verdict: "Launch support is quoted on top of a package. Ad spend, software and platform fees stay separate." },
-      ], caption: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website." },
+      ], caption: "Creator Launch is $2,500 and covers the launch strategy, the campaign page and the campaign video. Founder Launch is $3,500 and adds branding and a professional website." },
     ],
     guides: { intro: "These guides cover the planning and cost questions creators ask before they book. Start with fees and the funding goal, then compare what an agency should cost.", links: [
       { slug: "kickstarter-fees", label: "What Kickstarter fees cost a tabletop creator" },
@@ -381,7 +381,7 @@ const launchExtras: Record<string, Pick<ServiceDelivery, "proofCopy" | "visualsI
         { name: "Campaign page", items: ["Story copy and section graphics", "Reward and add on comparisons", "A preview check before publication"] },
         { name: "Audience", items: ["Prelaunch landing page and emails", "Paid ads with approved caps"] },
         { name: "After launch", items: ["Live campaign updates", "Late pledge and pledge manager copy"] },
-      ], caption: "Launch Ready $2,500. Brand to Launch $3,500. Gamefound fees and ad spend are separate." },
+      ], caption: "Creator Launch $2,500. Founder Launch $3,500. Gamefound fees and ad spend are separate." },
     ],
     guides: { intro: "These guides compare the platforms and the tools around them, so you can choose before the page is built.", links: [
       { slug: "kickstarter-vs-gamefound", label: "Kickstarter or Gamefound for your game" },

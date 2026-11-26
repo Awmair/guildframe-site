@@ -361,7 +361,7 @@ export default function TabletopCampaignPageStudyPage() {
           </p>
           <p>
             Ready to start? <Link href="/buy">Book your campaign page</Link> or
-            ask for a free opening mockup built from your own artwork.
+            book a 30 minute call to talk it through.
           </p>
         </aside>
       </SeoArticlePage>

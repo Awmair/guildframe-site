@@ -186,7 +186,7 @@ export const guide: LaunchGuide = {
       title: "Getting a second pair of eyes",
       paragraphs: [
         "If any answer above is shaky, that's the part to fix first, and you can fix most of them yourself with time and honest testers.",
-        "We do this for a living, so we spot these problems quickly and know which ones matter most for your kind of game. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) cover planning, the page, prelaunch and the live campaign. If you want to start small, we can design one [opening campaign section](/campaign-design) from your artwork as a free mockup, with no payment or obligation.",
+        "We do this for a living, so we spot these problems quickly and know which ones matter most for your kind of game. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) cover planning, the page, prelaunch and the live campaign. If you want to talk it through, share your project through the [enquiry form](/buy) or book a 30 minute call.",
       ],
     },
   ],
