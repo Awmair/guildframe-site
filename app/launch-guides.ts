@@ -7,6 +7,24 @@ import {contentDates} from "./content-dates";
 import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
 import {decisionGuides} from "./launch-decision-guides";
+import {guide as ngCreativeProjectKickstarterGuide} from "./guides-new/creative-project-kickstarter-guide";
+import {guide as ngCrowdfundingGlossary} from "./guides-new/crowdfunding-glossary";
+import {guide as ngHowToLaunchABookOnKickstarter} from "./guides-new/how-to-launch-a-book-on-kickstarter";
+import {guide as ngHowToLaunchAKickstarterCampaign} from "./guides-new/how-to-launch-a-kickstarter-campaign";
+import {guide as ngHowToLaunchAProductOnKickstarter} from "./guides-new/how-to-launch-a-product-on-kickstarter";
+import {guide as ngKickstarterCampaignCost} from "./guides-new/kickstarter-campaign-cost";
+import {guide as ngKickstarterCampaignTimeline} from "./guides-new/kickstarter-campaign-timeline";
+import {guide as ngKickstarterForExistingProducts} from "./guides-new/kickstarter-for-existing-products";
+import {guide as ngKickstarterProductPhotography} from "./guides-new/kickstarter-product-photography";
+import {guide as ngKickstarterPrototypeRules} from "./guides-new/kickstarter-prototype-rules";
+import {guide as ngKickstarterRewardPricingPhysicalProducts} from "./guides-new/kickstarter-reward-pricing-physical-products";
+import {guide as ngKickstarterShippingPhysicalProducts} from "./guides-new/kickstarter-shipping-physical-products";
+import {guide as ngKickstarterStatisticsByCategory} from "./guides-new/kickstarter-statistics-by-category";
+import {guide as ngKickstarterVsIndiegogo} from "./guides-new/kickstarter-vs-indiegogo";
+import {guide as ngManufacturingQuotesBeforeKickstarter} from "./guides-new/manufacturing-quotes-before-kickstarter";
+import {guide as ngRelaunchFailedKickstarter} from "./guides-new/relaunch-failed-kickstarter";
+import {guide as ngTechGadgetKickstarterLaunchGuide} from "./guides-new/tech-gadget-kickstarter-launch-guide";
+import {guide as ngWatchFashionAccessoriesKickstarterGuide} from "./guides-new/watch-fashion-accessories-kickstarter-guide";
 import {guide as ngBoardGameKickstarterCost} from "./guides-new/board-game-kickstarter-cost";
 import {guide as ngHowToDesignAKickstarterPage} from "./guides-new/how-to-design-a-kickstarter-page";
 import {guide as ngHowToGetKickstarterBackers} from "./guides-new/how-to-get-kickstarter-backers";
@@ -36,20 +54,38 @@ const originalLaunchGuides:LaunchGuide[]=[
   // seo-pass-2026-11-25 new guides
   ngBoardGameKickstarterCost,
   ngBoardGameTariffsShippingUs,
+  ngCreativeProjectKickstarterGuide,
+  ngCrowdfundingGlossary,
   ngHowToDesignAKickstarterPage,
   ngHowToGetKickstarterBackers,
+  ngHowToLaunchABookOnKickstarter,
+  ngHowToLaunchAKickstarterCampaign,
+  ngHowToLaunchAProductOnKickstarter,
   ngHowToMarketAKickstarter,
   ngIsMyGameReadyForKickstarter,
   ngKickstarterAgencyCost,
+  ngKickstarterCampaignCost,
+  ngKickstarterCampaignTimeline,
   ngKickstarterFees,
   ngKickstarterFollowersBeforeLaunch,
   ngKickstarterForBeginners,
+  ngKickstarterForExistingProducts,
   ngKickstarterImageSizes,
+  ngKickstarterProductPhotography,
+  ngKickstarterPrototypeRules,
+  ngKickstarterRewardPricingPhysicalProducts,
+  ngKickstarterShippingPhysicalProducts,
+  ngKickstarterStatisticsByCategory,
   ngKickstarterVsGamefound,
+  ngKickstarterVsIndiegogo,
+  ngManufacturingQuotesBeforeKickstarter,
   ngPledgeManagersCompared,
+  ngRelaunchFailedKickstarter,
   ngTcgKickstarterLaunchGuide,
+  ngTechGadgetKickstarterLaunchGuide,
   ngTerrainAndDiceKickstarterLaunchGuide,
   ngTtrpgKickstarterLaunchGuide,
+  ngWatchFashionAccessoriesKickstarterGuide,
   ngWhenToLaunchAKickstarter,
   ngWhyKickstarterCampaignsFail,
 
