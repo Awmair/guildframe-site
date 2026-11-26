@@ -1,30 +1,28 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { isSoundOn, onSoundChange, playSound, restoreSound, setSound } from "./sound";
+import { isSoundOn, playSound, restoreSound, setSound } from "./sound";
 
 const reduced = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = () => window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-/** Page curtain, cursor token, scroll reveals and the sound toggle. Everything degrades to plain pages. */
+/** Page curtain, cursor token and scroll reveals. Everything degrades to plain pages. */
 export function WorldFx() {
   const router = useRouter();
   const pathname = usePathname();
   const curtain = useRef<HTMLDivElement>(null);
   const cursor = useRef<HTMLDivElement>(null);
   const pending = useRef<{ path: string; started: number } | null>(null);
-  const [sound, setSoundState] = useState(false);
   const [curtainTitle, setCurtainTitle] = useState("");
 
   // Mark the document as scripted so reveal start states apply only with JavaScript.
   useEffect(() => {
     document.documentElement.classList.add("w-js");
     // Read the stored sound choice after mount (localStorage is not available on the server).
-    const restore = requestAnimationFrame(() => setSoundState(restoreSound()));
-    const off = onSoundChange(setSoundState);
+    const restore = requestAnimationFrame(() => { restoreSound(); });
     const wake = () => { if (isSoundOn()) setSound(true); };
     window.addEventListener("pointerdown", wake, { once: true });
-    return () => { cancelAnimationFrame(restore); off(); window.removeEventListener("pointerdown", wake); };
+    return () => { cancelAnimationFrame(restore); window.removeEventListener("pointerdown", wake); };
   }, []);
 
   // Curtain: intercept ordinary same-site navigations.
@@ -263,12 +261,6 @@ export function WorldFx() {
         <div className="w-cursor-ring" />
         <div className="w-cursor-dot" />
         <div className="w-cursor-label" />
-      </div>
-      <div className="w-corner w-corner--left">
-        <button type="button" className="w-sound" aria-pressed={sound} aria-label={sound ? "Turn sound off" : "Turn sound on"} onClick={() => { setSound(!sound); if (!sound) window.setTimeout(() => playSound("tock"), 30); }}>
-          <span className="w-sound-bars" aria-hidden="true"><i /><i /><i /><i /></span>
-        </button>
-        <a className="w-pill-promo" href="#start-project" data-no-curtain="">Free opening mockup</a>
       </div>
     </>
   );
