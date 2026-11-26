@@ -94,7 +94,7 @@ export const guide: LaunchGuide = {
           { when: "Week 9", label: "Feedback round", detail: "Preview shared with trusted readers" },
           { when: "Week 10", label: "Launch assets", detail: "First update, launch email and posts" },
           { when: "Week 11", label: "Final checks", detail: "Links, end date, phone view and outreach" },
-          { when: "Week 12", label: "Launch", detail: "Click Launch and work the first 48 hours", highlight: true },
+          { when: "Week 12", label: "Launch", detail: "Click Launch and work the first two days", highlight: true },
         ],
         caption: "Guildframe planning example for a first campaign. Review timing comes from Kickstarter's help centre.",
         source: "Kickstarter Help Center, checked November 26, 2026",

@@ -434,7 +434,7 @@ export const guide: LaunchGuide = {
         "Reply to every comment and message within a day",
         "Post an update at least weekly, with something new to see",
         "Check ad results every morning if you run ads, and move budget to what works",
-        "Save a fresh reason to share for the final 48 hours",
+        "Save a fresh reason to share for the final two days",
         "Add repeated backer questions to the FAQ as they come in",
       ],
       source: 12,

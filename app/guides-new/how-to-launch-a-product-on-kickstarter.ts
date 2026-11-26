@@ -373,7 +373,7 @@ export const guide: LaunchGuide = {
     },
     {
       id: "launch",
-      title: "Review, launch day and the first 48 hours",
+      title: "Review, launch day and the first two days",
       paragraphs: [
         "Kickstarter reviews projects in up to 3 business days, and changes add another 3 business days or more. Launching is manual, so you press the button yourself once approved.",
         "Campaigns can run for up to 60 days, but Kickstarter recommends 30 days or less. Our [Kickstarter approval time guide](/guides/kickstarter-review-launch-timeline) and [campaign timeline](/guides/kickstarter-campaign-timeline) help you plan around both.",
@@ -391,7 +391,7 @@ export const guide: LaunchGuide = {
           ["Day two", "Compare pledges with your list size", "Tells you whether ads should scale or pause"],
         ],
       },
-      takeaway: "Submit at least a week before your target date, then treat the first 48 hours as the moment your prelaunch work pays off.",
+      takeaway: "Submit at least a week before your target date, then treat the first two days as the moment your prelaunch work pays off.",
     },
     {
       id: "live",
@@ -405,7 +405,7 @@ export const guide: LaunchGuide = {
         "Show progress: post factory samples, packaging tests and color options as updates, because backers share news more readily than slogans.",
         "Add value, not tiers: introduce an add on or an accessory stretch goal instead of new tiers that crowd the page.",
         "Track your links: use [Kickstarter referral tags](/guides/kickstarter-referral-tags-tracking) so you know which channel brings pledges before you spend more on it.",
-        "Plan the last 48 hours: a reminder email and a final update bring back people who followed but didn't pledge.",
+        "Plan the last two days: a reminder email and a final update bring back people who followed but didn't pledge.",
       ],
       takeaway: "A product campaign stays alive in the middle weeks through updates, answers and a strong final push, not through constant discounting.",
     },
