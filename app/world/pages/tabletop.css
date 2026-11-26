@@ -33,3 +33,18 @@ html.w-js .tt-genre-list>li[data-reveal="rise"]{transition-delay:calc(var(--i,0)
   .tt-genre-list>li{flex:0 0 78vw;scroll-snap-align:center}
 }
 @media (prefers-reduced-motion:reduce){.tt-genre,.tt-genre-media,.tt-genre-media img,.tt-genre-name svg,.tt-guide-group a,.tt-guide-group a svg{transition:none}}
+
+/* The old launch board lives on here as the tabletop wing's own world. */
+.tt-board{position:relative;padding:var(--section) 0 0;background:var(--baize-800);color:var(--board-100)}
+.tt-board-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,380px);gap:24px 48px;align-items:end;margin-bottom:clamp(8px,2vw,24px)}
+.tt-board-head p{margin:0;color:var(--mist-300);font-size:var(--t-lead);line-height:1.5}
+.tt-board-stage{position:relative;height:min(86svh,820px);min-height:520px;overflow:hidden;background:radial-gradient(120% 90% at 50% 20%,#1d4a4b 0%,var(--baize-800) 50%,var(--baize-900) 100%)}
+@media(max-width:900px){.tt-board-head{grid-template-columns:1fr}}
+@media(max-width:700px){
+  .tt-board-stage{height:auto;min-height:0;aspect-ratio:3/2;width:var(--wrap-wide);margin:24px auto 0;border-radius:20px;overflow:hidden}
+  .tt-board-stage .w-board-still{position:absolute;inset:0;left:0;top:0;width:100%;height:100%;object-fit:cover;transform:none;border-radius:0;box-shadow:none}
+  .tt-board-stage .w-board-labels{position:static!important;display:flex!important;flex-wrap:wrap!important;justify-content:flex-start!important;padding:16px 0 0!important;overflow:visible!important;-webkit-mask-image:none!important;mask-image:none!important}
+  .tt-board-stage .w-board-label:first-child{margin-left:0!important}
+  .tt-board{padding-bottom:var(--section)}
+  .tt-board-stage{overflow:visible}
+}

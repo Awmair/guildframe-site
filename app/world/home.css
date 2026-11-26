@@ -131,6 +131,18 @@
 .h-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:step}
 .h-steps li{position:relative;display:grid;justify-items:center;text-align:center;gap:14px;padding-top:0}
 .h-step-space{width:clamp(80px,9vw,120px);aspect-ratio:1;margin-top:-36px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#f6efe0,#d9ccb1 70%);box-shadow:0 10px 0 #b8a988,0 26px 30px -8px rgb(0 0 0 / .55);transition:transform 600ms var(--ease-spring),box-shadow 400ms}
+/* The project travels the track: a prototype at Plan, its page at Build, the finished piece at Launch. */
+.h-track-piece{display:grid;height:118px;width:110px;margin-left:-55px;top:-128px;place-items:end center}
+.h-track-piece img{grid-area:1/1;width:auto;max-width:100%;height:100%;object-fit:contain;opacity:0;scale:.6;transition:opacity 260ms var(--ease-out),scale 500ms var(--ease-spring)}
+.h-track-piece img:nth-child(2){height:88%;border-radius:6px;box-shadow:0 0 0 3px var(--board-100)}
+.h-track-piece[data-at="0"] img:nth-child(1),.h-track-piece[data-at="1"] img:nth-child(2),.h-track-piece[data-at="2"] img:nth-child(3){opacity:1;scale:1}
+/* The track spaces become frame corners on the mat line. */
+.h-step-space{border-radius:22%;background:none;box-shadow:none;position:relative}
+.h-step-space::before{content:"";position:absolute;inset:14%;border:6px dashed rgb(239 230 212 / .55);border-radius:10%}
+.h-step-space::after{content:"";position:absolute;top:6%;right:6%;width:22%;aspect-ratio:1;border-radius:50%;background:var(--coral-500);transition:transform 500ms var(--ease-spring)}
+.h-steps li.is-here .h-step-space{transform:none;box-shadow:none}
+.h-steps li.is-here .h-step-space::before{border-style:solid;border-color:var(--board-100)}
+.h-steps li.is-here .h-step-space::after{transform:scale(1.2)}
 .h-steps li.is-here .h-step-space{transform:translateY(6px);box-shadow:0 4px 0 #b8a988,0 0 0 8px rgb(242 179 61 / .35),0 16px 24px -8px rgb(0 0 0 / .5)}
 .h-steps h3{font:400 clamp(2rem,3.4vw,3rem)/1 var(--font-sans);letter-spacing:-.03em;margin-top:18px}
 .h-steps li.is-here h3{font-family:var(--font-serif);font-style:italic;color:var(--saffron-500)}
@@ -182,17 +194,10 @@ html.w-gate-up .w-gate{position:fixed;inset:0;z-index:var(--z-gate);display:bloc
 .w-gate-logo{display:block;width:min(260px,60vw);height:auto;overflow:visible}
 .w-gate-line{font-size:clamp(1.25rem,2.4vw,1.75rem);max-width:22ch;line-height:1.2;letter-spacing:-.01em}
 .w-gate-line em{font-family:var(--font-serif)}
-.w-gate-dice{display:flex;gap:14px}
-.w-die{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:4px;width:46px;height:46px;padding:8px;border-radius:10px;background:var(--board-100);box-shadow:0 6px 0 #c9bba0,0 14px 18px -6px rgb(0 0 0 / .4);animation:w-die-wobble 1.4s var(--ease-inout) infinite}
-.w-die+.w-die{animation-delay:.2s}
-.w-die i{border-radius:50%;background:var(--ink-900);opacity:0;transform:scale(.4);transition:opacity 200ms,transform 300ms var(--ease-spring)}
-.w-die[data-face="1"] i:nth-child(5),
-.w-die[data-face="2"] i:is(:nth-child(1),:nth-child(9)),
-.w-die[data-face="3"] i:is(:nth-child(1),:nth-child(5),:nth-child(9)),
-.w-die[data-face="4"] i:is(:nth-child(1),:nth-child(3),:nth-child(7),:nth-child(9)),
-.w-die[data-face="5"] i:is(:nth-child(1),:nth-child(3),:nth-child(5),:nth-child(7),:nth-child(9)),
-.w-die[data-face="6"] i:is(:nth-child(1),:nth-child(3),:nth-child(4),:nth-child(6),:nth-child(7),:nth-child(9)){opacity:1;transform:none}
-@keyframes w-die-wobble{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg) translateY(-4px)}}
+/* The loader is the logo's draft line: dashes that turn solid as the page gets ready. */
+.w-gate-load{position:relative;width:148px;height:6px;background:repeating-linear-gradient(90deg,var(--ink-900) 0 14px,transparent 14px 24px);opacity:.9}
+.w-gate-load i{position:absolute;inset:-2px auto -2px 0;width:calc(var(--p) * 100%);border-radius:5px;background:var(--ink-900);transition:width 260ms var(--ease-out)}
+.w-gate-load::after{content:"";position:absolute;top:50%;left:calc(var(--p) * 100%);width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--board-100);transition:left 260ms var(--ease-out)}
 .w-gate-actions{display:grid;justify-items:center;gap:14px}
 .w-gate-sound{background:none;border:0;padding:6px;font:500 var(--t-small)/1 var(--font-sans);color:var(--ink-900);text-decoration:underline;text-underline-offset:5px;cursor:pointer}
 .w-gate.is-opening .w-gate-lid{animation:w-lid-open 1250ms var(--ease-inout) forwards}
@@ -262,8 +267,8 @@ html.w-gate-up .w-gate{position:fixed;inset:0;z-index:var(--z-gate);display:bloc
   .h-steps li{grid-template-columns:52px minmax(0,1fr);justify-items:start;align-items:start;text-align:left;column-gap:18px;row-gap:6px;padding-bottom:32px}
   .h-steps li:last-child{padding-bottom:0}
   .h-steps li:not(:last-child)::before{content:"";position:absolute;left:24px;top:66px;bottom:10px;width:4px;background-image:radial-gradient(circle,var(--board-100) 1.4px,transparent 1.8px);background-size:4px 10px;opacity:.45}
-  .h-step-space{grid-row:1/span 2;width:52px;margin:0;box-shadow:0 5px 0 #b8a988,0 14px 16px -6px rgb(0 0 0 / .5)}
-  .h-steps li.is-here .h-step-space{transform:translateY(3px);box-shadow:0 2px 0 #b8a988,0 0 0 6px rgb(242 179 61 / .35),0 10px 14px -6px rgb(0 0 0 / .5)}
+  .h-step-space{grid-row:1/span 2;width:52px;margin:0}
+  .h-step-space::before{border-width:4px}
   .h-steps h3{grid-column:2;margin-top:4px;font-size:1.875rem}
   .h-steps p{grid-column:2;max-width:none}
 }
@@ -278,7 +283,7 @@ html.w-gate-up .w-gate{position:fixed;inset:0;z-index:var(--z-gate);display:bloc
 @media(max-height:520px){
   .w-gate-inner{gap:16px;padding:16px}
   .w-gate-logo{width:min(200px,50vw)}
-  .w-gate-dice{display:none}
+  .w-gate-load{display:none}
   .w-gate-lid::before{inset:8px}
 }
 /* Laptops and up with the cookie note showing: lift the hero card so the note never covers its buttons. */

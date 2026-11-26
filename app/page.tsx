@@ -114,7 +114,7 @@ export default function Home() {
         <div className="h-process-sticky">
           <div className="w-wrap-wide">
             <h2 className="w-h2 h-process-title" data-reveal="lines"><span className="w-line"><span>How it <em>works</em></span></span></h2>
-            <div className="h-track" aria-hidden="true"><span className="h-track-line"/><img className="h-track-pawn" src="/images/world/pawn-v1.webp" width="239" height="411" alt=""/></div>
+            <div className="h-track" aria-hidden="true"><span className="h-track-line"/><span className="h-track-pawn h-track-piece" data-at="0"><img src="/images/table/proto-product-480.webp" width="447" height="480" alt="" loading="lazy"/><img src="/images/table/page-product-v1.webp" width="540" height="900" alt="" loading="lazy"/><img src="/images/table/final-product-480.webp" width="447" height="480" alt="" loading="lazy"/></span></div>
             <ol className="h-steps">
               <li><span className="h-step-space" aria-hidden="true"/><h3>Plan</h3><p>Send a summary of your project, your artwork or product images and a target date. We agree the scope, schedule and who does what.</p></li>
               <li><span className="h-step-space" aria-hidden="true"/><h3>Build</h3><p>We write the copy and design the graphics around your confirmed rewards and facts. You review each round.</p></li>

@@ -187,7 +187,16 @@ html.w-has-cursor input,html.w-has-cursor textarea,html.w-has-cursor select{curs
 .w-contact-points{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
 .w-contact-points span{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 14px;border-radius:var(--r-pill);font-size:var(--t-small);box-shadow:inset 0 0 0 1px var(--line-dusk);color:var(--mist-300)}
 .w-contact-points span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--jade-400)}
-.w-contact-tile{width:132px;margin-top:36px;filter:drop-shadow(0 20px 22px rgb(0 0 0 / .45));transform:rotate(-6deg)}
+.w-contact-mark{display:block;width:120px;height:120px;margin-top:32px;overflow:visible;color:var(--board-100)}
+/* The empty frame waits. The point lifts while you fill the form in, and the draft finishes when the request is sent. */
+.w-contact-mark .df-pip{transition:transform 600ms var(--ease-spring)}
+.w-contact:focus-within .w-contact-mark .df-pip{transform:translateY(-12px) scale(1.15)}
+.w-contact.is-sent .w-contact-mark .df-pip{animation:w-contact-run 1.4s var(--ease-inout) forwards}
+.w-contact.is-sent .w-contact-mark .df-st{animation:w-contact-st 1.4s var(--ease-inout) forwards}
+.w-contact.is-sent .w-contact-mark .df-sl{animation:w-contact-sl 1.4s var(--ease-inout) forwards}
+@keyframes w-contact-run{0%{transform:translate(0,-12px)}45%{transform:translate(-60px,0)}100%{transform:translate(-60px,60px)}}
+@keyframes w-contact-st{0%{transform:scaleX(0)}45%,100%{transform:scaleX(1)}}
+@keyframes w-contact-sl{0%,45%{transform:scaleY(0)}100%{transform:scaleY(1)}}
 .w-contact .w-small{font-size:var(--t-small);color:var(--mist-500)}
 .w-form{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:clamp(20px,3vw,32px);border-radius:var(--r-panel);background:var(--baize-800);box-shadow:inset 0 0 0 1px var(--line-dusk)}
 .w-form label{display:grid;gap:8px;font-size:var(--t-small);color:var(--mist-300)}
@@ -342,7 +351,7 @@ html body .w-form :is(input,select,textarea){font-size:16px}
 @media(max-width:560px){
   .w-form{padding:20px 16px;gap:16px}
   .w-form button[type="submit"]{justify-self:stretch;justify-content:center}
-  .w-contact-tile{width:104px;margin-top:28px}
+  .w-contact-mark{width:96px;height:96px;margin-top:24px}
   .w-contact-points{margin:20px 0}
 }
 @media(max-width:520px){
@@ -376,7 +385,9 @@ html body .w-form :is(input,select,textarea){font-size:16px}
 .nf-scene{position:relative;aspect-ratio:5/4;width:100%;max-width:640px;justify-self:end}
 .nf-board{position:absolute;left:8%;top:8%;width:70%;aspect-ratio:3/2;border-radius:10px;overflow:hidden;transform:perspective(1400px) rotateX(54deg) rotateZ(16deg);transform-origin:50% 50%;box-shadow:0 12px 0 -2px var(--baize-950),0 50px 70px -30px rgb(0 0 0 / .75)}
 .nf-board-art{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.95) brightness(.92)}
-.nf-pawn{position:absolute;right:12%;bottom:14%;width:18%;height:auto;filter:drop-shadow(0 22px 16px rgb(0 0 0 / .5));transform:rotate(-5deg);transform-origin:50% 100%;animation:nf-hop 5.5s 2s ease-in-out infinite}
+.nf-frame{position:absolute;left:50%;top:50%;width:44%;height:auto;aspect-ratio:1;transform:translate(-50%,-50%);overflow:visible;color:var(--board-100);filter:drop-shadow(0 4px 0 rgb(0 0 0 / .25))}
+.nf-frame .df-pip-h{display:none}
+.nf-pawn{position:absolute;right:6%;bottom:12%;width:28%;height:auto;filter:drop-shadow(0 22px 16px rgb(0 0 0 / .5));transform:rotate(-5deg);transform-origin:50% 100%;animation:nf-hop 5.5s 2s ease-in-out infinite}
 @keyframes nf-hop{0%,82%,100%{transform:rotate(-5deg)}88%{transform:translateY(-14%) rotate(-12deg)}94%{transform:translateY(1%) rotate(-4deg)}}
 @media(max-width:860px){
   .nf{min-height:0}

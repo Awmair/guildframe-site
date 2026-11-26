@@ -4,6 +4,7 @@ import { JsonLd } from "../components/JsonLd";
 import { ResponsiveImage } from "../components/ResponsiveImage";
 import { Icon, Roll } from "../components/chrome/Icon";
 import { WorkFx } from "../components/work/WorkFx";
+import { Board } from "../components/world/Board";
 import { gameCategories } from "../campaign-content";
 import { mixedWork } from "../work-mix";
 import { formatContentDate } from "../content-dates";
@@ -69,6 +70,14 @@ export default function TabletopHub() {
             <ul>{tabletopHub.scope.map(item => <li key={item}>{item}</li>)}</ul>
           </aside>
         </div>
+      </section>
+
+      <section className="tt-board" aria-labelledby="tabletop-board-title">
+        <div className="w-wrap-wide tt-board-head">
+          <h2 id="tabletop-board-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>The launch,</span></span> <span className="w-line"><span><em>on the board</em></span></span></h2>
+          <p>Every stop on the board is a part of the launch. Drag the board, hold to see all of it, and click a stop to open that service.</p>
+        </div>
+        <div className="tt-board-stage"><Board /></div>
       </section>
 
       <section className="tt-genres" id="genres" aria-labelledby="genres-title">

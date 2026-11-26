@@ -4,7 +4,7 @@ import { playSound, setSound } from "../chrome/sound";
 import { BrandLockup } from "../chrome/Brand";
 
 /** Runs before the lid is parsed, so returning visitors never see it flash. */
-export const gateBootScript = `try{var d=document.documentElement;if(!sessionStorage.getItem("gf-lid")&&!location.hash&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("w-gate-up")}}catch(e){}`;
+export const gateBootScript = `try{var d=document.documentElement;if(!sessionStorage.getItem("gf-lid")&&!location.hash&&!matchMedia("(prefers-reduced-motion: reduce)").matches&&innerWidth>700){d.classList.add("w-gate-up")}}catch(e){}`;
 
 export function Gate() {
   const lid = useRef<HTMLDivElement>(null);
@@ -15,7 +15,7 @@ export function Gate() {
     if (opened.current) return;
     opened.current = true;
     try { sessionStorage.setItem("gf-lid", "1"); } catch { /* storage can be unavailable */ }
-    if (withSound) { setSound(true); window.setTimeout(() => playSound("roll"), 40); }
+    if (withSound) { setSound(true); window.setTimeout(() => playSound("slide"), 40); window.setTimeout(() => playSound("tock"), 360); window.setTimeout(() => playSound("tock"), 560); }
     const element = lid.current;
     const finish = () => {
       document.documentElement.classList.remove("w-gate-up");
@@ -60,9 +60,7 @@ export function Gate() {
         <div className="w-gate-inner">
           <BrandLockup className="w-gate-logo" />
           <p className="w-gate-line">Your first Kickstarter, <em>done properly</em></p>
-          <div className="w-gate-dice" aria-hidden="true">
-            {[0, 1].map(die => <span key={die} className="w-die" data-face={die ? Math.max(1, step - 1) : step}>{Array.from({ length: 9 }, (_, i) => <i key={i} />)}</span>)}
-          </div>
+          <div className="w-gate-load" aria-hidden="true" style={{ "--p": (step - 1) / 5 } as React.CSSProperties}><i /></div>
           <div className="w-gate-actions">
             <button type="button" className="w-btn w-btn--ink" onClick={() => open(false)}><span className="w-roll"><span>Open the box</span><span aria-hidden="true">Open the box</span></span></button>
             <button type="button" className="w-gate-sound" onClick={() => open(true)}>Open with sound</button>

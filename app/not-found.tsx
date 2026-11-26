@@ -28,7 +28,7 @@ export default function NotFound() {
             </p>
             <div className="nf-actions">
               <Link className="w-btn w-btn--coral" href="/" data-title="Home">
-                <Roll>Back to the board</Roll>
+                <Roll>Back to the table</Roll>
                 <Icon name="arrow" />
               </Link>
               <Link className="w-link" href="/guides" data-title="Guides">Guides</Link>
@@ -37,9 +37,10 @@ export default function NotFound() {
           </div>
           <div className="nf-scene" aria-hidden="true">
             <div className="nf-board">
-              <img className="nf-board-art" src="/images/world/board-base-v1.webp" width="1536" height="1024" alt="" />
+              <img className="nf-board-art" src="/images/table/mat-base-v1.webp" width="1536" height="1024" alt="" />
+              <BrandMark className="nf-frame" />
             </div>
-            <img className="nf-pawn" src="/images/world/pawn-v1.webp" width="239" height="411" alt="" />
+            <img className="nf-pawn" src="/images/table/dressing-parcel-v1.webp" width="512" height="448" alt="" />
           </div>
         </div>
       </main>

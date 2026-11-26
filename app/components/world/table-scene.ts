@@ -27,8 +27,8 @@ const BAR_H = 0.045; // thickness of the frame pieces
 const PIECE_H = 0.95; // a piece's height in the frame
 const REST = 0.63; // its scale at rest
 const HINGE_Z = FRAME.z - 0.84;
-const PAGE_W = 0.9, PAGE_H = 1.5;
-const LEAN = -0.14;
+const PAGE_W = 0.72, PAGE_H = 1.2;
+const LEAN = -0.26;
 const FLAT = -Math.PI / 2;
 
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
@@ -77,7 +77,7 @@ export function mountTable({ host, labels, caption, onReady, onHover, onOverview
   renderer.setPixelRatio(Math.min(devicePixelRatio, coarse ? 1.5 : 1.75));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.05;
+  renderer.toneMappingExposure = 1.12;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.domElement.className = "w-board-canvas";
@@ -89,7 +89,7 @@ export function mountTable({ host, labels, caption, onReady, onHover, onOverview
   const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 60);
 
   // Lights: one warm lamp, a cool fill, a soft sky.
-  scene.add(new THREE.HemisphereLight("#a9d4c7", "#08191a", 0.6));
+  scene.add(new THREE.HemisphereLight("#b9dccf", "#0b1f20", 0.8));
   const lamp = new THREE.SpotLight("#ffd8a1", 95, 24, 0.62, 0.75, 1.6);
   lamp.position.set(-3.8, 6.6, 3.4);
   lamp.castShadow = true;
@@ -287,7 +287,7 @@ export function mountTable({ host, labels, caption, onReady, onHover, onOverview
 
   // Camera rig.
   const rig = {
-    target: new THREE.Vector3(-0.55, 0, 0.1),
+    target: new THREE.Vector3(-0.55, 0, -1.05),
     radius: 7.2, polar: 0.92, azimuth: -0.2, drift: 0,
     pan: 0, panVelocity: 0, overview: 0, scroll: 0, intro: reduced ? 1 : 0,
   };
@@ -302,9 +302,10 @@ export function mountTable({ host, labels, caption, onReady, onHover, onOverview
     camera.aspect = width / height;
     const aspect = width / height;
     const wide = Math.max(0, aspect - 1.6), tall = Math.max(0, 1.6 - aspect);
-    rig.radius = 7.2 + wide * 2.27 + tall * 4;
+    rig.radius = 7.2 + wide * 2.27 + tall * 5.5;
     rig.polar = 0.92 + wide * 0.08;
-    rig.target.x = -0.55 - wide * 0.98 + tall * 0.6;
+    rig.target.x = -0.55 - wide * 0.98 + tall * 0.25;
+    rig.target.z = -1.05 + wide * 0.35;
     short = width > 900 && height <= 620;
     tools.visible = !short && Boolean((tools.material as THREE.MeshStandardMaterial).map);
     swatches.visible = !short && Boolean((swatches.material as THREE.MeshStandardMaterial).map);
@@ -424,6 +425,7 @@ export function mountTable({ host, labels, caption, onReady, onHover, onOverview
     }
     current = piece;
     if (prev !== piece) {
+      tl.call(() => setFace("proto"), [], at);
       tl.add(hop(piece, framePos, 1, -0.08), at);
       if (piece.flip > 0) tl.add(flipTo(piece, 0, 0.55, "power2.inOut"), at + 0.1);
       tl.to(pipState, { hop: 0.35, duration: 0.18, ease: "power2.out", onUpdate: placePip, yoyo: true, repeat: 1 }, at + 0.45);

@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { playSound } from "../chrome/sound";
 
-/** Home only: the pawn walks the process track, and the concept strip can be dragged. */
+/** Home only: the project travels the process track (sketch, then page, then finished piece), and the concept strip can be dragged. */
 export function HomeFx() {
   useEffect(() => {
     const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -32,6 +32,7 @@ export function HomeFx() {
         const current = Math.round(progress * spaces);
         if (current !== lastStep) {
           steps.forEach((step, i) => step.classList.toggle("is-here", i === current));
+          pawn.dataset.at = String(current);
           if (lastStep !== -1) playSound("tock");
           lastStep = current;
         }

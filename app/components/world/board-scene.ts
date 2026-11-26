@@ -285,10 +285,12 @@ export function mountBoard({ host, labels, onReady, onHover, onOverview }: Optio
   host.addEventListener("pointerdown", onDown);
   window.addEventListener("pointerup", onUp);
   host.addEventListener("pointerleave", onLeave);
-  const onScroll = () => { rig.scroll = clamp(window.scrollY / Math.max(1, height), 0, 1.2); };
+  const onScroll = () => { rig.scroll = clamp(-host.getBoundingClientRect().top / Math.max(1, height), 0, 1.2); };
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  const visibility = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; if (visible) loop(); }, { threshold: 0 });
+  let ready = false, introStarted = false;
+  const startIntro = () => { if (introStarted) return; introStarted = true; intro(); };
+  const visibility = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; if (visible) { loop(); if (ready && !document.documentElement.classList.contains("w-gate-up")) startIntro(); } }, { threshold: 0.25 });
   visibility.observe(host);
   const onTab = () => { if (!document.hidden) loop(); };
   document.addEventListener("visibilitychange", onTab);
@@ -404,9 +406,11 @@ export function mountBoard({ host, labels, onReady, onHover, onOverview }: Optio
     render(performance.now());
     onReady();
     loop();
+    ready = true;
     const gate = document.documentElement.classList.contains("w-gate-up");
-    if (gate) window.addEventListener("gf:gate-open", intro, { once: true });
-    else intro();
+    if (gate) window.addEventListener("gf:gate-open", startIntro, { once: true });
+    else if (visible) startIntro();
+    else { rig.intro = 0; render(performance.now()); }
   }).catch(() => { /* the static board stays */ });
 
   return () => {
@@ -420,7 +424,7 @@ export function mountBoard({ host, labels, onReady, onHover, onOverview }: Optio
     window.removeEventListener("pointerup", onUp);
     host.removeEventListener("pointerleave", onLeave);
     window.removeEventListener("scroll", onScroll);
-    window.removeEventListener("gf:gate-open", intro);
+    window.removeEventListener("gf:gate-open", startIntro);
     gsap.killTweensOf([rig, board.position, board.rotation, pawn.position]);
     scene.traverse(object => {
       const mesh = object as THREE.Mesh;
