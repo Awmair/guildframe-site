@@ -1,15 +1,23 @@
 import type {GuideLayer} from "./guide-visual-layer";
 import {layer as glBoardGameKickstarterCampaignDesignCost} from "./guide-layers/board-game-kickstarter-campaign-design-cost";
 import {layer as glBoardGameKickstarterCost} from "./guide-layers/board-game-kickstarter-cost";
+import {layer as glBoardGameKickstarterFundingGoal} from "./guide-layers/board-game-kickstarter-funding-goal";
 import {layer as glBoardGameKickstarterGameplayRulebook} from "./guide-layers/board-game-kickstarter-gameplay-rulebook";
+import {layer as glBoardGameKickstarterLaunchDayChecklist} from "./guide-layers/board-game-kickstarter-launch-day-checklist";
+import {layer as glBoardGameKickstarterMarketingPlan} from "./guide-layers/board-game-kickstarter-marketing-plan";
 import {layer as glBoardGameKickstarterPageChecklist} from "./guide-layers/board-game-kickstarter-page-checklist";
+import {layer as glBoardGameKickstarterRewardPricing} from "./guide-layers/board-game-kickstarter-reward-pricing";
+import {layer as glBoardGamePledgeManagerChecklist} from "./guide-layers/board-game-pledge-manager-checklist";
+import {layer as glBoardGameReviewerOutreach} from "./guide-layers/board-game-reviewer-outreach";
 import {layer as glBoardGameTariffsShippingUs} from "./guide-layers/board-game-tariffs-shipping-us";
 import {layer as glCardGameKickstarterLaunchGuide} from "./guide-layers/card-game-kickstarter-launch-guide";
+import {layer as glChooseBoardGameKickstarterMarketingAgency} from "./guide-layers/choose-board-game-kickstarter-marketing-agency";
 import {layer as glGamefoundLaunchPageChecklist} from "./guide-layers/gamefound-launch-page-checklist";
 import {layer as glHowToDesignAKickstarterPage} from "./guide-layers/how-to-design-a-kickstarter-page";
 import {layer as glHowToGetKickstarterBackers} from "./guide-layers/how-to-get-kickstarter-backers";
 import {layer as glHowToMarketAKickstarter} from "./guide-layers/how-to-market-a-kickstarter";
 import {layer as glIsMyGameReadyForKickstarter} from "./guide-layers/is-my-game-ready-for-kickstarter";
+import {layer as glKickstarterAdvertisingBudgetBoardGames} from "./guide-layers/kickstarter-advertising-budget-board-games";
 import {layer as glKickstarterAgencyCost} from "./guide-layers/kickstarter-agency-cost";
 import {layer as glKickstarterCampaignGraphicsMobileReadability} from "./guide-layers/kickstarter-campaign-graphics-mobile-readability";
 import {layer as glKickstarterCampaignVideoPlanning} from "./guide-layers/kickstarter-campaign-video-planning";
@@ -17,8 +25,12 @@ import {layer as glKickstarterFees} from "./guide-layers/kickstarter-fees";
 import {layer as glKickstarterFollowersBeforeLaunch} from "./guide-layers/kickstarter-followers-before-launch";
 import {layer as glKickstarterForBeginners} from "./guide-layers/kickstarter-for-beginners";
 import {layer as glKickstarterImageSizes} from "./guide-layers/kickstarter-image-sizes";
+import {layer as glKickstarterLiveCampaignUpdates} from "./guide-layers/kickstarter-live-campaign-updates";
+import {layer as glKickstarterPrelaunchEmailList} from "./guide-layers/kickstarter-prelaunch-email-list";
 import {layer as glKickstarterPrelaunchPageGuide} from "./guide-layers/kickstarter-prelaunch-page-guide";
+import {layer as glKickstarterPrelaunchPageVsLandingPage} from "./guide-layers/kickstarter-prelaunch-page-vs-landing-page";
 import {layer as glKickstarterPrototypeRisksDisclosure} from "./guide-layers/kickstarter-prototype-risks-disclosure";
+import {layer as glKickstarterReferralTagsTracking} from "./guide-layers/kickstarter-referral-tags-tracking";
 import {layer as glKickstarterReviewLaunchTimeline} from "./guide-layers/kickstarter-review-launch-timeline";
 import {layer as glKickstarterRewardTierGraphics} from "./guide-layers/kickstarter-reward-tier-graphics";
 import {layer as glKickstarterShippingDeliveryPage} from "./guide-layers/kickstarter-shipping-delivery-page";
@@ -40,15 +52,23 @@ import {layer as glWhyKickstarterCampaignsFail} from "./guide-layers/why-kicksta
 export const visualLayers: Record<string, GuideLayer> = {
   "board-game-kickstarter-campaign-design-cost": glBoardGameKickstarterCampaignDesignCost,
   "board-game-kickstarter-cost": glBoardGameKickstarterCost,
+  "board-game-kickstarter-funding-goal": glBoardGameKickstarterFundingGoal,
   "board-game-kickstarter-gameplay-rulebook": glBoardGameKickstarterGameplayRulebook,
+  "board-game-kickstarter-launch-day-checklist": glBoardGameKickstarterLaunchDayChecklist,
+  "board-game-kickstarter-marketing-plan": glBoardGameKickstarterMarketingPlan,
   "board-game-kickstarter-page-checklist": glBoardGameKickstarterPageChecklist,
+  "board-game-kickstarter-reward-pricing": glBoardGameKickstarterRewardPricing,
+  "board-game-pledge-manager-checklist": glBoardGamePledgeManagerChecklist,
+  "board-game-reviewer-outreach": glBoardGameReviewerOutreach,
   "board-game-tariffs-shipping-us": glBoardGameTariffsShippingUs,
   "card-game-kickstarter-launch-guide": glCardGameKickstarterLaunchGuide,
+  "choose-board-game-kickstarter-marketing-agency": glChooseBoardGameKickstarterMarketingAgency,
   "gamefound-launch-page-checklist": glGamefoundLaunchPageChecklist,
   "how-to-design-a-kickstarter-page": glHowToDesignAKickstarterPage,
   "how-to-get-kickstarter-backers": glHowToGetKickstarterBackers,
   "how-to-market-a-kickstarter": glHowToMarketAKickstarter,
   "is-my-game-ready-for-kickstarter": glIsMyGameReadyForKickstarter,
+  "kickstarter-advertising-budget-board-games": glKickstarterAdvertisingBudgetBoardGames,
   "kickstarter-agency-cost": glKickstarterAgencyCost,
   "kickstarter-campaign-graphics-mobile-readability": glKickstarterCampaignGraphicsMobileReadability,
   "kickstarter-campaign-video-planning": glKickstarterCampaignVideoPlanning,
@@ -56,8 +76,12 @@ export const visualLayers: Record<string, GuideLayer> = {
   "kickstarter-followers-before-launch": glKickstarterFollowersBeforeLaunch,
   "kickstarter-for-beginners": glKickstarterForBeginners,
   "kickstarter-image-sizes": glKickstarterImageSizes,
+  "kickstarter-live-campaign-updates": glKickstarterLiveCampaignUpdates,
+  "kickstarter-prelaunch-email-list": glKickstarterPrelaunchEmailList,
   "kickstarter-prelaunch-page-guide": glKickstarterPrelaunchPageGuide,
+  "kickstarter-prelaunch-page-vs-landing-page": glKickstarterPrelaunchPageVsLandingPage,
   "kickstarter-prototype-risks-disclosure": glKickstarterPrototypeRisksDisclosure,
+  "kickstarter-referral-tags-tracking": glKickstarterReferralTagsTracking,
   "kickstarter-review-launch-timeline": glKickstarterReviewLaunchTimeline,
   "kickstarter-reward-tier-graphics": glKickstarterRewardTierGraphics,
   "kickstarter-shipping-delivery-page": glKickstarterShippingDeliveryPage,
