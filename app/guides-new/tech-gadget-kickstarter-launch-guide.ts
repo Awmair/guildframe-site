@@ -221,7 +221,7 @@ export const guide: LaunchGuide = {
       title: "Budget and funding goal for a Kickstarter hardware campaign",
       paragraphs: [
         "Hardware budgets have more lines than most campaigns, because tooling, certification and samples all land before the first unit ships. Kickstarter's own advice is to set a goal that lets you fulfill every reward if you raise exactly 100%.",
-        "So we build the goal from real quotes, not from a number that sounds good. Kickstarter takes a 5% fee on funds collected and payment processing adds roughly 3 to 5%, so both go into the sheet first.",
+        "So we build the goal from real quotes, not from a number that sounds good. Kickstarter takes a 5% fee on funds collected and payment processing adds about 3% plus $0.20 per pledge for a US project ([Kickstarter fees explained](/guides/kickstarter-fees)), so both go into the sheet first.",
         "Our [manufacturing quotes guide](/guides/manufacturing-quotes-before-kickstarter) shows how to collect the numbers, and the [campaign cost guide](/guides/kickstarter-campaign-cost) covers marketing. For the fee math in your country, see [Kickstarter fees explained](/guides/kickstarter-fees).",
       ],
       source: 14,

@@ -9,7 +9,7 @@ export const guide: LaunchGuide = {
   description: "Kickstarter prototype requirements from its own help center: working prototypes, the real prototype video, the render ban, AI disclosure and review.",
   tag: "Products",
   answer: "Kickstarter prototype requirements say hardware and product design projects must show a working prototype, may not use photorealistic renderings, and must explain how the product will be produced. Design and Technology projects must also include a video of a real prototype, and AI renders or simulations cannot stand in for it.",
-  relatedSlugs: ["tech-gadget-kickstarter-launch-guide", "kickstarter-product-photography", "kickstarter-prototype-risks-disclosure", "manufacturing-quotes-before-kickstarter", "kickstarter-approval-time"],
+  relatedSlugs: ["tech-gadget-kickstarter-launch-guide", "kickstarter-product-photography", "kickstarter-prototype-risks-disclosure", "manufacturing-quotes-before-kickstarter", "kickstarter-review-launch-timeline"],
   servicePath: "/kickstarter-product-campaign-design",
   serviceLabel: "Kickstarter campaign design for products",
   sources: [
@@ -162,7 +162,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "You can send a project for review once every tab in the editor is complete, and Kickstarter's Trust and Safety team may suggest changes after the first review. A rules problem caught at this stage costs you time, not your campaign.",
         "After launch the stakes rise. If a project is suspended, funding stops, all pledges are cancelled and backers are not charged, and Kickstarter says a suspension cannot be reversed.",
-        "Our guide on [Kickstarter approval time](/guides/kickstarter-approval-time) covers the review timeline. Kickstarter lists these reasons for suspension that matter most for products:",
+        "Our guide on [Kickstarter approval time](/guides/kickstarter-review-launch-timeline) covers the review timeline. Kickstarter lists these reasons for suspension that matter most for products:",
       ],
       source: 5,
       list: [

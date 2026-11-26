@@ -147,7 +147,7 @@ export const guide: LaunchGuide = {
       id: "goal",
       title: "How manufacturing quotes shape your funding goal",
       paragraphs: [
-        "Once you have landed cost and the MOQ, the goal is arithmetic. Kickstarter takes a 5% fee on funds collected and payment processing adds roughly 3 to 5%, so we divide what you need by the share you keep.",
+        "Once you have landed cost and the MOQ, the goal is arithmetic. Kickstarter takes a 5% fee on funds collected and payment processing adds about 3% plus $0.20 per pledge for a US project ([Kickstarter fees explained](/guides/kickstarter-fees)), so we divide what you need by the share you keep.",
         "Here is the full chain on the example product, with every number labeled as an example. Our [campaign cost guide](/guides/kickstarter-campaign-cost) and [reward pricing guide](/guides/kickstarter-reward-pricing-physical-products) cover the other lines:",
       ],
       source: 1,
