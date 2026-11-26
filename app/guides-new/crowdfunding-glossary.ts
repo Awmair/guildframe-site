@@ -9,7 +9,7 @@ export const guide: LaunchGuide = {
   description: "A crowdfunding glossary of 72 Kickstarter terms in plain words, grouped by platform, page, money, marketing, after funding and shipping, with guide links.",
   tag: "Resources",
   answer: "A crowdfunding glossary explains the words you meet on Kickstarter, Gamefound and Indiegogo, from all or nothing funding to pledge managers and landed cost. This one defines 72 Kickstarter terms in plain words, grouped by the stage of a campaign where you first need them.",
-  relatedSlugs: ["kickstarter-for-beginners", "how-to-launch-a-kickstarter-campaign", "kickstarter-statistics-by-category", "kickstarter-fees", "what-happens-after-kickstarter-is-funded"],
+  relatedSlugs: ["kickstarter-for-beginners", "how-to-launch-a-kickstarter-campaign", "kickstarter-statistics-by-category", "kickstarter-fees", "kickstarter-vs-indiegogo"],
   servicePath: "/kickstarter-launch-services",
   serviceLabel: "Kickstarter launch services",
   sources: [

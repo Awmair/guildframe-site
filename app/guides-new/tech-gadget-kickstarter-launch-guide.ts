@@ -49,7 +49,7 @@ export const guide: LaunchGuide = {
           { question: "Has a factory quoted it at the quantities you expect to sell?", yes: "Move on to compliance", no: "Get quotes at three quantities before you set a goal" },
           { question: "Do you know which certifications each market needs?", yes: "Move on to your audience", no: "Ask a test lab for an FCC and CE plan with a price" },
           { question: "Have strangers signed up to hear when you launch?", yes: "Plan the launch window", no: "Run prelaunch first and grow the list" },
-          { question: "Is your goal under about $200,000 with a modest ad budget?", yes: "A fixed price studio fits", no: "Talk to a commission agency with a media team" },
+          { question: "Is your goal well under $500,000, with a modest ad budget?", yes: "A fixed price studio fits", no: "Talk to a commission agency with a media team" },
         ],
         end: "Ready to plan the campaign",
         caption: "Our readiness check for hardware creators.",
@@ -339,7 +339,7 @@ export const guide: LaunchGuide = {
       title: "Launch week, ad budgets and when you need a bigger agency",
       paragraphs: [
         "The first days of a Kickstarter hardware campaign set its pace, so launch day is about turning your list into pledges fast. We send the emails, run ads within the budget you set and watch which messages bring backers.",
-        "Be honest about scale. Big hardware launches with goals above about $200,000 usually need a commission agency with a media team buying ads every day, and that is not us.",
+        "Be honest about scale. Big hardware launches, around $500,000 with a large media budget, usually need a commission agency with a media team buying ads every day, and that is not us.",
         "Secubix shows the fit we are good at. It is a parking surveillance system for Vespas from Vienna, and its campaign, which we worked on, had 90 backers pledge €32,218, the client's own result. Our [agency cost guide](/guides/kickstarter-agency-cost) compares the models.",
       ],
       source: 17,
@@ -348,11 +348,11 @@ export const guide: LaunchGuide = {
         title: "Match the partner to the size of the launch",
         columns: [
           { name: "Fixed price studio (Guildframe)", points: ["Campaign page package: $1,800", "Full campaign support: $5,900", "Ad spend stays your budget, outside our fee", "No commission and no funding guarantee"], verdict: "Fits focused gadgets and first launches", highlight: true },
-          { name: "Commission agency with a media team", points: ["Fee tied to funds raised", "Large daily ad buying and testing", "Media team and press outreach"], verdict: "Fits big launches above about $200,000" },
+          { name: "Commission agency with a media team", points: ["Fee tied to funds raised", "Large daily ad buying and testing", "Media team and press outreach"], verdict: "Fits $500,000 launches with a big media budget" },
         ],
         caption: "Guildframe prices as of November 2026. Agency terms vary, so compare written proposals.",
       },
-      takeaway: "If your tech Kickstarter launch aims well above $200,000, budget for a commission agency with a media team. For a focused gadget, a strong page and launch plan is enough.",
+      takeaway: "If your tech Kickstarter launch aims at $500,000 with a big media budget, plan for a commission agency with a media team. For a focused gadget, a strong page and launch plan is enough.",
     },
     {
       id: "delivery-risk",
@@ -402,6 +402,6 @@ export const guide: LaunchGuide = {
     { question: "Can I ship a gadget with a lithium battery to backers?", answer: "Yes, with planning. Each lithium cell or battery must be of a type proven to meet the UN 38.3 tests, and carriers add their own rules, so your fulfillment partner must confirm they accept your battery for every region." },
     { question: "What do EVT, DVT and PVT mean?", answer: "They are the three test builds between a prototype and mass production. EVT checks the engineering works, DVT checks the final design passes reliability and certification testing, and PVT checks the factory line can build it at speed." },
     { question: "How long does a Kickstarter hardware campaign take to deliver?", answer: "It depends on your stage at launch. Kickstarter says delays of more than six months are not uncommon for new products, so we set the estimated delivery date from the slowest stage, usually certification and first production, plus a buffer." },
-    { question: "Is Guildframe the right fit for a $500,000 hardware launch?", answer: "Usually not. Launches with goals above about $200,000 tend to need a commission agency with a media team. We are a fixed price studio: $1,800 for the campaign page package and $5,900 for full campaign support, with ad spend separate." },
+    { question: "Is Guildframe the right fit for a $500,000 hardware launch?", answer: "Usually not. A launch that size with a big media budget tends to need a commission agency with a media team. We are a fixed price studio: $1,800 for the campaign page package and $5,900 for full campaign support, with ad spend separate." },
   ],
 };

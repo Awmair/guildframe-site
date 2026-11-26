@@ -201,7 +201,7 @@ export const layer: GuideLayer = {
           },
           {
             "label": "Submit early",
-            "text": "Send to review four to six weeks out, then keep improving the page while you wait."
+            "text": "Send a first project to review four to six weeks out, and never less than 2 weeks before your date. Keep improving the page while you wait."
           }
         ],
         "caption": "Guildframe practice, built on Kickstarter's published rules and launch checklist."

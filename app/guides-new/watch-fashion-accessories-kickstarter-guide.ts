@@ -357,7 +357,7 @@ export const guide: LaunchGuide = {
       id: "launch",
       title: "Prelaunch, launch week and shipping for a fashion Kickstarter",
       paragraphs: [
-        "Your prelaunch page gathers the people who will claim early birds. Kickstarter emails every follower when the project goes live, and review takes up to three business days, plus three more after changes.",
+        "Your prelaunch page gathers the people who will claim early birds. Kickstarter emails every follower when the project goes live, and review takes up to three business days, plus three more after changes. On a first project the prelaunch page opens only after approval, so submit before you plan to share it.",
         "Kickstarter allows up to 60 days but recommends 30 or fewer. After the deadline it takes 14 days to collect pledges before payout starts, so your factory deposit needs to fit that gap. Our guide to [shipping physical Kickstarter rewards](/guides/kickstarter-shipping-physical-products) covers duties and couriers.",
       ],
       list: [
@@ -374,8 +374,9 @@ export const guide: LaunchGuide = {
         events: [
           { when: "16 weeks out", label: "Samples approved", detail: "Fit and photo samples in every color" },
           { when: "12 weeks out", label: "Shoot and quote", detail: "Lifestyle shoot, final MOQ and unit price" },
+          { when: "10 weeks out", label: "Submit for review", detail: "Up to three business days, plus three after changes" },
           { when: "8 weeks out", label: "Prelaunch page live", detail: "Size poll and early bird reminder", highlight: true },
-          { when: "2 weeks out", label: "Submit for review", detail: "Up to three business days, plus three after changes" },
+          { when: "2 weeks out", label: "Final preview check", detail: "Sizes, colors and prices match in text and rewards" },
           { when: "Day 1 to 30", label: "Campaign live", detail: "Answer every sizing question in the comments" },
           { when: "After funding", label: "Survey, order, ship", detail: "Sizes and colors from the survey go to the factory" },
         ],

@@ -363,7 +363,7 @@ export const guide: LaunchGuide = {
       id: "campaign",
       title: "Running a creative project campaign, week by week",
       paragraphs: [
-        "Your prelaunch page gathers followers, and Kickstarter emails every follower when you go live. Review takes up to three business days, plus three more after changes, so submit about two weeks ahead.",
+        "Your prelaunch page gathers followers, and Kickstarter emails every follower when you go live. Review takes up to three business days, plus three more after changes. On a first project the prelaunch page opens only after approval, so submit about two weeks before you want it live.",
         "Kickstarter allows up to 60 days but recommends 30 or fewer, because shorter campaigns create urgency. Our guide on [how to get Kickstarter backers](/guides/how-to-get-kickstarter-backers) covers finding the first hundred.",
       ],
       source: 13,
@@ -371,15 +371,16 @@ export const guide: LaunchGuide = {
         kind: "timeline",
         title: "Example timeline for a small creative project",
         events: [
+          { when: "8 weeks out", label: "Submit for review", detail: "Up to three business days, plus three after changes" },
           { when: "6 weeks out", label: "Prelaunch page live", detail: "Share a preview of the work and ask people to follow", highlight: true },
-          { when: "2 weeks out", label: "Submit for review", detail: "Up to three business days, plus three after changes" },
+          { when: "2 weeks out", label: "Final preview check", detail: "Read the page on a phone and test every link" },
           { when: "Launch day", label: "Community first", detail: "Email your list, then post at your venue, gallery or club" },
           { when: "Middle weeks", label: "Show progress", detail: "A studio photo, a rehearsal clip or a new track" },
           { when: "Final days", label: "Last call", detail: "Remind followers and thank everyone by name" },
         ],
         caption: "Example timeline for a 30 day campaign. Adjust it to your community's calendar.",
       },
-      takeaway: "Open your prelaunch page about six weeks ahead, launch to your community first, and show the work in progress through the middle weeks.",
+      takeaway: "Submit a first project early enough to open your prelaunch page about six weeks ahead, launch to your community first, and show the work in progress through the middle weeks.",
     },
     {
       id: "after",
