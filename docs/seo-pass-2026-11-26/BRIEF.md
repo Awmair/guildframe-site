@@ -43,3 +43,12 @@ One file per guide: `app/guides-new/<slug>.ts` exporting `export const guide: La
 - No npm network: you cannot build. Reread your diff for TypeScript validity (matching brackets, quotes, commas, exact field names). You may run `/home/claude/.npm-global/bin/tsx -e "import('./app/guides-new/<slug>.ts').then(m=>console.log(m.guide.slug, m.guide.sections.length))"` from the worktree root to check it parses.
 - When done, write `docs/seo-pass-2026-11-26/manifest-<agent>.md` with: slugs, title, seoTitle, description (with character count), tag, servicePath, primary and secondary phrases with evidence, workbook title and line, llms.txt line ("- [Title](https://guildframe.com/guides/<slug>): one line"), and any fact you dropped because you could not verify it.
 - Final reply: 10 lines max.
+
+## UPDATE from Umair (10:25): visual first, no walls of text
+Umair wants more visuals, flow diagrams and infographics instead of long walls of text: small bits of text spread around, carrying the keywords, and every guide genuinely useful.
+New tools (already merged into your worktree, commit "Guide visuals"):
+- `LaunchSection.visuals?: GuideVisualData[]` (several visuals per section) alongside `visual?`.
+- `LaunchSection.takeaway?: string` renders a highlighted "Key takeaway" box after the section (one or two sentences, keyword rich).
+- New visual kind `flow`: `{kind:"flow", title, start:"You have a working prototype", nodes:[{question:"Is it under 500 grams?", yes:"Ship it from one fulfilment centre", no:"Quote freight per region"}], end:"Ready to price shipping"}`. Yes continues down the chain, No is the side exit. Use 3 to 6 nodes. Use it for decisions (is it ready, which platform, ship now or later, relaunch or not).
+- New visual kind `tips`: `{kind:"tips", title, tips:[{label:"Short bold label", text:"One or two sentences."}]}` for small practical cards.
+Rules now: paragraphs at most 3 sentences and about 60 words; most sections should have 1 to 2 short paragraphs then a visual, list or table. Target visuals: A to Z guides 8 to 12 visuals (including at least 2 flow diagrams and 1 tips block), supporting guides 4 to 6 (at least 1 flow). Add a `takeaway` on most sections. Keep total word counts roughly as briefed, but move words out of paragraphs into lists, tables, steps, tips and flows. Every visual must teach something concrete.
