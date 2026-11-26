@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SeoHeader, SeoFooter } from "./components/SeoChrome";
 import { JsonLd } from "./components/JsonLd";
-import { Board } from "./components/world/Board";
+import { Table } from "./components/world/Table";
 import { Gate, gateBootScript } from "./components/world/Gate";
 import { HomeFx } from "./components/world/HomeFx";
 import { Icon, Roll } from "./components/chrome/Icon";
@@ -49,7 +49,7 @@ export default function Home() {
     <script dangerouslySetInnerHTML={{ __html: gateBootScript }}/>
     <main id="main-content" className="gfr gfr-home h" tabIndex={-1}>
       <section className="gfr-hero-shell" aria-labelledby="home-title">
-        <Board/>
+        <Table/>
         <div className="h-hero">
           <h1 id="home-title" className="h-title" data-reveal="lines"><span className="w-line"><span>Your first Kickstarter,</span></span> <span className="w-line"><span><em>done properly.</em></span></span></h1>
           <div className="h-hero-side" data-reveal="rise">
