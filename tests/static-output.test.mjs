@@ -947,7 +947,7 @@ test("explains the launch in three plain steps", async () => {
   assert.match(visibleText(faq), /Do you only work on games\?/);
 });
 
-test("opens the homepage with the offer and keeps concepts labelled apart from client work", async () => {
+test("opens the homepage with the offer and no concept strip", async () => {
   const home = await readPage("/");
   const hero = home.match(/<section\b[^>]*class="gfr-hero-shell"[\s\S]*?<\/section>/)?.[0];
   assert.ok(hero);
@@ -956,13 +956,7 @@ test("opens the homepage with the offer and keeps concepts labelled apart from c
   assert.match(hero, /href="#pricing"/);
   assert.match(hero, /href="#start-project"/);
   assert.doesNotMatch(home, /tabletop-kickstarter-launch-kit|Free campaign kit/i);
-  const concepts = home.match(/<section\b[^>]*\bid="concepts"[\s\S]*?<\/section>/)?.[0];
-  assert.ok(concepts);
-  assert.match(visibleText(concepts), /not client work/);
-  for (const image of ["party-card-game", "strategy-board-game", "trading-card-game", "rpg-book", "miniature-terrain", "dice-accessories"]) {
-    assert.ok(concepts.includes(`/images/hero/${image}-480w.webp`), image);
-    for (const width of [320, 480, 640]) await access(new URL(`images/hero/${image}-${width}w.webp`, outputRoot));
-  }
+  assert.doesNotMatch(home, /id="concepts"/);
   const redirects = await readFile(new URL("_redirects", outputRoot), "utf8");
   assert.match(redirects, /^\/resources\/tabletop-kickstarter-launch-kit \/guides 301$/m);
   assert.match(redirects, /^\/resources\/tabletop-kickstarter-launch-kit\/thanks \/guides 301$/m);

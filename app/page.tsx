@@ -24,14 +24,6 @@ const homeFaqs = [
   { question: "Do I keep my accounts, contacts and files?", answer: "Yes. Your campaign and marketing accounts stay yours. The brief lists the final files and editable sources we hand over." },
   { question: "Can you guarantee the campaign will fund?", answer: "No. Nobody can honestly guarantee funding. The product, audience, pricing and fulfillment plan all affect the result. We agree the work, budget and measures of progress before the project starts." },
 ];
-const concepts = [
-  { image: "party-card-game", alt: "Original Snack Attack party game concept with a coral box, illustrated fruit cards and tokens" },
-  { image: "strategy-board-game", alt: "Original Tidal Harbour strategy game concept with painted harbour box, hex map and wooden ships" },
-  { image: "trading-card-game", alt: "Original Starbound trading card game concept with a celestial deck box and illustrated foil cards" },
-  { image: "rpg-book", alt: "Original Moth and Moon folk horror RPG concept with a green clothbound book, adventure zine and character sheets" },
-  { image: "miniature-terrain", alt: "Original Orbital Outpost miniature game concept with a lunar box, sculpted mech and modular terrain" },
-  { image: "dice-accessories", alt: "Original Prismatic accessories concept with jewel colored dice, coral suede tray and petrol presentation box" },
-];
 const featuredGuides = [
   { href: "/guides/kickstarter-for-beginners", topic: "Start here", title: "Kickstarter for beginners" },
   { href: "/guides/how-to-design-a-kickstarter-page", topic: "Campaign page", title: "How to design a Kickstarter page" },
@@ -97,18 +89,6 @@ export default function Home() {
               <li><span className="h-step-space" aria-hidden="true"/><h3>Launch</h3><p>The page goes live. On full support Umair runs the agreed ads, checks the page and drafts backer updates for your approval.</p></li>
             </ol>
           </div>
-        </div>
-      </section>
-
-      <section className="h-concepts" id="concepts" aria-labelledby="concepts-title">
-        <div className="w-wrap-wide h-concepts-head">
-          <h2 id="concepts-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Studio concepts</span></span></h2>
-          <p className="w-dot w-dot--concept">Made in the studio, not client work</p>
-        </div>
-        <div className="h-concepts-strip" data-cursor="drag" data-cursor-label="Drag">
-          {concepts.map((concept, index) => <figure className="h-concept" key={concept.image} style={{ "--r": `${[-4, 3, -2, 5, -3, 2][index]}deg` } as React.CSSProperties}>
-            <img src={`/images/hero/${concept.image}-480w.webp`} srcSet={`/images/hero/${concept.image}-320w.webp 320w, /images/hero/${concept.image}-480w.webp 480w, /images/hero/${concept.image}-640w.webp 640w`} sizes="(max-width: 900px) 62vw, 340px" width="640" height="640" alt={concept.alt} loading="lazy" draggable={false}/>
-          </figure>)}
         </div>
       </section>
 
