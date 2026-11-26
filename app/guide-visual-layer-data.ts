@@ -19,11 +19,13 @@ import {layer as glHowToMarketAKickstarter} from "./guide-layers/how-to-market-a
 import {layer as glIsMyGameReadyForKickstarter} from "./guide-layers/is-my-game-ready-for-kickstarter";
 import {layer as glKickstarterAdvertisingBudgetBoardGames} from "./guide-layers/kickstarter-advertising-budget-board-games";
 import {layer as glKickstarterAgencyCost} from "./guide-layers/kickstarter-agency-cost";
+import {layer as glKickstarterCampaignBrief} from "./guide-layers/kickstarter-campaign-brief";
 import {layer as glKickstarterCampaignGraphicsMobileReadability} from "./guide-layers/kickstarter-campaign-graphics-mobile-readability";
 import {layer as glKickstarterCampaignVideoPlanning} from "./guide-layers/kickstarter-campaign-video-planning";
 import {layer as glKickstarterFees} from "./guide-layers/kickstarter-fees";
 import {layer as glKickstarterFollowersBeforeLaunch} from "./guide-layers/kickstarter-followers-before-launch";
 import {layer as glKickstarterForBeginners} from "./guide-layers/kickstarter-for-beginners";
+import {layer as glKickstarterFundingGoal} from "./guide-layers/kickstarter-funding-goal";
 import {layer as glKickstarterImageSizes} from "./guide-layers/kickstarter-image-sizes";
 import {layer as glKickstarterLiveCampaignUpdates} from "./guide-layers/kickstarter-live-campaign-updates";
 import {layer as glKickstarterPrelaunchEmailList} from "./guide-layers/kickstarter-prelaunch-email-list";
@@ -39,6 +41,7 @@ import {layer as glKickstarterVsGamefound} from "./guide-layers/kickstarter-vs-g
 import {layer as glKickstarterVsGamefoundCampaignPageDesign} from "./guide-layers/kickstarter-vs-gamefound-campaign-page-design";
 import {layer as glMiniaturesStlKickstarterLaunchGuide} from "./guide-layers/miniatures-stl-kickstarter-launch-guide";
 import {layer as glPledgeManagersCompared} from "./guide-layers/pledge-managers-compared";
+import {layer as glProductKickstarterPage} from "./guide-layers/product-kickstarter-page";
 import {layer as glTcgKickstarterLaunchGuide} from "./guide-layers/tcg-kickstarter-launch-guide";
 import {layer as glTerrainAndDiceKickstarterLaunchGuide} from "./guide-layers/terrain-and-dice-kickstarter-launch-guide";
 import {layer as glTtrpgKickstarterCampaignPageDesign} from "./guide-layers/ttrpg-kickstarter-campaign-page-design";
@@ -70,11 +73,13 @@ export const visualLayers: Record<string, GuideLayer> = {
   "is-my-game-ready-for-kickstarter": glIsMyGameReadyForKickstarter,
   "kickstarter-advertising-budget-board-games": glKickstarterAdvertisingBudgetBoardGames,
   "kickstarter-agency-cost": glKickstarterAgencyCost,
+  "kickstarter-campaign-brief": glKickstarterCampaignBrief,
   "kickstarter-campaign-graphics-mobile-readability": glKickstarterCampaignGraphicsMobileReadability,
   "kickstarter-campaign-video-planning": glKickstarterCampaignVideoPlanning,
   "kickstarter-fees": glKickstarterFees,
   "kickstarter-followers-before-launch": glKickstarterFollowersBeforeLaunch,
   "kickstarter-for-beginners": glKickstarterForBeginners,
+  "kickstarter-funding-goal": glKickstarterFundingGoal,
   "kickstarter-image-sizes": glKickstarterImageSizes,
   "kickstarter-live-campaign-updates": glKickstarterLiveCampaignUpdates,
   "kickstarter-prelaunch-email-list": glKickstarterPrelaunchEmailList,
@@ -90,6 +95,7 @@ export const visualLayers: Record<string, GuideLayer> = {
   "kickstarter-vs-gamefound-campaign-page-design": glKickstarterVsGamefoundCampaignPageDesign,
   "miniatures-stl-kickstarter-launch-guide": glMiniaturesStlKickstarterLaunchGuide,
   "pledge-managers-compared": glPledgeManagersCompared,
+  "product-kickstarter-page": glProductKickstarterPage,
   "tcg-kickstarter-launch-guide": glTcgKickstarterLaunchGuide,
   "terrain-and-dice-kickstarter-launch-guide": glTerrainAndDiceKickstarterLaunchGuide,
   "ttrpg-kickstarter-campaign-page-design": glTtrpgKickstarterCampaignPageDesign,
