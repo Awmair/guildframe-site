@@ -1,0 +1,35 @@
+/* Tabletop wing hub (/tabletop-kickstarter-campaigns). Reuses the service hero, the home work deck and guide rows. */
+.tt-genres{padding:var(--section) 0;background:var(--baize-900)}
+.tt-genre-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+html.w-js .tt-genre-list>li[data-reveal="rise"]{transition-delay:calc(var(--i,0) * 80ms)}
+.tt-genre{display:grid;grid-template-rows:auto 1fr;gap:18px;height:100%;padding:12px;border-radius:22px;background:var(--baize-800);color:var(--board-100);box-shadow:0 22px 40px -28px rgb(0 0 0 / .7);transition:transform 650ms var(--ease-spring),background-color var(--d-state)}
+.tt-genre-media{display:block;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:var(--baize-900);transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform 700ms var(--ease-out)}
+.tt-genre-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1200ms var(--ease-out)}
+.tt-genre-body{display:grid;gap:10px;align-content:start;padding:0 8px 12px}
+.tt-genre-tag{font-size:var(--t-small);color:var(--saffron-500)}
+.tt-genre-name{display:flex;align-items:center;justify-content:space-between;gap:12px;font:400 clamp(1.75rem,2.8vw,2.5rem)/1 var(--font-sans);letter-spacing:-.03em}
+.tt-genre-name svg{flex:none;transition:transform 500ms var(--ease-out)}
+.tt-genre-copy{color:var(--mist-300);font-size:.9375rem;line-height:1.55}
+.tt-concept-note{margin-top:24px}
+.tt-gamefound{padding:var(--section) 0;background:var(--baize-800)}
+.tt-work{border-top:1px solid var(--line-dusk)}
+.tt-guide-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,48px) clamp(24px,4vw,56px)}
+.tt-guide-group{display:grid;gap:12px;align-content:start}
+.tt-guide-group h3{font:400 var(--t-title,1.375rem)/1.15 var(--font-sans);color:var(--saffron-500)}
+.tt-guide-group ul{display:grid}
+.tt-guide-group a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--line-dusk);color:var(--board-100);transition:color var(--d-state),padding var(--d-state) var(--ease-out)}
+.tt-guide-group a svg{flex:none;opacity:.6;transition:transform 500ms var(--ease-out),opacity var(--d-state)}
+.tt-guide-group a:hover{color:var(--saffron-500);padding-left:8px}
+.tt-guide-group a:hover svg{opacity:1;transform:translateX(4px) rotate(-30deg)}
+@media (hover:hover) and (pointer:fine){
+  .tt-genre:hover{transform:translateY(-8px);background:var(--baize-700)}
+  .tt-genre:hover .tt-genre-media img{transform:scale(1.06)}
+  .tt-genre:hover .tt-genre-name svg{transform:translateX(6px) rotate(-12deg)}
+}
+@media (max-width:1100px){.tt-genre-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .tt-genre-list{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--page-pad) * -1);padding:4px var(--page-pad) 16px;scrollbar-width:none}
+  .tt-genre-list::-webkit-scrollbar{display:none}
+  .tt-genre-list>li{flex:0 0 78vw;scroll-snap-align:center}
+}
+@media (prefers-reduced-motion:reduce){.tt-genre,.tt-genre-media,.tt-genre-media img,.tt-genre-name svg,.tt-guide-group a,.tt-guide-group a svg{transition:none}}

@@ -11,7 +11,7 @@ export const guide: LaunchGuide = {
   servicePath: "/gamefound-launch-services",
   serviceLabel: "Gamefound launch services for tabletop creators",
   answer: "Both platforms take a 5% platform fee, so fees rarely decide it. Pick Kickstarter when your audience reaches beyond hobby gaming or you run your own ads. Pick Gamefound when you sell to tabletop regulars and want stretch goals, late pledges, a pledge manager and ads in one system.",
-  relatedSlugs: ["kickstarter-vs-gamefound-campaign-page-design", "gamefound-launch-page-checklist", "pledge-managers-compared", "kickstarter-advertising-budget-board-games"],
+  relatedSlugs: ["kickstarter-vs-gamefound-campaign-page-design", "gamefound-launch-page-checklist", "pledge-managers-compared", "kickstarter-advertising-budget-board-games", "kickstarter-vs-indiegogo"],
   sources: [
     { label: "Kickstarter fees and payment processing", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236674-what-are-the-fees" },
     { label: "Fees for projects funded on Gamefound", publisher: "Gamefound", href: "https://help.gamefound.com/article/284-fees-for-projects-funded-on-gamefound" },

@@ -21,29 +21,29 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
       { title: "Prepare the page and audience", copy: "Build the agreed signup page, email flow, campaign creative and ad tests. Check the forms, links and product details before sending traffic." },
       { title: "Launch with a support plan", copy: "Use an approved launch checklist, spending limits and update schedule. Finish with the agreed files, reporting and outstanding tasks." },
     ],
-    inputs: "A playable game or clear product brief, current artwork, proposed rewards, platform, target date and an indication of your service and media budgets.",
+    inputs: "A working prototype or clear product brief, current artwork or product images, proposed rewards, platform, target date and an indication of your service and media budgets.",
     handoff: "Your accounts and contacts stay yours. The proposal lists final files, editable sources, support dates, reporting and any separately priced suppliers or software.",
     proof: ["cryptic-explorers", "futureproof-terrain", "quiver-time", "scented-realms"],
     faqs: [
       { question: "What do Kickstarter launch services include?", answer: "Launch planning, prelaunch pages and email, campaign copy and graphics, paid ads and live support, each with named deliverables. You can book all of it as full campaign support or only the stages you are missing. Manufacturing, freight and fulfillment stay with your suppliers." },
-      { question: "How far before launch should I get in touch?", answer: "Send the brief while the date is still flexible. I review the assets and unfinished work before proposing a schedule. If a date is already public, include it so we can identify what can realistically be finished." },
-      { question: "Can my existing illustrator or marketing team stay involved?", answer: "Yes. Tell me who is already doing the work. We can split responsibilities and agree who supplies, reviews and publishes each item." },
+      { question: "How far before launch should I get in touch?", answer: "Send the brief while the date is still flexible. We review the assets and unfinished work before proposing a schedule. If a date is already public, include it so we can identify what can realistically be finished." },
+      { question: "Can my existing illustrator or marketing team stay involved?", answer: "Yes. Tell us who is already doing the work. We can split responsibilities and agree who supplies, reviews and publishes each item." },
     ],
   },
   "kickstarter-prelaunch-marketing": {
     title: "A signup flow you can test before buying traffic.",
-    intro: "The page is one part of prelaunch. The form, welcome email, useful game material and launch announcement need to work together.",
+    intro: "The page is one part of prelaunch. The form, welcome email, useful preview material and launch announcement need to work together.",
     steps: [
-      { title: "Give the signup a purpose", copy: "Show the game and explain what subscribers will receive. Choose a rules preview, sample round or product demonstration you can actually deliver." },
+      { title: "Give the signup a purpose", copy: "Show what you are making and explain what subscribers will receive. Choose a product demonstration, sample chapter, rules preview or sample round you can actually deliver." },
       { title: "Test the whole email route", copy: "Check the form, contact record, welcome message, links and unsubscribe flow in your accounts. Test on a phone before promotion begins." },
       { title: "Review interest and readiness", copy: "Compare signup costs with delivery, useful clicks and campaign readiness. Agree whether to revise the offer, continue testing or prepare the launch." },
     ],
-    inputs: "A game explanation, usable artwork, sample material, proposed rewards, email and domain access, plus an approved test budget if ads are included.",
+    inputs: "A short explanation of your project, usable artwork or product images, sample material, proposed rewards, email and domain access, plus an approved test budget if ads are included.",
     handoff: "Landing page content, the agreed email sequence, contact lists in your account and reporting definitions. Platform followers and email subscribers are reported separately.",
     proof: ["scented-realms", "quiver-time"],
     faqs: [
-      { question: "When should prelaunch marketing start?", answer: "Once you can explain the game and have some artwork to show. The page, emails and first tests need time to run before launch, so send your target date and we will work out what fits before it." },
-      { question: "Should I run ads before my Kickstarter launches?", answer: "Often, yes, but only as capped tests with a clear question, such as which gameplay message brings engaged subscribers. We review the cost of each engaged signup before suggesting any increase in spend." },
+      { question: "When should prelaunch marketing start?", answer: "Once you can explain what you are making and have some images to show. The page, emails and first tests need time to run before launch, so send your target date and we will work out what fits before it." },
+      { question: "Should I run ads before my Kickstarter launches?", answer: "Often, yes, but only as capped tests with a clear question, such as which message brings engaged subscribers. We review the cost of each engaged signup before suggesting any increase in spend." },
       { question: "Can you guarantee a number of launch day backers?", answer: "No. Signups and followers are expressions of interest. We test the message and track engagement, then review actual pledges after launch within the limits of the available reporting." },
     ],
   },
@@ -52,7 +52,7 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
     intro: "Paid advertising can support prelaunch audience building or a live campaign. The destination, objective and measurement change with the stage.",
     steps: [
       { title: "Check what a pledge can afford", copy: "Review reward prices and the costs behind them. Set a test ceiling that leaves room for production, delivery, fees and the rest of your project." },
-      { title: "Test a specific message", copy: "Prepare creative variants around gameplay, the product or rewards. Confirm the destination and measurable action before the ads run." },
+      { title: "Test a specific message", copy: "Prepare creative variants around the product, how it is used or played, or the rewards. Confirm the destination and measurable action before the ads run." },
       { title: "Use the results to decide", copy: "Review spend, qualified signups or attributable pledges. Record the attribution limits and agree changes before increasing the budget." },
     ],
     inputs: "Your campaign or landing page, reward cost model, account access, previous results if available, usable creative and a separate media budget.",
@@ -119,11 +119,11 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
 
 export const creativeDelivery: Record<string, ServiceDelivery> = {
   "campaign-design": {
-    title: "From your game files to a page ready for review.", intro: "Start with one free opening mockup if you want to see a direction first. The paid design brief then confirms the full page and file handoff.",
-    steps: [{ title: "Plan the page", copy: "Review the artwork, rules, components and rewards. Agree the outline and identify facts or images that still need supplying." }, { title: "Build the copy and graphics", copy: "Explain the gameplay and contents, then make the reward differences easy to compare. Use your artwork to set the visual direction." }, { title: "Check the final presentation", copy: "Review mobile readability, reward names and platform files. Confirm the revision process and editable sources in the brief." }],
-    inputs: "Game summary, usable artwork, components or sample pages, reward contents and a target date. Label prototypes and unfinished specifications.",
+    title: "From your project files to a page ready for review.", intro: "Start with one free opening mockup if you want to see a direction first. The paid design brief then confirms the full page and file handoff.",
+    steps: [{ title: "Plan the page", copy: "Review the artwork or product images, specifications, rules or components, and rewards. Agree the outline and identify facts or images that still need supplying." }, { title: "Build the copy and graphics", copy: "Explain how it works and what is included, then make the reward differences easy to compare. Use your artwork to set the visual direction." }, { title: "Check the final presentation", copy: "Review mobile readability, reward names and platform files. Confirm the revision process and editable sources in the brief." }],
+    inputs: "A project summary, usable artwork or product images, components, specifications or sample pages, reward contents and a target date. Label prototypes and unfinished specifications.",
     handoff: "The agreed campaign copy, graphics and source files. The design price covers the scoped campaign page; ads, prelaunch, video and new illustration are separate.", proof: ["scented-realms", "futureproof-terrain", "quiver-time"],
-    faqs: [{ question: "What does the free mockup include?", answer: "One opening campaign section using your existing artwork and game description. It shows a creative direction before booking. It does not include a complete campaign page or new game illustration." }, { question: "Who checks the product facts?", answer: "You confirm rules, contents, reward prices, delivery details and any product claims. I use those approved facts in the campaign copy and graphics." }],
+    faqs: [{ question: "What does the free mockup include?", answer: "One opening campaign section using your existing artwork or product images and a short description. It shows a creative direction before booking. It does not include a complete campaign page or new illustration." }, { question: "Who checks the product facts?", answer: "You confirm specifications, rules, contents, reward prices, delivery details and any product claims. We use those approved facts in the campaign copy and graphics." }],
   },
 };
 

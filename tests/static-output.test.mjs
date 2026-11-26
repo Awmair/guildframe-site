@@ -18,12 +18,12 @@ const pages = [
   ["/guides/board-game-reviewer-outreach", "Board Game Reviewer Outreach Before Kickstarter | Guildframe", "Plan Board Game Reviewer Previews Before Kickstarter"],
   ["/guides/board-game-kickstarter-launch-day-checklist", "Board Game Launch Checklist for Kickstarter | Guildframe", "Board Game Kickstarter Launch Checklist: 90"],
   ["/guides/board-game-pledge-manager-checklist", "Pledge Manager Checklist: How to Choose One | Guildframe", "Choose a Pledge Manager for Your Board Game Campaign"],
-  ["/work", "Tabletop Kickstarter Campaign Design Case Studies | Guildframe", "Tabletop campaign design case studies"],
+  ["/work", "Tabletop Kickstarter Campaign Design Case Studies | Guildframe", "Campaign design case studies"],
   ["/work/scented-realms", "ScentedRealms Kickstarter Campaign Design Case Study | Guildframe", "ScentedRealms: campaign design"],
   ["/work/futureproof-terrain", "FutureProof Terrain Kickstarter Campaign Design Case Study | Guildframe", "FutureProof Terrain: campaign design"],
   ["/work/quiver-time", "Quiver Time CITADEL Kickstarter Campaign Design Case Study | Guildframe", "Quiver Time: campaign design"],
   ["/work/cryptic-explorers", "Cryptic Explorers Kickstarter Campaign Design Case Study | Guildframe", "Cryptic Explorers: campaign design"],
-  ["/", "Kickstarter Agency for Board Games & Tabletop | Guildframe", "Kickstarter launches"],
+  ["/", "Kickstarter Campaigns for First Time Creators | Guildframe", "Your first Kickstarter"],
   ["/buy", "Start Your Tabletop Launch Project | Guildframe", "Start your tabletop launch project"],
   ["/done-for-you-shopify-store", "Shopify Store Planning After Your Campaign | Guildframe", "Plan a Shopify store after crowdfunding"],
   ["/shopify-theme-for-board-games", "Shopify Theme and Store Setup for Board Games | Guildframe", "Plan your board game"],
@@ -110,7 +110,15 @@ const pages = [
   ["/guides/ttrpg-kickstarter-launch-guide", "TTRPG Kickstarter Launch and Marketing Guide | Guildframe", "TTRPG Kickstarter Launch Guide \\(2026\\)"],
   ["/guides/when-to-launch-a-kickstarter", "When to Launch a Kickstarter: Timing and Prep | Guildframe", "When Should You Launch Your Kickstarter"],
   ["/guides/why-kickstarter-campaigns-fail", "Why Kickstarter Campaigns Fail: How to Avoid It | Guildframe", "What Makes a Kickstarter Fail, and"],
+  // general guides for products, games and books (2026-11-26)
+  ["/guides/kickstarter-campaign-brief", "Kickstarter Campaign Brief: What to Send | Guildframe", "What to Send Your Campaign Designer: The Brief Checklist"],
+  ["/guides/kickstarter-product-campaign-cost", "Kickstarter Campaign Cost for a Product | Guildframe", "How Much Does a Kickstarter Campaign Cost for a Product"],
+  ["/guides/kickstarter-vs-indiegogo", "Kickstarter vs Indiegogo for Products (2026) | Guildframe", "Kickstarter vs Indiegogo in 2026: Which One for Your Product"],
+  ["/guides/product-kickstarter-page", "Product Kickstarter Page: Section by Section | Guildframe", "What Goes on a Product Kickstarter Page, Section by Section"],
+  ["/guides/kickstarter-funding-goal", "How to Set Your Kickstarter Funding Goal | Guildframe", "How to Set Your Kickstarter Funding Goal"],
+  ["/guides/kickstarter-version-two", "Second Kickstarter for Version Two of a Product | Guildframe", "Launching Version Two: How to Crowdfund the Next Model"],
   ["/kickstarter-product-campaign-design", "Kickstarter Campaign Design for New Products | Guildframe", "Kickstarter campaign design"],
+  ["/tabletop-kickstarter-campaigns", "Tabletop Kickstarter Campaigns for Board Games & RPGs | Guildframe", "Tabletop Kickstarter campaigns"],
 ];
 
 const afterFundingPaths = new Set(['/guides/what-happens-after-kickstarter-is-funded', '/guides/move-from-kickstarter-to-shopify', '/guides/best-shopify-themes-for-board-games', '/guides/shopify-developer-vs-diy-theme', '/guides/kickstarter-late-pledges-vs-shopify', '/guides/backerkit-vs-shopify-vs-gamefound', '/guides/kickstarter-to-shopify-launch-timeline', '/guides/sell-board-game-preorders-on-shopify', '/guides/sell-board-game-expansions-add-ons-shopify', '/guides/selling-miniatures-internationally-vat-ioss', '/guides/how-much-does-a-board-game-website-cost', '/guides/shopify-vs-etsy-for-selling-miniatures', '/guides/build-a-tabletop-shopify-store-with-ai']);
@@ -308,6 +316,7 @@ test("exports AEO and social metadata", async () => {
   articlePaths.push("/guides/kickstarter-vs-gamefound-campaign-page-design");
   articlePaths.push("/guides/kickstarter-campaign-graphics-mobile-readability");
   articlePaths.push("/guides/when-to-hire-kickstarter-campaign-designer");
+  articlePaths.push("/guides/kickstarter-campaign-brief", "/guides/kickstarter-product-campaign-cost", "/guides/kickstarter-vs-indiegogo", "/guides/product-kickstarter-page", "/guides/kickstarter-funding-goal", "/guides/kickstarter-version-two");
 
 
   for (const path of solutionPaths) {
@@ -628,6 +637,9 @@ for (const path of [
 for (const [path, date] of [["/","2026-10-29"],["/about","2026-11-25"],["/authors/guildframe","2026-10-28"],["/campaign-creative","2026-11-25"],["/done-for-you-shopify-store","2026-11-25"],["/editorial-policy","2026-10-03"],["/guides/backerkit-vs-shopify-vs-gamefound","2026-11-25"],["/guides/best-shopify-themes-for-board-games","2026-11-25"],["/guides/board-game-kickstarter-campaign-design-cost","2026-11-25"],["/guides/board-game-kickstarter-cost","2026-11-25"],["/guides/board-game-kickstarter-funding-goal","2026-11-25"],["/guides/board-game-kickstarter-gameplay-rulebook","2026-11-25"],["/guides/board-game-kickstarter-launch-day-checklist","2026-11-25"],["/guides/board-game-kickstarter-marketing-plan","2026-11-25"],["/guides/board-game-kickstarter-page-checklist","2026-11-25"],["/guides/board-game-kickstarter-reward-pricing","2026-11-25"],["/guides/board-game-pledge-manager-checklist","2026-11-25"],["/guides/board-game-reviewer-outreach","2026-11-25"],["/guides/board-game-tariffs-shipping-us","2026-11-25"],["/guides/build-a-tabletop-shopify-store-with-ai","2026-11-25"],["/guides/card-game-kickstarter-launch-guide","2026-11-25"],["/guides/choose-board-game-kickstarter-marketing-agency","2026-11-25"],["/guides/gamefound-launch-page-checklist","2026-11-25"],["/guides/how-much-does-a-board-game-website-cost","2026-11-25"],["/guides/how-to-design-a-kickstarter-page","2026-11-25"],["/guides/how-to-get-kickstarter-backers","2026-11-25"],["/guides/how-to-launch-a-board-game-on-kickstarter","2026-11-25"],["/guides/how-to-market-a-kickstarter","2026-11-25"],["/guides/is-my-game-ready-for-kickstarter","2026-11-25"],["/guides/kickstarter-advertising-budget-board-games","2026-11-25"],["/guides/kickstarter-agency-cost","2026-11-25"],["/guides/kickstarter-campaign-graphics-mobile-readability","2026-11-25"],["/guides/kickstarter-campaign-video-planning","2026-11-25"],["/guides/kickstarter-fees","2026-11-25"],["/guides/kickstarter-followers-before-launch","2026-11-25"],["/guides/kickstarter-for-beginners","2026-11-25"],["/guides/kickstarter-image-sizes","2026-11-25"],["/guides/kickstarter-late-pledges-vs-shopify","2026-11-25"],["/guides/kickstarter-live-campaign-updates","2026-11-25"],["/guides/kickstarter-prelaunch-email-list","2026-11-25"],["/guides/kickstarter-prelaunch-page-guide","2026-11-25"],["/guides/kickstarter-prelaunch-page-vs-landing-page","2026-11-25"],["/guides/kickstarter-prototype-risks-disclosure","2026-11-25"],["/guides/kickstarter-referral-tags-tracking","2026-11-25"],["/guides/kickstarter-review-launch-timeline","2026-11-25"],["/guides/kickstarter-reward-tier-graphics","2026-11-25"],["/guides/kickstarter-shipping-delivery-page","2026-11-25"],["/guides/kickstarter-stretch-goals-planning","2026-11-25"],["/guides/kickstarter-to-shopify-launch-timeline","2026-11-25"],["/guides/kickstarter-vs-gamefound","2026-11-25"],["/guides/kickstarter-vs-gamefound-campaign-page-design","2026-11-25"],["/guides/miniatures-stl-kickstarter-launch-guide","2026-11-25"],["/guides/move-from-kickstarter-to-shopify","2026-11-25"],["/guides/pledge-managers-compared","2026-11-25"],["/guides/sell-board-game-expansions-add-ons-shopify","2026-11-25"],["/guides/sell-board-game-preorders-on-shopify","2026-11-25"],["/guides/selling-miniatures-internationally-vat-ioss","2026-11-25"],["/guides/shopify-developer-vs-diy-theme","2026-11-25"],["/guides/shopify-vs-etsy-for-selling-miniatures","2026-11-25"],["/guides/tcg-kickstarter-launch-guide","2026-11-25"],["/guides/terrain-and-dice-kickstarter-launch-guide","2026-11-25"],["/guides/ttrpg-kickstarter-campaign-page-design","2026-11-25"],["/guides/ttrpg-kickstarter-launch-guide","2026-11-25"],["/guides/what-happens-after-kickstarter-is-funded","2026-11-25"],["/guides/what-to-send-kickstarter-campaign-designer","2026-11-25"],["/guides/when-to-hire-kickstarter-campaign-designer","2026-11-25"],["/guides/when-to-launch-a-kickstarter","2026-11-25"],["/guides/why-kickstarter-campaigns-fail","2026-11-25"],["/kickstarter-to-shopify","2026-11-25"],["/privacy","2026-11-25"],["/resources/backerkit-vs-shopify-vs-gamefound-comparison","2026-11-25"],["/resources/board-game-product-page-checklist","2026-11-25"],["/resources/board-game-shopify-store-checklist","2026-11-25"],["/resources/kickstarter-tabletop-games-benchmark","2026-11-25"],["/resources/kickstarter-to-shopify-migration-checklist","2026-11-25"],["/resources/tabletop-shopify-metafield-schema","2026-09-30"],["/terms","2026-11-25"],["/work","2026-11-25"],["/work/cryptic-explorers","2026-11-25"],["/work/futureproof-terrain","2026-11-25"],["/work/quiver-time","2026-11-25"],["/work/scented-realms","2026-11-25"]]) if (datedPages.has(path) || path.startsWith("/guides/") || path.startsWith("/work/")) datedPages.set(path, date);
 // end generated dates
 
+// General guides for products, games and books (contentDates.generalGuides).
+for (const path of ["/guides/kickstarter-campaign-brief", "/guides/kickstarter-product-campaign-cost", "/guides/kickstarter-vs-indiegogo", "/guides/product-kickstarter-page", "/guides/kickstarter-funding-goal", "/guides/kickstarter-version-two"]) datedPages.set(path, "2026-11-26");
+
 test("keeps visible review dates, schema dates and sitemap dates identical", async (t) => {
   const sitemap = await readFile(new URL("sitemap.xml", outputRoot), "utf8");
   const contentDates = await readFile(new URL("../app/content-dates.ts", import.meta.url), "utf8");
@@ -913,14 +925,16 @@ test("explains the launch in three plain steps", async () => {
   assert.doesNotMatch(steps, /ROAS|funded in|raised \$|guaranteed funding/i);
   assert.doesNotMatch(html, /id="mockups"/);
   const faq = html.match(/<section\b[^>]*\bid="faq"[\s\S]*?<\/section>/)?.[0];
-  assert.equal((faq.match(/<details>/g) ?? []).length, 6);
+  assert.equal((faq.match(/<details>/g) ?? []).length, 7);
+  assert.match(visibleText(faq), /Do you only work on games\?/);
 });
 
 test("opens the homepage with the offer and keeps concepts labelled apart from client work", async () => {
   const home = await readPage("/");
   const hero = home.match(/<section\b[^>]*class="gfr-hero-shell"[\s\S]*?<\/section>/)?.[0];
   assert.ok(hero);
-  assert.match(visibleText(hero), /Kickstarter launches for tabletop games/);
+  assert.match(visibleText(hero), /Your first Kickstarter, done properly\./);
+  assert.doesNotMatch(visibleText(hero), /tabletop/i);
   assert.match(hero, /href="#pricing"/);
   assert.match(hero, /href="#start-project"/);
   assert.doesNotMatch(home, /tabletop-kickstarter-launch-kit|Free campaign kit/i);

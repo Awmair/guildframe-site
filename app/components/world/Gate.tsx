@@ -59,7 +59,7 @@ export function Gate() {
       <div className="w-gate-lid">
         <div className="w-gate-inner">
           <BrandLockup className="w-gate-logo" />
-          <p className="w-gate-line">Kickstarter and Gamefound launches <em>for tabletop games</em></p>
+          <p className="w-gate-line">Your first Kickstarter, <em>done properly</em></p>
           <div className="w-gate-dice" aria-hidden="true">
             {[0, 1].map(die => <span key={die} className="w-die" data-face={die ? Math.max(1, step - 1) : step}>{Array.from({ length: 9 }, (_, i) => <i key={i} />)}</span>)}
           </div>

@@ -6,6 +6,7 @@ import {contentDates} from "./content-dates";
 import {marketingGuides} from "./launch-marketing-guides";
 import {newLaunchGuides} from "./launch-guides-new";
 import {decisionGuides} from "./launch-decision-guides";
+import {generalGuides} from "./launch-guides-general";
 import {guide as ngBoardGameKickstarterCost} from "./guides-new/board-game-kickstarter-cost";
 import {guide as ngHowToDesignAKickstarterPage} from "./guides-new/how-to-design-a-kickstarter-page";
 import {guide as ngHowToGetKickstarterBackers} from "./guides-new/how-to-get-kickstarter-backers";
@@ -51,6 +52,8 @@ const originalLaunchGuides:LaunchGuide[]=[
   ngTtrpgKickstarterLaunchGuide,
   ngWhenToLaunchAKickstarter,
   ngWhyKickstarterCampaignsFail,
+  // general guides for products, games and books (strategy section 5)
+  ...generalGuides,
 
 
   {
@@ -523,7 +526,8 @@ const originalLaunchGuides:LaunchGuide[]=[
       "when-to-hire-kickstarter-campaign-designer",
       "board-game-kickstarter-campaign-design-cost",
       "kickstarter-reward-tier-graphics",
-      "kickstarter-image-sizes"
+      "kickstarter-image-sizes",
+      "kickstarter-campaign-brief"
     ],
     "servicePath": "/campaign-design",
     "serviceLabel": "Kickstarter campaign design for tabletop games",

@@ -4,6 +4,7 @@ import { absoluteUrl } from "./site-config";
 import { campaignModifiedDate, contentDates } from "./content-dates";
 import {campaignPages} from "./campaign-pages";
 import {launchGuides,launchGuideDate} from "./launch-guides";
+import { tabletopHub, tabletopHubDate } from "./tabletop-hub";
 
 export const dynamic = "force-static";
 
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/campaign-creative", modified: contentDates.campaignCreative },
     { path: "/resources/tabletop-campaign-page-study", modified: contentDates.campaignPageStudy },
     { path: "/", modified: contentDates.home },
+    { path: `/${tabletopHub.slug}`, modified: tabletopHubDate },
     { path: "/buy", modified: contentDates.buy },
     { path: "/done-for-you-shopify-store", modified: contentDates.doneForYouShopifyStore },
     { path: "/shopify-theme-for-board-games", modified: contentDates.boardGames },

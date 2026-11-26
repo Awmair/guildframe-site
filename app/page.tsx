@@ -1,31 +1,26 @@
 import Link from "next/link";
 import { SeoHeader, SeoFooter } from "./components/SeoChrome";
 import { JsonLd } from "./components/JsonLd";
-import { ResponsiveImage } from "./components/ResponsiveImage";
 import { Board } from "./components/world/Board";
 import { Gate, gateBootScript } from "./components/world/Gate";
 import { HomeFx } from "./components/world/HomeFx";
 import { Icon, Roll } from "./components/chrome/Icon";
-import { caseStudies } from "./case-studies";
 import { contentDates } from "./content-dates";
 import { absoluteUrl, siteConfig } from "./site-config";
 import { launchService } from "./seo-entities";
 import { Testimonials } from "./components/home/Testimonials";
-import { BeyondTabletop } from "./components/home/BeyondTabletop";
+import { MixedWork } from "./components/home/MixedWork";
+import { WhoWeWorkWith } from "./components/home/WhoWeWorkWith";
+import { WorkFx } from "./components/work/WorkFx";
 
 const homeFaqs = [
   { question: "How much will the project cost?", answer: "The campaign page package is $1,800. Full campaign support is $5,900. Ad spend and other third party costs are billed separately. We agree the scope and schedule before work starts." },
-  { question: "We already have artwork. Can you work with it?", answer: "Yes. Bring the artwork, game details and existing brand direction. I write the copy and design the campaign graphics around those assets. We confirm any new illustration, 3D or video work separately in the brief." },
-  { question: "Can I book only the campaign page?", answer: "Yes. The campaign page package stands on its own. If you later want prelaunch, paid advertising or live campaign support, you can move to full campaign support." },
-  { question: "How does the free opening mockup work?", answer: "Send a short game description and usable artwork. I will design one opening campaign section so you can see a direction before booking. There is no payment or obligation." },
-  { question: "Do I keep my accounts, contacts and files?", answer: "Yes. Your campaign and marketing accounts stay yours. The brief lists the final files and editable sources I will hand over." },
-  { question: "Can you guarantee the campaign will fund?", answer: "I cannot guarantee funding. The product, audience, pricing and fulfillment plan all affect the result. We agree the work, budget and measures of progress before the project starts." },
-];
-const projectSummaries = [
-  "Visual direction and campaign presentation for an unfamiliar RPG accessory.",
-  "A campaign story around modular parts, table use and storage.",
-  "A clear presentation of the cover, divider and card storage options. Campaign header image courtesy of Quiver Time.",
-  "A structured story for a survival horror game that keeps its graphic novel atmosphere front and center.",
+  { question: "Do you only work on games?", answer: "No. We launch everyday products, tabletop games and books. Past work includes a security system for Vespas, an Italian designed watch, a novel and four tabletop campaigns. Tabletop is a specialty, so game creators also get genre pages and guides written for them." },
+  { question: "We already have artwork or product images. Can you work with them?", answer: "Yes. Bring your artwork, product photos or renders, the project details and any brand direction. We write the copy and design the campaign graphics around those assets. Any new illustration, 3D or video work is confirmed separately in the brief." },
+  { question: "Can I book only the campaign page?", answer: "Yes. The campaign page package stands on its own, on Kickstarter, Gamefound or Indiegogo. If you later want prelaunch, paid advertising or live campaign support, you can move to full campaign support." },
+  { question: "How does the free opening mockup work?", answer: "Send a short description of your project and usable artwork or product images. We design one opening campaign section so you can see a direction before booking. There is no payment or obligation." },
+  { question: "Do I keep my accounts, contacts and files?", answer: "Yes. Your campaign and marketing accounts stay yours. The brief lists the final files and editable sources we hand over." },
+  { question: "Can you guarantee the campaign will fund?", answer: "No. Nobody can honestly guarantee funding. The product, audience, pricing and fulfillment plan all affect the result. We agree the work, budget and measures of progress before the project starts." },
 ];
 const concepts = [
   { image: "party-card-game", alt: "Original Snack Attack party game concept with a coral box, illustrated fruit cards and tokens" },
@@ -36,18 +31,17 @@ const concepts = [
   { image: "dice-accessories", alt: "Original Prismatic accessories concept with jewel colored dice, coral suede tray and petrol presentation box" },
 ];
 const featuredGuides = [
-  { href: "/guides/board-game-kickstarter-marketing-plan", topic: "Planning", title: "Board game Kickstarter marketing plan" },
-  { href: "/guides/kickstarter-advertising-budget-board-games", topic: "Budgets and ads", title: "Kickstarter advertising budget for board games" },
-  { href: "/guides/board-game-kickstarter-page-checklist", topic: "Campaign design", title: "Board game Kickstarter page checklist" },
+  { href: "/guides/kickstarter-for-beginners", topic: "Start here", title: "Kickstarter for beginners" },
+  { href: "/guides/how-to-design-a-kickstarter-page", topic: "Campaign page", title: "How to design a Kickstarter page" },
+  { href: "/guides/board-game-kickstarter-marketing-plan", topic: "Tabletop", title: "Board game Kickstarter marketing plan" },
 ];
 
-const marquee = ["Launch planning", "Prelaunch pages", "Campaign copy", "Page design", "Ad creative", "Paid advertising", "Live campaign checks", "Backer updates", "Gamefound", "Kickstarter to Shopify"];
-const tones = ["#6E2D24", "#22463B", "#2B2E3A", "#36304A"];
+const marquee = ["Everyday products", "Campaign copy", "Tabletop games", "Page design", "Books", "Prelaunch pages", "Gadgets", "Paid advertising", "Watches", "Backer updates", "Kickstarter", "Gamefound", "Indiegogo"];
 
 export default function Home() {
   return <>
     <JsonLd data={{ "@context": "https://schema.org", "@graph": [
-      { "@type": "WebPage", "@id": absoluteUrl("/"), url: absoluteUrl("/"), name: "Kickstarter Launch Services for Tabletop Games", description: siteConfig.description, inLanguage: "en", mainEntity: { "@id": absoluteUrl("/kickstarter-launch-services#service") }, dateModified: contentDates.home, isPartOf: { "@id": absoluteUrl("/#website") } },
+      { "@type": "WebPage", "@id": absoluteUrl("/"), url: absoluteUrl("/"), name: "Kickstarter Campaigns for First Time Creators", description: siteConfig.description, inLanguage: "en", mainEntity: { "@id": absoluteUrl("/kickstarter-launch-services#service") }, dateModified: contentDates.home, isPartOf: { "@id": absoluteUrl("/#website") } },
       launchService(),
       { "@type": "FAQPage", mainEntity: homeFaqs.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })) },
     ] }}/>
@@ -57,9 +51,9 @@ export default function Home() {
       <section className="gfr-hero-shell" aria-labelledby="home-title">
         <Board/>
         <div className="h-hero">
-          <h1 id="home-title" className="h-title" data-reveal="lines"><span className="w-line"><span>Kickstarter launches</span></span> <span className="w-line"><span><em>for tabletop games</em></span></span></h1>
+          <h1 id="home-title" className="h-title" data-reveal="lines"><span className="w-line"><span>Your first Kickstarter,</span></span> <span className="w-line"><span><em>done properly.</em></span></span></h1>
           <div className="h-hero-side" data-reveal="rise">
-            <p>I write, design and launch campaign pages for board games, card games, RPGs and miniatures. You work with me, Umair, from the brief to the final files.</p>
+            <p>Umair and his team take first time creators from a working prototype to a live campaign: products, games and books.</p>
             <div className="h-actions">
               <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Discuss my project" data-analytics-location="homepage"><Roll>Discuss my project</Roll><Icon name="arrow"/></a>
               <a className="w-link" href="#pricing">See pricing</a>
@@ -74,48 +68,15 @@ export default function Home() {
       </div>
 
       <Testimonials />
-      <BeyondTabletop />
-      <section className="h-work" id="past-work" aria-labelledby="past-work-title" data-tone-shift="">
-        <div className="w-wrap-wide h-work-head">
-          <h2 id="past-work-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Four campaigns,</span></span> <span className="w-line"><span><em>four very different games</em></span></span></h2>
-          <div className="h-work-total" data-reveal="rise">
-            <strong className="h-figure">$5M<sup>+</sup></strong>
-            <p>Raised on Kickstarter by the campaigns I have worked on. These are my clients’ results, and they include campaigns not shown here.</p>
-            <Link className="w-link" href="/work">All case studies</Link>
-          </div>
-        </div>
-        <div className="h-projects">{caseStudies.map((project, index) => <article className="h-project" key={project.slug} style={{ "--tone": tones[index] } as React.CSSProperties}>
-          <Link className="h-project-media" href={`/work/${project.slug}`} data-title={project.name} data-cursor-label="Read the case study" data-reveal="media" tabIndex={-1} aria-hidden="true">
-            <ResponsiveImage src={`/images/work/${project.image}.webp`} alt={project.alt} width={project.imageWidth} height={project.imageHeight} loading="lazy" sizes="(max-width: 900px) calc(100vw - 32px), 58vw"/>
-          </Link>
-          <div className="h-project-body">
-            <p className="h-project-tags"><span className="w-dot">Client work</span><span className="w-meta">{project.category}</span></p>
-            <h3 className="h-project-name"><Link href={`/work/${project.slug}`} data-title={project.name}>{project.name}</Link></h3>
-            <p>{projectSummaries[index]}</p>
-            {project.testimonial ? <figure><blockquote>“{project.testimonial.quote}”</blockquote><figcaption>Client feedback from {project.testimonial.client}</figcaption></figure> : null}
-            <div className="h-project-links"><Link className="w-link" href={`/work/${project.slug}`}>Read the case study<span className="gf-sr-only"> for {project.name}</span></Link><a className="w-link" href={project.href} target="_blank" rel="noopener noreferrer">View on Kickstarter<span className="gf-sr-only"> for {project.name}, opens in a new tab</span></a></div>
-          </div>
-        </article>)}</div>
-      </section>
-
-      <section className="h-concepts" id="concepts" aria-labelledby="concepts-title">
-        <div className="w-wrap-wide h-concepts-head">
-          <h2 id="concepts-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Studio concepts</span></span></h2>
-          <p className="w-dot w-dot--concept">Made in the studio, not client work</p>
-        </div>
-        <div className="h-concepts-strip" data-cursor="drag" data-cursor-label="Drag">
-          {concepts.map((concept, index) => <figure className="h-concept" key={concept.image} style={{ "--r": `${[-4, 3, -2, 5, -3, 2][index]}deg` } as React.CSSProperties}>
-            <img src={`/images/hero/${concept.image}-480w.webp`} srcSet={`/images/hero/${concept.image}-320w.webp 320w, /images/hero/${concept.image}-480w.webp 480w, /images/hero/${concept.image}-640w.webp 640w`} sizes="(max-width: 900px) 62vw, 340px" width="640" height="640" alt={concept.alt} loading="lazy" draggable={false}/>
-          </figure>)}
-        </div>
-      </section>
+      <MixedWork />
+      <WhoWeWorkWith />
 
       <section className="h-pricing tone-board" id="services" aria-labelledby="pricing-title">
         <div className="w-wrap-wide">
           <div className="h-pricing-head">
             <h2 id="pricing-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Two packages,</span></span> <span className="w-line"><span><em>fixed prices</em></span></span></h2>
             <div>
-              <p>We agree the scope and schedule before work starts. Ad spend is billed separately. Not sure yet? Send your artwork and I will design one opening section of your page at no cost.</p>
+              <p>We agree the scope and schedule before work starts. Ad spend is billed separately. Not sure yet? Send your artwork or product images and we will design one opening section of your page at no cost.</p>
               <a className="w-link" href="#start-project">Request a free mockup</a>
             </div>
           </div>
@@ -123,12 +84,12 @@ export default function Home() {
             <article className="h-tier" id="pricing" data-reveal="rise">
               <h3>Campaign page</h3>
               <div className="h-price">$1,800</div>
-              <p>Your Kickstarter or Gamefound page, from the first line of copy to the published page.</p>
+              <p>Your Kickstarter, Gamefound or Indiegogo page, from the first line of copy to the published page.</p>
               <ul>
-                <li>Campaign copy, written for your game</li>
-                <li>Page graphics using your artwork</li>
+                <li>Campaign copy, written for your project</li>
+                <li>Page graphics using your artwork or product images</li>
                 <li>Reward tiers set up</li>
-                <li>Page built on Kickstarter, ready to publish</li>
+                <li>Page built on the platform, ready to publish</li>
               </ul>
               <div className="h-tier-actions"><a className="w-btn w-btn--ink" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Campaign page" data-analytics-location="homepage pricing"><Roll>Start with the page</Roll><Icon name="arrow"/></a><Link className="w-link" href="/campaign-design#pricing">Full scope</Link></div>
             </article>
@@ -155,11 +116,23 @@ export default function Home() {
             <h2 className="w-h2 h-process-title" data-reveal="lines"><span className="w-line"><span>How it <em>works</em></span></span></h2>
             <div className="h-track" aria-hidden="true"><span className="h-track-line"/><img className="h-track-pawn" src="/images/world/pawn-v1.webp" width="239" height="411" alt=""/></div>
             <ol className="h-steps">
-              <li><span className="h-step-space" aria-hidden="true"/><h3>Plan</h3><p>Send your game summary, rules, artwork and target date. We agree the scope, schedule and who does what.</p></li>
-              <li><span className="h-step-space" aria-hidden="true"/><h3>Build</h3><p>I write the copy and design the graphics around your confirmed rewards and game facts. You review each round.</p></li>
-              <li><span className="h-step-space" aria-hidden="true"/><h3>Launch</h3><p>The page goes live. On full support I run the agreed ads, check the page and draft backer updates for your approval.</p></li>
+              <li><span className="h-step-space" aria-hidden="true"/><h3>Plan</h3><p>Send a summary of your project, your artwork or product images and a target date. We agree the scope, schedule and who does what.</p></li>
+              <li><span className="h-step-space" aria-hidden="true"/><h3>Build</h3><p>We write the copy and design the graphics around your confirmed rewards and facts. You review each round.</p></li>
+              <li><span className="h-step-space" aria-hidden="true"/><h3>Launch</h3><p>The page goes live. On full support Umair runs the agreed ads, checks the page and drafts backer updates for your approval.</p></li>
             </ol>
           </div>
+        </div>
+      </section>
+
+      <section className="h-concepts" id="concepts" aria-labelledby="concepts-title">
+        <div className="w-wrap-wide h-concepts-head">
+          <h2 id="concepts-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Studio concepts</span></span></h2>
+          <p className="w-dot w-dot--concept">Made in the studio, not client work</p>
+        </div>
+        <div className="h-concepts-strip" data-cursor="drag" data-cursor-label="Drag">
+          {concepts.map((concept, index) => <figure className="h-concept" key={concept.image} style={{ "--r": `${[-4, 3, -2, 5, -3, 2][index]}deg` } as React.CSSProperties}>
+            <img src={`/images/hero/${concept.image}-480w.webp`} srcSet={`/images/hero/${concept.image}-320w.webp 320w, /images/hero/${concept.image}-480w.webp 480w, /images/hero/${concept.image}-640w.webp 640w`} sizes="(max-width: 900px) 62vw, 340px" width="640" height="640" alt={concept.alt} loading="lazy" draggable={false}/>
+          </figure>)}
         </div>
       </section>
 
@@ -184,6 +157,7 @@ export default function Home() {
     </main>
     <Gate/>
     <HomeFx/>
+    <WorkFx/>
     <SeoFooter/>
   </>;
 }

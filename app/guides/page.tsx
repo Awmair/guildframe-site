@@ -2,6 +2,7 @@ import { LibrarySearch } from "../components/LibrarySearch";
 import Link from "next/link";
 import { Icon } from "../components/chrome/Icon";
 import {launchGuides} from "../launch-guides";
+import {generalGuideStages} from "../launch-guides-general";
 import { Breadcrumbs, SeoFooter, SeoHeader } from "../components/SeoChrome";
 import { JsonLd } from "../components/JsonLd";
 import { absoluteUrl, pageMetadata } from "../site-config";
@@ -9,7 +10,7 @@ import { absoluteUrl, pageMetadata } from "../site-config";
 export const metadata = pageMetadata({
   title: "Kickstarter Marketing, Design & Launch Guides",
   description:
-    "Practical Kickstarter and Gamefound launch guides for tabletop creators. Plan prelaunch email, ad budgets, campaign design, rewards and backer updates.",
+    "Practical Kickstarter launch guides for first time creators of products, games and books. Plan budgets, funding goals, campaign pages, rewards and ads.",
   path: "/guides",
   keywords: ["board game Kickstarter launch", "tabletop campaign design", "card game Kickstarter guide"],
 });
@@ -102,6 +103,8 @@ const guides=[...campaignGuides,...afterFundingGuides];
 
 const guideFilters = [
   { value: "all", label: "All guides" },
+  { value: "start", label: "Start here" },
+  { value: "products", label: "Products" },
   { value: "planning", label: "Launch planning" },
   { value: "audience", label: "Audience & ads" },
   { value: "campaign", label: "The campaign page" },
@@ -109,6 +112,8 @@ const guideFilters = [
   { value: "after", label: "After funding" },
 ];
 function guideStage(href: string) {
+  const general = generalGuideStages[href.replace("/guides/", "")];
+  if (general) return general;
   if (/marketing-plan|launch-timeline|funding-goal|cash-flow|manufactur/.test(href)) return "planning";
   if (/email|prelaunch|advertis|meta-ads|roas|cpa|landing|community|facebook|conversion/.test(href)) return "audience";
   if (/launch-guide|ttrpg|miniatures|card-game|gamefound/.test(href) && !/page|reward/.test(href)) return "formats";

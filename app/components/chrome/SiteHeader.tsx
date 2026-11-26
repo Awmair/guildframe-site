@@ -19,6 +19,12 @@ const menu = [
   { href: "/about", label: "The studio" },
   { href: "#start-project", label: "Start a project" },
 ];
+// "Who we work with": the three wings. Books point to the books section of the product hub until a books page exists.
+const wings = [
+  { href: "/kickstarter-product-campaign-design", label: "Products" },
+  { href: "/tabletop-kickstarter-campaigns", label: "Tabletop" },
+  { href: "/kickstarter-product-campaign-design#books", label: "Books" },
+];
 
 function isCurrent(pathname: string | null, href: string) {
   if (!pathname || href.startsWith("#")) return false;
@@ -119,6 +125,16 @@ export function SiteHeader() {
                         <PawnMark className="w-menu-pawn" />
                         <Roll>{item.label}</Roll>
                       </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <nav className="w-menu-wings" aria-labelledby="menu-wings-title">
+                <p id="menu-wings-title">Who we work with</p>
+                <ul>
+                  {wings.map((item, index) => (
+                    <li key={item.href} style={{ ["--i" as string]: index }}>
+                      <Link href={item.href} aria-current={!item.href.includes("#") && isCurrent(pathname, item.href) ? "page" : undefined} onClick={() => setOpen(false)} onMouseEnter={() => playSound("flick")}><Roll>{item.label}</Roll></Link>
                     </li>
                   ))}
                 </ul>
