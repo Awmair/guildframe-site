@@ -1,7 +1,7 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { playSound, setSound } from "../chrome/sound";
-import { BrandLockup } from "../chrome/Huddle";
+import { BrandLockup } from "../chrome/Brand";
 
 /** Runs before the lid is parsed, so returning visitors never see it flash. */
 export const gateBootScript = `try{var d=document.documentElement;if(!sessionStorage.getItem("gf-lid")&&!location.hash&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("w-gate-up")}}catch(e){}`;

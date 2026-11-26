@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { siteConfig } from "../../site-config";
 import { PawnMark, Roll } from "./Icon";
 import { playSound } from "./sound";
-import { BrandLockup } from "./Huddle";
+import { BrandLockup } from "./Brand";
 
 const nav = [
   { href: "/kickstarter-launch-services", label: "Services" },

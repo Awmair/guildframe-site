@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ProjectInquiryForm } from "./ProjectInquiryForm";
 import { SiteHeader } from "./chrome/SiteHeader";
 import { siteConfig } from "../site-config";
-import { BrandLockup } from "./chrome/Huddle";
+import { BrandLockup } from "./chrome/Brand";
 
 export function SeoHeader() {
   return <SiteHeader />;
@@ -51,7 +51,7 @@ export function SeoFooter() {
           <a href="#start-project">Request a free mockup</a>
         </nav>
       </div>
-      <div className="w-footer-word" aria-hidden="true" data-reveal="huddle"><BrandLockup className="w-footer-lockup" label="Guildframe" /></div>
+      <div className="w-footer-word" aria-hidden="true" data-reveal="brand"><BrandLockup className="w-footer-lockup" label="Guildframe" /></div>
       <div className="w-footer-bottom">
         <span>© 2026 Guildframe. Led by Umair.</span>
         <nav aria-label="Legal">

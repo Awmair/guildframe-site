@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SeoFooter, SeoHeader } from "./components/SeoChrome";
-import { HuddleMark } from "./components/chrome/Huddle";
+import { BrandMark } from "./components/chrome/Brand";
 import { Icon, Roll } from "./components/chrome/Icon";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function NotFound() {
       <main className="w-page nf" id="not-found-content" tabIndex={-1}>
         <div className="nf-inner">
           <div className="nf-copy">
-            <HuddleMark className="nf-mark" />
+            <BrandMark className="nf-mark" />
             {/* One unbroken string: the 404 test looks for this exact phrase in the exported HTML. */}
             <h1 className="nf-title">This page could not be found</h1>
             <p className="nf-body">

@@ -265,45 +265,54 @@ html.w-menu-open{overflow:hidden}
 html.w-menu-open .w-corner{opacity:0;pointer-events:none}
 .w-corner{transition:opacity .3s}
 
-/* ---------- The huddle mark ---------- */
-.hd-side,.hd-head{fill:currentColor;stroke:currentColor}
-.hd-head{stroke:none}
-.hd-pawn--b .hd-side,.hd-pawn--b .hd-head{fill:var(--hd-accent,var(--coral-500));stroke:var(--hd-accent,var(--coral-500))}
-.hd-pawn--b .hd-head{stroke:none}
-.hd-pawn,.hd-side,.hd-head,.hl-letter{transform-box:fill-box}
-.hd-side,.hd-head{transform-origin:center}
-/* Hover: the lead pawn's side lifts like a lid and its head hops. */
-.hd-pawn--b .hd-side{transform-origin:0% 50%;transition:transform 600ms var(--ease-spring)}
-.hd-pawn--b .hd-head{transition:transform 500ms var(--ease-spring)}
-:is(.w-brand,.w-footer-word,.w-gate-logo):hover .hd-pawn--b .hd-side{transform:translate(0,5px) rotate(5deg)}
-:is(.w-brand,.w-footer-word,.w-gate-logo):hover .hd-pawn--b .hd-head{transform:translate(0,-6px)}
-/* Assembly: the four sides slide in from the table edges and lock, then the heads drop in like pips. */
-@keyframes hd-in-t{from{transform:translate(0,-46px);opacity:0}}
-@keyframes hd-in-r{from{transform:translate(46px,0);opacity:0}}
-@keyframes hd-in-b{from{transform:translate(0,46px);opacity:0}}
-@keyframes hd-in-l{from{transform:translate(-46px,0);opacity:0}}
-@keyframes hd-drop{0%{transform:translate(0,-30px) scale(.3);opacity:0}55%{transform:translate(0,3px) scale(1.12);opacity:1}78%{transform:translate(0,-2px) scale(.97)}}
-@keyframes hd-rise{from{transform:translateY(60%);opacity:0}}
-@keyframes hd-lid{0%,78%,100%{transform:none}84%{transform:translate(0,6px) rotate(6deg)}90%{transform:translate(0,-1px)}}
-@keyframes hd-hop{0%,80%,100%{transform:none}86%{transform:translate(0,-9px)}92%{transform:translate(0,1px)}}
-:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--t .hd-side{animation:hd-in-t 950ms var(--ease-spring) backwards}
-:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--r .hd-side{animation:hd-in-r 950ms 90ms var(--ease-spring) backwards}
-:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--b .hd-side{animation:hd-in-b 950ms 180ms var(--ease-spring) backwards}
-:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--l .hd-side{animation:hd-in-l 950ms 270ms var(--ease-spring) backwards}
-:is(.w-footer-word.is-in,.w-gate-logo) .hd-head{animation:hd-drop 760ms var(--ease-out) backwards}
-:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--t .hd-head{animation-delay:720ms}
-:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--r .hd-head{animation-delay:830ms}
-:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--l .hd-head{animation-delay:940ms}
-:is(.w-footer-word.is-in,.w-gate-logo) .hd-pawn--b .hd-head{animation-delay:1100ms}
-:is(.w-footer-word.is-in,.w-gate-logo) .hl-letter{animation:hd-rise 900ms var(--ease-out) backwards;animation-delay:calc(320ms + var(--i) * 45ms)}
-/* Once settled, the lead pawn keeps playing: every few seconds its side lifts and its head hops. */
-.w-footer-word.is-in .hd-pawn--b{transform-origin:0% 50%;animation:hd-lid 6.5s 2.6s ease-in-out infinite}
-.w-footer-word.is-in .hd-pawn--b .hd-head{animation:hd-drop 760ms 1100ms var(--ease-out) backwards,hd-hop 6.5s 2.6s ease-in-out infinite}
-html.w-js .w-footer-word:not(.is-in) :is(.hd-side,.hd-head,.hl-letter){opacity:0}
-.w-gate-logo{color:var(--ink-900);--hd-accent:var(--board-100)}
+/* ---------- The mark: Draft to done ---------- */
+.df :is(g,path){transform-box:view-box}
+.df-pip circle{fill:var(--df-accent,var(--coral-500))}
+.hl-dot{fill:var(--df-accent,var(--coral-500))}
+.hl-letter{transform-box:fill-box;transform-origin:50% 100%}
+.df-frame{transform-origin:50px 50px}
+.df-pip-h{transform-origin:80px 20px;transition:transform 600ms var(--ease-spring)}
+.df-d{transform-box:fill-box;transform-origin:center;transition:transform 500ms var(--ease-spring)}
+.df-st{transform-origin:80px 20px;transform:scaleX(0)}
+.df-sl{transform-origin:20px 20px;transform:scaleY(0)}
+.df-sr{transform-origin:80px 20px}
+.df-sb{transform-origin:80px 80px}
+/* Hover: the draft lines thicken toward done, the point swells, the letters lift in a wave. */
+:is(.w-brand,.w-footer-word,.w-gate-logo,.nf-mark):hover .df-dt{transform:scaleY(2.33)}
+:is(.w-brand,.w-footer-word,.w-gate-logo,.nf-mark):hover .df-dl{transform:scaleX(2.33)}
+:is(.w-brand,.w-footer-word,.w-gate-logo,.nf-mark):hover .df-dc{transform:scale(1.7)}
+:is(.w-brand,.w-footer-word,.w-gate-logo,.nf-mark):hover .df-pip-h{transform:scale(1.25)}
+.w-brand .hl-letter{transition:transform 600ms var(--ease-spring);transition-delay:calc(var(--i) * 22ms)}
+.w-brand:hover .hl-letter{transform:translateY(-9%)}
+/* Assembly: the finished sides draw in, the draft dashes pop in one by one, the point drops onto its corner. */
+@keyframes df-sr{from{transform:scaleY(0);opacity:0}}
+@keyframes df-sb{from{transform:scaleX(0);opacity:0}}
+@keyframes df-d{from{transform:scale(0);opacity:0}}
+@keyframes df-drop{0%{transform:translateY(-34px) scale(.3);opacity:0}55%{transform:translateY(3px) scale(1.12);opacity:1}78%{transform:translateY(-2px) scale(.97)}}
+@keyframes df-rise{from{transform:translateY(60%);opacity:0}}
+:is(.w-footer-word.is-in,.w-gate-logo,.nf-mark) .df-sr{animation:df-sr 550ms var(--ease-out) backwards}
+:is(.w-footer-word.is-in,.w-gate-logo,.nf-mark) .df-sb{animation:df-sb 600ms 400ms var(--ease-out) backwards}
+:is(.w-footer-word.is-in,.w-gate-logo,.nf-mark,.w-header .w-brand) .df-d{animation:df-d 500ms var(--ease-spring) backwards;animation-delay:calc(750ms + var(--k) * 60ms)}
+:is(.w-footer-word.is-in,.w-gate-logo,.nf-mark) .df-pip{animation:df-drop 800ms 1200ms var(--ease-out) backwards}
+.w-header .w-brand .df-d{animation-delay:calc(250ms + var(--k) * 50ms)}
+.w-header .w-brand .df-pip{animation:df-drop 800ms 550ms var(--ease-out) backwards}
+:is(.w-footer-word.is-in,.w-gate-logo) .hl-letter{animation:df-rise 900ms var(--ease-out) backwards;animation-delay:calc(400ms + var(--i) * 45ms)}
+/* Once settled, the footer mark keeps working: the point runs along the draft and turns it solid,
+   the frame gives a small "done" pulse, then the draft comes back and the point hops home. */
+@keyframes df-run{0%,8%{transform:translate(0,0);animation-timing-function:cubic-bezier(.6,0,.3,1)}28%{transform:translate(-60px,0);animation-timing-function:cubic-bezier(.6,0,.3,1)}48%,74%{transform:translate(-60px,60px);animation-timing-function:cubic-bezier(.16,1,.3,1)}82%{transform:translate(-26px,26px) scale(.55)}90%{transform:translate(0,0) scale(1.15)}100%{transform:translate(0,0)}}
+@keyframes df-st{0%,8%{transform:scaleX(0);opacity:1;animation-timing-function:cubic-bezier(.6,0,.3,1)}28%,74%{transform:scaleX(1);opacity:1}82%{transform:scaleX(1);opacity:0}83%,100%{transform:scaleX(0);opacity:0}}
+@keyframes df-sl{0%,28%{transform:scaleY(0);opacity:1;animation-timing-function:cubic-bezier(.6,0,.3,1)}48%,74%{transform:scaleY(1);opacity:1}82%{transform:scaleY(1);opacity:0}83%,100%{transform:scaleY(0);opacity:0}}
+@keyframes df-done{0%,49%,62%,100%{transform:none}54%{transform:scale(1.07)}58%{transform:scale(.98)}}
+.w-footer-word.is-in .df-pip{animation:df-drop 800ms 1200ms var(--ease-out) backwards,df-run 8s 3s infinite}
+.w-footer-word.is-in .df-st{animation:df-st 8s 3s infinite}
+.w-footer-word.is-in .df-sl{animation:df-sl 8s 3s infinite}
+.w-footer-word.is-in .df-frame{animation:df-done 8s 3s infinite}
+html.w-js .w-footer-word:not(.is-in) :is(.df-sr,.df-sb,.df-d,.df-pip,.hl-letter){opacity:0}
+.w-gate-logo{color:var(--ink-900);--df-accent:var(--board-100)}
 @media (prefers-reduced-motion:reduce){
-  .hd-pawn,.hd-side,.hd-head,.hl-letter{animation:none!important;transition:none!important}
-  html.w-js .w-footer-word:not(.is-in) :is(.hd-side,.hd-head,.hl-letter){opacity:1}
+  .df *,.hl-letter{animation:none!important;transition:none!important}
+  .df-st,.df-sl{transform:scaleX(0)!important}
+  html.w-js .w-footer-word:not(.is-in) :is(.df-sr,.df-sb,.df-d,.df-pip,.hl-letter){opacity:1}
 }
 
 /* ---------- responsive pass: chrome ---------- */
@@ -357,8 +366,9 @@ html body .w-form :is(input,select,textarea){font-size:16px}
 .nf-inner{width:var(--wrap-wide);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
 .nf-copy{display:grid;justify-items:start}
 .nf-mark{display:block;width:64px;height:64px;overflow:visible;color:var(--board-100)}
-.nf-mark .hd-pawn--b{animation:nf-wander 1100ms 500ms var(--ease-spring) both}
-@keyframes nf-wander{from{transform:none}to{transform:translate(16px,28px) rotate(22deg)}}
+/* The point never reaches its corner: it drops in, slips off the frame and rolls away. */
+.nf-mark .df-pip-h{animation:nf-wander 1300ms 2100ms var(--ease-spring) both}
+@keyframes nf-wander{0%{transform:none}35%{transform:translate(8px,-6px)}100%{transform:translate(34px,46px)}}
 .nf-title{margin:32px 0 24px;max-width:12ch;font:400 var(--t-display-xl)/.95 var(--font-sans);letter-spacing:-.03em;color:var(--board-100)}
 .nf-body{max-width:40ch;font-size:var(--t-lead);line-height:1.45;color:var(--mist-300)}
 .nf-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:40px}
