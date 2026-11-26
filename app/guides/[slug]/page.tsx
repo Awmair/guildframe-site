@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       {s.list && <ul>{s.list.map(x => <li key={x}><GuideInlineText text={x} /></li>)}</ul>}
       {s.visual && <GuideVisual data={s.visual} />}
       {s.visuals?.map((v, vi) => <GuideVisual key={vi} data={v} />)}
-      {s.takeaway && <p className="gv-takeaway"><strong>Key takeaway</strong> {s.takeaway}</p>}
+      {s.takeaway && <p className="gv-takeaway"><strong>Key takeaway</strong> <GuideInlineText text={s.takeaway} /></p>}
       {s.table && <ArticleTable caption={s.title} headers={s.table.headers} rows={s.table.rows} />}
       {s.source !== undefined && <p className="article-source-note">Source: <a href={g.sources[s.source].href}>{g.sources[s.source].label}</a>.</p>}
     </section>)}
