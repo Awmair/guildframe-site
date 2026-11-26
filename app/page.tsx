@@ -2,6 +2,8 @@ import Link from "next/link";
 import { SeoHeader, SeoFooter } from "./components/SeoChrome";
 import { JsonLd } from "./components/JsonLd";
 import { Table } from "./components/world/Table";
+import { PackageTiers } from "./components/PackageTiers";
+import { priceSentence } from "./packages";
 import { Gate, gateBootScript } from "./components/world/Gate";
 import { HomeFx } from "./components/world/HomeFx";
 import { Icon, Roll } from "./components/chrome/Icon";
@@ -14,10 +16,10 @@ import { WhoWeWorkWith } from "./components/home/WhoWeWorkWith";
 import { WorkFx } from "./components/work/WorkFx";
 
 const homeFaqs = [
-  { question: "How much will the project cost?", answer: "The campaign page package is $1,800. Full campaign support is $5,900. Ad spend and other third party costs are billed separately. We agree the scope and schedule before work starts." },
+  { question: "How much will the project cost?", answer: `${priceSentence} Both start with a launch strategy we agree with you. Ad spend, ad management and other third party costs are quoted separately.` },
   { question: "Do you only work on games?", answer: "No. We launch everyday products, tabletop games and books. Past work includes a security system for Vespas, an Italian designed watch, a novel and four tabletop campaigns. Tabletop is a specialty, so game creators also get genre pages and guides written for them." },
   { question: "We already have artwork or product images. Can you work with them?", answer: "Yes. Bring your artwork, product photos or renders, the project details and any brand direction. We write the copy and design the campaign graphics around those assets. Any new illustration, 3D or video work is confirmed separately in the brief." },
-  { question: "Can I book only the campaign page?", answer: "Yes. The campaign page package stands on its own, on Kickstarter, Gamefound or Indiegogo. If you later want prelaunch, paid advertising or live campaign support, you can move to full campaign support." },
+  { question: "What is the difference between the two packages?", answer: "Launch Ready is for creators who already have a brand and a website: it covers the launch strategy, the campaign page and the campaign video. Brand to Launch is for founders starting from scratch and adds the branding and a professional website. Prelaunch, paid advertising and live campaign management can be added to either." },
   { question: "How does the free opening mockup work?", answer: "Send a short description of your project and usable artwork or product images. We design one opening campaign section so you can see a direction before booking. There is no payment or obligation." },
   { question: "Do I keep my accounts, contacts and files?", answer: "Yes. Your campaign and marketing accounts stay yours. The brief lists the final files and editable sources we hand over." },
   { question: "Can you guarantee the campaign will fund?", answer: "No. Nobody can honestly guarantee funding. The product, audience, pricing and fulfillment plan all affect the result. We agree the work, budget and measures of progress before the project starts." },
@@ -74,39 +76,13 @@ export default function Home() {
       <section className="h-pricing tone-board" id="services" aria-labelledby="pricing-title">
         <div className="w-wrap-wide">
           <div className="h-pricing-head">
-            <h2 id="pricing-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Two packages,</span></span> <span className="w-line"><span><em>fixed prices</em></span></span></h2>
+            <h2 id="pricing-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Two packages,</span></span> <span className="w-line"><span><em>campaign ready</em></span></span></h2>
             <div>
-              <p>We agree the scope and schedule before work starts. Ad spend is billed separately. Not sure yet? Send your artwork or product images and we will design one opening section of your page at no cost.</p>
+              <p>Both start with planning: we lock down the strategy with you before anything is designed. Not sure yet? Send your product images or artwork and we will design one opening section of your page at no cost.</p>
               <a className="w-link" href="#start-project">Request a free mockup</a>
             </div>
           </div>
-          <div className="h-tiers">
-            <article className="h-tier" id="pricing" data-reveal="rise">
-              <h3>Campaign page</h3>
-              <div className="h-price">$1,800</div>
-              <p>Your Kickstarter, Gamefound or Indiegogo page, from the first line of copy to the published page.</p>
-              <ul>
-                <li>Campaign copy, written for your project</li>
-                <li>Page graphics using your artwork or product images</li>
-                <li>Reward tiers set up</li>
-                <li>Page built on the platform, ready to publish</li>
-              </ul>
-              <div className="h-tier-actions"><a className="w-btn w-btn--ink" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Campaign page" data-analytics-location="homepage pricing"><Roll>Start with the page</Roll><Icon name="arrow"/></a><Link className="w-link" href="/campaign-design#pricing">Full scope</Link></div>
-            </article>
-            <article className="h-tier h-tier--wide" data-reveal="rise">
-              <h3>Full campaign support</h3>
-              <div className="h-price">$5,900</div>
-              <p>The campaign page, plus the launch around it, from prelaunch to the final handoff.</p>
-              <ul>
-                <li>Everything in Campaign page</li>
-                <li>Prelaunch signup page and emails</li>
-                <li>Ad creative and paid advertising</li>
-                <li>Live campaign checks and backer updates</li>
-                <li>Final files and report at handoff</li>
-              </ul>
-              <div className="h-tier-actions"><a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Full campaign support" data-analytics-location="homepage pricing"><Roll>Plan the full launch</Roll><Icon name="arrow"/></a><Link className="w-link" href="/kickstarter-launch-services">Launch services</Link></div>
-            </article>
-          </div>
+          <PackageTiers location="homepage pricing"/>
         </div>
       </section>
 

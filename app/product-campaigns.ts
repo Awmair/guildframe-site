@@ -17,14 +17,14 @@ export const productCampaignPage: CampaignPage = {
   slug: productCampaignSlug,
   variant: "product",
   title: "Kickstarter Campaign Design for New Products",
-  description: "Kickstarter and Indiegogo campaign design for gadgets, everyday products, watches and books: copy, creative, ads and live support. $1,800 page or $5,900.",
+  description: "Kickstarter and Indiegogo campaign design for gadgets, everyday products, watches and books: strategy, page, video and website. From $2,500.",
   headline: "Kickstarter campaign design",
   accent: "for products and books.",
   image: "launch-studio",
   heroImage: { src: `/images/work/${raceBox.image}.webp`, width: 1400, height: 788, note: "Client work: the RaceBox campaign image" },
   alt: raceBox.alt,
   lead: "Kickstarter campaign design for a product is the page copy, product creative and reward setup that show backers what you made and why it is worth backing. Umair and his team build that page for gadgets, everyday products, watches and books, on Kickstarter or Indiegogo, and can run the ads and the live campaign around it.",
-  price: "The campaign page package is $1,800 for one Kickstarter or Indiegogo page using your product images. Full campaign support at $5,900 adds prelaunch, ad creative, paid ads and live campaign management. Ad spend, software and platform fees are separate, and you pay them in your own accounts.",
+  price: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. The video is made from your own product images and footage. Brand to Launch is $3,500 and adds branding and a professional website. Prelaunch, paid ads and live campaign management are quoted on top. Ad spend, software and platform fees are separate, and you pay them in your own accounts.",
   introTitle: "A product page that explains the product before the price.",
   intro: "A backer needs to see what the product does, how it gets used and what arrives in each reward. We plan that page with you, write the copy from your confirmed specifications and design the graphics from your product images. You can ask for a free opening mockup first, so you see a direction before you book.",
   details: [
@@ -51,15 +51,15 @@ const productSteps: GuideVisualData = {
     { label: "Build on the platform", detail: "Kickstarter or Indiegogo, reward tiers checked on a phone" },
     { label: "Launch and live support", detail: "Capped ads and backer updates, with full support" },
   ],
-  caption: "The campaign page package is $1,800. Full campaign support at $5,900 adds prelaunch, paid ads and live campaign management.",
+  caption: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website.",
 };
 
 const productCompare: GuideVisualData = {
   kind: "compare",
-  title: "Smaller product campaigns fit one of two fixed prices",
+  title: "Most product campaigns fit one of two packages",
   columns: [
-    { name: "Campaign page, $1,800", points: ["Copy from your confirmed specifications", "Graphics from your product images", "Reward tiers set up on the platform", "You run the launch and any ads"], verdict: "Suits creators with an audience or their own ads team" },
-    { name: "Full campaign support, $5,900", highlight: true, points: ["Everything in the page package", "Prelaunch page and emails", "Ad creative and capped paid ads", "Live checks, updates and FAQ answers"], verdict: "Suits a first product launch with a modest ad budget" },
+    { name: "Launch Ready, $2,500", points: ["Launch strategy agreed before design", "Copy and graphics from your product images", "Page and rewards set up on the platform", "Campaign video from your own footage"], verdict: "Suits creators who already have a brand and a website" },
+    { name: "Brand to Launch, $3,500", highlight: true, points: ["Everything in Launch Ready", "Logo, palette, type and a brand guide", "A professional website up to five pages", "Email sign up for your launch list"], verdict: "Suits a founder starting the brand and the launch together" },
     { name: "A commission agency", points: ["Goals above $200,000", "Large media budgets and teams", "Fees tied to the pledges raised", "Deep hardware launch experience"], verdict: "Usually the better fit for big hardware launches" },
   ],
   caption: "Ad spend, software and platform fees are separate on both packages.",
@@ -93,7 +93,7 @@ export const productCampaignDelivery: ServiceDelivery = {
   visualsIntro: "Every product project can start with a free mockup and ends with a page ready for you to publish. Here is the route, then the two ways to book it.",
   visuals: [productSteps, productCompare],
   faqs: [
-    { question: "How much does Kickstarter campaign design cost for a product?", answer: "The campaign page package is $1,800 for one Kickstarter or Indiegogo page using your product images. Full campaign support is $5,900 and adds prelaunch, paid ads and live campaign management. Ad spend, software and platform fees are separate." },
+    { question: "How much does Kickstarter campaign design cost for a product?", answer: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website. Prelaunch, paid ads and live campaign management are quoted on top. Ad spend, software and platform fees are separate." },
     { question: "Do you only work on tabletop games?", answer: "No. We launch everyday products, tabletop games and books. Past work includes the RaceBox drag meter and lap timer, a parking surveillance system for Vespas, a bathtub drain protector, an Italian designed watch and a novel. Tabletop is a specialty, so some of our guides are written for game creators." },
     { question: "Do you work on Indiegogo?", answer: "Yes. We design campaign pages for Kickstarter and Indiegogo, and for Gamefound if you are launching a game. Tell us which platform you are leaning towards and we will plan the page for it." },
     { question: "Is this right for a large hardware launch?", answer: "Usually not. If your goal is above $200,000 and you plan a large ad budget, a commission based agency with a media team is a better fit. We suit smaller product campaigns that need a strong page and modest, carefully tested ads." },

@@ -404,14 +404,14 @@ export const guide: LaunchGuide = {
       id: "guildframe",
       title: "Where Guildframe fits a creative project, and where we do not",
       paragraphs: [
-        "We are a fixed price studio, Umair and his team, and we write, design and launch crowdfunding campaigns. We do not have a creative project case study yet, so we will be plain about where we help and where we do not.",
-        "Our fit is the campaign page and the reward structure, plus prelaunch and ads for bigger projects. We do not make your film, album or event. For a goal of a few thousand dollars our fee is hard to justify, so the free guides on this site are the better start.",
+        "We are a studio with two published packages, Umair and his team, and we write, design and launch crowdfunding campaigns. We do not have a creative project case study yet, so we will be plain about where we help and where we do not.",
+        "Our fit is the launch strategy, the campaign page, the reward structure and the campaign video, edited from the images and videos you provide. Prelaunch and ads for bigger projects are quoted separately. We do not make your film, album or event. For a goal of a few thousand dollars our fee is hard to justify, so the free guides on this site are the better start.",
       ],
       visual: {
         kind: "compare",
         title: "Where we help a creative project, and where we are not the right fit",
         columns: [
-          { name: "Where we fit", points: ["The campaign page, copy and reward tiers", "Reward pricing and the fee math", "Prelaunch, ad creative and live campaign management on bigger goals"], verdict: "Page package $1,800, full support $5,900", highlight: true },
+          { name: "Where we fit", points: ["The launch strategy, campaign page, copy and reward tiers", "Reward pricing and the fee math", "The campaign video, edited from your images and videos"], verdict: "Launch Ready $2,500, Brand to Launch $3,500", highlight: true },
           { name: "Where we do not", points: ["Producing your film, album, artwork or event", "Fundraising for a general cause", "Grant writing or charity campaigns", "Projects where our fee would be a big share of a small goal"], verdict: "Use the free guides, or a local arts organization" },
         ],
       },

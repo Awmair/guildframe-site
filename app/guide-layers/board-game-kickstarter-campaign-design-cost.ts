@@ -16,8 +16,8 @@ export const layer: GuideLayer = {
     },
     "price": {
       paragraphs: [
-        "A design fee and a launch budget are different numbers, so keep them apart from the start. Our campaign page package is a fixed $1,800. It covers page structure, campaign copy, section graphics and reward presentation using your supplied artwork, and we agree the file list, review process and schedule before starting.",
-        "Full campaign support is $5,900 and adds the prelaunch signup page and emails, ad creative, paid advertising, live campaign checks and the final handoff. Either way, ad spend, software, platform fees and any outside production stay on their own lines.",
+        "A design fee and a launch budget are different numbers, so keep them apart from the start. Our Launch Ready package is $2,500. It covers the launch strategy, page structure, campaign copy, section graphics, reward setup and the campaign video, all made from your supplied artwork, images and videos, and we agree the file list, review process and schedule before starting.",
+        "Brand to Launch is $3,500 and adds branding and a professional website. Either way, ad spend, ad management, prelaunch email campaigns, live campaign management, platform fees and any outside production are quoted or budgeted on their own lines.",
         "Other designers' prices depend on their scope, so one published fee is not an industry average. Separate lines are the honest way to compare our quote with anyone else's.",
       ],
       visuals: [
@@ -28,13 +28,13 @@ export const layer: GuideLayer = {
           nodes: [
             {question: "Can you show the main product clearly in final art or photos?", yes: "Continue", no: "Request the free opening mockup to see what is missing"},
             {question: "Are your rules and rewards settled?", yes: "Continue", no: "Settle them first, because changes after layout become new scope"},
-            {question: "Will you run prelaunch, ads and live campaign checks yourself?", yes: "Continue", no: "Full campaign support covers those, at $5,900 fixed"},
+            {question: "Do you already have a logo and a website?", yes: "Continue", no: "Brand to Launch adds both, at $3,500"},
           ],
-          end: "The campaign page package fits, at $1,800 fixed",
+          end: "Launch Ready fits, at $2,500",
           source: "Guildframe campaign design scope and price",
         },
       ],
-      takeaway: "Our board game campaign page package is $1,800 fixed and full campaign support is $5,900. Ad spend, software, platform fees and production are always separate lines.",
+      takeaway: "Our Launch Ready package is $2,500 and Brand to Launch is $3,500. Ad spend, ad management, prelaunch emails, live campaign management, platform fees and production are always separate lines.",
     },
     "assets": {
       takeaway: "Final art and confirmed rewards make a smaller design job than prototype photos and unfinished rules, so tell the designer exactly what is ready.",
@@ -62,7 +62,7 @@ export const layer: GuideLayer = {
           title: "Booking campaign design with us starts with four facts and ends with a written scope",
           steps: [
             {label: "Send the basics", detail: "Game summary, artwork link, platform and planned launch date"},
-            {label: "Pick a starting point", detail: "A free opening mockup or a full campaign support enquiry"},
+            {label: "Pick a starting point", detail: "A free opening mockup or a package enquiry"},
             {label: "Get it in writing", detail: "Deliverables, fees and review dates"},
             {label: "Then commit", detail: "Only once the written scope matches your brief"},
           ],

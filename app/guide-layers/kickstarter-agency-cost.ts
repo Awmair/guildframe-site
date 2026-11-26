@@ -32,15 +32,15 @@ export const layer: GuideLayer = {
       visuals: [
         {
           kind: "bars",
-          title: "Example: a 10% commission passes a $5,900 fixed fee once attributed pledges top $59,000",
+          title: "Example: a 10% commission passes a $3,500 package fee once attributed pledges top $35,000",
           unit: "$",
           bars: [
             {label: "10% of $20,000 attributed", value: 2000, display: "$2,000"},
+            {label: "Package fee example", value: 3500, display: "$3,500", highlight: true},
             {label: "10% of $50,000 attributed", value: 5000, display: "$5,000"},
-            {label: "Fixed fee example", value: 5900, display: "$5,900", highlight: true},
             {label: "10% of $100,000 attributed", value: 10000, display: "$10,000"},
           ],
-          caption: "Illustrative example. 10% sits inside the 5 to 15% commission range BoostYourCampaign reports, and $5,900 is our full campaign support price. Ad spend is separate in both.",
+          caption: "Illustrative example. 10% sits inside the 5 to 15% commission range BoostYourCampaign reports, and $3,500 is our Brand to Launch price. Ad spend is separate in both.",
         },
         {
           kind: "flow",
@@ -67,9 +67,9 @@ export const layer: GuideLayer = {
     "published-prices": {
       paragraphs: [
         "Very few agencies publish prices, so the numbers that are public are worth seeing side by side. We checked each of these on November 25, 2026, and we only compare offers that cover the same kind of work.",
-        "For full launch work, BoostYourCampaign lists flat, done for you marketing from $3,499 to $6,997. It describes that range as strategy, a prelaunch funnel, the page and live campaign management, with the entry tier covering the prelaunch funnel only. Our full campaign support is $5,900 and covers the page, prelaunch, ads and the live campaign.",
+        "For full launch work, BoostYourCampaign lists flat, done for you marketing from $3,499 to $6,997. It describes that range as strategy, a prelaunch funnel, the page and live campaign management, with the entry tier covering the prelaunch funnel only. Our packages cover a narrower scope: Launch Ready is $2,500 for the strategy, the page and the video, and Brand to Launch is $3,500 and adds branding and a website. Prelaunch, ads and live campaign management are quoted separately on top of either.",
         "Smaller scopes sit on their own line. Hero Time's consultant list puts independent crowdfunding consultants at about $20 to $75 an hour, usually for advice and calls while you do the work.",
-        "Our campaign page package is $1,800 and covers the page only. Set it beside other page quotes, as our guide to [board game Kickstarter campaign design cost](/guides/board-game-kickstarter-campaign-design-cost) does.",
+        "Our Launch Ready package covers the strategy, the page and the video. Set it beside other page and video quotes, as our guide to [board game Kickstarter campaign design cost](/guides/board-game-kickstarter-campaign-design-cost) does.",
       ],
       takeaway: "Compare the scope list first and the headline price second. Published full launch prices run from $3,499 to $6,997, and consultants charge about $20 to $75 an hour.",
     },
@@ -86,14 +86,14 @@ export const layer: GuideLayer = {
     "guildframe-prices": {
       paragraphs: [
         "We publish our prices because a creator should know the cost before the first call.",
-        "The campaign page package is $1,800. It covers your Kickstarter or Gamefound page from the first line of copy to the published page. That includes page structure, campaign copy, section graphics and reward presentation using your artwork.",
-        "Full campaign support is $5,900. It covers the campaign page, the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff.",
-        "Both are fixed prices, and we agree the scope and schedule before work starts, so the fee does not change with your pledge total. Ad spend, software, platform fees and external production are separate.",
+        "Launch Ready is $2,500. It covers the launch strategy, your Kickstarter, Indiegogo or Gamefound page from the first line of copy to a campaign ready for you to submit, and the campaign video, made from the product images and videos you provide.",
+        "Brand to Launch is $3,500. It covers everything in Launch Ready, plus branding and a professional website of up to five pages.",
+        "Each package has one price, and we agree the scope and schedule before work starts, so the fee does not change with your pledge total. Ad spend, ad management, prelaunch email campaigns, live campaign management, software, platform fees and external production are quoted or paid separately.",
         "Before you pay anything, you can ask for a free opening mockup: one opening campaign section built from your artwork, with no payment or obligation.",
-        "A fixed price does leave the ad spend with you. If you would rather pay only from results, a commission agency may suit you better, and that is a fair choice.",
-        "If a fixed price fits, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) page explains the full launch, and [the buy page](/buy) has both packages and the booking form.",
+        "Our packages do leave the ad spend with you. If you would rather pay only from results, a commission agency may suit you better, and that is a fair choice.",
+        "If a package price fits, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) page explains the full launch, and [the buy page](/buy) has both packages and the booking form.",
       ],
-      takeaway: "Guildframe charges $1,800 for the campaign page and $5,900 for full campaign support, both fixed. Ad spend, software and platform fees stay with you.",
+      takeaway: "Guildframe charges $2,500 for Launch Ready and $3,500 for Brand to Launch. Ad spend, ad management, software and platform fees stay outside both.",
     },
   },
 };

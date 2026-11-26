@@ -104,7 +104,7 @@ export const layer: GuideLayer = {
       takeaway: "Most Kickstarter funding goal mistakes come from aiming at a hoped for total, leaving out fees or forgetting unsold units. Check the backer count before spending on ads.",
     },
     "help": {
-      takeaway: "If you miss your Kickstarter goal, nobody is charged and you can relaunch as a new project. We set the goal with you as part of full campaign support at $5,900.",
+      takeaway: "If you miss your Kickstarter goal, nobody is charged and you can relaunch as a new project. We set the goal with you as part of the launch strategy in both packages, from $2,500.",
     },
   },
 };

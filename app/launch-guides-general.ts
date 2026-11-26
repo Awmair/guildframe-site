@@ -9,8 +9,8 @@ import { contentDates } from "./content-dates";
  * "your project", never "your game" on its own.
  *
  * Every platform figure below was checked on November 26, 2026 against the
- * source listed in the guide. Studio prices are Guildframe's own: $1,800 for
- * the campaign page package and $5,900 for full campaign support.
+ * source listed in the guide. Studio prices are Guildframe's own, from
+ * app/packages.ts: Launch Ready at $2,500 and Brand to Launch at $3,500.
  */
 
 const date = contentDates.generalGuides;
@@ -163,7 +163,7 @@ export const generalGuides: LaunchGuide[] = [
         title: "What you do not need yet",
         paragraphs: [
           "First time creators often wait for things a designer can handle or that come later. You do not need polished copy, a finished video, a website or a perfect logo before you send the brief. Rough notes are enough for copy, because writing the page is part of the work.",
-          "Our campaign page package is a fixed $1,800 and covers the page structure, the campaign copy, the section graphics and the reward presentation, built from your images. Full campaign support is $5,900 and adds the prelaunch signup page and emails, ad creative, paid advertising, live campaign checks and the final handoff. Ad spend, software and platform fees stay separate. The full scope is on our [pricing page](/campaign-design#pricing).",
+          "Our Launch Ready package is $2,500 and covers the launch strategy, the campaign page with its copy, graphics and setup, and the campaign video, made from the product images and videos you provide. Brand to Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, prelaunch email campaigns, live campaign management and platform fees are quoted separately on top of either package. The full scope is on our [pricing page](/campaign-design#pricing).",
         ],
         source: 4,
       },
@@ -302,9 +302,9 @@ export const generalGuides: LaunchGuide[] = [
       },
       {
         id: "our-page-package",
-        title: "What our page package covers",
+        title: "What our packages cover",
         paragraphs: [
-          "Our campaign page package is a fixed $1,800. It covers the page structure in this order, the copy written from your confirmed specifications, the section graphics built from your product images and the reward presentation. Full campaign support at $5,900 adds prelaunch, ad creative, paid ads and live campaign checks.",
+          "Our Launch Ready package is $2,500. It covers the launch strategy, the page structure in this order, the copy written from your confirmed specifications, the section graphics built from your product images, the reward setup and the campaign video. Brand to Launch at $3,500 adds branding and a professional website. Prelaunch emails, ads and live campaign management are quoted separately on top of either package.",
           "Start with our [brief checklist](/guides/kickstarter-campaign-brief) to gather what we need, see our [product campaign page](/kickstarter-product-campaign-design) and [pricing](/campaign-design#pricing), or ask for a free opening section through the [enquiry form](/guides/product-kickstarter-page#start-project).",
         ],
         source: 4,
@@ -426,7 +426,7 @@ export const generalGuides: LaunchGuide[] = [
         title: "If you miss the goal, and where we help",
         paragraphs: [
           "If the campaign ends short, backers are not charged and Kickstarter takes no fees. You can relaunch as a new project with a new URL and a different title, copying content and rewards from the first one, but pledges do not carry over.",
-          "We set the goal with you as part of full campaign support at $5,900, in the same sheet as the reward prices and the ad budget. The campaign page package at $1,800 builds the page around the goal you set. See the [pricing](/campaign-design#pricing) or send your numbers through the [enquiry form](/guides/kickstarter-funding-goal#start-project) and we will look at them with you.",
+          "We set the goal with you as part of the launch strategy in both packages, in the same sheet as the reward tiers and pricing plan. Launch Ready is $2,500 for the strategy, campaign page and video, and Brand to Launch is $3,500 and adds branding and a website. See the [pricing](/campaign-design#pricing) or send your numbers through the [enquiry form](/guides/kickstarter-funding-goal#start-project) and we will look at them with you.",
         ],
         source: 4,
       },

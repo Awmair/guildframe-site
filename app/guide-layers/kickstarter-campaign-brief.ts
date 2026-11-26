@@ -88,8 +88,8 @@ export const layer: GuideLayer = {
     "not-yet": {
       paragraphs: [
         "First time creators often wait for things a designer can handle or that come later. You do not need polished copy, a finished video, a website or a perfect logo before you send the brief. Rough notes are enough for copy, because writing the page is part of the work.",
-        "Our campaign page package is a fixed $1,800 and covers the page structure, the campaign copy, the section graphics and the reward presentation, built from your images.",
-        "Full campaign support is $5,900 and adds the prelaunch signup page and emails, ad creative, paid advertising, live campaign checks and the final handoff. Ad spend, software and platform fees stay separate, and the full scope is on our [pricing page](/campaign-design#pricing).",
+        "Our Launch Ready package is $2,500 and covers the launch strategy, the campaign page with its copy, graphics and setup, and the campaign video, made from the product images and videos you provide.",
+        "Brand to Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, prelaunch email campaigns, live campaign management and platform fees are quoted separately on top of either package, and the full scope is on our [pricing page](/campaign-design#pricing).",
       ],
       visuals: [
         {

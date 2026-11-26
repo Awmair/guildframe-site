@@ -16,6 +16,7 @@ import { Icon, Roll } from "./chrome/Icon";
 import { GuideVisual, type GuideVisualData } from "./GuideVisual";
 import { WorkFx } from "./work/WorkFx";
 import { beyondTabletop } from "../past-work";
+import { brandToLaunch, launchReady, outsideNote, packages, videoNote } from "../packages";
 import { booksSection, productCampaignDelivery, productKinds, productProofIntro, productProofStats } from "../product-campaigns";
 
 export type CampaignPage = {slug:string;title:string;description:string;headline:string;accent:string;image:string;alt:string;introTitle:string;intro:string;details:readonly string[];lead?:string;price?:string;secondTitle:string;secondCopy:string;guide:string;guideTitle:string;kind?:"launch";visuals?:readonly GuideVisualData[];variant?:"product";heroImage?:{src:string;width:number;height:number;note:string}};
@@ -174,20 +175,14 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
    <div className="w-wrap-wide">
     <article className="sv-tier" id="pricing" data-reveal="rise">
      <div className="sv-tier-figure">
-      <h2 id="design-price-title">Campaign page, start to finish</h2>
-      <p className="sv-price"><span className="sv-price-n">$1,800</span> <span className="sv-price-unit">USD per campaign</span></p>
+      <h2 id="design-price-title">{launchReady.name}: the strategy, the page and the video</h2>
+      <p className="sv-price"><span className="sv-price-n">{launchReady.priceText}</span> <span className="sv-price-unit">USD per campaign</span></p>
       <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Request a free mockup" data-analytics-location="campaign-design pricing"><Roll>Request a free mockup</Roll><Icon name="arrow"/></a>
      </div>
      <div className="sv-tier-body">
-      <p>One Kickstarter, Gamefound or Indiegogo campaign page using your supplied artwork or product images. We write the campaign copy, design the page graphics, set up the reward tiers and build the page on the platform, ready for you to publish. The brief confirms the page sections, revision process and final files. Stretch goal graphics are included where agreed.</p>
-      <ul aria-label="Included">
-       <li>Campaign copy</li>
-       <li>Page graphics from your artwork or product images</li>
-       <li>Reward tiers set up</li>
-       <li>Page built on the platform, ready for you to publish</li>
-       <li>Stretch goal graphics where agreed</li>
-      </ul>
-      <p className="sv-tier-note">Prelaunch setup, paid advertising and live campaign management are part of full campaign support. New illustration and video production are scoped separately. Request a free opening mockup before deciding.</p>
+      <p>One Kickstarter, Indiegogo or Gamefound campaign, from a locked strategy to a page and video ready to launch. {videoNote}</p>
+      {launchReady.groups.map(group => <div className="sv-tier-group" key={group.title}><h3>{group.title}</h3><ul>{group.items.map(item => <li key={item}>{item}</li>)}</ul></div>)}
+      <p className="sv-tier-note">{brandToLaunch.name} is {brandToLaunch.priceText} and adds branding and a professional website. {outsideNote}</p>
      </div>
     </article>
    </div>
@@ -209,48 +204,20 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
    </div>
   </section> : null}
 
-  {isHub ? <section className="sv-packages tone-board" aria-labelledby="packages-title">
+  {(isHub || isProduct) ? <section className="sv-packages tone-board" id={isProduct ? "pricing" : undefined} aria-labelledby="packages-title">
    <div className="w-wrap-wide sv-packages-inner">
     <div>
-     <h2 id="packages-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Two packages,</span></span> <span className="w-line"><span><em>fixed prices</em></span></span></h2>
-     <p>We agree the scope and schedule before work starts. Ad spend is billed separately.</p>
+     <h2 id="packages-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Two packages,</span></span> <span className="w-line"><span><em>campaign ready</em></span></span></h2>
+     <p>Both start with planning and a launch strategy we agree with you. {videoNote}</p>
+     <p>{outsideNote}</p>
     </div>
     <div className="sv-package-list">
-     <Link className="sv-package" href="/campaign-design#pricing" data-title="Campaign design">
-      <span className="sv-package-name">Campaign page</span>
-      <span className="sv-package-price">$1,800</span>
-      <span className="sv-package-copy">Your Kickstarter, Gamefound or Indiegogo page, from the first line of copy to the published page.</span>
-      <span className="sv-package-go">Full scope<Icon name="arrow"/></span>
-     </Link>
-     <a className="sv-package sv-package--full" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Full campaign support" data-analytics-location="launch services packages">
-      <span className="sv-package-name">Full campaign support</span>
-      <span className="sv-package-price">$5,900</span>
-      <span className="sv-package-copy">The campaign page, plus the launch around it, from prelaunch to the final handoff.</span>
-      <span className="sv-package-go">Plan the full launch<Icon name="arrow"/></span>
-     </a>
-    </div>
-   </div>
-  </section> : null}
-
-  {isProduct ? <section className="sv-packages tone-board" id="pricing" aria-labelledby="packages-title">
-   <div className="w-wrap-wide sv-packages-inner">
-    <div>
-     <h2 id="packages-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Two packages,</span></span> <span className="w-line"><span><em>fixed prices</em></span></span></h2>
-     <p>We agree the scope and schedule before work starts. Ad spend, software and platform fees are billed separately.</p>
-    </div>
-    <div className="sv-package-list">
-     <a className="sv-package" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Campaign page package" data-analytics-location={`${page.slug} packages`}>
-      <span className="sv-package-name">Campaign page</span>
-      <span className="sv-package-price">$1,800</span>
-      <span className="sv-package-copy">Your Kickstarter product page, from the first line of copy to the page ready to publish.</span>
-      <span className="sv-package-go">Ask about the page<Icon name="arrow"/></span>
-     </a>
-     <a className="sv-package sv-package--full" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Full campaign support" data-analytics-location={`${page.slug} packages`}>
-      <span className="sv-package-name">Full campaign support</span>
-      <span className="sv-package-price">$5,900</span>
-      <span className="sv-package-copy">The page, plus the prelaunch, paid ads and live campaign management around it.</span>
-      <span className="sv-package-go">Plan the full launch<Icon name="arrow"/></span>
-     </a>
+     {packages.map((pack, index) => <a key={pack.slug} className={`sv-package${index ? " sv-package--full" : ""}`} href="#start-project" data-analytics-event="service_interest" data-analytics-label={pack.name} data-analytics-location={`${page.slug} packages`}>
+      <span className="sv-package-name">{pack.name}</span>
+      <span className="sv-package-price">{pack.priceText}</span>
+      <span className="sv-package-copy">{pack.summary} Includes {pack.groups.map(group => group.title.toLowerCase()).join(", ").replace(/, ([^,]*)$/, " and $1")}.</span>
+      <span className="sv-package-go">{index ? "Start with the brand" : "Get launch ready"}<Icon name="arrow"/></span>
+     </a>)}
     </div>
    </div>
   </section> : null}
@@ -320,7 +287,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
    <div className="w-wrap-wide">
     <div className="sv-beyond">
      <h2 id="book-title" className="w-h2">{isProduct ? "Tell us about your product" : isLaunch ? "Tell us about your launch" : "See your page before you book"}</h2>
-     <p>{isProduct ? "Send your product, images and target date through the booking page, or ask for the free opening mockup first. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : isLaunch ? "Send your project, artwork and target date through the booking page. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : "Book the campaign page package, or ask for the free opening mockup first. We design one opening section from your artwork, with no payment and no obligation to book."}</p>
+     <p>{isProduct ? "Send your product, images and target date through the booking page, or ask for the free opening mockup first. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : isLaunch ? "Send your project, artwork and target date through the booking page. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : "Book Launch Ready or Brand to Launch, or ask for the free opening mockup first. We design one opening section from your artwork, with no payment and no obligation to book."}</p>
      <div className="sv-actions"><Link className="w-btn w-btn--coral" href="/buy"><Roll>{isLaunch || isProduct ? "Start your project" : "Book or request a mockup"}</Roll><Icon name="arrow"/></Link></div>
     </div>
    </div>

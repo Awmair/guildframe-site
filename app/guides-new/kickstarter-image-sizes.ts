@@ -130,7 +130,7 @@ export const guide: LaunchGuide = {
         "Most tabletop video budgets go wrong at the planning stage, not in the edit. A horizontal main video, a vertical Discovery clip and a gameplay demo need different framing, so decide on all three before the camera comes out.",
         "We start every video brief from the page. The opening of the campaign, the gameplay section and the reward tiers should use the same facts and the same product shots as the video. Then the edit and the page tell one story, and nothing in the video promises a component the rewards don't include.",
         "For the vertical cut, Kickstarter warns that app controls can cover the edges of the frame. So keep faces, the box and any text near the center, and film wide enough that you can crop to 9:16 without losing the product. Our guide to [planning a Kickstarter campaign video](/guides/kickstarter-campaign-video-planning) walks through the brief, the shot list and the sound off test.",
-        "Guildframe's [campaign creative](/campaign-creative) work covers renders, short motion pieces and ad variants built from your artwork. Filmed production with a crew is external work that we scope separately. Either way, the video and page should be planned together.",
+        "Both Guildframe packages include the campaign video, edited from the product images and videos you provide, and our [campaign creative](/campaign-creative) work covers renders, short motion pieces and ad variants built from your artwork. We do not film or photograph, so any filmed production comes from you or another supplier. Either way, the video and page should be planned together.",
       ],
       source: 3,
     },
@@ -159,6 +159,6 @@ export const guide: LaunchGuide = {
     { question: "What are the Kickstarter reward image dimensions?", answer: "Kickstarter asks for a 3:2 ratio, at least 348 × 232 pixels and no larger than 50 MB, as JPG, PNG or GIF. Reward images are optional. We export them at 1200 × 800 pixels." },
     { question: "Why do my Kickstarter story images look blurry?", answer: "Kickstarter compresses uploads, so they display at a lower resolution than the original. Kickstarter asks for at least 700 pixels wide; we export at 1400 pixels so graphics stay sharp after compression." },
     { question: "What image sizes does Gamefound use?", answer: "Gamefound recommends a 700 × 700 thumbnail, a cover of at least 1743 × 498 at 21:6, and gallery and social images of at least 1280 × 720. Description images should be 840 to 1200 pixels wide." },
-    { question: "Does Guildframe make campaign videos?", answer: "Our campaign creative work covers renders, short motion pieces and ad variants built from your artwork. Filmed production with a crew is external work that we scope separately from page design." },
+    { question: "Does Guildframe make campaign videos?", answer: "Yes. Both our packages include the campaign video: script and storyboard, the main video edited from the product images and videos you provide, motion graphics, captions, licensed music and a short cut for ads. We do not film or photograph the product." },
   ],
 };

@@ -62,7 +62,7 @@ export const layer: GuideLayer = {
         "We start every video brief from the page. The opening of the campaign, the gameplay section and the reward tiers should use the same facts and the same product shots as the video.",
         "Then the edit and the page tell one story, and nothing in the video promises a component the rewards don't include. The vertical cut has its own rules, shown below.",
         "Our guide to [planning a Kickstarter campaign video](/guides/kickstarter-campaign-video-planning) walks through the brief, the shot list and the sound off test.",
-        "Guildframe's [campaign creative](/campaign-creative) work covers renders, short motion pieces and ad variants built from your artwork. Filmed production with a crew is external work that we scope separately.",
+        "Both Guildframe packages include the campaign video, edited from the product images and videos you provide, and our [campaign creative](/campaign-creative) work covers renders, short motion pieces and ad variants built from your artwork. We do not film or photograph, so any filmed production comes from you or another supplier.",
       ],
       visuals: [
         {

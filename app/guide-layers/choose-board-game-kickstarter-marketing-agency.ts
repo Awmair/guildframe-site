@@ -45,7 +45,7 @@ export const layer: GuideLayer = {
         "There is no single fee that covers every tabletop launch. A useful quote lists the work, the months or campaign stages covered and how extra changes are charged.",
         "A starting price may cover one service rather than the whole campaign. Our [Kickstarter agency cost guide](/guides/kickstarter-agency-cost) compares published prices if you want real numbers to test quotes against.",
         "Most agencies charge a fixed fee, a monthly retainer or a commission on pledges. The four steps below turn any of them into one total commitment.",
-        "Guildframe's own prices are fixed, at $1,800 for the campaign page package and $5,900 for full campaign support, with ad spend billed separately. Fixed fees are not right for every launch, but you do know the bill before work starts.",
+        "Guildframe's Launch Ready package is $2,500 for the strategy, campaign page and video; Brand to Launch is $3,500 and adds branding and a website. Ad spend and ad management are quoted separately. A set package price is not right for every launch, but you do know the bill before work starts.",
       ],
       visuals: [
         {

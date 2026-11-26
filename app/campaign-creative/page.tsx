@@ -146,7 +146,7 @@ export default function CampaignCreativePage() {
             <h2 id="creative-process-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Agree the work,</span></span> <span className="w-line"><span><em>know what you receive</em></span></span></h2>
             <div className="cc-price" data-reveal="rise">
               <p className="cc-price-figure">Scoped quote</p>
-              <p>Creative production is quoted per brief. The proposal lists production fees and any outside costs. Full campaign support at $5,900 already includes ad creative, and the $1,800 campaign page package covers the page graphics. Ad spend is always separate.</p>
+              <p>Creative production beyond our packages is quoted per brief. The proposal lists production fees and any outside costs. Launch Ready, at $2,500, already includes the page graphics, the campaign video and a short cut for ads, edited from the product images and videos you provide, and Brand to Launch, at $3,500, adds branding and a website. Ad spend is always separate.</p>
             </div>
           </div>
           <ol className="cc-steps">{steps.map((step, index) => <li key={step.title}><span className="cc-space" aria-hidden="true">{index + 1}</span><h3>{step.title}</h3><p>{step.copy}</p></li>)}</ol>

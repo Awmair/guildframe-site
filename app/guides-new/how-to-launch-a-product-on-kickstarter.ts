@@ -200,7 +200,7 @@ export const guide: LaunchGuide = {
         headers: ["Budget line", "When you pay it", "Where the number comes from"],
         rows: [
           ["Prototype and samples", "Before launch", "Your own spend so far"],
-          ["Photos, video and page", "Before launch", "Quotes or a fixed price package"],
+          ["Photos, video and page", "Before launch", "Quotes or a package price"],
           ["Prelaunch ads", "Before launch", "Your test budget"],
           ["Manufacturing at MOQ", "After funding", "Factory quote"],
           ["Freight and duties", "After funding", "Forwarder quote"],
@@ -444,18 +444,18 @@ export const guide: LaunchGuide = {
       title: "Doing it yourself or with a studio",
       paragraphs: [
         "You can launch a product on Kickstarter yourself with the steps above. The honest cost is time: quotes, pricing sheets, page design, prelaunch and a month of live management add up.",
-        "We're Umair and his team, with ten years of campaign design and 252 client reviews averaging 5.0. Campaigns we worked on raised more than $5M combined, which is our clients' result. We work at a fixed price, take no commission and don't promise funding.",
-        "For a product launch, you bring the prototype, the product images and the numbers from your quotes. We turn them into the page, and with full support we also run prelaunch, ad creative, paid ads within your budget and the live campaign.",
+        "We're Umair and his team, with ten years of campaign design and 252 client reviews averaging 5.0. Campaigns we worked on raised more than $5M combined, which is our clients' result. We charge one price per package, take no commission and don't promise funding.",
+        "For a product launch, you bring the prototype, the product images and the numbers from your quotes. We turn them into the launch strategy, the page and the campaign video, made from your product images and videos. Prelaunch, ads and live campaign management are quoted separately if you want them.",
       ],
       visual: {
         kind: "compare",
         title: "Three ways to launch a product on Kickstarter",
         columns: [
           { name: "Do it yourself", points: ["You write, design and build the page", "You run prelaunch and ads", "Costs your time"], verdict: "Fine with time and design skills" },
-          { name: "Campaign page package", points: ["One Kickstarter page from your product images", "Built on the platform", "Ready to publish"], verdict: "$1,800 fixed", highlight: true },
-          { name: "Full campaign support", points: ["Everything in the page package", "Prelaunch and ad creative", "Paid ads within your budget", "Live campaign management"], verdict: "$5,900 fixed" },
+          { name: "Launch Ready", points: ["A locked launch strategy", "One Kickstarter page from your product images, built on the platform", "A campaign video from your images and videos"], verdict: "$2,500", highlight: true },
+          { name: "Brand to Launch", points: ["Everything in Launch Ready", "Logo, palette and a short brand guide", "A professional website of up to five pages"], verdict: "$3,500" },
         ],
-        caption: "Ad spend, software, platform fees and production are separate in every option.",
+        caption: "Ad spend, ad management, prelaunch emails, live campaign management, software, platform fees and production are separate in every option.",
       },
       list: [
         "We're a good fit for everyday products, accessories and lifestyle goods with a working prototype.",

@@ -96,9 +96,9 @@ const originalLaunchGuides:LaunchGuide[]=[
   {
     "slug": "board-game-kickstarter-campaign-design-cost",
     "title": "How Much Does Board Game Kickstarter Campaign Design Cost?",
-    "description": "Budget your tabletop Kickstarter page by scope: copy, graphics, artwork, video and launch support. Compare quotes and see Guildframe’s fixed page price.",
+    "description": "Budget your tabletop Kickstarter page by scope: copy, graphics, artwork, video and launch support. Compare quotes and see Guildframe’s package prices.",
     "tag": "Budget planning",
-    "answer": "Kickstarter campaign design cost depends on how many page sections, reward comparisons and graphics the quote covers, and on whether your artwork is final. Guildframe charges a fixed $1,800 for the campaign page package and $5,900 for full campaign support, with ad spend, software and platform fees billed separately.",
+    "answer": "Kickstarter campaign design cost depends on how many page sections, reward comparisons and graphics the quote covers, and on whether your artwork is final. Guildframe’s Launch Ready package is $2,500 for the strategy, campaign page and video; Brand to Launch is $3,500 and adds branding and a website. Ad spend, ad management and platform fees are quoted separately.",
     "sources": [
       {
         "label": "Guildframe campaign design scope and price",
@@ -141,17 +141,17 @@ const originalLaunchGuides:LaunchGuide[]=[
         "id": "price",
         "title": "Separate campaign creative from the full launch budget",
         "paragraphs": [
-          "A design fee and a launch budget are different numbers, so keep them apart from the start. Our campaign page package is a fixed $1,800. It covers page structure, campaign copy, section graphics and reward presentation using your supplied artwork, and we agree the file list, review process and schedule before starting.",
-          "Full campaign support is $5,900 and adds the prelaunch signup page and emails, ad creative, paid advertising, live campaign checks and the final handoff. Either way, ad spend, software, platform fees and any outside production stay on their own lines. Other designers’ prices depend on their scope, so one published fee is not an industry average. Separate lines are the honest way to compare our quote with anyone else’s."
+          "A design fee and a launch budget are different numbers, so keep them apart from the start. Our Launch Ready package is $2,500. It covers the launch strategy, page structure, campaign copy, section graphics, reward setup and the campaign video, all made from your supplied artwork, images and videos, and we agree the file list, review process and schedule before starting.",
+          "Brand to Launch is $3,500 and adds branding and a professional website. Either way, ad spend, ad management, prelaunch email campaigns, live campaign management, platform fees and any outside production are quoted or budgeted on their own lines. Other designers’ prices depend on their scope, so one published fee is not an industry average. Separate lines are the honest way to compare our quote with anyone else’s."
         ],
         "visual": {
           "kind": "compare",
-          "title": "The service fee is fixed; ad spend and platform fees sit outside it",
+          "title": "Ad spend and platform fees sit outside both package prices",
           "source": "Guildframe campaign design and launch pricing, November 2026",
           "columns": [
-            { "name": "Campaign page package", "points": ["Page outline and campaign copy", "Gameplay, component and reward graphics", "Built from your supplied artwork"], "verdict": "$1,800 fixed" },
-            { "name": "Full campaign support", "points": ["Everything in the page package", "Prelaunch signup page and emails", "Ad creative and paid advertising", "Live campaign checks and handoff"], "verdict": "$5,900 fixed", "highlight": true },
-            { "name": "Budgeted separately", "points": ["Ad spend", "Software and platform fees", "New illustration or video", "Manufacturing and shipping"], "verdict": "Paid to the provider" }
+            { "name": "Launch Ready", "points": ["Launch strategy, goal and reward tiers", "Campaign page copy, graphics and setup", "Campaign video from your images and videos"], "verdict": "$2,500" },
+            { "name": "Brand to Launch", "points": ["Everything in Launch Ready", "Logo, palette, typefaces and a short brand guide", "A professional website of up to five pages"], "verdict": "$3,500", "highlight": true },
+            { "name": "Budgeted separately", "points": ["Ad spend and ad management", "Prelaunch emails and live campaign management", "Software and platform fees", "New illustration, filming or photography", "Manufacturing and shipping"], "verdict": "Quoted or paid separately" }
           ]
         },
         "table": {
@@ -161,8 +161,8 @@ const originalLaunchGuides:LaunchGuide[]=[
           ],
           "rows": [
             [
-              "Campaign page design",
-              "Fixed fee on the campaign design service page"
+              "Strategy, campaign page and video",
+              "Launch Ready at $2,500, or Brand to Launch at $3,500 with branding and a website"
             ],
             [
               "Free opening section mockup",
@@ -177,7 +177,7 @@ const originalLaunchGuides:LaunchGuide[]=[
               "Budgeted separately from the service fee"
             ],
             [
-              "New game illustration or video",
+              "New game illustration, filming or photography",
               "Separate production scope if required"
             ]
           ]
@@ -197,14 +197,14 @@ const originalLaunchGuides:LaunchGuide[]=[
         "title": "Book against a written brief",
         "paragraphs": [
           "Get the sections, output files, review process and timing in writing. Someone who knows the reward prices and production details should check the finished content before launch.",
-          "To start with us, send the game summary, artwork link, platform and planned launch date. You can request a free opening mockup for creative work, or ask about full campaign support. Either way, we put the deliverables, fees and review dates in writing before you commit."
+          "To start with us, send the game summary, artwork link, platform and planned launch date. You can request a free opening mockup for creative work, or ask about Launch Ready or Brand to Launch. Either way, we put the deliverables, fees and review dates in writing before you commit."
         ]
       }
     ],
     "faqs": [
       {
         "question": "How much does Guildframe charge to design a Kickstarter page?",
-        "answer": "The campaign page package is a fixed $1,800 and full campaign support is $5,900. Ad spend, software, platform fees and outside production are billed separately, and the free opening mockup carries no payment or obligation."
+        "answer": "Launch Ready is $2,500 and covers the strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, software, platform fees and outside production are quoted separately, and the free opening mockup carries no payment or obligation."
       },
       {
         "question": "Is one studio’s design fee an industry average?",
@@ -1105,7 +1105,7 @@ const originalLaunchGuides:LaunchGuide[]=[
       },
       {
         "question": "Does Guildframe charge differently for Gamefound?",
-        "answer": "The fixed campaign design price is listed on the service page. The chosen platform, files and scope are confirmed in the brief. Broader launch services are quoted separately."
+        "answer": "Both packages cover setup on Kickstarter, Indiegogo or Gamefound: Launch Ready is $2,500 and Brand to Launch is $3,500. The chosen platform, files and scope are confirmed in the brief. Ads, prelaunch emails and live campaign management are quoted separately."
       }
     ],
     "seoTitle": "Campaign Page Design: Kickstarter vs Gamefound",
@@ -1374,7 +1374,7 @@ const originalLaunchGuides:LaunchGuide[]=[
         "paragraphs": [
           "Building your own page is a fair choice when someone on the team has the time and the design skills. The honest limit is hours, because layout, graphics, exports and phone checks compete with production, community and prelaunch work in the same weeks.",
           "You can also do both in order. Draft the page yourself with our guide on [how to design a Kickstarter page](/guides/how-to-design-a-kickstarter-page), then bring in a designer for the graphics and final layout. A designer is worth it when the draft is close but does not read well on a phone, or when those hours are needed elsewhere. Either way, your draft makes a better brief.",
-          "When you hire us, you still own the facts: rules, rewards, prices and delivery. We plan the page, write the copy and build the graphics from your artwork, and the campaign page package has a fixed price on our campaign design page. If you're weighing a full agency instead, our guide to Kickstarter agency cost covers that decision."
+          "When you hire us, you still own the facts: rules, rewards, prices and delivery. We plan the page, write the copy and build the graphics from your artwork, and both packages, Launch Ready at $2,500 and Brand to Launch at $3,500, are priced on our campaign design page. If you're weighing a full agency instead, our guide to Kickstarter agency cost covers that decision."
         ],
         "visual": {
           "kind": "compare",
@@ -1391,7 +1391,7 @@ const originalLaunchGuides:LaunchGuide[]=[
             {
               "name": "Hire a campaign designer",
               "points": [
-                "Fixed price for the page package",
+                "Launch Ready from $2,500",
                 "We plan, write and design from your art",
                 "You confirm facts; we check the preview"
               ],
@@ -1426,7 +1426,7 @@ const originalLaunchGuides:LaunchGuide[]=[
       },
       {
         "question": "Is it cheaper to design my own Kickstarter page?",
-        "answer": "It saves the design fee, but the hours move to you: layout, graphics, exports and phone checks. Weigh that time against the fixed price of our campaign page package and the rest of your launch work."
+        "answer": "It saves the design fee, but the hours move to you: layout, graphics, exports and phone checks. Weigh that time against the $2,500 price of our Launch Ready package and the rest of your launch work."
       },
       {
         "question": "Can I design the page myself first and get help later?",

@@ -73,13 +73,13 @@ export const layer: GuideLayer = {
     "diy-or-help": {
       paragraphs: [
         "Plenty of creators design a good first page themselves using everything above. What usually runs out is time and distance. Layout, copy and reward graphics take weeks, and it's hard to see your own page the way a stranger does.",
-        "This is the work Umair has done for ten years. Our campaign page package is $1,800. It covers your Kickstarter or Gamefound page from the first line of copy to the published page.",
-        "That includes page structure, campaign copy, section graphics and reward presentation using your artwork. Full campaign support is $5,900 and adds the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff.",
-        "Ad spend, software and platform fees are separate. If you're unsure, our guides on [when to hire a campaign designer](/guides/when-to-hire-kickstarter-campaign-designer) and [what campaign design costs](/guides/board-game-kickstarter-campaign-design-cost) help you decide.",
+        "This is the work Umair and his team have done for ten years. Our Launch Ready package is $2,500. It covers the launch strategy, the campaign video and your Kickstarter, Indiegogo or Gamefound page from the first line of copy to a campaign ready for you to submit.",
+        "That includes page structure, campaign copy, section graphics and reward setup using your artwork, and a video made from your product images and videos. Brand to Launch is $3,500 and adds branding and a professional website.",
+        "Ad spend, ad management, prelaunch emails, live campaign management and platform fees are quoted separately. If you're unsure, our guides on [when to hire a campaign designer](/guides/when-to-hire-kickstarter-campaign-designer) and [what campaign design costs](/guides/board-game-kickstarter-campaign-design-cost) help you decide.",
         "You can also see the four [campaigns in our case studies](/work). The lowest risk first step is a free opening mockup: we design one opening section of your page using your own artwork, with no payment and no obligation.",
         "Request it through our [Kickstarter campaign design](/campaign-design) page.",
       ],
-      takeaway: "Design your Kickstarter page yourself if you have weeks and fresh eyes. If not, start with a free opening mockup before you commit to the $1,800 page package.",
+      takeaway: "Design your Kickstarter page yourself if you have weeks and fresh eyes. If not, start with a free opening mockup before you commit to the $2,500 Launch Ready package.",
     },
   },
 };

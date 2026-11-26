@@ -190,7 +190,7 @@ export const guide: LaunchGuide = {
       id: "how-we-help",
       title: "How we turn your product photos into a page",
       paragraphs: [
-        "Our campaign page package builds one Kickstarter page from your product images, on the platform and ready to publish, for $1,800. We send you the shot list first, so the photos you commission fit the page we design.",
+        "Our Launch Ready package builds your Kickstarter page and campaign video from your product images and videos, on the platform and ready for you to submit, for $2,500. We send you the shot list first, so the photos you commission fit the page we design.",
         "Our [Kickstarter campaign page design](/campaign-design) service covers that work. If you would like to see it on your own product first, we design the opening section of your page for free, with no obligation.",
       ],
       takeaway: "Shoot to a shot list built from the page, and the page almost designs itself.",

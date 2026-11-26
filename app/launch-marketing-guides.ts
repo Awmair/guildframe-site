@@ -256,7 +256,7 @@ export const marketingGuides: LaunchGuide[] = [
         "title": "Marketing your board game with us",
         "paragraphs": [
           "We plan and run tabletop game marketing for a living, from the first landing page to the last day of the campaign. You can run every phase above yourself. The honest limit is that the audience, the ads and the page all peak in the same weeks, and one person rarely has the hours for all three.",
-          "Our full campaign support covers the campaign page, the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff. See [Kickstarter launch services for tabletop games](/kickstarter-launch-services) for the scope, or [prelaunch marketing](/kickstarter-prelaunch-marketing) if the audience phase is the gap."
+          "Our Launch Ready package is $2,500 and covers the launch strategy, the campaign page and the campaign video; Brand to Launch is $3,500 and adds branding and a website. Prelaunch emails, ads and live campaign management are quoted separately on top of either package. See [Kickstarter launch services for tabletop games](/kickstarter-launch-services) for the scope, or [prelaunch marketing](/kickstarter-prelaunch-marketing) if the audience phase is the gap."
         ]
       }
     ],

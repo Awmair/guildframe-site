@@ -1264,7 +1264,7 @@ export const growthGuides: LaunchGuide[] = [
         "title": "Running the checklist with us",
         "paragraphs": [
           "We run this checklist for a living, from the reward sheet to the first backer update. Most creators can work through it alone, but the hard part is owning six jobs on the same morning while answering backer comments.",
-          "Our full campaign support covers the campaign page, the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff. If you only need part of it, our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) page shows how the pieces split, and [live campaign management](/kickstarter-campaign-management) covers launch day on its own.",
+          "Our Launch Ready package is $2,500 and covers the launch strategy, the campaign page and the campaign video; Brand to Launch is $3,500 and adds branding and a website. Ads, prelaunch emails and live campaign management are quoted separately on top of either package. Our [Kickstarter launch services for tabletop games](/kickstarter-launch-services) page shows how the pieces split, and [live campaign management](/kickstarter-campaign-management) covers launch day on its own.",
           "Send us your game, your platform and your target date, and we will tell you honestly whether the timeline still fits."
         ]
       }

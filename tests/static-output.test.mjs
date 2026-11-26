@@ -385,7 +385,7 @@ test("exports AEO and social metadata", async () => {
   assert.match(homepage, /og-guildframe-launch\.jpg/i);
   assert.match(homepage, /"@type":"Organization"/i);
   assert.match(homepage, /"@type":"Service"/i);
-  assert.doesNotMatch(homepage, /"price":"(?:975|1800)"/i);
+  assert.doesNotMatch(homepage, /"price":"(?:975|1800|2500)"/i);
   assert.doesNotMatch(homepage, /"@type":"Audience"/i);
   assert.doesNotMatch(homepage, /OutOfStock/i);
   assert.doesNotMatch(homepage, /<script\b[^>]*\bsrc="https:\/\/(?:www\.googletagmanager\.com|www\.clarity\.ms)\//i);
@@ -400,7 +400,7 @@ test("exports AEO and social metadata", async () => {
 
   const service = await readPage("/campaign-design");
   assert.match(service, /"@type":"Service"/i);
-  assert.match(service, /"price":"1800"/i);
+  assert.match(service, /"price":"2500"/i);
   assert.match(service, /"priceCurrency":"USD"/i);
 
   const campaignService = await readPage("/kickstarter-to-shopify");
@@ -415,8 +415,8 @@ test("exports AEO and social metadata", async () => {
 test("keeps campaign pricing, recovery and redirects ready",async()=>{
  const home=await readPage("/");const campaign=await readPage("/campaign-design");const buy=await readPage("/buy");
  for(const html of [home,campaign,buy]){assert.match(html,/free mockup/i);assert.doesNotMatch(html,/\$79|\$2,500|\$99|fiverr|checkout pending|within 72 hours/i);}
- assert.match(home,/mailto:umair@guildframe.com/);assert.doesNotMatch(home,/"price":"(?:975|1800)"/);assert.match(campaign,/"priceCurrency":"USD"/);
- assert.match(home,/gfr-home/);assert.match(visibleText(home),/\$1,800/);assert.match(visibleText(home),/\$5,900/);
+ assert.match(home,/mailto:umair@guildframe.com/);assert.doesNotMatch(home,/"price":"(?:975|1800|2500)"/);assert.match(campaign,/"priceCurrency":"USD"/);
+ assert.match(home,/gfr-home/);assert.match(visibleText(home),/\$2,500/);assert.match(visibleText(home),/\$3,500/);assert.match(visibleText(home),/images and videos you provide/);assert.doesNotMatch(visibleText(home),/\$1,800|\$5,900|fixed price/i);
  const missing=await readFile(new URL("404.html",outputRoot),"utf8");assert.match(missing,/This page could not be found/);assert.match(missing,/content="noindex/);
  const redirects=await readFile(new URL("_redirects",outputRoot),"utf8");assert.match(redirects,/^\/pricing \/#pricing 301/m);assert.match(redirects,/^\/customization \/campaign-design 301/m);
  const headers=await readFile(new URL("_headers",outputRoot),"utf8");assert.match(headers,/X-Content-Type-Options: nosniff/i);
@@ -888,11 +888,12 @@ test("keeps the package prices consistent and launch services truthful", async (
     const html = await readPage(path);
     const text = visibleText(html);
     assert.equal((text.match(/\$975/g) ?? []).length, 0, path);
-    if (path === "/campaign-design") { const n = (text.match(/\$1,800/g) ?? []).length; assert.ok(n >= 1 && n <= 2, path); }
+    assert.doesNotMatch(text, /\$5,900|[Ff]ull campaign support/, path);
+    if (path === "/campaign-design") assert.match(text, /\$2,500/, path);
     const nodes = schemaNodes(html);
     for (const node of nodes.filter(node => node["@type"] === "Service")) {
       if (path === "/campaign-design") {
-        assert.equal(node.offers.price, "1800");
+        assert.equal(node.offers.price, "2500");
         assert.equal(node.offers.priceCurrency, "USD");
       } else assert.equal(node.offers, undefined, path);
     }

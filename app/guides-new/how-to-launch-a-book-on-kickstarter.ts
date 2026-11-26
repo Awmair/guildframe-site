@@ -403,7 +403,7 @@ export const guide: LaunchGuide = {
       title: "How to launch a book on Kickstarter with help: a real example",
       paragraphs: [
         "A World Without Men is a novel by Shay Horch, and we worked on its Kickstarter campaign. On its public Kickstarter page, 25 backers pledged $5,149, the author's result, which shows a debut novel can fund with a focused, modest goal.",
-        "We are a fixed price studio, Umair and his team, and we write, design and launch campaigns for books and products. We are not an ad agency, we take no commission, and we never promise a funding result.",
+        "We are a studio with two published packages, Umair and his team, and we write, design and launch campaigns for books and products. We are not an ad agency, we take no commission, and we never promise a funding result.",
       ],
       source: 21,
       visual: {
@@ -411,8 +411,8 @@ export const guide: LaunchGuide = {
         title: "What you bring, and what we can take off your plate",
         columns: [
           { name: "You bring", points: ["The finished manuscript and cover", "Print quotes, or the specification you want", "Your readers and your story as an author"] },
-          { name: "Campaign page package, $1,800", points: ["One Kickstarter page built from your book images", "Copy, reward tiers and format graphics", "Built on the platform, ready to publish"], highlight: true },
-          { name: "Full campaign support, $5,900", points: ["Everything in the page package", "Prelaunch, ad creative and paid ads within your budget", "Live campaign management"], verdict: "Ad spend, software, platform fees and printing are separate" },
+          { name: "Launch Ready, $2,500", points: ["A locked launch strategy, goal and reward tiers", "One Kickstarter page built from your book images, with copy and format graphics", "A campaign video edited from your book images and videos"], highlight: true },
+          { name: "Brand to Launch, $3,500", points: ["Everything in Launch Ready", "Logo, palette, typefaces and a short brand guide", "A professional website of up to five pages"], verdict: "Ads, prelaunch emails, live campaign management, platform fees and printing are separate" },
         ],
       },
       list: [

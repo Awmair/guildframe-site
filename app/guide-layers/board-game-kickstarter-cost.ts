@@ -60,12 +60,12 @@ export const layer: GuideLayer = {
     },
     "help": {
       paragraphs: [
-        "You don't have to hire anyone to launch on Kickstarter, and plenty of first games are built by the creator alone. If you do want help, compare published fixed prices rather than vague quotes.",
-        "Our own prices are public. The campaign page package is $1,800. Full campaign support is $5,900 and covers the prelaunch page and emails, the campaign page, ad creative and paid advertising, live campaign checks and the final handoff.",
-        "Ad spend, software, platform fees and production are separate. For comparison, BoostYourCampaign publishes full marketing packages at $3,499 to $6,997 flat in its 2026 pricing guide.",
+        "You don't have to hire anyone to launch on Kickstarter, and plenty of first games are built by the creator alone. If you do want help, compare published prices rather than vague quotes.",
+        "Our own prices are public. Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video, made from the images and videos you provide. Brand to Launch is $3,500 and adds branding and a professional website.",
+        "Ad spend, ad management, prelaunch emails, live campaign management, software, platform fees and production are quoted or paid separately. For comparison, BoostYourCampaign publishes full marketing packages at $3,499 to $6,997 flat in its 2026 pricing guide.",
         "Our guides to [Kickstarter agency cost](/guides/kickstarter-agency-cost) and [campaign design cost](/guides/board-game-kickstarter-campaign-design-cost) compare pricing models and what a fair quote includes. Whoever you choose, put the fee in the before launch column, because the work happens before the campaign money arrives.",
       ],
-      takeaway: "Hiring help is optional. If you hire, compare published fixed prices and count the fee as a before launch cost.",
+      takeaway: "Hiring help is optional. If you hire, compare published prices and count the fee as a before launch cost.",
     },
     "small-budget": {
       takeaway: "On a small budget, save on testing prototypes, extra tiers and video gear. Never cut final cover art, real quotes or the reserve.",

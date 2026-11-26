@@ -492,9 +492,9 @@ export const guide: LaunchGuide = {
       id: "how-we-help",
       title: "Launching your Kickstarter with us",
       paragraphs: [
-        "We are Umair and a small team, and we have written and designed campaigns for ten years, with 252 client reviews averaging 5.0. We work at a fixed price, take no commission and don't promise funding results.",
-        "Our [Kickstarter launch services](/kickstarter-launch-services) start with a $1,800 campaign page package built on the platform from your product images. Full campaign support is $5,900 and adds prelaunch, ad creative, paid ads within your budget and live campaign management.",
-        "Ad spend, software, platform fees and production stay separate. If you want to see our work on your project first, ask for the free opening mockup, and we will design the opening section of your page with no obligation.",
+        "We are Umair and a small team, and we have written and designed campaigns for ten years, with 252 client reviews averaging 5.0. We charge one price per package, take no commission and don't promise funding results.",
+        "Our [Kickstarter launch services](/kickstarter-launch-services) start with Launch Ready at $2,500: the launch strategy, the campaign page built on the platform, and the campaign video, made from the product images and videos you provide. Brand to Launch is $3,500 and adds branding and a professional website.",
+        "Ad spend, ad management, prelaunch email campaigns, live campaign management, software, platform fees and production are quoted or paid separately. If you want to see our work on your project first, ask for the free opening mockup, and we will design the opening section of your page with no obligation.",
       ],
       visual: {
         kind: "stats",
@@ -508,14 +508,15 @@ export const guide: LaunchGuide = {
         caption: "These are our clients' results, not a promise. Across ten years, campaigns we worked on raised more than $5M combined.",
       },
       table: {
-        headers: ["What you bring", "What we do with the page package", "What full support adds"],
+        headers: ["What you bring", "What we do in Launch Ready", "What Brand to Launch adds"],
         rows: [
-          ["Product facts, images and prices", "Plan the page, write the copy and design every section", "Prelaunch signup page and emails"],
-          ["Production and shipping quotes", "Build the page on the platform, ready to publish", "Ad creative and paid ads within your budget"],
-          ["Decisions on rewards and dates", "Check rewards, shipping text and the phone view", "Live campaign management from launch to close"],
+          ["Product facts, images and prices", "Lock the strategy, goal and reward tiers, then write and design every section", "Logo, wordmark, palette and typefaces"],
+          ["Production and shipping quotes", "Build the page on the platform, ready for you to submit", "A short brand guide and logo files"],
+          ["Product images and videos", "Script and edit the campaign video, plus a short cut for ads", "A website of up to five pages with an email sign up"],
+          ["Decisions on rewards and dates", "Check rewards, shipping text and the phone view", "The website connected to your domain"],
         ],
       },
-      takeaway: "You can run every stage in this guide yourself. If you want the page, prelaunch and launch handled at a fixed price, start with a free opening mockup.",
+      takeaway: "You can run every stage in this guide yourself. If you want the strategy, page and video handled for one package price, start with a free opening mockup.",
     },
   ],
   faqs: [

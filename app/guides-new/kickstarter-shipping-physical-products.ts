@@ -221,7 +221,7 @@ export const guide: LaunchGuide = {
       id: "our-help",
       title: "How we help after funding",
       paragraphs: [
-        "We are a fixed price studio, Umair and his team, and we plan the shipping section, the pledge manager setup and the backer updates with you. You bring the product and the quotes; we turn them into prices and a page backers trust.",
+        "We are a studio with two published packages, Umair and his team, and we plan the shipping section, the pledge manager setup and the backer updates with you. You bring the product and the quotes; we turn them into prices and a page backers trust.",
         "Our [post campaign support](/post-campaign-support) covers the months after funding, and [what happens after your Kickstarter is funded](/guides/what-happens-after-kickstarter-is-funded) lists each step in order. If you are still before launch, we design the opening section of your page for free, with no obligation.",
       ],
       takeaway: "Shipping is a launch decision, not a later problem. Bring us your quotes and we will help you price, explain and deliver them.",

@@ -1,17 +1,18 @@
 import { absoluteUrl, siteConfig } from "./site-config";
+import { launchReady } from "./packages";
 
 export const authorId = () => absoluteUrl("/authors/guildframe#umair");
 export const campaignService = (includePrice = false) => ({
   "@type": "Service",
   "@id": absoluteUrl("/campaign-design#service"),
-  name: "Guildframe Kickstarter and Gamefound page design",
-  serviceType: "Crowdfunding campaign page copy and graphics",
-  description: "Page structure, campaign copy, section graphics and reward comparisons using the creator’s artwork or product images.",
+  name: "Guildframe Launch Ready: campaign strategy, page and video",
+  serviceType: "Crowdfunding campaign strategy, page design and video",
+  description: "A locked launch strategy, campaign copy, page graphics, platform setup and a campaign video made from the creator’s own product images and videos.",
   provider: { "@id": absoluteUrl("/#organization") },
   url: absoluteUrl("/campaign-design"),
   ...(includePrice ? { offers: {
     "@type": "Offer",
-    price: "1800",
+    price: String(launchReady.price),
     priceCurrency: "USD",
     url: absoluteUrl("/campaign-design#pricing"),
   } } : {}),

@@ -25,7 +25,7 @@ export const serviceDelivery: Record<string, ServiceDelivery> = {
     handoff: "Your accounts and contacts stay yours. The proposal lists final files, editable sources, support dates, reporting and any separately priced suppliers or software.",
     proof: ["cryptic-explorers", "futureproof-terrain", "quiver-time", "scented-realms"],
     faqs: [
-      { question: "What do Kickstarter launch services include?", answer: "Launch planning, prelaunch pages and email, campaign copy and graphics, paid ads and live support, each with named deliverables. You can book all of it as full campaign support or only the stages you are missing. Manufacturing, freight and fulfillment stay with your suppliers." },
+      { question: "What do Kickstarter launch services include?", answer: "Launch planning, prelaunch pages and email, campaign copy and graphics, paid ads and live support, each with named deliverables. Launch Ready and Brand to Launch cover the strategy, the page and the video; prelaunch, ads and live support are quoted on top, so you book only the stages you are missing. Manufacturing, freight and fulfillment stay with your suppliers." },
       { question: "How far before launch should I get in touch?", answer: "Send the brief while the date is still flexible. We review the assets and unfinished work before proposing a schedule. If a date is already public, include it so we can identify what can realistically be finished." },
       { question: "Can my existing illustrator or marketing team stay involved?", answer: "Yes. Tell us who is already doing the work. We can split responsibilities and agree who supplies, reviews and publishes each item." },
     ],
@@ -141,10 +141,10 @@ const pageSteps: GuideVisualData = { kind: "steps", title: "A campaign page proj
   { label: "Plan the page", detail: "Page order, plus the facts and images still missing." },
   { label: "Copy and graphics", detail: "Gameplay, components and reward comparisons from your art." },
   { label: "Build on the platform", detail: "Reward tiers set up and checked on a phone, ready for you to publish." },
-], caption: "The campaign page package is $1,800. Full campaign support at $5,900 adds prelaunch, ads and live support." };
+], caption: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website." };
 
 type CreativeExtra = { proofCopy: string; faq: { question: string; answer: string }; checklist: GuideVisualData; guides: StageGuides };
-const pageFaq = (kind: string) => ({ question: `How much does ${kind} campaign design cost?`, answer: "The campaign page package is $1,800 for one Kickstarter or Gamefound page using your artwork. It covers the copy, page graphics, reward tier setup and the build on the platform. New illustration and video are quoted separately." });
+const pageFaq = (kind: string) => ({ question: `How much does ${kind} campaign design cost?`, answer: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. It covers the copy, page graphics, platform setup and a video made from your own product images and footage. Brand to Launch is $3,500 and adds branding and a professional website." });
 const creativeExtras: Record<string, CreativeExtra> = {
   "board-game-kickstarter-campaign-design": {
     proofCopy: "Cryptic Explorers, an asymmetrical squad tactics and survival horror game for 2 to 4 players from Tempest Tome Games, is our clearest board game example. Umair created the launch facing presentation, which introduces the characters before the rules. The creator's public result is 961 backers pledged $55,686.",
@@ -273,10 +273,10 @@ const launchExtras: Record<string, Pick<ServiceDelivery, "proofCopy" | "visualsI
         { label: "Finish the campaign page", detail: "Copy, graphics and reward tiers, checked on a phone before Kickstarter review." },
         { label: "Launch and hand off", detail: "Launch checklist, live updates and ad reports, then the final files." },
       ]),
-      { kind: "compare", title: "Full campaign support takes the launch work off your desk", columns: [
+      { kind: "compare", title: "A package plus launch support takes the work off your desk", columns: [
         { name: "Doing it yourself", points: ["You write the page and design every graphic", "You build the signup page and email sequence", "You learn ad setup, testing and reporting", "You draft every backer update while the campaign is live"], verdict: "Works when you have the time and design skills to spare." },
-        { name: "Full campaign support, $5,900", highlight: true, points: ["We write and design the page from your artwork", "We build the prelaunch page, signup and emails", "Umair runs the ad creative, tests and reports", "We draft updates and keep the page current"], verdict: "Ad spend, software and platform fees stay separate." },
-      ], caption: "Prices are Guildframe's current packages. The $1,800 campaign page package covers the page on its own." },
+        { name: "A package plus launch support", highlight: true, points: ["We write and design the page from your artwork", "We build the prelaunch page, signup and emails", "Umair runs the ad creative, tests and reports", "We draft updates and keep the page current"], verdict: "Launch support is quoted on top of a package. Ad spend, software and platform fees stay separate." },
+      ], caption: "Launch Ready is $2,500 and covers the launch strategy, the campaign page and the campaign video. Brand to Launch is $3,500 and adds branding and a professional website." },
     ],
     guides: { intro: "These guides cover the planning and cost questions creators ask before they book. Start with fees and the funding goal, then compare what an agency should cost.", links: [
       { slug: "kickstarter-fees", label: "What Kickstarter fees cost a tabletop creator" },
@@ -329,7 +329,7 @@ const launchExtras: Record<string, Pick<ServiceDelivery, "proofCopy" | "visualsI
       ]),
       { kind: "compare", title: "Handing ads to Umair keeps the testing disciplined", columns: [
         { name: "Running ads yourself", points: ["You set up the ad account and tracking", "You make every creative variant", "You read the reports and judge attribution", "You decide alone when to raise or cut spend"], verdict: "Lowest fees, but tests often run without a clear question." },
-        { name: "Ads run by Umair", highlight: true, points: ["We review your account, page and tracking", "We make the variants from your artwork", "Reports split spend, signups and pledges", "Every spending change needs your approval"], verdict: "Included in $5,900 full campaign support. Your ad account and data stay yours." },
+        { name: "Ads run by Umair", highlight: true, points: ["We review your account, page and tracking", "We make the variants from your artwork", "Reports split spend, signups and pledges", "Every spending change needs your approval"], verdict: "Quoted on top of either package after we review your page and budget. Your ad account and data stay yours." },
       ], caption: "Ad spend is separate from every Guildframe fee and is paid in your own ad account." },
     ],
     guides: { intro: "These guides cover budgets, tracking and how to judge an advertising partner before you hand over an ad account.", links: [
@@ -381,7 +381,7 @@ const launchExtras: Record<string, Pick<ServiceDelivery, "proofCopy" | "visualsI
         { name: "Campaign page", items: ["Story copy and section graphics", "Reward and add on comparisons", "A preview check before publication"] },
         { name: "Audience", items: ["Prelaunch landing page and emails", "Paid ads with approved caps"] },
         { name: "After launch", items: ["Live campaign updates", "Late pledge and pledge manager copy"] },
-      ], caption: "Campaign page package $1,800. Full campaign support $5,900. Gamefound fees and ad spend are separate." },
+      ], caption: "Launch Ready $2,500. Brand to Launch $3,500. Gamefound fees and ad spend are separate." },
     ],
     guides: { intro: "These guides compare the platforms and the tools around them, so you can choose before the page is built.", links: [
       { slug: "kickstarter-vs-gamefound", label: "Kickstarter or Gamefound for your game" },

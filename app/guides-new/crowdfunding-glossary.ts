@@ -339,7 +339,7 @@ export const guide: LaunchGuide = {
       title: "When the terms turn into decisions",
       paragraphs: [
         "Knowing the words is the first step. The harder part is choosing the goal, the tiers, the platform and the shipping plan that fit your project.",
-        "That is the work our [Kickstarter launch services](/kickstarter-launch-services) cover, at a fixed price. If you want to see how your page could look first, ask for a free opening mockup of the top of your campaign page.",
+        "That is the work our [Kickstarter launch services](/kickstarter-launch-services) cover, with Launch Ready at $2,500 and Brand to Launch at $3,500. If you want to see how your page could look first, ask for a free opening mockup of the top of your campaign page.",
       ],
       takeaway: "This crowdfunding glossary gives you the language; we help you turn it into a goal, a page and a launch plan.",
     },

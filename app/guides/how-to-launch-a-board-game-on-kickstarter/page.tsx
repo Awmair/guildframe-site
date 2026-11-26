@@ -890,10 +890,11 @@ export default function HowToLaunchABoardGameOnKickstarterPage() {
           </table>
         </div>
         <p>
-          Our prices are fixed. The campaign page package is $1,800. Full campaign support is $5,900 and
-          covers the prelaunch page and emails, the campaign page, ad creative and paid advertising, live
-          campaign checks and the final handoff. Ad spend, software, platform fees and production are
-          separate.
+          Our prices are set per package. Launch Ready is $2,500 and covers the launch strategy, the
+          campaign page and the campaign video, made from the images and videos you provide. Brand to
+          Launch is $3,500 and adds branding and a professional website. Ad spend, ad management,
+          prelaunch emails, live campaign management, software, platform fees and production are quoted
+          or paid separately.
         </p>
         <p>
           We don&apos;t manufacture, ship or give tax advice. Those stay with your factory, your

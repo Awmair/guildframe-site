@@ -389,7 +389,7 @@ export const guide: LaunchGuide = {
       title: "A real watch Kickstarter campaign, and where Guildframe fits",
       paragraphs: [
         "Bacàn is an Italian designed watch, and we worked on its Kickstarter campaign. On its public Kickstarter page, 222 backers pledged €20,410, which is the brand's result.",
-        "We are a fixed price studio, Umair and his team, and we write, design and launch campaigns for everyday products, wearables included. We are not an ad agency, we take no commission, and we never promise a funding result.",
+        "We are a studio with two published packages, Umair and his team, and we write, design and launch campaigns for everyday products, wearables included. We are not an ad agency, we take no commission, and we never promise a funding result.",
       ],
       source: 14,
       visual: {
@@ -397,8 +397,8 @@ export const guide: LaunchGuide = {
         title: "What you bring, and what we take on",
         columns: [
           { name: "You bring", points: ["Samples and your product photos", "The factory quote, MOQ and sizes", "Documents behind every material claim"] },
-          { name: "Campaign page package, $1,800", points: ["One Kickstarter page built from your product images", "Copy, size charts and reward graphics", "Built on the platform, ready to publish"], highlight: true },
-          { name: "Full campaign support, $5,900", points: ["Everything in the page package", "Prelaunch, ad creative and paid ads within your budget", "Live campaign management"], verdict: "Ad spend, software, platform fees and production are separate" },
+          { name: "Launch Ready, $2,500", points: ["A locked launch strategy, goal and reward tiers", "One Kickstarter page built from your product images, with copy, size charts and reward graphics", "A campaign video edited from your product images and videos"], highlight: true },
+          { name: "Brand to Launch, $3,500", points: ["Everything in Launch Ready", "Logo, palette, typefaces and a short brand guide", "A professional website of up to five pages"], verdict: "Ads, prelaunch emails, live campaign management, platform fees and production are separate" },
         ],
       },
       list: [

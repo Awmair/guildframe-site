@@ -316,7 +316,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "The most useful thing these numbers do is keep a funding goal honest. A goal far above the median for your category needs an audience to match, and that audience has to exist before launch.",
         "So we start from costs and audience, then check the result against the statistics. We refresh this page each quarter, so check the updated date before you quote it.",
-        "If you want a goal, a page and a launch plan built around your category's real numbers, our [Kickstarter launch services](/kickstarter-launch-services) cover it at a fixed price. You can also ask for a free opening mockup of your page first.",
+        "If you want a goal, a page and a launch plan built around your category's real numbers, our [Kickstarter launch services](/kickstarter-launch-services) cover it, from $2,500 for Launch Ready. You can also ask for a free opening mockup of your page first.",
       ],
       visual: {
         kind: "steps",

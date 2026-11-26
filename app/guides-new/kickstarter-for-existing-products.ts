@@ -251,7 +251,7 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "Put together, a version two campaign follows the same order as any product launch, with a head start on audience and proof. If your first campaign missed its goal and you're trying again, read [how to relaunch a failed Kickstarter](/guides/relaunch-failed-kickstarter) instead.",
         "Our [A to Z guide on how to launch a product on Kickstarter](/guides/how-to-launch-a-product-on-kickstarter) covers each stage, and the [reward pricing guide for physical products](/guides/kickstarter-reward-pricing-physical-products) covers the price math.",
-        "We're Umair and his team, and we design version two campaigns at a fixed price with no commission. See our [Kickstarter campaign design for products](/kickstarter-product-campaign-design), or ask for a free opening mockup of your new version's first screen.",
+        "We're Umair and his team, and we design version two campaigns for one package price with no commission. See our [Kickstarter campaign design for products](/kickstarter-product-campaign-design), or ask for a free opening mockup of your new version's first screen.",
       ],
       list: [
         "List what version two changes, in your customers' words.",

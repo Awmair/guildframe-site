@@ -155,7 +155,7 @@ export const guide: LaunchGuide = {
       title: "Designing it yourself, or handing it to us",
       paragraphs: [
         "Plenty of creators design a good first page themselves using everything above. What usually runs out is time and distance, because layout, copy and reward graphics take weeks, and it's hard to see your own page the way a stranger does.",
-        "This is the work Umair has done for ten years. Our campaign page package is $1,800. It covers your Kickstarter or Gamefound page from the first line of copy to the published page, including page structure, campaign copy, section graphics and reward presentation using your artwork. Full campaign support is $5,900 and adds the prelaunch signup page and emails, ad creative and paid advertising, live campaign checks and the final handoff. Ad spend, software and platform fees are separate.",
+        "This is the work Umair and his team have done for ten years. Our Launch Ready package is $2,500. It covers the launch strategy, your Kickstarter, Indiegogo or Gamefound page from the first line of copy to a campaign ready for you to submit, including page structure, campaign copy, section graphics and reward setup using your artwork, and the campaign video made from your product images and videos. Brand to Launch is $3,500 and adds branding and a professional website. Ad spend, ad management, prelaunch emails, live campaign management and platform fees are quoted separately.",
         "If you're unsure, our guides on [when to hire a campaign designer](/guides/when-to-hire-kickstarter-campaign-designer) and [what campaign design costs](/guides/board-game-kickstarter-campaign-design-cost) help you decide. You can also see the four [campaigns in our case studies](/work).",
         "The lowest risk first step is a free opening mockup. We design one opening section of your page using your own artwork, with no payment and no obligation. Request it through our [Kickstarter campaign design](/campaign-design) page.",
       ],
@@ -164,10 +164,10 @@ export const guide: LaunchGuide = {
         title: "What changes when you hire help for the page",
         columns: [
           { name: "Do it yourself", points: ["You write the copy", "You make every graphic", "Weeks of your own time", "Free apart from tools"], verdict: "Works with time and fresh eyes" },
-          { name: "Campaign page package", points: ["We write the copy", "We build the graphics from your art", "You confirm facts and review", "Built ready for you to publish"], verdict: "$1,800 fixed price", highlight: true },
-          { name: "Full campaign support", points: ["The page, plus prelaunch emails", "Ad creative and paid advertising", "Live campaign checks", "Ad spend paid separately"], verdict: "$5,900 fixed price" },
+          { name: "Launch Ready", points: ["We lock the strategy and write the copy", "We build the graphics from your art", "We edit the video from your footage", "Built ready for you to submit"], verdict: "$2,500", highlight: true },
+          { name: "Brand to Launch", points: ["Everything in Launch Ready", "Logo, palette and a short brand guide", "A website of up to five pages", "Ad spend and ad management quoted separately"], verdict: "$3,500" },
         ],
-        caption: "Prices are Guildframe's current fixed prices. Ad spend, software and platform fees sit outside both.",
+        caption: "Prices are Guildframe's current package prices. Ad spend, ad management, software and platform fees sit outside both.",
       },
     },
   ],
@@ -178,6 +178,6 @@ export const guide: LaunchGuide = {
     { question: "What program do people use to make Kickstarter graphics?", answer: "Use whatever layout or image app you already know. The tool matters less than consistent fonts, colors and labels, and text large enough to read on a phone." },
     { question: "Should the text be in images or typed into the page?", answer: "Both, for the facts that matter. Kickstarter advises that your text carries the key information for people using screen readers, so type prices, contents and player counts into the page and let graphics support them." },
     { question: "Can I use photos of my prototype on the page?", answer: "Yes. Use real, well lit photos on a plain background and label them as a prototype. Honesty about what's unfinished builds trust with backers." },
-    { question: "How much does it cost to have someone design my Kickstarter page?", answer: "Guildframe's campaign page package is a fixed $1,800 and full campaign support is $5,900. Ad spend, software and platform fees are separate, and you can start with a free opening mockup that has no payment or obligation." },
+    { question: "How much does it cost to have someone design my Kickstarter page?", answer: "Guildframe's Launch Ready package is $2,500 for the strategy, campaign page and video; Brand to Launch is $3,500 and adds branding and a website. Ad spend, ad management and platform fees are separate, and you can start with a free opening mockup that has no payment or obligation." },
   ],
 };
