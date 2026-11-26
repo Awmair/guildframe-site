@@ -73,6 +73,55 @@ export const beyondTabletop = [
     alt: "Hardcover of A World Without Men by Shay Horch, with an eye reflecting the Earth on the cover",
     href: "https://www.kickstarter.com/projects/shayhorch/a-world-without-men-a-war-against-domination-and-corruption",
   },
+  {
+    name: "RaceBox",
+    line: "A GPS drag meter and lap timer from Florida that measures acceleration, quarter mile runs and laps at the press of a button.",
+    role: "Campaign page design.",
+    result: "225 backers pledged $44,681",
+    image: "racebox",
+    alt: "RaceBox drag meter and lap timer with a red trimmed body and a screen showing Lap Timer, Drag Meter, History and Settings",
+    href: "https://www.kickstarter.com/projects/racebox/the-ultimate-drag-meter-and-lap-timer",
+  },
+  {
+    name: "RaceBox Micro",
+    line: "The same team came back with RaceBox Micro, a small DIY GPS data board with a 25Hz GPS, accelerometer and gyroscope.",
+    role: "Campaign page design.",
+    result: "1,013 backers pledged $122,811",
+    image: "racebox-micro",
+    alt: "RaceBox Micro, a small red GPS circuit board, under the words DIY GPS Data for the Driven",
+    href: "https://www.kickstarter.com/projects/racebox/racebox-micro",
+  },
+  {
+    name: "TubRing",
+    line: "A ring shaped drain protector that sits over a bathtub pop up stopper and catches hair before it clogs the drain.",
+    role: "Campaign page design.",
+    result: "722 backers pledged $20,745",
+    image: "tubring",
+    alt: "A woman holding a pink TubRing drain protector, with the words No More Plumbing Bills",
+    href: "https://www.kickstarter.com/projects/mytubring/tubringtm-for-a-clog-free-bath-shower-and-more",
+  },
+] as const;
+
+// More tabletop client campaigns without a full case study. Totals are public Kickstarter figures, the creators' results.
+export const moreTabletop = [
+  {
+    name: "FutureProof Fully Painted",
+    line: "Snot Goblin Gaming returned with a fully painted version of its modular wargaming terrain and two new expansions.",
+    role: "Campaign page design.",
+    result: "2,569 backers pledged $754,782",
+    image: "futureproof-painted",
+    alt: "FutureProof modular terrain launch graphic showing fully painted Shrine, Forsaken and Lost world terrain sets",
+    href: "https://www.kickstarter.com/projects/snotgoblingaming/futureproof-fully-painted-modular-wargaming-terrain",
+  },
+  {
+    name: "Fraud",
+    line: "A card game about white collar crime, where players bribe, defraud and run extortion rackets against each other.",
+    role: "Campaign page design.",
+    result: "181 backers pledged $18,292",
+    image: "fraud",
+    alt: "Fraud, The Game of White Collar Crime, box art of a businessman behind bars beside a list of the game's schemes",
+    href: "https://www.kickstarter.com/projects/1279845108/fraud-the-game-of-white-collar-crimetm",
+  },
 ] as const;
 
 // Verbatim excerpts. Each delivery image identifies the matching project.

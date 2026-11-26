@@ -31,6 +31,8 @@ export const guide: LaunchGuide = {
     { label: "What happens if a project is delayed?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236444-what-happens-if-a-project-is-delayed" },
     { label: "What does estimated delivery date mean?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236744-what-does-estimated-delivery-date-mean" },
     { label: "Secubix: surveillance system for your Vespa", publisher: "Kickstarter", href: "https://www.kickstarter.com/projects/secubix/secubix-revolutionary-surveillance-system-for-your-vespa" },
+    { label: "RaceBox: The Ultimate Drag Meter and Lap Timer", publisher: "Kickstarter", href: "https://www.kickstarter.com/projects/racebox/the-ultimate-drag-meter-and-lap-timer" },
+    { label: "RaceBox Micro: DIY GPS Data for the Driven", publisher: "Kickstarter", href: "https://www.kickstarter.com/projects/racebox/racebox-micro" },
   ],
   sections: [
     {
@@ -340,7 +342,8 @@ export const guide: LaunchGuide = {
       paragraphs: [
         "The first days of a Kickstarter hardware campaign set its pace, so launch day is about turning your list into pledges fast. We send the emails, run ads within the budget you set and watch which messages bring backers.",
         "Be honest about scale. Big hardware launches, around $500,000 with a large media budget, usually need a commission agency with a media team buying ads every day, and that is not us.",
-        "Secubix shows the fit we are good at. It is a parking surveillance system for Vespas from Vienna, and its campaign, which we worked on, had 90 backers pledge €32,218, the client's own result. Our [agency cost guide](/guides/kickstarter-agency-cost) compares the models.",
+        "RaceBox shows the fit we are good at. We designed the campaign page for its GPS drag meter and lap timer, which 225 backers pledged $44,681 to, then for RaceBox Micro, which 1,013 backers pledged $122,811 to. Both totals are the client's results.",
+        "Secubix is another: a parking surveillance system for Vespas from Vienna, where 90 backers pledged €32,218. Our [agency cost guide](/guides/kickstarter-agency-cost) compares the models.",
       ],
       source: 17,
       visual: {
@@ -352,6 +355,18 @@ export const guide: LaunchGuide = {
         ],
         caption: "Guildframe prices as of November 2026. Agency terms vary, so compare written proposals.",
       },
+      visuals: [
+        {
+          kind: "bars",
+          title: "Focused gadget campaigns we designed, by amount pledged",
+          bars: [
+            { label: "RaceBox Micro", value: 122811, display: "$122,811 from 1,013 backers", highlight: true },
+            { label: "RaceBox drag meter", value: 44681, display: "$44,681 from 225 backers" },
+          ],
+          caption: "Public Kickstarter totals, the client's results.",
+          source: "Kickstarter project pages for RaceBox and RaceBox Micro",
+        },
+      ],
       takeaway: "If your tech Kickstarter launch aims at $500,000 with a big media budget, plan for a commission agency with a media team. For a focused gadget, a strong page and launch plan is enough.",
     },
     {

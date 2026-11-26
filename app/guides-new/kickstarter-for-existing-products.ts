@@ -25,6 +25,8 @@ export const guide: LaunchGuide = {
     { label: "Why Kickstarter campaigns fail after funding, and how to avoid it (June 3, 2026)", publisher: "Kickstarter", href: "https://updates.kickstarter.com/why-kickstarter-campaigns-fail-after-funding-and-how-to-avoid-it/" },
     { label: "How do I add late pledges to my project?", publisher: "Kickstarter Support", href: "https://help.kickstarter.com/en-us/articles/16236699-how-do-i-add-late-pledges-to-my-project" },
     { label: "Kickstarter fees for creators", publisher: "Kickstarter", href: "https://www.kickstarter.com/help/fees" },
+    { label: "RaceBox: The Ultimate Drag Meter and Lap Timer", publisher: "Kickstarter", href: "https://www.kickstarter.com/projects/racebox/the-ultimate-drag-meter-and-lap-timer" },
+    { label: "RaceBox Micro: DIY GPS Data for the Driven", publisher: "Kickstarter", href: "https://www.kickstarter.com/projects/racebox/racebox-micro" },
   ],
   sections: [
     {
@@ -205,6 +207,26 @@ export const guide: LaunchGuide = {
         "Turn on late pledges before the campaign ends; Kickstarter recommends pricing them 10% higher.",
       ],
       takeaway: "Plan cash flow around the 14 day payout and your factory's deposit dates, and decide what happens to version one stock before you launch.",
+    },
+    {
+      id: "racebox-example",
+      title: "A real example: RaceBox came back with its next product",
+      paragraphs: [
+        "RaceBox is a client whose campaign pages we designed twice. The first was a GPS drag meter and lap timer, which 225 backers pledged $44,681 to.",
+        "The team came back with RaceBox Micro, a small DIY GPS data board, and 1,013 backers pledged $122,811. Both totals are the client's results on the public Kickstarter pages.",
+        "Public data can't tell us how many backers came from the first campaign. Still, a returning creator starts with followers, customers and proof that a first timer has to build from nothing.",
+      ],
+      visual: {
+        kind: "compare",
+        title: "Two RaceBox campaigns, one returning team",
+        columns: [
+          { name: "First campaign: drag meter and lap timer", points: ["225 backers", "$44,681 pledged", "Product: GPS drag meter and lap timer"] },
+          { name: "Next campaign: RaceBox Micro", points: ["1,013 backers", "$122,811 pledged", "Product: DIY GPS data board"], highlight: true },
+        ],
+        caption: "Public Kickstarter totals, the client's results.",
+        source: "Kickstarter project pages for RaceBox and RaceBox Micro",
+      },
+      takeaway: "A second Kickstarter starts with an audience and a track record. Show backers what changed and give your past customers a reason to come back.",
     },
     {
       id: "mistakes",
