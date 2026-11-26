@@ -77,7 +77,7 @@ export const packages: readonly LaunchPackage[] = [
     audience: "For founders",
     price: 3500,
     priceText: "$3,500",
-    summary: "Everything in Creator Launch, plus the brand and a professional website.",
+    summary: "For founders starting from scratch: the brand, the website and the launch, built together.",
     groups: [planningGroup, brandGroup, pageGroup, videoGroup, websiteGroup],
   },
 ];
