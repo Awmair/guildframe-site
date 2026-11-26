@@ -12,13 +12,13 @@ import { WorkFilter } from "../components/work/WorkFilter";
 import { formatContentDate } from "../content-dates";
 import { GuideVisual, type GuideVisualData } from "../components/GuideVisual";
 
-export const metadata = pageMetadata({ title: "Tabletop Kickstarter Campaign Design Case Studies", description: "Campaign design for products, tabletop games and a novel: Secubix, Bacàn, ScentedRealms, FutureProof Terrain, Quiver Time, Cryptic Explorers and more.", path: "/work" });
+export const metadata = pageMetadata({ title: "Tabletop Kickstarter Campaign Design Case Studies", description: "Campaign design for products, tabletop games and a novel: RaceBox, FutureProof, Secubix, TubRing, Bacàn, ScentedRealms, Quiver Time, Cryptic Explorers and more.", path: "/work" });
 
 // Built from the client work data, so the wings and names always match the cards below.
 const wings: Wing[] = ["products", "tabletop", "books"];
 const categoryVisual: GuideVisualData = {
   kind: "compare",
-  title: "Seven client campaigns across products, tabletop and books",
+  title: `${mixedWork.length} client campaigns across products, tabletop and books`,
   columns: wings.map(wing => ({ name: wingLabels[wing], points: mixedWork.filter(item => item.wing === wing).map(item => item.name) })),
   caption: "Each card links to the published Kickstarter campaign. Funding totals are the creators' results.",
 };

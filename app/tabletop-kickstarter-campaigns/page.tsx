@@ -14,7 +14,7 @@ import { tabletopHub, tabletopHubDate } from "../tabletop-hub";
 export const metadata = pageMetadata({ title: tabletopHub.title, description: tabletopHub.description, path: `/${tabletopHub.slug}` });
 
 const path = `/${tabletopHub.slug}`;
-const studies = mixedWork.filter(item => item.wing === "tabletop");
+const studies = mixedWork.filter(item => item.wing === "tabletop" && item.caseStudy);
 
 export default function TabletopHub() {
   return <>
