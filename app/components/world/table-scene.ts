@@ -145,7 +145,7 @@ export function mountTable({ host, labels, caption, onReady, onHover, onOverview
     return mesh;
   };
   const tools = flat(tableArt.dressing.tools.src, tableArt.dressing.tools.w, tableArt.dressing.tools.h, 1.1, 1.35, -0.95, -0.21);
-  const swatches = flat(tableArt.dressing.swatches.src, tableArt.dressing.swatches.w, tableArt.dressing.swatches.h, 0.8, -1.75, -0.05, 0.31);
+  const swatches = flat(tableArt.dressing.swatches.src, tableArt.dressing.swatches.w, tableArt.dressing.swatches.h, 0.8, 1.35, 1.0, -0.35);
 
   // The frame: the logo laid on the mat. Right and bottom are finished, top and left are still dashes,
   // and the coral point sits in the top right corner where the work is up to.
@@ -302,10 +302,10 @@ export function mountTable({ host, labels, caption, onReady, onHover, onOverview
     camera.aspect = width / height;
     const aspect = width / height;
     const wide = Math.max(0, aspect - 1.6), tall = Math.max(0, 1.6 - aspect);
-    rig.radius = 7.2 + wide * 2.27 + tall * 5.5;
+    rig.radius = 8.4 + wide * 2.27 + tall * 5.5;
     rig.polar = 0.92 + wide * 0.08;
-    rig.target.x = -0.55 - wide * 0.98 + tall * 0.25;
-    rig.target.z = -1.05 + wide * 0.35;
+    rig.target.x = -0.4 - wide * 0.98 + tall * 0.25;
+    rig.target.z = -1.0 + wide * 0.35;
     short = width > 900 && height <= 620;
     tools.visible = !short && Boolean((tools.material as THREE.MeshStandardMaterial).map);
     swatches.visible = !short && Boolean((swatches.material as THREE.MeshStandardMaterial).map);

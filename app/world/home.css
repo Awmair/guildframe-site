@@ -132,7 +132,7 @@
 .h-steps li{position:relative;display:grid;justify-items:center;text-align:center;gap:14px;padding-top:0}
 .h-step-space{width:clamp(80px,9vw,120px);aspect-ratio:1;margin-top:-36px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#f6efe0,#d9ccb1 70%);box-shadow:0 10px 0 #b8a988,0 26px 30px -8px rgb(0 0 0 / .55);transition:transform 600ms var(--ease-spring),box-shadow 400ms}
 /* The project travels the track: a prototype at Plan, its page at Build, the finished piece at Launch. */
-.h-track-piece{display:grid;height:118px;width:110px;margin-left:-55px;top:-128px;place-items:end center}
+.h-track-piece{display:grid;height:96px;width:96px;margin-left:-48px;top:-104px;place-items:end center}
 .h-track-piece img{grid-area:1/1;width:auto;max-width:100%;height:100%;object-fit:contain;opacity:0;scale:.6;transition:opacity 260ms var(--ease-out),scale 500ms var(--ease-spring)}
 .h-track-piece img:nth-child(2){height:88%;border-radius:6px;box-shadow:0 0 0 3px var(--board-100)}
 .h-track-piece[data-at="0"] img:nth-child(1),.h-track-piece[data-at="1"] img:nth-child(2),.h-track-piece[data-at="2"] img:nth-child(3){opacity:1;scale:1}

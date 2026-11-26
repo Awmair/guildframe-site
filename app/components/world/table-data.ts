@@ -16,9 +16,9 @@ export type Wing = {
 };
 
 export const wings: Wing[] = [
-  { slug: "product", label: "Products", href: "/kickstarter-product-campaign-design", proto: "/images/table/proto-product-v1.webp", final: "/images/table/final-product-v1.webp", page: "/images/table/page-product-v1.webp", phoneProto: "/images/table/proto-product-480.webp", phoneFinal: "/images/table/final-product-480.webp", w: 596, h: 640, rest: [-1.45, 0.75] },
-  { slug: "game", label: "Games", href: "/tabletop-kickstarter-campaigns", proto: "/images/table/proto-game-v1.webp", final: "/images/table/final-game-v1.webp", page: "/images/table/page-game-v1.webp", phoneProto: "/images/table/proto-game-480.webp", phoneFinal: "/images/table/final-game-480.webp", w: 583, h: 640, rest: [1.55, 0.85] },
-  { slug: "book", label: "Books", href: "/kickstarter-product-campaign-design#books", proto: "/images/table/proto-book-v1.webp", final: "/images/table/final-book-v1.webp", page: "/images/table/page-book-v1.webp", phoneProto: "/images/table/proto-book-480.webp", phoneFinal: "/images/table/final-book-480.webp", w: 501, h: 640, rest: [-1.2, -0.75] },
+  { slug: "product", label: "Products", href: "/kickstarter-product-campaign-design", proto: "/images/table/proto-product-v1.webp", final: "/images/table/final-product-v1.webp", page: "/images/table/page-product-v1.webp", phoneProto: "/images/table/proto-product-480.webp", phoneFinal: "/images/table/final-product-480.webp", w: 596, h: 640, rest: [-1.55, 0.4] },
+  { slug: "game", label: "Games", href: "/tabletop-kickstarter-campaigns", proto: "/images/table/proto-game-v1.webp", final: "/images/table/final-game-v1.webp", page: "/images/table/page-game-v1.webp", phoneProto: "/images/table/proto-game-480.webp", phoneFinal: "/images/table/final-game-480.webp", w: 583, h: 640, rest: [1.6, 0.35] },
+  { slug: "book", label: "Books", href: "/kickstarter-product-campaign-design#books", proto: "/images/table/proto-book-v1.webp", final: "/images/table/final-book-v1.webp", page: "/images/table/page-book-v1.webp", phoneProto: "/images/table/proto-book-480.webp", phoneFinal: "/images/table/final-book-480.webp", w: 501, h: 640, rest: [-1.25, -0.85] },
 ];
 
 export const tableArt = {
