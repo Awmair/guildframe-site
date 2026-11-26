@@ -281,3 +281,18 @@ html.w-gate-up .w-gate{position:fixed;inset:0;z-index:var(--z-gate);display:bloc
 @media(min-width:641px){html:has(.analytics-consent) .h-hero{padding-bottom:calc(var(--page-pad) + 68px)}}
 /* The hero card may rise beside the title instead of being pushed under the fold on shorter windows. */
 @media(min-width:901px){.h-title{grid-row:1}.h-hero-side{grid-row:1/4;align-self:end}}
+
+/* Phones: a calm, stacked hero. Words first, then the board as a single framed picture.
+   No live 3D table, no floating labels, nothing layered over the text. */
+@media(max-width:700px){
+  .gfr-hero-shell{display:flex;flex-direction:column;height:auto;min-height:0;max-height:none;padding-bottom:40px}
+  .gfr-hero-shell .h-hero{order:1;display:block;height:auto;min-height:0;padding:104px 0 0}
+  .h-title{font-size:clamp(2.75rem,13.5vw,4rem);max-width:none;text-shadow:none}
+  .gfr-hero-shell .h-hero-side{margin:22px 0 0;padding:0;max-width:none;background:none;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;gap:20px}
+  .gfr-hero-shell .h-hero-side p{font-size:1.0625rem;color:var(--mist-300)}
+  .gfr-hero-shell .w-board{order:2;position:relative;inset:auto;width:var(--wrap-wide);margin:32px auto 0;aspect-ratio:3/2;border-radius:20px;overflow:hidden;transform:rotate(-1.5deg);box-shadow:0 30px 50px -28px rgb(0 0 0 / .8),0 0 0 1px rgb(239 230 212 / .08)}
+  .gfr-hero-shell .w-board-still{position:absolute;inset:0;left:0;top:0;width:100%;height:100%;object-fit:cover;transform:none;border-radius:0;box-shadow:none}
+  .gfr-hero-shell .w-board-labels,.gfr-hero-shell .w-board-hint,.gfr-hero-shell .h-scroll{display:none!important}
+  html:has(.analytics-consent) .gfr-hero-shell .h-hero{padding-bottom:0}
+  html:has(.analytics-consent) .gfr-hero-shell{padding-bottom:110px}
+}

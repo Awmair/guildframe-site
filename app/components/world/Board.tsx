@@ -13,6 +13,8 @@ export function Board() {
   useEffect(() => {
     const element = host.current;
     if (!element) return;
+    // Phones get the still board only: the live table is too busy on a small screen.
+    if (window.matchMedia("(max-width: 700px)").matches) return;
     const probe = document.createElement("canvas");
     if (!(probe.getContext("webgl2") || probe.getContext("webgl"))) return;
     let dispose: (() => void) | undefined;
