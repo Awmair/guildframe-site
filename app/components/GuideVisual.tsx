@@ -12,6 +12,8 @@ export type GuideVisualStat = { value: string; label: string; note?: string };
 export type GuideVisualEvent = { when: string; label: string; detail?: string; highlight?: boolean };
 export type GuideVisualPart = { label: string; share: number; display?: string };
 export type GuideVisualGroup = { name: string; items: string[] };
+export type GuideVisualFlowNode = { question: string; yes: string; no: string };
+export type GuideVisualTip = { label: string; text: string };
 
 type Base = { title: string; caption?: string; source?: string };
 
@@ -22,7 +24,9 @@ export type GuideVisualData =
   | (Base & { kind: "stats"; stats: GuideVisualStat[] })
   | (Base & { kind: "timeline"; events: GuideVisualEvent[] })
   | (Base & { kind: "split"; total?: string; parts: GuideVisualPart[] })
-  | (Base & { kind: "checklist"; groups: GuideVisualGroup[] });
+  | (Base & { kind: "checklist"; groups: GuideVisualGroup[] })
+  | (Base & { kind: "flow"; start: string; nodes: GuideVisualFlowNode[]; end: string })
+  | (Base & { kind: "tips"; tips: GuideVisualTip[] });
 
 function Caption({ data }: { data: GuideVisualData }) {
   if (!data.caption && !data.source) return null;
@@ -124,6 +128,19 @@ function Body({ data }: { data: GuideVisualData }) {
         </div>
       );
     }
+    case "flow":
+      return <FlowBody data={data} />;
+    case "tips":
+      return (
+        <ul className="gv-tips">
+          {data.tips.map((t) => (
+            <li key={t.label}>
+              <strong>{t.label}</strong>
+              <span>{t.text}</span>
+            </li>
+          ))}
+        </ul>
+      );
     case "checklist":
       return (
         <div className="gv-checklist">
@@ -136,6 +153,22 @@ function Body({ data }: { data: GuideVisualData }) {
         </div>
       );
   }
+}
+
+function FlowBody({ data }: { data: Extract<GuideVisualData, { kind: "flow" }> }) {
+  return (
+    <ol className="gv-flow">
+      <li className="gv-flow-start"><strong>{data.start}</strong></li>
+      {data.nodes.map((n) => (
+        <li key={n.question} className="gv-flow-node">
+          <p className="gv-flow-q">{n.question}</p>
+          <p className="gv-flow-no"><span className="gv-flow-tag">No</span>{n.no}</p>
+          <p className="gv-flow-yes"><span className="gv-flow-tag">Yes</span>{n.yes}</p>
+        </li>
+      ))}
+      <li className="gv-flow-end"><strong>{data.end}</strong></li>
+    </ol>
+  );
 }
 
 export function GuideVisual({ data }: { data: GuideVisualData }) {
