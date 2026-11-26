@@ -414,7 +414,7 @@ test("exports AEO and social metadata", async () => {
 
 test("keeps campaign pricing, recovery and redirects ready",async()=>{
  const home=await readPage("/");const campaign=await readPage("/campaign-design");const buy=await readPage("/buy");
- for(const html of [home,campaign,buy]){assert.match(html,/free mockup/i);assert.doesNotMatch(html,/\$79|\$2,500|\$99|fiverr|checkout pending|within 72 hours/i);}
+ for(const html of [home,campaign,buy]){assert.match(html,/free mockup/i);assert.doesNotMatch(html,/\$79|\$99|fiverr|checkout pending|within 72 hours/i);}
  assert.match(home,/mailto:umair@guildframe.com/);assert.doesNotMatch(home,/"price":"(?:975|1800|2500)"/);assert.match(campaign,/"priceCurrency":"USD"/);
  assert.match(home,/gfr-home/);assert.match(visibleText(home),/\$2,500/);assert.match(visibleText(home),/\$3,500/);assert.match(visibleText(home),/images and videos you provide/);assert.doesNotMatch(visibleText(home),/\$1,800|\$5,900|fixed price/i);
  const missing=await readFile(new URL("404.html",outputRoot),"utf8");assert.match(missing,/This page could not be found/);assert.match(missing,/content="noindex/);
