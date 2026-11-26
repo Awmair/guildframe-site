@@ -9,7 +9,7 @@ export const guide: LaunchGuide = {
   description: "A Kickstarter campaign timeline, week by week: 12 weeks from brief to launch, 30 days live, then payout and about a year to deliver physical rewards.",
   tag: "Start here",
   answer: "A realistic Kickstarter campaign timeline is about 12 weeks from brief to launch once you have a working prototype and production quotes, then around 30 days live, 14 days of pledge collection and about a year to deliver physical rewards. We send the project to review in week 6, so approval and the Kickstarter prelaunch page land well before launch day.",
-  relatedSlugs: ["how-to-launch-a-kickstarter-campaign", "kickstarter-review-launch-timeline", "when-to-launch-a-kickstarter", "what-happens-after-kickstarter-is-funded", "kickstarter-campaign-cost"],
+  relatedSlugs: ["how-to-launch-a-kickstarter-campaign", "kickstarter-review-launch-timeline", "when-to-launch-a-kickstarter", "kickstarter-followers-before-launch", "kickstarter-campaign-cost"],
   servicePath: "/kickstarter-launch-services",
   serviceLabel: "Kickstarter launch services",
   sources: [
@@ -191,7 +191,7 @@ export const guide: LaunchGuide = {
       title: "After the deadline: payout and the Kickstarter fulfillment timeline",
       paragraphs: [
         "Kickstarter spends 14 calendar days collecting and processing pledges after the deadline, then starts the payout. Your bank can take another 3 to 14 business days, so funds usually arrive within about 28 days.",
-        "Kickstarter's own fulfillment article says delivery usually takes about a year from the day the campaign ends, and 18 months or more for complex products. The pledge manager, which opens only after launch, collects addresses and shipping in that window.",
+        "Kickstarter's own fulfillment article says delivery usually takes about a year from the day the campaign ends, and 18 months or more for complex products. The pledge manager, which opens only after launch, collects addresses and shipping in that window, and [what happens after your Kickstarter is funded](/guides/what-happens-after-kickstarter-is-funded) covers each step.",
       ],
       visual: {
         kind: "timeline",

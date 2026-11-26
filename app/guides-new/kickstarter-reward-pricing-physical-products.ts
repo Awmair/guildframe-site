@@ -111,9 +111,9 @@ export const guide: LaunchGuide = {
         start: "Your reward price is set without shipping",
         nodes: [
           { question: "Do you have fulfillment quotes for each region?", yes: "Continue", no: "Get quotes before you publish rewards" },
-          { question: "Could rates change much before delivery?", yes: "Collect shipping in the pledge manager", no: "Charge shipping in the campaign" },
-          { question: "Do you ship from outside the US to US backers?", yes: "Ask Kickstarter about its Tariff Manager", no: "Continue" },
-          { question: "Do you ship to the UK or EU?", yes: "Choose how VAT is handled in the pledge manager", no: "Continue" },
+          { question: "Are rates likely to hold until delivery?", yes: "Charge shipping in the campaign", no: "Collect shipping in the pledge manager" },
+          { question: "Do you ship from outside the US to US backers?", yes: "Ask Kickstarter about its Tariff Manager", no: "No US tariff step to plan" },
+          { question: "Do you ship to the UK or EU?", yes: "Choose how VAT is handled in the pledge manager", no: "No VAT choice to make" },
         ],
         end: "Shipping priced with fees included",
       },

@@ -11,7 +11,7 @@ export const guide: LaunchGuide = {
   servicePath: "/post-campaign-support",
   serviceLabel: "Post campaign support",
   answer: "Kickstarter shipping can be charged at pledge or later through the Pledge Manager, priced by country or region. For physical products, get a fulfillment quote per region before launch, decide who pays duties, and plan for US customs entry, because the US de minimis exemption has been suspended since August 29, 2025.",
-  relatedSlugs: ["kickstarter-campaign-cost", "pledge-managers-compared", "what-happens-after-kickstarter-is-funded", "kickstarter-reward-pricing-physical-products", "board-game-tariffs-shipping-us"],
+  relatedSlugs: ["kickstarter-campaign-cost", "pledge-managers-compared", "kickstarter-shipping-delivery-page", "kickstarter-reward-pricing-physical-products", "board-game-tariffs-shipping-us"],
   sources: [
     { label: "What options do I have for charging shipping costs?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236769-what-options-do-i-have-for-charging-shipping-costs" },
     { label: "How do I charge shipping through the pledge manager?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236495-how-do-i-charge-shipping-through-the-pledge-manager" },
@@ -64,7 +64,7 @@ export const guide: LaunchGuide = {
         ],
         end: "Write the choice and the reason on your shipping section",
       },
-      takeaway: "Charge Kickstarter shipping at pledge only when your quotes are firm. Otherwise charge later in the Pledge Manager and show backers a clear estimate range.",
+      takeaway: "Charge Kickstarter shipping at pledge only when your quotes are firm. Otherwise charge later in the Pledge Manager and show backers a clear estimate range. Our guide to [explaining shipping costs and delivery on the page](/guides/kickstarter-shipping-delivery-page) covers the wording.",
       source: 1,
     },
     {
@@ -222,7 +222,7 @@ export const guide: LaunchGuide = {
       title: "How we help after funding",
       paragraphs: [
         "We are a fixed price studio, Umair and his team, and we plan the shipping section, the pledge manager setup and the backer updates with you. You bring the product and the quotes; we turn them into prices and a page backers trust.",
-        "Our [post campaign support](/post-campaign-support) covers the months after funding. If you are still before launch, we design the opening section of your page for free, with no obligation.",
+        "Our [post campaign support](/post-campaign-support) covers the months after funding, and [what happens after your Kickstarter is funded](/guides/what-happens-after-kickstarter-is-funded) lists each step in order. If you are still before launch, we design the opening section of your page for free, with no obligation.",
       ],
       takeaway: "Shipping is a launch decision, not a later problem. Bring us your quotes and we will help you price, explain and deliver them.",
     },

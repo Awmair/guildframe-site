@@ -354,7 +354,7 @@ export const guide: LaunchGuide = {
       title: "Prelaunch and launch week for a book Kickstarter campaign",
       paragraphs: [
         "Your prelaunch page is where readers wait. Kickstarter emails every follower when the project goes live, and you can post prelaunch updates that reach them all.",
-        "Kickstarter allows campaigns up to 60 days but recommends 30 or fewer. Review takes up to three business days, plus three more after any changes, so we submit at least two weeks before launch.",
+        "Kickstarter allows campaigns up to 60 days but recommends 30 or fewer. Review takes up to three business days, plus three more after any changes. On a first project the prelaunch page opens only after approval, so we submit before the date you want it live.",
       ],
       list: [
         "Launch on a weekday morning when your readers are awake",
@@ -369,15 +369,15 @@ export const guide: LaunchGuide = {
         title: "Example timeline for a book campaign",
         events: [
           { when: "12 weeks out", label: "Print quotes and proof", detail: "Lock the format, price and print method" },
+          { when: "10 weeks out", label: "Submit for review", detail: "Up to three business days, plus three after changes" },
           { when: "8 weeks out", label: "Prelaunch page live", detail: "Share a free chapter or a short story to gather followers", highlight: true },
-          { when: "3 weeks out", label: "Page finished", detail: "Rewards, shipping and sample pages in place" },
-          { when: "2 weeks out", label: "Submit for review", detail: "Up to three business days, plus three after changes" },
+          { when: "3 weeks out", label: "Final page check", detail: "Rewards, shipping and sample pages read in the preview" },
           { when: "Launch day", label: "Email your list first", detail: "Followers get Kickstarter's launch email too" },
           { when: "Day 30", label: "Campaign ends", detail: "A final reminder email goes out the day before" },
         ],
         caption: "Example timeline. Adjust it to your list size and print lead time.",
       },
-      takeaway: "Open your book's prelaunch page about two months ahead, submit for review two weeks out, and run the campaign for 30 days or fewer.",
+      takeaway: "Submit a first book project for review before you need the prelaunch page, open that page about two months ahead, and run the campaign for 30 days or fewer.",
     },
     {
       id: "after",

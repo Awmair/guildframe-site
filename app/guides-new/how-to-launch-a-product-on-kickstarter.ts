@@ -279,7 +279,7 @@ export const guide: LaunchGuide = {
         nodes: [
           { question: "Do you have real quotes from a fulfillment partner?", yes: "Continue", no: "Get quotes before you price rewards" },
           { question: "Are costs stable for the regions you ship to?", yes: "Charge shipping in the campaign", no: "Collect shipping in the pledge manager" },
-          { question: "Will shipping cost more than a third of the reward?", yes: "Limit regions or rethink packaging", no: "Continue" },
+          { question: "Does shipping stay under a third of the reward price?", yes: "Continue", no: "Limit regions or rethink packaging" },
           { question: "Does the page explain customs and duties by region?", yes: "Continue", no: "Add a shipping section to the page" },
         ],
         end: "Ready to price shipping on every tier",
@@ -297,7 +297,7 @@ export const guide: LaunchGuide = {
       title: "The Kickstarter page, video and product photos",
       paragraphs: [
         "Backers decide in the first screen, usually on a phone. The page has to show what the product is, what it does better and what it costs before anyone scrolls far.",
-        "We build product pages in the order below, and each block answers a question a backer would ask. See [how to design a Kickstarter page](/guides/how-to-design-a-kickstarter-page) for layout and [Kickstarter product photography](/guides/kickstarter-product-photography) for the shot list.",
+        "We build product pages in the order below, and each block answers a question a backer would ask. See [what goes on a product Kickstarter page](/guides/product-kickstarter-page) section by section, [how to design a Kickstarter page](/guides/how-to-design-a-kickstarter-page) for layout and [Kickstarter product photography](/guides/kickstarter-product-photography) for the shot list.",
         "Most visitors never press play or read to the end, so the images carry the story on their own. Write captions that make sense to someone who only scrolls.",
       ],
       table: {

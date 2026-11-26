@@ -222,7 +222,7 @@ export const guide: LaunchGuide = {
       id: "goal",
       title: "Turn the costs into a funding goal",
       paragraphs: [
-        "Kickstarter says your goal should be the amount you need to complete the project, not what you hope to raise. It also suggests checking you could fulfil every reward at exactly 100% of the goal.",
+        "Kickstarter says your goal should be the amount you need to complete the project, not what you hope to raise. It also suggests checking you could fulfil every reward at exactly 100% of the goal. Our [Kickstarter funding goal guide](/guides/kickstarter-funding-goal) walks through the full method.",
         "Here is the medium example at exactly its goal. Fees and a 20 percent reserve come off first, and what is left has to make, pack and ship every reward.",
       ],
       visual: {

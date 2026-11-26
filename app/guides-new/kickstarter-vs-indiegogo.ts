@@ -28,6 +28,7 @@ export const guide: LaunchGuide = {
     { label: "If my project is successfully funded, how do I receive my funds?", publisher: "Kickstarter", href: "https://help.kickstarter.com/hc/en-us/articles/360010120934-If-my-project-is-successfully-funded-how-do-I-receive-my-funds" },
     { label: "Can a project be edited after launching?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236599-can-a-project-be-edited-after-launching" },
     { label: "What is the maximum project duration?", publisher: "Kickstarter", href: "https://help.kickstarter.com/hc/en-us/articles/115005128434-What-is-the-maximum-project-duration" },
+    { label: "Gamefound acquires Indiegogo (press release, July 24, 2025)", publisher: "PR Newswire", href: "https://www.prnewswire.com/news-releases/gamefound-acquires-indiegogo-a-groundbreaking-leap-forward-for-global-creativity-and-creator-empowerment-302511967.html" },
   ],
   sections: [
     {
@@ -239,7 +240,7 @@ export const guide: LaunchGuide = {
   faqs: [
     { question: "Is Kickstarter or Indiegogo cheaper in 2026?", answer: "Neither. Both take a 5% platform fee plus payment processing of 3% and 0.20 per pledge in the project currency, so a $10,000 raise from 100 pledges keeps $9,180 on either." },
     { question: "Does Indiegogo still offer flexible funding?", answer: "No. Indiegogo ended flexible funding for new campaigns on October 16, 2025. Regular campaigns use fixed funding, and Express Crowdfunding is the only option without a goal." },
-    { question: "Is Indiegogo owned by Gamefound?", answer: "Yes. Gamefound acquired Indiegogo on July 22, 2025. Indiegogo kept its brand and moved to an upgraded platform powered by Gamefound technology on October 16, 2025." },
+    { question: "Is Indiegogo owned by Gamefound?", answer: "Yes. Gamefound acquired Indiegogo on July 22, 2025, and the two companies announced it on July 24. Indiegogo kept its brand and moved to an upgraded platform powered by Gamefound technology on October 16, 2025." },
     { question: "What happened to Indiegogo InDemand?", answer: "InDemand became Late Pledge in the October 2025 upgrade. It works in a similar way, and it can move into the new Pledge Manager stage where shipping is collected." },
     { question: "Can I launch on Kickstarter with renders instead of a prototype?", answer: "Not for hardware or product design. Kickstarter requires a working prototype and does not allow photorealistic renderings in those projects." },
     { question: "When do backers pay on each platform?", answer: "On Kickstarter, cards are charged when a funded campaign reaches its deadline. On Indiegogo, backers pay when they pledge and are refunded if the campaign misses its goal." },

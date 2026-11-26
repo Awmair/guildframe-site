@@ -340,7 +340,7 @@ export const guide: LaunchGuide = {
       title: "Plan Kickstarter shipping: charge now or later",
       paragraphs: [
         "Shipping is where funded campaigns lose the most margin, so decide how you charge it before the page is built. Kickstarter lets you charge shipping at pledge, or later through a pledge manager.",
-        "Shipping collected during the campaign counts toward your goal. If you charge later, Kickstarter asks you to say so on the page, explain how, and ideally give an estimate. Our [Kickstarter shipping guide for physical products](/guides/kickstarter-shipping-physical-products) covers rates and regions. Whichever route you pick, price every one of these lines:",
+        "Shipping collected during the campaign counts toward your goal. If you charge later, Kickstarter asks you to say so on the page, explain how, and ideally give an estimate. Our [Kickstarter shipping guide for physical products](/guides/kickstarter-shipping-physical-products) covers rates and regions, and whichever route you pick, price every one of these lines:",
       ],
       list: [
         "Packing materials and the labour to pack each reward",
