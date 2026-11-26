@@ -17,6 +17,7 @@ export type SectionLayer = {
 export type GuideLayer = {
   sections?: Record<string, SectionLayer>;
   insertAfter?: Record<string, LaunchSection[]>;
+  updated?: string;
 };
 
 import {visualLayers} from "./guide-visual-layer-data";
@@ -37,5 +38,6 @@ export function applyVisualLayer(guide: LaunchGuide): LaunchGuide {
     const extra = layer.insertAfter?.[section.id];
     if (extra) sections.push(...extra);
   }
-  return {...guide, sections};
+  const updated = layer.updated && (!guide.updated || layer.updated > guide.updated) ? layer.updated : guide.updated;
+  return {...guide, sections, updated};
 }
