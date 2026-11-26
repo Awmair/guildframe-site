@@ -53,33 +53,30 @@ html.w-js .hr-card[data-reveal="rise"].is-in{transform:rotate(var(--tilt,0deg))}
 }
 @media (prefers-reduced-motion:reduce){.hr-card,.hr-feature{transition:none}}
 
-/* Home: Beyond tabletop, a short row of client campaigns outside games, under the reviews. */
-.h-beyond{position:relative;background:var(--baize-900);color:var(--board-100);padding:0 0 var(--section)}
-.hb-inner{width:var(--wrap-wide);margin:0 auto;padding-top:clamp(40px,6vw,80px);border-top:1px solid var(--line-dusk)}
-.hb-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:20px clamp(40px,6vw,96px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
-.h-beyond h2{margin:0;font:400 var(--t-display-m,clamp(2.5rem,5vw,4.5rem))/1 var(--font-sans);letter-spacing:-.03em}
-.h-beyond h2 em{font-family:var(--font-serif);font-style:italic;color:var(--saffron-500)}
-.hb-head p{margin:0;color:var(--mist-300);line-height:1.55}
-.hb-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
-.hb-card{display:grid;grid-template-rows:auto 1fr;gap:18px;padding:12px;border-radius:22px;background:var(--baize-800,#17363A);box-shadow:0 22px 40px -28px rgb(0 0 0 / .7);transition:transform 650ms var(--ease-spring)}
-.hb-media{display:block;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--baize-900)}
-.hb-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1200ms var(--ease-out)}
-.hb-body{display:grid;gap:10px;align-content:start;padding:0 8px 10px}
-.hb-body h3{margin:0;font:400 var(--t-title,1.375rem)/1.15 var(--font-sans);letter-spacing:-.01em}
-.hb-body p{margin:0;color:var(--mist-300);font-size:.9375rem;line-height:1.55}
-.hb-body .hb-result{margin-top:2px;color:var(--saffron-500);font-size:clamp(1.125rem,1.6vw,1.375rem);line-height:1.25;font-variant-numeric:tabular-nums}
-.hb-body .w-link{width:fit-content}
-html.w-js .hb-card[data-reveal="rise"]{transition-delay:calc(var(--i,0) * 80ms)}
+/* Home: Who we work with, three doors into the studio under the mixed work deck. */
+.h-wings{position:relative;background:var(--baize-900);color:var(--board-100);padding:var(--section) 0;border-top:1px solid var(--line-dusk);overflow:hidden}
+.h-wings-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:20px clamp(40px,6vw,96px);align-items:end;margin-bottom:clamp(28px,4vw,56px)}
+.h-wings-head p{color:var(--mist-300);line-height:1.55}
+.h-wings-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+html.w-js .h-wings-list>li[data-reveal="rise"]{transition-delay:calc(var(--i,0) * 90ms)}
+.h-wing{display:grid;grid-template-rows:auto 1fr;gap:20px;height:100%;padding:12px;border-radius:22px;background:var(--baize-800,#17363A);color:var(--board-100);box-shadow:0 22px 40px -28px rgb(0 0 0 / .7);transition:transform 650ms var(--ease-spring),background-color var(--d-state)}
+.h-wing-media{position:relative;display:block;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--baize-900);transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform 700ms var(--ease-out)}
+.h-wing-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1200ms var(--ease-out)}
+.h-wing-note{position:absolute;left:10px;bottom:10px;padding:6px 10px;border-radius:var(--r-pill);background:rgb(10 27 29 / .78);font-size:.8125rem;line-height:1;color:var(--board-100)}
+.h-wing-body{display:grid;gap:12px;align-content:start;padding:0 8px 12px}
+.h-wing-name{display:flex;align-items:center;justify-content:space-between;gap:12px;font:400 clamp(2rem,3.4vw,3rem)/1 var(--font-sans);letter-spacing:-.03em}
+.h-wing-name svg{flex:none;color:var(--saffron-500);transition:transform 500ms var(--ease-out)}
+.h-wing-line{color:var(--mist-300);font-size:.9375rem;line-height:1.55}
+.h-wing:focus-visible{outline:2px solid var(--saffron-500);outline-offset:4px}
 @media (hover:hover) and (pointer:fine){
-  .hb-card:hover{transform:translateY(-6px)}
-  .hb-card:hover .hb-media img{transform:scale(1.05)}
-  html.w-js .hb-card[data-reveal="rise"].is-in:hover{transform:translateY(-6px);transition-delay:0s}
+  .h-wing:hover{transform:translateY(-8px);background:var(--baize-700,#1d4245)}
+  .h-wing:hover .h-wing-media img{transform:scale(1.06)}
+  .h-wing:hover .h-wing-name svg{transform:translateX(6px) rotate(-12deg)}
 }
-@media (max-width:1000px){.hb-head{grid-template-columns:1fr}}
+@media (max-width:1000px){.h-wings-head{grid-template-columns:1fr}}
 @media (max-width:760px){
-  .hb-list{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--page-pad) * -1);padding:4px var(--page-pad) 16px;scrollbar-width:none}
-  .hb-list::-webkit-scrollbar{display:none}
-  .hb-card{flex:0 0 82vw;scroll-snap-align:center}
+  .h-wings-list{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--page-pad) * -1);padding:4px var(--page-pad) 16px;scrollbar-width:none}
+  .h-wings-list::-webkit-scrollbar{display:none}
+  .h-wings-list>li{flex:0 0 82vw;scroll-snap-align:center}
 }
-@media (prefers-reduced-motion:reduce){.hb-card,.hb-media img{transition:none}}
-.h-reviews:has(+ .h-beyond){padding-bottom:clamp(48px,6vw,88px)}
+@media (prefers-reduced-motion:reduce){.h-wing,.h-wing-media,.h-wing-media img,.h-wing-name svg{transition:none}}

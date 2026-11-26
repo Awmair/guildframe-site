@@ -11,12 +11,12 @@ export function SeoHeader() {
 
 export function SeoFooter() {
   return <>
-    <ProjectInquiryForm source="tabletop launch enquiry" />
+    <ProjectInquiryForm source="project enquiry" />
     <footer className="w-footer">
       <div className="w-footer-grid">
         <div className="w-footer-lead">
           <Link className="w-brand" href="/" data-title="Home"><BrandLockup /></Link>
-          <p>Tabletop crowdfunding, from the first brief to launch day and the updates after it.</p>
+          <p>Kickstarter launches for first time creators of products, games and books, from the first brief to launch day and the updates after it.</p>
           <a className="w-link" href={`mailto:${siteConfig.contactEmail}`} data-analytics-event="email_click" data-analytics-location="footer">{siteConfig.contactEmail}</a>
         </div>
         <nav aria-label="Campaign services">
@@ -29,7 +29,14 @@ export function SeoFooter() {
           <Link href="/kickstarter-campaign-management">Campaign management</Link>
           <Link href="/gamefound-launch-services">Gamefound launches</Link>
           <Link href="/post-campaign-support">After the campaign</Link>
-          <Link href="/kickstarter-product-campaign-design">Product campaigns</Link>
+        </nav>
+        <nav aria-label="Who we work with">
+          <strong>Who we work with</strong>
+          <Link href="/kickstarter-product-campaign-design">Products</Link>
+          <Link href="/tabletop-kickstarter-campaigns">Tabletop</Link>
+          <Link href="/kickstarter-product-campaign-design#books">Books</Link>
+          <Link href="/board-game-kickstarter-campaign-design">Board games</Link>
+          <Link href="/ttrpg-kickstarter-campaign-design">Tabletop RPGs</Link>
         </nav>
         <nav aria-label="Guildframe resources">
           <strong>Guides and studio</strong>

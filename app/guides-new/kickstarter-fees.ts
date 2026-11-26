@@ -9,7 +9,7 @@ export const guide: LaunchGuide = {
   description: "Kickstarter takes 5% plus payment processing from a funded project. See the cost on a $40 game, plus late pledges, VAT and tariff surcharges.",
   tag: "Budget planning",
   answer: "Kickstarter charges nothing unless your project funds. If it does, Kickstarter takes a 5% platform fee plus payment processing, which for a US project is 3% plus $0.20 per pledge, so a $40 pledge costs you $3.40 in fees.",
-  relatedSlugs: ["board-game-kickstarter-funding-goal", "board-game-kickstarter-reward-pricing", "kickstarter-advertising-budget-board-games"],
+  relatedSlugs: ["board-game-kickstarter-funding-goal", "board-game-kickstarter-reward-pricing", "kickstarter-advertising-budget-board-games", "kickstarter-campaign-cost"],
   servicePath: "/kickstarter-launch-services",
   serviceLabel: "Kickstarter launch services for tabletop games",
   sources: [

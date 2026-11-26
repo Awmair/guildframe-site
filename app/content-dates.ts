@@ -60,6 +60,7 @@ export const contentDates = {
   buildWithAi: "2026-11-25",
   howToLaunch: "2026-11-25",
   metafieldSchema: "2026-09-30",
+  generalGuides: "2026-11-26",
 } as const;
 
 export function campaignModifiedDate(slug: string) {

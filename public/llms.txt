@@ -1,6 +1,6 @@
 # Guildframe
 
-> Tabletop crowdfunding launch studio led by Umair, for Kickstarter and Gamefound.
+> Launch studio for first time creators, led by Umair, for Kickstarter, Gamefound and Indiegogo campaigns: everyday products, tabletop games and books. Tabletop is a specialty.
 
 This supplemental summary does not replace the HTML pages or sitemap.
 
@@ -9,14 +9,15 @@ This supplemental summary does not replace the HTML pages or sitemap.
 - Services: launch planning, campaign creative, prelaunch landing pages and email, paid advertising, live campaign management and post campaign communication.
 - Paid advertising: managed by Umair at Guildframe. Channels, access, spend limits and reporting are agreed in the project scope.
 - Pricing: two fixed packages. The campaign page package is 1,800 US dollars and full campaign support is 5,900 US dollars. Media spend, software, platform fees and external production are separate costs. The campaign page scope is published at https://guildframe.com/campaign-design#pricing.
-- Free mockup: one opening campaign section using supplied artwork, with no payment or obligation to book.
+- Free mockup: one opening campaign section using supplied artwork or product images, with no payment or obligation to book.
 - Deliverables, fees, payment schedule, support dates and revisions: agreed in writing before work starts.
 - Contact: umair@guildframe.com.
-- Categories: board games, party and strategy card games, TCGs, TTRPGs, miniatures, STL collections, terrain, dice and tabletop accessories.
+- Who we work with: first time creators with a working prototype. Products (gadgets and tech, everyday and design products, watches and accessories), tabletop games (board games, party and strategy card games, TCGs, TTRPGs, miniatures, STL collections, terrain, dice and tabletop accessories) and books and creative projects.
+- Platforms: Kickstarter, Gamefound and Indiegogo.
 - Accounts and email contacts stay with the creator. Email signup flows require clear permission.
 - Manufacturing, physical fulfilment, freight and tax decisions belong to the creator and relevant suppliers. Guildframe prepares the scoped launch work and communication.
 - Concept imagery: original fictional game mockups generated with ImageGen and labelled as concepts.
-- Past work: creative work for ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers, with real Kickstarter links. These are creative examples, not attributed advertising results.
+- Past work: creative work for Secubix (a parking surveillance system for Vespas), Bacàn (an Italian designed watch), A World Without Men (a novel), ScentedRealms, FutureProof Terrain, Quiver Time and Cryptic Explorers, with real Kickstarter links. These are creative examples, not attributed advertising results.
 - Testimonials: two verbatim client excerpts about the creative work, matched to ScentedRealms and FutureProof Terrain.
 - Historical Shopify guides remain useful after funding references at their original URLs.
 - No guarantee of funding, advertising returns or search rankings.
@@ -25,9 +26,13 @@ This supplemental summary does not replace the HTML pages or sitemap.
 
 
 
-## Start here: launching any Kickstarter project (products, books, creative projects)
+
+## Start here: first campaigns for products, games and books
 
 - [How to Launch a Kickstarter Campaign: The Complete A to Z Guide for Any Project](https://guildframe.com/guides/how-to-launch-a-kickstarter-campaign): How to launch a Kickstarter campaign for a product, book or creative project: rules, budget, page, rewards, shipping, prelaunch, launch day and delivery.
+- [What to Send Your Campaign Designer: The Brief Checklist](https://guildframe.com/guides/kickstarter-campaign-brief): A Kickstarter campaign brief checklist for products, games and books: the facts, files, rewards and dates a campaign designer needs before work starts.
+- [How to Set Your Kickstarter Funding Goal](https://guildframe.com/guides/kickstarter-funding-goal): Set a Kickstarter funding goal from what it costs to deliver, plus fees and a reserve, then check it against how many backers you can reach. Worked example.
+- [What Goes on a Product Kickstarter Page, Section by Section](https://guildframe.com/guides/product-kickstarter-page): The sections of a product Kickstarter page in the order backers read them: opening, how it works, specs, prototype, rewards, shipping, risks and FAQ.
 - [How to Launch a Product on Kickstarter: The A to Z Guide (2026)](https://guildframe.com/guides/how-to-launch-a-product-on-kickstarter): How to launch a product on Kickstarter, from prototype rules and factory quotes to pricing, shipping, prelaunch, launch week and fulfillment.
 - [Tech Kickstarter Launch Guide: How to Launch a Gadget on Kickstarter](https://guildframe.com/guides/tech-gadget-kickstarter-launch-guide): A tech Kickstarter launch from prototype to delivery: hardware rules, FCC and CE basics, battery shipping, factory test stages and an honest delivery plan.
 - [How to Launch a Book on Kickstarter: The A to Z Guide for Authors](https://guildframe.com/guides/how-to-launch-a-book-on-kickstarter): How to launch a book on Kickstarter, from print quotes, ISBNs and ebook rewards to media mail, signed editions and the Publishing and Comics categories.
@@ -58,6 +63,11 @@ This supplemental summary does not replace the HTML pages or sitemap.
 - [When Should You Launch Your Kickstarter, and How Long Does It Take to Prepare?](https://guildframe.com/guides/when-to-launch-a-kickstarter): How long it takes to prepare a board game Kickstarter and how to pick a launch date. Readiness signs, best days and dates to avoid.
 - [What Makes a Kickstarter Fail, and How to Avoid It](https://guildframe.com/guides/why-kickstarter-campaigns-fail): Why board game Kickstarters fail and how to avoid it. The common reasons first time creators miss their goal, and what to do if a campaign is slow.
 
+## Who we work with
+
+- [Kickstarter Campaign Design for New Products](https://guildframe.com/kickstarter-product-campaign-design): products and, in a short section, books and creative projects.
+- [Tabletop Kickstarter Campaigns for Board Games & RPGs](https://guildframe.com/tabletop-kickstarter-campaigns): the tabletop hub, linking every genre page, the Gamefound pages, the tabletop case studies, guides and benchmark.
+
 ## Launch and campaign services
 
 - [Kickstarter Campaign Designer: Copy & Graphics](https://guildframe.com/campaign-design)
@@ -73,7 +83,6 @@ This supplemental summary does not replace the HTML pages or sitemap.
 - [TTRPG Kickstarter Campaign Design](https://guildframe.com/ttrpg-kickstarter-campaign-design)
 - [Miniatures & Terrain Kickstarter Campaign Design](https://guildframe.com/miniatures-kickstarter-campaign-design)
 - [Tabletop Accessories Kickstarter Campaign Design](https://guildframe.com/tabletop-accessories-campaign-design)
-- [Kickstarter Campaign Design for New Products](https://guildframe.com/kickstarter-product-campaign-design)
 - [Kickstarter Campaign Creative: Tabletop Games](https://guildframe.com/campaign-creative)
 
 Current design price: https://guildframe.com/campaign-design#pricing
@@ -165,7 +174,7 @@ Dataset: https://guildframe.com/data/kickstarter-tabletop-games-benchmark-2024.c
 
 ## Company pages
 
-- [Kickstarter Agency for Board Games & Tabletop](https://guildframe.com/)
+- [Kickstarter Campaigns for First Time Creators](https://guildframe.com/)
 - [Start Your Tabletop Launch Project](https://guildframe.com/buy)
 - [About Guildframe](https://guildframe.com/about)
 - [Editorial Policy](https://guildframe.com/editorial-policy)

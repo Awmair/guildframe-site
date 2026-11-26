@@ -25,6 +25,7 @@ import {guide as ngManufacturingQuotesBeforeKickstarter} from "./guides-new/manu
 import {guide as ngRelaunchFailedKickstarter} from "./guides-new/relaunch-failed-kickstarter";
 import {guide as ngTechGadgetKickstarterLaunchGuide} from "./guides-new/tech-gadget-kickstarter-launch-guide";
 import {guide as ngWatchFashionAccessoriesKickstarterGuide} from "./guides-new/watch-fashion-accessories-kickstarter-guide";
+import {generalGuides} from "./launch-guides-general";
 import {guide as ngBoardGameKickstarterCost} from "./guides-new/board-game-kickstarter-cost";
 import {guide as ngHowToDesignAKickstarterPage} from "./guides-new/how-to-design-a-kickstarter-page";
 import {guide as ngHowToGetKickstarterBackers} from "./guides-new/how-to-get-kickstarter-backers";
@@ -88,6 +89,8 @@ const originalLaunchGuides:LaunchGuide[]=[
   ngWatchFashionAccessoriesKickstarterGuide,
   ngWhenToLaunchAKickstarter,
   ngWhyKickstarterCampaignsFail,
+  // general guides for products, games and books (strategy section 5)
+  ...generalGuides,
 
 
   {
@@ -560,7 +563,8 @@ const originalLaunchGuides:LaunchGuide[]=[
       "when-to-hire-kickstarter-campaign-designer",
       "board-game-kickstarter-campaign-design-cost",
       "kickstarter-reward-tier-graphics",
-      "kickstarter-image-sizes"
+      "kickstarter-image-sizes",
+      "kickstarter-campaign-brief"
     ],
     "servicePath": "/campaign-design",
     "serviceLabel": "Kickstarter campaign design for tabletop games",

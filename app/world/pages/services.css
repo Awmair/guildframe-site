@@ -279,3 +279,28 @@
 /* The jump bar steps aside once the enquiry form is on screen. */
 .sv-jump{transition:opacity .3s var(--ease-out)}
 html.w-at-form .sv-jump{opacity:0;pointer-events:none}
+
+/* ---------- product hub: what we launch, and the books section ---------- */
+.sv-kinds{padding:var(--section) 0;background:var(--baize-900)}
+.sv-kind-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.sv-kind{position:relative;display:grid;gap:14px;align-content:start;padding:clamp(20px,2.4vw,28px);border-radius:22px;background:var(--baize-800);box-shadow:0 22px 40px -28px rgb(0 0 0 / .7);transition:transform 650ms var(--ease-spring),background-color var(--d-state)}
+html.w-js .sv-kind[data-reveal="rise"]{transition-delay:calc(var(--i,0) * 80ms)}
+.sv-kind-n{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--board-100);color:var(--ink-900);font-size:var(--t-small);font-variant-numeric:tabular-nums;transition:background-color var(--d-state),transform 600ms var(--ease-spring)}
+.sv-kind h3{font:400 clamp(1.5rem,2.2vw,2rem)/1.05 var(--font-sans);letter-spacing:-.025em}
+.sv-kind p{color:var(--mist-300);font-size:.9375rem;line-height:1.55}
+.sv-kind .sv-kind-example{display:grid;gap:6px;color:var(--board-100);padding-top:12px;border-top:1px solid var(--line-dusk)}
+.sv-kind--books{background:var(--baize-700)}
+.sv-kind .w-link{width:fit-content}
+.sv-book{display:grid;gap:14px;padding:12px;border-radius:22px;background:var(--baize-900);color:var(--board-100);transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform 700ms var(--ease-out)}
+.sv-book img{width:100%;height:auto;border-radius:14px}
+.sv-book-caption{display:grid;gap:6px;padding:0 6px 8px}
+.sv-book-caption strong{font:400 var(--t-title,1.375rem)/1.15 var(--font-sans)}
+.sv-book-caption>span:not(.w-link){color:var(--saffron-500);font-variant-numeric:tabular-nums}
+.sv-book .w-link{width:fit-content}
+@media (hover:hover) and (pointer:fine){
+  .sv-kind:hover{transform:translateY(-8px);background:var(--baize-700)}
+  .sv-kind:hover .sv-kind-n{background:var(--saffron-500);transform:rotate(-12deg) scale(1.08)}
+}
+@media (max-width:1100px){.sv-kind-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.sv-kind-list{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.sv-kind,.sv-kind-n,.sv-book{transition:none}}

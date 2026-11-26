@@ -19,7 +19,7 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || null,
   socialImage: "/og-guildframe-launch.jpg",
   description:
-    "Kickstarter and Gamefound launch services for tabletop creators. Campaign planning, prelaunch, design, paid advertising and live campaign support.",
+    "Kickstarter, Gamefound and Indiegogo launches for first time creators of everyday products, tabletop games and books. Campaign planning, prelaunch, page design, paid advertising and live campaign support.",
 };
 
 export const absoluteUrl = (path = "/") =>
@@ -51,7 +51,7 @@ export function pageMetadata({
         url: siteConfig.socialImage,
         width: 1200,
         height: 630,
-        alt: "Guildframe tabletop crowdfunding launches for games, RPGs, miniatures and accessories",
+        alt: "Guildframe crowdfunding launches for everyday products, tabletop games and books",
       },
     ],
   };

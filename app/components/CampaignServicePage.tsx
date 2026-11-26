@@ -14,8 +14,9 @@ import { BoardDiorama, LaunchTrack, StandeeTile, trackLines } from "./LaunchServ
 import { landmarks } from "./world/board-data";
 import { Icon, Roll } from "./chrome/Icon";
 import { GuideVisual, type GuideVisualData } from "./GuideVisual";
+import { WorkFx } from "./work/WorkFx";
 import { beyondTabletop } from "../past-work";
-import { productCampaignDelivery, productProofIntro, productProofStats } from "../product-campaigns";
+import { booksSection, productCampaignDelivery, productKinds, productProofIntro, productProofStats } from "../product-campaigns";
 
 export type CampaignPage = {slug:string;title:string;description:string;headline:string;accent:string;image:string;alt:string;introTitle:string;intro:string;details:readonly string[];lead?:string;price?:string;secondTitle:string;secondCopy:string;guide:string;guideTitle:string;kind?:"launch";visuals?:readonly GuideVisualData[];variant?:"product";heroImage?:{src:string;width:number;height:number;note:string}};
 
@@ -41,7 +42,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
  const allFaqs=[...new Map([...(delivery?.faqs??[]),...(categoryFaqs[page.slug]??[]),...commonFaqs].map(f=>[f.question,f])).values()];
  const faqs=isProduct?(delivery?.faqs??[]):isDesign?allFaqs:allFaqs.slice(0,7);
  const modified=campaignModifiedDate(page.slug);
- const pillarHub=isHub||isDesign?null:isLaunch?{href:`/${hubSlug}`,label:"Kickstarter launch services for tabletop games"}:{href:"/campaign-design",label:"Kickstarter campaign design"};
+ const pillarHub=isHub||isDesign?null:isLaunch?{href:`/${hubSlug}`,label:"Kickstarter launch services"}:{href:"/campaign-design",label:"Kickstarter campaign design"};
  const productOffers=isProduct?{serviceType:"Kickstarter campaign design and launch support for products"}:{};
  const service=isLaunch?launchService(page.slug,page.title,page.description):{...campaignService(isDesign),"@id":absoluteUrl(`/${page.slug}#service`),name:page.title,url:absoluteUrl(`/${page.slug}`),description:page.description,...productOffers};
  const ctaLabel = isLaunch ? "Discuss my launch" : "Get my free mockup";
@@ -81,8 +82,10 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
    {delivery?.visuals ? <a href="#how-it-runs">How it runs</a> : null}
    <a href="#working-together">Working together</a>
    {isDesign ? <a href="#pricing">Design pricing</a> : null}
+   {isProduct ? <a href="#product-kinds">What we launch</a> : null}
    {isProduct ? <a href="#pricing">Pricing</a> : null}
    {isProduct ? <a href="#product-proof">Past products</a> : null}
+   {isProduct ? <a href="#books">Books</a> : null}
    <a href="#service-questions">Your questions</a>
    {delivery?.guides ? <a href="#stage-guides">Guides</a> : null}
   </nav>
@@ -116,6 +119,27 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
    </div>
    {page.visuals?.length ? <div className="w-wrap-wide sv-visuals">{page.visuals.map(visual => <GuideVisual key={visual.title} data={visual}/>)}</div> : null}
   </section>
+
+  {isProduct ? <section className="sv-kinds" id="product-kinds" aria-labelledby="product-kinds-title">
+   <div className="w-wrap-wide">
+    <div className="sv-row-head">
+     <h2 id="product-kinds-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>What we</span></span> <span className="w-line"><span><em>launch</em></span></span></h2>
+     <p data-reveal="rise">Products for first time creators, from a working prototype to a live campaign on Kickstarter or Indiegogo. The services and prices are the same for every project.</p>
+    </div>
+    <ul className="sv-kind-list">{productKinds.map((kind, index) => <li className="sv-kind" key={kind.name} data-reveal="rise" style={{ ["--i" as string]: index }}>
+     <span className="sv-kind-n" aria-hidden="true">{index + 1}</span>
+     <h3>{kind.name}</h3>
+     <p>{kind.copy}</p>
+     {"example" in kind ? <p className="sv-kind-example"><span className="w-dot">Client work</span>{kind.example}</p> : null}
+    </li>)}
+    <li className="sv-kind sv-kind--books" data-reveal="rise" style={{ ["--i" as string]: productKinds.length }}>
+     <span className="sv-kind-n" aria-hidden="true">{productKinds.length + 1}</span>
+     <h3>{booksSection.title}</h3>
+     <p>Novels, comics and art books with a clear readership.</p>
+     <a className="w-link" href="#books">How we launch books</a>
+    </li></ul>
+   </div>
+  </section> : null}
 
   {delivery?.visuals ? <section className="sv-scope tone-board" id="how-it-runs" aria-labelledby="how-it-runs-title">
    <div className="w-wrap-wide">
@@ -155,10 +179,10 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
       <a className="w-btn w-btn--coral" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Request a free mockup" data-analytics-location="campaign-design pricing"><Roll>Request a free mockup</Roll><Icon name="arrow"/></a>
      </div>
      <div className="sv-tier-body">
-      <p>One Kickstarter or Gamefound campaign page using your supplied artwork. I write the campaign copy, design the page graphics, set up the reward tiers and build the page on the platform, ready for you to publish. The brief confirms the page sections, revision process and final files. Stretch goal graphics are included where agreed.</p>
+      <p>One Kickstarter, Gamefound or Indiegogo campaign page using your supplied artwork or product images. We write the campaign copy, design the page graphics, set up the reward tiers and build the page on the platform, ready for you to publish. The brief confirms the page sections, revision process and final files. Stretch goal graphics are included where agreed.</p>
       <ul aria-label="Included">
        <li>Campaign copy</li>
-       <li>Page graphics from your artwork</li>
+       <li>Page graphics from your artwork or product images</li>
        <li>Reward tiers set up</li>
        <li>Page built on the platform, ready for you to publish</li>
        <li>Stretch goal graphics where agreed</li>
@@ -195,7 +219,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
      <Link className="sv-package" href="/campaign-design#pricing" data-title="Campaign design">
       <span className="sv-package-name">Campaign page</span>
       <span className="sv-package-price">$1,800</span>
-      <span className="sv-package-copy">Your Kickstarter or Gamefound page, from the first line of copy to the published page.</span>
+      <span className="sv-package-copy">Your Kickstarter, Gamefound or Indiegogo page, from the first line of copy to the published page.</span>
       <span className="sv-package-go">Full scope<Icon name="arrow"/></span>
      </Link>
      <a className="sv-package sv-package--full" href="#start-project" data-analytics-event="service_interest" data-analytics-label="Full campaign support" data-analytics-location="launch services packages">
@@ -254,6 +278,20 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
    </div>
   </section> : null}
 
+  {isProduct ? <section className="sv-together sv-books" id="books" aria-labelledby="books-title">
+   <div className="w-wrap-wide sv-together-inner">
+    <h2 id="books-title" className="w-h2" data-reveal="lines"><span className="w-line"><span>Books and</span></span> <span className="w-line"><span><em>creative projects</em></span></span></h2>
+    <div className="sv-together-copy">
+     {booksSection.copy.map(paragraph => <p key={paragraph.slice(0, 24)}>{paragraph}</p>)}
+     <a className="sv-book" href={booksSection.book.href} target="_blank" rel="noopener noreferrer" data-cursor-label="View on Kickstarter" data-wk-tilt="">
+      <ResponsiveImage src={`/images/work/${booksSection.book.image}.webp`} alt={booksSection.book.alt} width={1400} height={788} loading="lazy" sizes="(max-width: 900px) calc(100vw - 48px), 40vw"/>
+      <span className="sv-book-caption"><strong>{booksSection.book.name}</strong><span>{booksSection.book.result}</span><span className="w-link">View on Kickstarter<span className="gf-sr-only">, opens in a new tab</span></span></span>
+     </a>
+     <p>Writing a tabletop RPG book? See <Link className="w-link" href="/ttrpg-kickstarter-campaign-design">TTRPG Kickstarter campaign design</Link>.</p>
+    </div>
+   </div>
+  </section> : null}
+
   {isDesign || isHub ? <><PastWork/><ClientTestimonials/></> : null}
   {page.slug === "card-game-kickstarter-campaign-design" ? <MockupGallery/> : null}
 
@@ -282,7 +320,7 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
    <div className="w-wrap-wide">
     <div className="sv-beyond">
      <h2 id="book-title" className="w-h2">{isProduct ? "Tell us about your product" : isLaunch ? "Tell us about your launch" : "See your page before you book"}</h2>
-     <p>{isProduct ? "Send your product, images and target date through the booking page, or ask for the free opening mockup first. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : isLaunch ? "Send your game, artwork and target date through the booking page. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : "Book the campaign page package, or ask for the free opening mockup first. We design one opening section from your artwork, with no payment and no obligation to book."}</p>
+     <p>{isProduct ? "Send your product, images and target date through the booking page, or ask for the free opening mockup first. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : isLaunch ? "Send your project, artwork and target date through the booking page. We reply with the scope, the price and a schedule, and nothing is billed until you approve the proposal." : "Book the campaign page package, or ask for the free opening mockup first. We design one opening section from your artwork, with no payment and no obligation to book."}</p>
      <div className="sv-actions"><Link className="w-btn w-btn--coral" href="/buy"><Roll>{isLaunch || isProduct ? "Start your project" : "Book or request a mockup"}</Roll><Icon name="arrow"/></Link></div>
     </div>
    </div>
@@ -308,5 +346,6 @@ export function CampaignServicePage({page}:{page:CampaignPage}){
     </nav>
    </div>
   </section>
+ {isProduct ? <WorkFx/> : null}
  </main><SeoFooter/></>;
 }

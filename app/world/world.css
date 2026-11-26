@@ -389,3 +389,15 @@ html body .w-form :is(input,select,textarea){font-size:16px}
 }
 /* One keyboard focus ring for every ground: saffron line with an ink halo, so it shows on baize and on greyboard. Replaces the old sheet's dark red ring. */
 html body :is(a,button,summary,input,select,textarea):focus-visible{outline:2px solid var(--saffron-500);outline-offset:3px;box-shadow:0 0 0 7px rgb(20 36 38 / .85)}
+
+/* Menu: "Who we work with", the three wings under the main links. */
+.w-menu-wings{display:grid;gap:12px;margin-top:clamp(24px,4vh,40px)}
+.w-menu-wings p{margin:0;font-size:var(--t-small);color:var(--ink-500)}
+.w-menu-wings ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.w-menu-wings li{overflow:hidden;border-radius:var(--r-pill)}
+.w-menu-wings a{display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:var(--r-pill);box-shadow:inset 0 0 0 1px var(--line-board);color:var(--ink-900);font:500 var(--t-ui)/1 var(--font-sans);transform:translateY(110%);transition:transform 900ms var(--ease-out),background-color var(--d-state),color var(--d-state);transition-delay:calc(300ms + var(--i,0) * 60ms),0s,0s}
+.w-menu-open .w-menu-wings a{transform:none}
+html:not(.w-js) .w-menu-root[open] .w-menu-wings a{transform:none}
+.w-menu-wings a:hover,.w-menu-wings a[aria-current="page"]{background:var(--ink-900);color:var(--board-100)}
+@media(min-width:861px){.w-footer-grid{grid-template-columns:1.3fr 1fr 1fr 1fr}}
+@media (prefers-reduced-motion:reduce){.w-menu-wings a{transition:none;transform:none}}

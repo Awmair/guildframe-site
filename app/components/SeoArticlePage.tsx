@@ -9,6 +9,7 @@ import { absoluteUrl, siteConfig } from "../site-config";
 import { authorId } from "../seo-entities";
 import { formatContentDate } from "../content-dates";
 import { Icon, Roll } from "./chrome/Icon";
+import { generalGuideSlugs } from "../launch-guides-general";
 
 export type ArticleFaq = { question: string; answer: string };
 export type ArticleSource = {
@@ -108,7 +109,7 @@ export function SeoArticlePage({
                 publisher: { "@type": "Organization", name: source.publisher },
               })),
               about: [
-                "Tabletop games",
+                generalGuideSlugs.has(slug) ? "Crowdfunding campaigns" : "Tabletop games",
                 category,
               ],
             },
@@ -198,7 +199,7 @@ export function SeoArticlePage({
                 data-analytics-label={serviceLabel}
                 data-analytics-location="article sidebar"
               >
-                {isStoreGuide ? "Plan your tabletop store" : "Plan your game launch"}
+                {isStoreGuide ? "Plan your tabletop store" : "Plan your launch"}
                 <Icon name="arrow" size={16} />
               </Link>
             </aside>
@@ -259,7 +260,7 @@ export function SeoArticlePage({
             <p>
               {isStoreGuide
                 ? "Share your campaign, product list and what you need help with. Guildframe can prepare product content and the campaign handoff, with Shopify planning and setup scoped separately. We agree the work and responsibilities before quoting."
-                : "Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for tabletop projects. Share your game and launch plans to agree a scope. A free opening mockup is available for creative enquiries."}
+                : "Guildframe handles prelaunch setup, campaign creative, paid advertising and live support for products, tabletop games and books. Share your project and launch plans to agree a scope. A free opening mockup is available for creative enquiries."}
             </p>
             <div className="article-cta-actions">
               <Link
