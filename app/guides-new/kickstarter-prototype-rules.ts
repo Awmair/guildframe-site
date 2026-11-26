@@ -1,0 +1,202 @@
+import type { LaunchGuide } from "../launch-guides";
+
+export const guide: LaunchGuide = {
+  published: "2026-11-26",
+  updated: "2026-11-26",
+  slug: "kickstarter-prototype-rules",
+  title: "Kickstarter Prototype Requirements and Rules for Renders (2026)",
+  seoTitle: "Kickstarter Prototype Requirements and Render Rules",
+  description: "Kickstarter prototype requirements from its own help center: working prototypes, the real prototype video, the render ban, AI disclosure and review.",
+  tag: "Products",
+  answer: "Kickstarter prototype requirements say hardware and product design projects must show a working prototype, may not use photorealistic renderings, and must explain how the product will be produced. Design and Technology projects must also include a video of a real prototype, and AI renders or simulations cannot stand in for it.",
+  relatedSlugs: ["tech-gadget-kickstarter-launch-guide", "kickstarter-product-photography", "kickstarter-prototype-risks-disclosure", "manufacturing-quotes-before-kickstarter", "kickstarter-approval-time"],
+  servicePath: "/kickstarter-product-campaign-design",
+  serviceLabel: "Kickstarter campaign design for products",
+  sources: [
+    { label: "What are the rules for hardware and product design projects?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236428-what-are-the-rules-for-hardware-and-product-design-projects" },
+    { label: "Can I use AI generated content in my project?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236759-can-i-use-ai-generated-content-in-my-project" },
+    { label: "How to Launch a Product on Kickstarter, Part 1: Creating Your Prototype and Manufacturing Plan", publisher: "Kickstarter", href: "https://updates.kickstarter.com/how-to-launch-a-product-on-kickstarter-part-1-creating-your-prototype-and-manufacturing-plan/" },
+    { label: "Can Kickstarter be used to fund anything?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236681-can-kickstarter-be-used-to-fund-anything" },
+    { label: "How long does it take to build and launch a project?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236411-how-long-does-it-take-to-build-and-launch-a-project" },
+    { label: "What happens when a project is suspended?", publisher: "Kickstarter", href: "https://help.kickstarter.com/en-us/articles/16236552-what-happens-when-a-project-is-suspended" },
+    { label: "How to Launch a Product on Kickstarter, Part 2: How to Tell Your Product Story", publisher: "Kickstarter", href: "https://updates.kickstarter.com/how-to-launch-a-product-on-kickstarter-part-2-how-to-tell-your-product-story/" },
+  ],
+  sections: [
+    {
+      id: "the-rules",
+      title: "Kickstarter prototype requirements at a glance",
+      paragraphs: [
+        "Kickstarter prototype requirements are short, and they apply to every hardware and product design project. You must show a working prototype, you may not use photorealistic renderings, and you must explain how you will produce the product.",
+        "Kickstarter also asks whether you have made anything like it before. A second help article adds the video rule for Design and Technology projects, and says generative AI video, renderings or simulations cannot stand in for a real prototype.",
+      ],
+      source: 0,
+      table: {
+        headers: ["Rule", "What it means for your page", "Where Kickstarter says it"],
+        rows: [
+          ["Show a working prototype", "The core features work on camera, not only on paper", "Hardware and product design rules"],
+          ["No photorealistic renderings", "Photos of the real prototype instead of lifelike CGI", "Hardware and product design rules"],
+          ["Explain production", "Who makes it, how, and what is still left to do", "Hardware and product design rules"],
+          ["Share your track record", "Whether you have made anything like it before", "Hardware and product design rules"],
+          ["Real prototype video", "Design and Technology pages include a video of the real prototype, visible to all backers", "AI content article"],
+          ["Disclose generative AI", "Answer the AI questions and say which parts used it", "AI content article"],
+        ],
+      },
+      takeaway: "Kickstarter prototype requirements come down to proof: a working prototype, filmed for real and shown in photos rather than photorealistic renders, with an honest production plan.",
+    },
+    {
+      id: "readiness",
+      title: "Is your prototype ready for Kickstarter review?",
+      paragraphs: [
+        "Kickstarter's own product guide is blunt: without a good prototype, you are too early for Kickstarter. So we run every product creator through this check before we design a single section.",
+      ],
+      source: 2,
+      visual: {
+        kind: "flow",
+        title: "Four yes answers mean your prototype is ready for review",
+        start: "You plan a hardware or product design project",
+        nodes: [
+          { question: "Does a working prototype do what the page will promise?", yes: "Check the video next", no: "Too early. Finish the working build first" },
+          { question: "Can you film it working, with no renders or AI standing in?", yes: "Check the images next", no: "Film the real build. Design and Technology projects need that video" },
+          { question: "Are your product images photos, not photorealistic renders?", yes: "Check the production plan next", no: "Swap renders for photos or clearly illustrated drawings" },
+          { question: "Can you explain how it will be produced and whether you have made something like it?", yes: "Submit with confidence", no: "Write the production section before you submit" },
+        ],
+        end: "Ready to submit for review",
+        caption: "Our check, built from Kickstarter's hardware rules and AI content article.",
+      },
+      takeaway: "If any answer is no, fix that piece before you submit. A prototype that works on camera is the base every other rule builds on.",
+    },
+    {
+      id: "working-prototype",
+      title: "What counts as a working prototype on Kickstarter",
+      paragraphs: [
+        "Kickstarter's product guide says the core features must be shown in working form, not just described. So the prototype does not have to look finished, but it has to do what the page promises.",
+        "Hardware teams often split this into two builds. A works like prototype proves the function, and a looks like prototype shows the final size, shape and finish.",
+      ],
+      source: 2,
+      visual: {
+        kind: "compare",
+        title: "Only the works like build proves the core function",
+        columns: [
+          { name: "Works like prototype", points: ["Proves the core function on camera", "Can be a rough board in a printed case", "Answers: does it work?"], verdict: "Needed for the demo video", highlight: true },
+          { name: "Looks like prototype", points: ["Shows final size, shape and colors", "May have no working parts inside", "Answers: will I want it?"], verdict: "Good for photos, labeled as a model" },
+          { name: "Production sample", points: ["Built by the factory with final parts", "Comes after tooling and testing", "Answers: is it ready to ship?"], verdict: "Often arrives after funding" },
+        ],
+        caption: "Industry terms. Kickstarter's rule is that the core features work, whatever you call the build.",
+      },
+      takeaway: "A working prototype on Kickstarter can look rough, but it must do the job on camera. A looks like model on its own does not meet the rule, so show the working build beside it.",
+    },
+    {
+      id: "renders",
+      title: "Kickstarter rules for renders and 3D images",
+      paragraphs: [
+        "The rule on Kickstarter's help page is direct: hardware and product design projects may not use photorealistic renderings. A lifelike render can show a product that does not exist yet, and the rule exists to stop that.",
+        "That does not mean every drawing is out. We still use clearly illustrated graphics, line drawings and exploded diagrams that nobody could mistake for a photo, and we ask Kickstarter support when an image sits close to the line.",
+        "The render rule is written for hardware and product design. In other categories, we still label every render as a render, because backers deserve to know what they are looking at.",
+      ],
+      source: 0,
+      visual: {
+        kind: "tips",
+        title: "Five things to use instead of a photorealistic render",
+        tips: [
+          { label: "Photo of the prototype", text: "The real build on a clean background, labeled with its stage." },
+          { label: "Exploded line drawing", text: "Shows what sits inside without pretending to be a photo." },
+          { label: "Annotated photo", text: "Callouts on a real photo explain features better than lifelike CGI." },
+          { label: "Short GIF of it working", text: "A few seconds of the core function proves more than any render." },
+          { label: "Sketches and work in progress", text: "Kickstarter's product story guide encourages sharing prototypes and sketches to show how the design evolved." },
+        ],
+      },
+      takeaway: "Kickstarter rules for renders ban photorealistic renderings on hardware and product design projects. Use real photos for the product and keep illustrations obviously illustrated.",
+    },
+    {
+      id: "prototype-video",
+      title: "The real prototype video Design and Technology projects need",
+      paragraphs: [
+        "For Design and Technology projects, Kickstarter requires a video of a real prototype, visible to all backers throughout the campaign. Generative AI video, renderings or simulations cannot replace it.",
+        "We usually build that footage into the main campaign video and also place a short clip in the story, beside the feature it proves.",
+      ],
+      source: 1,
+      visual: {
+        kind: "steps",
+        title: "A prototype video plan that covers the rule",
+        steps: [
+          { label: "Show it in hand", detail: "A person picks up the real prototype, with no cut away" },
+          { label: "Run the core function", detail: "One continuous take of the main job it does" },
+          { label: "Show the inside", detail: "Open the case or show the board, if you can" },
+          { label: "Name the stage", detail: "Say on camera or in a caption what stage the unit is at" },
+          { label: "Keep it on the page", detail: "Leave the clip visible for the whole campaign" },
+        ],
+        caption: "Our shot plan. The rule requires a real prototype on video; the rest is our practice.",
+      },
+      takeaway: "Film the real prototype doing its core job in one continuous take, and keep that video on the page for the whole campaign. That one clip satisfies the rule and convinces backers.",
+    },
+    {
+      id: "production-plan",
+      title: "Explain how you will produce it",
+      paragraphs: [
+        "Kickstarter asks hardware creators to detail how they will produce the product and whether they have made anything like it before. In our experience, this is the part creators leave thin.",
+        "A production section that answers the rule names these points. Our [manufacturing quotes guide](/guides/manufacturing-quotes-before-kickstarter) helps you gather them, and the [risks and challenges guide](/guides/kickstarter-prototype-risks-disclosure) shows how to write them up:",
+      ],
+      source: 0,
+      list: [
+        "Who manufactures it, and in which country",
+        "Where you are on the path from prototype to mass production",
+        "What still has to happen, such as tooling, testing or certification",
+        "Your experience, or the experience of the partners you hired",
+        "Your estimated delivery date and what it depends on",
+      ],
+      takeaway: "Name your manufacturer, your stage and the steps still ahead. A production plan backers can check is part of meeting Kickstarter's hardware rules, not an extra.",
+    },
+    {
+      id: "ai-disclosure",
+      title: "Generative AI disclosure on product pages",
+      paragraphs: [
+        "Kickstarter allows generative AI in a project, but you must tell backers how you used it, and it cannot be the main source of the creative work. The project editor asks whether the campaign page uses AI and whether the final project will.",
+        "Answering yes means explaining which parts used it, and a disclosure then shows on the page. For product images, we keep AI out of anything that shows the product itself.",
+      ],
+      source: 1,
+      takeaway: "Disclose any generative AI on your page, and never let AI images or video stand in for the real prototype.",
+    },
+    {
+      id: "review",
+      title: "What happens in review, and if a project breaks the rules",
+      paragraphs: [
+        "You can send a project for review once every tab in the editor is complete, and Kickstarter's Trust and Safety team may suggest changes after the first review. A rules problem caught at this stage costs you time, not your campaign.",
+        "After launch the stakes rise. If a project is suspended, funding stops, all pledges are cancelled and backers are not charged, and Kickstarter says a suspension cannot be reversed.",
+        "Our guide on [Kickstarter approval time](/guides/kickstarter-approval-time) covers the review timeline. Kickstarter lists these reasons for suspension that matter most for products:",
+      ],
+      source: 5,
+      list: [
+        "Misrepresenting or failing to disclose relevant facts about the project or its creator",
+        "Offering purchased items while claiming to have made them",
+        "Repackaging a previously created product without adding anything new",
+      ],
+      visual: {
+        kind: "compare",
+        title: "A rules problem costs time in review and the campaign after launch",
+        columns: [
+          { name: "Caught in review", points: ["Trust and Safety suggests changes", "You edit the draft and send it again", "The launch date moves, the campaign survives"], verdict: "Costs time", highlight: true },
+          { name: "Caught after launch", points: ["Funding stops and pledges are cancelled", "Backers are not charged", "The suspension cannot be reversed"], verdict: "Costs the campaign" },
+        ],
+        source: "Kickstarter help center, checked November 26, 2026",
+      },
+      takeaway: "Treat review as your safety net. Fix every prototype, render and production question before launch, because a suspension after launch cannot be undone.",
+    },
+    {
+      id: "how-we-help",
+      title: "How we prepare a product page for review",
+      paragraphs: [
+        "We sort your images by what they show, label every prototype, plan the real prototype video and write the production section before the page goes to review. That is part of our [Kickstarter campaign design for products](/kickstarter-product-campaign-design), and the campaign page package is $1,800.",
+        "If you want to see the approach on your own product first, we design the opening section of your page for free, with no obligation. For the whole path from prototype to delivery, read the [tech and gadget launch guide](/guides/tech-gadget-kickstarter-launch-guide).",
+      ],
+      takeaway: "Meet Kickstarter prototype requirements before you write a word of marketing copy. Then the page has real proof to show.",
+    },
+  ],
+  faqs: [
+    { question: "Does Kickstarter require a prototype?", answer: "Yes, for hardware and product design projects. Kickstarter requires a working prototype, and Design and Technology projects must include a video of a real prototype that stays visible to all backers." },
+    { question: "Can I use renders on Kickstarter?", answer: "Not photorealistic ones on hardware and product design projects. Clearly illustrated graphics and line drawings are a different thing, and if you are unsure about an image, ask Kickstarter support before you submit." },
+    { question: "Can I launch on Kickstarter with only a 3D model?", answer: "Not for a hardware or product design project. A 3D model or render cannot stand in for a working prototype, and Kickstarter's product guide says that without a good prototype you are too early." },
+    { question: "Can I use AI images for my product?", answer: "Kickstarter allows generative AI if you disclose how you used it, but AI video, renderings or simulations cannot stand in for a real prototype. We keep AI out of images that show the product itself." },
+    { question: "Does the prototype have to look finished?", answer: "No, it has to work. Kickstarter asks for the core features in working form, so a rough works like build is fine if you label it honestly." },
+    { question: "What happens if my project breaks the rules after launch?", answer: "Kickstarter can suspend it. Funding stops, all pledges are cancelled, backers are not charged, and Kickstarter says a suspension cannot be reversed." },
+  ],
+};
